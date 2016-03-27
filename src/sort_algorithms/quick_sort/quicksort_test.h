@@ -21,7 +21,7 @@
 #include"src/google_test/gtest.h"
 #include"quicksort.h"
 
-//!quick_sort_test：测试C数组的插入排序
+//!quick_sort_test：测试C数组的快速排序
 /*!
 *
 * 四组数组： 增序排列、降序排列、有重复数字、单元素的数组
@@ -52,7 +52,7 @@ TEST(test_quick_sort, test_C_array)
     EXPECT_EQ(std::vector<int>(data4,data4+1),std::vector<int>(comparedata4,comparedata4+1));
 }
 
-//!quick_sort_test：测试std::array的插入排序
+//!quick_sort_test：测试std::array的快速排序
 /*!
 *
 * 四组std::array： 增序排列、降序排列、有重复数字、单元素的std::array

@@ -53,8 +53,8 @@ namespace IntrodunctionToAlgorithm
                 current++;
             }
             std::swap(*smaller_next,*(end-1));
-            quick_sort<Iterator,T,Compare>(begin,smaller_next);
-            quick_sort<Iterator,T,Compare>(smaller_next+1,end);
+            quick_sort<Iterator,T,Compare>(begin,smaller_next,compare);
+            quick_sort<Iterator,T,Compare>(smaller_next+1,end,compare);
         }
     }
 }
