@@ -38,8 +38,8 @@ namespace IntrodunctionToAlgorithm
     * - 时间复杂度 O(n)
     * - 归并时需要额外的空间 O(n)
     */
-        template<typename Iterator> void merge(Iterator begin,Iterator end,Iterator middle,bool(*compare)(Iterator iter_little,Iterator iter_big)=
-            [](Iterator iter_little,Iterator iter_big){return *iter_little< *iter_big;})
+        template<typename Iterator> void merge(Iterator begin,Iterator end,Iterator middle,
+                                               bool(*compare)(Iterator  ,Iterator)=[](Iterator  small,Iterator big){return *small< *big;})
         {
             if(middle-begin<=0||end-middle<=0) return;
             std::vector<typename std::remove_reference<decltype(*begin)>::type> result(begin,end); //暂存结果
@@ -70,8 +70,8 @@ namespace IntrodunctionToAlgorithm
 
     //! merge_sort：算法导论第二章 2.3.1
     /*!
-    * \param begin : 待排序序列的起始迭代器
-    * \param end: 待排序序列的终止迭代器
+    * \param begin : 待排序序列的起始迭代器（也可以是指向数组中某元素的指针）
+    * \param end: 待排序序列的终止迭代器（也可以是指向数组中某元素的指针）
     * \param compare: 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true)
     * \return void
     *
@@ -81,8 +81,8 @@ namespace IntrodunctionToAlgorithm
     * - 时间复杂度 O(nlgn)
     * - 非原地排序，归并时需要额外的空间 O(n)
     */
-        template<typename Iterator> void merge_sort(Iterator begin,Iterator end,bool(*compare)(Iterator iter_little,Iterator iter_big)=
-            [](Iterator iter_little,Iterator iter_big){return *iter_little< *iter_big;})
+        template<typename Iterator> void merge_sort(Iterator begin,Iterator end,
+                                                    bool(*compare)(Iterator  ,Iterator)=[](Iterator  small,Iterator big){return *small< *big;})
         {
             if(end-begin>1)
             {

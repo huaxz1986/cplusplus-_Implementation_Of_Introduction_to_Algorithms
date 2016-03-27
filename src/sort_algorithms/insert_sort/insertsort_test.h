@@ -68,7 +68,6 @@ TEST(test_insert_sort, test_std_container)
     std::vector<int> comparedata2={10,9,8,7,6,5,4,3,2,1};
     std::vector<int> comparedata3={5,5,5,5,5,4,4,4,4,4};
     std::vector<int> comparedata4={5};
-
     std::sort(comparedata1.begin(),comparedata1.end());
     IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data1.begin(),data1.end());
     std::sort(comparedata2.begin(),comparedata2.end());

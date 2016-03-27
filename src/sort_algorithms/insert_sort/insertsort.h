@@ -18,16 +18,14 @@
  */
 #ifndef INSERTSORTE_H
 #define INSERTSORTE_H
-
 namespace IntrodunctionToAlgorithm
 {
-
     namespace SortAlgorithm
     {
     //!insert_sort：算法导论第二章 2.1
     /*!
-    * \param begin : 待排序序列的起始迭代器
-    * \param end: 待排序序列的终止迭代器
+    * \param begin : 待排序序列的起始迭代器（也可以是指向数组中某元素的指针）
+    * \param end: 待排序序列的终止迭代器（也可以是指向数组中某元素的指针）
     * \param compare: 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true)
     * \return void
     *
@@ -37,32 +35,30 @@ namespace IntrodunctionToAlgorithm
     * - 原地排序
     */
     template<typename Iterator> void insert_sort(Iterator begin,Iterator end,
-                                bool(*compare)(Iterator iter_little,Iterator iter_big)=
-                                [](Iterator iter_little,Iterator iter_big){return *iter_little< *iter_big;})
+             bool(*compare)(Iterator  ,Iterator)=[](Iterator  small,Iterator big){return *small< *big;})
      {
             if(end-begin<=1)
                 return;
             auto current=begin;
-
             while(++current!=end)
             {
-                auto iter=current;
-                while(iter!=begin)
+                auto small_next=current; //指向比*current小的元素中最大的那个元素
+                while(small_next!=begin && compare(current,small_next-1)) //current较小，则向前寻找插入的位置插入
                 {
-                    if(compare(iter,iter-1)) //  前后两两比较，若后者小则交换
-                    {
-                        std::swap(*iter,*(iter-1));
-                        iter--;
-                    }else //  前后两两比较，若后者大则交换跳出
-                    {
-                        break;
-                    }
-
+                    small_next--;
                 }
-            }
 
+                auto key=*current;
+                auto iter=current;
+                while(iter!=small_next) //插入
+                {
+                    *iter=*(iter-1); //后移
+                    iter--;
+                }
+                *(iter)=key;
+            }
         }
     }
-
 }
+
 #endif // INSERTSORTE_H

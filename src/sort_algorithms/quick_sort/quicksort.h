@@ -25,8 +25,8 @@ namespace IntrodunctionToAlgorithm
     {
         //! quick_sort： 算法导论第7章
         /*!
-         * \param begin : 待排序序列的起始迭代器
-         * \param end: 待排序序列的终止迭代器
+         * \param begin : 待排序序列的起始迭代器（也可以是指向数组中某元素的指针）
+         * \param end: 待排序序列的终止迭代器（也可以是指向数组中某元素的指针）
          * \param compare: 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true)
          * \return void
          *
@@ -36,8 +36,8 @@ namespace IntrodunctionToAlgorithm
          * - 最坏时间复杂度 O(n^2)， 期望时间复杂度 O(nlgn)。它平均性能非常好，是实际排序应用中最好的选择
          * - 原地排序
         */
-        template<typename Iterator> void quick_sort(Iterator begin,Iterator end,bool(*compare)(Iterator iter_little,Iterator iter_big)=
-            [](Iterator iter_little,Iterator iter_big){return *iter_little< *iter_big;})
+        template<typename Iterator> void quick_sort(Iterator begin,Iterator end,
+                                                    bool(*compare)(Iterator  ,Iterator)=[](Iterator  small,Iterator big){return *small< *big;})
         {
             if(end-begin<=1)
                 return;
