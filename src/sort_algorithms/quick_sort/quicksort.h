@@ -27,7 +27,7 @@ namespace IntrodunctionToAlgorithm
         /*!
          * \param begin : 待排序序列的起始迭代器（也可以是指向数组中某元素的指针）
          * \param end: 待排序序列的终止迭代器（也可以是指向数组中某元素的指针）
-         * \param compare: 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true)
+         * \param compare: 一个可调用对象，可用于比较两个对象的小于比较，默认为std::less<T>
          * \return void
          *
          * - 快速排序思想，假设对数组A[p...r]排序：
@@ -36,8 +36,8 @@ namespace IntrodunctionToAlgorithm
          * - 最坏时间复杂度 O(n^2)， 期望时间复杂度 O(nlgn)。它平均性能非常好，是实际排序应用中最好的选择
          * - 原地排序
         */
-        template<typename Iterator> void quick_sort(Iterator begin,Iterator end,
-                                                    bool(*compare)(Iterator  ,Iterator)=[](Iterator  small,Iterator big){return *small< *big;})
+        template<typename Iterator,typename T,typename Compare=std::less<T>>
+                        void quick_sort(Iterator begin,Iterator end,Compare compare=Compare())
         {
             if(end-begin<=1)
                 return;
@@ -45,7 +45,7 @@ namespace IntrodunctionToAlgorithm
             auto current=begin;  //指向当前待处理的元素
             while(current!=end-1)
             {
-                if(compare(current,end-1))
+                if(compare(*current,*(end-1)))
                 {
                     std::swap(*smaller_next,*current);
                     smaller_next++;
@@ -53,8 +53,8 @@ namespace IntrodunctionToAlgorithm
                 current++;
             }
             std::swap(*smaller_next,*(end-1));
-            quick_sort(begin,smaller_next);
-            quick_sort(smaller_next+1,end);
+            quick_sort<Iterator,T,Compare>(begin,smaller_next);
+            quick_sort<Iterator,T,Compare>(smaller_next+1,end);
         }
     }
 }

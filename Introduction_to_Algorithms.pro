@@ -18,5 +18,6 @@ HEADERS += \
     src/sort_algorithms/merge_sort/mergesort_test.h \
     src/sort_algorithms/quick_sort/quicksort.h \
     src/sort_algorithms/quick_sort/quicksort_test.h \
-    src/tools.h
+    src/sort_algorithms/heap_sort/heapsort.h \
+    src/sort_algorithms/heap_sort/heapsort_test.h
 

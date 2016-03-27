@@ -39,13 +39,13 @@ TEST(test_insert_sort, test_C_array)
     int comparedata4[1]={5};
 
     std::sort(comparedata1,comparedata1+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data1+0,data1+10);
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<int*,int>(data1+0,data1+10);
     std::sort(comparedata2,comparedata2+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data2+0,data2+10);
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<int*,int>(data2+0,data2+10);
     std::sort(comparedata3,comparedata3+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data3+0,data3+10);
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<int*,int>(data3+0,data3+10);
     std::sort(comparedata4,comparedata4+1);
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data4+0,data4+1);
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<int*,int>(data4+0,data4+1);
     EXPECT_EQ(std::vector<int>(data1,data1+10),std::vector<int>(comparedata1,comparedata1+10));
     EXPECT_EQ(std::vector<int>(data2,data2+10),std::vector<int>(comparedata2,comparedata2+10));
     EXPECT_EQ(std::vector<int>(data3,data3+10),std::vector<int>(comparedata3,comparedata3+10));
@@ -68,14 +68,16 @@ TEST(test_insert_sort, test_std_container)
     std::vector<int> comparedata2={10,9,8,7,6,5,4,3,2,1};
     std::vector<int> comparedata3={5,5,5,5,5,4,4,4,4,4};
     std::vector<int> comparedata4={5};
+
+    typedef typename std::vector<int>::iterator Iterator;
     std::sort(comparedata1.begin(),comparedata1.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data1.begin(),data1.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<Iterator,int>(data1.begin(),data1.end());
     std::sort(comparedata2.begin(),comparedata2.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data2.begin(),data2.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<Iterator,int>(data2.begin(),data2.end());
     std::sort(comparedata3.begin(),comparedata3.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data3.begin(),data3.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<Iterator,int>(data3.begin(),data3.end());
     std::sort(comparedata4.begin(),comparedata4.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort(data4.begin(),data4.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::insert_sort<Iterator,int>(data4.begin(),data4.end());
     EXPECT_EQ(data1,comparedata1);
     EXPECT_EQ(data2,comparedata2);
     EXPECT_EQ(data3,comparedata3);

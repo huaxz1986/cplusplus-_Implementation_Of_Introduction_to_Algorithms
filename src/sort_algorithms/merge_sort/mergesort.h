@@ -29,7 +29,7 @@ namespace IntrodunctionToAlgorithm
     * \param begin : begin...middle之间为已排好序列
     * \param end: middle...end之间为已排好序列
     * \param middle: begin...middle之间为已排好序列
-    * \param compare: 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true)
+    * \param compare: 一个可调用对象，可用于比较两个对象的小于比较，默认为std::less<T>
     * \return void
     *
     * - 归并思想，假设对数组A[p...q...r]归并：
@@ -38,17 +38,17 @@ namespace IntrodunctionToAlgorithm
     * - 时间复杂度 O(n)
     * - 归并时需要额外的空间 O(n)
     */
-        template<typename Iterator> void merge(Iterator begin,Iterator end,Iterator middle,
-                                               bool(*compare)(Iterator  ,Iterator)=[](Iterator  small,Iterator big){return *small< *big;})
+        template<typename Iterator,typename T,typename Compare=std::less<T>>
+                void merge(Iterator begin,Iterator end,Iterator middle,Compare compare=Compare())
         {
             if(middle-begin<=0||end-middle<=0) return;
-            std::vector<typename std::remove_reference<decltype(*begin)>::type> result(begin,end); //暂存结果
+            std::vector<T> result(begin,end); //暂存结果
             auto current=result.begin();
             auto left_current=begin; //左侧序列当前比较位置
             auto right_current=middle;//右序列当前比较位置
             while(left_current!=middle && right_current!=end)
             {
-                if(compare(left_current,right_current))
+                if(compare(*left_current,*right_current))
                 {
                     *current++=*left_current++;//左侧较小
 
@@ -72,7 +72,7 @@ namespace IntrodunctionToAlgorithm
     /*!
     * \param begin : 待排序序列的起始迭代器（也可以是指向数组中某元素的指针）
     * \param end: 待排序序列的终止迭代器（也可以是指向数组中某元素的指针）
-    * \param compare: 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true)
+    * \param compare: 一个可调用对象，可用于比较两个对象的小于比较，默认为std::less<T>
     * \return void
     *
     * - 归并排序思想，假设对数组A[p...r]排序：
@@ -81,15 +81,15 @@ namespace IntrodunctionToAlgorithm
     * - 时间复杂度 O(nlgn)
     * - 非原地排序，归并时需要额外的空间 O(n)
     */
-        template<typename Iterator> void merge_sort(Iterator begin,Iterator end,
-                                                    bool(*compare)(Iterator  ,Iterator)=[](Iterator  small,Iterator big){return *small< *big;})
+        template<typename Iterator,typename T,typename Compare=std::less<T>>
+                    void merge_sort(Iterator begin,Iterator end,Compare compare=Compare())
         {
             if(end-begin>1)
             {
                 Iterator middle=begin+((end-begin)/2);
-                merge_sort(begin,middle,compare);
-                merge_sort(middle,end,compare);
-                merge(begin,end,middle,compare);
+                merge_sort<Iterator,T,Compare>(begin,middle,compare);
+                merge_sort<Iterator,T,Compare>(middle,end,compare);
+                merge<Iterator,T,Compare>(begin,end,middle,compare);
             }
         }
     }

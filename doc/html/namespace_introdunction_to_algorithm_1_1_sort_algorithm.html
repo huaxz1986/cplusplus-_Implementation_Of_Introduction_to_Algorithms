@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li class="current"><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -103,6 +104,7 @@ $(document).ready(function(){initNavTree('namespace_introdunction_to_algorithm_1
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">IntrodunctionToAlgorithm::SortAlgorithm Namespace Reference</div>  </div>
@@ -112,34 +114,40 @@ $(document).ready(function(){initNavTree('namespace_introdunction_to_algorithm_1
 <p>Namespace of <a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html" title="Namespace of SortAlgorithm. ">SortAlgorithm</a>.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">Sort_Heap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">heap_sort：算法导论第6章  <a href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:afc447bdeb9c5e6a3611d8daa4edef33d"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:afc447bdeb9c5e6a3611d8daa4edef33d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#afc447bdeb9c5e6a3611d8daa4edef33d">insert_sort</a> (Iterator begin, Iterator end, bool(*compare)(Iterator iter_little, Iterator iter_big)=[](Iterator iter_little, Iterator iter_big){return *iter_little&lt; *iter_big;})</td></tr>
-<tr class="memdesc:afc447bdeb9c5e6a3611d8daa4edef33d"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert_sort：算法导论第二章 2.1  <a href="#afc447bdeb9c5e6a3611d8daa4edef33d">More...</a><br /></td></tr>
-<tr class="separator:afc447bdeb9c5e6a3611d8daa4edef33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c50cf3a021ad0abf02a3fd398a42dda"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:a1c50cf3a021ad0abf02a3fd398a42dda"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a1c50cf3a021ad0abf02a3fd398a42dda">merge</a> (Iterator begin, Iterator end, Iterator middle, bool(*compare)(Iterator iter_little, Iterator iter_big)=[](Iterator iter_little, Iterator iter_big){return *iter_little&lt; *iter_big;})</td></tr>
-<tr class="memdesc:a1c50cf3a021ad0abf02a3fd398a42dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge：算法导论第二章 2.3.1  <a href="#a1c50cf3a021ad0abf02a3fd398a42dda">More...</a><br /></td></tr>
-<tr class="separator:a1c50cf3a021ad0abf02a3fd398a42dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01bb990e5f682e3cb75dd54d792fae50"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:a01bb990e5f682e3cb75dd54d792fae50"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a01bb990e5f682e3cb75dd54d792fae50">merge_sort</a> (Iterator begin, Iterator end, bool(*compare)(Iterator iter_little, Iterator iter_big)=[](Iterator iter_little, Iterator iter_big){return *iter_little&lt; *iter_big;})</td></tr>
-<tr class="memdesc:a01bb990e5f682e3cb75dd54d792fae50"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge_sort：算法导论第二章 2.3.1  <a href="#a01bb990e5f682e3cb75dd54d792fae50">More...</a><br /></td></tr>
-<tr class="separator:a01bb990e5f682e3cb75dd54d792fae50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacc87ff4087dcdcae65164f24b47aa7c"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:aacc87ff4087dcdcae65164f24b47aa7c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#aacc87ff4087dcdcae65164f24b47aa7c">quick_sort</a> (Iterator begin, Iterator end, bool(*compare)(Iterator iter_little, Iterator iter_big)=[](Iterator iter_little, Iterator iter_big){return *iter_little&lt; *iter_big;})</td></tr>
-<tr class="memdesc:aacc87ff4087dcdcae65164f24b47aa7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">quick_sort： 算法导论第7章  <a href="#aacc87ff4087dcdcae65164f24b47aa7c">More...</a><br /></td></tr>
-<tr class="separator:aacc87ff4087dcdcae65164f24b47aa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad891f043c088caaccf4a346c455728b2"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
+<tr class="memitem:ad891f043c088caaccf4a346c455728b2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad891f043c088caaccf4a346c455728b2">insert_sort</a> (Iterator begin, Iterator end, Compare compare=Compare())</td></tr>
+<tr class="memdesc:ad891f043c088caaccf4a346c455728b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert_sort：算法导论第二章 2.1  <a href="#ad891f043c088caaccf4a346c455728b2">More...</a><br /></td></tr>
+<tr class="separator:ad891f043c088caaccf4a346c455728b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979431307bf9aa172840b6cbbe499af1"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
+<tr class="memitem:a979431307bf9aa172840b6cbbe499af1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a979431307bf9aa172840b6cbbe499af1">merge</a> (Iterator begin, Iterator end, Iterator middle, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a979431307bf9aa172840b6cbbe499af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge：算法导论第二章 2.3.1  <a href="#a979431307bf9aa172840b6cbbe499af1">More...</a><br /></td></tr>
+<tr class="separator:a979431307bf9aa172840b6cbbe499af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1029751371f45fbe6c99463b2e73541e"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
+<tr class="memitem:a1029751371f45fbe6c99463b2e73541e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a1029751371f45fbe6c99463b2e73541e">merge_sort</a> (Iterator begin, Iterator end, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a1029751371f45fbe6c99463b2e73541e"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge_sort：算法导论第二章 2.3.1  <a href="#a1029751371f45fbe6c99463b2e73541e">More...</a><br /></td></tr>
+<tr class="separator:a1029751371f45fbe6c99463b2e73541e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601061e71debf0027692b82df7821a83"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
+<tr class="memitem:a601061e71debf0027692b82df7821a83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a601061e71debf0027692b82df7821a83">quick_sort</a> (Iterator begin, Iterator end, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a601061e71debf0027692b82df7821a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">quick_sort： 算法导论第7章  <a href="#a601061e71debf0027692b82df7821a83">More...</a><br /></td></tr>
+<tr class="separator:a601061e71debf0027692b82df7821a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace of <a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html" title="Namespace of SortAlgorithm. ">SortAlgorithm</a>. </p>
 <p>该命名空间内包含所有排序算法 </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="afc447bdeb9c5e6a3611d8daa4edef33d"></a>
+<a class="anchor" id="ad891f043c088caaccf4a346c455728b2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::insert_sort </td>
@@ -156,8 +164,8 @@ template&lt;typename Iterator &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(Iterator iter_little, Iterator iter_big)&#160;</td>
-          <td class="paramname"><em>compare</em> = <code>[](Iterator&#160;iter_little,Iterator&#160;iter_big){return&#160;*iter_little&lt;&#160;*iter_big;}</code>&#160;</td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>Compare()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -170,9 +178,9 @@ template&lt;typename Iterator &gt; </div>
 <p>insert_sort：算法导论第二章 2.1 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器 </td></tr>
-    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器 </td></tr>
-    <tr><td class="paramname">compare</td><td>一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) </td></tr>
+    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">compare</td><td>一个可调用对象，可用于比较两个对象的小于比较，默认为std::less&lt;T&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -186,15 +194,15 @@ template&lt;typename Iterator &gt; </div>
 <li>原地排序 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="insertsort_8h_source.html#l00021">21</a> of file <a class="el" href="insertsort_8h_source.html">insertsort.h</a>.</p>
+<p>Definition at line <a class="el" href="insertsort_8h_source.html#l00038">38</a> of file <a class="el" href="insertsort_8h_source.html">insertsort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1c50cf3a021ad0abf02a3fd398a42dda"></a>
+<a class="anchor" id="a979431307bf9aa172840b6cbbe499af1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::merge </td>
@@ -217,8 +225,8 @@ template&lt;typename Iterator &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(Iterator iter_little, Iterator iter_big)&#160;</td>
-          <td class="paramname"><em>compare</em> = <code>[](Iterator&#160;iter_little,Iterator&#160;iter_big){return&#160;*iter_little&lt;&#160;*iter_big;}</code>&#160;</td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>Compare()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -234,7 +242,7 @@ template&lt;typename Iterator &gt; </div>
     <tr><td class="paramname">begin</td><td>: begin...middle之间为已排好序列 </td></tr>
     <tr><td class="paramname">end</td><td>middle...end之间为已排好序列 </td></tr>
     <tr><td class="paramname">middle</td><td>begin...middle之间为已排好序列 </td></tr>
-    <tr><td class="paramname">compare</td><td>一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) </td></tr>
+    <tr><td class="paramname">compare</td><td>一个可调用对象，可用于比较两个对象的小于比较，默认为std::less&lt;T&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -249,15 +257,15 @@ template&lt;typename Iterator &gt; </div>
 <li>归并时需要额外的空间 O(n) </li>
 </ul>
 
-<p>Definition at line <a class="el" href="mergesort_8h_source.html#l00023">23</a> of file <a class="el" href="mergesort_8h_source.html">mergesort.h</a>.</p>
+<p>Definition at line <a class="el" href="mergesort_8h_source.html#l00042">42</a> of file <a class="el" href="mergesort_8h_source.html">mergesort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a01bb990e5f682e3cb75dd54d792fae50"></a>
+<a class="anchor" id="a1029751371f45fbe6c99463b2e73541e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::merge_sort </td>
@@ -274,8 +282,8 @@ template&lt;typename Iterator &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(Iterator iter_little, Iterator iter_big)&#160;</td>
-          <td class="paramname"><em>compare</em> = <code>[](Iterator&#160;iter_little,Iterator&#160;iter_big){return&#160;*iter_little&lt;&#160;*iter_big;}</code>&#160;</td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>Compare()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -288,9 +296,9 @@ template&lt;typename Iterator &gt; </div>
 <p>merge_sort：算法导论第二章 2.3.1 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器 </td></tr>
-    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器 </td></tr>
-    <tr><td class="paramname">compare</td><td>一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) </td></tr>
+    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">compare</td><td>一个可调用对象，可用于比较两个对象的小于比较，默认为std::less&lt;T&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -305,15 +313,15 @@ template&lt;typename Iterator &gt; </div>
 <li>非原地排序，归并时需要额外的空间 O(n) </li>
 </ul>
 
-<p>Definition at line <a class="el" href="mergesort_8h_source.html#l00066">66</a> of file <a class="el" href="mergesort_8h_source.html">mergesort.h</a>.</p>
+<p>Definition at line <a class="el" href="mergesort_8h_source.html#l00085">85</a> of file <a class="el" href="mergesort_8h_source.html">mergesort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aacc87ff4087dcdcae65164f24b47aa7c"></a>
+<a class="anchor" id="a601061e71debf0027692b82df7821a83"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::quick_sort </td>
@@ -330,8 +338,8 @@ template&lt;typename Iterator &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*)(Iterator iter_little, Iterator iter_big)&#160;</td>
-          <td class="paramname"><em>compare</em> = <code>[](Iterator&#160;iter_little,Iterator&#160;iter_big){return&#160;*iter_little&lt;&#160;*iter_big;}</code>&#160;</td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>Compare()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -344,9 +352,9 @@ template&lt;typename Iterator &gt; </div>
 <p>quick_sort： 算法导论第7章 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器 </td></tr>
-    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器 </td></tr>
-    <tr><td class="paramname">compare</td><td>一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) </td></tr>
+    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">compare</td><td>一个可调用对象，可用于比较两个对象的小于比较，默认为std::less&lt;T&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -361,7 +369,7 @@ template&lt;typename Iterator &gt; </div>
 <li>原地排序 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="quicksort_8h_source.html#l00021">21</a> of file <a class="el" href="quicksort_8h_source.html">quicksort.h</a>.</p>
+<p>Definition at line <a class="el" href="quicksort_8h_source.html#l00040">40</a> of file <a class="el" href="quicksort_8h_source.html">quicksort.h</a>.</p>
 
 </div>
 </div>

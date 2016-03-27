@@ -22,6 +22,7 @@
 #include"src/sort_algorithms/insert_sort/insertsort_test.h"
 #include"src/sort_algorithms/quick_sort/quicksort_test.h"
 #include"src/sort_algorithms/merge_sort/mergesort_test.h"
+#include"src/sort_algorithms/heap_sort/heapsort_test.h"
 using namespace std;
 
 int main(int argc,char** argv)
