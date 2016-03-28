@@ -31,13 +31,13 @@ TEST(test_radix_sort, test_C_array)
     int comparedata4[1]={555};
 
     std::sort(comparedata1,comparedata1+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<int*,int,3>(data1+0,data1+10);
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data1+0,data1+10,3);
     std::sort(comparedata2,comparedata2+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<int*,int,3>(data2+0,data2+10);
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data2+0,data2+10,3);
     std::sort(comparedata3,comparedata3+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<int*,int,3>(data3+0,data3+10);
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data3+0,data3+10,3);
     std::sort(comparedata4,comparedata4+1);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<int*,int,3>(data4+0,data4+1);
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data4+0,data4+1,3);
     EXPECT_EQ(std::vector<int>(data1,data1+10),std::vector<int>(comparedata1,comparedata1+10));
     EXPECT_EQ(std::vector<int>(data2,data2+10),std::vector<int>(comparedata2,comparedata2+10));
     EXPECT_EQ(std::vector<int>(data3,data3+10),std::vector<int>(comparedata3,comparedata3+10));
@@ -61,15 +61,14 @@ TEST(test_radix_sort, test_std_container)
     std::vector<int> comparedata3={555,555,544,554,545,444,455,445,454,444};
     std::vector<int> comparedata4={555};
 
-    typedef typename std::vector<int>::iterator Iterator;
     std::sort(comparedata1.begin(),comparedata1.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<Iterator,int,3>(data1.begin(),data1.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data1.begin(),data1.end(),3);
     std::sort(comparedata2.begin(),comparedata2.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<Iterator,int,3>(data2.begin(),data2.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data2.begin(),data2.end(),3);
     std::sort(comparedata3.begin(),comparedata3.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<Iterator,int,3>(data3.begin(),data3.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data3.begin(),data3.end(),3);
     std::sort(comparedata4.begin(),comparedata4.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort<Iterator,int,3>(data4.begin(),data4.end());
+    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data4.begin(),data4.end(),3);
     EXPECT_EQ(data1,comparedata1);
     EXPECT_EQ(data2,comparedata2);
     EXPECT_EQ(data3,comparedata3);

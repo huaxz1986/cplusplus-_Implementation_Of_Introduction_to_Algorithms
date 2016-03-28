@@ -18,10 +18,11 @@ namespace IntrodunctionToAlgorithm
     * - heapify(index)操作：维持以index为根节点的子堆的性质。它比较index与其左右子节点的值，选取其最小的那个提升到index节点上。同时递归向下。具体见_heapify()方法说明
     * - setupHeap()操作： 建堆操作。它从堆的最低层向上层反复调用heapify操作进行建堆。
     */
-        template<typename Iterator,typename T,typename Compare=std::less<T>>
+        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
         class Sort_Heap
         {
         public:
+            typedef typename std::iterator_traits<Iterator>::value_type T; /*!< 迭代器指向对象的值类型*/
             //!operator()
             /*!
             * \param from : 待排序序列的起始迭代器（也可以是指向数组中某元素的指针）

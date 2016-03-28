@@ -3,6 +3,7 @@
 #include"src/sort_algorithms/insert_sort/insertsort.h"
 #include<cmath>
 #include<iostream>
+#include<cassert>
 namespace IntrodunctionToAlgorithm
 {
     namespace SortAlgorithm
@@ -15,10 +16,11 @@ namespace IntrodunctionToAlgorithm
     * \return 指定正整数指定位数上的数字
     *
     *
-    * 这里采用的 T 必须为某个整数类型
+    * 这里采用的 T 必须为某个整数类型，由static_assert(std::is_integral<T>::value,"..."")确保
     */
     template<typename T> T digi_on_N(T num,std::size_t n)
     {
+       static_assert(std::is_integral<T>::value, "T must be integer!"); //必须针对整数才能取指定位数上的数字
        return num/(T)std::pow(10,n)-num/(T)std::pow(10,n+1)*10;
     }
 
@@ -26,6 +28,7 @@ namespace IntrodunctionToAlgorithm
     /*!
     * \param begin : 待排序序列的起始迭代器（也可以是指向数组中某元素的指针）
     * \param end: 待排序序列的终止迭代器（也可以是指向数组中某元素的指针）
+    * \param radix_width: 待排序元素（必须是整数）的最大位宽，必须非0（由assert(radix_width!=0)确保）
     * \return void
     *
     * - 基数排序思想，假设对数组A[p...r]排序，其中数组中所有元素都为正整数，并且不超过RADIXWITH位（有模板的RADIXWITH参数指定）：
@@ -39,16 +42,21 @@ namespace IntrodunctionToAlgorithm
     *  这里尤其要重点强调，用于对指定位上的数字进行排序时，必须要满足稳定性。
     *  - 快速排序就是非稳定的
     *  - 用小于比较的插入排序是稳定的；用小于等于比较的插入排序是不稳定的
+    *
+    * >这里必须对整数才能采取基数排序。由static_assert(...,...)确保
     */
-    template<typename Iterator,typename T,std::size_t RADIXWITH>
-                void radix_sort(Iterator begin,Iterator end)
+    template<typename Iterator>
+                void radix_sort(Iterator begin,Iterator end,std::size_t radix_width)
      {
+        typedef typename std::iterator_traits<Iterator>::value_type T;
+        assert(radix_width!=0); //位数为有效的，0位数无效
+        static_assert(std::is_integral<T>::value, "sequence to be sorted must be integer!"); //必须针对整数进行基数排序
         if(end-begin<=1)
             return;
-        for(std::size_t i=0;i<RADIXWITH;i++) //从最低位(第0位为个位）到 （RADIXWITH-1）位的位数进行排序（一共RADIXWITH位）
+        for(std::size_t i=0;i<radix_width;i++) //从最低位(第0位为个位）到 （RADIXWITH-1）位的位数进行排序（一共RADIXWITH位）
         {
             auto compare=[i](T little, T big){return digi_on_N(little,i)<digi_on_N(big,i);}; //必须用 < 比较才是稳定排序，否则是不稳定排序，不能用快排（非稳定）
-            insert_sort<Iterator,T,decltype(compare)>(begin,end,compare);
+            insert_sort<Iterator,decltype(compare)>(begin,end,compare);
         }
      }
     }

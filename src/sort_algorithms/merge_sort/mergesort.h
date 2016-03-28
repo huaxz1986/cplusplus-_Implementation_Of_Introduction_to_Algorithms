@@ -38,9 +38,10 @@ namespace IntrodunctionToAlgorithm
     * - 时间复杂度 O(n)
     * - 归并时需要额外的空间 O(n)
     */
-        template<typename Iterator,typename T,typename Compare=std::less<T>>
+        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
                 void merge(Iterator begin,Iterator end,Iterator middle,Compare compare=Compare())
         {
+            typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             if(middle-begin<=0||end-middle<=0) return;
             std::vector<T> result(begin,end); //暂存结果
             auto current=result.begin();
@@ -65,7 +66,7 @@ namespace IntrodunctionToAlgorithm
             {
                 std::copy(left_current,middle,current);
             }
-            std::copy(result.begin(),result.end(),begin); //复制回原序列
+            std::copy(result.begin(),result.end(),begin); //复制回原序列，因此是非原地的
         }
 
     //! merge_sort：算法导论第二章 2.3.1
@@ -81,15 +82,16 @@ namespace IntrodunctionToAlgorithm
     * - 时间复杂度 O(nlgn)
     * - 非原地排序，归并时需要额外的空间 O(n)
     */
-        template<typename Iterator,typename T,typename Compare=std::less<T>>
+        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
                     void merge_sort(Iterator begin,Iterator end,Compare compare=Compare())
         {
+            //typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             if(end-begin>1)
             {
                 Iterator middle=begin+((end-begin)/2);
-                merge_sort<Iterator,T,Compare>(begin,middle,compare);
-                merge_sort<Iterator,T,Compare>(middle,end,compare);
-                merge<Iterator,T,Compare>(begin,end,middle,compare);
+                merge_sort(begin,middle,compare);
+                merge_sort(middle,end,compare);
+                merge(begin,end,middle,compare);
             }
         }
     }

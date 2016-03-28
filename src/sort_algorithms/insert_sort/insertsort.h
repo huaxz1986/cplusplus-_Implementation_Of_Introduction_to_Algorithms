@@ -34,9 +34,10 @@ namespace IntrodunctionToAlgorithm
     * - 时间复杂度 O(n^2)
     * - 原地排序
     */
-    template<typename Iterator,typename T,typename Compare=std::less<T>>
+    template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
                 void insert_sort(Iterator begin,Iterator end,Compare compare=Compare())
      {
+            //typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             if(end-begin<=1)
                 return;
             auto current=begin;
