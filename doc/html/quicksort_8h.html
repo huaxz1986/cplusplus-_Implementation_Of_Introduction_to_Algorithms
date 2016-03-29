@@ -110,7 +110,8 @@ $(document).ready(function(){initNavTree('quicksort_8h.html','');});
 <div class="title">quicksort.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+</div>
 <p><a href="quicksort_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -124,10 +125,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a601061e71debf0027692b82df7821a83"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:a601061e71debf0027692b82df7821a83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a601061e71debf0027692b82df7821a83">IntrodunctionToAlgorithm::SortAlgorithm::quick_sort</a> (Iterator begin, Iterator end, Compare compare=Compare())</td></tr>
-<tr class="memdesc:a601061e71debf0027692b82df7821a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">quick_sort： 算法导论第7章  <a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a601061e71debf0027692b82df7821a83">More...</a><br /></td></tr>
-<tr class="separator:a601061e71debf0027692b82df7821a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </td></tr>
+<tr class="memitem:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">IntrodunctionToAlgorithm::SortAlgorithm::partition</a> (const Iterator begin, const Iterator end, const Iterator partition_iter, Compare compare=Compare())</td></tr>
+<tr class="memdesc:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="mdescLeft">&#160;</td><td class="mdescRight">partition： 算法导论第7章快速排序中的划分算法  <a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">More...</a><br /></td></tr>
+<tr class="separator:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </td></tr>
+<tr class="memitem:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">IntrodunctionToAlgorithm::SortAlgorithm::quick_sort</a> (const Iterator begin, const Iterator end, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">quick_sort： 算法导论第7章  <a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">More...</a><br /></td></tr>
+<tr class="separator:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

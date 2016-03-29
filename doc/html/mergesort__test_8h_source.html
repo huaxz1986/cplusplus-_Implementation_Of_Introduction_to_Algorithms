@@ -142,13 +142,13 @@ $(document).ready(function(){initNavTree('mergesort__test_8h_source.html','');})
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> comparedata4[1]={5};</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::sort(comparedata1,comparedata1+10);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;int*,int&gt;(data1+0,data1+10);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data1+0,data1+10);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::sort(comparedata2,comparedata2+10);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;int*,int&gt;(data2+0,data2+10);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data2+0,data2+10);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::sort(comparedata3,comparedata3+10);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;int*,int&gt;(data3+0,data3+10);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data3+0,data3+10);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::sort(comparedata4,comparedata4+1);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;int*,int&gt;(data4+0,data4+1);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data4+0,data4+1);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data1,data1+10),std::vector&lt;int&gt;(comparedata1,comparedata1+10));</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data2,data2+10),std::vector&lt;int&gt;(comparedata2,comparedata2+10));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data3,data3+10),std::vector&lt;int&gt;(comparedata3,comparedata3+10));</div>
@@ -167,89 +167,87 @@ $(document).ready(function(){initNavTree('mergesort__test_8h_source.html','');})
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::vector&lt;int&gt; comparedata3={5,5,5,5,5,4,4,4,4,4};</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::vector&lt;int&gt; comparedata4={5};</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> std::vector&lt;int&gt;::iterator Iterator;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;Iterator,int&gt;(data1.begin(),data1.end());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;Iterator,int&gt;(data2.begin(),data2.end());</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;Iterator,int&gt;(data3.begin(),data3.end());</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort&lt;Iterator,int&gt;(data4.begin(),data4.end());</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    EXPECT_EQ(data4,comparedata4);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="mergesort__test_8h.html#a624f7bd45f730204baf874014d774e02">   92</a></span>&#160;<a class="code" href="mergesort__test_8h.html#aaa0692399fb3f538feb04053f36a2978">TEST</a>(test_merge, test_C_array)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> data1[10]={1,3,5,7,9,2,4,6,8,10};</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> data2[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> data3[10]={1,2,3,4,5,6,7,8,9,0};</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> data4[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> data5[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> comparedata1[10]={1,3,5,7,9,2,4,6,8,10};</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> comparedata2[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> comparedata3[10]={1,2,3,4,5,6,7,8,9,0};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">int</span> comparedata4[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> comparedata5[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    std::sort(comparedata1,comparedata1+10);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;int*,int&gt;(data1+0,data1+10,data1+5);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::sort(comparedata2,comparedata2+10);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;int*,int&gt;(data2+0,data2+10,data2+1);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::sort(comparedata3,comparedata3+10);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;int*,int&gt;(data3+0,data3+10,data3+9);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::sort(comparedata4,comparedata4+10);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;int*,int&gt;(data4+0,data4+10,data4+0);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::sort(comparedata5,comparedata5+10);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;int*,int&gt;(data5+0,data5+10,data5+10);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data1,data1+10),std::vector&lt;int&gt;(comparedata1,comparedata1+10));</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data2,data2+10),std::vector&lt;int&gt;(comparedata2,comparedata2+10));</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data3,data3+10),std::vector&lt;int&gt;(comparedata3,comparedata3+10));</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data4,data4+10),std::vector&lt;int&gt;(comparedata4,comparedata4+10));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data5,data5+10),std::vector&lt;int&gt;(comparedata5,comparedata5+10));</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data1.begin(),data1.end());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data2.begin(),data2.end());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data3.begin(),data3.end());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a>(data4.begin(),data4.end());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    EXPECT_EQ(data4,comparedata4);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="mergesort__test_8h.html#a624f7bd45f730204baf874014d774e02">   90</a></span>&#160;<a class="code" href="mergesort__test_8h.html#aaa0692399fb3f538feb04053f36a2978">TEST</a>(test_merge, test_C_array)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> data1[10]={1,3,5,7,9,2,4,6,8,10};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> data2[10]={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> data3[10]={1,2,3,4,5,6,7,8,9,0};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> data4[10]={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> data5[10]={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> comparedata1[10]={1,3,5,7,9,2,4,6,8,10};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> comparedata2[10]={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> comparedata3[10]={1,2,3,4,5,6,7,8,9,0};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> comparedata4[10]={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> comparedata5[10]={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    std::sort(comparedata1,comparedata1+10);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data1+0,data1+10,data1+5);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    std::sort(comparedata2,comparedata2+10);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data2+0,data2+10,data2+1);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::sort(comparedata3,comparedata3+10);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data3+0,data3+10,data3+9);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::sort(comparedata4,comparedata4+10);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data4+0,data4+10,data4+0);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    std::sort(comparedata5,comparedata5+10);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data5+0,data5+10,data5+10);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data1,data1+10),std::vector&lt;int&gt;(comparedata1,comparedata1+10));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data2,data2+10),std::vector&lt;int&gt;(comparedata2,comparedata2+10));</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data3,data3+10),std::vector&lt;int&gt;(comparedata3,comparedata3+10));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data4,data4+10),std::vector&lt;int&gt;(comparedata4,comparedata4+10));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data5,data5+10),std::vector&lt;int&gt;(comparedata5,comparedata5+10));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="mergesort__test_8h.html#a5806959cff92a4e6c979d4fa47902325">  128</a></span>&#160;<a class="code" href="mergesort__test_8h.html#aaa0692399fb3f538feb04053f36a2978">TEST</a>(test_merge, test_std_container)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    std::vector&lt;int&gt; data1={1,3,5,7,9,2,4,6,8,10};</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    std::vector&lt;int&gt; data2={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    std::vector&lt;int&gt; data3={1,2,3,4,5,6,7,8,9,0};</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    std::vector&lt;int&gt; data4={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    std::vector&lt;int&gt; data5={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    std::vector&lt;int&gt; comparedata1={1,3,5,7,9,2,4,6,8,10};</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    std::vector&lt;int&gt; comparedata2={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    std::vector&lt;int&gt; comparedata3={1,2,3,4,5,6,7,8,9,0};</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    std::vector&lt;int&gt; comparedata4={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    std::vector&lt;int&gt; comparedata5={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> std::vector&lt;int&gt;::iterator Iterator;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;Iterator,int&gt;(data1.begin(),data1.end(),data1.begin()+5);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;Iterator,int&gt;(data2.begin(),data2.end(),data2.begin()+1);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;Iterator,int&gt;(data3.begin(),data3.end(),data3.begin()+9);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;Iterator,int&gt;(data4.begin(),data4.end(),data4.begin()+0);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    std::sort(comparedata5.begin(),comparedata5.end());</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    IntrodunctionToAlgorithm::SortAlgorithm::merge&lt;Iterator,int&gt;(data5.begin(),data5.end(),data5.begin()+10);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    EXPECT_EQ(data4,comparedata4);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    EXPECT_EQ(data5,comparedata5);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif // MERGESORTER_TEST_H</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="mergesort__test_8h.html#a5806959cff92a4e6c979d4fa47902325">  126</a></span>&#160;<a class="code" href="mergesort__test_8h.html#aaa0692399fb3f538feb04053f36a2978">TEST</a>(test_merge, test_std_container)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    std::vector&lt;int&gt; data1={1,3,5,7,9,2,4,6,8,10};</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    std::vector&lt;int&gt; data2={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    std::vector&lt;int&gt; data3={1,2,3,4,5,6,7,8,9,0};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    std::vector&lt;int&gt; data4={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    std::vector&lt;int&gt; data5={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    std::vector&lt;int&gt; comparedata1={1,3,5,7,9,2,4,6,8,10};</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    std::vector&lt;int&gt; comparedata2={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    std::vector&lt;int&gt; comparedata3={1,2,3,4,5,6,7,8,9,0};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    std::vector&lt;int&gt; comparedata4={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    std::vector&lt;int&gt; comparedata5={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data1.begin(),data1.end(),data1.begin()+5);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data2.begin(),data2.end(),data2.begin()+1);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data3.begin(),data3.end(),data3.begin()+9);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data4.begin(),data4.end(),data4.begin()+0);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    std::sort(comparedata5.begin(),comparedata5.end());</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a>(data5.begin(),data5.end(),data5.begin()+10);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    EXPECT_EQ(data4,comparedata4);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    EXPECT_EQ(data5,comparedata5);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif // MERGESORTER_TEST_H</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a907f7aca2cde6c79983673ce07167278"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a></div><div class="ttdeci">void merge(const Iterator begin, const Iterator end, const Iterator middle, Compare compare=Compare())</div><div class="ttdoc">merge：算法导论第二章 2.3.1 </div><div class="ttdef"><b>Definition:</b> <a href="mergesort_8h_source.html#l00042">mergesort.h:42</a></div></div>
 <div class="ttc" id="mergesort__test_8h_html_aaa0692399fb3f538feb04053f36a2978"><div class="ttname"><a href="mergesort__test_8h.html#aaa0692399fb3f538feb04053f36a2978">TEST</a></div><div class="ttdeci">TEST(test_merge_sort, test_C_array)</div><div class="ttdoc">merge_sort_test：测试C数组的归并排序 </div><div class="ttdef"><b>Definition:</b> <a href="mergesort__test_8h_source.html#l00029">mergesort_test.h:29</a></div></div>
 <div class="ttc" id="mergesort_8h_html"><div class="ttname"><a href="mergesort_8h.html">mergesort.h</a></div></div>
+<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_ab72ad89c389207e4b58443f9f57119af"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a></div><div class="ttdeci">void merge_sort(const Iterator begin, const Iterator end, Compare compare=Compare())</div><div class="ttdoc">merge_sort：算法导论第二章 2.3.1 </div><div class="ttdef"><b>Definition:</b> <a href="mergesort_8h_source.html#l00086">mergesort.h:86</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

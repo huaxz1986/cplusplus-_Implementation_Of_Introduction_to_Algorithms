@@ -1,11 +1,12 @@
 var class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap =
 [
-    [ "_heapify", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#aa9bcf8775ab30900b5dbb7905b13460b", null ],
-    [ "_lchildIndex", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a13a90cdd76f1e795c2e072f1afe191ea", null ],
-    [ "_parentIndex", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a6615e6e39e8a3f634a1a73a8c7169546", null ],
-    [ "_rchildIndex", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#ab46a789271631f3b6cdfe99415261b08", null ],
-    [ "_setupHeap", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a6e3121ec45a2c2b066da32a54515ab6f", null ],
-    [ "operator()", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a0848d2a1a3b2297af9b7e76c5fca20c6", null ],
-    [ "_from", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a8827f7c6d33a28ac58ebb0aac10052fa", null ],
-    [ "_size", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#aa4eacec4269818318e3f22410408e97d", null ]
+    [ "T", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a919579152d685b356d4776fc8d2eeb90", null ],
+    [ "_heapify", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a12f57e7bb47939f0f4f0994ee81d4b9e", null ],
+    [ "_lchildIndex", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a0ba289760dd936944dc2629511c73f27", null ],
+    [ "_parentIndex", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a2607ad45b37fb4dde8e2c94e50cd19da", null ],
+    [ "_rchildIndex", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#abb4d45e22fc4fc5ec297214f28605209", null ],
+    [ "_setupHeap", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#ab8b98e11afa86430214c6998c48b21d1", null ],
+    [ "operator()", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a3c6f55939475aac8e7651248230e1730", null ],
+    [ "_from", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a7f6c20382257308edd2c0049ec46ad66", null ],
+    [ "_size", "class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a3cbf6e8a1972cc62bce0b50226024a52", null ]
 ];

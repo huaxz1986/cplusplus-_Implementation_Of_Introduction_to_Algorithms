@@ -35,4 +35,12 @@ namespace IntrodunctionToAlgorithm
     {
 
     }
+    //! Namespace of  SelectAlgorithm
+    /*!
+    *
+    * 该命名空间内包含所有顺序统计量算法
+    */
+    namespace SelectAlgorithm {
+
+    }
 }

@@ -134,55 +134,58 @@ $(document).ready(function(){initNavTree('mergesort_8h_source.html','');});
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator,<span class="keyword">typename</span> T,<span class="keyword">typename</span> Compare=std::less&lt;T&gt;&gt;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a979431307bf9aa172840b6cbbe499af1">   42</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a979431307bf9aa172840b6cbbe499af1">merge</a>(Iterator begin,Iterator end,Iterator middle,Compare compare=Compare())</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        template&lt;typename Iterator,typename Compare=std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">   42</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">merge</a>(<span class="keyword">const</span> Iterator begin,<span class="keyword">const</span> Iterator end,<span class="keyword">const</span> Iterator middle,Compare compare=Compare())</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span>(middle-begin&lt;=0||end-middle&lt;=0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            std::vector&lt;T&gt; result(begin,end); <span class="comment">//暂存结果</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">auto</span> current=result.begin();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">auto</span> left_current=begin; <span class="comment">//左侧序列当前比较位置</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">auto</span> right_current=middle;<span class="comment">//右序列当前比较位置</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">while</span>(left_current!=middle &amp;&amp; right_current!=end)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">if</span>(compare(*left_current,*right_current))</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    *current++=*left_current++;<span class="comment">//左侧较小</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }<span class="keywordflow">else</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    *current++=*right_current++;<span class="comment">//左侧较小</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span>(left_current==middle&amp;&amp;right_current!=end) <span class="comment">//当左侧序列为搬空</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                std::copy(right_current,end,current);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">if</span>(right_current==end&amp;&amp;left_current!=middle) <span class="comment">//当右侧序列搬空</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                std::copy(left_current,middle,current);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            std::copy(result.begin(),result.end(),begin); <span class="comment">//复制回原序列</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator,<span class="keyword">typename</span> T,<span class="keyword">typename</span> Compare=std::less&lt;T&gt;&gt;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a1029751371f45fbe6c99463b2e73541e">   85</a></span>&#160;                    <span class="keywordtype">void</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a1029751371f45fbe6c99463b2e73541e">merge_sort</a>(Iterator begin,Iterator end,Compare compare=Compare())</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">if</span>(end-begin&gt;1)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                Iterator middle=begin+((end-begin)/2);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                merge_sort&lt;Iterator,T,Compare&gt;(begin,middle,compare);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                merge_sort&lt;Iterator,T,Compare&gt;(middle,end,compare);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                merge&lt;Iterator,T,Compare&gt;(begin,end,middle,compare);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif // MERGESORTE_H</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a1029751371f45fbe6c99463b2e73541e"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a1029751371f45fbe6c99463b2e73541e">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a></div><div class="ttdeci">void merge_sort(Iterator begin, Iterator end, Compare compare=Compare())</div><div class="ttdoc">merge_sort：算法导论第二章 2.3.1 </div><div class="ttdef"><b>Definition:</b> <a href="mergesort_8h_source.html#l00085">mergesort.h:85</a></div></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_html"><div class="ttname"><a href="namespace_introdunction_to_algorithm.html">IntrodunctionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="heapsort_8h_source.html#l00003">heapsort.h:3</a></div></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a979431307bf9aa172840b6cbbe499af1"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a979431307bf9aa172840b6cbbe499af1">IntrodunctionToAlgorithm::SortAlgorithm::merge</a></div><div class="ttdeci">void merge(Iterator begin, Iterator end, Iterator middle, Compare compare=Compare())</div><div class="ttdoc">merge：算法导论第二章 2.3.1 </div><div class="ttdef"><b>Definition:</b> <a href="mergesort_8h_source.html#l00042">mergesort.h:42</a></div></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::value_type T;<span class="comment">// 迭代器指向对象的值类型</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span>(std::distance(begin,middle)&lt;=0||std::distance(middle,end)&lt;=0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            std::vector&lt;T&gt; result(begin,end); <span class="comment">//暂存结果</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">auto</span> current=result.begin();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">auto</span> left_current=begin; <span class="comment">//左侧序列当前比较位置</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keyword">auto</span> right_current=middle;<span class="comment">//右序列当前比较位置</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">while</span>(left_current!=middle &amp;&amp; right_current!=end)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span>(compare(*left_current,*right_current))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    *current++=*left_current++;<span class="comment">//左侧较小</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    *current++=*right_current++;<span class="comment">//左侧较小</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span>(left_current==middle&amp;&amp;right_current!=end) <span class="comment">//当左侧序列为搬空</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                std::copy(right_current,end,current);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span>(right_current==end&amp;&amp;left_current!=middle) <span class="comment">//当右侧序列搬空</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                std::copy(left_current,middle,current);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            std::copy(result.begin(),result.end(),begin); <span class="comment">//复制回原序列，因此是非原地的</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        template&lt;typename Iterator,typename Compare=std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">   86</a></span>&#160;                    <span class="keywordtype">void</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">merge_sort</a>(<span class="keyword">const</span> Iterator begin,<span class="keyword">const</span> Iterator end,Compare compare=Compare())</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">//typedef typename std::iterator_traits&lt;Iterator&gt;::value_type T;// 迭代器指向对象的值类型</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keyword">auto</span> size=std::distance(begin,end);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">if</span>(size&gt;1)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                Iterator middle=begin+size/2;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">merge_sort</a>(begin,middle,compare);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">merge_sort</a>(middle,end,compare);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">merge</a>(begin,end,middle,compare);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // MERGESORTE_H</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a907f7aca2cde6c79983673ce07167278"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">IntrodunctionToAlgorithm::SortAlgorithm::merge</a></div><div class="ttdeci">void merge(const Iterator begin, const Iterator end, const Iterator middle, Compare compare=Compare())</div><div class="ttdoc">merge：算法导论第二章 2.3.1 </div><div class="ttdef"><b>Definition:</b> <a href="mergesort_8h_source.html#l00042">mergesort.h:42</a></div></div>
+<div class="ttc" id="namespace_introdunction_to_algorithm_html"><div class="ttname"><a href="namespace_introdunction_to_algorithm.html">IntrodunctionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="algorithms_8h_source.html#l00027">algorithms.h:27</a></div></div>
+<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_ab72ad89c389207e4b58443f9f57119af"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">IntrodunctionToAlgorithm::SortAlgorithm::merge_sort</a></div><div class="ttdeci">void merge_sort(const Iterator begin, const Iterator end, Compare compare=Compare())</div><div class="ttdoc">merge_sort：算法导论第二章 2.3.1 </div><div class="ttdef"><b>Definition:</b> <a href="mergesort_8h_source.html#l00086">mergesort.h:86</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

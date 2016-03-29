@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Introduction_to_Algorithms: IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, T, Compare &gt; Class Template Reference</title>
+<title>Introduction_to_Algorithms: IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, Compare &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -105,12 +105,13 @@ $(document).ready(function(){initNavTree('class_introdunction_to_algorithm_1_1_s
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, T, Compare &gt; Class Template Reference</div>  </div>
+<div class="title">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, Compare &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -119,40 +120,45 @@ $(document).ready(function(){initNavTree('class_introdunction_to_algorithm_1_1_s
 
 <p><code>#include &lt;<a class="el" href="heapsort_8h_source.html">heapsort.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a919579152d685b356d4776fc8d2eeb90"><td class="memItemLeft" align="right" valign="top">typedef std::iterator_traits&lt; Iterator &gt;::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a919579152d685b356d4776fc8d2eeb90">T</a></td></tr>
+<tr class="separator:a919579152d685b356d4776fc8d2eeb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0848d2a1a3b2297af9b7e76c5fca20c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a0848d2a1a3b2297af9b7e76c5fca20c6">operator()</a> (Iterator from, std::size_t size, Compare compare=Compare())</td></tr>
-<tr class="memdesc:a0848d2a1a3b2297af9b7e76c5fca20c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">operator()  <a href="#a0848d2a1a3b2297af9b7e76c5fca20c6">More...</a><br /></td></tr>
-<tr class="separator:a0848d2a1a3b2297af9b7e76c5fca20c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6f55939475aac8e7651248230e1730"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a3c6f55939475aac8e7651248230e1730">operator()</a> (const Iterator from, std::size_t size, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a3c6f55939475aac8e7651248230e1730"><td class="mdescLeft">&#160;</td><td class="mdescRight">operator()  <a href="#a3c6f55939475aac8e7651248230e1730">More...</a><br /></td></tr>
+<tr class="separator:a3c6f55939475aac8e7651248230e1730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a6e3121ec45a2c2b066da32a54515ab6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a6e3121ec45a2c2b066da32a54515ab6f">_setupHeap</a> (Compare compare=Compare())</td></tr>
-<tr class="memdesc:a6e3121ec45a2c2b066da32a54515ab6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">_setupHeap:建堆  <a href="#a6e3121ec45a2c2b066da32a54515ab6f">More...</a><br /></td></tr>
-<tr class="separator:a6e3121ec45a2c2b066da32a54515ab6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9bcf8775ab30900b5dbb7905b13460b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#aa9bcf8775ab30900b5dbb7905b13460b">_heapify</a> (std::size_t elementIndex, Compare compare=Compare())</td></tr>
-<tr class="memdesc:aa9bcf8775ab30900b5dbb7905b13460b"><td class="mdescLeft">&#160;</td><td class="mdescRight">_heapify：维持堆性质  <a href="#aa9bcf8775ab30900b5dbb7905b13460b">More...</a><br /></td></tr>
-<tr class="separator:aa9bcf8775ab30900b5dbb7905b13460b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6615e6e39e8a3f634a1a73a8c7169546"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a6615e6e39e8a3f634a1a73a8c7169546">_parentIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
-<tr class="memdesc:a6615e6e39e8a3f634a1a73a8c7169546"><td class="mdescLeft">&#160;</td><td class="mdescRight">_parentIndex:返回一个节点的父节点位置  <a href="#a6615e6e39e8a3f634a1a73a8c7169546">More...</a><br /></td></tr>
-<tr class="separator:a6615e6e39e8a3f634a1a73a8c7169546"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13a90cdd76f1e795c2e072f1afe191ea"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a13a90cdd76f1e795c2e072f1afe191ea">_lchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
-<tr class="memdesc:a13a90cdd76f1e795c2e072f1afe191ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">_lchildIndex:返回一个节点的左子节点位置  <a href="#a13a90cdd76f1e795c2e072f1afe191ea">More...</a><br /></td></tr>
-<tr class="separator:a13a90cdd76f1e795c2e072f1afe191ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab46a789271631f3b6cdfe99415261b08"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#ab46a789271631f3b6cdfe99415261b08">_rchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
-<tr class="memdesc:ab46a789271631f3b6cdfe99415261b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">_rchildIndex:返回一个节点的右子节点位置  <a href="#ab46a789271631f3b6cdfe99415261b08">More...</a><br /></td></tr>
-<tr class="separator:ab46a789271631f3b6cdfe99415261b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b98e11afa86430214c6998c48b21d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#ab8b98e11afa86430214c6998c48b21d1">_setupHeap</a> (Compare compare=Compare())</td></tr>
+<tr class="memdesc:ab8b98e11afa86430214c6998c48b21d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">_setupHeap:建堆  <a href="#ab8b98e11afa86430214c6998c48b21d1">More...</a><br /></td></tr>
+<tr class="separator:ab8b98e11afa86430214c6998c48b21d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f57e7bb47939f0f4f0994ee81d4b9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a12f57e7bb47939f0f4f0994ee81d4b9e">_heapify</a> (std::size_t elementIndex, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a12f57e7bb47939f0f4f0994ee81d4b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">_heapify：维持堆性质  <a href="#a12f57e7bb47939f0f4f0994ee81d4b9e">More...</a><br /></td></tr>
+<tr class="separator:a12f57e7bb47939f0f4f0994ee81d4b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2607ad45b37fb4dde8e2c94e50cd19da"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a2607ad45b37fb4dde8e2c94e50cd19da">_parentIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
+<tr class="memdesc:a2607ad45b37fb4dde8e2c94e50cd19da"><td class="mdescLeft">&#160;</td><td class="mdescRight">_parentIndex:返回一个节点的父节点位置  <a href="#a2607ad45b37fb4dde8e2c94e50cd19da">More...</a><br /></td></tr>
+<tr class="separator:a2607ad45b37fb4dde8e2c94e50cd19da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba289760dd936944dc2629511c73f27"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a0ba289760dd936944dc2629511c73f27">_lchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
+<tr class="memdesc:a0ba289760dd936944dc2629511c73f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">_lchildIndex:返回一个节点的左子节点位置  <a href="#a0ba289760dd936944dc2629511c73f27">More...</a><br /></td></tr>
+<tr class="separator:a0ba289760dd936944dc2629511c73f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4d45e22fc4fc5ec297214f28605209"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#abb4d45e22fc4fc5ec297214f28605209">_rchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
+<tr class="memdesc:abb4d45e22fc4fc5ec297214f28605209"><td class="mdescLeft">&#160;</td><td class="mdescRight">_rchildIndex:返回一个节点的右子节点位置  <a href="#abb4d45e22fc4fc5ec297214f28605209">More...</a><br /></td></tr>
+<tr class="separator:abb4d45e22fc4fc5ec297214f28605209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a8827f7c6d33a28ac58ebb0aac10052fa"><td class="memItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a8827f7c6d33a28ac58ebb0aac10052fa">_from</a></td></tr>
-<tr class="separator:a8827f7c6d33a28ac58ebb0aac10052fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4eacec4269818318e3f22410408e97d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#aa4eacec4269818318e3f22410408e97d">_size</a></td></tr>
-<tr class="separator:aa4eacec4269818318e3f22410408e97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6c20382257308edd2c0049ec46ad66"><td class="memItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a7f6c20382257308edd2c0049ec46ad66">_from</a></td></tr>
+<tr class="separator:a7f6c20382257308edd2c0049ec46ad66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cbf6e8a1972cc62bce0b50226024a52"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a3cbf6e8a1972cc62bce0b50226024a52">_size</a></td></tr>
+<tr class="separator:a3cbf6e8a1972cc62bce0b50226024a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt;<br />
-class IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, T, Compare &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt;<br />
+class IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, Compare &gt;</h3>
 
 <p>heap_sort：算法导论第6章 </p>
 <ul>
@@ -167,18 +173,36 @@ class IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, T, Compar
 </ul>
 
 <p>Definition at line <a class="el" href="heapsort_8h_source.html#l00022">22</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa9bcf8775ab30900b5dbb7905b13460b"></a>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a919579152d685b356d4776fc8d2eeb90"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::iterator_traits&lt;Iterator&gt;::value_type <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::<a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a919579152d685b356d4776fc8d2eeb90">T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>迭代器指向对象的值类型 </p>
+
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00025">25</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a12f57e7bb47939f0f4f0994ee81d4b9e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::_heapify </td>
+          <td class="memname">void <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::_heapify </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -217,21 +241,21 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
 <li>原地操作 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00083">83</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00084">84</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a13a90cdd76f1e795c2e072f1afe191ea"></a>
+<a class="anchor" id="a0ba289760dd936944dc2629511c73f27"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::_lchildIndex </td>
+          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::_lchildIndex </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -270,21 +294,21 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
 <li>当左子节点超过堆大小时，它无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00143">143</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00144">144</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6615e6e39e8a3f634a1a73a8c7169546"></a>
+<a class="anchor" id="a2607ad45b37fb4dde8e2c94e50cd19da"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::_parentIndex </td>
+          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::_parentIndex </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -322,21 +346,21 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
 <li>超出堆大小的节点，其父节点无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00120">120</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00121">121</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab46a789271631f3b6cdfe99415261b08"></a>
+<a class="anchor" id="abb4d45e22fc4fc5ec297214f28605209"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::_rchildIndex </td>
+          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::_rchildIndex </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -375,21 +399,21 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
 <li>当右子节点超过堆大小时，它无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00171">171</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00172">172</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6e3121ec45a2c2b066da32a54515ab6f"></a>
+<a class="anchor" id="ab8b98e11afa86430214c6998c48b21d1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::_setupHeap </td>
+          <td class="memname">void <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::_setupHeap </td>
           <td>(</td>
           <td class="paramtype">Compare&#160;</td>
           <td class="paramname"><em>compare</em> = <code>Compare()</code></td><td>)</td>
@@ -417,23 +441,23 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
 <li>原地操作 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00060">60</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00061">61</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0848d2a1a3b2297af9b7e76c5fca20c6"></a>
+<a class="anchor" id="a3c6f55939475aac8e7651248230e1730"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::operator() </td>
+          <td class="memname">void <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::operator() </td>
           <td>(</td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>from</em>, </td>
         </tr>
         <tr>
@@ -471,28 +495,28 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
-<p>首先调用 <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a6e3121ec45a2c2b066da32a54515ab6f" title="_setupHeap:建堆 ">_setupHeap()</a>建堆。然后再反复抽取最小值到堆尾部，然后维持堆的性质。</p>
+<p>首先调用 <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#ab8b98e11afa86430214c6998c48b21d1" title="_setupHeap:建堆 ">_setupHeap()</a>建堆。然后再反复抽取最小值到堆尾部，然后维持堆的性质。</p>
 <ul>
 <li>时间复杂度 O(nlogn)</li>
 <li>原地排序 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00037">37</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00038">38</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a8827f7c6d33a28ac58ebb0aac10052fa"></a>
+<a class="anchor" id="a7f6c20382257308edd2c0049ec46ad66"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Iterator <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::_from</td>
+          <td class="memname">Iterator <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::_from</td>
         </tr>
       </table>
   </td>
@@ -503,21 +527,21 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
 </div><div class="memdoc">
 <p>堆根节点位置 </p>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00187">187</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00188">188</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa4eacec4269818318e3f22410408e97d"></a>
+<a class="anchor" id="a3cbf6e8a1972cc62bce0b50226024a52"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, T, Compare &gt;::_size</td>
+          <td class="memname">std::size_t <a class="el" href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html">IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap</a>&lt; Iterator, Compare &gt;::_size</td>
         </tr>
       </table>
   </td>
@@ -528,7 +552,7 @@ template&lt;typename Iterator, typename T, typename Compare = std::less&lt;T&gt;
 </div><div class="memdoc">
 <p>堆大小 </p>
 
-<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00188">188</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
+<p>Definition at line <a class="el" href="heapsort_8h_source.html#l00189">189</a> of file <a class="el" href="heapsort_8h_source.html">heapsort.h</a>.</p>
 
 </div>
 </div>

@@ -5,17 +5,32 @@
 Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm}{Sort\+Algorithm}.  
 
 
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap}{Sort\+\_\+\+Heap}
+\begin{DoxyCompactList}\small\item\em heap\+\_\+sort：算法导论第6章 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_afc447bdeb9c5e6a3611d8daa4edef33d}{insert\+\_\+sort} (Iterator begin, Iterator end, bool($\ast$compare)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)=\mbox{[}$\,$\mbox{]}(Iterator iter\+\_\+little, Iterator iter\+\_\+big)\{return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\})
+{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a3f2eccf64da97706fbd1025d54c5bfb3}{bucket\+\_\+sort} (const Iterator begin, const Iterator end, const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&min\+\_\+val, const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&max\+\_\+val)
+\begin{DoxyCompactList}\small\item\em bucket\+\_\+sort：算法导论第8章 8.\+4 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a46002ebd64c9fcd98f3bb77713e8bdd3}{count\+\_\+sort} (const Iterator begin, const Iterator end, const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&max\+\_\+val)
+\begin{DoxyCompactList}\small\item\em count\+\_\+sort：算法导论第8章 8.\+2 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a244ca5a48266ea48f1d52e5436eaee84}{insert\+\_\+sort} (const Iterator begin, const Iterator end, Compare compare=Compare())
 \begin{DoxyCompactList}\small\item\em insert\+\_\+sort：算法导论第二章 2.\+1 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a1c50cf3a021ad0abf02a3fd398a42dda}{merge} (Iterator begin, Iterator end, Iterator middle, bool($\ast$compare)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)=\mbox{[}$\,$\mbox{]}(Iterator iter\+\_\+little, Iterator iter\+\_\+big)\{return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\})
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a907f7aca2cde6c79983673ce07167278}{merge} (const Iterator begin, const Iterator end, const Iterator middle, Compare compare=Compare())
 \begin{DoxyCompactList}\small\item\em merge：算法导论第二章 2.\+3.\+1 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a01bb990e5f682e3cb75dd54d792fae50}{merge\+\_\+sort} (Iterator begin, Iterator end, bool($\ast$compare)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)=\mbox{[}$\,$\mbox{]}(Iterator iter\+\_\+little, Iterator iter\+\_\+big)\{return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\})
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ab72ad89c389207e4b58443f9f57119af}{merge\+\_\+sort} (const Iterator begin, const Iterator end, Compare compare=Compare())
 \begin{DoxyCompactList}\small\item\em merge\+\_\+sort：算法导论第二章 2.\+3.\+1 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_aacc87ff4087dcdcae65164f24b47aa7c}{quick\+\_\+sort} (Iterator begin, Iterator end, bool($\ast$compare)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)=\mbox{[}$\,$\mbox{]}(Iterator iter\+\_\+little, Iterator iter\+\_\+big)\{return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\})
-\begin{DoxyCompactList}\small\item\em quick\+\_\+sort： 算法导论第7章 \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\Iterator \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ab8cd83d08fe92b89e749c3fcef28ae55}{partition} (const Iterator begin, const Iterator end, const Iterator partition\+\_\+iter, Compare compare=Compare())
+\begin{DoxyCompactList}\small\item\em partition： 算法导论第7章快速排序中的划分算法 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a223dc6a022f56f3de9c9e40e4a0497ff}{quick\+\_\+sort} (const Iterator begin, const Iterator end, Compare compare=Compare())
+\begin{DoxyCompactList}\small\item\em quick\+\_\+sort： 算法导论第7章 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a4e56c4fee6bd1c903ef6cfc14719d99c}{digi\+\_\+on\+\_\+\+N} (T num, std\+::size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em digi\+\_\+on\+\_\+\+N ： 获取正整数指定位数上的数字 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ad92e747a0c67fba3b9380d448591d33c}{radix\+\_\+sort} (const Iterator begin, const Iterator end, std\+::size\+\_\+t radix\+\_\+width)
+\begin{DoxyCompactList}\small\item\em radix\+\_\+sort：算法导论第8章 8.\+3 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -24,26 +39,134 @@ Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm}
 该命名空间内包含所有排序算法 
 
 \subsection{Function Documentation}
-\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_afc447bdeb9c5e6a3611d8daa4edef33d}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!insert\+\_\+sort@{insert\+\_\+sort}}
-\index{insert\+\_\+sort@{insert\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{insert\+\_\+sort(\+Iterator begin, Iterator end, bool($\ast$compare)(\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)=[](\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)\lcurly{}return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::insert\+\_\+sort (
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a3f2eccf64da97706fbd1025d54c5bfb3}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!bucket\+\_\+sort@{bucket\+\_\+sort}}
+\index{bucket\+\_\+sort@{bucket\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
+\subsubsection[{bucket\+\_\+sort(const Iterator begin, const Iterator end, const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&min\+\_\+val, const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&max\+\_\+val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::bucket\+\_\+sort (
 \begin{DoxyParamCaption}
-\item[{Iterator}]{begin, }
-\item[{Iterator}]{end, }
-\item[{bool($\ast$)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)}]{compare = {\ttfamily \mbox{[}\mbox{]}(Iterator~iter\+\_\+little,Iterator~iter\+\_\+big)\{return~$\ast$iter\+\_\+little$<$~$\ast$iter\+\_\+big;\}}}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&}]{min\+\_\+val, }
+\item[{const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&}]{max\+\_\+val}
 \end{DoxyParamCaption}
-)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_afc447bdeb9c5e6a3611d8daa4edef33d}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a3f2eccf64da97706fbd1025d54c5bfb3}
+
+
+bucket\+\_\+sort：算法导论第8章 8.\+4 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em end} & 待排序序列的终止迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em min\+\_\+val\+:待排序序列元素的下界（不一定是最紧下界）} & \\
+\hline
+{\em max\+\_\+val\+:待排序序列元素的上界（不一定是最紧上界）} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 桶排序思想，假设对数组\+A\mbox{[}p...r\mbox{]}排序，首先将这些元素进行hash运算，根据其hash值放入桶的对应区间中；然后对每一个区间中的元素进行排序；最后合并桶中各区间排序好的结果得到排序的数据：
+\begin{DoxyItemize}
+\item hash算法必须满足：若 a$<$b ，则hash(a)$<$hash(b)
+\item 要求 hash的结果尽量好，使得各数据平均分布在各区间内
+\end{DoxyItemize}
+\item 期望时间复杂度 O(n)
+\item 非原地排序 
+\end{DoxyItemize}
+
+Definition at line 25 of file bucketsort.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a46002ebd64c9fcd98f3bb77713e8bdd3}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!count\+\_\+sort@{count\+\_\+sort}}
+\index{count\+\_\+sort@{count\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
+\subsubsection[{count\+\_\+sort(const Iterator begin, const Iterator end, const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&max\+\_\+val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::count\+\_\+sort (
+\begin{DoxyParamCaption}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&}]{max\+\_\+val}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a46002ebd64c9fcd98f3bb77713e8bdd3}
+
+
+count\+\_\+sort：算法导论第8章 8.\+2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em end} & 待排序序列的终止迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em max\+\_\+val\+:待排序序列的元素值的上界（不一定是最紧的上界）} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 计数排序思想，假设对数组\+A\mbox{[}p...r\mbox{]}排序，其中数组中所有元素都为正整数，并且都是小于max\+\_\+val：
+\begin{DoxyItemize}
+\item 首先对\+A进行计数。对每一个元素\+A\mbox{[}i\mbox{]}，将它出现的次数存放在\+Counter\+Array\mbox{[}A\mbox{[}i\mbox{]}\mbox{]}中
+\item 然后对\+Counter\+Array累加，得出\+A\mbox{[}i\mbox{]}应该在结果序列中排多少位
+\item 最后在结果数组中直接放置\+A\mbox{[}i\mbox{]}（根据它的排位）
+\end{DoxyItemize}
+\item 时间复杂度 O(n)
+\item 空间复杂度 O(n)
+\end{DoxyItemize}
+
+$>$这里必须对整数才能采取计数排序。由static\+\_\+assert(...,...)确保 
+
+Definition at line 27 of file countsort.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a4e56c4fee6bd1c903ef6cfc14719d99c}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!digi\+\_\+on\+\_\+\+N@{digi\+\_\+on\+\_\+\+N}}
+\index{digi\+\_\+on\+\_\+\+N@{digi\+\_\+on\+\_\+\+N}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
+\subsubsection[{digi\+\_\+on\+\_\+\+N(\+T num, std\+::size\+\_\+t n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::digi\+\_\+on\+\_\+\+N (
+\begin{DoxyParamCaption}
+\item[{T}]{num, }
+\item[{std\+::size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a4e56c4fee6bd1c903ef6cfc14719d99c}
+
+
+digi\+\_\+on\+\_\+\+N ： 获取正整数指定位数上的数字 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & \+: 待抽取数字的正整数 \\
+\hline
+{\em n} & 指定的位数（0表示个位，1表示十位，...） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+指定正整数指定位数上的数字
+\end{DoxyReturn}
+这里采用的 T 必须为某个整数类型，由static\+\_\+assert(std\+::is\+\_\+integral$<$\+T$>$\+::value,\char`\"{}...\char`\"{}")确保 
+
+Definition at line 21 of file radixsort.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a244ca5a48266ea48f1d52e5436eaee84}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!insert\+\_\+sort@{insert\+\_\+sort}}
+\index{insert\+\_\+sort@{insert\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
+\subsubsection[{insert\+\_\+sort(const Iterator begin, const Iterator end, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::insert\+\_\+sort (
+\begin{DoxyParamCaption}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{Compare}]{compare = {\ttfamily Compare()}}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a244ca5a48266ea48f1d52e5436eaee84}
 
 
 insert\+\_\+sort：算法导论第二章 2.\+1 
 
 
 \begin{DoxyParams}{Parameters}
-{\em begin} & \+: 待排序序列的起始迭代器 \\
+{\em begin} & \+: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） \\
 \hline
-{\em end} & 待排序序列的终止迭代器 \\
+{\em end} & 待排序序列的终止迭代器（也可以是指向数组中某元素的指针） \\
 \hline
-{\em compare} & 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) \\
+{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -59,18 +182,18 @@ void
 \item 原地排序 
 \end{DoxyItemize}
 
-Definition at line 21 of file insertsort.\+h.
+Definition at line 38 of file insertsort.\+h.
 
-\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a1c50cf3a021ad0abf02a3fd398a42dda}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge@{merge}}
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a907f7aca2cde6c79983673ce07167278}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge@{merge}}
 \index{merge@{merge}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{merge(\+Iterator begin, Iterator end, Iterator middle, bool($\ast$compare)(\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)=[](\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)\lcurly{}return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge (
+\subsubsection[{merge(const Iterator begin, const Iterator end, const Iterator middle, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge (
 \begin{DoxyParamCaption}
-\item[{Iterator}]{begin, }
-\item[{Iterator}]{end, }
-\item[{Iterator}]{middle, }
-\item[{bool($\ast$)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)}]{compare = {\ttfamily \mbox{[}\mbox{]}(Iterator~iter\+\_\+little,Iterator~iter\+\_\+big)\{return~$\ast$iter\+\_\+little$<$~$\ast$iter\+\_\+big;\}}}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{const Iterator}]{middle, }
+\item[{Compare}]{compare = {\ttfamily Compare()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a1c50cf3a021ad0abf02a3fd398a42dda}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a907f7aca2cde6c79983673ce07167278}
 
 
 merge：算法导论第二章 2.\+3.\+1 
@@ -83,7 +206,7 @@ merge：算法导论第二章 2.\+3.\+1
 \hline
 {\em middle} & begin...middle之间为已排好序列 \\
 \hline
-{\em compare} & 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) \\
+{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -100,28 +223,28 @@ void
 \item 归并时需要额外的空间 O(n) 
 \end{DoxyItemize}
 
-Definition at line 23 of file mergesort.\+h.
+Definition at line 42 of file mergesort.\+h.
 
-\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a01bb990e5f682e3cb75dd54d792fae50}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge\+\_\+sort@{merge\+\_\+sort}}
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ab72ad89c389207e4b58443f9f57119af}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge\+\_\+sort@{merge\+\_\+sort}}
 \index{merge\+\_\+sort@{merge\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{merge\+\_\+sort(\+Iterator begin, Iterator end, bool($\ast$compare)(\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)=[](\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)\lcurly{}return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge\+\_\+sort (
+\subsubsection[{merge\+\_\+sort(const Iterator begin, const Iterator end, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge\+\_\+sort (
 \begin{DoxyParamCaption}
-\item[{Iterator}]{begin, }
-\item[{Iterator}]{end, }
-\item[{bool($\ast$)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)}]{compare = {\ttfamily \mbox{[}\mbox{]}(Iterator~iter\+\_\+little,Iterator~iter\+\_\+big)\{return~$\ast$iter\+\_\+little$<$~$\ast$iter\+\_\+big;\}}}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{Compare}]{compare = {\ttfamily Compare()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a01bb990e5f682e3cb75dd54d792fae50}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ab72ad89c389207e4b58443f9f57119af}
 
 
 merge\+\_\+sort：算法导论第二章 2.\+3.\+1 
 
 
 \begin{DoxyParams}{Parameters}
-{\em begin} & \+: 待排序序列的起始迭代器 \\
+{\em begin} & \+: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） \\
 \hline
-{\em end} & 待排序序列的终止迭代器 \\
+{\em end} & 待排序序列的终止迭代器（也可以是指向数组中某元素的指针） \\
 \hline
-{\em compare} & 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) \\
+{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -138,28 +261,73 @@ void
 \item 非原地排序，归并时需要额外的空间 O(n) 
 \end{DoxyItemize}
 
-Definition at line 66 of file mergesort.\+h.
+Definition at line 86 of file mergesort.\+h.
 
-\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_aacc87ff4087dcdcae65164f24b47aa7c}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!quick\+\_\+sort@{quick\+\_\+sort}}
-\index{quick\+\_\+sort@{quick\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{quick\+\_\+sort(\+Iterator begin, Iterator end, bool($\ast$compare)(\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)=[](\+Iterator iter\+\_\+little, Iterator iter\+\_\+big)\lcurly{}return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::quick\+\_\+sort (
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ab8cd83d08fe92b89e749c3fcef28ae55}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!partition@{partition}}
+\index{partition@{partition}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
+\subsubsection[{partition(const Iterator begin, const Iterator end, const Iterator partition\+\_\+iter, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ Iterator Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::partition (
 \begin{DoxyParamCaption}
-\item[{Iterator}]{begin, }
-\item[{Iterator}]{end, }
-\item[{bool($\ast$)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)}]{compare = {\ttfamily \mbox{[}\mbox{]}(Iterator~iter\+\_\+little,Iterator~iter\+\_\+big)\{return~$\ast$iter\+\_\+little$<$~$\ast$iter\+\_\+big;\}}}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{const Iterator}]{partition\+\_\+iter, }
+\item[{Compare}]{compare = {\ttfamily Compare()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_aacc87ff4087dcdcae65164f24b47aa7c}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ab8cd83d08fe92b89e749c3fcef28ae55}
+
+
+partition： 算法导论第7章快速排序中的划分算法 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 待划分序列的起始迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em end} & 待划分序列的终止迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em partition\+\_\+iter} & 指定划分元素的对应的迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+划分之后该划分元素值在序列中对应的新迭代器（也可以是指向数组中某元素的指针）
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 划分思想，假设对数组\+A\mbox{[}p...r\mbox{]}划分，划分主元为\+A\mbox{[}q\mbox{]}：
+\begin{DoxyItemize}
+\item 交换：首先将\+A\mbox{[}q\mbox{]}与\+A\mbox{[}r\mbox{]}交换，使得新的\+A\mbox{[}r\mbox{]}成为划分元素
+\item 循环：维持循环不变式： A\mbox{[}p...smaller\+\_\+next-\/1\mbox{]}始终小于\+A\mbox{[}r\mbox{]}，\+A\mbox{[}smaller\+\_\+next...current-\/1\mbox{]}始终大于\+A\mbox{[}r\mbox{]}。开始对\+A\mbox{[}current\mbox{]}进行判别：
+\begin{DoxyItemize}
+\item 若\+A\mbox{[}current\mbox{]}$<$A\mbox{[}r\mbox{]} 则交换 A\mbox{[}current\mbox{]}与 A\mbox{[}smaller\+\_\+next\mbox{]}, current右移（进行下一个元素的判断），smaller\+\_\+next右移（维持不变式）
+\item 若\+A\mbox{[}current\mbox{]}$>$=A\mbox{[}r\mbox{]}, current右移（进行下一个元素的判断）
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item 时间复杂度 O(n)
+\item 原地操作 
+\end{DoxyItemize}
+
+Definition at line 43 of file quicksort.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a223dc6a022f56f3de9c9e40e4a0497ff}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!quick\+\_\+sort@{quick\+\_\+sort}}
+\index{quick\+\_\+sort@{quick\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
+\subsubsection[{quick\+\_\+sort(const Iterator begin, const Iterator end, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::quick\+\_\+sort (
+\begin{DoxyParamCaption}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{Compare}]{compare = {\ttfamily Compare()}}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a223dc6a022f56f3de9c9e40e4a0497ff}
 
 
 quick\+\_\+sort： 算法导论第7章 
 
 
 \begin{DoxyParams}{Parameters}
-{\em begin} & \+: 待排序序列的起始迭代器 \\
+{\em begin} & \+: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） \\
 \hline
-{\em end} & 待排序序列的终止迭代器 \\
+{\em end} & 待排序序列的终止迭代器（也可以是指向数组中某元素的指针） \\
 \hline
-{\em compare} & 一个用于排序的可调用对象，接受两个 Iterator对象，返回布尔值（若前者指向的对象小于后者指向的对象，则返回 true) \\
+{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -169,12 +337,59 @@ void
 \begin{DoxyItemize}
 \item 快速排序思想，假设对数组\+A\mbox{[}p...r\mbox{]}排序：
 \begin{DoxyItemize}
-\item 分解：将数组\+A\mbox{[}p...r\mbox{]}划分为两个（可能为空）的子数组\+A\mbox{[}p...q-\/1\mbox{]}个\+A\mbox{[}q+1...r\mbox{]}，使得\+A\mbox{[}q\mbox{]}大于前面一个数组中每个元素，小于后面一个数组中每个元素
+\item 分解：将数组\+A\mbox{[}p...r\mbox{]}划分为两个（可能为空）的子数组\+A\mbox{[}p...q-\/1\mbox{]}个\+A\mbox{[}q+1...r\mbox{]}，使得\+A\mbox{[}q\mbox{]}大于前面一个数组中每个元素，小于后面一个数组中每个元素（划分算法见partition算法）
 \item 解决： 对 A\mbox{[}p...q-\/1\mbox{]}和\+A\mbox{[}q+1...r\mbox{]}递归调用快速排序
 \end{DoxyItemize}
 \item 最坏时间复杂度 O(n$^\wedge$2)， 期望时间复杂度 O(nlgn)。它平均性能非常好，是实际排序应用中最好的选择
 \item 原地排序 
 \end{DoxyItemize}
 
-Definition at line 21 of file quicksort.\+h.
+Definition at line 81 of file quicksort.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ad92e747a0c67fba3b9380d448591d33c}{}\index{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}!radix\+\_\+sort@{radix\+\_\+sort}}
+\index{radix\+\_\+sort@{radix\+\_\+sort}!Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm}}
+\subsubsection[{radix\+\_\+sort(const Iterator begin, const Iterator end, std\+::size\+\_\+t radix\+\_\+width)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::radix\+\_\+sort (
+\begin{DoxyParamCaption}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{std\+::size\+\_\+t}]{radix\+\_\+width}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ad92e747a0c67fba3b9380d448591d33c}
+
+
+radix\+\_\+sort：算法导论第8章 8.\+3 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em end} & 待排序序列的终止迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em radix\+\_\+width} & 待排序元素（必须是整数）的最大位宽，必须非0（由assert(radix\+\_\+width!=0)确保） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 基数排序思想，假设对数组\+A\mbox{[}p...r\mbox{]}排序，其中数组中所有元素都为正整数，并且不超过\+R\+A\+D\+I\+X\+W\+I\+T\+H位（有模板的\+R\+A\+D\+I\+X\+W\+I\+T\+H参数指定）：
+\begin{DoxyItemize}
+\item 首先对\+A中所有元素按照个位数大小进行排序（原地的）
+\item 再对\+A中所有元素按照个十数大小进行排序（原地的）
+\item 一直到最后按照\+A中所有元素的最高位的数字大小进行排序（原地的）
+\end{DoxyItemize}
+\item 时间复杂度 O(d(n+k))，其中d位数字的最大位宽(即这里都是d位数的整数），k为每个位数上数字取值（这里取0，1，2，3，...9）
+\item 原地排序
+
+这里尤其要重点强调，用于对指定位上的数字进行排序时，必须要满足稳定性。
+\begin{DoxyItemize}
+\item 快速排序就是非稳定的
+\item 用小于比较的插入排序是稳定的；用小于等于比较的插入排序是不稳定的
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+$>$这里必须对整数才能采取基数排序。由static\+\_\+assert(...,...)确保 
+
+Definition at line 49 of file radixsort.\+h.
 

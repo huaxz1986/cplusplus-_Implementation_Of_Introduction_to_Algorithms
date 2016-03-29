@@ -46,12 +46,13 @@ namespace IntrodunctionToAlgorithm
     * >这里必须对整数才能采取基数排序。由static_assert(...,...)确保
     */
     template<typename Iterator>
-                void radix_sort(Iterator begin,Iterator end,std::size_t radix_width)
+                void radix_sort(const Iterator begin,const Iterator end,std::size_t radix_width)
      {
         typedef typename std::iterator_traits<Iterator>::value_type T;
         assert(radix_width!=0); //位数为有效的，0位数无效
         static_assert(std::is_integral<T>::value, "sequence to be sorted must be integer!"); //必须针对整数进行基数排序
-        if(end-begin<=1)
+        auto size=std::distance(begin,end);
+        if(size<=1)
             return;
         for(std::size_t i=0;i<radix_width;i++) //从最低位(第0位为个位）到 （RADIXWITH-1）位的位数进行排序（一共RADIXWITH位）
         {

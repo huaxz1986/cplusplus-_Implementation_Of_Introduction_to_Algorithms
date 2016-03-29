@@ -1,5 +1,6 @@
 \hypertarget{quicksort_8h}{}\section{src/sort\+\_\+algorithms/quick\+\_\+sort/quicksort.h File Reference}
 \label{quicksort_8h}\index{src/sort\+\_\+algorithms/quick\+\_\+sort/quicksort.\+h@{src/sort\+\_\+algorithms/quick\+\_\+sort/quicksort.\+h}}
+{\ttfamily \#include $<$assert.\+h$>$}\\*
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -10,5 +11,7 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_aacc87ff4087dcdcae65164f24b47aa7c}{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::quick\+\_\+sort} (Iterator begin, Iterator end, bool($\ast$compare)(Iterator iter\+\_\+little, Iterator iter\+\_\+big)=\mbox{[}$\,$\mbox{]}(Iterator iter\+\_\+little, Iterator iter\+\_\+big)\{return $\ast$iter\+\_\+little$<$ $\ast$iter\+\_\+big;\})
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\Iterator \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_ab8cd83d08fe92b89e749c3fcef28ae55}{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::partition} (const Iterator begin, const Iterator end, const Iterator partition\+\_\+iter, Compare compare=Compare())
+\begin{DoxyCompactList}\small\item\em partition： 算法导论第7章快速排序中的划分算法 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_sort_algorithm_a223dc6a022f56f3de9c9e40e4a0497ff}{Introdunction\+To\+Algorithm\+::\+Sort\+Algorithm\+::quick\+\_\+sort} (const Iterator begin, const Iterator end, Compare compare=Compare())
 \begin{DoxyCompactList}\small\item\em quick\+\_\+sort： 算法导论第7章 \end{DoxyCompactList}\end{DoxyCompactItemize}

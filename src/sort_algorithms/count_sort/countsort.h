@@ -24,15 +24,16 @@ namespace IntrodunctionToAlgorithm
     *
     */
     template<typename Iterator>
-                void count_sort(Iterator begin,Iterator end,typename std::iterator_traits<Iterator>::value_type max_val)
+                void count_sort(const Iterator begin,const Iterator end,const typename std::iterator_traits<Iterator>::value_type& max_val)
      {
             typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             static_assert(std::is_integral<T>::value, "sequence to be sorted must be integer!"); //必须针对整数进行计数排序
 
-            if(end-begin <=1) return;
+            auto size=std::distance(begin,end);
+            if(size <=1) return;
 
             std::vector<T> CounterArray(max_val+1); //存放计数结果
-            std::vector<T> ResultArray(end-begin); //暂存排序结果
+            std::vector<T> ResultArray(size); //暂存排序结果
             std::size_t n=0;
             while(begin+n!=end) //计个数
             {

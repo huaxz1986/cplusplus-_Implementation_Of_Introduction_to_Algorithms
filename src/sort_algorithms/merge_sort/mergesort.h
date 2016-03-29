@@ -39,10 +39,10 @@ namespace IntrodunctionToAlgorithm
     * - 归并时需要额外的空间 O(n)
     */
         template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
-                void merge(Iterator begin,Iterator end,Iterator middle,Compare compare=Compare())
+                void merge(const Iterator begin,const Iterator end,const Iterator middle,Compare compare=Compare())
         {
             typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
-            if(middle-begin<=0||end-middle<=0) return;
+            if(std::distance(begin,middle)<=0||std::distance(middle,end)<=0) return;
             std::vector<T> result(begin,end); //暂存结果
             auto current=result.begin();
             auto left_current=begin; //左侧序列当前比较位置
@@ -83,12 +83,13 @@ namespace IntrodunctionToAlgorithm
     * - 非原地排序，归并时需要额外的空间 O(n)
     */
         template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
-                    void merge_sort(Iterator begin,Iterator end,Compare compare=Compare())
+                    void merge_sort(const Iterator begin,const Iterator end,Compare compare=Compare())
         {
             //typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
-            if(end-begin>1)
+            auto size=std::distance(begin,end);
+            if(size>1)
             {
-                Iterator middle=begin+((end-begin)/2);
+                Iterator middle=begin+size/2;
                 merge_sort(begin,middle,compare);
                 merge_sort(middle,end,compare);
                 merge(begin,end,middle,compare);

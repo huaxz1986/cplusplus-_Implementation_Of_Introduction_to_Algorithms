@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['insert_5fsort',['insert_sort',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad891f043c088caaccf4a346c455728b2',1,'IntrodunctionToAlgorithm::SortAlgorithm']]]
+  ['bucket_5fsort',['bucket_sort',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3',1,'IntrodunctionToAlgorithm::SortAlgorithm']]]
 ];

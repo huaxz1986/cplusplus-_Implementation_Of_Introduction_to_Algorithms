@@ -25,5 +25,10 @@ HEADERS += \
     src/sort_algorithms/radix_sort/radixsort.h \
     src/sort_algorithms/radix_sort/radixsort_test.h \
     src/sort_algorithms/bucket_sort/bucketsort.h \
-    src/sort_algorithms/bucket_sort/bucketsort_test.h
+    src/sort_algorithms/bucket_sort/bucketsort_test.h \
+    src/algorithms.h \
+    src/select_algorithms/randomized_select/randomizedselect.h \
+    src/select_algorithms/randomized_select/randomizedselect_test.h \
+    src/select_algorithms/good_select/goodselect.h \
+    src/select_algorithms/good_select/goodselect_test.h
 

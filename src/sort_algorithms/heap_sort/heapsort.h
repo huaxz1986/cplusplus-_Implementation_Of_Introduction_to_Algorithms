@@ -35,7 +35,7 @@ namespace IntrodunctionToAlgorithm
             * - 时间复杂度 O(nlogn)
             * - 原地排序
             */
-            void operator () (Iterator from, std::size_t size,Compare compare=Compare())
+            void operator () (const Iterator from, std::size_t size,Compare compare=Compare())
             {
                 _from=from;
                 _size=size;

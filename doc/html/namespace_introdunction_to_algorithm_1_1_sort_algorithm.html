@@ -122,43 +122,225 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad891f043c088caaccf4a346c455728b2"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:ad891f043c088caaccf4a346c455728b2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad891f043c088caaccf4a346c455728b2">insert_sort</a> (Iterator begin, Iterator end, Compare compare=Compare())</td></tr>
-<tr class="memdesc:ad891f043c088caaccf4a346c455728b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert_sort：算法导论第二章 2.1  <a href="#ad891f043c088caaccf4a346c455728b2">More...</a><br /></td></tr>
-<tr class="separator:ad891f043c088caaccf4a346c455728b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979431307bf9aa172840b6cbbe499af1"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:a979431307bf9aa172840b6cbbe499af1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a979431307bf9aa172840b6cbbe499af1">merge</a> (Iterator begin, Iterator end, Iterator middle, Compare compare=Compare())</td></tr>
-<tr class="memdesc:a979431307bf9aa172840b6cbbe499af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge：算法导论第二章 2.3.1  <a href="#a979431307bf9aa172840b6cbbe499af1">More...</a><br /></td></tr>
-<tr class="separator:a979431307bf9aa172840b6cbbe499af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1029751371f45fbe6c99463b2e73541e"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:a1029751371f45fbe6c99463b2e73541e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a1029751371f45fbe6c99463b2e73541e">merge_sort</a> (Iterator begin, Iterator end, Compare compare=Compare())</td></tr>
-<tr class="memdesc:a1029751371f45fbe6c99463b2e73541e"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge_sort：算法导论第二章 2.3.1  <a href="#a1029751371f45fbe6c99463b2e73541e">More...</a><br /></td></tr>
-<tr class="separator:a1029751371f45fbe6c99463b2e73541e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a601061e71debf0027692b82df7821a83"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:a601061e71debf0027692b82df7821a83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a601061e71debf0027692b82df7821a83">quick_sort</a> (Iterator begin, Iterator end, Compare compare=Compare())</td></tr>
-<tr class="memdesc:a601061e71debf0027692b82df7821a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">quick_sort： 算法导论第7章  <a href="#a601061e71debf0027692b82df7821a83">More...</a><br /></td></tr>
-<tr class="separator:a601061e71debf0027692b82df7821a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2eccf64da97706fbd1025d54c5bfb3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:a3f2eccf64da97706fbd1025d54c5bfb3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a> (const Iterator begin, const Iterator end, const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;min_val, const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;max_val)</td></tr>
+<tr class="memdesc:a3f2eccf64da97706fbd1025d54c5bfb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">bucket_sort：算法导论第8章 8.4  <a href="#a3f2eccf64da97706fbd1025d54c5bfb3">More...</a><br /></td></tr>
+<tr class="separator:a3f2eccf64da97706fbd1025d54c5bfb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46002ebd64c9fcd98f3bb77713e8bdd3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:a46002ebd64c9fcd98f3bb77713e8bdd3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a46002ebd64c9fcd98f3bb77713e8bdd3">count_sort</a> (const Iterator begin, const Iterator end, const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;max_val)</td></tr>
+<tr class="memdesc:a46002ebd64c9fcd98f3bb77713e8bdd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">count_sort：算法导论第8章 8.2  <a href="#a46002ebd64c9fcd98f3bb77713e8bdd3">More...</a><br /></td></tr>
+<tr class="separator:a46002ebd64c9fcd98f3bb77713e8bdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244ca5a48266ea48f1d52e5436eaee84"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </td></tr>
+<tr class="memitem:a244ca5a48266ea48f1d52e5436eaee84"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a> (const Iterator begin, const Iterator end, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a244ca5a48266ea48f1d52e5436eaee84"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert_sort：算法导论第二章 2.1  <a href="#a244ca5a48266ea48f1d52e5436eaee84">More...</a><br /></td></tr>
+<tr class="separator:a244ca5a48266ea48f1d52e5436eaee84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907f7aca2cde6c79983673ce07167278"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </td></tr>
+<tr class="memitem:a907f7aca2cde6c79983673ce07167278"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278">merge</a> (const Iterator begin, const Iterator end, const Iterator middle, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a907f7aca2cde6c79983673ce07167278"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge：算法导论第二章 2.3.1  <a href="#a907f7aca2cde6c79983673ce07167278">More...</a><br /></td></tr>
+<tr class="separator:a907f7aca2cde6c79983673ce07167278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72ad89c389207e4b58443f9f57119af"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </td></tr>
+<tr class="memitem:ab72ad89c389207e4b58443f9f57119af"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af">merge_sort</a> (const Iterator begin, const Iterator end, Compare compare=Compare())</td></tr>
+<tr class="memdesc:ab72ad89c389207e4b58443f9f57119af"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge_sort：算法导论第二章 2.3.1  <a href="#ab72ad89c389207e4b58443f9f57119af">More...</a><br /></td></tr>
+<tr class="separator:ab72ad89c389207e4b58443f9f57119af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </td></tr>
+<tr class="memitem:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="memTemplItemLeft" align="right" valign="top">Iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">partition</a> (const Iterator begin, const Iterator end, const Iterator partition_iter, Compare compare=Compare())</td></tr>
+<tr class="memdesc:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="mdescLeft">&#160;</td><td class="mdescRight">partition： 算法导论第7章快速排序中的划分算法  <a href="#ab8cd83d08fe92b89e749c3fcef28ae55">More...</a><br /></td></tr>
+<tr class="separator:ab8cd83d08fe92b89e749c3fcef28ae55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </td></tr>
+<tr class="memitem:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a> (const Iterator begin, const Iterator end, Compare compare=Compare())</td></tr>
+<tr class="memdesc:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">quick_sort： 算法导论第7章  <a href="#a223dc6a022f56f3de9c9e40e4a0497ff">More...</a><br /></td></tr>
+<tr class="separator:a223dc6a022f56f3de9c9e40e4a0497ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e56c4fee6bd1c903ef6cfc14719d99c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4e56c4fee6bd1c903ef6cfc14719d99c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a4e56c4fee6bd1c903ef6cfc14719d99c">digi_on_N</a> (T num, std::size_t n)</td></tr>
+<tr class="memdesc:a4e56c4fee6bd1c903ef6cfc14719d99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">digi_on_N ： 获取正整数指定位数上的数字  <a href="#a4e56c4fee6bd1c903ef6cfc14719d99c">More...</a><br /></td></tr>
+<tr class="separator:a4e56c4fee6bd1c903ef6cfc14719d99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92e747a0c67fba3b9380d448591d33c"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:ad92e747a0c67fba3b9380d448591d33c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad92e747a0c67fba3b9380d448591d33c">radix_sort</a> (const Iterator begin, const Iterator end, std::size_t radix_width)</td></tr>
+<tr class="memdesc:ad92e747a0c67fba3b9380d448591d33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">radix_sort：算法导论第8章 8.3  <a href="#ad92e747a0c67fba3b9380d448591d33c">More...</a><br /></td></tr>
+<tr class="separator:ad92e747a0c67fba3b9380d448591d33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace of <a class="el" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html" title="Namespace of SortAlgorithm. ">SortAlgorithm</a>. </p>
 <p>该命名空间内包含所有排序算法 </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ad891f043c088caaccf4a346c455728b2"></a>
+<a class="anchor" id="a3f2eccf64da97706fbd1025d54c5bfb3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::insert_sort </td>
+          <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::bucket_sort </td>
           <td>(</td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>begin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;&#160;</td>
+          <td class="paramname"><em>min_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;&#160;</td>
+          <td class="paramname"><em>max_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bucket_sort：算法导论第8章 8.4 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">min_val:待排序序列元素的下界（不一定是最紧下界）</td><td></td></tr>
+    <tr><td class="paramname">max_val:待排序序列元素的上界（不一定是最紧上界）</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<ul>
+<li>桶排序思想，假设对数组A[p...r]排序，首先将这些元素进行hash运算，根据其hash值放入桶的对应区间中；然后对每一个区间中的元素进行排序；最后合并桶中各区间排序好的结果得到排序的数据：<ul>
+<li>hash算法必须满足：若 a&lt;b ，则hash(a)&lt;hash(b)</li>
+<li>要求 hash的结果尽量好，使得各数据平均分布在各区间内</li>
+</ul>
+</li>
+<li>期望时间复杂度 O(n)</li>
+<li>非原地排序 </li>
+</ul>
+
+<p>Definition at line <a class="el" href="bucketsort_8h_source.html#l00025">25</a> of file <a class="el" href="bucketsort_8h_source.html">bucketsort.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a46002ebd64c9fcd98f3bb77713e8bdd3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::count_sort </td>
+          <td>(</td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;&#160;</td>
+          <td class="paramname"><em>max_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>count_sort：算法导论第8章 8.2 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">max_val:待排序序列的元素值的上界（不一定是最紧的上界）</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<ul>
+<li>计数排序思想，假设对数组A[p...r]排序，其中数组中所有元素都为正整数，并且都是小于max_val：<ul>
+<li>首先对A进行计数。对每一个元素A[i]，将它出现的次数存放在CounterArray[A[i]]中</li>
+<li>然后对CounterArray累加，得出A[i]应该在结果序列中排多少位</li>
+<li>最后在结果数组中直接放置A[i]（根据它的排位）</li>
+</ul>
+</li>
+<li>时间复杂度 O(n)</li>
+<li>空间复杂度 O(n)</li>
+</ul>
+<p>&gt;这里必须对整数才能采取计数排序。由static_assert(...,...)确保 </p>
+
+<p>Definition at line <a class="el" href="countsort_8h_source.html#l00027">27</a> of file <a class="el" href="countsort_8h_source.html">countsort.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e56c4fee6bd1c903ef6cfc14719d99c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T IntrodunctionToAlgorithm::SortAlgorithm::digi_on_N </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>digi_on_N ： 获取正整数指定位数上的数字 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>: 待抽取数字的正整数 </td></tr>
+    <tr><td class="paramname">n</td><td>指定的位数（0表示个位，1表示十位，...） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>指定正整数指定位数上的数字</dd></dl>
+<p>这里采用的 T 必须为某个整数类型，由static_assert(std::is_integral&lt;T&gt;::value,"..."")确保 </p>
+
+<p>Definition at line <a class="el" href="radixsort_8h_source.html#l00021">21</a> of file <a class="el" href="radixsort_8h_source.html">radixsort.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a244ca5a48266ea48f1d52e5436eaee84"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::insert_sort </td>
+          <td>(</td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>end</em>, </td>
         </tr>
         <tr>
@@ -198,28 +380,28 @@ template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&
 
 </div>
 </div>
-<a class="anchor" id="a979431307bf9aa172840b6cbbe499af1"></a>
+<a class="anchor" id="a907f7aca2cde6c79983673ce07167278"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::merge </td>
           <td>(</td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>begin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>end</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>middle</em>, </td>
         </tr>
         <tr>
@@ -261,22 +443,22 @@ template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&
 
 </div>
 </div>
-<a class="anchor" id="a1029751371f45fbe6c99463b2e73541e"></a>
+<a class="anchor" id="ab72ad89c389207e4b58443f9f57119af"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::merge_sort </td>
           <td>(</td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>begin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>end</em>, </td>
         </tr>
         <tr>
@@ -313,26 +495,93 @@ template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&
 <li>非原地排序，归并时需要额外的空间 O(n) </li>
 </ul>
 
-<p>Definition at line <a class="el" href="mergesort_8h_source.html#l00085">85</a> of file <a class="el" href="mergesort_8h_source.html">mergesort.h</a>.</p>
+<p>Definition at line <a class="el" href="mergesort_8h_source.html#l00086">86</a> of file <a class="el" href="mergesort_8h_source.html">mergesort.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a601061e71debf0027692b82df7821a83"></a>
+<a class="anchor" id="ab8cd83d08fe92b89e749c3fcef28ae55"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::quick_sort </td>
+          <td class="memname">Iterator IntrodunctionToAlgorithm::SortAlgorithm::partition </td>
           <td>(</td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>begin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>partition_iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Compare&#160;</td>
+          <td class="paramname"><em>compare</em> = <code>Compare()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>partition： 算法导论第7章快速排序中的划分算法 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>: 待划分序列的起始迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">end</td><td>待划分序列的终止迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">partition_iter</td><td>指定划分元素的对应的迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">compare</td><td>一个可调用对象，可用于比较两个对象的小于比较，默认为std::less&lt;T&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>划分之后该划分元素值在序列中对应的新迭代器（也可以是指向数组中某元素的指针）</dd></dl>
+<ul>
+<li>划分思想，假设对数组A[p...r]划分，划分主元为A[q]：<ul>
+<li>交换：首先将A[q]与A[r]交换，使得新的A[r]成为划分元素</li>
+<li>循环：维持循环不变式： A[p...smaller_next-1]始终小于A[r]，A[smaller_next...current-1]始终大于A[r]。开始对A[current]进行判别：<ul>
+<li>若A[current]&lt;A[r] 则交换 A[current]与 A[smaller_next], current右移（进行下一个元素的判断），smaller_next右移（维持不变式）</li>
+<li>若A[current]&gt;=A[r], current右移（进行下一个元素的判断）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>时间复杂度 O(n)</li>
+<li>原地操作 </li>
+</ul>
+
+<p>Definition at line <a class="el" href="quicksort_8h_source.html#l00043">43</a> of file <a class="el" href="quicksort_8h_source.html">quicksort.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a223dc6a022f56f3de9c9e40e4a0497ff"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator , typename Compare  = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::quick_sort </td>
+          <td>(</td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Iterator&#160;</td>
           <td class="paramname"><em>end</em>, </td>
         </tr>
         <tr>
@@ -361,7 +610,7 @@ template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
 <ul>
 <li>快速排序思想，假设对数组A[p...r]排序：<ul>
-<li>分解：将数组A[p...r]划分为两个（可能为空）的子数组A[p...q-1]个A[q+1...r]，使得A[q]大于前面一个数组中每个元素，小于后面一个数组中每个元素</li>
+<li>分解：将数组A[p...r]划分为两个（可能为空）的子数组A[p...q-1]个A[q+1...r]，使得A[q]大于前面一个数组中每个元素，小于后面一个数组中每个元素（划分算法见partition算法）</li>
 <li>解决： 对 A[p...q-1]和A[q+1...r]递归调用快速排序</li>
 </ul>
 </li>
@@ -369,7 +618,70 @@ template&lt;typename Iterator , typename T , typename Compare  = std::less&lt;T&
 <li>原地排序 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="quicksort_8h_source.html#l00040">40</a> of file <a class="el" href="quicksort_8h_source.html">quicksort.h</a>.</p>
+<p>Definition at line <a class="el" href="quicksort_8h_source.html#l00081">81</a> of file <a class="el" href="quicksort_8h_source.html">quicksort.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad92e747a0c67fba3b9380d448591d33c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntrodunctionToAlgorithm::SortAlgorithm::radix_sort </td>
+          <td>(</td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>radix_width</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>radix_sort：算法导论第8章 8.3 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>: 待排序序列的起始迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">end</td><td>待排序序列的终止迭代器（也可以是指向数组中某元素的指针） </td></tr>
+    <tr><td class="paramname">radix_width</td><td>待排序元素（必须是整数）的最大位宽，必须非0（由assert(radix_width!=0)确保） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
+<ul>
+<li>基数排序思想，假设对数组A[p...r]排序，其中数组中所有元素都为正整数，并且不超过RADIXWITH位（有模板的RADIXWITH参数指定）：<ul>
+<li>首先对A中所有元素按照个位数大小进行排序（原地的）</li>
+<li>再对A中所有元素按照个十数大小进行排序（原地的）</li>
+<li>一直到最后按照A中所有元素的最高位的数字大小进行排序（原地的）</li>
+</ul>
+</li>
+<li>时间复杂度 O(d(n+k))，其中d位数字的最大位宽(即这里都是d位数的整数），k为每个位数上数字取值（这里取0，1，2，3，...9）</li>
+<li><p class="startli">原地排序</p>
+<p class="startli">这里尤其要重点强调，用于对指定位上的数字进行排序时，必须要满足稳定性。</p><ul>
+<li>快速排序就是非稳定的</li>
+<li>用小于比较的插入排序是稳定的；用小于等于比较的插入排序是不稳定的</li>
+</ul>
+</li>
+</ul>
+<p>&gt;这里必须对整数才能采取基数排序。由static_assert(...,...)确保 </p>
+
+<p>Definition at line <a class="el" href="radixsort_8h_source.html#l00049">49</a> of file <a class="el" href="radixsort_8h_source.html">radixsort.h</a>.</p>
 
 </div>
 </div>

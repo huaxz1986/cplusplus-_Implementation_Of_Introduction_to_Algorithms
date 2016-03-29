@@ -1,5 +1,5 @@
 var mergesort_8h =
 [
-    [ "merge", "mergesort_8h.html#a979431307bf9aa172840b6cbbe499af1", null ],
-    [ "merge_sort", "mergesort_8h.html#a1029751371f45fbe6c99463b2e73541e", null ]
+    [ "merge", "mergesort_8h.html#a907f7aca2cde6c79983673ce07167278", null ],
+    [ "merge_sort", "mergesort_8h.html#ab72ad89c389207e4b58443f9f57119af", null ]
 ];

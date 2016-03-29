@@ -1,0 +1,151 @@
+\hypertarget{namespace_introdunction_to_algorithm_1_1_select_algorithm}{}\section{Introdunction\+To\+Algorithm\+:\+:Select\+Algorithm Namespace Reference}
+\label{namespace_introdunction_to_algorithm_1_1_select_algorithm}\index{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm}}
+
+
+Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_select_algorithm}{Select\+Algorithm}.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{namespace_introdunction_to_algorithm_1_1_select_algorithm_a1a12272ccfaf7b91916aed885085b86c}{good\+\_\+select} (const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=Compare())
+\begin{DoxyCompactList}\small\item\em good\+\_\+select： 算法导论第9章9.3 最坏时间为\+O(n)的顺序统计量选择算法 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Int\+Type $>$ }\\Int\+Type \hyperlink{namespace_introdunction_to_algorithm_1_1_select_algorithm_acb1b35e9cb2c25d81a69b5a1147504a4}{radom\+\_\+index} (Int\+Type begin, Int\+Type end)
+\begin{DoxyCompactList}\small\item\em radom\+\_\+index： 生成随机整数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{namespace_introdunction_to_algorithm_1_1_select_algorithm_a08910fcecf3bf8711f109eec310f5a9b}{randomized\+\_\+select} (const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=Compare())
+\begin{DoxyCompactList}\small\item\em randomized\+\_\+select： 算法导论第9章9.2 顺序统计量的随机选择算法 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_select_algorithm}{Select\+Algorithm}. 
+
+该命名空间内包含所有顺序统计量算法 
+
+\subsection{Function Documentation}
+\hypertarget{namespace_introdunction_to_algorithm_1_1_select_algorithm_a1a12272ccfaf7b91916aed885085b86c}{}\index{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm}!good\+\_\+select@{good\+\_\+select}}
+\index{good\+\_\+select@{good\+\_\+select}!Introdunction\+To\+Algorithm\+::\+Select\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm}}
+\subsubsection[{good\+\_\+select(const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type Introdunction\+To\+Algorithm\+::\+Select\+Algorithm\+::good\+\_\+select (
+\begin{DoxyParamCaption}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type}]{rank, }
+\item[{Compare}]{compare = {\ttfamily Compare()}}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_select_algorithm_a1a12272ccfaf7b91916aed885085b86c}
+
+
+good\+\_\+select： 算法导论第9章9.3 最坏时间为\+O(n)的顺序统计量选择算法 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 待选取的序列的起始迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em end} & 待选取的序列的终止迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em rank} & 指定选取的顺序数，0为选取最小的元素，1为选取次小的元素....n表示选取排序为n的元素（从小排序） \\
+\hline
+{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+第rank小的元素值
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 选择算法思想，假设对数组\+A\mbox{[}p...r\mbox{]}选择，选择第k小的元素：
+\begin{DoxyItemize}
+\item 选择主元：
+\begin{DoxyItemize}
+\item 首先将序列从前往后，按照5个元素一组分组。其中最后一组可能为1～5个元素（也就是可能不是满的）
+\item 然后将这些分组进行排序（我采用的是快速排序）
+\item 然后将这些分组中的中位数（即最中间的数）取出
+\item 针对这些分组的中位数构成的序列，递归调用 good\+\_\+select，找出中位数的中位数
+\item 将这个中位数的中位数作为划分主元
+\end{DoxyItemize}
+\item 划分：根据找到的主元对原序列进行划分，假设划分完毕后，主元是第m小
+\item 判定：
+\begin{DoxyItemize}
+\item 若m==k，则找到了这个元素，返回这个主元
+\item 若m$<$k ，则说明指定的元素在 A\mbox{[}m+1...r\mbox{]}中，且位于这个新数组的第(k-\/m-\/1)小，此时递归调用good\+\_\+select(....)
+\item 若m$>$k， 则说明指定的元素在 A\mbox{[}p...m-\/1\mbox{]}中，且位于这个新数组的第 k 小，此时递归调用good\+\_\+select(...)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item 时间复杂度：最坏情况下时间为\+O(n)
+\item 非原地操作：因为这里要把所有分组的中位数构造成一个序列，然后把找到该序列的中位数作为good\+\_\+select(...)的主元 
+\end{DoxyItemize}
+
+Definition at line 34 of file goodselect.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_select_algorithm_acb1b35e9cb2c25d81a69b5a1147504a4}{}\index{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm}!radom\+\_\+index@{radom\+\_\+index}}
+\index{radom\+\_\+index@{radom\+\_\+index}!Introdunction\+To\+Algorithm\+::\+Select\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm}}
+\subsubsection[{radom\+\_\+index(\+Int\+Type begin, Int\+Type end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Int\+Type $>$ Int\+Type Introdunction\+To\+Algorithm\+::\+Select\+Algorithm\+::radom\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{Int\+Type}]{begin, }
+\item[{Int\+Type}]{end}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_select_algorithm_acb1b35e9cb2c25d81a69b5a1147504a4}
+
+
+radom\+\_\+index： 生成随机整数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & 整数范围的开始数（生成的随机数在闭区间\mbox{[}begin,end\mbox{]}中） \\
+\hline
+{\em end} & 整数范围的截止数（生成的随机数在闭区间\mbox{[}begin,end\mbox{]}中） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+生成的随机数
+\end{DoxyReturn}
+这里采用\mbox{[}begin,end\mbox{]}之间的均匀分布 
+
+Definition at line 18 of file randomizedselect.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_select_algorithm_a08910fcecf3bf8711f109eec310f5a9b}{}\index{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm}!randomized\+\_\+select@{randomized\+\_\+select}}
+\index{randomized\+\_\+select@{randomized\+\_\+select}!Introdunction\+To\+Algorithm\+::\+Select\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Select\+Algorithm}}
+\subsubsection[{randomized\+\_\+select(const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type Introdunction\+To\+Algorithm\+::\+Select\+Algorithm\+::randomized\+\_\+select (
+\begin{DoxyParamCaption}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type}]{rank, }
+\item[{Compare}]{compare = {\ttfamily Compare()}}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_select_algorithm_a08910fcecf3bf8711f109eec310f5a9b}
+
+
+randomized\+\_\+select： 算法导论第9章9.2 顺序统计量的随机选择算法 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 待选取的序列的起始迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em end} & 待选取的序列的终止迭代器（也可以是指向数组中某元素的指针） \\
+\hline
+{\em rank} & 指定选取的顺序数，0为选取最小的元素，1为选取次小的元素....n表示选取排序为n的元素（从小排序） \\
+\hline
+{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+第rank小的元素值
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 选择算法思想，假设对数组\+A\mbox{[}p...r\mbox{]}选择，选择第k小的元素：
+\begin{DoxyItemize}
+\item 随机选择主元：随机选取数组的一个下标q,A\mbox{[}q\mbox{]}作为划分元素
+\item 划分：利用\+A\mbox{[}q\mbox{]}划分数组，获得\+A\mbox{[}q\mbox{]}在序列中是第 m 小
+\item 判定：
+\begin{DoxyItemize}
+\item 若m==k，则找到了这个元素，返回 A\mbox{[}q\mbox{]}
+\item 若m$<$k ，则说明指定的元素在 A\mbox{[}q+1...r\mbox{]}中，且位于这个新数组的第(k-\/m-\/1)小，此时递归调用randomized\+\_\+select(q+1,end,k-\/m-\/1)
+\item 若m$>$k， 则说明指定的元素在 A\mbox{[}p...q-\/1\mbox{]}中，且位于这个新数组的第 k 小，此时递归调用randomized\+\_\+select(begin,q,k)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item 时间复杂度：最坏情况下为\+O(n$^\wedge$2)，期望时间为\+O(n)
+\item 原地操作 
+\end{DoxyItemize}
+
+Definition at line 47 of file randomizedselect.\+h.
+

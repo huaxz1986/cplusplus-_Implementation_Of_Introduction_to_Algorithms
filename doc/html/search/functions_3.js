@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_28_29',['operator()',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a0848d2a1a3b2297af9b7e76c5fca20c6',1,'IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap']]]
+  ['digi_5fon_5fn',['digi_on_N',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a4e56c4fee6bd1c903ef6cfc14719d99c',1,'IntrodunctionToAlgorithm::SortAlgorithm']]]
 ];

@@ -132,36 +132,38 @@ $(document).ready(function(){initNavTree('insertsort_8h_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">namespace </span>SortAlgorithm</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator,<span class="keyword">typename</span> T,<span class="keyword">typename</span> Compare=std::less&lt;T&gt;&gt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad891f043c088caaccf4a346c455728b2">   38</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad891f043c088caaccf4a346c455728b2">insert_sort</a>(Iterator begin,Iterator end,Compare compare=Compare())</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    template&lt;typename Iterator,typename Compare=std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">   38</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(<span class="keyword">const</span> Iterator begin,<span class="keyword">const</span> Iterator end,Compare compare=Compare())</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span>(end-begin&lt;=1)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">auto</span> current=begin;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">while</span>(++current!=end)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keyword">auto</span> small_next=current; <span class="comment">//指向比*current小的元素中最大的那个元素</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">while</span>(small_next!=begin &amp;&amp; compare(*current,*(small_next-1))) <span class="comment">//current较小，则向前寻找插入的位置插入</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    small_next--;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keyword">auto</span> key=*current;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keyword">auto</span> iter=current;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">while</span>(iter!=small_next) <span class="comment">//插入</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    *iter=*(iter-1); <span class="comment">//后移</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    iter--;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                *(iter)=key;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif // INSERTSORTE_H</span></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_ad891f043c088caaccf4a346c455728b2"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad891f043c088caaccf4a346c455728b2">IntrodunctionToAlgorithm::SortAlgorithm::insert_sort</a></div><div class="ttdeci">void insert_sort(Iterator begin, Iterator end, Compare compare=Compare())</div><div class="ttdoc">insert_sort：算法导论第二章 2.1 </div><div class="ttdef"><b>Definition:</b> <a href="insertsort_8h_source.html#l00038">insertsort.h:38</a></div></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_html"><div class="ttname"><a href="namespace_introdunction_to_algorithm.html">IntrodunctionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="heapsort_8h_source.html#l00003">heapsort.h:3</a></div></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">//typedef typename std::iterator_traits&lt;Iterator&gt;::value_type T;// 迭代器指向对象的值类型</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">auto</span> size=std::distance(begin,end);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span>(size&lt;=1)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            Iterator current=begin;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">while</span>(++current!=end)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keyword">auto</span> small_next=current; <span class="comment">//指向比*current小的元素中最大的那个元素</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">while</span>(small_next!=begin &amp;&amp; compare(*current,*(small_next-1))) <span class="comment">//current较小，则向前寻找插入的位置插入</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    small_next--;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keyword">auto</span> key=*current;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keyword">auto</span> iter=current;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">while</span>(iter!=small_next) <span class="comment">//插入</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    *iter=*(iter-1); <span class="comment">//后移</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    iter--;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                *(iter)=key;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // INSERTSORTE_H</span></div>
+<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a244ca5a48266ea48f1d52e5436eaee84"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">IntrodunctionToAlgorithm::SortAlgorithm::insert_sort</a></div><div class="ttdeci">void insert_sort(const Iterator begin, const Iterator end, Compare compare=Compare())</div><div class="ttdoc">insert_sort：算法导论第二章 2.1 </div><div class="ttdef"><b>Definition:</b> <a href="insertsort_8h_source.html#l00038">insertsort.h:38</a></div></div>
+<div class="ttc" id="namespace_introdunction_to_algorithm_html"><div class="ttname"><a href="namespace_introdunction_to_algorithm.html">IntrodunctionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="algorithms_8h_source.html#l00027">algorithms.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
