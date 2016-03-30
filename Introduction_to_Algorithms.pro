@@ -30,5 +30,9 @@ HEADERS += \
     src/select_algorithms/randomized_select/randomizedselect.h \
     src/select_algorithms/randomized_select/randomizedselect_test.h \
     src/select_algorithms/good_select/goodselect.h \
-    src/select_algorithms/good_select/goodselect_test.h
+    src/select_algorithms/good_select/goodselect_test.h \
+    src/dynamic_programmitn_algorithms/longest_common_subsequence.h \
+    src/dynamic_programmitn_algorithms/longest_common_subsequence_test.h \
+    src/tree_structure/binarytreenode/binarytreenode.h \
+    src/tree_structure/binarytreenode/binarytreenode_test.h
 

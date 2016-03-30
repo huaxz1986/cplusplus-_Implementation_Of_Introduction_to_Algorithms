@@ -28,6 +28,8 @@
 #include"src/sort_algorithms/bucket_sort/bucketsort_test.h"
 #include"src/select_algorithms/randomized_select/randomizedselect_test.h"
 #include"src/select_algorithms/good_select/goodselect_test.h"
+#include"src/dynamic_programmitn_algorithms/longest_common_subsequence_test.h"
+#include"src/tree_structure/binarytreenode/binarytreenode_test.h"
 int main(int argc,char** argv)
 {
     ::testing::InitGoogleTest(&argc,argv);

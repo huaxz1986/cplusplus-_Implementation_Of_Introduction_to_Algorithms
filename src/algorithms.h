@@ -43,4 +43,21 @@ namespace IntrodunctionToAlgorithm
     namespace SelectAlgorithm {
 
     }
+    //! Namespace of  DynamicProgrammingAlgorithm
+    /*!
+    *
+    * 该命名空间内包含所有动态规划算法
+    */
+    namespace DynamicProgrammingAlgorithm {
+
+    }
+
+    //! Namespace of  TreeAlgorithm
+    /*!
+    *
+    * 该命名空间内包含所有树算法
+    */
+    namespace TreeAlgorithm {
+
+    }
 }
