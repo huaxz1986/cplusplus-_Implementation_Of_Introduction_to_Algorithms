@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['quick_5fsort',['quick_sort',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff',1,'IntrodunctionToAlgorithm::SortAlgorithm']]],
-  ['quicksort_2eh',['quicksort.h',['../quicksort_8h.html',1,'']]],
-  ['quicksort_5ftest_2eh',['quicksort_test.h',['../quicksort__test_8h.html',1,'']]]
+  ['node',['Node',['../class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b',1,'BinaryTreeTest::Node()'],['../class_search_tree_test.html#a921d5813f947eb9b70417b69722bc050',1,'SearchTreeTest::Node()']]],
+  ['node_5fnum',['NODE_NUM',['../searchtree__test_8h.html#a07ee2ca97b0d30b5c4cc87b2cce5281b',1,'searchtree_test.h']]]
 ];

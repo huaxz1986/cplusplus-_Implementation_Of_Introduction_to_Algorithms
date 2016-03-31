@@ -1,0 +1,30 @@
+\hypertarget{binarytree_8h}{}\section{src/tree\+\_\+algorithms/binarytree/binarytree.h File Reference}
+\label{binarytree_8h}\index{src/tree\+\_\+algorithms/binarytree/binarytree.\+h@{src/tree\+\_\+algorithms/binarytree/binarytree.\+h}}
+{\ttfamily \#include \char`\"{}../binarytreenode/binarytreenode.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree$<$ Node\+Type $>$}
+\begin{DoxyCompactList}\small\item\em Binary\+Tree：二叉树，算法导论10章10.4节 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_introdunction_to_algorithm}{Introdunction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introdunction_to_algorithm}{Introdunction\+To\+Algorithm}. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm}{Tree\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Node\+Type , typename Functor $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a2d05eb07edf5780ad3495f7c38039e4f}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::inorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)
+\begin{DoxyCompactList}\small\item\em inorder\+\_\+walk：二叉树的中序遍历 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type , typename Functor $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abd47576f0c155a7de7c0553ad431b192}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::preorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)
+\begin{DoxyCompactList}\small\item\em preorder\+\_\+walk：二叉树的前序遍历 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type , typename Functor $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aed5eccc83270b880c05500c952834daa}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::postorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)
+\begin{DoxyCompactList}\small\item\em postorder\+\_\+walk：二叉树的后序遍历 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a698a67d6e06ceae1fec22fed6be32fdc}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::left\+\_\+rotate} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)
+\begin{DoxyCompactList}\small\item\em left\+\_\+rotate：二叉树的左旋转操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abecfb8158fb1959def0d0c188b46959c}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::right\+\_\+rotate} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)
+\begin{DoxyCompactList}\small\item\em right\+\_\+rotate：二叉树的右旋转操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aa3d272286e237af98bb32cb63a9234c6}{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::transplant} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node\+\_\+src, std\+::shared\+\_\+ptr$<$ Node\+Type $>$node\+\_\+dst, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)
+\begin{DoxyCompactList}\small\item\em transplant：二叉树的剪切操作 \end{DoxyCompactList}\end{DoxyCompactItemize}

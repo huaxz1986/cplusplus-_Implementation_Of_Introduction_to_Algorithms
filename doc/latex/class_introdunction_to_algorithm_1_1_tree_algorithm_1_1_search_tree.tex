@@ -1,0 +1,300 @@
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree}{}\section{Introdunction\+To\+Algorithm\+:\+:Tree\+Algorithm\+:\+:Search\+Tree$<$ Node\+Type $>$ Class Template Reference}
+\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree$<$ Node\+Type $>$@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree$<$ Node\+Type $>$}}
+
+
+Search\+Tree：二叉搜索树，算法导论12章  
+
+
+
+
+{\ttfamily \#include $<$searchtree.\+h$>$}
+
+Inheritance diagram for Introdunction\+To\+Algorithm\+:\+:Tree\+Algorithm\+:\+:Search\+Tree$<$ Node\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Node\+Type\+::\+Key\+Type \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a455a92d072da5c55c969cdfc0e71ac2e}{T}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a55d663befd7f7ef9d2238963666c69ff}{search} (const \hyperlink{struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_ae2feaade7bbb1e1f436475069cb1cd20}{T} \&value, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node=std\+::shared\+\_\+ptr$<$ Node\+Type $>$())
+\begin{DoxyCompactList}\small\item\em search\+:在二叉搜索树中搜索指定内容的节点。 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a8e649931312fb7a65828e6f6e42bca41}{min} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)
+\begin{DoxyCompactList}\small\item\em min\+:在二叉搜索树中最小值的节点。 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_af10c9358b2e5eee2da3badac45c83575}{max} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)
+\begin{DoxyCompactList}\small\item\em max\+:在二叉搜索树中最大值的节点。 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_ab45b77621f5a621eaf41cf632d11e330}{successor} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)
+\begin{DoxyCompactList}\small\item\em successor\+:二叉搜索树指定节点的后继节点。 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a9ee0a812fc758a4be7c0674b1549b32e}{predecesor} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)
+\begin{DoxyCompactList}\small\item\em predecesor\+:二叉搜索树指定节点的前驱。 \end{DoxyCompactList}\item 
+void \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_aa65abd78c422c5162804932dc9b47ae7}{insert} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)
+\begin{DoxyCompactList}\small\item\em insert\+:向二叉搜索树中插入节点。 \end{DoxyCompactList}\item 
+void \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a80dffa04b166dbb9c04c97ea5b42dfc9}{remove} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)
+\begin{DoxyCompactList}\small\item\em remove\+:从二叉搜索树中删除节点。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Node\+Type$>$class Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree$<$ Node\+Type $>$}
+
+Search\+Tree：二叉搜索树，算法导论12章 
+
+二叉搜索树是一种特殊的二叉树。在二叉树中的任何一个节点，该节点的左子节点值小于它；该节点的右子节点值大于它。
+
+\begin{quote}
+这里节点值指的是节点存储的数据的值\end{quote}
+
+
+Definition at line 15 of file searchtree.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a455a92d072da5c55c969cdfc0e71ac2e}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!T@{T}}
+\index{T@{T}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ typedef Node\+Type\+::\+Key\+Type {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::{\bf T}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a455a92d072da5c55c969cdfc0e71ac2e}
+树的节点存储数据的类型 
+
+Definition at line 18 of file searchtree.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_aa65abd78c422c5162804932dc9b47ae7}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!insert@{insert}}
+\index{insert@{insert}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{insert(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ void {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_aa65abd78c422c5162804932dc9b47ae7}
+
+
+insert\+:向二叉搜索树中插入节点。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+:要插入的节点} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+给定新节点{\ttfamily node}，将该节点插入到二叉搜索树中。
+
+算法：遍历二叉搜索树，若当前节点的值大于{\ttfamily node}的值，则向左侧遍历；若当前节点值小于{\ttfamily node}的值，则向右侧遍历。直到碰到{\ttfamily nullptr}则挂载该节点
+
+算法时间复杂度\+O(h)，空间复杂度\+O(1)。其中h为树的高度 
+
+Definition at line 173 of file searchtree.\+h.
+
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_af10c9358b2e5eee2da3badac45c83575}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!max@{max}}
+\index{max@{max}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{max(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::max (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_af10c9358b2e5eee2da3badac45c83575}
+
+
+max\+:在二叉搜索树中最大值的节点。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+:从指定节点开始搜索（默认为树的根节点）} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 二叉树种的最大节点的强引用
+\end{DoxyReturn}
+在二叉搜索树中搜索最小值的节点。其中可以指定从哪个节点开始搜索。若不指定搜索节点，则默认为树的根节点
+
+算法：由于二叉树的性质，搜索最大值很简单。从指定节点沿着右子节点一路向下遍历，最右下方的节点即为最小值节点
+
+算法时间复杂度\+O(h)，空间复杂度\+O(1)。其中h为树的高度 
+
+Definition at line 81 of file searchtree.\+h.
+
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a8e649931312fb7a65828e6f6e42bca41}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!min@{min}}
+\index{min@{min}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{min(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::min (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a8e649931312fb7a65828e6f6e42bca41}
+
+
+min\+:在二叉搜索树中最小值的节点。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+:从指定节点开始搜索（默认为树的根节点）} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 二叉树种的最小节点的强引用
+\end{DoxyReturn}
+在二叉搜索树中搜索最小值的节点。其中可以指定从哪个节点开始搜索。若不指定搜索节点，则默认为树的根节点。
+
+算法：由于二叉树的性质，搜索最小值很简单。从指定节点沿着左子节点一路向下遍历，最左下方的节点即为最小值节点
+
+算法时间复杂度\+O(h)，空间复杂度\+O(1)。其中h为树的高度 
+
+Definition at line 57 of file searchtree.\+h.
+
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a9ee0a812fc758a4be7c0674b1549b32e}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!predecesor@{predecesor}}
+\index{predecesor@{predecesor}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{predecesor(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::predecesor (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a9ee0a812fc758a4be7c0674b1549b32e}
+
+
+predecesor\+:二叉搜索树指定节点的前驱。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+:要搜索前驱的节点} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 该节点的前驱节点的强引用或者空
+\end{DoxyReturn}
+给定二叉搜索树的某个节点，搜索其前驱节点。所谓的某节点{\ttfamily node}的前驱节点就是在二叉搜索树中，值小于{\ttfamily node}的所有节点中最大的那一个。
+
+一个节点{\ttfamily node}的前驱有以下情况：
+
+
+\begin{DoxyItemize}
+\item 如果{\ttfamily node}有左子节点，则以左子节点为根的子树中的最大值节点就是{\ttfamily node}的前驱节点
+\item 如果{\ttfamily node}没有左子节点，则查看父节点
+\begin{DoxyItemize}
+\item 若{\ttfamily node}是父节点的右子节点；则{\ttfamily node}的前驱节点是{\ttfamily node}的父节点
+\item 若{\ttfamily node}是父节点的左子节点；则{\ttfamily node}设置为{\ttfamily node-\/$>$parent}，递归向直到{\ttfamily node}是它父亲的右子节点；此时{\ttfamily node}的前驱节点是{\ttfamily node}的父节点
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+算法时间复杂度\+O(h)，空间复杂度\+O(1)。其中h为树的高度 
+
+Definition at line 143 of file searchtree.\+h.
+
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a80dffa04b166dbb9c04c97ea5b42dfc9}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!remove@{remove}}
+\index{remove@{remove}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{remove(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ void {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a80dffa04b166dbb9c04c97ea5b42dfc9}
+
+
+remove\+:从二叉搜索树中删除节点。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+:要删除的节点} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+给定节点{\ttfamily node}，从二叉搜索树中删除它。如果{\ttfamily node}不在二叉搜索树中则抛出异常。
+
+算法：
+
+
+\begin{DoxyItemize}
+\item 如果{\ttfamily node}是一个叶子节点：则直接删除它
+\item 如果{\ttfamily node}有左子节点，但是没有右子节点：将左子剪切到{\ttfamily node}所在位置
+\item 如果{\ttfamily node}有右子节点，但是没有左子节点：将右子剪切到{\ttfamily node}所在位置
+\item 如果{\ttfamily node}既有左子节点，又有右子节点：首先获取{\ttfamily node}的后继节点{\ttfamily next\+\_\+node}
+\begin{DoxyItemize}
+\item 如果{\ttfamily next\+\_\+node}就是{\ttfamily node}的右子节点，则证明{\ttfamily next\+\_\+node}没有左子（如果{\ttfamily next\+\_\+node}有左子，则{\ttfamily node}的后继节点必然不是{\ttfamily next\+\_\+node}）。 此时将{\ttfamily next\+\_\+node}剪切到{\ttfamily node}所在位置，并且将{\ttfamily node}的左子挂载到{\ttfamily next\+\_\+node}的左子
+\item 如果{\ttfamily next\+\_\+node}不是{\ttfamily node}的右子节点，则{\ttfamily next\+\_\+node}必然位于{\ttfamily node}右子为根的子树中。且{\ttfamily next\+\_\+node}必然没有左子（否则{\ttfamily node}的后继节点必然不是{\ttfamily next\+\_\+node}）
+\begin{DoxyItemize}
+\item 把{\ttfamily next\+\_\+node}的右子节点剪切到{\ttfamily next\+\_\+node}的位置
+\item 将{\ttfamily next\+\_\+node}剪切到{\ttfamily node}的右子位置
+\item 执行{\ttfamily next\+\_\+node}就是{\ttfamily node}的右子节点的操作
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+算法时间复杂度\+O(h)，空间复杂度\+O(1)。其中h为树的高度 
+
+Definition at line 232 of file searchtree.\+h.
+
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a55d663befd7f7ef9d2238963666c69ff}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!search@{search}}
+\index{search@{search}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{search(const T \&value, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node=std\+::shared\+\_\+ptr$<$ Node\+Type $>$())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::search (
+\begin{DoxyParamCaption}
+\item[{const {\bf T} \&}]{value, }
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node = {\ttfamily std\+:\+:shared\+\_\+ptr$<$NodeType$>$()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_a55d663befd7f7ef9d2238963666c69ff}
+
+
+search\+:在二叉搜索树中搜索指定内容的节点。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & 搜索指定的内容 \\
+\hline
+{\em node\+:从指定节点开始搜索（默认为树的根节点）} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 存储内容等于value的节点的强引用或者空
+\end{DoxyReturn}
+在二叉搜索树中搜索指定内容的节点。其中可以指定从哪个节点开始搜索。若不指定搜索节点，则默认为树的根节点.
+
+算法时间复杂度\+O(h)，空间复杂度\+O(1)。其中h为树的高度 
+
+Definition at line 30 of file searchtree.\+h.
+
+\hypertarget{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_ab45b77621f5a621eaf41cf632d11e330}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}!successor@{successor}}
+\index{successor@{successor}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}}
+\subsubsection[{successor(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Search\+Tree}$<$ Node\+Type $>$\+::successor (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree_ab45b77621f5a621eaf41cf632d11e330}
+
+
+successor\+:二叉搜索树指定节点的后继节点。 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+:要搜索后继的节点} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 该节点的后继节点的强引用或者空
+\end{DoxyReturn}
+给定二叉搜索树的某个节点，搜索其后继节点。所谓的某节点{\ttfamily node}的后继节点就是在二叉搜索树中，值大于等于{\ttfamily node}的所有节点中最小的那一个（排除它自身）。
+
+一个节点{\ttfamily node}的后继有以下情况：
+
+
+\begin{DoxyItemize}
+\item 如果{\ttfamily node}有右子节点，则以右子节点为根的子树中的最小值节点就是{\ttfamily node}的后继节点
+\item 如果{\ttfamily node}没有右子节点，则查看父节点
+\begin{DoxyItemize}
+\item 若{\ttfamily node}是父节点的左子节点；则{\ttfamily node}的后继节点是{\ttfamily node}的父节点
+\item 若{\ttfamily node}是父节点的右子节点；则{\ttfamily node}设置为{\ttfamily node-\/$>$parent}，递归向直到{\ttfamily node}是它父亲的左子节点；此时{\ttfamily node}的后继节点是{\ttfamily node}的父节点
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+算法时间复杂度\+O(h)，空间复杂度\+O(1)。其中h为树的高度 
+
+Definition at line 109 of file searchtree.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/tree\+\_\+algorithms/searchtree/\hyperlink{searchtree_8h}{searchtree.\+h}\end{DoxyCompactItemize}

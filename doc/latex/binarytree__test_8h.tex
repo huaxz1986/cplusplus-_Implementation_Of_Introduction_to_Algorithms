@@ -1,0 +1,142 @@
+\hypertarget{binarytree__test_8h}{}\section{src/tree\+\_\+algorithms/binarytree/binarytree\+\_\+test.h File Reference}
+\label{binarytree__test_8h}\index{src/tree\+\_\+algorithms/binarytree/binarytree\+\_\+test.\+h@{src/tree\+\_\+algorithms/binarytree/binarytree\+\_\+test.\+h}}
+{\ttfamily \#include \char`\"{}src/google\+\_\+test/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}binarytree.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}\+:测试类，用于为测试提供基础数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{binarytree__test_8h_ad232823b4358b06935529fab1c600de3}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}, test\+\_\+tree)
+\begin{DoxyCompactList}\small\item\em test\+\_\+tree\+:测试空树、非空树 \end{DoxyCompactList}\item 
+\hyperlink{binarytree__test_8h_a22cc40ea8db4f5d34805f511619dfff3}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}, test\+\_\+inorder\+\_\+walk)
+\begin{DoxyCompactList}\small\item\em test\+\_\+inorder\+\_\+walk\+:测试树的中序遍历 \end{DoxyCompactList}\item 
+\hyperlink{binarytree__test_8h_a440e046ae8fac09ca881f3a9e80c4e71}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}, test\+\_\+preorder\+\_\+walk)
+\begin{DoxyCompactList}\small\item\em test\+\_\+preorder\+\_\+walk\+:测试树的前序遍历 \end{DoxyCompactList}\item 
+\hyperlink{binarytree__test_8h_ac5df656308412011ed795e761c0ba7ab}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}, test\+\_\+postorder\+\_\+walk)
+\begin{DoxyCompactList}\small\item\em test\+\_\+postorder\+\_\+walk\+:测试树的后序遍历 \end{DoxyCompactList}\item 
+\hyperlink{binarytree__test_8h_a93344246964f08775c477e99df8e0213}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}, test\+\_\+left\+\_\+rotate)
+\begin{DoxyCompactList}\small\item\em test\+\_\+left\+\_\+rotate\+:测试树的左旋 \end{DoxyCompactList}\item 
+\hyperlink{binarytree__test_8h_a5377352f5bcd00c7fe8c30c9bac3cd91}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}, test\+\_\+right\+\_\+rotate)
+\begin{DoxyCompactList}\small\item\em test\+\_\+right\+\_\+rotate\+:测试树的右旋 \end{DoxyCompactList}\item 
+\hyperlink{binarytree__test_8h_ad4f004637e8414b0d1ae2736dc4156ac}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_binary_tree_test}{Binary\+Tree\+Test}, test\+\_\+right\+\_\+transplant)
+\begin{DoxyCompactList}\small\item\em test\+\_\+right\+\_\+transplant\+:测试树的剪切 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{binarytree__test_8h_ad232823b4358b06935529fab1c600de3}{}\index{binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Binary\+Tree\+Test, test\+\_\+tree)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\+Tree\+Test}}]{, }
+\item[{test\+\_\+tree}]{}
+\end{DoxyParamCaption}
+)}\label{binarytree__test_8h_ad232823b4358b06935529fab1c600de3}
+
+
+test\+\_\+tree\+:测试空树、非空树 
+
+
+
+Definition at line 77 of file binarytree\+\_\+test.\+h.
+
+\hypertarget{binarytree__test_8h_a22cc40ea8db4f5d34805f511619dfff3}{}\index{binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Binary\+Tree\+Test, test\+\_\+inorder\+\_\+walk)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\+Tree\+Test}}]{, }
+\item[{test\+\_\+inorder\+\_\+walk}]{}
+\end{DoxyParamCaption}
+)}\label{binarytree__test_8h_a22cc40ea8db4f5d34805f511619dfff3}
+
+
+test\+\_\+inorder\+\_\+walk\+:测试树的中序遍历 
+
+测试空树、非空树的中序遍历 
+
+Definition at line 87 of file binarytree\+\_\+test.\+h.
+
+\hypertarget{binarytree__test_8h_a440e046ae8fac09ca881f3a9e80c4e71}{}\index{binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Binary\+Tree\+Test, test\+\_\+preorder\+\_\+walk)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\+Tree\+Test}}]{, }
+\item[{test\+\_\+preorder\+\_\+walk}]{}
+\end{DoxyParamCaption}
+)}\label{binarytree__test_8h_a440e046ae8fac09ca881f3a9e80c4e71}
+
+
+test\+\_\+preorder\+\_\+walk\+:测试树的前序遍历 
+
+测试空树、非空树的前序遍历 
+
+Definition at line 110 of file binarytree\+\_\+test.\+h.
+
+\hypertarget{binarytree__test_8h_ac5df656308412011ed795e761c0ba7ab}{}\index{binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Binary\+Tree\+Test, test\+\_\+postorder\+\_\+walk)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\+Tree\+Test}}]{, }
+\item[{test\+\_\+postorder\+\_\+walk}]{}
+\end{DoxyParamCaption}
+)}\label{binarytree__test_8h_ac5df656308412011ed795e761c0ba7ab}
+
+
+test\+\_\+postorder\+\_\+walk\+:测试树的后序遍历 
+
+测试空树、非空树的后序遍历 
+
+Definition at line 133 of file binarytree\+\_\+test.\+h.
+
+\hypertarget{binarytree__test_8h_a93344246964f08775c477e99df8e0213}{}\index{binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Binary\+Tree\+Test, test\+\_\+left\+\_\+rotate)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\+Tree\+Test}}]{, }
+\item[{test\+\_\+left\+\_\+rotate}]{}
+\end{DoxyParamCaption}
+)}\label{binarytree__test_8h_a93344246964f08775c477e99df8e0213}
+
+
+test\+\_\+left\+\_\+rotate\+:测试树的左旋 
+
+测试空树、非空树的左旋 
+
+Definition at line 156 of file binarytree\+\_\+test.\+h.
+
+\hypertarget{binarytree__test_8h_a5377352f5bcd00c7fe8c30c9bac3cd91}{}\index{binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Binary\+Tree\+Test, test\+\_\+right\+\_\+rotate)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\+Tree\+Test}}]{, }
+\item[{test\+\_\+right\+\_\+rotate}]{}
+\end{DoxyParamCaption}
+)}\label{binarytree__test_8h_a5377352f5bcd00c7fe8c30c9bac3cd91}
+
+
+test\+\_\+right\+\_\+rotate\+:测试树的右旋 
+
+测试空树、非空树的右旋 
+
+Definition at line 188 of file binarytree\+\_\+test.\+h.
+
+\hypertarget{binarytree__test_8h_ad4f004637e8414b0d1ae2736dc4156ac}{}\index{binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!binarytree\+\_\+test.\+h@{binarytree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Binary\+Tree\+Test, test\+\_\+right\+\_\+transplant)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Binary\+Tree\+Test}}]{, }
+\item[{test\+\_\+right\+\_\+transplant}]{}
+\end{DoxyParamCaption}
+)}\label{binarytree__test_8h_ad4f004637e8414b0d1ae2736dc4156ac}
+
+
+test\+\_\+right\+\_\+transplant\+:测试树的剪切 
+
+测试空树、非空树的剪切 
+
+Definition at line 219 of file binarytree\+\_\+test.\+h.
+

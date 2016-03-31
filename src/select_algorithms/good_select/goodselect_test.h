@@ -2,6 +2,7 @@
 #define GOODSELECT_TEST
 #include"src/google_test/gtest.h"
 #include"goodselect.h"
+using namespace IntrodunctionToAlgorithm::SelectAlgorithm;
 //!good_select_test：测试C数组的顺序统计量
 /*!
 *
@@ -9,7 +10,7 @@
 */
 TEST(test_good_select, test_C_array)
 {
-        using namespace IntrodunctionToAlgorithm::SelectAlgorithm;
+
         for(int i=0;i<10;i++)
         {
             int data1[10]={1,2,3,4,5,6,7,8,9,10};

@@ -23,9 +23,11 @@
 
 ```
 src\
+	dynamic_programming_algorithms : 动态规划算法
 	google_test\           : gooletest框架的两个文件：gtest.h以及gtest_all.c
 	sort_algorithms\       :所有排序算法
 	select_algorithms\     :顺序统计量选择算法
+	tree_algorithms\       :树算法	
 	...
 doc\                       :由doxygen自动生成的文档
 Doxyfile                   :doxygen配置文件

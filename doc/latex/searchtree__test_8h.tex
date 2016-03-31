@@ -1,0 +1,157 @@
+\hypertarget{searchtree__test_8h}{}\section{src/tree\+\_\+algorithms/searchtree/searchtree\+\_\+test.h File Reference}
+\label{searchtree__test_8h}\index{src/tree\+\_\+algorithms/searchtree/searchtree\+\_\+test.\+h@{src/tree\+\_\+algorithms/searchtree/searchtree\+\_\+test.\+h}}
+{\ttfamily \#include \char`\"{}src/google\+\_\+test/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}searchtree.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_search_tree_test}{Search\+Tree\+Test}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_search_tree_test}{Search\+Tree\+Test}\+:测试类，用于为测试提供基础数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{searchtree__test_8h_a07ee2ca97b0d30b5c4cc87b2cce5281b}{N\+O\+D\+E\+\_\+\+N\+U\+M}~9
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{searchtree__test_8h_a0fe9da8e6c53f661978841622b26f43c}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_search_tree_test}{Search\+Tree\+Test}, search\+\_\+test)
+\begin{DoxyCompactList}\small\item\em search\+\_\+test\+:测试二叉搜索树的搜索 \end{DoxyCompactList}\item 
+\hyperlink{searchtree__test_8h_a810377c2abb5b2e2c5158812e87f752e}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_search_tree_test}{Search\+Tree\+Test}, min\+\_\+test)
+\begin{DoxyCompactList}\small\item\em min\+\_\+test\+:测试二叉搜索树的最小值 \end{DoxyCompactList}\item 
+\hyperlink{searchtree__test_8h_aabbbb1e32184a6ebccd002f78a7b1092}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_search_tree_test}{Search\+Tree\+Test}, max\+\_\+test)
+\begin{DoxyCompactList}\small\item\em max\+\_\+test\+:测试二叉搜索树的最大值 \end{DoxyCompactList}\item 
+\hyperlink{searchtree__test_8h_a2ea51a3ab8d806281630845e6491fc63}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_search_tree_test}{Search\+Tree\+Test}, predecesor\+\_\+test)
+\begin{DoxyCompactList}\small\item\em predecesor\+\_\+test\+:测试二叉搜索树的前驱 \end{DoxyCompactList}\item 
+\hyperlink{searchtree__test_8h_ae2e2f8518465d9801762763620625514}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_search_tree_test}{Search\+Tree\+Test}, successor\+\_\+test)
+\begin{DoxyCompactList}\small\item\em successor\+\_\+test\+:测试二叉搜索树的后继 \end{DoxyCompactList}\item 
+\hyperlink{searchtree__test_8h_aab034a0279366ae00e507984c354ca91}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_search_tree_test}{Search\+Tree\+Test}, insert\+\_\+test)
+\begin{DoxyCompactList}\small\item\em successor\+\_\+test\+:测试二叉搜索树的插入 \end{DoxyCompactList}\item 
+\hyperlink{searchtree__test_8h_a5a3f74b6f963604381b73006a950eb3d}{T\+E\+S\+T\+\_\+\+F} (\hyperlink{class_search_tree_test}{Search\+Tree\+Test}, remove\+\_\+test)
+\begin{DoxyCompactList}\small\item\em successor\+\_\+test\+:测试二叉搜索树的删除 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{searchtree__test_8h_a07ee2ca97b0d30b5c4cc87b2cce5281b}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!N\+O\+D\+E\+\_\+\+N\+U\+M@{N\+O\+D\+E\+\_\+\+N\+U\+M}}
+\index{N\+O\+D\+E\+\_\+\+N\+U\+M@{N\+O\+D\+E\+\_\+\+N\+U\+M}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{N\+O\+D\+E\+\_\+\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+D\+E\+\_\+\+N\+U\+M~9}\label{searchtree__test_8h_a07ee2ca97b0d30b5c4cc87b2cce5281b}
+
+
+Definition at line 7 of file searchtree\+\_\+test.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{searchtree__test_8h_a0fe9da8e6c53f661978841622b26f43c}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Search\+Tree\+Test, search\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Search\+Tree\+Test}}]{, }
+\item[{search\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{searchtree__test_8h_a0fe9da8e6c53f661978841622b26f43c}
+
+
+search\+\_\+test\+:测试二叉搜索树的搜索 
+
+测试空二叉搜索树、非空二叉搜索树的搜索 
+
+Definition at line 87 of file searchtree\+\_\+test.\+h.
+
+\hypertarget{searchtree__test_8h_a810377c2abb5b2e2c5158812e87f752e}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Search\+Tree\+Test, min\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Search\+Tree\+Test}}]{, }
+\item[{min\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{searchtree__test_8h_a810377c2abb5b2e2c5158812e87f752e}
+
+
+min\+\_\+test\+:测试二叉搜索树的最小值 
+
+测试空二叉搜索树、非空二叉搜索树的最小值 
+
+Definition at line 109 of file searchtree\+\_\+test.\+h.
+
+\hypertarget{searchtree__test_8h_aabbbb1e32184a6ebccd002f78a7b1092}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Search\+Tree\+Test, max\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Search\+Tree\+Test}}]{, }
+\item[{max\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{searchtree__test_8h_aabbbb1e32184a6ebccd002f78a7b1092}
+
+
+max\+\_\+test\+:测试二叉搜索树的最大值 
+
+测试空二叉搜索树、非空二叉搜索树的最大值 
+
+Definition at line 124 of file searchtree\+\_\+test.\+h.
+
+\hypertarget{searchtree__test_8h_a2ea51a3ab8d806281630845e6491fc63}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Search\+Tree\+Test, predecesor\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Search\+Tree\+Test}}]{, }
+\item[{predecesor\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{searchtree__test_8h_a2ea51a3ab8d806281630845e6491fc63}
+
+
+predecesor\+\_\+test\+:测试二叉搜索树的前驱 
+
+测试空二叉搜索树、非空二叉搜索树的前驱 
+
+Definition at line 139 of file searchtree\+\_\+test.\+h.
+
+\hypertarget{searchtree__test_8h_ae2e2f8518465d9801762763620625514}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Search\+Tree\+Test, successor\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Search\+Tree\+Test}}]{, }
+\item[{successor\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{searchtree__test_8h_ae2e2f8518465d9801762763620625514}
+
+
+successor\+\_\+test\+:测试二叉搜索树的后继 
+
+测试空二叉搜索树、非空二叉搜索树的后继 
+
+Definition at line 158 of file searchtree\+\_\+test.\+h.
+
+\hypertarget{searchtree__test_8h_aab034a0279366ae00e507984c354ca91}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Search\+Tree\+Test, insert\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Search\+Tree\+Test}}]{, }
+\item[{insert\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{searchtree__test_8h_aab034a0279366ae00e507984c354ca91}
+
+
+successor\+\_\+test\+:测试二叉搜索树的插入 
+
+测试空二叉搜索树、非空二叉搜索树的插入 
+
+Definition at line 178 of file searchtree\+\_\+test.\+h.
+
+\hypertarget{searchtree__test_8h_a5a3f74b6f963604381b73006a950eb3d}{}\index{searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}!T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}}
+\index{T\+E\+S\+T\+\_\+\+F@{T\+E\+S\+T\+\_\+\+F}!searchtree\+\_\+test.\+h@{searchtree\+\_\+test.\+h}}
+\subsubsection[{T\+E\+S\+T\+\_\+\+F(\+Search\+Tree\+Test, remove\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Search\+Tree\+Test}}]{, }
+\item[{remove\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{searchtree__test_8h_a5a3f74b6f963604381b73006a950eb3d}
+
+
+successor\+\_\+test\+:测试二叉搜索树的删除 
+
+测试空二叉搜索树、非空二叉搜索树的删除 
+
+Definition at line 246 of file searchtree\+\_\+test.\+h.
+

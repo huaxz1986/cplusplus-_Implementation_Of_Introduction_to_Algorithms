@@ -1,0 +1,150 @@
+\hypertarget{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm}{}\section{Introdunction\+To\+Algorithm\+:\+:Dynamic\+Programming\+Algorithm Namespace Reference}
+\label{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm}\index{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm}}
+
+
+Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm}{Dynamic\+Programming\+Algorithm}.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator , typename Out\+Iterator $>$ }\\std\+::size\+\_\+t \hyperlink{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm_a01cfb7cc6a668a29024f83a65481196b}{make\+\_\+\+L\+C\+S} (const Iterator begin, const Iterator end, const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&flag\+\_\+matrix, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type seq1\+\_\+index, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type seq2\+\_\+index, Out\+Iterator \&out\+\_\+begin)
+\begin{DoxyCompactList}\small\item\em make\+\_\+\+L\+C\+S 最长公共子序列的子算法：已知标记矩阵，求最长公共子序列 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator1 , typename Iterator2 , typename Out\+Iterator $>$ }\\std\+::size\+\_\+t \hyperlink{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm_a000f514133c72dd4c28127bc83e7bf02}{longest\+\_\+common\+\_\+subsequence} (const Iterator1 first\+\_\+begin, const Iterator1 first\+\_\+end, const Iterator2 second\+\_\+begin, const Iterator2 second\+\_\+end, Out\+Iterator out\+\_\+begin)
+\begin{DoxyCompactList}\small\item\em longest\+\_\+common\+\_\+subsequence 算法导论第15章9.4 最长公共子序列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm}{Dynamic\+Programming\+Algorithm}. 
+
+该命名空间内包含所有动态规划算法.\+动态规划的原理：
+
+
+\begin{DoxyItemize}
+\item 最优子结构：即原问题的解依赖于子问题的解。
+\item 子问题无关：即原问题的解锁依赖的那些子问题是无关的，解耦的。
+\item 重叠子问题：即子问题的数量是有限的，即子问题的空间必须足够“小”。原问题的递归算法会反复求解相同的子问题，而不是一直生成新的字问题。 $>$对比分治法求解的情况：分治法通常在递归的每一步都生成一个全新的子问题。
+\end{DoxyItemize}
+
+动态规划算法通常利用重叠子问题的性质，对每一个子问题求解一次，将解存入一个表中，每当再次需要求解这个子问题时，直接查表。 
+
+\subsection{Function Documentation}
+\hypertarget{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm_a000f514133c72dd4c28127bc83e7bf02}{}\index{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm}!longest\+\_\+common\+\_\+subsequence@{longest\+\_\+common\+\_\+subsequence}}
+\index{longest\+\_\+common\+\_\+subsequence@{longest\+\_\+common\+\_\+subsequence}!Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm}}
+\subsubsection[{longest\+\_\+common\+\_\+subsequence(const Iterator1 first\+\_\+begin, const Iterator1 first\+\_\+end, const Iterator2 second\+\_\+begin, const Iterator2 second\+\_\+end, Out\+Iterator out\+\_\+begin)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator1 , typename Iterator2 , typename Out\+Iterator $>$ std\+::size\+\_\+t Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm\+::longest\+\_\+common\+\_\+subsequence (
+\begin{DoxyParamCaption}
+\item[{const Iterator1}]{first\+\_\+begin, }
+\item[{const Iterator1}]{first\+\_\+end, }
+\item[{const Iterator2}]{second\+\_\+begin, }
+\item[{const Iterator2}]{second\+\_\+end, }
+\item[{Out\+Iterator}]{out\+\_\+begin}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm_a000f514133c72dd4c28127bc83e7bf02}
+
+
+longest\+\_\+common\+\_\+subsequence 算法导论第15章9.4 最长公共子序列 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+\_\+begin} & \+: 第一个序列的起始迭代器 \\
+\hline
+{\em first\+\_\+end} & 第一个序列的终止迭代器 \\
+\hline
+{\em second\+\_\+begin} & \+: 第二个序列的起始迭代器 \\
+\hline
+{\em second\+\_\+end} & 第二个序列的终止迭代器 \\
+\hline
+{\em out\+\_\+begin} & 结果迭代器的起始位置（要求输出容器足够大可以存放结果） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+最长公共子序列的长度
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 最长公共子序列算法思想，令 X=$<$ x1,x2,...xm $>$ Y=$<$y1,y2,...yn$>$ 为两个序列， Z=$<$z1,z2,...zk$>$为\+X和\+Y的某一个最长公共子序列：
+\begin{DoxyItemize}
+\item 如果 xm=yn，则zk=xm=yn,且\+Z(k-\/1)是\+X(m-\/1)和\+Y(n-\/1)的一个最长公共子序列：
+\item 如果 xm != yn, 则如果 zk!=xm,意味着 Z是 X(m-\/1) 和 Y的一个最长公共子序列
+\item 如果 xm != yn, 则如果 zk!=yn,意味着 Z是 Xm 和 Y(n-\/1)的一个最长公共子序列
+\end{DoxyItemize}
+
+因此如果 xm=yn,我们递归求解 X(m-\/1)和\+Y(n-\/1)的最长公共子序列；如果xm != yn，我们求解\+X(m-\/1) 和 Y的一个最长公共子序列,以及\+Xm 和 Y(n-\/1)的一个最长公共子序列， 这两个之中的最大值即为\+X和\+Y的最长公共子序列
+\end{DoxyItemize}
+
+定义c\mbox{[}i,j\mbox{]}为\+Xi和\+Yj的最长公共子序列长度，则 c\mbox{[}i,j\mbox{]}= 0（若 i=0或j=0) ;c\mbox{[}i-\/1,j-\/1\mbox{]}+1 (若i,j$>$0,且xi=yj)；max(c\mbox{[}i,j-\/1\mbox{]},c\mbox{[}i-\/1,j\mbox{]})(若x,j$>$0 且 xi!=yj)， 通过动态规划方法从底向上计算
+
+
+\begin{DoxyItemize}
+\item 时间复杂度：\+O(m$\ast$n)，空间复杂度\+O(m$\ast$n) 
+\end{DoxyItemize}
+
+Definition at line 95 of file longest\+\_\+common\+\_\+subsequence.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm_a01cfb7cc6a668a29024f83a65481196b}{}\index{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm}!make\+\_\+\+L\+C\+S@{make\+\_\+\+L\+C\+S}}
+\index{make\+\_\+\+L\+C\+S@{make\+\_\+\+L\+C\+S}!Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm}}
+\subsubsection[{make\+\_\+\+L\+C\+S(const Iterator begin, const Iterator end, const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&flag\+\_\+matrix, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type seq1\+\_\+index, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type seq2\+\_\+index, Out\+Iterator \&out\+\_\+begin)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Out\+Iterator $>$ std\+::size\+\_\+t Introdunction\+To\+Algorithm\+::\+Dynamic\+Programming\+Algorithm\+::make\+\_\+\+L\+C\+S (
+\begin{DoxyParamCaption}
+\item[{const Iterator}]{begin, }
+\item[{const Iterator}]{end, }
+\item[{const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&}]{flag\+\_\+matrix, }
+\item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type}]{seq1\+\_\+index, }
+\item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type}]{seq2\+\_\+index, }
+\item[{Out\+Iterator \&}]{out\+\_\+begin}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_dynamic_programming_algorithm_a01cfb7cc6a668a29024f83a65481196b}
+
+
+make\+\_\+\+L\+C\+S 最长公共子序列的子算法：已知标记矩阵，求最长公共子序列 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 第一个序列的起始迭代器 \\
+\hline
+{\em end} & 第一个序列的终止迭代器 \\
+\hline
+{\em flag\+\_\+matrix} & 标记矩阵 \\
+\hline
+{\em seq1\+\_\+index} & 第一个子序列为\+X\mbox{[}0..seq1\+\_\+index1\mbox{]}（从0计数） \\
+\hline
+{\em seq2\+\_\+index} & 第二个子序列为\+Y\mbox{[}0..seq1\+\_\+index2\mbox{]}（从0计数） \\
+\hline
+{\em out\+\_\+begin} & 存放最长公共子序列结果的起始迭代器（注意必须是引用类型） （要求输出容器足够大可以存放结果） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+最长公共子序列的长度
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 最长公共子序列算法思想，令 X=$<$ x1,x2,...xm $>$ Y=$<$y1,y2,...yn$>$ 为两个序列， Z=$<$z1,z2,...zk$>$为\+X和\+Y的某一个最长公共子序列：
+\begin{DoxyItemize}
+\item 如果 xm=yn，则zk=xm=yn,且\+Z(k-\/1)是\+X(m-\/1)和\+Y(n-\/1)的一个最长公共子序列：
+\item 如果 xm != yn, 则如果 zk!=xm,意味着 Z是 X(m-\/1) 和 Y的一个最长公共子序列
+\item 如果 xm != yn, 则如果 zk!=yn,意味着 Z是 Xm 和 Y(n-\/1)的一个最长公共子序列
+\end{DoxyItemize}
+
+在计算最长公共子序列过程中，顺便计算了标记矩阵。定义c\mbox{[}i,j\mbox{]}为\+Xi和\+Yj的最长公共子序列长度，则
+\item c\mbox{[}i,j\mbox{]}= 0（若 i=0或j=0)
+\item c\mbox{[}i,j\mbox{]}=c\mbox{[}i-\/1,j-\/1\mbox{]}+1 (若i,j$>$0,且xi=yj)
+\item c\mbox{[}i,j\mbox{]}=max(c\mbox{[}i,j-\/1\mbox{]},c\mbox{[}i-\/1,j\mbox{]})(若x,j$>$0 且 xi!=yj)
+\end{DoxyItemize}
+
+其中：flag\+\_\+matrix表征的是如何从c\mbox{[}i-\/1,j-\/1\mbox{]}、c\mbox{[}i,j-\/1\mbox{]}、c\mbox{[}i-\/1,j\mbox{]}这三者之一到达c\mbox{[}i,j\mbox{]}。即flag\+\_\+matrix（i,j)对应的是矩阵：
+
+\begin{TabularC}{1}
+\hline
+\rowcolor{lightgray}{\bf c\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} c\mbox{[}i+1\mbox{]}\mbox{[}j\mbox{]}  }\\\cline{1-1}
+c\mbox{[}i+1\mbox{]}\mbox{[}j\mbox{]} c\mbox{[}i+1\mbox{]}\mbox{[}j+1\mbox{]} \\\cline{1-1}
+\end{TabularC}
+
+\begin{DoxyItemize}
+\item 如果 xi=yj，则标记flag\+\_\+matrix\mbox{[}i-\/1\mbox{]}\mbox{[}j-\/1\mbox{]}为 11，表示$<$x1...xi$>$与$<$y1...\+yj$>$的最长公共子序列也是$<$x1...x(i-\/1)$>$与$<$y1...y(j-\/1)$>$的最长公共子序。此时递归至\+X(i-\/1)和\+Y(j-\/1)
+\item 如果 xi！=yj，且c\mbox{[}i-\/1,j\mbox{]}$>$ c\mbox{[}i,j-\/1\mbox{]}则标记flag\+\_\+matrix\mbox{[}i-\/1\mbox{]}\mbox{[}j-\/1\mbox{]} 为10，表示$<$x1...\+xi$>$与$<$y1...\+yj$>$的最长公共子序列也是$<$x1...x(i-\/1)$>$与$<$y1...\+yj$>$的最长公共子序。此时递归至\+X(i-\/1)和\+Yj
+\item 如果 xi！=yj，且c\mbox{[}i,j-\/1\mbox{]}$>$ c\mbox{[}i-\/1,j\mbox{]}则标记flag\+\_\+matrix\mbox{[}i-\/1\mbox{]}\mbox{[}j-\/1\mbox{]} 为01，表示$<$x1...\+xi$>$与$<$y1...\+yj$>$的最长公共子序列也是$<$x1...\+x$>$与$<$y1...y(j-\/1)$>$的最长公共子序。此时递归至\+Xi和\+Y(j-\/1)
+\end{DoxyItemize}
+
+算法时间复杂度\+O(m+n) ，空间复杂度 O(m$\ast$n) 
+
+Definition at line 44 of file longest\+\_\+common\+\_\+subsequence.\+h.
+

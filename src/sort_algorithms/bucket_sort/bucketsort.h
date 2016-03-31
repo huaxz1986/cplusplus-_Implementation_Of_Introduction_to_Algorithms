@@ -1,6 +1,6 @@
 #ifndef BUCKETSORT
 #define BUCKETSORT
-#include"src/sort_algorithms/quick_sort/quicksort.h"
+#include"../quick_sort/quicksort.h"
 #include<vector>
 #include<cassert>
 namespace IntrodunctionToAlgorithm

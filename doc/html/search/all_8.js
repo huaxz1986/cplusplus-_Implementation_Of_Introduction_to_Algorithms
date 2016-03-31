@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['merge',['merge',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a907f7aca2cde6c79983673ce07167278',1,'IntrodunctionToAlgorithm::SortAlgorithm']]],
-  ['merge_5fsort',['merge_sort',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab72ad89c389207e4b58443f9f57119af',1,'IntrodunctionToAlgorithm::SortAlgorithm']]],
-  ['mergesort_2eh',['mergesort.h',['../mergesort_8h.html',1,'']]],
-  ['mergesort_5ftest_2eh',['mergesort_test.h',['../mergesort__test_8h.html',1,'']]]
+  ['key',['key',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a3bcf52447a097b51caa74488e90f1479',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
+  ['keytype',['KeyType',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a0967a0c85792f7b02a005eb1942d1bf5',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]]
 ];

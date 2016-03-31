@@ -20,6 +20,8 @@
 #define QUICKSORTER_TEST_H
 #include"src/google_test/gtest.h"
 #include"quicksort.h"
+using IntrodunctionToAlgorithm::SortAlgorithm::partition;
+using IntrodunctionToAlgorithm::SortAlgorithm::quick_sort;
 //!partition_test：测试C数组的划分
 /*!
 *
@@ -27,8 +29,6 @@
 */
 TEST(test_partition, test_C_array)
 {
-    using namespace IntrodunctionToAlgorithm::SortAlgorithm;
-
         for(int i=0;i<10;i++)
         {
             int data1[10]={1,2,3,4,5,6,7,8,9,10};
@@ -124,13 +124,13 @@ TEST(test_partition, test_std_container)
     std::vector<int> comparedata4={5};
 
     std::sort(comparedata1.begin(),comparedata1.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data1.begin(),data1.end());
+    quick_sort(data1.begin(),data1.end());
     std::sort(comparedata2.begin(),comparedata2.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data2.begin(),data2.end());
+    quick_sort(data2.begin(),data2.end());
     std::sort(comparedata3.begin(),comparedata3.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data3.begin(),data3.end());
+    quick_sort(data3.begin(),data3.end());
     std::sort(comparedata4.begin(),comparedata4.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data4.begin(),data4.end());
+    quick_sort(data4.begin(),data4.end());
     EXPECT_EQ(data1,comparedata1);
     EXPECT_EQ(data2,comparedata2);
     EXPECT_EQ(data3,comparedata3);
@@ -154,13 +154,13 @@ TEST(test_quick_sort, test_C_array)
     int comparedata4[1]={5};
 
     std::sort(comparedata1,comparedata1+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data1+0,data1+10);
+    quick_sort(data1+0,data1+10);
     std::sort(comparedata2,comparedata2+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data2+0,data2+10);
+    quick_sort(data2+0,data2+10);
     std::sort(comparedata3,comparedata3+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data3+0,data3+10);
+    quick_sort(data3+0,data3+10);
     std::sort(comparedata4,comparedata4+1);
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data4+0,data4+1);
+    quick_sort(data4+0,data4+1);
     EXPECT_EQ(std::vector<int>(data1,data1+10),std::vector<int>(comparedata1,comparedata1+10));
     EXPECT_EQ(std::vector<int>(data2,data2+10),std::vector<int>(comparedata2,comparedata2+10));
     EXPECT_EQ(std::vector<int>(data3,data3+10),std::vector<int>(comparedata3,comparedata3+10));
@@ -185,13 +185,13 @@ TEST(test_quick_sort, test_std_container)
     std::vector<int> comparedata4={5};
 
     std::sort(comparedata1.begin(),comparedata1.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data1.begin(),data1.end());
+    quick_sort(data1.begin(),data1.end());
     std::sort(comparedata2.begin(),comparedata2.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data2.begin(),data2.end());
+    quick_sort(data2.begin(),data2.end());
     std::sort(comparedata3.begin(),comparedata3.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data3.begin(),data3.end());
+    quick_sort(data3.begin(),data3.end());
     std::sort(comparedata4.begin(),comparedata4.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::quick_sort(data4.begin(),data4.end());
+    quick_sort(data4.begin(),data4.end());
     EXPECT_EQ(data1,comparedata1);
     EXPECT_EQ(data2,comparedata2);
     EXPECT_EQ(data3,comparedata3);

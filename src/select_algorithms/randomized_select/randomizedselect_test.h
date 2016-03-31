@@ -2,6 +2,8 @@
 #define RANDOMIZED_SELECT_TEST
 #include"src/google_test/gtest.h"
 #include"randomizedselect.h"
+using IntrodunctionToAlgorithm::SelectAlgorithm::radom_index;
+using IntrodunctionToAlgorithm::SelectAlgorithm::randomized_select;
 //!radom_index_test：测试随机数的生成
 /*!
 *
@@ -9,7 +11,7 @@
 */
 TEST(test_radom_index, test_random)
 {
-    using namespace IntrodunctionToAlgorithm::SelectAlgorithm;
+
     int result=radom_index(0,100);
     bool all_the_same=true;
     for(int i=0;i<9;i++)
@@ -28,7 +30,6 @@ TEST(test_radom_index, test_random)
 */
 TEST(test_randomized_select, test_C_array)
 {
-        using namespace IntrodunctionToAlgorithm::SelectAlgorithm;
         for(int i=0;i<10;i++)
         {
             int data1[10]={1,2,3,4,5,6,7,8,9,10};

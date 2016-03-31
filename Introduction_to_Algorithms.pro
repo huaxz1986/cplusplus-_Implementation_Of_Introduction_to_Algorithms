@@ -33,6 +33,10 @@ HEADERS += \
     src/select_algorithms/good_select/goodselect_test.h \
     src/dynamic_programmitn_algorithms/longest_common_subsequence.h \
     src/dynamic_programmitn_algorithms/longest_common_subsequence_test.h \
-    src/tree_structure/binarytreenode/binarytreenode.h \
-    src/tree_structure/binarytreenode/binarytreenode_test.h
+    src/tree_algorithms/binarytreenode/binarytreenode.h \
+    src/tree_algorithms/binarytreenode/binarytreenode_test.h \
+    src/tree_algorithms/binarytree/binarytree.h \
+    src/tree_algorithms/binarytree/binarytree_test.h \
+    src/tree_algorithms/searchtree/searchtree.h \
+    src/tree_algorithms/searchtree/searchtree_test.h
 

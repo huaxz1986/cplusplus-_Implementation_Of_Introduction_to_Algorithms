@@ -2,6 +2,8 @@
 #define RADIXSORT_TEST
 #include"src/google_test/gtest.h"
 #include"radixsort.h"
+using IntrodunctionToAlgorithm::SortAlgorithm::digi_on_N;
+using IntrodunctionToAlgorithm::SortAlgorithm::radix_sort;
 //!radix_sort_test：测试test_digi_on_N:获取指定自然数某个位数上的数字（个位为第0位）
 /*!
 *
@@ -10,7 +12,7 @@
 TEST(test_radix_sort,test_digi_on_N)
 {
    for(int i=0;i<9;i++)
-        EXPECT_EQ(IntrodunctionToAlgorithm::SortAlgorithm::digi_on_N(123456789,i),9-i)<<"\t in i:"<<i ;
+        EXPECT_EQ(digi_on_N(123456789,i),9-i)<<"\t in i:"<<i ;
 }
 
 //!radix_sort_test：测试C数组的基数排序
@@ -31,13 +33,13 @@ TEST(test_radix_sort, test_C_array)
     int comparedata4[1]={555};
 
     std::sort(comparedata1,comparedata1+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data1+0,data1+10,3);
+    radix_sort(data1+0,data1+10,3);
     std::sort(comparedata2,comparedata2+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data2+0,data2+10,3);
+    radix_sort(data2+0,data2+10,3);
     std::sort(comparedata3,comparedata3+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data3+0,data3+10,3);
+    radix_sort(data3+0,data3+10,3);
     std::sort(comparedata4,comparedata4+1);
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data4+0,data4+1,3);
+    radix_sort(data4+0,data4+1,3);
     EXPECT_EQ(std::vector<int>(data1,data1+10),std::vector<int>(comparedata1,comparedata1+10));
     EXPECT_EQ(std::vector<int>(data2,data2+10),std::vector<int>(comparedata2,comparedata2+10));
     EXPECT_EQ(std::vector<int>(data3,data3+10),std::vector<int>(comparedata3,comparedata3+10));
@@ -62,13 +64,13 @@ TEST(test_radix_sort, test_std_container)
     std::vector<int> comparedata4={555};
 
     std::sort(comparedata1.begin(),comparedata1.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data1.begin(),data1.end(),3);
+    radix_sort(data1.begin(),data1.end(),3);
     std::sort(comparedata2.begin(),comparedata2.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data2.begin(),data2.end(),3);
+    radix_sort(data2.begin(),data2.end(),3);
     std::sort(comparedata3.begin(),comparedata3.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data3.begin(),data3.end(),3);
+    radix_sort(data3.begin(),data3.end(),3);
     std::sort(comparedata4.begin(),comparedata4.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::radix_sort(data4.begin(),data4.end(),3);
+    radix_sort(data4.begin(),data4.end(),3);
     EXPECT_EQ(data1,comparedata1);
     EXPECT_EQ(data2,comparedata2);
     EXPECT_EQ(data3,comparedata3);

@@ -111,58 +111,58 @@ $(document).ready(function(){initNavTree('randomizedselect__test_8h_source.html'
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RANDOMIZED_SELECT_TEST</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="randomizedselect_8h.html">randomizedselect.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">   10</a></span>&#160;<a class="code" href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">TEST</a>(test_radom_index, test_random)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">using namespace </span><a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html">IntrodunctionToAlgorithm::SelectAlgorithm</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> result=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#acb1b35e9cb2c25d81a69b5a1147504a4">radom_index</a>(0,100);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> all_the_same=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;9;i++)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">if</span>(result!=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#acb1b35e9cb2c25d81a69b5a1147504a4">radom_index</a>(0,100))</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            all_the_same=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    EXPECT_FALSE(all_the_same);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#acb1b35e9cb2c25d81a69b5a1147504a4">IntrodunctionToAlgorithm::SelectAlgorithm::radom_index</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">IntrodunctionToAlgorithm::SelectAlgorithm::randomized_select</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">   12</a></span>&#160;<a class="code" href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">TEST</a>(test_radom_index, test_random)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> result=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#acb1b35e9cb2c25d81a69b5a1147504a4">radom_index</a>(0,100);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">bool</span> all_the_same=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;9;i++)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span>(result!=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#acb1b35e9cb2c25d81a69b5a1147504a4">radom_index</a>(0,100))</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            all_the_same=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    EXPECT_FALSE(all_the_same);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="randomizedselect__test_8h.html#a9c7f8340d8feca1ae36c86ac11f8ba29">   29</a></span>&#160;<a class="code" href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">TEST</a>(test_randomized_select, test_C_array)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">using namespace </span><a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html">IntrodunctionToAlgorithm::SelectAlgorithm</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;10;i++)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordtype">int</span> data1[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data1+0,data1+10,i);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            EXPECT_EQ(val,i+1)&lt;&lt;<span class="stringliteral">&quot;\ti:&quot;</span>&lt;&lt;i;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;10;i++)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordtype">int</span> data2[10]={10,9,8,7,6,5,4,3,2,1};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data2+0,data2+10,i);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            EXPECT_EQ(val,i+1)&lt;&lt;<span class="stringliteral">&quot;\ti:&quot;</span>&lt;&lt;i;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordtype">int</span> data3[10]={5,5,5,5,5,4,4,4,4,4};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data3+0,data3+10,0);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            EXPECT_EQ(val,4);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordtype">int</span> data3[10]={5,5,5,5,5,4,4,4,4,4};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data3+0,data3+10,9);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            EXPECT_EQ(val,5);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {   <span class="keywordtype">int</span> data4[1]={5};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data4+0,data4+1,0);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            EXPECT_EQ(val,5);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // RANDOMIZED_SELECT_TEST</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="ttc" id="randomizedselect__test_8h_html_af8d5a5d3864ec075ec89009a819bf7ed"><div class="ttname"><a href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">TEST</a></div><div class="ttdeci">TEST(test_radom_index, test_random)</div><div class="ttdoc">radom_index_test：测试随机数的生成 </div><div class="ttdef"><b>Definition:</b> <a href="randomizedselect__test_8h_source.html#l00010">randomizedselect_test.h:10</a></div></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_select_algorithm_html"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html">IntrodunctionToAlgorithm::SelectAlgorithm</a></div><div class="ttdoc">Namespace of SelectAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="algorithms_8h_source.html#l00043">algorithms.h:43</a></div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="randomizedselect__test_8h.html#a9c7f8340d8feca1ae36c86ac11f8ba29">   31</a></span>&#160;<a class="code" href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">TEST</a>(test_randomized_select, test_C_array)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;10;i++)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordtype">int</span> data1[10]={1,2,3,4,5,6,7,8,9,10};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data1+0,data1+10,i);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            EXPECT_EQ(val,i+1)&lt;&lt;<span class="stringliteral">&quot;\ti:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;10;i++)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">int</span> data2[10]={10,9,8,7,6,5,4,3,2,1};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data2+0,data2+10,i);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            EXPECT_EQ(val,i+1)&lt;&lt;<span class="stringliteral">&quot;\ti:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordtype">int</span> data3[10]={5,5,5,5,5,4,4,4,4,4};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data3+0,data3+10,0);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            EXPECT_EQ(val,4);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">int</span> data3[10]={5,5,5,5,5,4,4,4,4,4};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data3+0,data3+10,9);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            EXPECT_EQ(val,5);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {   <span class="keywordtype">int</span> data4[1]={5};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">auto</span> val=<a class="code" href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">randomized_select</a>(data4+0,data4+1,0);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            EXPECT_EQ(val,5);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif // RANDOMIZED_SELECT_TEST</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="ttc" id="randomizedselect__test_8h_html_af8d5a5d3864ec075ec89009a819bf7ed"><div class="ttname"><a href="randomizedselect__test_8h.html#af8d5a5d3864ec075ec89009a819bf7ed">TEST</a></div><div class="ttdeci">TEST(test_radom_index, test_random)</div><div class="ttdoc">radom_index_test：测试随机数的生成 </div><div class="ttdef"><b>Definition:</b> <a href="randomizedselect__test_8h_source.html#l00012">randomizedselect_test.h:12</a></div></div>
 <div class="ttc" id="randomizedselect_8h_html"><div class="ttname"><a href="randomizedselect_8h.html">randomizedselect.h</a></div></div>
 <div class="ttc" id="namespace_introdunction_to_algorithm_1_1_select_algorithm_html_acb1b35e9cb2c25d81a69b5a1147504a4"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#acb1b35e9cb2c25d81a69b5a1147504a4">IntrodunctionToAlgorithm::SelectAlgorithm::radom_index</a></div><div class="ttdeci">IntType radom_index(IntType begin, IntType end)</div><div class="ttdoc">radom_index： 生成随机整数 </div><div class="ttdef"><b>Definition:</b> <a href="randomizedselect_8h_source.html#l00018">randomizedselect.h:18</a></div></div>
 <div class="ttc" id="namespace_introdunction_to_algorithm_1_1_select_algorithm_html_a08910fcecf3bf8711f109eec310f5a9b"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b">IntrodunctionToAlgorithm::SelectAlgorithm::randomized_select</a></div><div class="ttdeci">std::iterator_traits&lt; Iterator &gt;::value_type randomized_select(const Iterator begin, const Iterator end, typename std::iterator_traits&lt; Iterator &gt;::difference_type rank, Compare compare=Compare())</div><div class="ttdoc">randomized_select： 算法导论第9章9.2 顺序统计量的随机选择算法 </div><div class="ttdef"><b>Definition:</b> <a href="randomizedselect_8h_source.html#l00047">randomizedselect.h:47</a></div></div>

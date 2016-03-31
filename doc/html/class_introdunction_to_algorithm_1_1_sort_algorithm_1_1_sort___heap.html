@@ -71,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -115,7 +116,7 @@ $(document).ready(function(){initNavTree('class_introdunction_to_algorithm_1_1_s
 </div><!--header-->
 <div class="contents">
 
-<p>heap_sort：算法导论第6章  
+<p>Sort_Heap：用于堆排序的堆，算法导论第6章  
  <a href="class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="heapsort_8h_source.html">heapsort.h</a>&gt;</code></p>
@@ -160,7 +161,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename Iterator, typename Compare = std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt;<br />
 class IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap&lt; Iterator, Compare &gt;</h3>
 
-<p>heap_sort：算法导论第6章 </p>
+<p>Sort_Heap：用于堆排序的堆，算法导论第6章 </p>
 <ul>
 <li>堆排序思想：假设对数组A[p...r]排序：首先将数组构建成一个最小堆（或者最大堆）。然后第一个元素就是堆中最小的元素。 将第一个元素与最后一个元素交换，同时堆的规模缩减1，再将堆维持最小堆性质。不断循环最后得到一个排序好的数组 *</li>
 <li>时间复杂度 O(nlogn)</li>

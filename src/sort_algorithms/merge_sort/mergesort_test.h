@@ -20,6 +20,8 @@
 #define MERGESORTER_TEST_H
 #include"src/google_test/gtest.h"
 #include"mergesort.h"
+using IntrodunctionToAlgorithm::SortAlgorithm::merge;
+using IntrodunctionToAlgorithm::SortAlgorithm::merge_sort;
 //!merge_sort_test：测试C数组的归并排序
 /*!
 *
@@ -38,13 +40,13 @@ TEST(test_merge_sort, test_C_array)
     int comparedata4[1]={5};
 
     std::sort(comparedata1,comparedata1+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data1+0,data1+10);
+    merge_sort(data1+0,data1+10);
     std::sort(comparedata2,comparedata2+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data2+0,data2+10);
+    merge_sort(data2+0,data2+10);
     std::sort(comparedata3,comparedata3+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data3+0,data3+10);
+    merge_sort(data3+0,data3+10);
     std::sort(comparedata4,comparedata4+1);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data4+0,data4+1);
+    merge_sort(data4+0,data4+1);
     EXPECT_EQ(std::vector<int>(data1,data1+10),std::vector<int>(comparedata1,comparedata1+10));
     EXPECT_EQ(std::vector<int>(data2,data2+10),std::vector<int>(comparedata2,comparedata2+10));
     EXPECT_EQ(std::vector<int>(data3,data3+10),std::vector<int>(comparedata3,comparedata3+10));
@@ -69,13 +71,13 @@ TEST(test_merge_sort, test_std_container)
     std::vector<int> comparedata4={5};
 
     std::sort(comparedata1.begin(),comparedata1.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data1.begin(),data1.end());
+    merge_sort(data1.begin(),data1.end());
     std::sort(comparedata2.begin(),comparedata2.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data2.begin(),data2.end());
+    merge_sort(data2.begin(),data2.end());
     std::sort(comparedata3.begin(),comparedata3.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data3.begin(),data3.end());
+    merge_sort(data3.begin(),data3.end());
     std::sort(comparedata4.begin(),comparedata4.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge_sort(data4.begin(),data4.end());
+    merge_sort(data4.begin(),data4.end());
     EXPECT_EQ(data1,comparedata1);
     EXPECT_EQ(data2,comparedata2);
     EXPECT_EQ(data3,comparedata3);
@@ -101,15 +103,15 @@ TEST(test_merge, test_C_array)
     int comparedata5[10]={1,2,3,4,5,6,7,8,9,10};
 
     std::sort(comparedata1,comparedata1+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data1+0,data1+10,data1+5);
+    merge(data1+0,data1+10,data1+5);
     std::sort(comparedata2,comparedata2+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data2+0,data2+10,data2+1);
+    merge(data2+0,data2+10,data2+1);
     std::sort(comparedata3,comparedata3+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data3+0,data3+10,data3+9);
+    merge(data3+0,data3+10,data3+9);
     std::sort(comparedata4,comparedata4+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data4+0,data4+10,data4+0);
+    merge(data4+0,data4+10,data4+0);
     std::sort(comparedata5,comparedata5+10);
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data5+0,data5+10,data5+10);
+    merge(data5+0,data5+10,data5+10);
     EXPECT_EQ(std::vector<int>(data1,data1+10),std::vector<int>(comparedata1,comparedata1+10));
     EXPECT_EQ(std::vector<int>(data2,data2+10),std::vector<int>(comparedata2,comparedata2+10));
     EXPECT_EQ(std::vector<int>(data3,data3+10),std::vector<int>(comparedata3,comparedata3+10));
@@ -137,15 +139,15 @@ TEST(test_merge, test_std_container)
     std::vector<int> comparedata5={1,2,3,4,5,6,7,8,9,10};
 
     std::sort(comparedata1.begin(),comparedata1.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data1.begin(),data1.end(),data1.begin()+5);
+    merge(data1.begin(),data1.end(),data1.begin()+5);
     std::sort(comparedata2.begin(),comparedata2.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data2.begin(),data2.end(),data2.begin()+1);
+    merge(data2.begin(),data2.end(),data2.begin()+1);
     std::sort(comparedata3.begin(),comparedata3.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data3.begin(),data3.end(),data3.begin()+9);
+    merge(data3.begin(),data3.end(),data3.begin()+9);
     std::sort(comparedata4.begin(),comparedata4.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data4.begin(),data4.end(),data4.begin()+0);
+    merge(data4.begin(),data4.end(),data4.begin()+0);
     std::sort(comparedata5.begin(),comparedata5.end());
-    IntrodunctionToAlgorithm::SortAlgorithm::merge(data5.begin(),data5.end(),data5.begin()+10);
+    merge(data5.begin(),data5.end(),data5.begin()+10);
     EXPECT_EQ(data1,comparedata1);
     EXPECT_EQ(data2,comparedata2);
     EXPECT_EQ(data3,comparedata3);

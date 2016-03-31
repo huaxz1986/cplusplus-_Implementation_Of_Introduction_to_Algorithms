@@ -2,6 +2,7 @@
 #define HEAP_SORT_TEST
 #include"src/google_test/gtest.h"
 #include"heapsort.h"
+using IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap;
 //!heap_sort_test：测试C数组的堆排序
 /*!
 *
@@ -19,7 +20,7 @@ TEST(test_heap_sort, test_C_array)
     int comparedata3[10]={5,5,5,5,5,4,4,4,4,4};
     int comparedata4[1]={5};
 
-    IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap<int*>sorter;
+    Sort_Heap<int*>sorter;
     std::sort(comparedata1,comparedata1+10);
     sorter(data1+0,10);
     std::sort(comparedata2,comparedata2+10);
@@ -51,8 +52,7 @@ TEST(test_heap_sort, test_std_container)
     std::vector<int> comparedata3={5,5,5,5,5,4,4,4,4,4};
     std::vector<int> comparedata4={5};
 
-    IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap<std::vector<int>::iterator>sorter;
-
+    Sort_Heap<std::vector<int>::iterator>sorter;
     std::sort(comparedata1.begin(),comparedata1.end());
     sorter(data1.begin(),data1.size());
     std::sort(comparedata2.begin(),comparedata2.end());

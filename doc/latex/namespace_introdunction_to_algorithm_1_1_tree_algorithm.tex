@@ -1,0 +1,254 @@
+\hypertarget{namespace_introdunction_to_algorithm_1_1_tree_algorithm}{}\section{Introdunction\+To\+Algorithm\+:\+:Tree\+Algorithm Namespace Reference}
+\label{namespace_introdunction_to_algorithm_1_1_tree_algorithm}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}}
+
+
+Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm}{Tree\+Algorithm}.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree}{Binary\+Tree}
+\begin{DoxyCompactList}\small\item\em Binary\+Tree：二叉树，算法导论10章10.4节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node}{Binary\+Tree\+Node}
+\begin{DoxyCompactList}\small\item\em Binary\+Tree\+Node：二叉树的节点，算法导论xx章xx节 \end{DoxyCompactList}\item 
+class \hyperlink{class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree}{Search\+Tree}
+\begin{DoxyCompactList}\small\item\em Search\+Tree：二叉搜索树，算法导论12章 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Node\+Type , typename Functor $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a2d05eb07edf5780ad3495f7c38039e4f}{inorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)
+\begin{DoxyCompactList}\small\item\em inorder\+\_\+walk：二叉树的中序遍历 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type , typename Functor $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abd47576f0c155a7de7c0553ad431b192}{preorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)
+\begin{DoxyCompactList}\small\item\em preorder\+\_\+walk：二叉树的前序遍历 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type , typename Functor $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aed5eccc83270b880c05500c952834daa}{postorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)
+\begin{DoxyCompactList}\small\item\em postorder\+\_\+walk：二叉树的后序遍历 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a698a67d6e06ceae1fec22fed6be32fdc}{left\+\_\+rotate} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)
+\begin{DoxyCompactList}\small\item\em left\+\_\+rotate：二叉树的左旋转操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abecfb8158fb1959def0d0c188b46959c}{right\+\_\+rotate} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)
+\begin{DoxyCompactList}\small\item\em right\+\_\+rotate：二叉树的右旋转操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Node\+Type $>$ }\\void \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aa3d272286e237af98bb32cb63a9234c6}{transplant} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node\+\_\+src, std\+::shared\+\_\+ptr$<$ Node\+Type $>$node\+\_\+dst, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)
+\begin{DoxyCompactList}\small\item\em transplant：二叉树的剪切操作 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace of \hyperlink{namespace_introdunction_to_algorithm_1_1_tree_algorithm}{Tree\+Algorithm}. 
+
+该命名空间内包含所有树算法 
+
+\subsection{Function Documentation}
+\hypertarget{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a2d05eb07edf5780ad3495f7c38039e4f}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}!inorder\+\_\+walk@{inorder\+\_\+walk}}
+\index{inorder\+\_\+walk@{inorder\+\_\+walk}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}}
+\subsubsection[{inorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Functor $>$ void Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::inorder\+\_\+walk (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{root, }
+\item[{Functor}]{func}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a2d05eb07edf5780ad3495f7c38039e4f}
+
+
+inorder\+\_\+walk：二叉树的中序遍历 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & 二叉树的根节点，强引用 \\
+\hline
+{\em func} & 对二叉树节点的操作 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+本函数执行对二叉树的中序遍历，遍历时执行指定操作 算法：
+\begin{DoxyItemize}
+\item 对左子节点前序遍历
+\item 对本节点执行操作
+\item 对右子节点前序遍历
+\end{DoxyItemize}
+
+时间复杂度\+O(n)，空间复杂度\+O(1) 
+
+Definition at line 56 of file binarytree.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a698a67d6e06ceae1fec22fed6be32fdc}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}!left\+\_\+rotate@{left\+\_\+rotate}}
+\index{left\+\_\+rotate@{left\+\_\+rotate}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}}
+\subsubsection[{left\+\_\+rotate(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type $>$ void Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::left\+\_\+rotate (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node, }
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&}]{root}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_tree_algorithm_a698a67d6e06ceae1fec22fed6be32fdc}
+
+
+left\+\_\+rotate：二叉树的左旋转操作 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & 待旋转的节点，强引用 \\
+\hline
+{\em root：} & 二叉树的根节点的强引用（当node指向树根时，旋转会导致丢失树根信息，此时由root返回新的树根） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+本函数执行二叉树进行左旋转。设node为被旋转的点，l\+\_\+node为它的左子节点，r\+\_\+node为它的右子节点。 则旋转的效果是：r\+\_\+node取代了node的位置；而node现在挂靠在r\+\_\+node的左子；r\+\_\+node原来的左子现在成为node的右子
+
+{\ttfamily 
+\begin{DoxyPre}
+        |                                                |
+       node                                            r\_node
+      /    \textbackslash{}                                           /    \textbackslash{}
+  l\_node  r\_node        -- 左旋  -->                  node  r\_r\_node
+         /    \textbackslash{}                                     /    \textbackslash{}
+    l\_r\_node r\_r\_node                           l\_node  l\_r\_node
+\end{DoxyPre}
+}
+
+时间复杂度\+O(1)，空间复杂度\+O(1) 
+
+Definition at line 134 of file binarytree.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aed5eccc83270b880c05500c952834daa}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}!postorder\+\_\+walk@{postorder\+\_\+walk}}
+\index{postorder\+\_\+walk@{postorder\+\_\+walk}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}}
+\subsubsection[{postorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Functor $>$ void Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::postorder\+\_\+walk (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{root, }
+\item[{Functor}]{func}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aed5eccc83270b880c05500c952834daa}
+
+
+postorder\+\_\+walk：二叉树的后序遍历 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & 二叉树的根节点，强引用 \\
+\hline
+{\em func} & 对二叉树节点的操作 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+本函数执行对二叉树的后序遍历，遍历时执行指定操作。 算法：
+
+
+\begin{DoxyItemize}
+\item 对左子节点后续遍历
+\item 对右子节点后续遍历
+\item 对本节点执行操作
+\end{DoxyItemize}
+
+时间复杂度\+O(n)，空间复杂度\+O(1) 
+
+Definition at line 104 of file binarytree.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abd47576f0c155a7de7c0553ad431b192}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}!preorder\+\_\+walk@{preorder\+\_\+walk}}
+\index{preorder\+\_\+walk@{preorder\+\_\+walk}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}}
+\subsubsection[{preorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Functor func)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Functor $>$ void Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::preorder\+\_\+walk (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{root, }
+\item[{Functor}]{func}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abd47576f0c155a7de7c0553ad431b192}
+
+
+preorder\+\_\+walk：二叉树的前序遍历 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & 二叉树的根节点，强引用 \\
+\hline
+{\em func} & 对二叉树节点的操作 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+本函数执行对二叉树的前序遍历，遍历时执行指定操作 算法：
+\begin{DoxyItemize}
+\item 对本节点执行操作
+\item 对左子节点前序遍历
+\item 对右子节点前序遍历
+\end{DoxyItemize}
+
+时间复杂度\+O(n)，空间复杂度\+O(1) 
+
+Definition at line 79 of file binarytree.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abecfb8158fb1959def0d0c188b46959c}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}!right\+\_\+rotate@{right\+\_\+rotate}}
+\index{right\+\_\+rotate@{right\+\_\+rotate}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}}
+\subsubsection[{right\+\_\+rotate(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type $>$ void Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::right\+\_\+rotate (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node, }
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&}]{root}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_tree_algorithm_abecfb8158fb1959def0d0c188b46959c}
+
+
+right\+\_\+rotate：二叉树的右旋转操作 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & 待旋转的节点，强引用 \\
+\hline
+{\em root：} & 二叉树的根节点的强引用（当node指向树根时，旋转会导致丢失树根信息，此时由root返回新的树根） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+本函数执行二叉树进行右旋转。设node为被旋转的点，l\+\_\+node为它的左子节点，r\+\_\+node为它的右子节点。 则旋转的效果是：l\+\_\+node取代了node的位置；而node现在挂靠在r\+\_\+node的右子；l\+\_\+node原来的右子现在成为node的左子
+
+{\ttfamily 
+\begin{DoxyPre}
+                  |                                                |
+                 node                                            l\_node
+                /    \textbackslash{}                                           /    \textbackslash{}
+             l\_node  r\_node        -- 右旋  -->              l\_l\_node  node
+            /    \textbackslash{}                                                    /    \textbackslash{}
+       l\_l\_node r\_l\_node                                         r\_l\_node  r\_node
+\end{DoxyPre}
+} 时间复杂度\+O(1)，空间复杂度\+O(1) 
+
+Definition at line 181 of file binarytree.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aa3d272286e237af98bb32cb63a9234c6}{}\index{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}!transplant@{transplant}}
+\index{transplant@{transplant}!Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm}}
+\subsubsection[{transplant(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node\+\_\+src, std\+::shared\+\_\+ptr$<$ Node\+Type $>$node\+\_\+dst, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type $>$ void Introdunction\+To\+Algorithm\+::\+Tree\+Algorithm\+::transplant (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node\+\_\+src, }
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{node\+\_\+dst, }
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&}]{root}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_tree_algorithm_aa3d272286e237af98bb32cb63a9234c6}
+
+
+transplant：二叉树的剪切操作 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+src} & 剪切源节点 \\
+\hline
+{\em root：} & 二叉树的根节点的强引用（当node指向树根时，剪切导致丢失树根信息，此时由root返回新的树根） \\
+\hline
+{\em node\+\_\+dst} & 剪切目的节点 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+本函数执行二叉树的剪切操作。剪切操作要求目的节点是非空节点（若是空节点则抛出异常）。本操作将node\+\_\+src剪切到node\+\_\+dst中。下图中，两个节点之间有两个链接：一个是父--$>$子，另一个是子--$>$父 剪切操作可能会仅仅剪断一个连接
+
+{\ttfamily 
+\begin{DoxyPre}
+                src\_p         dst\_p                                    src\_p         dst\_p             dst\_p
+                  ||            ||                               (父-->子)|             ||                |(子--->父)
+                node\_src     node\_dst         ---剪切 -->               node\_src      node\_src        node\_dst
+                //   \textbackslash{}      //    \textbackslash{}                                 //     \textbackslash{}      //     \textbackslash{}        //     \textbackslash{}
+\end{DoxyPre}
+} 时间复杂度\+O(1)，空间复杂度\+O(1) 
+
+Definition at line 226 of file binarytree.\+h.
+

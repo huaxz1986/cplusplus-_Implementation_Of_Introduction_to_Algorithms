@@ -5,7 +5,7 @@ namespace IntrodunctionToAlgorithm
     namespace SortAlgorithm
     {
 
-    //!heap_sort：算法导论第6章
+    //!Sort_Heap：用于堆排序的堆，算法导论第6章
     /*!
     *
     * - 堆排序思想：假设对数组A[p...r]排序：首先将数组构建成一个最小堆（或者最大堆）。然后第一个元素就是堆中最小的元素。

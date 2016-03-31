@@ -1,6 +1,6 @@
 #ifndef RADIXSORT
 #define RADIXSORT
-#include"src/sort_algorithms/insert_sort/insertsort.h"
+#include"../insert_sort/insertsort.h"
 #include<cmath>
 #include<iostream>
 #include<cassert>
