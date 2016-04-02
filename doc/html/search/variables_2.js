@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lchild',['lchild',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a3f84ee829fc539e004bf3be6eb8fb882',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]]
+  ['default_5fnode',['default_node',['../class_binary_tree_node_test.html#af2db7bcee955bff2d4d2aa815a09b329',1,'BinaryTreeNodeTest']]]
 ];

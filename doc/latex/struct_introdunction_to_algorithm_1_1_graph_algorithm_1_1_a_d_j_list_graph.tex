@@ -1,0 +1,256 @@
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph}{}\section{Introdunction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:A\+D\+J\+List\+Graph$<$ N $>$ Struct Template Reference}
+\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph$<$ N $>$@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph$<$ N $>$}}
+
+
+A\+D\+J\+List\+Graph：图的邻接表表示，算法导论22章22.1节  
+
+
+
+
+{\ttfamily \#include $<$adjlistgraph.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type}
+\item 
+typedef int \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ae178ce485958d261c40b7beb8dfe9d0a}{E\+Weight\+Type}
+\item 
+typedef std\+::tuple$<$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type}, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type}, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ae178ce485958d261c40b7beb8dfe9d0a}{E\+Weight\+Type} $>$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ad84ed29dc772f53561f644c091dd642e}{Edge\+Tuple\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a81ccebaa8bedc002ed21ac2df31bd952}{add\+\_\+edge} (const \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ad84ed29dc772f53561f644c091dd642e}{Edge\+Tuple\+Type} \&edge\+\_\+tuple)
+\begin{DoxyCompactList}\small\item\em add\+\_\+edge\+:添加一条边 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iteator $>$ }\\void \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aed7a4f48f04b78da3152e901024d1e96}{add\+\_\+edges} (const Iteator \&begin, const Iteator \&end)
+\begin{DoxyCompactList}\small\item\em add\+\_\+edges\+:添加一组边 \end{DoxyCompactList}\item 
+void \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a9128416d893da4085332e6e532f0bbb2}{adjust\+\_\+edge} (\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type} id1, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type} id2, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ae178ce485958d261c40b7beb8dfe9d0a}{E\+Weight\+Type} wt)
+\begin{DoxyCompactList}\small\item\em adjust\+\_\+edge\+:修改一条边的权重 \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ad84ed29dc772f53561f644c091dd642e}{Edge\+Tuple\+Type} $>$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aff1c916500c0b4a9d2c4d22f7e095368}{edge\+\_\+tuples} () const 
+\begin{DoxyCompactList}\small\item\em edge\+\_\+tuples\+:返回图中所有边的三元素元组集合，这里集合采用{\ttfamily std\+::vector$<$std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$$>$} \end{DoxyCompactList}\item 
+bool \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aab4ed493b694f45ad370ecf59ecb323b}{has\+\_\+edge} (\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type} id\+\_\+from, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type} id\+\_\+to) const 
+\begin{DoxyCompactList}\small\item\em has\+\_\+edge\+:返回图中指定顶点之间是否存在边 \end{DoxyCompactList}\item 
+\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ae178ce485958d261c40b7beb8dfe9d0a}{E\+Weight\+Type} \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a747a67e00d17ea000611491cefb1b7b7}{weight} (\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type} id\+\_\+from, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type} id\+\_\+to) const 
+\begin{DoxyCompactList}\small\item\em weight\+:返回图中指定顶点之间的边的权重 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ std\+::vector$<$ std\+::pair$<$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{V\+I\+D\+Type}, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ae178ce485958d261c40b7beb8dfe9d0a}{E\+Weight\+Type} $>$ $>$, N $>$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a8474d46cb8dbe93c759752b789941fe5}{array}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned N$>$struct Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph$<$ N $>$}
+
+A\+D\+J\+List\+Graph：图的邻接表表示，算法导论22章22.1节 
+
+图的邻接表主要包含一个数据：
+
+
+\begin{DoxyItemize}
+\item {\ttfamily array}：邻接表，类型为{\ttfamily std\+::array$<$std\+::vector$<$std\+::pair$<$V\+I\+D\+Type,E\+Weight\+Type$>$$>$,N$>$}，为{\ttfamily N}行，每一行代表一个节点：
+\end{DoxyItemize}
+
+为了便于计算，这里并不管理边和顶点，只是维护邻接表。边、顶点与邻接表的同步由使用者确保。 
+
+Definition at line 19 of file adjlistgraph.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ad84ed29dc772f53561f644c091dd642e}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!Edge\+Tuple\+Type@{Edge\+Tuple\+Type}}
+\index{Edge\+Tuple\+Type@{Edge\+Tuple\+Type}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{Edge\+Tuple\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef std\+::tuple$<${\bf V\+I\+D\+Type},{\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::{\bf Edge\+Tuple\+Type}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ad84ed29dc772f53561f644c091dd642e}
+边的三元素（顶点1编号，顶点2编号，权重)组成的元组 
+
+Definition at line 23 of file adjlistgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ae178ce485958d261c40b7beb8dfe9d0a}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!E\+Weight\+Type@{E\+Weight\+Type}}
+\index{E\+Weight\+Type@{E\+Weight\+Type}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{E\+Weight\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::{\bf E\+Weight\+Type}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ae178ce485958d261c40b7beb8dfe9d0a}
+权重的类型 
+
+Definition at line 22 of file adjlistgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!V\+I\+D\+Type@{V\+I\+D\+Type}}
+\index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaa2c152e1ccafbe5556a15141d9d31b2}
+顶点编号的类型 
+
+Definition at line 21 of file adjlistgraph.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a81ccebaa8bedc002ed21ac2df31bd952}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!add\+\_\+edge@{add\+\_\+edge}}
+\index{add\+\_\+edge@{add\+\_\+edge}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{add\+\_\+edge(const Edge\+Tuple\+Type \&edge\+\_\+tuple)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ void {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::add\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge\+Tuple\+Type} \&}]{edge\+\_\+tuple}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a81ccebaa8bedc002ed21ac2df31bd952}
+
+
+add\+\_\+edge\+:添加一条边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+\_\+tuple\+:一条边的三元素元组} & 为了便于计算，添加边时并不是添加{\ttfamily \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge}{Edge}}类型，而是{\ttfamily std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$}类型的值。\\
+\hline
+\end{DoxyParams}
+如果指定节点之间的边已经存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常 \begin{quote}
+要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
+
+
+Definition at line 34 of file adjlistgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aed7a4f48f04b78da3152e901024d1e96}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!add\+\_\+edges@{add\+\_\+edges}}
+\index{add\+\_\+edges@{add\+\_\+edges}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{add\+\_\+edges(const Iteator \&begin, const Iteator \&end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ template$<$typename Iteator $>$ void {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::add\+\_\+edges (
+\begin{DoxyParamCaption}
+\item[{const Iteator \&}]{begin, }
+\item[{const Iteator \&}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aed7a4f48f04b78da3152e901024d1e96}
+
+
+add\+\_\+edges\+:添加一组边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+:边容器的起始迭代器} & \\
+\hline
+{\em end\+:边容器的终止迭代器} & 为了便于计算，添加边时并不是添加{\ttfamily \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge}{Edge}}类型，而是{\ttfamily std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$}类型的值\\
+\hline
+\end{DoxyParams}
+如果指定节点之间的边已经存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常 \begin{quote}
+要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
+
+
+Definition at line 55 of file adjlistgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a9128416d893da4085332e6e532f0bbb2}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!adjust\+\_\+edge@{adjust\+\_\+edge}}
+\index{adjust\+\_\+edge@{adjust\+\_\+edge}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{adjust\+\_\+edge(\+V\+I\+D\+Type id1, V\+I\+D\+Type id2, E\+Weight\+Type wt)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ void {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::adjust\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf V\+I\+D\+Type}}]{id1, }
+\item[{{\bf V\+I\+D\+Type}}]{id2, }
+\item[{{\bf E\+Weight\+Type}}]{wt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a9128416d893da4085332e6e532f0bbb2}
+
+
+adjust\+\_\+edge\+:修改一条边的权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id1\+:待修改边的第一个顶点} & \\
+\hline
+{\em id2\+:待修改边的第二个顶点} & \\
+\hline
+{\em wt\+:新的权重} & 修改顶点{\ttfamily id1}和{\ttfamily id2}直接的边的权重为{\ttfamily wt}。如果指定结点之间的边不存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常。 \begin{quote}
+要求{\ttfamily id1}和{\ttfamily id2}均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作权重修改\end{quote}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file adjlistgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aff1c916500c0b4a9d2c4d22f7e095368}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!edge\+\_\+tuples@{edge\+\_\+tuples}}
+\index{edge\+\_\+tuples@{edge\+\_\+tuples}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{edge\+\_\+tuples() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ const std\+::vector$<${\bf Edge\+Tuple\+Type}$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::edge\+\_\+tuples (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aff1c916500c0b4a9d2c4d22f7e095368}
+
+
+edge\+\_\+tuples\+:返回图中所有边的三元素元组集合，这里集合采用{\ttfamily std\+::vector$<$std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$$>$} 
+
+\begin{DoxyReturn}{Returns}
+\+:图中所有边的三元素元组集合 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file adjlistgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aab4ed493b694f45ad370ecf59ecb323b}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!has\+\_\+edge@{has\+\_\+edge}}
+\index{has\+\_\+edge@{has\+\_\+edge}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{has\+\_\+edge(\+V\+I\+D\+Type id\+\_\+from, V\+I\+D\+Type id\+\_\+to) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ bool {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::has\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+from, }
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+to}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aab4ed493b694f45ad370ecf59ecb323b}
+
+
+has\+\_\+edge\+:返回图中指定顶点之间是否存在边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+from} & 第一个顶点的{\ttfamily id} \\
+\hline
+{\em id\+\_\+to} & 第二个顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:第一个顶点和第二个顶点之间是否存在边
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}无效时，抛出异常 $>$这里的无效值得是{\ttfamily id\+\_\+from}、{\ttfamily id\+\_\+to}不在区间{\ttfamily \mbox{[}0,N)}之间
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间有边时，返回{\ttfamily true}
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间没有边时，返回{\ttfamily false} 
+\end{DoxyItemize}
+
+Definition at line 118 of file adjlistgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a747a67e00d17ea000611491cefb1b7b7}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!weight@{weight}}
+\index{weight@{weight}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{weight(\+V\+I\+D\+Type id\+\_\+from, V\+I\+D\+Type id\+\_\+to) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ {\bf E\+Weight\+Type} {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::weight (
+\begin{DoxyParamCaption}
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+from, }
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+to}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a747a67e00d17ea000611491cefb1b7b7}
+
+
+weight\+:返回图中指定顶点之间的边的权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+from} & 第一个顶点的{\ttfamily id} \\
+\hline
+{\em id\+\_\+to} & 第二个顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:第一个顶点和第二个顶点之间的边的权重
+\end{DoxyReturn}
+当且仅当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间存在边时返回该边的权重。其他情况下都会抛出{\ttfamily std\+::invalid\+\_\+argument}异常
+
+
+\begin{DoxyItemize}
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}无效时，抛出异常 $>$这里的无效值得是{\ttfamily id\+\_\+from}、{\ttfamily id\+\_\+to}不在区间{\ttfamily \mbox{[}0,N)}之间
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间无边时，抛出异常 
+\end{DoxyItemize}
+
+Definition at line 144 of file adjlistgraph.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a8474d46cb8dbe93c759752b789941fe5}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!array@{array}}
+\index{array@{array}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
+\subsubsection[{array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ std\+::array$<$std\+::vector$<$std\+::pair$<${\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ $>$,N$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::array}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a8474d46cb8dbe93c759752b789941fe5}
+图的邻接表 
+
+Definition at line 159 of file adjlistgraph.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/adjlist\+\_\+graph/\hyperlink{adjlistgraph_8h}{adjlistgraph.\+h}\end{DoxyCompactItemize}

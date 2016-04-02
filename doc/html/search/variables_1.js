@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key',['key',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a3bcf52447a097b51caa74488e90f1479',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]]
+  ['array',['array',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a8474d46cb8dbe93c759752b789941fe5',1,'IntrodunctionToAlgorithm::GraphAlgorithm::ADJListGraph']]]
 ];

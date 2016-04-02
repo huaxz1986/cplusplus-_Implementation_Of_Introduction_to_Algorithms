@@ -1,0 +1,308 @@
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph}{}\section{Introdunction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Matrix\+Graph$<$ N $>$ Struct Template Reference}
+\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph$<$ N $>$@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph$<$ N $>$}}
+
+
+Matrix\+Graph：图的矩阵表示，算法导论22章22.1节  
+
+
+
+
+{\ttfamily \#include $<$matrixgraph.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type}
+\item 
+typedef int \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{E\+Weight\+Type}
+\item 
+typedef std\+::tuple$<$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type}, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type}, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{E\+Weight\+Type} $>$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a73af3fee951b91b4f5c48422460f8c03}{Edge\+Tuple\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a13dd6a7edd0776390b042302c56519cd}{Matrix\+Graph} (\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{E\+Weight\+Type} val)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily invalid\+\_\+weight} \end{DoxyCompactList}\item 
+\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a46eaefb35a7150323befe5156b40c4e6}{Matrix\+Graph} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数，指定{\ttfamily invalid\+\_\+weight}为0 \end{DoxyCompactList}\item 
+void \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aed3562e551c77ff7d80eae0e454d720e}{add\+\_\+edge} (const \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a73af3fee951b91b4f5c48422460f8c03}{Edge\+Tuple\+Type} \&edge\+\_\+tuple)
+\begin{DoxyCompactList}\small\item\em add\+\_\+edge\+:添加一条边 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iteator $>$ }\\void \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a7f2b13ccc3c080c736a703a7655dbcd0}{add\+\_\+edges} (const Iteator \&begin, const Iteator \&end)
+\begin{DoxyCompactList}\small\item\em add\+\_\+edges\+:添加一组边 \end{DoxyCompactList}\item 
+void \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aa01c8df41f0948dd3116c9d6d8dd80d5}{adjust\+\_\+edge} (\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type} id1, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type} id2, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{E\+Weight\+Type} wt)
+\begin{DoxyCompactList}\small\item\em adjust\+\_\+edge\+:修改一条边的权重 \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a73af3fee951b91b4f5c48422460f8c03}{Edge\+Tuple\+Type} $>$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aa8d8cbe8e7d912681162c9d45ace5af2}{edge\+\_\+tuples} () const 
+\begin{DoxyCompactList}\small\item\em edge\+\_\+tuples\+:返回图中所有边的三元素元组集合，这里集合采用{\ttfamily std\+::vector$<$std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$$>$} \end{DoxyCompactList}\item 
+bool \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_adb7bcbdcc424af76ccb04225a3c83f04}{has\+\_\+edge} (\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type} id\+\_\+from, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type} id\+\_\+to) const 
+\begin{DoxyCompactList}\small\item\em has\+\_\+edge\+:返回图中指定顶点之间是否存在边 \end{DoxyCompactList}\item 
+\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{E\+Weight\+Type} \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ab194457255cc4ad47eaa91d630b4d3bb}{weight} (\hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type} id\+\_\+from, \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{V\+I\+D\+Type} id\+\_\+to) const 
+\begin{DoxyCompactList}\small\item\em weight\+:返回图中指定顶点之间的边的权重 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ std\+::array$<$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{E\+Weight\+Type}, N $>$, N $>$ \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a7808a578d4c380baa6de5d4b23bcc84f}{matrix}
+\item 
+const \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{E\+Weight\+Type} \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a015ceb5dcacd9d1bc1e67e5cf331aa7f}{invalid\+\_\+weight}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned N$>$struct Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph$<$ N $>$}
+
+Matrix\+Graph：图的矩阵表示，算法导论22章22.1节 
+
+图的矩阵主要包含两个数据：
+
+
+\begin{DoxyItemize}
+\item {\ttfamily matrix}：一个矩阵，类型为{\ttfamily std\+::array$<$std\+::array$<$E\+Weight\+Type,N$>$, N$>$}，为{\ttfamily N$\ast$\+N}大小：
+\item {\ttfamily invalid\+\_\+weight}：无效权重。当矩阵中{\ttfamily r}行{\ttfamily c}列数据为该值时，表示编号为{\ttfamily r}与{\ttfamily c}的顶点之间没有连接
+\end{DoxyItemize}
+
+为了便于计算，这里并不管理边和顶点，只是维护矩阵。边、顶点与矩阵的同步由使用者确保。 
+
+Definition at line 19 of file matrixgraph.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a73af3fee951b91b4f5c48422460f8c03}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!Edge\+Tuple\+Type@{Edge\+Tuple\+Type}}
+\index{Edge\+Tuple\+Type@{Edge\+Tuple\+Type}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{Edge\+Tuple\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef std\+::tuple$<${\bf V\+I\+D\+Type},{\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf Edge\+Tuple\+Type}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a73af3fee951b91b4f5c48422460f8c03}
+边的三元素（顶点1编号，顶点2编号，权重)组成的元组 
+
+Definition at line 23 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!E\+Weight\+Type@{E\+Weight\+Type}}
+\index{E\+Weight\+Type@{E\+Weight\+Type}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{E\+Weight\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf E\+Weight\+Type}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af2d243f2c1bb8a101aa3f71f469c64e8}
+权重的类型 
+
+Definition at line 22 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!V\+I\+D\+Type@{V\+I\+D\+Type}}
+\index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae00582b52cc9f015cb9b1b8f4d521776}
+顶点编号的类型 
+
+Definition at line 21 of file matrixgraph.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a13dd6a7edd0776390b042302c56519cd}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!Matrix\+Graph@{Matrix\+Graph}}
+\index{Matrix\+Graph@{Matrix\+Graph}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{Matrix\+Graph(\+E\+Weight\+Type val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf Matrix\+Graph} (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+Weight\+Type}}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a13dd6a7edd0776390b042302c56519cd}
+
+
+显式构造函数，指定{\ttfamily invalid\+\_\+weight} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val\+:无效权重值} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a46eaefb35a7150323befe5156b40c4e6}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!Matrix\+Graph@{Matrix\+Graph}}
+\index{Matrix\+Graph@{Matrix\+Graph}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{Matrix\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf Matrix\+Graph} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a46eaefb35a7150323befe5156b40c4e6}
+
+
+默认构造函数，指定{\ttfamily invalid\+\_\+weight}为0 
+
+
+
+Definition at line 36 of file matrixgraph.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aed3562e551c77ff7d80eae0e454d720e}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!add\+\_\+edge@{add\+\_\+edge}}
+\index{add\+\_\+edge@{add\+\_\+edge}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{add\+\_\+edge(const Edge\+Tuple\+Type \&edge\+\_\+tuple)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ void {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::add\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge\+Tuple\+Type} \&}]{edge\+\_\+tuple}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aed3562e551c77ff7d80eae0e454d720e}
+
+
+add\+\_\+edge\+:添加一条边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge\+\_\+tuple\+:一条边的三元素元组} & 为了便于计算，添加边时并不是添加{\ttfamily \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge}{Edge}}类型，而是{\ttfamily std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$}类型的值。\\
+\hline
+\end{DoxyParams}
+如果指定节点之间的边已经存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常 \begin{quote}
+要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
+
+
+Definition at line 48 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a7f2b13ccc3c080c736a703a7655dbcd0}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!add\+\_\+edges@{add\+\_\+edges}}
+\index{add\+\_\+edges@{add\+\_\+edges}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{add\+\_\+edges(const Iteator \&begin, const Iteator \&end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ template$<$typename Iteator $>$ void {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::add\+\_\+edges (
+\begin{DoxyParamCaption}
+\item[{const Iteator \&}]{begin, }
+\item[{const Iteator \&}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a7f2b13ccc3c080c736a703a7655dbcd0}
+
+
+add\+\_\+edges\+:添加一组边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+:边容器的起始迭代器} & \\
+\hline
+{\em end\+:边容器的终止迭代器} & 为了便于计算，添加边时并不是添加{\ttfamily \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge}{Edge}}类型，而是{\ttfamily std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$}类型的值\\
+\hline
+\end{DoxyParams}
+如果指定节点之间的边已经存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常 \begin{quote}
+要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
+
+
+Definition at line 69 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aa01c8df41f0948dd3116c9d6d8dd80d5}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!adjust\+\_\+edge@{adjust\+\_\+edge}}
+\index{adjust\+\_\+edge@{adjust\+\_\+edge}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{adjust\+\_\+edge(\+V\+I\+D\+Type id1, V\+I\+D\+Type id2, E\+Weight\+Type wt)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ void {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::adjust\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf V\+I\+D\+Type}}]{id1, }
+\item[{{\bf V\+I\+D\+Type}}]{id2, }
+\item[{{\bf E\+Weight\+Type}}]{wt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aa01c8df41f0948dd3116c9d6d8dd80d5}
+
+
+adjust\+\_\+edge\+:修改一条边的权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id1\+:待修改边的第一个顶点} & \\
+\hline
+{\em id2\+:待修改边的第二个顶点} & \\
+\hline
+{\em wt\+:新的权重} & 修改顶点{\ttfamily id1}和{\ttfamily id2}直接的边的权重为{\ttfamily wt}。如果指定结点之间的边不存在，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常。 \begin{quote}
+要求{\ttfamily id1}和{\ttfamily id2}均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作权重修改\end{quote}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aa8d8cbe8e7d912681162c9d45ace5af2}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!edge\+\_\+tuples@{edge\+\_\+tuples}}
+\index{edge\+\_\+tuples@{edge\+\_\+tuples}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{edge\+\_\+tuples() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ const std\+::vector$<${\bf Edge\+Tuple\+Type}$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::edge\+\_\+tuples (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aa8d8cbe8e7d912681162c9d45ace5af2}
+
+
+edge\+\_\+tuples\+:返回图中所有边的三元素元组集合，这里集合采用{\ttfamily std\+::vector$<$std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$$>$} 
+
+\begin{DoxyReturn}{Returns}
+\+:图中所有边的三元素元组集合 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_adb7bcbdcc424af76ccb04225a3c83f04}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!has\+\_\+edge@{has\+\_\+edge}}
+\index{has\+\_\+edge@{has\+\_\+edge}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{has\+\_\+edge(\+V\+I\+D\+Type id\+\_\+from, V\+I\+D\+Type id\+\_\+to) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ bool {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::has\+\_\+edge (
+\begin{DoxyParamCaption}
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+from, }
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+to}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_adb7bcbdcc424af76ccb04225a3c83f04}
+
+
+has\+\_\+edge\+:返回图中指定顶点之间是否存在边 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+from} & 第一个顶点的{\ttfamily id} \\
+\hline
+{\em id\+\_\+to} & 第二个顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:第一个顶点和第二个顶点之间是否存在边
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}无效时，抛出异常 $>$这里的无效值得是{\ttfamily id\+\_\+from}、{\ttfamily id\+\_\+to}不在区间{\ttfamily \mbox{[}0,N)}之间
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间有边时，返回{\ttfamily true}
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间没有边时，返回{\ttfamily false} 
+\end{DoxyItemize}
+
+Definition at line 127 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ab194457255cc4ad47eaa91d630b4d3bb}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!weight@{weight}}
+\index{weight@{weight}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{weight(\+V\+I\+D\+Type id\+\_\+from, V\+I\+D\+Type id\+\_\+to) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ {\bf E\+Weight\+Type} {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::weight (
+\begin{DoxyParamCaption}
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+from, }
+\item[{{\bf V\+I\+D\+Type}}]{id\+\_\+to}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ab194457255cc4ad47eaa91d630b4d3bb}
+
+
+weight\+:返回图中指定顶点之间的边的权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+from} & 第一个顶点的{\ttfamily id} \\
+\hline
+{\em id\+\_\+to} & 第二个顶点的{\ttfamily id} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:第一个顶点和第二个顶点之间的边的权重
+\end{DoxyReturn}
+当且仅当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间存在边时返回该边的权重。其他情况下都会抛出{\ttfamily std\+::invalid\+\_\+argument}异常
+
+
+\begin{DoxyItemize}
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}无效时，抛出异常 $>$这里的无效值得是{\ttfamily id\+\_\+from}、{\ttfamily id\+\_\+to}不在区间{\ttfamily \mbox{[}0,N)}之间
+\item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间无边时，抛出异常 
+\end{DoxyItemize}
+
+Definition at line 148 of file matrixgraph.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a015ceb5dcacd9d1bc1e67e5cf331aa7f}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!invalid\+\_\+weight@{invalid\+\_\+weight}}
+\index{invalid\+\_\+weight@{invalid\+\_\+weight}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{invalid\+\_\+weight}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ const {\bf E\+Weight\+Type} {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::invalid\+\_\+weight}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a015ceb5dcacd9d1bc1e67e5cf331aa7f}
+无效权重，是一个const值，一旦图被初始化之后就无法改变 
+
+Definition at line 160 of file matrixgraph.\+h.
+
+\hypertarget{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a7808a578d4c380baa6de5d4b23bcc84f}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!matrix@{matrix}}
+\index{matrix@{matrix}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ std\+::array$<$std\+::array$<${\bf E\+Weight\+Type},N$>$, N$>$ {\bf Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::matrix}\label{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a7808a578d4c380baa6de5d4b23bcc84f}
+图的矩阵 
+
+Definition at line 159 of file matrixgraph.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/matrix\+\_\+graph/\hyperlink{matrixgraph_8h}{matrixgraph.\+h}\end{DoxyCompactItemize}

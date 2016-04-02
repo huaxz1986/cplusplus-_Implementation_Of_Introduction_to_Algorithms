@@ -24,13 +24,32 @@
 ```
 src\
 	dynamic_programming_algorithms : 动态规划算法
+			longest_common_subsequence： 最长公共子序列算法
 	google_test\           : gooletest框架的两个文件：gtest.h以及gtest_all.c
 	sort_algorithms\       :所有排序算法
+			bucket_sort: 桶排序
+			count_sort:计数排序
+			heap_sort：堆排序
+			insert_sort：插入排序
+			merge_sort:归并排序
+			quick_sort：快速排序
+			radix_sort：基数排序
 	select_algorithms\     :顺序统计量选择算法
-	tree_algorithms\       :树算法	
-	...
-doc\                       :由doxygen自动生成的文档
-Doxyfile                   :doxygen配置文件
+			randomized_select：随机选择的顺序统计量算法
+			godd_select：最坏情况为O(n)的顺序统计量算法
+	tree_algorithms\       :树算法
+			binarytree:二叉树
+			binarytreenode：二叉树结点
+			searchtree:二叉搜索树	
+	graph_algorithms\    ：图算法
+			basic_graph\ :基本图算法
+					graph_vertex：图的顶点
+					graph_edge:图的边
+					adjlist_graph：图的邻接表的表示法
+					matrix_graph：图的矩阵表示法
+		...(未完待续)
+doc\      ：由doxygen自动生成的文档
+Doxyfile  :doxygen配置文件
 Introduction_to_Algorithms.pro :Qt项目配置文件
 ```
 * 本项目是利用Qt开发，因此未给出Makefile文件

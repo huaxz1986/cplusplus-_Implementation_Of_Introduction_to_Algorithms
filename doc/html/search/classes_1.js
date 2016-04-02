@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['searchtree',['SearchTree',['../class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html',1,'IntrodunctionToAlgorithm::TreeAlgorithm']]],
-  ['searchtree_3c_20node_20_3e',['SearchTree&lt; Node &gt;',['../class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html',1,'IntrodunctionToAlgorithm::TreeAlgorithm']]],
-  ['searchtreetest',['SearchTreeTest',['../class_search_tree_test.html',1,'']]],
-  ['sort_5fheap',['Sort_Heap',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html',1,'IntrodunctionToAlgorithm::SortAlgorithm']]]
+  ['binarytree',['BinaryTree',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html',1,'IntrodunctionToAlgorithm::TreeAlgorithm']]],
+  ['binarytree_3c_20node_20_3e',['BinaryTree&lt; Node &gt;',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html',1,'IntrodunctionToAlgorithm::TreeAlgorithm']]],
+  ['binarytreenode',['BinaryTreeNode',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html',1,'IntrodunctionToAlgorithm::TreeAlgorithm']]],
+  ['binarytreenodetest',['BinaryTreeNodeTest',['../class_binary_tree_node_test.html',1,'']]],
+  ['binarytreetest',['BinaryTreeTest',['../class_binary_tree_test.html',1,'']]]
 ];

@@ -172,8 +172,8 @@ $(document).ready(function(){initNavTree('binarytree__test_8h_source.html','');}
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">   77</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_tree)</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::cout&lt;&lt;_empty_tree.to_xml()&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::cout&lt;&lt;_normal_tree.to_xml()&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    EXPECT_EQ(_empty_tree.to_xml(),<span class="stringliteral">&quot;tree is empty!&quot;</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    EXPECT_NE(_normal_tree.to_xml(),<span class="stringliteral">&quot;tree is empty!&quot;</span>);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a22cc40ea8db4f5d34805f511619dfff3">   87</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_inorder_walk)</div>

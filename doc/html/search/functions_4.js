@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['good_5fselect',['good_select',['../namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a1a12272ccfaf7b91916aed885085b86c',1,'IntrodunctionToAlgorithm::SelectAlgorithm']]]
+  ['digi_5fon_5fn',['digi_on_N',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a4e56c4fee6bd1c903ef6cfc14719d99c',1,'IntrodunctionToAlgorithm::SortAlgorithm']]]
 ];

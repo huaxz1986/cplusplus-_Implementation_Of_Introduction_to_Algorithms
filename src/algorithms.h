@@ -66,5 +66,45 @@ namespace IntrodunctionToAlgorithm
     */
     namespace TreeAlgorithm {
 
+
+    }
+    //! Namespace of  GraphAlgorithm
+    /*!
+    *
+    * 该命名空间内包含所有图算法
+    */
+    namespace GraphAlgorithm
+    {
+        //!unlimit：返回正无穷的函数
+        /*!
+        *\return : 正无穷大的数
+        *
+        * 将本函数的返回值定义为正无穷。在算法导论图算法中，经常用到正无穷。通常对正无穷的操作是:
+        *
+        * - 将边的权重或者节点的`key`设为正无穷
+        * - 对正无穷加、减一个有限的数，结果还是正无穷
+        *
+        * 这里将`std::numeric_limits<T>::max()/2`设为正无穷，考虑到正无穷加上一个较大的数必须保证不能溢出
+        *
+        */
+        template<typename T> T unlimit()
+        {
+            return std::numeric_limits<T>::max()/2;
+        }
+        //!is_unlimit：判断是否正无穷
+        /*!
+        * \param t: 待判断的数
+        * \return : 如果该数是正无穷大，则返回`true`，否则返回`false`
+        *
+        * 将本函数判断一个数是否正无穷；若是则返回true;若不是则返回false
+        *
+        * 这里将大于等于`std::numeric_limits<T>::max()/3`的数判断结果为正无穷
+        * >因为考虑到正无穷减去一个数必须保证结果也是正无穷
+        *
+        */
+        template<typename T> bool is_unlimit(T t)
+        {
+            return t>=std::numeric_limits<T>::max()/3;
+        }
     }
 }

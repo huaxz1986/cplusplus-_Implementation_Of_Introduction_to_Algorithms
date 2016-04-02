@@ -76,8 +76,8 @@ protected:
 //!test_tree:测试空树、非空树
 TEST_F(BinaryTreeTest,test_tree)
 {
-    std::cout<<_empty_tree.to_xml()<<std::endl;
-    std::cout<<_normal_tree.to_xml()<<std::endl;
+    EXPECT_EQ(_empty_tree.to_xml(),"tree is empty!");
+    EXPECT_NE(_normal_tree.to_xml(),"tree is empty!");
 }
 //!test_inorder_walk:测试树的中序遍历
 /*!

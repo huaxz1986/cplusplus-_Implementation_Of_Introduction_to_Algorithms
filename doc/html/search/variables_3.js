@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parent',['parent',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#afa42d2a3e68838d17d1028fab12c71e1',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]]
+  ['graph',['graph',['../class_graph_a_d_j_list_test.html#af1b700b5e683b43e3e1b215a4d589b6b',1,'GraphADJListTest::graph()'],['../class_graph_matrix_test.html#ad384a40b300fe51ecc31c15f197f1723',1,'GraphMatrixTest::graph()']]]
 ];

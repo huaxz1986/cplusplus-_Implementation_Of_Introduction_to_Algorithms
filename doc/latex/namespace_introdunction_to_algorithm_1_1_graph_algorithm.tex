@@ -1,0 +1,74 @@
+\hypertarget{namespace_introdunction_to_algorithm_1_1_graph_algorithm}{}\section{Introdunction\+To\+Algorithm\+:\+:Graph\+Algorithm Namespace Reference}
+\label{namespace_introdunction_to_algorithm_1_1_graph_algorithm}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph}{A\+D\+J\+List\+Graph}
+\begin{DoxyCompactList}\small\item\em A\+D\+J\+List\+Graph：图的邻接表表示，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge}{Edge}
+\begin{DoxyCompactList}\small\item\em Edge：图的边，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph}{Matrix\+Graph}
+\begin{DoxyCompactList}\small\item\em Matrix\+Graph：图的矩阵表示，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}
+\begin{DoxyCompactList}\small\item\em Vertex：图的顶点，算法导论22章22.1节 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introdunction_to_algorithm_1_1_graph_algorithm_a156de3aaf516156695e591dd7a696e13}{unlimit} ()
+\begin{DoxyCompactList}\small\item\em unlimit：返回正无穷的函数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{namespace_introdunction_to_algorithm_1_1_graph_algorithm_a23d91f2128b4201b0b6452d57fdffd18}{is\+\_\+unlimit} (T t)
+\begin{DoxyCompactList}\small\item\em is\+\_\+unlimit：判断是否正无穷 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespace_introdunction_to_algorithm_1_1_graph_algorithm_a23d91f2128b4201b0b6452d57fdffd18}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm}!is\+\_\+unlimit@{is\+\_\+unlimit}}
+\index{is\+\_\+unlimit@{is\+\_\+unlimit}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{is\+\_\+unlimit(\+T t)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::is\+\_\+unlimit (
+\begin{DoxyParamCaption}
+\item[{T}]{t}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_graph_algorithm_a23d91f2128b4201b0b6452d57fdffd18}
+
+
+is\+\_\+unlimit：判断是否正无穷 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & 待判断的数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 如果该数是正无穷大，则返回{\ttfamily true}，否则返回{\ttfamily false}
+\end{DoxyReturn}
+将本函数判断一个数是否正无穷；若是则返回true;若不是则返回false
+
+这里将大于等于{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/3}的数判断结果为正无穷 $>$因为考虑到正无穷减去一个数必须保证结果也是正无穷 
+
+Definition at line 101 of file algorithms.\+h.
+
+\hypertarget{namespace_introdunction_to_algorithm_1_1_graph_algorithm_a156de3aaf516156695e591dd7a696e13}{}\index{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm}!unlimit@{unlimit}}
+\index{unlimit@{unlimit}!Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{unlimit()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Introdunction\+To\+Algorithm\+::\+Graph\+Algorithm\+::unlimit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespace_introdunction_to_algorithm_1_1_graph_algorithm_a156de3aaf516156695e591dd7a696e13}
+
+
+unlimit：返回正无穷的函数 
+
+\begin{DoxyReturn}{Returns}
+\+: 正无穷大的数
+\end{DoxyReturn}
+将本函数的返回值定义为正无穷。在算法导论图算法中，经常用到正无穷。通常对正无穷的操作是\+:
+
+
+\begin{DoxyItemize}
+\item 将边的权重或者节点的{\ttfamily key}设为正无穷
+\item 对正无穷加、减一个有限的数，结果还是正无穷
+\end{DoxyItemize}
+
+这里将{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/2}设为正无穷，考虑到正无穷加上一个较大的数必须保证不能溢出 
+
+Definition at line 86 of file algorithms.\+h.
+

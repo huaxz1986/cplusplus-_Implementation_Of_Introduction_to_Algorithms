@@ -31,12 +31,20 @@ HEADERS += \
     src/select_algorithms/randomized_select/randomizedselect_test.h \
     src/select_algorithms/good_select/goodselect.h \
     src/select_algorithms/good_select/goodselect_test.h \
-    src/dynamic_programmitn_algorithms/longest_common_subsequence.h \
-    src/dynamic_programmitn_algorithms/longest_common_subsequence_test.h \
+    src/dynamic_programming_algorithms/longest_common_subsequence.h \
+    src/dynamic_programming_algorithms/longest_common_subsequence_test.h \
     src/tree_algorithms/binarytreenode/binarytreenode.h \
     src/tree_algorithms/binarytreenode/binarytreenode_test.h \
     src/tree_algorithms/binarytree/binarytree.h \
     src/tree_algorithms/binarytree/binarytree_test.h \
     src/tree_algorithms/searchtree/searchtree.h \
-    src/tree_algorithms/searchtree/searchtree_test.h
+    src/tree_algorithms/searchtree/searchtree_test.h \
+    src/graph_algorithms/basic_graph/matrix_graph/matrixgraph.h \
+    src/graph_algorithms/basic_graph/matrix_graph/matrixgraph_test.h \
+    src/graph_algorithms/basic_graph/adjlist_graph/adjlistgraph.h \
+    src/graph_algorithms/basic_graph/adjlist_graph/adjlistgraph_test.h \
+    src/graph_algorithms/basic_graph/graph_vertex/vertex.h \
+    src/graph_algorithms/basic_graph/graph_vertex/vertex_test.h \
+    src/graph_algorithms/basic_graph/graph_edge/edge.h \
+    src/graph_algorithms/basic_graph/graph_edge/edge_test.h
 

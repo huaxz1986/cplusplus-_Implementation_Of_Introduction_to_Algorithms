@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rchild',['rchild',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#ae6dc3c9fce595c08cd3a31dba534fec3',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
-  ['root',['root',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#acd08e406313d41bb0dd2e17aabde8482',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTree']]]
+  ['id',['id',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#a7010bd64e704f2d210c37007d30fbfa9',1,'IntrodunctionToAlgorithm::GraphAlgorithm::Vertex']]],
+  ['invalid_5fweight',['invalid_weight',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#a015ceb5dcacd9d1bc1e67e5cf331aa7f',1,'IntrodunctionToAlgorithm::GraphAlgorithm::MatrixGraph']]]
 ];

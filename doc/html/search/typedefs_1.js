@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['Node',['../class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b',1,'BinaryTreeTest::Node()'],['../class_search_tree_test.html#a921d5813f947eb9b70417b69722bc050',1,'SearchTreeTest::Node()']]]
+  ['keytype',['KeyType',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#ada86f69d9e5f5dcb47b7be1e3a208d06',1,'IntrodunctionToAlgorithm::GraphAlgorithm::Vertex::KeyType()'],['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a0967a0c85792f7b02a005eb1942d1bf5',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode::KeyType()']]]
 ];

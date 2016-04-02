@@ -1,7 +1,9 @@
 var binarytreenode__test_8h =
 [
-    [ "TEST", "binarytreenode__test_8h.html#ad40d5ed2c97b819698213e415cf0d2e6", null ],
-    [ "TEST", "binarytreenode__test_8h.html#a843f05c6ab7375a8689d13722a4ec59e", null ],
-    [ "TEST", "binarytreenode__test_8h.html#a510b0817ccae2ef75eabf982474b2ab5", null ],
-    [ "TEST", "binarytreenode__test_8h.html#ae8cf2744ec6f581a13711e062f9faecc", null ]
+    [ "BinaryTreeNodeTest", "class_binary_tree_node_test.html", "class_binary_tree_node_test" ],
+    [ "TEST_F", "binarytreenode__test_8h.html#a5e60721fa0b0b3e063e4deeb6d6adde4", null ],
+    [ "TEST_F", "binarytreenode__test_8h.html#a47c27eb6ebf09ff66a60171c8595d2be", null ],
+    [ "TEST_F", "binarytreenode__test_8h.html#ab52f5722d4b86ec248400222aca3088b", null ],
+    [ "TEST_F", "binarytreenode__test_8h.html#a28341da48ac03f4c9840714ab356c7c9", null ],
+    [ "TEST_F", "binarytreenode__test_8h.html#a521f0066be61aeadfe17bbf7dec7855f", null ]
 ];
