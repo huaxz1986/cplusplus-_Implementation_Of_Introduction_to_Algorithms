@@ -3,7 +3,7 @@
 #include <type_traits>
 #include<vector>
 #include<iostream>
-namespace  IntrodunctionToAlgorithm {
+namespace  IntroductionToAlgorithm {
     namespace DynamicProgrammingAlgorithm
     {
 

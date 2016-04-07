@@ -2,7 +2,7 @@
 #define HEAP_SORT_TEST
 #include"src/google_test/gtest.h"
 #include"heapsort.h"
-using IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap;
+using IntroductionToAlgorithm::SortAlgorithm::Sort_Heap;
 //!heap_sort_test：测试C数组的堆排序
 /*!
 *

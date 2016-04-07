@@ -18,7 +18,7 @@
  */
 #ifndef INSERTSORTE_H
 #define INSERTSORTE_H
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SortAlgorithm
     {

@@ -2,7 +2,7 @@
 #define BINARYTREENODE_TEST
 #include"src/google_test/gtest.h"
 #include"binarytreenode.h"
-using IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode;
+using IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode;
 //!BinaryTreeNodeTest:测试类，用于为测试提供基础数据
 /*!
 *

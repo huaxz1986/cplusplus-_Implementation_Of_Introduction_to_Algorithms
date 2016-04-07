@@ -1,7 +1,7 @@
 #ifndef GRAPHEDGE
 #define GRAPHEDGE
 #include<tuple>
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace GraphAlgorithm
     {

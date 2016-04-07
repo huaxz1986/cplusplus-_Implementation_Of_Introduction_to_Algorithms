@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('insertsort__test_8h_source.html','');}
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define INSERTSORT_TEST_H</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="insertsort_8h.html">insertsort.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">IntrodunctionToAlgorithm::SortAlgorithm::insert_sort</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">IntroductionToAlgorithm::SortAlgorithm::insert_sort</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="insertsort__test_8h.html#aa858271919e4d6d34db6ba0270696968">   30</a></span>&#160;<a class="code" href="insertsort__test_8h.html#aa858271919e4d6d34db6ba0270696968">TEST</a>(test_insert_sort, test_C_array)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
@@ -143,13 +143,13 @@ $(document).ready(function(){initNavTree('insertsort__test_8h_source.html','');}
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> comparedata4[1]={5};</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::sort(comparedata1,comparedata1+10);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data1+0,data1+10);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data1+0,data1+10);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::sort(comparedata2,comparedata2+10);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data2+0,data2+10);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data2+0,data2+10);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::sort(comparedata3,comparedata3+10);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data3+0,data3+10);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data3+0,data3+10);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::sort(comparedata4,comparedata4+1);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data4+0,data4+1);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data4+0,data4+1);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data1,data1+10),std::vector&lt;int&gt;(comparedata1,comparedata1+10));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data2,data2+10),std::vector&lt;int&gt;(comparedata2,comparedata2+10));</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data3,data3+10),std::vector&lt;int&gt;(comparedata3,comparedata3+10));</div>
@@ -169,21 +169,21 @@ $(document).ready(function(){initNavTree('insertsort__test_8h_source.html','');}
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::vector&lt;int&gt; comparedata4={5};</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data1.begin(),data1.end());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data1.begin(),data1.end());</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data2.begin(),data2.end());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data2.begin(),data2.end());</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data3.begin(),data3.end());</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data3.begin(),data3.end());</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">insert_sort</a>(data4.begin(),data4.end());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">insert_sort</a>(data4.begin(),data4.end());</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    EXPECT_EQ(data4,comparedata4);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif // INSERTSORT_TEST_H</span></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a244ca5a48266ea48f1d52e5436eaee84"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84">IntrodunctionToAlgorithm::SortAlgorithm::insert_sort</a></div><div class="ttdeci">void insert_sort(const Iterator begin, const Iterator end, Compare compare=Compare())</div><div class="ttdoc">insert_sort：算法导论第二章 2.1 </div><div class="ttdef"><b>Definition:</b> <a href="insertsort_8h_source.html#l00038">insertsort.h:38</a></div></div>
 <div class="ttc" id="insertsort_8h_html"><div class="ttname"><a href="insertsort_8h.html">insertsort.h</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_a0cb38883a5023cfb6103e483f6624516"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516">IntroductionToAlgorithm::SortAlgorithm::insert_sort</a></div><div class="ttdeci">void insert_sort(const Iterator begin, const Iterator end, Compare compare=Compare())</div><div class="ttdoc">insert_sort：算法导论第二章 2.1 </div><div class="ttdef"><b>Definition:</b> <a href="insertsort_8h_source.html#l00038">insertsort.h:38</a></div></div>
 <div class="ttc" id="insertsort__test_8h_html_aa858271919e4d6d34db6ba0270696968"><div class="ttname"><a href="insertsort__test_8h.html#aa858271919e4d6d34db6ba0270696968">TEST</a></div><div class="ttdeci">TEST(test_insert_sort, test_C_array)</div><div class="ttdoc">insert_sort_test：测试C数组的插入排序 </div><div class="ttdef"><b>Definition:</b> <a href="insertsort__test_8h_source.html#l00030">insertsort_test.h:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -23,8 +23,8 @@
 
 ```
 src\
-	dynamic_programming_algorithms : 动态规划算法
-			longest_common_subsequence： 最长公共子序列算法
+	dynamic_programming_algorithms\: 动态规划算法
+			       lcs： 最长公共子序列算法
 	google_test\           : gooletest框架的两个文件：gtest.h以及gtest_all.c
 	sort_algorithms\       :所有排序算法
 			bucket_sort: 桶排序
@@ -47,6 +47,11 @@ src\
 					graph_edge:图的边
 					adjlist_graph：图的邻接表的表示法
 					matrix_graph：图的矩阵表示法
+					graph: 图
+					graph_bfs:图的广度优先搜索算法
+					graph_dfs：图的深度优先搜索算法
+					topology_sort：有向无环图的拓扑排序算法
+					strong_connected_component:有向图的强连通分量算法
 		...(未完待续)
 doc\      ：由doxygen自动生成的文档
 Doxyfile  :doxygen配置文件

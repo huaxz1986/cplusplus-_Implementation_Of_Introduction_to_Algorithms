@@ -2,7 +2,7 @@
 #define BUCKETSORT_TEST
 #include"src/google_test/gtest.h"
 #include"bucketsort.h"
-using IntrodunctionToAlgorithm::SortAlgorithm::bucket_sort;
+using IntroductionToAlgorithm::SortAlgorithm::bucket_sort;
 //!bucket_sort_test：测试C数组的桶排序
 /*!
 *

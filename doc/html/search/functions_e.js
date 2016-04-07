@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['radix_5fsort',['radix_sort',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ad92e747a0c67fba3b9380d448591d33c',1,'IntrodunctionToAlgorithm::SortAlgorithm']]],
-  ['radom_5findex',['radom_index',['../namespace_introdunction_to_algorithm_1_1_select_algorithm.html#acb1b35e9cb2c25d81a69b5a1147504a4',1,'IntrodunctionToAlgorithm::SelectAlgorithm']]],
-  ['randomized_5fselect',['randomized_select',['../namespace_introdunction_to_algorithm_1_1_select_algorithm.html#a08910fcecf3bf8711f109eec310f5a9b',1,'IntrodunctionToAlgorithm::SelectAlgorithm']]],
-  ['remove',['remove',['../class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a80dffa04b166dbb9c04c97ea5b42dfc9',1,'IntrodunctionToAlgorithm::TreeAlgorithm::SearchTree']]],
-  ['right_5frotate',['right_rotate',['../namespace_introdunction_to_algorithm_1_1_tree_algorithm.html#abecfb8158fb1959def0d0c188b46959c',1,'IntrodunctionToAlgorithm::TreeAlgorithm']]]
+  ['radix_5fsort',['radix_sort',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352',1,'IntroductionToAlgorithm::SortAlgorithm']]],
+  ['radom_5findex',['radom_index',['../namespace_introduction_to_algorithm_1_1_select_algorithm.html#a117ee8d5d70d91c5be1d412f9fbad1cd',1,'IntroductionToAlgorithm::SelectAlgorithm']]],
+  ['randomized_5fselect',['randomized_select',['../namespace_introduction_to_algorithm_1_1_select_algorithm.html#a395bd75c7fea69efc84be89a00b9463c',1,'IntroductionToAlgorithm::SelectAlgorithm']]],
+  ['remove',['remove',['../class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a3b59a0c117766590f7f01027ad0fbfff',1,'IntroductionToAlgorithm::TreeAlgorithm::SearchTree']]],
+  ['right_5frotate',['right_rotate',['../namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0',1,'IntroductionToAlgorithm::TreeAlgorithm']]]
 ];

@@ -2,7 +2,7 @@
 #define COUNTSORT_TEST
 #include"src/google_test/gtest.h"
 #include"countsort.h"
-using IntrodunctionToAlgorithm::SortAlgorithm::count_sort;
+using IntroductionToAlgorithm::SortAlgorithm::count_sort;
 //!count_sort_test：测试C数组的计数排序
 /*!
 *

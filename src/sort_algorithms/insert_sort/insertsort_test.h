@@ -20,7 +20,7 @@
 #define INSERTSORT_TEST_H
 #include"src/google_test/gtest.h"
 #include"insertsort.h"
-using IntrodunctionToAlgorithm::SortAlgorithm::insert_sort;
+using IntroductionToAlgorithm::SortAlgorithm::insert_sort;
 //!insert_sort_test：测试C数组的插入排序
 /*!
 *

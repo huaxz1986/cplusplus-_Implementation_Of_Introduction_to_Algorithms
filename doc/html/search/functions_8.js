@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['inorder_5fwalk',['inorder_walk',['../namespace_introdunction_to_algorithm_1_1_tree_algorithm.html#a2d05eb07edf5780ad3495f7c38039e4f',1,'IntrodunctionToAlgorithm::TreeAlgorithm']]],
-  ['insert',['insert',['../class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#aa65abd78c422c5162804932dc9b47ae7',1,'IntrodunctionToAlgorithm::TreeAlgorithm::SearchTree']]],
-  ['insert_5fsort',['insert_sort',['../namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a244ca5a48266ea48f1d52e5436eaee84',1,'IntrodunctionToAlgorithm::SortAlgorithm']]],
-  ['is_5fleft_5fchild',['is_left_child',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a117288aa11c36d94e85664d1599c8099',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
-  ['is_5fright_5fchild',['is_right_child',['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a90c90d98b01fd0ee1060e192cd5858ef',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
-  ['is_5funlimit',['is_unlimit',['../namespace_introdunction_to_algorithm_1_1_graph_algorithm.html#a23d91f2128b4201b0b6452d57fdffd18',1,'IntrodunctionToAlgorithm::GraphAlgorithm']]]
+  ['inorder_5fwalk',['inorder_walk',['../namespace_introduction_to_algorithm_1_1_tree_algorithm.html#aff9afe8e77b1aaaa5715b270fecd73c4',1,'IntroductionToAlgorithm::TreeAlgorithm']]],
+  ['insert',['insert',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#af0e72003afbf634cd9f7df7f61de1c36',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::insert()'],['../class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a83724f0079d16419d4cceba74602cee1',1,'IntroductionToAlgorithm::TreeAlgorithm::SearchTree::insert()']]],
+  ['insert_5fsort',['insert_sort',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516',1,'IntroductionToAlgorithm::SortAlgorithm']]],
+  ['inverse',['inverse',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#ace6d1e2910a70ea8fa8e3d3e688e29ba',1,'IntroductionToAlgorithm::GraphAlgorithm::Graph']]],
+  ['is_5fempty',['is_empty',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#abc9cdc8881918001bf922c3b2cd64c1c',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['is_5finqueue',['is_inqueue',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a95ee21038ee245f37623eedbd273fb43',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['is_5fleft_5fchild',['is_left_child',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a23dfcff4adbb1fba70296eb25fbac3cb',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
+  ['is_5fright_5fchild',['is_right_child',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a3147815d63a639a081d5dbea3359fc1b',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
+  ['is_5funlimit',['is_unlimit',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a4f664c13605fc87ca8d26f4aad5a9fa2',1,'IntroductionToAlgorithm::GraphAlgorithm']]]
 ];

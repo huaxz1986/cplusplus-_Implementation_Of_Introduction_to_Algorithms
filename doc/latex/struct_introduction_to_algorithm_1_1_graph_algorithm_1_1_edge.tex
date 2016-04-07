@@ -1,0 +1,179 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Edge$<$ Vertex\+Type $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge$<$ Vertex\+Type $>$@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge$<$ Vertex\+Type $>$}}
+
+
+Edge：图的边，算法导论22章22.1节  
+
+
+
+
+{\ttfamily \#include $<$edge.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_af4bfb54d5d23ecd5aa428f62b5553e93}{V\+I\+D\+Type}
+\item 
+typedef int \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_aa85e33d0381e5e71188dfafc58dcccc7}{E\+Weight\+Type}
+\item 
+typedef std\+::tuple$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_af4bfb54d5d23ecd5aa428f62b5553e93}{V\+I\+D\+Type}, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_af4bfb54d5d23ecd5aa428f62b5553e93}{V\+I\+D\+Type}, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_aa85e33d0381e5e71188dfafc58dcccc7}{E\+Weight\+Type} $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a2eb9ac670ab79db90876e60538615858}{Edge\+Tuple\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a2f79ea7db1ff7aa3b9308d03fcabe397}{Edge} (std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$v1, std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$v2, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_aa85e33d0381e5e71188dfafc58dcccc7}{E\+Weight\+Type} w)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，必须指定两个顶点和一个权重 \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a8400a31f19da7f062c06478cb71d3076}{to\+\_\+string} () const 
+\begin{DoxyCompactList}\small\item\em to\+\_\+string：返回边的字符串描述 \end{DoxyCompactList}\item 
+const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a2eb9ac670ab79db90876e60538615858}{Edge\+Tuple\+Type} \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a6b3c56feea8ddcc691c54c1d7dc3892e}{edge\+\_\+tuple} () const 
+\begin{DoxyCompactList}\small\item\em edge\+\_\+tuple：获取边的三元素元组 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a391d83fc05904eb6b76cdc55655942f5}{vertex1}
+\item 
+std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a3bd2a73ca98edc0a6e38e7b4796b0c39}{vertex2}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_aa85e33d0381e5e71188dfafc58dcccc7}{E\+Weight\+Type} \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a336f8a2aac3eb191fef304918ae859b1}{weight}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Vertex\+Type$>$struct Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge$<$ Vertex\+Type $>$}
+
+Edge：图的边，算法导论22章22.1节 
+
+边主要包含三个数据：
+
+
+\begin{DoxyItemize}
+\item {\ttfamily vertex1}：第一个顶点的强引用：
+\item {\ttfamily vertex2}为第二个顶点的强引用。
+\item {\ttfamily weight}\+: 边的权重（为int类型，可为正、负值）
+\end{DoxyItemize}
+
+为了便于计算，这里定义了一个元组，类型为{\ttfamily std\+::tuple$<$V\+I\+D\+Type,V\+I\+D\+Type,E\+Weight\+Type$>$}，元组的第一个元素为第一个顶点的{\ttfamily id}；元组的第二个元素为第二个顶点的{\ttfamily id}； 元组的第三个元素为边的权重。 
+
+Definition at line 20 of file edge.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a2eb9ac670ab79db90876e60538615858}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!Edge\+Tuple\+Type@{Edge\+Tuple\+Type}}
+\index{Edge\+Tuple\+Type@{Edge\+Tuple\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{Edge\+Tuple\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ typedef std\+::tuple$<${\bf V\+I\+D\+Type},{\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::{\bf Edge\+Tuple\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a2eb9ac670ab79db90876e60538615858}
+边的三元素（顶点1编号，顶点2编号，权重)组成的元组 
+
+Definition at line 25 of file edge.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_aa85e33d0381e5e71188dfafc58dcccc7}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!E\+Weight\+Type@{E\+Weight\+Type}}
+\index{E\+Weight\+Type@{E\+Weight\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{E\+Weight\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::{\bf E\+Weight\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_aa85e33d0381e5e71188dfafc58dcccc7}
+权重的类型 
+
+Definition at line 24 of file edge.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_af4bfb54d5d23ecd5aa428f62b5553e93}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!V\+I\+D\+Type@{V\+I\+D\+Type}}
+\index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_af4bfb54d5d23ecd5aa428f62b5553e93}
+顶点编号的类型 
+
+Definition at line 23 of file edge.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a2f79ea7db1ff7aa3b9308d03fcabe397}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{Edge(std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$v1, std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$v2, E\+Weight\+Type w)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::{\bf Edge} (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$}]{v1, }
+\item[{std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$}]{v2, }
+\item[{{\bf E\+Weight\+Type}}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a2f79ea7db1ff7aa3b9308d03fcabe397}
+
+
+显式构造函数，必须指定两个顶点和一个权重 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1\+:第一个顶点的强引用} & \\
+\hline
+{\em v2\+:第二个顶点的强引用} & \\
+\hline
+{\em w} & 边的权重 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file edge.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a6b3c56feea8ddcc691c54c1d7dc3892e}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!edge\+\_\+tuple@{edge\+\_\+tuple}}
+\index{edge\+\_\+tuple@{edge\+\_\+tuple}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{edge\+\_\+tuple() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ const {\bf Edge\+Tuple\+Type} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::edge\+\_\+tuple (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a6b3c56feea8ddcc691c54c1d7dc3892e}
+
+
+edge\+\_\+tuple：获取边的三元素元组 
+
+\begin{DoxyReturn}{Returns}
+\+:边的三元素元组 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file edge.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a8400a31f19da7f062c06478cb71d3076}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{to\+\_\+string() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ virtual std\+::string {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a8400a31f19da7f062c06478cb71d3076}
+
+
+to\+\_\+string：返回边的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+:边的字符串描述 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file edge.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a391d83fc05904eb6b76cdc55655942f5}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!vertex1@{vertex1}}
+\index{vertex1@{vertex1}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{vertex1}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ std\+::shared\+\_\+ptr$<$Vertex\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::vertex1}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a391d83fc05904eb6b76cdc55655942f5}
+边的第一个顶点 
+
+Definition at line 59 of file edge.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a3bd2a73ca98edc0a6e38e7b4796b0c39}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!vertex2@{vertex2}}
+\index{vertex2@{vertex2}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{vertex2}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ std\+::shared\+\_\+ptr$<$Vertex\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::vertex2}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a3bd2a73ca98edc0a6e38e7b4796b0c39}
+边的第二个顶点 
+
+Definition at line 60 of file edge.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a336f8a2aac3eb191fef304918ae859b1}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}!weight@{weight}}
+\index{weight@{weight}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ {\bf E\+Weight\+Type} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Edge}$<$ Vertex\+Type $>$\+::weight}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_a336f8a2aac3eb191fef304918ae859b1}
+边的权重 
+
+Definition at line 61 of file edge.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+edge/\hyperlink{edge_8h}{edge.\+h}\end{DoxyCompactItemize}

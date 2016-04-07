@@ -1,0 +1,399 @@
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm Namespace Reference}
+\label{namespace_introduction_to_algorithm_1_1_graph_algorithm}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+
+
+Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph}{A\+D\+J\+List\+Graph}
+\begin{DoxyCompactList}\small\item\em A\+D\+J\+List\+Graph：图的邻接表表示，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex}{B\+F\+S\+\_\+\+Vertex}
+\begin{DoxyCompactList}\small\item\em B\+F\+S\+\_\+\+Vertex：用于广度优先搜索的顶点类型，算法导论22章22.2节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex}{D\+F\+S\+\_\+\+Vertex}
+\begin{DoxyCompactList}\small\item\em D\+F\+S\+\_\+\+Vertex：用于深度优先搜索的顶点类型，算法导论22章22.3节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge}{Edge}
+\begin{DoxyCompactList}\small\item\em Edge：图的边，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}
+\begin{DoxyCompactList}\small\item\em Graph：图，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph}{Matrix\+Graph}
+\begin{DoxyCompactList}\small\item\em Matrix\+Graph：图的矩阵表示，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}
+\begin{DoxyCompactList}\small\item\em Vertex：图的顶点，算法导论22章22.1节 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a19237111c3b1ec2717c5e1aefe2f6d9b}{unlimit} ()
+\begin{DoxyCompactList}\small\item\em unlimit：返回正无穷的函数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a4f664c13605fc87ca8d26f4aad5a9fa2}{is\+\_\+unlimit} (T t)
+\begin{DoxyCompactList}\small\item\em is\+\_\+unlimit：判断是否正无穷 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type , typename Action  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aa4b14f2da6462f3575a3f74b6558a575}{breadth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
+\begin{DoxyCompactList}\small\item\em breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章xx节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a01ece18a63d13cfe023c1f6360e63451}{visit} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\})
+\begin{DoxyCompactList}\small\item\em visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5d500378f28e485a3b9a9b9cc74e4f97}{depth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action pre\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action post\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())
+\begin{DoxyCompactList}\small\item\em depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\const std\+::vector$<$ std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6d058c2aaa8714778b3f2ab8a24ff232}{scc} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em scc：强连通分量，算法导论22章22.5节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a804241e72be5f4c031190bc12a6b73a2}{topology\+\_\+sort} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em topology\+\_\+sort：拓扑排序，算法导论22章22.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Vertex\+Type $>$ }\\std\+::vector$<$ typename Vertex\+Type\+::\+V\+I\+D\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}{get\+\_\+path} (const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+from, const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+to)
+\begin{DoxyCompactList}\small\item\em get\+\_\+path：获取两个顶点之间的路径 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. 
+
+该命名空间内包含所有图算法 
+
+\subsection{Function Documentation}
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_aa4b14f2da6462f3575a3f74b6558a575}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}}
+\index{breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{breadth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::breadth\+\_\+first\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{source\+\_\+id, }
+\item[{Action}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_aa4b14f2da6462f3575a3f74b6558a575}
+
+
+breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章xx节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指向图的强引用，必须非空。若为空则抛出异常} & \\
+\hline
+{\em source\+\_\+id：广度优先搜索的源点$<$tt$>$id$<$/tt$>$，必须有效。若无效则抛出异常} & \\
+\hline
+{\em action\+:一个可调用对象，它在每次搜索到一个顶点后立即调用。其参数为被搜索到的顶点$<$tt$>$id$<$/tt$>$。它默认是个空操作，即不执行任何操作。} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:void
+\end{DoxyReturn}
+{\ttfamily source\+\_\+id}在以下情况下无效：
+
+
+\begin{DoxyItemize}
+\item {\ttfamily source\+\_\+id}不在区间{\ttfamily \mbox{[}0,N)}之间时，{\ttfamily source\+\_\+id}无效
+\item {\ttfamily graph}中不存在某个顶点的{\ttfamily id}等于{\ttfamily source\+\_\+id}时，{\ttfamily source\+\_\+id}无效
+\end{DoxyItemize}
+
+广度优先搜索：该算法维护已经发现结点和未发现结点的边界，沿着其广度方向向外扩展。每个结点有三种颜色：白色、灰色、黑色。 白色结点表示未发现；灰色结点表示已发现但是未处理完成；黑色结点表示已处理完成。其中灰色结点就是边界。
+
+给定图 G=(V,E)和一个可以识别的源点{\ttfamily s}。。所有的结点在一开始都被涂上白色。每个结点的颜色存放在属性{\ttfamily color}中； 每个结点的前驱结点放在属性{\ttfamily parent}中。每个结点的属性{\ttfamily key}存放的是从源点到本结点的距离。该算法使用一个先进先出的队列\+Q来管理灰色结点集。
+
+
+\begin{DoxyItemize}
+\item 将所有结点涂为白色，{\ttfamily key}属性设置为正无穷；
+\item 将源点涂为灰色，源点前驱设为空，源点的{\ttfamily key}设为0；
+\item 将源点加入队列\+Q中；\+Q中存放的都是已发现但是尚未处理完成的结点
+\item 循环直到队列\+Q为空，在循环中执行以下操作：
+\begin{DoxyItemize}
+\item 取出队列\+Q头部的结点{\ttfamily v}
+\item 对结点{\ttfamily v}的邻接表中的白色结点进行发现操作，并将这些结点加入队列\+Q中
+\item 对结点{\ttfamily v}染成黑色；
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+算法的时间复杂度为 O(E+\+V)
+
+最短路径：广度优先搜索能找出给定源结点s到所有可以到达的结点之间的距离。定义从源s到结点v之间的最短路径距离 delt(s,v) 为从结点s到v之间的所有路径里面最少的边数。 如果从s到v没有路径，则 delt(s,v)=正无穷大 。我们定义从s到v之间的长度为 delt(s,v) 的路径为 s 到 v 的最短路径。可以证明：广度优先搜索可以正确计算出最短路径距离。
+
+广度优先树：对于\+G=(V,E)和源点s，定义图\+G的前驱子图为 G\+\_\+pai=(V\+\_\+pai,E\+\_\+pai)，其中 V\+\_\+pai=\{ v属于\+V\+: v.\+parent!=N\+I\+L\}并上\{s\}，\+E\+\_\+pai=\{(v.\+parent,v)\+:v属于(V\+\_\+pai-\/\{s\})\}。 即\+V\+\_\+pai由从源s可达的所有结点组成（包括s本身），\+E\+\_\+pai由\+V\+\_\+pai中去掉s之后的结点的入边组成，其中该入边的对端为结点的父结点。 B\+F\+S算法获取的前驱子图\+G\+\_\+pai包含一条从源结点s到结点v的唯一简单路径，而且该路径也是图\+G里面从源s到v之间的一条最短路径，因此前驱子图也称为广度优先树。 
+
+Definition at line 155 of file bfs.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5d500378f28e485a3b9a9b9cc74e4f97}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}}
+\index{depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{depth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action pre\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action post\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::depth\+\_\+first\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{Action}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action}]{pre\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action}]{post\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&}]{search\+\_\+order = {\ttfamily std\+:\+:vector$<$typename~GraphType\+:\+:VIDType$>$()}}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5d500378f28e485a3b9a9b9cc74e4f97}
+
+
+depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指向图的强引用，必须非空。若为空则抛出异常} & \\
+\hline
+{\em pre\+\_\+root\+\_\+action\+:一个可调用对象，在每次发现一个顶点且该顶点是深度优先森林的根节点时调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$以及发现时间$<$tt$>$time$<$/tt$>$。默认为空操作，即不进行任何操作} & \\
+\hline
+{\em post\+\_\+root\+\_\+action\+:一个可调用对象，在每次对一个顶点搜索完成时且该顶点是深度优先森林的根节点时调用调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$以及发现时间$<$tt$>$time$<$/tt$>$。默认为空操作，即不进行任何操作} & \\
+\hline
+{\em pre\+\_\+action\+:一个可调用对象，在每次发现一个顶点时调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$以及发现时间$<$tt$>$time$<$/tt$>$。默认为空操作，即不进行任何操作} & \\
+\hline
+{\em post\+\_\+action\+:一个可调用对象，在每次对一个顶点搜索完成时调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$以及发现时间$<$tt$>$time$<$/tt$>$。默认为空操作，即不进行任何操作} & \\
+\hline
+{\em search\+\_\+order\+:指定搜索顶点的顺序（不同的搜索顺序可能形成的深度优先森林不同)，如果为空则按照顶点的$<$tt$>$id$<$/tt$>$顺序。默认为空} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:void
+\end{DoxyReturn}
+深度优先搜索：深度优先搜索总是对最近才发现的结点v的出发边进行搜索，直到该结点的所有出发边都被发现为止。一旦结点v的所有出发边都被发现，则“回溯”到v的前驱结点（v是经过该结点才被发现的）。 该过程一直持续到源结点可以达到的所有结点都被发现为止。如果还存在尚未发现的结点，则深度优先搜索将从这些未被发现的结点中任选一个作为新的源结点，并重复同样的搜索过程。该算法重复整个过程， 直到图中的所有结点被发现为止。
+
+深度优先搜索维护一个全局的时间。每个结点v有两个时间戳，discover\+\_\+time记录了v第一次被发现的时间（v涂上灰色的时刻）；finish\+\_\+time记录了搜索完成v的相邻结点的时间（v涂上黑色的时刻）。 结点v在v.\+discover\+\_\+time之前为白色，在v.\+discover\+\_\+time之后与v.\+finish\+\_\+time之前为灰色，在v.\+finish\+\_\+time之后为黑色
+
+深度优先搜索步骤：
+
+
+\begin{DoxyItemize}
+\item 初始化：将所有结点染白色，并将它们的父结点置为空
+\item 将全局时间 time 置为0
+\item 遍历结点集\+V，取出结点v -\/若v是白色的（尚未发现），则调用 visit 操作 \begin{quote}
+当这里调用 visit 操作时，结点v会成为一棵树的根
+
+深度优先搜索的结果会依赖于遍历结点集\+V的顺序。不同的遍历顺序得到的结果会不同 \end{quote}
+
+\end{DoxyItemize}
+
+深度优先搜索性能：时间复杂度 O(V+\+E)
+
+深度优先搜索的性质：证明请参考《算法导论》\+:
+
+
+\begin{DoxyItemize}
+\item 深度优先搜索生成的前驱子图\+G\+\_\+pai是一个由多棵树构成的森林
+\item 结点 v 是结点 u 在深度优先森林中的后代当且仅当结点v在结点u为灰色的时间段内被发现
+\item 结点的发现时间和完成时间具有括号化结构：如果以左括号\char`\"{}(u\char`\"{}来表示结点u被发现，以后括号\char`\"{}u)\char`\"{}表示结点u完成。则发现和完成的历史记载会形成一个规整的表达式。 在深度优先搜索中，对于任意两个结点u和v来说，下面三种情况只有一种成立
+\begin{DoxyItemize}
+\item 区间\mbox{[}u.\+discover\+\_\+time,u.\+finish\+\_\+time\mbox{]}与区间\mbox{[}v.\+discover\+\_\+time,v.\+finish\+\_\+time\mbox{]}完全分离。 此时在深度优先森林中，结点u不是结点v的后代，结点v也不是结点u的后代
+\item 区间\mbox{[}u.\+discover\+\_\+time,u.\+finish\+\_\+time\mbox{]}完全包含在\mbox{[}v.\+discover\+\_\+time,v.\+finish\+\_\+time\mbox{]}，此时在深度优先森林中，结点u是结点v的后代
+\item 区间\mbox{[}v.\+discover\+\_\+time,v.\+finish\+\_\+time\mbox{]}完全包含在\mbox{[}u.\+discover\+\_\+time,u.\+finish\+\_\+time\mbox{]}，此时在深度优先森林中，结点v是结点u的后代
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+深度优先森林的边：对于在图\+G上运行深度优先搜索算法所生成的深度优先森林\+G\+\_\+pai，可以定义四种类型的边：
+
+
+\begin{DoxyItemize}
+\item 树边：它是深度优先森林的边。若结点v是因深度优先算法对边(u,v)的搜索而首先被发现，则(u,v)是一条树边
+\item 后向边： 后向边(u,v)将结点u连接到其深度优先树中某个祖先结点v。对于有向图的自循环，自循环被认为是后向边
+\item 前向边： 将结点u连接到其在深度优先树中一个后代结点v
+\item 横向边： 其他的边。这些边可以连接同一棵深度优先树中的结点（只要其中一个结点不是另外一个结点的祖先），也可以连接不同深度优先树中的两个结点。
+\end{DoxyItemize}
+
+在深度优先搜索中，当第一次搜索边(u,v)时：
+
+
+\begin{DoxyItemize}
+\item 若结点v为白色，表明边(u,v)是一条树边
+\item 若结点v为灰色，表明边(u,v)是一条后向边
+\item 若结点v为黑色，表明边(u,v)是一条前向边或者横向边
+\begin{DoxyItemize}
+\item 在 u.\+discover\+\_\+time$<$ v.\+discover\+\_\+time 时，为前向边
+\item 在 u.\+discover\+\_\+time$<$ v.\+discover\+\_\+time 时，为横向边
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+在无向图中，每条边要么是树边，要么是后向边。从来不会出现前向边和横向边。 
+
+Definition at line 230 of file dfs.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!get\+\_\+path@{get\+\_\+path}}
+\index{get\+\_\+path@{get\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{get\+\_\+path(const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+from, const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+to)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ std\+::vector$<$typename Vertex\+Type\+::\+V\+I\+D\+Type$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::get\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$}]{v\+\_\+from, }
+\item[{const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$}]{v\+\_\+to}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}
+
+
+get\+\_\+path：获取两个顶点之间的路径 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+from} & 起始顶点 \\
+\hline
+{\em v\+\_\+to} & 终止顶点 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 两个顶点之间的路径包含的顶点的{\ttfamily id}序列
+\end{DoxyReturn}
+获取从{\ttfamily v\+\_\+from}到{\ttfamily v\+\_\+to}之间的一条路径，该路径用途经的顶点的{\ttfamily id}来表示，是一个{\ttfamily std\+::vector$<$typename Vertex\+Type\+::\+V\+I\+D\+Type$>$}类型。
+
+要求{\ttfamily v\+\_\+from}与{\ttfamily v\+\_\+to}非空，否则抛出异常 
+
+Definition at line 131 of file header.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a4f664c13605fc87ca8d26f4aad5a9fa2}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!is\+\_\+unlimit@{is\+\_\+unlimit}}
+\index{is\+\_\+unlimit@{is\+\_\+unlimit}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{is\+\_\+unlimit(\+T t)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::is\+\_\+unlimit (
+\begin{DoxyParamCaption}
+\item[{T}]{t}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a4f664c13605fc87ca8d26f4aad5a9fa2}
+
+
+is\+\_\+unlimit：判断是否正无穷 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & 待判断的数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 如果该数是正无穷大，则返回{\ttfamily true}，否则返回{\ttfamily false}
+\end{DoxyReturn}
+将本函数判断一个数是否正无穷；若是则返回true;若不是则返回false
+
+这里将大于等于{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/3}的数判断结果为正无穷 $>$因为考虑到正无穷减去一个数必须保证结果也是正无穷 
+
+Definition at line 105 of file algorithms.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6d058c2aaa8714778b3f2ab8a24ff232}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!scc@{scc}}
+\index{scc@{scc}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{scc(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ const std\+::vector$<$std\+::vector$<$typename Graph\+Type\+::\+V\+I\+D\+Type$>$ $>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::scc (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6d058c2aaa8714778b3f2ab8a24ff232}
+
+
+scc：强连通分量，算法导论22章22.5节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指向图的强引用，必须非空。若为空则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:强连通分量的{\ttfamily std\+::vector}，每一个强连通分量，由一组顶点{\ttfamily id}组成的{\ttfamily std\+::vector}表示。
+\end{DoxyReturn}
+有向图\+G=(V,E)的强连通分量是一个最大结点集合\+C，\+C是\+V的子集。对于\+C中的任意一对结点u,v来说，路径u--$>$v和路径v--$>$u同时存在。即结点u和结点v之间相互可以到达。
+
+在强连通分量的算法中，需要用到图\+G的转置\+G\+\_\+\+T。定义\+G\+\_\+\+T=(V,E\+\_\+\+T),其中\+E\+\_\+\+T=\{(u,v)\+:(v,u)属于\+E\}，即\+G\+\_\+\+T中的边是\+G中的边进行反向获得。
+
+
+\begin{DoxyItemize}
+\item 图\+G和图\+G\+\_\+\+T的强连通分量相同
+\item 可以证明，{\ttfamily scc}算法得到的就是强连通分量。证明见《算法导论》
+\end{DoxyItemize}
+
+强连通分量算法步骤：
+
+
+\begin{DoxyItemize}
+\item 对原图\+G执行深度优先搜索，并获取每个结点的完成时间 finish\+\_\+time
+\item 对转置图\+G\+\_\+\+T执行深度优先搜索，但是按照 G中结点的一个排序来搜索（这个排序是按照finish\+\_\+time的降序）
+\item G\+\_\+\+T的深度优先森林就是强连通分量
+\end{DoxyItemize}
+
+性能：时间复杂度\+O(V+\+E) 
+
+Definition at line 30 of file strongconnectedcomponent.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a804241e72be5f4c031190bc12a6b73a2}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!topology\+\_\+sort@{topology\+\_\+sort}}
+\index{topology\+\_\+sort@{topology\+\_\+sort}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{topology\+\_\+sort(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::vector$<$typename Graph\+Type\+::\+V\+I\+D\+Type$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::topology\+\_\+sort (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a804241e72be5f4c031190bc12a6b73a2}
+
+
+topology\+\_\+sort：拓扑排序，算法导论22章22.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指向图的强引用，必须非空。若为空则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:拓扑排序结果，它是顶点{\ttfamily id}组成的{\ttfamily std\+::vector}，表示顶点的拓扑排序后的顺序
+\end{DoxyReturn}
+对于一个有向无环图\+G=（\+V，\+E)，其拓扑排序是\+G中所有结点的一种线性次序，该次序满足如下条件： 如果图\+G包含边(u,v)，则结点u在拓扑排序中处于结点v的前面。
+
+拓扑排序原理：对有向无环图\+G进行深度优先搜索。每当完成一个结点时，将该结点插入到拓扑排序结果的头部。 因此如果将结点按照完成时间降序排列，则得到的就是拓扑排序的结果。
+
+引理：一个有向图\+G=(V,E)是无环的当且仅当对其进行深度优先搜索时不产生后向边。
+
+性能：时间复杂度\+O(V+\+E) 
+
+Definition at line 25 of file topologysort.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a19237111c3b1ec2717c5e1aefe2f6d9b}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!unlimit@{unlimit}}
+\index{unlimit@{unlimit}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{unlimit()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::unlimit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a19237111c3b1ec2717c5e1aefe2f6d9b}
+
+
+unlimit：返回正无穷的函数 
+
+\begin{DoxyReturn}{Returns}
+\+: 正无穷大的数
+\end{DoxyReturn}
+将本函数的返回值定义为正无穷。在算法导论图算法中，经常用到正无穷。通常对正无穷的操作是\+:
+
+
+\begin{DoxyItemize}
+\item 将边的权重或者节点的{\ttfamily key}设为正无穷
+\item 对正无穷加、减一个有限的数，结果还是正无穷
+\end{DoxyItemize}
+
+这里将{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/2}设为正无穷，考虑到正无穷加上一个较大的数必须保证不能溢出 
+
+Definition at line 90 of file algorithms.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a01ece18a63d13cfe023c1f6360e63451}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!visit@{visit}}
+\index{visit@{visit}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{visit(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::visit (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{v\+\_\+id, }
+\item[{int \&}]{time, }
+\item[{Action}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a01ece18a63d13cfe023c1f6360e63451}
+
+
+visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指向图的强引用，必须非空。若为空则抛出异常} & \\
+\hline
+{\em v\+\_\+id\+:待访问顶点的$<$tt$>$id$<$/tt$>$，必须有效。如果无效则抛出异常} & \\
+\hline
+{\em time\+:访问时刻，是一个引用参数，确保每次$<$tt$>$visit$<$/tt$>$都访问同一个时钟。} & \\
+\hline
+{\em pre\+\_\+action\+:一个可调用对象，在每次发现一个顶点时调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$以及发现时间$<$tt$>$time$<$/tt$>$。默认为空操作，即不进行任何操作} & \\
+\hline
+{\em post\+\_\+action\+:一个可调用对象，在每次对一个顶点搜索完成时调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$以及完成时间$<$tt$>$time$<$/tt$>$。默认为空操作，即不进行任何操作} & {\ttfamily v\+\_\+id}在以下情况下无效：\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item {\ttfamily v\+\_\+id}不在区间{\ttfamily \mbox{[}0,N)}之间时，{\ttfamily v\+\_\+id}无效
+\item {\ttfamily graph}中不存在某个顶点的{\ttfamily id}等于{\ttfamily v\+\_\+id}时，{\ttfamily v\+\_\+id}无效
+\end{DoxyItemize}
+
+在每次对一个结点调用visit的过程中，结点v\+\_\+id的初始颜色都是白色。然后执行下列步骤：
+
+
+\begin{DoxyItemize}
+\item 将全局时间 time 递增
+\item 发现结点 v\+\_\+id
+\item 对结点 v\+\_\+id 的每一个相邻结点进行检查，在相邻结点是白色的情况下递归访问该相邻结点
+\item 当结点 v\+\_\+id 的相邻结点访问完毕，则全局时间 time 递增，然后将结点 v\+\_\+id 设置为完成状态 
+\end{DoxyItemize}
+
+Definition at line 142 of file dfs.\+h.
+

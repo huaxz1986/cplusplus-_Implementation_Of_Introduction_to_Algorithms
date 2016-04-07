@@ -4,12 +4,12 @@
 #include"binarytree.h"
 #include<sstream>
 
-using IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTree;
-using IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode;
-using IntrodunctionToAlgorithm::TreeAlgorithm::inorder_walk;
-using IntrodunctionToAlgorithm::TreeAlgorithm::preorder_walk;
-using IntrodunctionToAlgorithm::TreeAlgorithm::postorder_walk;
-using IntrodunctionToAlgorithm::TreeAlgorithm::transplant;
+using IntroductionToAlgorithm::TreeAlgorithm::BinaryTree;
+using IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode;
+using IntroductionToAlgorithm::TreeAlgorithm::inorder_walk;
+using IntroductionToAlgorithm::TreeAlgorithm::preorder_walk;
+using IntroductionToAlgorithm::TreeAlgorithm::postorder_walk;
+using IntroductionToAlgorithm::TreeAlgorithm::transplant;
 //!BinaryTreeTest:测试类，用于为测试提供基础数据
 /*!
 *

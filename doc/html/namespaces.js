@@ -1,4 +1,4 @@
 var namespaces =
 [
-    [ "IntrodunctionToAlgorithm", "namespace_introdunction_to_algorithm.html", "namespace_introdunction_to_algorithm" ]
+    [ "IntroductionToAlgorithm", "namespace_introduction_to_algorithm.html", "namespace_introduction_to_algorithm" ]
 ];

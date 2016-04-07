@@ -19,7 +19,7 @@
 #ifndef QUICKSORTE_H
 #define QUICKSORTE_H
 #include<assert.h>
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SortAlgorithm
     {

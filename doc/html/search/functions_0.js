@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['_5fheapify',['_heapify',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a12f57e7bb47939f0f4f0994ee81d4b9e',1,'IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap']]],
-  ['_5flchildindex',['_lchildIndex',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a0ba289760dd936944dc2629511c73f27',1,'IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap']]],
-  ['_5fparentindex',['_parentIndex',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a2607ad45b37fb4dde8e2c94e50cd19da',1,'IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap']]],
-  ['_5frchildindex',['_rchildIndex',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#abb4d45e22fc4fc5ec297214f28605209',1,'IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap']]],
-  ['_5fsetupheap',['_setupHeap',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#ab8b98e11afa86430214c6998c48b21d1',1,'IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap']]]
+  ['_5fheapify',['_heapify',['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#ad0fbc2d900bc5bcbfc1e94d431d439c1',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap']]],
+  ['_5flchildindex',['_lchildIndex',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a613d6ac06a5663dff135e2df36c4e42c',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::_lchildIndex()'],['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#aaf19e3c85dbfc8e2fd53644207a5008e',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap::_lchildIndex()']]],
+  ['_5fparentindex',['_parentIndex',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a88390bf1df0ffcff26ac91f470fb587b',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::_parentIndex()'],['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a66dd5ab1a501f00f9857602d9a32a2af',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap::_parentIndex()']]],
+  ['_5frchildindex',['_rchildIndex',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#af92770f4e79a6703c2c21107b3ce8d9d',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::_rchildIndex()'],['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a07cb956eda45dffe0c229c5fce03fd96',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap::_rchildIndex()']]],
+  ['_5fsetupheap',['_setupHeap',['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a9efd56574722e687d7024d484056bd81',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap']]]
 ];

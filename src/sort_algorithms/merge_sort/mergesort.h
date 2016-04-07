@@ -19,7 +19,7 @@
 #ifndef MERGESORTE_H
 #define MERGESORTE_H
 #include<vector>
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SortAlgorithm
     {

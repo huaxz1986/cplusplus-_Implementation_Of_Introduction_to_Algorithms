@@ -3,7 +3,7 @@
 #include<memory>
 #include<string>
 #include<sstream>
-namespace IntrodunctionToAlgorithm {
+namespace IntroductionToAlgorithm {
 namespace TreeAlgorithm {
 //!BinaryTreeNode：二叉树的节点，算法导论xx章xx节
 /*!

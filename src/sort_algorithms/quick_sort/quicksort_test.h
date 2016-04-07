@@ -20,8 +20,8 @@
 #define QUICKSORTER_TEST_H
 #include"src/google_test/gtest.h"
 #include"quicksort.h"
-using IntrodunctionToAlgorithm::SortAlgorithm::partition;
-using IntrodunctionToAlgorithm::SortAlgorithm::quick_sort;
+using IntroductionToAlgorithm::SortAlgorithm::partition;
+using IntroductionToAlgorithm::SortAlgorithm::quick_sort;
 //!partition_test：测试C数组的划分
 /*!
 *

@@ -129,15 +129,15 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define QUICKSORTER_TEST_H</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="quicksort_8h.html">quicksort.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">IntrodunctionToAlgorithm::SortAlgorithm::partition</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">IntrodunctionToAlgorithm::SortAlgorithm::quick_sort</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a0aaefb36c3d675b9dc6e539471c1c4">IntroductionToAlgorithm::SortAlgorithm::partition</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">IntroductionToAlgorithm::SortAlgorithm::quick_sort</a>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="quicksort__test_8h.html#a5f198552589fc8ce425f837c3a1e62c9">   30</a></span>&#160;<a class="code" href="quicksort__test_8h.html#a5f198552589fc8ce425f837c3a1e62c9">TEST</a>(test_partition, test_C_array)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;10;i++)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordtype">int</span> data1[10]={1,2,3,4,5,6,7,8,9,10};</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">partition</a>(data1+0,data1+10,data1+i);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a0aaefb36c3d675b9dc6e539471c1c4">partition</a>(data1+0,data1+10,data1+i);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            EXPECT_EQ(index-data1,i)&lt;&lt;<span class="stringliteral">&quot;\ti:&quot;</span>&lt;&lt;i;;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">auto</span> iter=data1+0;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">while</span>(iter!=index)</div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;10;i++)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> data2[10]={10,9,8,7,6,5,4,3,2,1};</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">partition</a>(data2+0,data2+10,data2+i);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a0aaefb36c3d675b9dc6e539471c1c4">partition</a>(data2+0,data2+10,data2+i);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            EXPECT_EQ(index-data2,9-i)&lt;&lt;<span class="stringliteral">&quot;\ti:&quot;</span>&lt;&lt;i;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">auto</span> iter=data2+0;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">while</span>(iter!=index)</div>
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">int</span> data3[10]={5,5,5,5,5,4,4,4,4,4};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">partition</a>(data3+0,data3+10,data3+1);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a0aaefb36c3d675b9dc6e539471c1c4">partition</a>(data3+0,data3+10,data3+1);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            EXPECT_EQ(*index,5);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keyword">auto</span> iter=data3+0;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">while</span>(iter!=index)</div>
@@ -194,7 +194,7 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {   <span class="keywordtype">int</span> data4[1]={5};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">partition</a>(data4+0,data4+1,data4+0);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keyword">auto</span> index=<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a0aaefb36c3d675b9dc6e539471c1c4">partition</a>(data4+0,data4+1,data4+0);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            EXPECT_EQ(index,data4); <span class="comment">// 空序列和单元素序列，划分结果为begin迭代器</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keyword">auto</span> iter=data4+0;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">while</span>(iter&lt;index)</div>
@@ -225,13 +225,13 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::vector&lt;int&gt; comparedata4={5};</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data1.begin(),data1.end());</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data1.begin(),data1.end());</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data2.begin(),data2.end());</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data2.begin(),data2.end());</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data3.begin(),data3.end());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data3.begin(),data3.end());</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data4.begin(),data4.end());</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data4.begin(),data4.end());</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
@@ -250,13 +250,13 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">int</span> comparedata4[1]={5};</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    std::sort(comparedata1,comparedata1+10);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data1+0,data1+10);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data1+0,data1+10);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    std::sort(comparedata2,comparedata2+10);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data2+0,data2+10);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data2+0,data2+10);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    std::sort(comparedata3,comparedata3+10);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data3+0,data3+10);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data3+0,data3+10);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    std::sort(comparedata4,comparedata4+1);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data4+0,data4+1);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data4+0,data4+1);</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data1,data1+10),std::vector&lt;int&gt;(comparedata1,comparedata1+10));</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data2,data2+10),std::vector&lt;int&gt;(comparedata2,comparedata2+10));</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data3,data3+10),std::vector&lt;int&gt;(comparedata3,comparedata3+10));</div>
@@ -276,13 +276,13 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    std::vector&lt;int&gt; comparedata4={5};</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data1.begin(),data1.end());</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data1.begin(),data1.end());</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data2.begin(),data2.end());</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data2.begin(),data2.end());</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data3.begin(),data3.end());</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data3.begin(),data3.end());</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">quick_sort</a>(data4.begin(),data4.end());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">quick_sort</a>(data4.begin(),data4.end());</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
@@ -290,10 +290,10 @@ $(document).ready(function(){initNavTree('quicksort__test_8h_source.html','');})
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif // QUICKSORTER_TEST_H</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a223dc6a022f56f3de9c9e40e4a0497ff"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a223dc6a022f56f3de9c9e40e4a0497ff">IntrodunctionToAlgorithm::SortAlgorithm::quick_sort</a></div><div class="ttdeci">void quick_sort(const Iterator begin, const Iterator end, Compare compare=Compare())</div><div class="ttdoc">quick_sort： 算法导论第7章 </div><div class="ttdef"><b>Definition:</b> <a href="quicksort_8h_source.html#l00081">quicksort.h:81</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_a3a0aaefb36c3d675b9dc6e539471c1c4"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a0aaefb36c3d675b9dc6e539471c1c4">IntroductionToAlgorithm::SortAlgorithm::partition</a></div><div class="ttdeci">Iterator partition(const Iterator begin, const Iterator end, const Iterator partition_iter, Compare compare=Compare())</div><div class="ttdoc">partition： 算法导论第7章快速排序中的划分算法 </div><div class="ttdef"><b>Definition:</b> <a href="quicksort_8h_source.html#l00043">quicksort.h:43</a></div></div>
 <div class="ttc" id="quicksort__test_8h_html_a5f198552589fc8ce425f837c3a1e62c9"><div class="ttname"><a href="quicksort__test_8h.html#a5f198552589fc8ce425f837c3a1e62c9">TEST</a></div><div class="ttdeci">TEST(test_partition, test_C_array)</div><div class="ttdoc">partition_test：测试C数组的划分 </div><div class="ttdef"><b>Definition:</b> <a href="quicksort__test_8h_source.html#l00030">quicksort_test.h:30</a></div></div>
 <div class="ttc" id="quicksort_8h_html"><div class="ttname"><a href="quicksort_8h.html">quicksort.h</a></div></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_ab8cd83d08fe92b89e749c3fcef28ae55"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#ab8cd83d08fe92b89e749c3fcef28ae55">IntrodunctionToAlgorithm::SortAlgorithm::partition</a></div><div class="ttdeci">Iterator partition(const Iterator begin, const Iterator end, const Iterator partition_iter, Compare compare=Compare())</div><div class="ttdoc">partition： 算法导论第7章快速排序中的划分算法 </div><div class="ttdef"><b>Definition:</b> <a href="quicksort_8h_source.html#l00043">quicksort.h:43</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_a1915f2ec6aae8dbd66df40483d96eba2"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1915f2ec6aae8dbd66df40483d96eba2">IntroductionToAlgorithm::SortAlgorithm::quick_sort</a></div><div class="ttdeci">void quick_sort(const Iterator begin, const Iterator end, Compare compare=Compare())</div><div class="ttdoc">quick_sort： 算法导论第7章 </div><div class="ttdef"><b>Definition:</b> <a href="quicksort_8h_source.html#l00081">quicksort.h:81</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

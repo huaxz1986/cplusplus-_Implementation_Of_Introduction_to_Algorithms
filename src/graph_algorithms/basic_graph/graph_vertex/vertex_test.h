@@ -1,11 +1,11 @@
 #ifndef GRAPHVERTEX_TEST
 #define GRAPHVERTEX_TEST
 #include"src/google_test/gtest.h"
-#include"src/algorithms.h"
 #include"vertex.h"
-using IntrodunctionToAlgorithm::GraphAlgorithm::is_unlimit;
-using IntrodunctionToAlgorithm::GraphAlgorithm::unlimit;
-using IntrodunctionToAlgorithm::GraphAlgorithm::Vertex;
+
+using IntroductionToAlgorithm::GraphAlgorithm::is_unlimit;
+using IntroductionToAlgorithm::GraphAlgorithm::unlimit;
+using IntroductionToAlgorithm::GraphAlgorithm::Vertex;
 
 //!test_unlimit：测试 unlimit和is_unlimit函数
 /*!
@@ -26,7 +26,7 @@ TEST(test_unlimit, unlimit_is_unlimit_test)
   EXPECT_FALSE(is_unlimit(unlt*2/3-1));//正无穷的边界之下
 }
 
-//!test_unlimit：测试Vertex
+//!test_vertex：测试Vertex
 /*!
 *
 * 测试Vertex的构造、以及方法
@@ -36,23 +36,20 @@ TEST(test_vertex,vertex_test)
     {
         auto v=Vertex<int>(); //默认构造
         EXPECT_EQ(v.id,-1);
-        EXPECT_EQ(v.parent_id,-1);
         EXPECT_EQ(v.key,0);
-        EXPECT_EQ(v.to_string(),"vertex id:-1\t key:0\t parent_id:-1");
+        EXPECT_EQ(v.to_string(),"vertex id:-1\t key:0");
     }
     {
         auto v=Vertex<int>(10); //指定了key
         EXPECT_EQ(v.id,-1);
-        EXPECT_EQ(v.parent_id,-1);
         EXPECT_EQ(v.key,10);
-        EXPECT_EQ(v.to_string(),"vertex id:-1\t key:10\t parent_id:-1");
+        EXPECT_EQ(v.to_string(),"vertex id:-1\t key:10");
     }
     {
         auto v=Vertex<int>(unlimit<int>(),1); //指定了key,id
         EXPECT_EQ(v.id,1);
-        EXPECT_EQ(v.parent_id,-1);
         EXPECT_TRUE(is_unlimit<int>(v.key));
-        EXPECT_EQ(v.to_string(),"vertex id:1\t key: +OO \t parent_id:-1");
+        EXPECT_EQ(v.to_string(),"vertex id:1\t key: +OO ");
     }
 }
 

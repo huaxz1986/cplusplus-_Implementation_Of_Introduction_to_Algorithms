@@ -1,6 +1,6 @@
 #ifndef HEAP_SORT
 #define HEAP_SORT
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SortAlgorithm
     {
@@ -9,7 +9,7 @@ namespace IntrodunctionToAlgorithm
     /*!
     *
     * - 堆排序思想：假设对数组A[p...r]排序：首先将数组构建成一个最小堆（或者最大堆）。然后第一个元素就是堆中最小的元素。
-    * 将第一个元素与最后一个元素交换，同时堆的规模缩减1，再将堆维持最小堆性质。不断循环最后得到一个排序好的数组    *
+    * 将第一个元素与最后一个元素交换，同时堆的规模缩减1，再将堆维持最小堆性质。不断循环最后得到一个排序好的数组
     * - 时间复杂度 O(nlogn)
     * - 原地排序
     *
@@ -47,7 +47,7 @@ namespace IntrodunctionToAlgorithm
                     _heapify(0,compare);
                 }
             }
-        private:
+        protected:
             //!_setupHeap:建堆
             /*!
             * \param compare: 一个可调用对象，可用于比较两个对象的小于比较，默认为std::less<T>

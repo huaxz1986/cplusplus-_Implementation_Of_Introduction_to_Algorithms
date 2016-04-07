@@ -4,7 +4,7 @@
 #include<cmath>
 #include<iostream>
 #include<cassert>
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SortAlgorithm
     {

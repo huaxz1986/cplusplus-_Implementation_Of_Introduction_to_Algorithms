@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('bucketsort__test_8h_source.html','');}
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BUCKETSORT_TEST</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="bucketsort_8h.html">bucketsort.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">IntrodunctionToAlgorithm::SortAlgorithm::bucket_sort</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">IntroductionToAlgorithm::SortAlgorithm::bucket_sort</a>;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="bucketsort__test_8h.html#af6e506cf0eeff16b4efba511f8960ccd">   12</a></span>&#160;<a class="code" href="bucketsort__test_8h.html#af6e506cf0eeff16b4efba511f8960ccd">TEST</a>(test_bucket_sort, test_C_array)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
@@ -125,13 +125,13 @@ $(document).ready(function(){initNavTree('bucketsort__test_8h_source.html','');}
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> comparedata4[1]={555};</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::sort(comparedata1,comparedata1+10);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data1+0,data1+10,100,1000);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data1+0,data1+10,100,1000);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::sort(comparedata2,comparedata2+10);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data2+0,data2+10,100,1000);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data2+0,data2+10,100,1000);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::sort(comparedata3,comparedata3+10);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data3+0,data3+10,100,1000);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data3+0,data3+10,100,1000);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::sort(comparedata4,comparedata4+1);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data4+0,data4+1,100,1000);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data4+0,data4+1,100,1000);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data1,data1+10),std::vector&lt;int&gt;(comparedata1,comparedata1+10));</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data2,data2+10),std::vector&lt;int&gt;(comparedata2,comparedata2+10));</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    EXPECT_EQ(std::vector&lt;int&gt;(data3,data3+10),std::vector&lt;int&gt;(comparedata3,comparedata3+10));</div>
@@ -152,13 +152,13 @@ $(document).ready(function(){initNavTree('bucketsort__test_8h_source.html','');}
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::sort(comparedata1.begin(),comparedata1.end());</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data1.begin(),data1.end(),100,1000);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data1.begin(),data1.end(),100,1000);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    std::sort(comparedata2.begin(),comparedata2.end());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data2.begin(),data2.end(),100,1000);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data2.begin(),data2.end(),100,1000);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::sort(comparedata3.begin(),comparedata3.end());</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data3.begin(),data3.end(),100,1000);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data3.begin(),data3.end(),100,1000);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::sort(comparedata4.begin(),comparedata4.end());</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">bucket_sort</a>(data4.begin(),data4.end(),100,1000);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">bucket_sort</a>(data4.begin(),data4.end(),100,1000);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    EXPECT_EQ(data1,comparedata1);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    EXPECT_EQ(data2,comparedata2);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    EXPECT_EQ(data3,comparedata3);</div>
@@ -167,8 +167,8 @@ $(document).ready(function(){initNavTree('bucketsort__test_8h_source.html','');}
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif // BUCKETSORT_TEST</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="ttc" id="bucketsort__test_8h_html_af6e506cf0eeff16b4efba511f8960ccd"><div class="ttname"><a href="bucketsort__test_8h.html#af6e506cf0eeff16b4efba511f8960ccd">TEST</a></div><div class="ttdeci">TEST(test_bucket_sort, test_C_array)</div><div class="ttdoc">bucket_sort_test：测试C数组的桶排序 </div><div class="ttdef"><b>Definition:</b> <a href="bucketsort__test_8h_source.html#l00012">bucketsort_test.h:12</a></div></div>
-<div class="ttc" id="namespace_introdunction_to_algorithm_1_1_sort_algorithm_html_a3f2eccf64da97706fbd1025d54c5bfb3"><div class="ttname"><a href="namespace_introdunction_to_algorithm_1_1_sort_algorithm.html#a3f2eccf64da97706fbd1025d54c5bfb3">IntrodunctionToAlgorithm::SortAlgorithm::bucket_sort</a></div><div class="ttdeci">void bucket_sort(const Iterator begin, const Iterator end, const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;min_val, const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;max_val)</div><div class="ttdoc">bucket_sort：算法导论第8章 8.4 </div><div class="ttdef"><b>Definition:</b> <a href="bucketsort_8h_source.html#l00025">bucketsort.h:25</a></div></div>
 <div class="ttc" id="bucketsort_8h_html"><div class="ttname"><a href="bucketsort_8h.html">bucketsort.h</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_a1c3f0138b22c1e0c0bbfa67490ec51f1"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1">IntroductionToAlgorithm::SortAlgorithm::bucket_sort</a></div><div class="ttdeci">void bucket_sort(const Iterator begin, const Iterator end, const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;min_val, const typename std::iterator_traits&lt; Iterator &gt;::value_type &amp;max_val)</div><div class="ttdoc">bucket_sort：算法导论第8章 8.4 </div><div class="ttdef"><b>Definition:</b> <a href="bucketsort_8h_source.html#l00025">bucketsort.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

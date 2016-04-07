@@ -1,7 +1,8 @@
 #ifndef BINARYTREE
 #define BINARYTREE
 #include"../binarytreenode/binarytreenode.h"
-namespace IntrodunctionToAlgorithm
+#include<functional>
+namespace IntroductionToAlgorithm
 {
 namespace TreeAlgorithm
 {
@@ -53,13 +54,14 @@ namespace TreeAlgorithm
     *
     * 时间复杂度O(n)，空间复杂度O(1)
     */
-    template<typename NodeType,typename Functor>void  inorder_walk( std::shared_ptr<NodeType> root,Functor func)
+    template<typename NodeType,typename Action=std::function<void (typename NodeType::T)> >
+        void  inorder_walk( std::shared_ptr<NodeType> root,Action action=[](typename NodeType::T){})
     {
         if (root)
         {
-            if(root->lchild) inorder_walk(root->lchild,func);
-            func(root->key);
-            if(root->rchild) inorder_walk(root->rchild,func);
+            if(root->lchild) inorder_walk(root->lchild,action);
+            action(root->key);
+            if(root->rchild) inorder_walk(root->rchild,action);
         }
     }
     //!preorder_walk：二叉树的前序遍历
@@ -76,13 +78,14 @@ namespace TreeAlgorithm
     *
     * 时间复杂度O(n)，空间复杂度O(1)
     */
-    template<typename NodeType,typename Functor>void   preorder_walk( std::shared_ptr<NodeType> root,Functor func)
+    template<typename NodeType,typename Action=std::function<void (typename NodeType::T)> >
+        void   preorder_walk( std::shared_ptr<NodeType> root,Action action=[](typename NodeType::T){})
     {
         if (root)
         {
-            func(root->key);
-            if(root->lchild) preorder_walk(root->lchild,func);
-            if(root->rchild) preorder_walk(root->rchild,func);
+            action(root->key);
+            if(root->lchild) preorder_walk(root->lchild,action);
+            if(root->rchild) preorder_walk(root->rchild,action);
         }
     }
 
@@ -101,13 +104,14 @@ namespace TreeAlgorithm
     *
     * 时间复杂度O(n)，空间复杂度O(1)
     */
-    template<typename NodeType,typename Functor>void  postorder_walk( std::shared_ptr<NodeType> root,Functor func)
+    template<typename NodeType,typename Action=std::function<void (typename NodeType::T)> >
+        void  postorder_walk( std::shared_ptr<NodeType> root,Action action=[](typename NodeType::T){})
     {
         if (root)
         {
-            if(root->lchild) postorder_walk(root->lchild,func);
-            if(root->rchild) postorder_walk(root->rchild,func);
-            func(root->key);
+            if(root->lchild) postorder_walk(root->lchild,action);
+            if(root->rchild) postorder_walk(root->rchild,action);
+            action(root->key);
         }
     }
 

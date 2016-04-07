@@ -2,8 +2,8 @@
 #define RADIXSORT_TEST
 #include"src/google_test/gtest.h"
 #include"radixsort.h"
-using IntrodunctionToAlgorithm::SortAlgorithm::digi_on_N;
-using IntrodunctionToAlgorithm::SortAlgorithm::radix_sort;
+using IntroductionToAlgorithm::SortAlgorithm::digi_on_N;
+using IntroductionToAlgorithm::SortAlgorithm::radix_sort;
 //!radix_sort_test：测试test_digi_on_N:获取指定自然数某个位数上的数字（个位为第0位）
 /*!
 *

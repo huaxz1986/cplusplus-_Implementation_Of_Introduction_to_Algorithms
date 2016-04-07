@@ -16,15 +16,17 @@
  *
  * Author: huaxz1986@163.com (huaxz)
  */
+#ifndef HEADERH
+#define HEADERH
 //! Namespace of IntrodunctionToAlgorithm
 /*!
 *
 * 该命名空间内包含所有算法导论中的算法
 */
-#include<string>
-#include<iostream>
-
-namespace IntrodunctionToAlgorithm
+#include<algorithm>
+#include<memory>
+#include<vector>
+namespace IntroductionToAlgorithm
 {
     //! Namespace of  SortAlgorithm
     /*!
@@ -68,6 +70,15 @@ namespace IntrodunctionToAlgorithm
 
 
     }
+    //! Namespace of  QueueAlgorithm
+    /*!
+    *
+    * 该命名空间内包含所有队列算法
+    */
+    namespace QueueAlgorithm {
+
+
+    }
     //! Namespace of  GraphAlgorithm
     /*!
     *
@@ -106,5 +117,38 @@ namespace IntrodunctionToAlgorithm
         {
             return t>=std::numeric_limits<T>::max()/3;
         }
+
+        //!get_path：获取两个顶点之间的路径
+        /*!
+        * \param v_from: 起始顶点
+        * \param v_to: 终止顶点
+        * \return : 两个顶点之间的路径包含的顶点的`id`序列
+        *
+        * 获取从`v_from`到`v_to`之间的一条路径，该路径用途经的顶点的`id`来表示，是一个`std::vector<typename VertexType::VIDType>`类型。
+        *
+        * 要求`v_from`与`v_to`非空，否则抛出异常
+        */
+        template<typename VertexType> std::vector<typename VertexType::VIDType> get_path(const std::shared_ptr<VertexType> v_from,const std::shared_ptr<VertexType> v_to)
+        {
+            if(!v_from||!v_to)
+                throw std::invalid_argument("get_path error: vertex must not be null!");
+            std::vector<typename VertexType::VIDType> result;
+            if(v_from->id==v_to->id)
+            {
+                result.push_back(v_from->id);
+            }else if(!v_to->parent)
+            {
+                return std::vector<typename VertexType::VIDType>();
+            }else
+            {
+                std::vector<typename VertexType::VIDType> temp=get_path<VertexType>(v_from,v_to->parent);
+                for(const auto& val:temp)
+                    result.push_back(val);
+                result.push_back(v_to->id);
+            }
+            return result;
+    }
+
     }
 }
+#endif // HEADERH

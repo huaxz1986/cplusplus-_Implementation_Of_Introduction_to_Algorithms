@@ -2,7 +2,7 @@
 #define GOODSELECT_TEST
 #include"src/google_test/gtest.h"
 #include"goodselect.h"
-using namespace IntrodunctionToAlgorithm::SelectAlgorithm;
+using namespace IntroductionToAlgorithm::SelectAlgorithm;
 //!good_select_test：测试C数组的顺序统计量
 /*!
 *

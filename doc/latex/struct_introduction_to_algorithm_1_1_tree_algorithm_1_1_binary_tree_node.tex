@@ -1,0 +1,212 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node}{}\section{Introduction\+To\+Algorithm\+:\+:Tree\+Algorithm\+:\+:Binary\+Tree\+Node$<$ T $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node$<$ T $>$@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node$<$ T $>$}}
+
+
+Binary\+Tree\+Node：二叉树的节点，算法导论xx章xx节  
+
+
+
+
+{\ttfamily \#include $<$binarytreenode.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a0274d2f034151ffda56a3f466b73f762}{Key\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_adec2f420e4bfbf9e3c71079cfbe565a4}{Binary\+Tree\+Node} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ad27c56e984010e4cbb304429e86f78e4}{Binary\+Tree\+Node} (const T \&keyvalue)
+\begin{DoxyCompactList}\small\item\em 显式构造函数 \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_accc2e6dd939ba5be9b88431d2b51ec3d}{to\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em to\+\_\+string\+:返回该节点的字符串描述 \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a4b6e824757793c958982654a52d70f4d}{to\+\_\+xml} ()
+\begin{DoxyCompactList}\small\item\em to\+\_\+xml\+:返回以该节点为根的子树的{\ttfamily xml}描述。 \end{DoxyCompactList}\item 
+bool \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a23dfcff4adbb1fba70296eb25fbac3cb}{is\+\_\+left\+\_\+child} ()
+\begin{DoxyCompactList}\small\item\em is\+\_\+left\+\_\+child\+:判断本节点是否左子节点。 \end{DoxyCompactList}\item 
+bool \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a3147815d63a639a081d5dbea3359fc1b}{is\+\_\+right\+\_\+child} ()
+\begin{DoxyCompactList}\small\item\em is\+\_\+right\+\_\+child\+:判断本节点是否右子节点。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node}{Binary\+Tree\+Node} $>$ \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ab0f7e754f706b71943e8453c66485fd4}{parent}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node}{Binary\+Tree\+Node} $>$ \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a2d776837c806f27641a4128f2f3ebf34}{lchild}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node}{Binary\+Tree\+Node} $>$ \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a5b0994f31d2ca698326aed39bd6ced65}{rchild}
+\item 
+T \hyperlink{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ad0f9224668ce545453577be37c11e99c}{key}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$struct Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node$<$ T $>$}
+
+Binary\+Tree\+Node：二叉树的节点，算法导论xx章xx节 
+
+任何一个节点都有两个强引用指向左右子节点，以及一个弱引用指向它的父节点。节点还有一个{\ttfamily key}成员包含具体的数据 
+
+Definition at line 13 of file binarytreenode.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a0274d2f034151ffda56a3f466b73f762}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ typedef T {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a0274d2f034151ffda56a3f466b73f762}
+节点保存的数据的类型 
+
+Definition at line 32 of file binarytreenode.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_adec2f420e4bfbf9e3c71079cfbe565a4}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!Binary\+Tree\+Node@{Binary\+Tree\+Node}}
+\index{Binary\+Tree\+Node@{Binary\+Tree\+Node}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{Binary\+Tree\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::{\bf Binary\+Tree\+Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_adec2f420e4bfbf9e3c71079cfbe565a4}
+
+
+默认构造函数 
+
+所有的成员变量都采取默认值 
+
+Definition at line 20 of file binarytreenode.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ad27c56e984010e4cbb304429e86f78e4}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!Binary\+Tree\+Node@{Binary\+Tree\+Node}}
+\index{Binary\+Tree\+Node@{Binary\+Tree\+Node}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{Binary\+Tree\+Node(const T \&keyvalue)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::{\bf Binary\+Tree\+Node} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{keyvalue}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ad27c56e984010e4cbb304429e86f78e4}
+
+
+显式构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyvalue\+:节点要保存的数据内容} & 指定{\ttfamily key}成员需要赋值的数据 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file binarytreenode.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a23dfcff4adbb1fba70296eb25fbac3cb}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!is\+\_\+left\+\_\+child@{is\+\_\+left\+\_\+child}}
+\index{is\+\_\+left\+\_\+child@{is\+\_\+left\+\_\+child}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{is\+\_\+left\+\_\+child()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::is\+\_\+left\+\_\+child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a23dfcff4adbb1fba70296eb25fbac3cb}
+
+
+is\+\_\+left\+\_\+child\+:判断本节点是否左子节点。 
+
+\begin{DoxyReturn}{Returns}
+返回{\ttfamily true}或者{\ttfamily false} 该函数判断本节点是否是左子节点。如果本节点的父节点为空，则返回{\ttfamily false}；如果本节点的父节点非空且本节点是父节点的左子节点，则返回{\ttfamily true}；否则返回{\ttfamily false} 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file binarytreenode.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a3147815d63a639a081d5dbea3359fc1b}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!is\+\_\+right\+\_\+child@{is\+\_\+right\+\_\+child}}
+\index{is\+\_\+right\+\_\+child@{is\+\_\+right\+\_\+child}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{is\+\_\+right\+\_\+child()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::is\+\_\+right\+\_\+child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a3147815d63a639a081d5dbea3359fc1b}
+
+
+is\+\_\+right\+\_\+child\+:判断本节点是否右子节点。 
+
+\begin{DoxyReturn}{Returns}
+返回{\ttfamily true}或者{\ttfamily false} 该函数判断本节点是否是右子节点。如果本节点的父节点为空，则返回{\ttfamily false}；如果本节点的父节点非空且本节点是父节点的右子节点，则返回{\ttfamily true}；否则返回{\ttfamily false} 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file binarytreenode.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_accc2e6dd939ba5be9b88431d2b51ec3d}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{to\+\_\+string()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ virtual std\+::string {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_accc2e6dd939ba5be9b88431d2b51ec3d}
+
+
+to\+\_\+string\+:返回该节点的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+: 本节点的描述字符串
+\end{DoxyReturn}
+该函数打印本节点的{\ttfamily key}，以及父节点（若存在）、子节点（若存在）的{\ttfamily key} 
+
+Definition at line 39 of file binarytreenode.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a4b6e824757793c958982654a52d70f4d}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!to\+\_\+xml@{to\+\_\+xml}}
+\index{to\+\_\+xml@{to\+\_\+xml}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{to\+\_\+xml()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ virtual std\+::string {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::to\+\_\+xml (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a4b6e824757793c958982654a52d70f4d}
+
+
+to\+\_\+xml\+:返回以该节点为根的子树的{\ttfamily xml}描述。 
+
+\begin{DoxyReturn}{Returns}
+\+: 本节点子树的{\ttfamily xml}描述的字符串
+\end{DoxyReturn}
+该函数返回以本节点为根的子树的{\ttfamily xml}描述。对子节点递归调用从而生成{\ttfamily xml}数据 
+
+Definition at line 60 of file binarytreenode.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ad0f9224668ce545453577be37c11e99c}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!key@{key}}
+\index{key@{key}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::key}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ad0f9224668ce545453577be37c11e99c}
+节点的保存的数据 
+
+Definition at line 106 of file binarytreenode.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a2d776837c806f27641a4128f2f3ebf34}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!lchild@{lchild}}
+\index{lchild@{lchild}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{lchild}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::shared\+\_\+ptr$<${\bf Binary\+Tree\+Node}$>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::lchild}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a2d776837c806f27641a4128f2f3ebf34}
+节点的左子节点的强引用 
+
+Definition at line 104 of file binarytreenode.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ab0f7e754f706b71943e8453c66485fd4}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!parent@{parent}}
+\index{parent@{parent}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::weak\+\_\+ptr$<${\bf Binary\+Tree\+Node}$>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::parent}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ab0f7e754f706b71943e8453c66485fd4}
+节点的父节点的弱引用 
+
+Definition at line 103 of file binarytreenode.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a5b0994f31d2ca698326aed39bd6ced65}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!rchild@{rchild}}
+\index{rchild@{rchild}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
+\subsubsection[{rchild}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::shared\+\_\+ptr$<${\bf Binary\+Tree\+Node}$>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ T $>$\+::rchild}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a5b0994f31d2ca698326aed39bd6ced65}
+节点的右子节点的强引用 
+
+Definition at line 105 of file binarytreenode.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/tree\+\_\+algorithms/binarytreenode/\hyperlink{binarytreenode_8h}{binarytreenode.\+h}\end{DoxyCompactItemize}

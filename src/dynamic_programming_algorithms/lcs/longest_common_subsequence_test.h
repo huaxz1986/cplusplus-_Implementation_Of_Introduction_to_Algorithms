@@ -3,7 +3,7 @@
 #include"src/google_test/gtest.h"
 #include"longest_common_subsequence.h"
 #include<string>
-using IntrodunctionToAlgorithm::DynamicProgrammingAlgorithm::longest_common_subsequence;
+using IntroductionToAlgorithm::DynamicProgrammingAlgorithm::longest_common_subsequence;
 //!longest_common_subsequence_test：测试最长公共子数组
 /*!
 *

@@ -3,8 +3,8 @@
 #include"src/google_test/gtest.h"
 #include"edge.h"
 #include"../graph_vertex/vertex.h"
-using IntrodunctionToAlgorithm::GraphAlgorithm::Vertex;
-using IntrodunctionToAlgorithm::GraphAlgorithm::Edge;
+using IntroductionToAlgorithm::GraphAlgorithm::Vertex;
+using IntroductionToAlgorithm::GraphAlgorithm::Edge;
 
 //!EdgeTest:测试类，用于为测试`Edge`提供基础数据
 /*!

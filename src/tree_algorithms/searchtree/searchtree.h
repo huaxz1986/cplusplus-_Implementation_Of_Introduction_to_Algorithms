@@ -1,7 +1,7 @@
 #ifndef SEARCHTREE
 #define SEARCHTREE
 #include"../binarytree/binarytree.h"
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace TreeAlgorithm
     {

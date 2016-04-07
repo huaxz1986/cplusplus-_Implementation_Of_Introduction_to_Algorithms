@@ -2,7 +2,7 @@
 #define GOODSELECT
 #include<vector>
 #include"src/sort_algorithms/quick_sort/quicksort.h"
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SelectAlgorithm
     {
@@ -33,8 +33,8 @@ namespace IntrodunctionToAlgorithm
                 typename std::iterator_traits<Iterator>::value_type
                 good_select(const Iterator begin,const Iterator end,typename std::iterator_traits<Iterator>::difference_type rank,Compare compare=Compare())
         {
-            using IntrodunctionToAlgorithm::SortAlgorithm::quick_sort;
-            using IntrodunctionToAlgorithm::SortAlgorithm::partition;
+            using IntroductionToAlgorithm::SortAlgorithm::quick_sort;
+            using IntroductionToAlgorithm::SortAlgorithm::partition;
 
             typedef typename std::iterator_traits<Iterator>::value_type T;
             auto size=std::distance(begin,end);

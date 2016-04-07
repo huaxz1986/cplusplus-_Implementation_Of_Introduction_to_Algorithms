@@ -3,7 +3,7 @@
 #include"../quick_sort/quicksort.h"
 #include<vector>
 #include<cassert>
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SortAlgorithm
     {

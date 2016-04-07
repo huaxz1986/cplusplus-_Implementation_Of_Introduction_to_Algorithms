@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keytype',['KeyType',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#ada86f69d9e5f5dcb47b7be1e3a208d06',1,'IntrodunctionToAlgorithm::GraphAlgorithm::Vertex::KeyType()'],['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a0967a0c85792f7b02a005eb1942d1bf5',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode::KeyType()']]]
+  ['dfs_5fvertex',['DFS_Vertex',['../class_d_f_s_vertex_test.html#aee693bcc01455e6f663b1404ce66e914',1,'DFSVertexTest']]]
 ];

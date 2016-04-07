@@ -2,7 +2,7 @@
 #define COUNTSORT
 #include<vector>
 
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace SortAlgorithm
     {

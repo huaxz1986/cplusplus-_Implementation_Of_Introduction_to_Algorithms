@@ -20,8 +20,8 @@
 #define MERGESORTER_TEST_H
 #include"src/google_test/gtest.h"
 #include"mergesort.h"
-using IntrodunctionToAlgorithm::SortAlgorithm::merge;
-using IntrodunctionToAlgorithm::SortAlgorithm::merge_sort;
+using IntroductionToAlgorithm::SortAlgorithm::merge;
+using IntroductionToAlgorithm::SortAlgorithm::merge_sort;
 //!merge_sort_test：测试C数组的归并排序
 /*!
 *

@@ -1,5 +1,23 @@
 var searchData=
 [
-  ['key',['key',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#ab85342bae9a63d83eff811557c07e58e',1,'IntrodunctionToAlgorithm::GraphAlgorithm::Vertex::key()'],['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a3bcf52447a097b51caa74488e90f1479',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode::key()']]],
-  ['keytype',['KeyType',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#ada86f69d9e5f5dcb47b7be1e3a208d06',1,'IntrodunctionToAlgorithm::GraphAlgorithm::Vertex::KeyType()'],['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a0967a0c85792f7b02a005eb1942d1bf5',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode::KeyType()']]]
+  ['dynamicprogrammingalgorithm',['DynamicProgrammingAlgorithm',['../namespace_introduction_to_algorithm_1_1_dynamic_programming_algorithm.html',1,'IntroductionToAlgorithm']]],
+  ['graphalgorithm',['GraphAlgorithm',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html',1,'IntroductionToAlgorithm']]],
+  ['id',['id',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#a76668b285452856d184a245b7b35b7c1',1,'IntroductionToAlgorithm::GraphAlgorithm::Vertex']]],
+  ['inorder_5fwalk',['inorder_walk',['../namespace_introduction_to_algorithm_1_1_tree_algorithm.html#aff9afe8e77b1aaaa5715b270fecd73c4',1,'IntroductionToAlgorithm::TreeAlgorithm']]],
+  ['insert',['insert',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#af0e72003afbf634cd9f7df7f61de1c36',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::insert()'],['../class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a83724f0079d16419d4cceba74602cee1',1,'IntroductionToAlgorithm::TreeAlgorithm::SearchTree::insert()']]],
+  ['insert_5fsort',['insert_sort',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a0cb38883a5023cfb6103e483f6624516',1,'IntroductionToAlgorithm::SortAlgorithm']]],
+  ['insertsort_2eh',['insertsort.h',['../insertsort_8h.html',1,'']]],
+  ['insertsort_5ftest_2eh',['insertsort_test.h',['../insertsort__test_8h.html',1,'']]],
+  ['introductiontoalgorithm',['IntroductionToAlgorithm',['../namespace_introduction_to_algorithm.html',1,'']]],
+  ['invalid_5fweight',['invalid_weight',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#accc79376e509d7ffa016ef5003512976',1,'IntroductionToAlgorithm::GraphAlgorithm::MatrixGraph']]],
+  ['inverse',['inverse',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#ace6d1e2910a70ea8fa8e3d3e688e29ba',1,'IntroductionToAlgorithm::GraphAlgorithm::Graph']]],
+  ['is_5fempty',['is_empty',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#abc9cdc8881918001bf922c3b2cd64c1c',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['is_5finqueue',['is_inqueue',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a95ee21038ee245f37623eedbd273fb43',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['is_5fleft_5fchild',['is_left_child',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a23dfcff4adbb1fba70296eb25fbac3cb',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
+  ['is_5fright_5fchild',['is_right_child',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a3147815d63a639a081d5dbea3359fc1b',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
+  ['is_5funlimit',['is_unlimit',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a4f664c13605fc87ca8d26f4aad5a9fa2',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
+  ['queuealgorithm',['QueueAlgorithm',['../namespace_introduction_to_algorithm_1_1_queue_algorithm.html',1,'IntroductionToAlgorithm']]],
+  ['selectalgorithm',['SelectAlgorithm',['../namespace_introduction_to_algorithm_1_1_select_algorithm.html',1,'IntroductionToAlgorithm']]],
+  ['sortalgorithm',['SortAlgorithm',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html',1,'IntroductionToAlgorithm']]],
+  ['treealgorithm',['TreeAlgorithm',['../namespace_introduction_to_algorithm_1_1_tree_algorithm.html',1,'IntroductionToAlgorithm']]]
 ];

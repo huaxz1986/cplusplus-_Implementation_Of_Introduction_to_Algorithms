@@ -6,13 +6,13 @@
 
 #define NODE_NUM 9
 
-//using IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTree;
-using IntrodunctionToAlgorithm::TreeAlgorithm::SearchTree;
-using IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTreeNode;
-using IntrodunctionToAlgorithm::TreeAlgorithm::inorder_walk;
-using IntrodunctionToAlgorithm::TreeAlgorithm::preorder_walk;
-using IntrodunctionToAlgorithm::TreeAlgorithm::postorder_walk;
-using IntrodunctionToAlgorithm::TreeAlgorithm::transplant;
+//using IntroductionToAlgorithm::TreeAlgorithm::BinaryTree;
+using IntroductionToAlgorithm::TreeAlgorithm::SearchTree;
+using IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode;
+using IntroductionToAlgorithm::TreeAlgorithm::inorder_walk;
+using IntroductionToAlgorithm::TreeAlgorithm::preorder_walk;
+using IntroductionToAlgorithm::TreeAlgorithm::postorder_walk;
+using IntroductionToAlgorithm::TreeAlgorithm::transplant;
 
 
 

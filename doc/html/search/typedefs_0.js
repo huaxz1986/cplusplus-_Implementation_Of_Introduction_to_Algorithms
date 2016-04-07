@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['edgetupletype',['EdgeTupleType',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#ad84ed29dc772f53561f644c091dd642e',1,'IntrodunctionToAlgorithm::GraphAlgorithm::ADJListGraph::EdgeTupleType()'],['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge.html#adaaedd6d4205248ecf521e8585a2ecf6',1,'IntrodunctionToAlgorithm::GraphAlgorithm::Edge::EdgeTupleType()'],['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#a73af3fee951b91b4f5c48422460f8c03',1,'IntrodunctionToAlgorithm::GraphAlgorithm::MatrixGraph::EdgeTupleType()']]],
-  ['eweighttype',['EWeightType',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#ae178ce485958d261c40b7beb8dfe9d0a',1,'IntrodunctionToAlgorithm::GraphAlgorithm::ADJListGraph::EWeightType()'],['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge.html#a34045c46a299bb27dab97ba7e3c554c3',1,'IntrodunctionToAlgorithm::GraphAlgorithm::Edge::EWeightType()'],['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#af2d243f2c1bb8a101aa3f71f469c64e8',1,'IntrodunctionToAlgorithm::GraphAlgorithm::MatrixGraph::EWeightType()']]]
+  ['bfs_5fvertex',['BFS_Vertex',['../class_b_f_s_vertex_test.html#a9ff4e5b50fe6468b08ee5e04f0527d7c',1,'BFSVertexTest']]]
 ];

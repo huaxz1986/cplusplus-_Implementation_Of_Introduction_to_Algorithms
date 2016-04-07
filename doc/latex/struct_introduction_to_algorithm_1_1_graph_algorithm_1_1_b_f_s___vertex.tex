@@ -1,0 +1,256 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:B\+F\+S\+\_\+\+Vertex$<$ K\+Type $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex$<$ K\+Type $>$@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex$<$ K\+Type $>$}}
+
+
+B\+F\+S\+\_\+\+Vertex：用于广度优先搜索的顶点类型，算法导论22章22.2节  
+
+
+
+
+{\ttfamily \#include $<$bfs.\+h$>$}
+
+Inheritance diagram for Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:B\+F\+S\+\_\+\+Vertex$<$ K\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305}{C\+O\+L\+O\+R} \{ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305ab5bf627e448384cf3a4c35121ca6008d}{C\+O\+L\+O\+R\+::\+W\+H\+I\+T\+E}, 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a48bf014c704c9eaae100a98006a37bf7}{C\+O\+L\+O\+R\+::\+G\+R\+A\+Y}, 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a08d0012388564e95c3b4a7407cf04965}{C\+O\+L\+O\+R\+::\+B\+L\+A\+C\+K}
+ \}
+\item 
+typedef int \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a62cef758843cdaeefae2fc196f6bdb46}{V\+I\+D\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_ad9540a9d7487eea8ece6ac1b0bbfcc22}{B\+F\+S\+\_\+\+Vertex} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数，将{\ttfamily color}设为白色 \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_afed1ffe004598a17dd919af3751dbe3f}{B\+F\+S\+\_\+\+Vertex} (const K\+Type \&k)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key} \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_ad55d2e534f3f1869e72a3f7513b0553f}{B\+F\+S\+\_\+\+Vertex} (const K\+Type \&k, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a62cef758843cdaeefae2fc196f6bdb46}{V\+I\+D\+Type} d)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key}和编号 \end{DoxyCompactList}\item 
+void \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f5b9ba686fae02e01cd899261fe6793}{set\+\_\+source} ()
+\begin{DoxyCompactList}\small\item\em set\+\_\+source：设本顶点为源点 \end{DoxyCompactList}\item 
+void \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a7e523d76f261801c3622f00458333320}{set\+\_\+found} (std\+::shared\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex}{B\+F\+S\+\_\+\+Vertex} $>$ v\+\_\+parent)
+\begin{DoxyCompactList}\small\item\em set\+\_\+found：发现本顶点 \end{DoxyCompactList}\item 
+std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a73aa1fb33a2616818b709d04e79a007e}{to\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em to\+\_\+string：返回顶点的字符串描述 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305}{C\+O\+L\+O\+R} \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a7ab527ab8514bcb65e56edbe62b28fbb}{color}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex}{B\+F\+S\+\_\+\+Vertex} $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a11202710469656d7fb04635430355c41}{parent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K\+Type$>$struct Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex$<$ K\+Type $>$}
+
+B\+F\+S\+\_\+\+Vertex：用于广度优先搜索的顶点类型，算法导论22章22.2节 
+
+广度优先搜索的顶点类型继承自{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}}模板类型，它比{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}}多了两个数据成员：
+
+
+\begin{DoxyItemize}
+\item {\ttfamily color}：顶点的颜色。顶点可以有三种颜色，分别为{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a08d0012388564e95c3b4a7407cf04965}{B\+F\+S\+\_\+\+Vertex\+::\+C\+O\+L\+O\+R\+::\+B\+L\+A\+C\+K}}、{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305ab5bf627e448384cf3a4c35121ca6008d}{B\+F\+S\+\_\+\+Vertex\+::\+C\+O\+L\+O\+R\+::\+W\+H\+I\+T\+E}}、{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a48bf014c704c9eaae100a98006a37bf7}{B\+F\+S\+\_\+\+Vertex\+::\+C\+O\+L\+O\+R\+::\+G\+R\+A\+Y}}
+\item {\ttfamily parent}\+: 指向父顶点的强引用
+\end{DoxyItemize}
+
+广度优先搜索的顶点类型还支持以下两个操作：
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f5b9ba686fae02e01cd899261fe6793}{set\+\_\+source()}}：将本顶点设为源点
+\item {\ttfamily set\+\_\+found(v\+\_\+parent)}：发现本顶点 
+\end{DoxyItemize}
+
+Definition at line 26 of file bfs.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a62cef758843cdaeefae2fc196f6bdb46}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!V\+I\+D\+Type@{V\+I\+D\+Type}}
+\index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a62cef758843cdaeefae2fc196f6bdb46}
+顶点编号的数据类型 
+
+Definition at line 29 of file bfs.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!C\+O\+L\+O\+R@{C\+O\+L\+O\+R}}
+\index{C\+O\+L\+O\+R@{C\+O\+L\+O\+R}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{C\+O\+L\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ enum {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex\+::\+C\+O\+L\+O\+R}\hspace{0.3cm}{\ttfamily [strong]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{W\+H\+I\+T\+E@{W\+H\+I\+T\+E}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!W\+H\+I\+T\+E@{W\+H\+I\+T\+E}}\item[{\em 
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305ab5bf627e448384cf3a4c35121ca6008d}{}W\+H\+I\+T\+E\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305ab5bf627e448384cf3a4c35121ca6008d}
+}]\index{G\+R\+A\+Y@{G\+R\+A\+Y}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!G\+R\+A\+Y@{G\+R\+A\+Y}}\item[{\em 
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a48bf014c704c9eaae100a98006a37bf7}{}G\+R\+A\+Y\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a48bf014c704c9eaae100a98006a37bf7}
+}]\index{B\+L\+A\+C\+K@{B\+L\+A\+C\+K}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!B\+L\+A\+C\+K@{B\+L\+A\+C\+K}}\item[{\em 
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a08d0012388564e95c3b4a7407cf04965}{}B\+L\+A\+C\+K\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f00f12565def71750f1f163e0e52305a08d0012388564e95c3b4a7407cf04965}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 30 of file bfs.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_ad9540a9d7487eea8ece6ac1b0bbfcc22}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}}
+\index{B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{B\+F\+S\+\_\+\+Vertex()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf B\+F\+S\+\_\+\+Vertex} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_ad9540a9d7487eea8ece6ac1b0bbfcc22}
+
+
+默认构造函数，将{\ttfamily color}设为白色 
+
+
+
+Definition at line 34 of file bfs.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_afed1ffe004598a17dd919af3751dbe3f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}}
+\index{B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{B\+F\+S\+\_\+\+Vertex(const K\+Type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf B\+F\+S\+\_\+\+Vertex} (
+\begin{DoxyParamCaption}
+\item[{const K\+Type \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_afed1ffe004598a17dd919af3751dbe3f}
+
+
+显式构造函数，指定{\ttfamily key} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & 顶点的颜色默认设为白色 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file bfs.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_ad55d2e534f3f1869e72a3f7513b0553f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}}
+\index{B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{B\+F\+S\+\_\+\+Vertex(const K\+Type \&k, V\+I\+D\+Type d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf B\+F\+S\+\_\+\+Vertex} (
+\begin{DoxyParamCaption}
+\item[{const K\+Type \&}]{k, }
+\item[{{\bf V\+I\+D\+Type}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_ad55d2e534f3f1869e72a3f7513b0553f}
+
+
+显式构造函数，指定{\ttfamily key}和编号 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & \\
+\hline
+{\em d\+:顶点的编号} & 顶点的颜色默认设为白色 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file bfs.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a7e523d76f261801c3622f00458333320}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!set\+\_\+found@{set\+\_\+found}}
+\index{set\+\_\+found@{set\+\_\+found}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{set\+\_\+found(std\+::shared\+\_\+ptr$<$ B\+F\+S\+\_\+\+Vertex $>$ v\+\_\+parent)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ void {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::set\+\_\+found (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$ $>$}]{v\+\_\+parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a7e523d76f261801c3622f00458333320}
+
+
+set\+\_\+found：发现本顶点 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+\_\+parent\+:父顶点的强引用} & 发现本顶点要执行两个操作：\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item 将本顶点的颜色设为灰色
+\item 将本顶点的{\ttfamily parent}设为{\ttfamily v\+\_\+parent}
+\end{DoxyItemize}
+
+这里要求{\ttfamily v\+\_\+parent}非空。若{\ttfamily v\+\_\+parent}为空则抛出异常 
+
+Definition at line 77 of file bfs.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f5b9ba686fae02e01cd899261fe6793}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!set\+\_\+source@{set\+\_\+source}}
+\index{set\+\_\+source@{set\+\_\+source}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{set\+\_\+source()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ void {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::set\+\_\+source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f5b9ba686fae02e01cd899261fe6793}
+
+
+set\+\_\+source：设本顶点为源点 
+
+将本顶点设为源点要执行两个操作：
+
+
+\begin{DoxyItemize}
+\item 将本顶点的颜色设为灰色
+\item 将本顶点的{\ttfamily parent}设为空 
+\end{DoxyItemize}
+
+Definition at line 59 of file bfs.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a73aa1fb33a2616818b709d04e79a007e}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{to\+\_\+string()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::string {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a73aa1fb33a2616818b709d04e79a007e}
+
+
+to\+\_\+string：返回顶点的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+:顶点的字符串描述
+\end{DoxyReturn}
+再{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}}基类的基础上输出{\ttfamily color}以及{\ttfamily parent}信息。 
+
+Definition at line 91 of file bfs.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a7ab527ab8514bcb65e56edbe62b28fbb}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!color@{color}}
+\index{color@{color}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf C\+O\+L\+O\+R} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::color}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a7ab527ab8514bcb65e56edbe62b28fbb}
+顶点颜色 
+
+Definition at line 114 of file bfs.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a11202710469656d7fb04635430355c41}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!parent@{parent}}
+\index{parent@{parent}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::shared\+\_\+ptr$<${\bf B\+F\+S\+\_\+\+Vertex}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::parent}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a11202710469656d7fb04635430355c41}
+顶点父顶点的强引用 
+
+Definition at line 115 of file bfs.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+bfs/\hyperlink{bfs_8h}{bfs.\+h}\end{DoxyCompactItemize}

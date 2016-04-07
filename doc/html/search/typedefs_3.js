@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['t',['T',['../class_introdunction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a919579152d685b356d4776fc8d2eeb90',1,'IntrodunctionToAlgorithm::SortAlgorithm::Sort_Heap::T()'],['../struct_introdunction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#ae2feaade7bbb1e1f436475069cb1cd20',1,'IntrodunctionToAlgorithm::TreeAlgorithm::BinaryTree::T()'],['../class_introdunction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a455a92d072da5c55c969cdfc0e71ac2e',1,'IntrodunctionToAlgorithm::TreeAlgorithm::SearchTree::T()']]]
+  ['gtype',['GType',['../class_graph_test.html#a35200ea3d08690769c40550cba2ecd5a',1,'GraphTest::GType()'],['../class_b_f_s_test.html#ad38ca5029d5674d467dc71d13f5e5c7c',1,'BFSTest::GType()'],['../class_d_f_s_test.html#a32b63a9c79f6f7e7021daacf076a1512',1,'DFSTest::GType()'],['../class_s_c_c_test.html#abb59a4d30b8d2bb5c08e09e902745824',1,'SCCTest::GType()'],['../class_topology_sort_test.html#aa530f6f774d1b97dbb3968d9e445ce21',1,'TopologySortTest::GType()']]]
 ];

@@ -3,7 +3,7 @@
 #include<array>
 #include<map>
 #include"../graph_edge/edge.h"
-namespace IntrodunctionToAlgorithm
+namespace IntroductionToAlgorithm
 {
     namespace GraphAlgorithm
     {
@@ -110,6 +110,29 @@ namespace IntrodunctionToAlgorithm
                         if(val!=invalid_weight)
                             result.push_back(std::make_tuple(i,j,val));
                     }
+                return result;
+            }
+            //!vertex_edge_tuples:返回图中从指定顶点出发的边的三元素元组集合，这里集合采用`std::vector<std::tuple<VIDType,VIDType,EWeightType>>`
+            /*!
+            * \param id: 指定顶点`id`
+            * \return  :图中指定顶点出发的边的三元素元组集合
+            *
+            *
+            * - 如果指定的顶点`id`不在`[0,N)`之间，则无效
+            */
+            const std::vector<EdgeTupleType> vertex_edge_tuples(VIDType id) const
+            {
+                if(id<0||id>=N)
+                {
+                    throw std::invalid_argument("vertex_edge_tuples: id must belongs [0,N),");
+                }
+                std::vector<EdgeTupleType> result;
+                for(unsigned j=0;j<N;j++)
+                {
+                        int val=matrix.at(id).at(j);
+                        if(val!=invalid_weight)
+                            result.push_back(std::make_tuple(id,j,val));
+                }
                 return result;
             }
 

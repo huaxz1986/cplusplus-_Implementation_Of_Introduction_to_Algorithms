@@ -2,8 +2,8 @@
 #define RANDOMIZED_SELECT_TEST
 #include"src/google_test/gtest.h"
 #include"randomizedselect.h"
-using IntrodunctionToAlgorithm::SelectAlgorithm::radom_index;
-using IntrodunctionToAlgorithm::SelectAlgorithm::randomized_select;
+using IntroductionToAlgorithm::SelectAlgorithm::radom_index;
+using IntroductionToAlgorithm::SelectAlgorithm::randomized_select;
 //!radom_index_test：测试随机数的生成
 /*!
 *

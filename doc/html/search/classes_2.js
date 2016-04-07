@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['edge',['Edge',['../struct_introdunction_to_algorithm_1_1_graph_algorithm_1_1_edge.html',1,'IntrodunctionToAlgorithm::GraphAlgorithm']]],
-  ['edgetest',['EdgeTest',['../class_edge_test.html',1,'']]]
+  ['dfs_5fvertex',['DFS_Vertex',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
+  ['dfstest',['DFSTest',['../class_d_f_s_test.html',1,'']]],
+  ['dfsvertextest',['DFSVertexTest',['../class_d_f_s_vertex_test.html',1,'']]]
 ];

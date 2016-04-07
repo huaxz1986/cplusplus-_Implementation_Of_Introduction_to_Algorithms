@@ -1,0 +1,227 @@
+#ifndef DFS_TEST
+#define DFS_TEST
+#include"src/google_test/gtest.h"
+#include"dfs.h"
+const int DFS_N= 10;  /*!< 测试的图顶点数量*/
+
+using IntroductionToAlgorithm::GraphAlgorithm::Graph;
+using IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex;
+using IntroductionToAlgorithm::GraphAlgorithm::depth_first_search;
+
+//!DFSVertexTest:测试类，用于为测试提供基础数据
+/*!
+*
+* `DFSVertexTest`是 `::testing::Test` 的子类。它主要用于为每一个`TEST_F`准备测试环境
+*/
+class DFSVertexTest:public ::testing::Test
+{
+public:
+typedef DFS_Vertex<double> DFS_Vertex; /*!< 模板实例化的顶点类型为`DFS_Vertex<double>`*/
+
+protected:
+    void SetUp()
+    {
+        _default_vertex=std::make_shared<DFS_Vertex>();
+        _normal_vertex=std::make_shared<DFS_Vertex>(1.0);
+    }
+    void TearDown(){}
+    std::shared_ptr<DFS_Vertex> _default_vertex;    /*!< 指向一个默认构造的顶点*/
+    std::shared_ptr<DFS_Vertex> _normal_vertex;    /*!< 指向一个显式构造的顶点*/
+};
+//!dfs_vertex_test:测试DFSVertex
+/*!
+*
+* 测试`DFSVertex`的数据成员
+*/
+TEST_F(DFSVertexTest,test_data_member)
+{
+
+    EXPECT_NEAR(_default_vertex->key,0,0.001);
+    EXPECT_EQ(_default_vertex->id,-1);
+    EXPECT_EQ(_default_vertex->color,DFS_Vertex::COLOR::WHITE);
+    EXPECT_EQ(_default_vertex->discover_time,-1);
+    EXPECT_EQ(_default_vertex->finish_time,-1);
+    EXPECT_FALSE(_default_vertex->parent);
+
+    EXPECT_NEAR(_normal_vertex->key,1.0,0.001);
+    EXPECT_EQ(_normal_vertex->id,-1);
+    EXPECT_EQ(_normal_vertex->color,DFS_Vertex::COLOR::WHITE);
+    EXPECT_EQ(_normal_vertex->discover_time,-1);
+    EXPECT_EQ(_normal_vertex->finish_time,-1);
+    EXPECT_FALSE(_normal_vertex->parent);
+}
+//!dfs_vertex_test:测试DFSVertex
+/*!
+*
+* 测试`DFSVertex`的`set_disovered`方法
+*/
+TEST_F(DFSVertexTest,test_set_disovered)
+{
+    EXPECT_EQ(_default_vertex->color,DFS_Vertex::COLOR::WHITE);
+    EXPECT_EQ(_default_vertex->discover_time,-1);
+    _default_vertex->set_disovered(999);
+    EXPECT_EQ(_default_vertex->color,DFS_Vertex::COLOR::GRAY);
+    EXPECT_EQ(_default_vertex->discover_time,999);
+}
+//!dfs_vertex_test:测试DFSVertex
+/*!
+*
+* 测试`DFSVertex`的`set_finished`方法
+*/
+TEST_F(DFSVertexTest,test_set_finished)
+{
+    EXPECT_EQ(_default_vertex->color,DFS_Vertex::COLOR::WHITE);
+    EXPECT_EQ(_default_vertex->discover_time,-1);
+    _default_vertex->set_finished(999);
+    EXPECT_EQ(_default_vertex->color,DFS_Vertex::COLOR::BLACK);
+    EXPECT_EQ(_default_vertex->finish_time,999);
+}
+//!dfs_vertex_test:测试测试DFSVertex
+/*!
+*
+* 测试`测试DFSVertex`的`to_string`方法
+*/
+TEST_F(DFSVertexTest,test_to_string)
+{
+    EXPECT_EQ(_normal_vertex->to_string(),"vertex id:-1\t key:1\t color:WHITE\t parent-id:nullptr\t discover_time:-1\t finish_time:-1");
+    _normal_vertex->parent=_default_vertex;
+    EXPECT_EQ(_normal_vertex->to_string(),"vertex id:-1\t key:1\t color:WHITE\t parent-id:-1\t discover_time:-1\t finish_time:-1");
+}
+
+//!DFSTest:测试类，用于为测试提供基础数据
+/*!
+*
+* `DFSTest`是 `::testing::Test` 的子类。它主要用于为每一个`TEST_F`准备测试环境
+*/
+class DFSTest:public ::testing::Test
+{
+public:
+typedef Graph<DFS_N,DFS_Vertex<double>> GType; /*!< 模板实例化的图类型，该图的顶点类型为`DFS_Vertex<double>`*/
+
+protected:
+    void SetUp()
+    {
+        _1v_graph=std::make_shared<GType>(-1);//边的无效权重为-1
+        _1v_graph->add_vertex(1.0);  //该图只有一个顶点
+
+        _1e_graph=std::make_shared<GType>(-1);//边的无效权重为-1
+        _1e_graph->add_vertex(2.0);
+        _1e_graph->add_vertex(2.1);
+        _1e_graph->add_edge(std::make_tuple(0,1,1));  //该图只有一条边
+
+
+        //****  含顶点图和边图：10个顶点，45条边（任意两点之间都有边，但是都是单向边）   ****
+        _list_graph=std::make_shared<GType>(-1); //边的无效权重为-1
+        for(int i=0;i<BFS_N;i++)
+            _list_graph->add_vertex(1+i/BFS_N);
+        for(int i=0;i<BFS_N-1;i++)
+                _list_graph->add_edge(std::make_tuple(i,i+1,10+i)); //该图的边是从左到右组成一个链条
+
+        //****  含顶点图和边图：10个顶点，45条边（任意两点之间都有边，但是都是单向边）   ****
+        _rlist_graph=std::make_shared<GType>(-1); //边的无效权重为-1
+        for(int i=0;i<BFS_N;i++)
+            _rlist_graph->add_vertex(1+i/BFS_N);
+        for(int i=0;i<BFS_N-1;i++)
+                _rlist_graph->add_edge(std::make_tuple(i,i+1,10+i)); //该图的边是从左到右组成一个链条
+    }
+    void TearDown(){}
+    std::shared_ptr<GType> _1v_graph;    /*!< 指向一个图，该图只有一个顶点*/
+    std::shared_ptr<GType> _1e_graph;    /*!< 指向一个图，该图只有一条边*/
+    std::shared_ptr<GType> _list_graph;    /*!< 指向一个图，该图的边组成一个链条，该图用顺序搜索*/
+    std::shared_ptr<GType> _rlist_graph;    /*!< 指向一个图，该图的边组成一个链条，该图用逆序搜索*/
+};
+//!test_dfs:测试depth_first_search方法
+/*!
+*
+* 测试`depth_first_search`方法
+*/
+TEST_F(DFSTest,test_dfs)
+{
+    {
+        std::ostringstream discover_os;
+        std::ostringstream finished_os;
+        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        //****** 测试只有一个顶点的图**********
+
+        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_1v_graph,print_discover,print_finished);
+        EXPECT_EQ(discover_os.str(),"0,");
+        EXPECT_EQ(finished_os.str(),"0,");
+    }
+    {
+        std::ostringstream discover_os;
+        std::ostringstream finished_os;
+        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        //****** 测试只有一条边的图**********
+        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_1e_graph,print_discover,print_finished);
+        EXPECT_EQ(discover_os.str(),"0,1,");
+        EXPECT_EQ(finished_os.str(),"1,0,");
+    }
+    {
+        std::ostringstream discover_os;
+        std::ostringstream finished_os;
+        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        //****** 测试测试链边的图**********
+        std::string real_discover_str,real_finish_str;
+        char char_from_int[2];
+        for(int i=0;i<DFS_N;i++)
+        {
+            itoa(i,char_from_int,10);
+            real_discover_str+=std::string(char_from_int)+",";
+            itoa(DFS_N-i-1,char_from_int,10);
+            real_finish_str+=std::string(char_from_int)+",";
+        }
+        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_list_graph,print_discover,print_finished);
+        EXPECT_EQ(discover_os.str(),real_discover_str);
+        EXPECT_EQ(finished_os.str(),real_finish_str);
+    }
+    {
+        auto empty_action=[](DFS_Vertex<double>::VIDType v_id,int time){};
+        std::ostringstream discover_os;
+        std::ostringstream finished_os;
+        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        //****** 测试测试链边的图，逆序**********
+
+        std::string real_discover_str,real_finish_str;
+        std::vector<DFS_Vertex<double>::VIDType> search_order;
+        char char_from_int[2];
+        for(int i=DFS_N-1;i>=0;i--)
+        {
+            search_order.push_back(i);
+            itoa(i,char_from_int,10);
+            real_discover_str+=std::string(char_from_int)+",";
+            real_finish_str+=std::string(char_from_int)+",";
+        }
+        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_rlist_graph,print_discover,print_finished,empty_action,empty_action,search_order);
+        EXPECT_EQ(discover_os.str(),real_discover_str);
+        EXPECT_EQ(finished_os.str(),real_finish_str);
+    }
+}
+
+//!test_get_path:测试get_path方法
+/*!
+*
+* 测试`get_path`方法
+*/
+TEST_F(DFSTest,test_get_path)
+{
+
+    std::ostringstream discover_os;
+    std::ostringstream finished_os;
+    auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+    auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+   //**** 测试链边的图**********
+   depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_list_graph,print_discover,print_finished);
+   for(int i=0;i<DFS_N;i++)
+   {
+       std::vector<int> real;
+       for(int j=i;j<DFS_N;j++)
+           real.push_back(j);
+       EXPECT_EQ(get_path(_list_graph->vertexes.at(i),_list_graph->vertexes.at(DFS_N-1)),real)<<"i:"<<i;
+   }
+}
+
+#endif //DFS_TEST

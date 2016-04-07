@@ -1,0 +1,182 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Vertex$<$ K\+Type $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex$<$ K\+Type $>$@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex$<$ K\+Type $>$}}
+
+
+Vertex：图的顶点，算法导论22章22.1节  
+
+
+
+
+{\ttfamily \#include $<$vertex.\+h$>$}
+
+Inheritance diagram for Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Vertex$<$ K\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.465969cm]{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef K\+Type \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a14e958c58a404474853491eb811954cc}{Key\+Type}
+\item 
+typedef int \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a290c84c0dcf159f833c72c47a2d4d44a}{V\+I\+D\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a6a0b0403db78f786443e8827e6bb6af9}{Vertex} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数，将{\ttfamily key}设为{\ttfamily K\+Type()}，编号设为-\/1 \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a047edb0a5351588129aad113a93eba54}{Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a14e958c58a404474853491eb811954cc}{Key\+Type} \&k)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key} \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a9ed1eda4a4b48a8329acc8bd4b58150f}{Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a14e958c58a404474853491eb811954cc}{Key\+Type} \&k, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a290c84c0dcf159f833c72c47a2d4d44a}{V\+I\+D\+Type} d)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key}和编号 \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_aa8b0ab227cd3945eace9ef55f8837925}{to\+\_\+string} () const 
+\begin{DoxyCompactList}\small\item\em to\+\_\+string：返回顶点的字符串描述 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a14e958c58a404474853491eb811954cc}{Key\+Type} \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a5bcfb4e0ba9450b8ebb2543069772d1f}{key}
+\item 
+const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a290c84c0dcf159f833c72c47a2d4d44a}{V\+I\+D\+Type} \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a76668b285452856d184a245b7b35b7c1}{id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K\+Type$>$struct Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex$<$ K\+Type $>$}
+
+Vertex：图的顶点，算法导论22章22.1节 
+
+顶点是一个结构体的模板，模板类型为它存储的数据的类型。它主要包含两个数据：
+
+
+\begin{DoxyItemize}
+\item {\ttfamily key}\+:顶点存放的数据
+\item {\ttfamily id}\+:顶点的编号（从0开始，负编号的节点为无效节点）。它是一个{\ttfamily const int}，一旦顶点初始化完毕就不可更改。
+\end{DoxyItemize}
+
+默认情况下：{\ttfamily id}为-\/1,{\ttfamily key}为{\ttfamily T()}。 
+
+Definition at line 22 of file vertex.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a14e958c58a404474853491eb811954cc}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ typedef K\+Type {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a14e958c58a404474853491eb811954cc}
+顶点存储数据的类型 
+
+Definition at line 24 of file vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a290c84c0dcf159f833c72c47a2d4d44a}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!V\+I\+D\+Type@{V\+I\+D\+Type}}
+\index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a290c84c0dcf159f833c72c47a2d4d44a}
+顶点编号的数据类型 
+
+Definition at line 25 of file vertex.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a6a0b0403db78f786443e8827e6bb6af9}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{Vertex()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::{\bf Vertex} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a6a0b0403db78f786443e8827e6bb6af9}
+
+
+默认构造函数，将{\ttfamily key}设为{\ttfamily K\+Type()}，编号设为-\/1 
+
+
+
+Definition at line 28 of file vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a047edb0a5351588129aad113a93eba54}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{Vertex(const Key\+Type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::{\bf Vertex} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\+Type} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a047edb0a5351588129aad113a93eba54}
+
+
+显式构造函数，指定{\ttfamily key} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a9ed1eda4a4b48a8329acc8bd4b58150f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{Vertex(const Key\+Type \&k, V\+I\+D\+Type d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::{\bf Vertex} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\+Type} \&}]{k, }
+\item[{{\bf V\+I\+D\+Type}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a9ed1eda4a4b48a8329acc8bd4b58150f}
+
+
+显式构造函数，指定{\ttfamily key}和编号 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & \\
+\hline
+{\em d\+:顶点的编号} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file vertex.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_aa8b0ab227cd3945eace9ef55f8837925}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{to\+\_\+string() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ virtual std\+::string {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_aa8b0ab227cd3945eace9ef55f8837925}
+
+
+to\+\_\+string：返回顶点的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+:顶点的字符串描述
+\end{DoxyReturn}
+依次输出顶点的{\ttfamily id}、{\ttfamily key}信息。 
+
+Definition at line 47 of file vertex.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a76668b285452856d184a245b7b35b7c1}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!id@{id}}
+\index{id@{id}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ const {\bf V\+I\+D\+Type} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::id}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a76668b285452856d184a245b7b35b7c1}
+顶点id，一旦顶点生成则id不可变 
+
+Definition at line 56 of file vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a5bcfb4e0ba9450b8ebb2543069772d1f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}!key@{key}}
+\index{key@{key}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Key\+Type} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex}$<$ K\+Type $>$\+::key}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_a5bcfb4e0ba9450b8ebb2543069772d1f}
+顶点存储数据 
+
+Definition at line 55 of file vertex.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+vertex/\hyperlink{vertex_8h}{vertex.\+h}\end{DoxyCompactItemize}
