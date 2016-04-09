@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('class_min_queue_test.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_min_queue_test-members.html">List of all members</a>  </div>
@@ -127,6 +128,21 @@ Inheritance diagram for MinQueueTest:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a627ceae9e25205d70955137bbfc863fd"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(std::shared_ptr&lt; int &gt;, std::shared_ptr&lt; int &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#a627ceae9e25205d70955137bbfc863fd">Int_Compare_Type</a></td></tr>
+<tr class="separator:a627ceae9e25205d70955137bbfc863fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40648c6c5c338387bda62519dc99fc79"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; int &amp;(std::shared_ptr&lt; int &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#a40648c6c5c338387bda62519dc99fc79">Int_Get_Type</a></td></tr>
+<tr class="separator:a40648c6c5c338387bda62519dc99fc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bfd5b74968c587db57133f107a5f61"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(std::shared_ptr&lt; <a class="el" href="struct_node.html">Node</a> &gt;, std::shared_ptr&lt; <a class="el" href="struct_node.html">Node</a> &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#a25bfd5b74968c587db57133f107a5f61">Struct_Compare_Type</a></td></tr>
+<tr class="separator:a25bfd5b74968c587db57133f107a5f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcf6172ed7e9dd6f821fb1043f1cd6f"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; double &amp;(std::shared_ptr&lt; <a class="el" href="struct_node.html">Node</a> &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#aebcf6172ed7e9dd6f821fb1043f1cd6f">Struct_Get_Type</a></td></tr>
+<tr class="separator:aebcf6172ed7e9dd6f821fb1043f1cd6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7e5e987d5e856adc5beb6986dd96a3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a>&lt; <a class="el" href="struct_node.html">Node</a>, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3">Struct_MinQueue_Type</a></td></tr>
+<tr class="separator:a9b7e5e987d5e856adc5beb6986dd96a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81df38acc845934accb320c4dbdd582"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a>&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#ad81df38acc845934accb320c4dbdd582">Int_MinQueue_Type</a></td></tr>
+<tr class="separator:ad81df38acc845934accb320c4dbdd582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae801d45bf78b7bb80b278264d3a8e96a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#ae801d45bf78b7bb80b278264d3a8e96a">SetUp</a> ()</td></tr>
@@ -136,15 +152,108 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a372d59dab9f706027a6be031a1ab99dc"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a>&lt; <a class="el" href="struct_node.html">Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#a372d59dab9f706027a6be031a1ab99dc">_minqueue</a></td></tr>
-<tr class="separator:a372d59dab9f706027a6be031a1ab99dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed079eb9c6dd8460cc785b0fc6088a97"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3">Struct_MinQueue_Type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#aed079eb9c6dd8460cc785b0fc6088a97">_strcut_minqueue</a></td></tr>
+<tr class="separator:aed079eb9c6dd8460cc785b0fc6088a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f9ea0fcc4b820a539d32d6539c2df9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_min_queue_test.html#ad81df38acc845934accb320c4dbdd582">Int_MinQueue_Type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_min_queue_test.html#a03f9ea0fcc4b820a539d32d6539c2df9">_int_minqueue</a></td></tr>
+<tr class="separator:a03f9ea0fcc4b820a539d32d6539c2df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_min_queue_test.html" title="MinQueueTest:测试类，用于为测试提供基础数据 ">MinQueueTest</a>:测试类，用于为测试提供基础数据 </p>
 <p><code><a class="el" href="class_min_queue_test.html" title="MinQueueTest:测试类，用于为测试提供基础数据 ">MinQueueTest</a></code>是 <code>::testing::Test</code> 的子类。它主要用于为每一个<code>TEST_F</code>准备测试环境 </p>
 
-<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00019">19</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00021">21</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a627ceae9e25205d70955137bbfc863fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;bool (std::shared_ptr&lt;int&gt;,std::shared_ptr&lt;int&gt;)&gt; <a class="el" href="class_min_queue_test.html#a627ceae9e25205d70955137bbfc863fd">MinQueueTest::Int_Compare_Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>当最小优先级队列存放的是int*数据时，相应的比较函数对象 </p>
+
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00024">24</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40648c6c5c338387bda62519dc99fc79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;int&amp;(std::shared_ptr&lt;int&gt;)&gt; <a class="el" href="class_min_queue_test.html#a40648c6c5c338387bda62519dc99fc79">MinQueueTest::Int_Get_Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>当最小优先级队列存放的是int*数据时，获取key的函数对象 </p>
+
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00025">25</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad81df38acc845934accb320c4dbdd582"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a>&lt;int,int&gt; <a class="el" href="class_min_queue_test.html#ad81df38acc845934accb320c4dbdd582">MinQueueTest::Int_MinQueue_Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>存放的是Node*数据的最小优先级队列，Node的关键字是double类型 </p>
+
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00029">29</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25bfd5b74968c587db57133f107a5f61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;bool (std::shared_ptr&lt;<a class="el" href="struct_node.html">Node</a>&gt;,std::shared_ptr&lt;<a class="el" href="struct_node.html">Node</a>&gt;)&gt; <a class="el" href="class_min_queue_test.html#a25bfd5b74968c587db57133f107a5f61">MinQueueTest::Struct_Compare_Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>当最小优先级队列存放的是Node*数据时，相应的比较函数对象 </p>
+
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00026">26</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aebcf6172ed7e9dd6f821fb1043f1cd6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;double&amp;(std::shared_ptr&lt;<a class="el" href="struct_node.html">Node</a>&gt;)&gt; <a class="el" href="class_min_queue_test.html#aebcf6172ed7e9dd6f821fb1043f1cd6f">MinQueueTest::Struct_Get_Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>当最小优先级队列存放的是Node*数据时，获取key的函数对象 </p>
+
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00027">27</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b7e5e987d5e856adc5beb6986dd96a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a>&lt;<a class="el" href="struct_node.html">Node</a>,double&gt; <a class="el" href="class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3">MinQueueTest::Struct_MinQueue_Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>存放的是int*数据的最小优先级队列，其关键字就是int本身 </p>
+
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00028">28</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae801d45bf78b7bb80b278264d3a8e96a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +275,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00024">24</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00031">31</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
 
 </div>
 </div>
@@ -191,12 +300,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00028">28</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00041">41</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a372d59dab9f706027a6be031a1ab99dc"></a>
+<a class="anchor" id="a03f9ea0fcc4b820a539d32d6539c2df9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -204,7 +313,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a>&lt;<a class="el" href="struct_node.html">Node</a>&gt; &gt; MinQueueTest::_minqueue</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_min_queue_test.html#ad81df38acc845934accb320c4dbdd582">Int_MinQueue_Type</a>&gt; MinQueueTest::_int_minqueue</td>
         </tr>
       </table>
   </td>
@@ -215,7 +324,30 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>指向一个最小优先级队列 </p>
 
-<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00029">29</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00043">43</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed079eb9c6dd8460cc785b0fc6088a97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3">Struct_MinQueue_Type</a>&gt; MinQueueTest::_strcut_minqueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>指向一个最小优先级队列 </p>
+
+<p>Definition at line <a class="el" href="minqueue__test_8h_source.html#l00042">42</a> of file <a class="el" href="minqueue__test_8h_source.html">minqueue_test.h</a>.</p>
 
 </div>
 </div>

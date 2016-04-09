@@ -7,6 +7,7 @@ var annotated_dup =
     [ "BinaryTreeTest", "class_binary_tree_test.html", "class_binary_tree_test" ],
     [ "DFSTest", "class_d_f_s_test.html", "class_d_f_s_test" ],
     [ "DFSVertexTest", "class_d_f_s_vertex_test.html", "class_d_f_s_vertex_test" ],
+    [ "DisjointSetNodeTest", "class_disjoint_set_node_test.html", "class_disjoint_set_node_test" ],
     [ "EdgeTest", "class_edge_test.html", "class_edge_test" ],
     [ "GraphADJListTest", "class_graph_a_d_j_list_test.html", "class_graph_a_d_j_list_test" ],
     [ "GraphMatrixTest", "class_graph_matrix_test.html", "class_graph_matrix_test" ],

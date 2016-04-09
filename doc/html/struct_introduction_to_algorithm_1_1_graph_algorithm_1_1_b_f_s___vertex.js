@@ -1,5 +1,6 @@
 var struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex =
 [
+    [ "KeyType", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a1e47ba34939458c68d7ccee8ebeccad2", null ],
     [ "VIDType", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a62cef758843cdaeefae2fc196f6bdb46", null ],
     [ "COLOR", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a3f00f12565def71750f1f163e0e52305", [
       [ "WHITE", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a3f00f12565def71750f1f163e0e52305ab5bf627e448384cf3a4c35121ca6008d", null ],
@@ -7,8 +8,8 @@ var struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex =
       [ "BLACK", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a3f00f12565def71750f1f163e0e52305a08d0012388564e95c3b4a7407cf04965", null ]
     ] ],
     [ "BFS_Vertex", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#ad9540a9d7487eea8ece6ac1b0bbfcc22", null ],
-    [ "BFS_Vertex", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#afed1ffe004598a17dd919af3751dbe3f", null ],
-    [ "BFS_Vertex", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#ad55d2e534f3f1869e72a3f7513b0553f", null ],
+    [ "BFS_Vertex", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#abf41ef42dff5af509e9b42658882f604", null ],
+    [ "BFS_Vertex", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a3765fd695d8452180bafbb42baec744f", null ],
     [ "set_found", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a7e523d76f261801c3622f00458333320", null ],
     [ "set_source", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a3f5b9ba686fae02e01cd899261fe6793", null ],
     [ "to_string", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a73aa1fb33a2616818b709d04e79a007e", null ],

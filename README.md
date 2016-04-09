@@ -41,13 +41,18 @@ src\
 			binarytree:二叉树
 			binarytreenode：二叉树结点
 			searchtree:二叉搜索树	
+	queue_algorithms\	：队列算法
+			min_queue: 最小优先级队列
+	set_algorithms\		：集合算法
+			disjoint_set： 不相交集合森林
 	graph_algorithms\    ：图算法
 			basic_graph\ :基本图算法
-					graph_vertex：图的顶点
-					graph_edge:图的边
-					adjlist_graph：图的邻接表的表示法
-					matrix_graph：图的矩阵表示法
-					graph: 图
+					graph_representation\ ：图的表示
+								graph_vertex：图的顶点
+								graph_edge:图的边
+								adjlist_graph：图的邻接表的表示法
+								matrix_graph：图的矩阵表示法
+								graph: 图
 					graph_bfs:图的广度优先搜索算法
 					graph_dfs：图的深度优先搜索算法
 					topology_sort：有向无环图的拓扑排序算法
@@ -57,8 +62,10 @@ doc\      ：由doxygen自动生成的文档
 Doxyfile  :doxygen配置文件
 Introduction_to_Algorithms.pro :Qt项目配置文件
 ```
-* 本项目是利用Qt开发，因此未给出Makefile文件
-* 本项目所有算法都是用 `C++ Template`实现。
+
+* 本项目是利用Qt开发，因此未给出Makefile文件。但是所有的源代码都仅仅使用C++标准库，因此可以跨平台移植。
+  使用时只需要包含相应的头文件即可
+* 本项目所有算法都是用 `C++ Template`实现，因此算法的实现都在`.h`文件中
 * 本项目所有算法都有测试代码。如快速排序在`quicksort.h`中，快速排序的测试代码在`quicksort_test.h`中，二者位于同一目录下
 * 本项目所有的命名空间、函数、类以及必要的成员都打上了`doxygen`注释，可以方便的进行文档化
 

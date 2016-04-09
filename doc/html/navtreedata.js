@@ -35,8 +35,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "adjlistgraph_8h.html",
-"functions_func.html",
-"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#aa16d1f2e6949d0adccc30b0704013e6d"
+"dir_f44c2af64913d750a860b1a7088a5b4e.html",
+"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html#ab53cda3a7d135ed892b298c14d5579fe"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

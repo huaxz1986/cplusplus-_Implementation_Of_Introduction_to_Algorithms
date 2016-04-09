@@ -97,7 +97,7 @@ class DFSTest:public ::testing::Test
 {
 public:
 typedef Graph<DFS_N,DFS_Vertex<double>> GType; /*!< 模板实例化的图类型，该图的顶点类型为`DFS_Vertex<double>`*/
-
+typedef std::function<void(DFS_Vertex<double>::VIDType v_id,int time)> ActionType;/*!< 模板实例化的Action类型*/
 protected:
     void SetUp()
     {
@@ -140,29 +140,29 @@ TEST_F(DFSTest,test_dfs)
     {
         std::ostringstream discover_os;
         std::ostringstream finished_os;
-        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
-        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        ActionType print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        ActionType print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
         //****** 测试只有一个顶点的图**********
 
-        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_1v_graph,print_discover,print_finished);
+        depth_first_search(_1v_graph,print_discover,print_finished);
         EXPECT_EQ(discover_os.str(),"0,");
         EXPECT_EQ(finished_os.str(),"0,");
     }
     {
         std::ostringstream discover_os;
         std::ostringstream finished_os;
-        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
-        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        ActionType print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        ActionType print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
         //****** 测试只有一条边的图**********
-        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_1e_graph,print_discover,print_finished);
+        depth_first_search(_1e_graph,print_discover,print_finished);
         EXPECT_EQ(discover_os.str(),"0,1,");
         EXPECT_EQ(finished_os.str(),"1,0,");
     }
     {
         std::ostringstream discover_os;
         std::ostringstream finished_os;
-        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
-        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        ActionType print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        ActionType print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
         //****** 测试测试链边的图**********
         std::string real_discover_str,real_finish_str;
         char char_from_int[2];
@@ -173,16 +173,16 @@ TEST_F(DFSTest,test_dfs)
             itoa(DFS_N-i-1,char_from_int,10);
             real_finish_str+=std::string(char_from_int)+",";
         }
-        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_list_graph,print_discover,print_finished);
+        depth_first_search(_list_graph,print_discover,print_finished);
         EXPECT_EQ(discover_os.str(),real_discover_str);
         EXPECT_EQ(finished_os.str(),real_finish_str);
     }
     {
-        auto empty_action=[](DFS_Vertex<double>::VIDType v_id,int time){};
+        ActionType empty_action=[](DFS_Vertex<double>::VIDType v_id,int time){};
         std::ostringstream discover_os;
         std::ostringstream finished_os;
-        auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
-        auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+        ActionType print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+        ActionType print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
         //****** 测试测试链边的图，逆序**********
 
         std::string real_discover_str,real_finish_str;
@@ -195,7 +195,7 @@ TEST_F(DFSTest,test_dfs)
             real_discover_str+=std::string(char_from_int)+",";
             real_finish_str+=std::string(char_from_int)+",";
         }
-        depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_rlist_graph,print_discover,print_finished,empty_action,empty_action,search_order);
+        depth_first_search(_rlist_graph,print_discover,print_finished,empty_action,empty_action,search_order);
         EXPECT_EQ(discover_os.str(),real_discover_str);
         EXPECT_EQ(finished_os.str(),real_finish_str);
     }
@@ -211,10 +211,10 @@ TEST_F(DFSTest,test_get_path)
 
     std::ostringstream discover_os;
     std::ostringstream finished_os;
-    auto print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
-    auto print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
+    ActionType print_discover=[&discover_os](DFS_Vertex<double>::VIDType v_id,int time){discover_os<<v_id<<",";};
+    ActionType print_finished=[&finished_os](DFS_Vertex<double>::VIDType v_id,int time){finished_os<<v_id<<",";};
    //**** 测试链边的图**********
-   depth_first_search<GType,std::function<void(DFS_Vertex<double>::VIDType v_id,int time)>>(_list_graph,print_discover,print_finished);
+   depth_first_search(_list_graph,print_discover,print_finished);
    for(int i=0;i<DFS_N;i++)
    {
        std::vector<int> real;

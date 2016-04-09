@@ -112,8 +112,8 @@ $(document).ready(function(){initNavTree('dfs_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="header_8h_source.html">src/header.h</a>&gt;</code><br />
-<code>#include &quot;<a class="el" href="vertex_8h_source.html">../graph_vertex/vertex.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="graph_8h_source.html">../graph/graph.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="vertex_8h_source.html">../graph_representation/graph_vertex/vertex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="graph_8h_source.html">../graph_representation/graph/graph.h</a>&quot;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 </div>
 <p><a href="dfs_8h_source.html">Go to the source code of this file.</a></p>
@@ -135,21 +135,21 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a01ece18a63d13cfe023c1f6360e63451"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename Action  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
-<tr class="memitem:a01ece18a63d13cfe023c1f6360e63451"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a01ece18a63d13cfe023c1f6360e63451">IntroductionToAlgorithm::GraphAlgorithm::visit</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType v_id, int &amp;time, Action pre_action=[](typename GraphType::VIDType, int){}, Action post_action=[](typename GraphType::VIDType, int){})</td></tr>
-<tr class="memdesc:a01ece18a63d13cfe023c1f6360e63451"><td class="mdescLeft">&#160;</td><td class="mdescRight">visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节  <a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a01ece18a63d13cfe023c1f6360e63451">More...</a><br /></td></tr>
-<tr class="separator:a01ece18a63d13cfe023c1f6360e63451"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename Action  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
-<tr class="memitem:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a5d500378f28e485a3b9a9b9cc74e4f97">IntroductionToAlgorithm::GraphAlgorithm::depth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, Action pre_action=[](typename GraphType::VIDType, int){}, Action post_action=[](typename GraphType::VIDType, int){}, Action pre_root_action=[](typename GraphType::VIDType, int){}, Action post_root_action=[](typename GraphType::VIDType, int){}, const std::vector&lt; typename GraphType::VIDType &gt; &amp;search_order=std::vector&lt; typename GraphType::VIDType &gt;())</td></tr>
-<tr class="memdesc:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">depth_first_search：深度优先搜索，算法导论22章22.3节  <a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a5d500378f28e485a3b9a9b9cc74e4f97">More...</a><br /></td></tr>
-<tr class="separator:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af651a2b435fc270ab711e573d83a385d"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
+<tr class="memitem:af651a2b435fc270ab711e573d83a385d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#af651a2b435fc270ab711e573d83a385d">IntroductionToAlgorithm::GraphAlgorithm::visit</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType v_id, int &amp;time, ActionType pre_action=[](typename GraphType::VIDType, int){}, ActionType post_action=[](typename GraphType::VIDType, int){})</td></tr>
+<tr class="memdesc:af651a2b435fc270ab711e573d83a385d"><td class="mdescLeft">&#160;</td><td class="mdescRight">visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节  <a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#af651a2b435fc270ab711e573d83a385d">More...</a><br /></td></tr>
+<tr class="separator:af651a2b435fc270ab711e573d83a385d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb9faf89f84f73b716c25966786e078"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
+<tr class="memitem:a3bb9faf89f84f73b716c25966786e078"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a3bb9faf89f84f73b716c25966786e078">IntroductionToAlgorithm::GraphAlgorithm::depth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, ActionType pre_action=[](typename GraphType::VIDType, int){}, ActionType post_action=[](typename GraphType::VIDType, int){}, ActionType pre_root_action=[](typename GraphType::VIDType, int){}, ActionType post_root_action=[](typename GraphType::VIDType, int){}, const std::vector&lt; typename GraphType::VIDType &gt; &amp;search_order=std::vector&lt; typename GraphType::VIDType &gt;())</td></tr>
+<tr class="memdesc:a3bb9faf89f84f73b716c25966786e078"><td class="mdescLeft">&#160;</td><td class="mdescRight">depth_first_search：深度优先搜索，算法导论22章22.3节  <a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a3bb9faf89f84f73b716c25966786e078">More...</a><br /></td></tr>
+<tr class="separator:a3bb9faf89f84f73b716c25966786e078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_238cdd624944168b5ffbc9e2043cddc6.html">graph_algorithms</a></li><li class="navelem"><a class="el" href="dir_5d1e85e6e71754dedb2ad504b90e6be1.html">basic_graph</a></li><li class="navelem"><a class="el" href="dir_d23a77eed3f7e1e8fc4833773f7164d8.html">graph_dfs</a></li><li class="navelem"><a class="el" href="dfs_8h.html">dfs.h</a></li>
+    <li class="navelem"><a class="el" href="dir_8ed9dba4cd616b67da9b1338594e34e0.html">src</a></li><li class="navelem"><a class="el" href="dir_aa0a5ddea82682e3e6fbdbaa3337ee0e.html">graph_algorithms</a></li><li class="navelem"><a class="el" href="dir_7ed7dee3af3b488a5e053ec9bcb71f0e.html">basic_graph</a></li><li class="navelem"><a class="el" href="dir_0378c045220c77c61c3962fa329eda72.html">graph_dfs</a></li><li class="navelem"><a class="el" href="dfs_8h.html">dfs.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>

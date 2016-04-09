@@ -97,7 +97,7 @@ class BFSTest:public ::testing::Test
 {
 public:
 typedef Graph<BFS_N,BFS_Vertex<int>> GType; /*!< 模板实例化的图类型，该图的顶点类型为`BFS_Vertex<int>`*/
-
+typedef std::function<void(BFS_Vertex<int>::VIDType v_id)> ActionType;/*!< 模板实例化的Action类型*/
 protected:
     void SetUp(){
         _1v_graph=std::make_shared<GType>(-1);//边的无效权重为-1
@@ -130,7 +130,7 @@ TEST_F(BFSTest,test_bfs)
 {
     {
         std::ostringstream os;
-        auto print_bfs=[&os](BFS_Vertex<int>::VIDType v_id){os<<v_id<<",";};
+        ActionType print_bfs=[&os](BFS_Vertex<int>::VIDType v_id){os<<v_id<<",";};
         //****** 测试只有一个顶点的图**********
         EXPECT_THROW(breadth_first_search(_1v_graph,1,print_bfs),std::invalid_argument);
         breadth_first_search(_1v_graph,0,print_bfs);
@@ -139,7 +139,7 @@ TEST_F(BFSTest,test_bfs)
     }
     {
         std::ostringstream os;
-        auto print_bfs=[&os](BFS_Vertex<double>::VIDType v_id){os<<v_id<<",";};
+        ActionType print_bfs=[&os](BFS_Vertex<double>::VIDType v_id){os<<v_id<<",";};
         //***** 测试只有一条边的图*********
         breadth_first_search(_1e_graph,0,print_bfs);
         EXPECT_EQ(os.str(),"0,1,");
@@ -148,7 +148,7 @@ TEST_F(BFSTest,test_bfs)
     }
     {
         std::ostringstream os;
-        auto print_bfs=[&os](BFS_Vertex<double>::VIDType v_id){os<<v_id<<",";};
+        ActionType print_bfs=[&os](BFS_Vertex<double>::VIDType v_id){os<<v_id<<",";};
         //**** 测试链边的图**********
         std::string real_str;
         char char_from_int[2];
@@ -174,7 +174,7 @@ TEST_F(BFSTest,test_bfs)
 TEST_F(BFSTest,test_get_path)
 {
     std::ostringstream os;
-    auto print_bfs=[&os](BFS_Vertex<double>::VIDType v_id){os<<v_id<<",";};
+    ActionType print_bfs=[&os](BFS_Vertex<double>::VIDType v_id){os<<v_id<<",";};
     //****** 测试只有一个顶点的图**********
     EXPECT_EQ(get_path(_1v_graph->vertexes.at(0),_1v_graph->vertexes.at(0)).size(),1);
     EXPECT_THROW(get_path(_1v_graph->vertexes.at(0),_1v_graph->vertexes.at(1)),std::invalid_argument);

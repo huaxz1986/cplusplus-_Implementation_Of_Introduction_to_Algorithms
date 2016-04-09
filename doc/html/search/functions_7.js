@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['has_5fedge',['has_edge',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#aa0fd43a6621de69396f907e11cff5db4',1,'IntroductionToAlgorithm::GraphAlgorithm::ADJListGraph::has_edge()'],['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a9ec6e834a0411b11e7701f429ed7c686',1,'IntroductionToAlgorithm::GraphAlgorithm::Graph::has_edge()'],['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#ab5eb0a563c39a088d16e349cb3d73a2d',1,'IntroductionToAlgorithm::GraphAlgorithm::MatrixGraph::has_edge()']]],
-  ['heapify',['heapify',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#ae06cfa4dbe4464586b498b15f36081c8',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]]
+  ['get_5fpath',['get_path',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a1581960f77507024b39572aeb6d1fbd6',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
+  ['good_5fselect',['good_select',['../namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3',1,'IntroductionToAlgorithm::SelectAlgorithm']]],
+  ['graph',['Graph',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a1effb22f7cc51898e54bbb3a5f549c95',1,'IntroductionToAlgorithm::GraphAlgorithm::Graph::Graph(EWeightType val)'],['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a554fe807fb375fe4e56e5b0a0ac21477',1,'IntroductionToAlgorithm::GraphAlgorithm::Graph::Graph()']]]
 ];

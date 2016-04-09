@@ -79,6 +79,15 @@ namespace IntroductionToAlgorithm
 
 
     }
+    //! Namespace of  SetAlgorithm
+    /*!
+    *
+    * 该命名空间内包含所有`Set`算法
+    */
+    namespace SetAlgorithm {
+
+
+    }
     //! Namespace of  GraphAlgorithm
     /*!
     *

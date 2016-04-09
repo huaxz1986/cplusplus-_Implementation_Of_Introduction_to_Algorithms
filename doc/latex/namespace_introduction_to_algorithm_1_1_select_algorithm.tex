@@ -8,11 +8,11 @@ Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_select_algorithm
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{namespace_introduction_to_algorithm_1_1_select_algorithm_a657864bac0e9aae7bedb7cde85ac5576}{good\+\_\+select} (const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=Compare())
+{\footnotesize template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{namespace_introduction_to_algorithm_1_1_select_algorithm_af7d1f100ddee11d1de6bde2cd86d8be3}{good\+\_\+select} (const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em good\+\_\+select： 算法导论第9章9.3 最坏时间为\+O(n)的顺序统计量选择算法 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Int\+Type $>$ }\\Int\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_select_algorithm_a117ee8d5d70d91c5be1d412f9fbad1cd}{radom\+\_\+index} (Int\+Type begin, Int\+Type end)
 \begin{DoxyCompactList}\small\item\em radom\+\_\+index： 生成随机整数 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{namespace_introduction_to_algorithm_1_1_select_algorithm_a395bd75c7fea69efc84be89a00b9463c}{randomized\+\_\+select} (const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=Compare())
+{\footnotesize template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{namespace_introduction_to_algorithm_1_1_select_algorithm_ae742d2848ba12d8cc796668091e469aa}{randomized\+\_\+select} (const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em randomized\+\_\+select： 算法导论第9章9.2 顺序统计量的随机选择算法 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -22,16 +22,16 @@ Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_select_algorithm
 该命名空间内包含所有顺序统计量算法 
 
 \subsection{Function Documentation}
-\hypertarget{namespace_introduction_to_algorithm_1_1_select_algorithm_a657864bac0e9aae7bedb7cde85ac5576}{}\index{Introduction\+To\+Algorithm\+::\+Select\+Algorithm@{Introduction\+To\+Algorithm\+::\+Select\+Algorithm}!good\+\_\+select@{good\+\_\+select}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_select_algorithm_af7d1f100ddee11d1de6bde2cd86d8be3}{}\index{Introduction\+To\+Algorithm\+::\+Select\+Algorithm@{Introduction\+To\+Algorithm\+::\+Select\+Algorithm}!good\+\_\+select@{good\+\_\+select}}
 \index{good\+\_\+select@{good\+\_\+select}!Introduction\+To\+Algorithm\+::\+Select\+Algorithm@{Introduction\+To\+Algorithm\+::\+Select\+Algorithm}}
-\subsubsection[{good\+\_\+select(const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type Introduction\+To\+Algorithm\+::\+Select\+Algorithm\+::good\+\_\+select (
+\subsubsection[{good\+\_\+select(const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type Introduction\+To\+Algorithm\+::\+Select\+Algorithm\+::good\+\_\+select (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{begin, }
 \item[{const Iterator}]{end, }
 \item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type}]{rank, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_select_algorithm_a657864bac0e9aae7bedb7cde85ac5576}
+)}\label{namespace_introduction_to_algorithm_1_1_select_algorithm_af7d1f100ddee11d1de6bde2cd86d8be3}
 
 
 good\+\_\+select： 算法导论第9章9.3 最坏时间为\+O(n)的顺序统计量选择算法 
@@ -102,16 +102,16 @@ radom\+\_\+index： 生成随机整数
 
 Definition at line 18 of file randomizedselect.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_select_algorithm_a395bd75c7fea69efc84be89a00b9463c}{}\index{Introduction\+To\+Algorithm\+::\+Select\+Algorithm@{Introduction\+To\+Algorithm\+::\+Select\+Algorithm}!randomized\+\_\+select@{randomized\+\_\+select}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_select_algorithm_ae742d2848ba12d8cc796668091e469aa}{}\index{Introduction\+To\+Algorithm\+::\+Select\+Algorithm@{Introduction\+To\+Algorithm\+::\+Select\+Algorithm}!randomized\+\_\+select@{randomized\+\_\+select}}
 \index{randomized\+\_\+select@{randomized\+\_\+select}!Introduction\+To\+Algorithm\+::\+Select\+Algorithm@{Introduction\+To\+Algorithm\+::\+Select\+Algorithm}}
-\subsubsection[{randomized\+\_\+select(const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type Introduction\+To\+Algorithm\+::\+Select\+Algorithm\+::randomized\+\_\+select (
+\subsubsection[{randomized\+\_\+select(const Iterator begin, const Iterator end, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type rank, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type Introduction\+To\+Algorithm\+::\+Select\+Algorithm\+::randomized\+\_\+select (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{begin, }
 \item[{const Iterator}]{end, }
 \item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type}]{rank, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_select_algorithm_a395bd75c7fea69efc84be89a00b9463c}
+)}\label{namespace_introduction_to_algorithm_1_1_select_algorithm_ae742d2848ba12d8cc796668091e469aa}
 
 
 randomized\+\_\+select： 算法导论第9章9.2 顺序统计量的随机选择算法 

@@ -29,9 +29,9 @@ namespace IntroductionToAlgorithm
      * - 时间复杂度：最坏情况下时间为O(n)
      * - 非原地操作：因为这里要把所有分组的中位数构造成一个序列，然后把找到该序列的中位数作为good_select(...)的主元
     */
-    template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
+    template<typename Iterator,typename CompareType=std::less<typename std::iterator_traits<Iterator>::value_type>>
                 typename std::iterator_traits<Iterator>::value_type
-                good_select(const Iterator begin,const Iterator end,typename std::iterator_traits<Iterator>::difference_type rank,Compare compare=Compare())
+                good_select(const Iterator begin,const Iterator end,typename std::iterator_traits<Iterator>::difference_type rank,CompareType compare=CompareType())
         {
             using IntroductionToAlgorithm::SortAlgorithm::quick_sort;
             using IntroductionToAlgorithm::SortAlgorithm::partition;

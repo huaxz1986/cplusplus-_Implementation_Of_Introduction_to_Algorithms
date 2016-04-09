@@ -1,8 +1,8 @@
 #ifndef BFS
 #define BFS
 #include<src/header.h>
-#include"../graph_vertex/vertex.h"
-#include"../graph/graph.h"
+#include"../graph_representation/graph_vertex/vertex.h"
+#include"../graph_representation/graph/graph.h"
 #include<queue>
 #include<functional>
 namespace IntroductionToAlgorithm
@@ -27,6 +27,7 @@ namespace IntroductionToAlgorithm
         {
 
              typedef int VIDType;      /*!< 顶点编号的数据类型*/
+             typedef KType KeyType;  /*!< 顶点存储数据的类型*/
              enum class COLOR{WHITE,GRAY,BLACK}; /*!< 顶点颜色的枚举类型*/
 
 
@@ -38,7 +39,7 @@ namespace IntroductionToAlgorithm
              *
              * 顶点的颜色默认设为白色
              */
-             explicit BFS_Vertex(const KType&k):color(COLOR::WHITE),Vertex<KType>(k){}
+             explicit BFS_Vertex(const KeyType&k):color(COLOR::WHITE),Vertex<KeyType>(k){}
              //!显式构造函数，指定`key`和编号
              /*!
              * \param  k:顶点存放的数据
@@ -46,7 +47,7 @@ namespace IntroductionToAlgorithm
              *
              * 顶点的颜色默认设为白色
              */
-             BFS_Vertex(const KType&k,VIDType d):color(COLOR::WHITE),Vertex<KType>(k,d){}
+             BFS_Vertex(const KeyType&k,VIDType d):color(COLOR::WHITE),Vertex<KeyType>(k,d){}
 
              //!set_source：设本顶点为源点
              /*!
@@ -91,7 +92,7 @@ namespace IntroductionToAlgorithm
              std::string to_string()
              {
                 std::ostringstream os;
-                os<<Vertex<KType>::to_string()<<"\t color:";
+                os<<Vertex<KeyType>::to_string()<<"\t color:";
                 switch (color) {
                 case COLOR::WHITE:
                     os<<"WHITE";
@@ -119,7 +120,8 @@ namespace IntroductionToAlgorithm
         /*!
         * \param graph:指向图的强引用，必须非空。若为空则抛出异常
         * \param source_id：广度优先搜索的源点`id`，必须有效。若无效则抛出异常
-        * \param action:一个可调用对象，它在每次搜索到一个顶点后立即调用。其参数为被搜索到的顶点`id`。它默认是个空操作，即不执行任何操作。
+        * \param pre_action:一个可调用对象，在每次发现一个顶点时调用，调用参数为该顶点的`id`。默认为空操作，即不进行任何操作
+        * \param post_action:一个可调用对象，在每次对一个顶点搜索完成时调用，调用参数为该顶点的`id`。默认为空操作，即不进行任何操作
         * \return:void
         *
         * `source_id`在以下情况下无效：
@@ -152,10 +154,10 @@ namespace IntroductionToAlgorithm
         * BFS算法获取的前驱子图G_pai包含一条从源结点s到结点v的唯一简单路径，而且该路径也是图G里面从源s到v之间的一条最短路径，因此前驱子图也称为广度优先树。
         *
         */
-    template<typename GraphType,typename Action=std::function< void(typename GraphType::VIDType)>> void breadth_first_search(std::shared_ptr<GraphType> graph,
-                      typename GraphType::VIDType source_id,Action action=[](typename GraphType::VIDType){})
+    template<typename GraphType,typename ActionType=std::function< void(typename GraphType::VIDType)>> void breadth_first_search(std::shared_ptr<GraphType> graph,
+                      typename GraphType::VIDType source_id,ActionType pre_action=[](typename GraphType::VIDType){},ActionType post_action=[](typename GraphType::VIDType){})
         {
-            typedef typename GraphType::VType VertexType;
+            typedef typename GraphType::VertexType VertexType;
             typedef typename GraphType::VIDType VIDType;
 
             if(!graph)
@@ -168,13 +170,13 @@ namespace IntroductionToAlgorithm
             for(auto& v:graph->vertexes)
             {
                 if(!v) continue;
-                v->color=VertexType::COLOR::WHITE;
+                v->color=VertexType::COLOR::WHITE; //由于BFS_Vertex的构造函数将color成员设置为WHITE，因此这句可以省略
                 v->key=unlimit<typename VertexType::KeyType>();
             }
             //************* 处理源顶点 ****************
             graph->vertexes.at(source_id)->set_source();
             v_queue.push(graph->vertexes.at(source_id));
-            action(source_id);
+            pre_action(source_id);
             //************ 处理其他顶点 ***************
             while(!v_queue.empty())
             {
@@ -189,10 +191,11 @@ namespace IntroductionToAlgorithm
                     {
                         next_vertex->set_found(front);
                         v_queue.push(next_vertex);
-                        action(next_id);
+                        pre_action(next_id);
                     }
                 }
                 front->color=VertexType::COLOR::BLACK;
+                post_action(front->id);
             }
         }
 

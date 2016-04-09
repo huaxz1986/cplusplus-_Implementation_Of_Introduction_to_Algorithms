@@ -17,15 +17,15 @@ class \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___h
 \begin{DoxyCompactList}\small\item\em bucket\+\_\+sort：算法导论第8章 8.\+4 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_af51ff6ca75d6dccb1add1ad92a5d32fb}{count\+\_\+sort} (const Iterator begin, const Iterator end, const typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \&max\+\_\+val)
 \begin{DoxyCompactList}\small\item\em count\+\_\+sort：算法导论第8章 8.\+2 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a0cb38883a5023cfb6103e483f6624516}{insert\+\_\+sort} (const Iterator begin, const Iterator end, Compare compare=Compare())
+{\footnotesize template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a363c47d6d0dad2f1217b08d355e81126}{insert\+\_\+sort} (const Iterator begin, const Iterator end, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em insert\+\_\+sort：算法导论第二章 2.\+1 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_ad571bfe444232c0bff4c91e4a81ec0b1}{merge} (const Iterator begin, const Iterator end, const Iterator middle, Compare compare=Compare())
+{\footnotesize template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a4806cf41bd25ff1d1344d858a7a5b577}{merge} (const Iterator begin, const Iterator end, const Iterator middle, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em merge：算法导论第二章 2.\+3.\+1 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_abfe60fdd700f01fa3efd688c65e1b243}{merge\+\_\+sort} (const Iterator begin, const Iterator end, Compare compare=Compare())
+{\footnotesize template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a38dce6f6996c858aef1096d75bb785db}{merge\+\_\+sort} (const Iterator begin, const Iterator end, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em merge\+\_\+sort：算法导论第二章 2.\+3.\+1 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\Iterator \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a3a0aaefb36c3d675b9dc6e539471c1c4}{partition} (const Iterator begin, const Iterator end, const Iterator partition\+\_\+iter, Compare compare=Compare())
+{\footnotesize template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\Iterator \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a3a2d13a83cd168d9a10df0ed8c39f9ee}{partition} (const Iterator begin, const Iterator end, const Iterator partition\+\_\+iter, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em partition： 算法导论第7章快速排序中的划分算法 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a1915f2ec6aae8dbd66df40483d96eba2}{quick\+\_\+sort} (const Iterator begin, const Iterator end, Compare compare=Compare())
+{\footnotesize template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_aa304e98b87d7ec1c17bd5cae534fb666}{quick\+\_\+sort} (const Iterator begin, const Iterator end, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em quick\+\_\+sort： 算法导论第7章 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introduction_to_algorithm_1_1_sort_algorithm_a563e87041fc859e7bafe4a11a790dec2}{digi\+\_\+on\+\_\+\+N} (T num, std\+::size\+\_\+t n)
 \begin{DoxyCompactList}\small\item\em digi\+\_\+on\+\_\+\+N ： 获取正整数指定位数上的数字 \end{DoxyCompactList}\item 
@@ -147,15 +147,15 @@ digi\+\_\+on\+\_\+\+N ： 获取正整数指定位数上的数字
 
 Definition at line 21 of file radixsort.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_a0cb38883a5023cfb6103e483f6624516}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!insert\+\_\+sort@{insert\+\_\+sort}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_a363c47d6d0dad2f1217b08d355e81126}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!insert\+\_\+sort@{insert\+\_\+sort}}
 \index{insert\+\_\+sort@{insert\+\_\+sort}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{insert\+\_\+sort(const Iterator begin, const Iterator end, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::insert\+\_\+sort (
+\subsubsection[{insert\+\_\+sort(const Iterator begin, const Iterator end, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::insert\+\_\+sort (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{begin, }
 \item[{const Iterator}]{end, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_a0cb38883a5023cfb6103e483f6624516}
+)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_a363c47d6d0dad2f1217b08d355e81126}
 
 
 insert\+\_\+sort：算法导论第二章 2.\+1 
@@ -184,16 +184,16 @@ void
 
 Definition at line 38 of file insertsort.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_ad571bfe444232c0bff4c91e4a81ec0b1}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge@{merge}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_a4806cf41bd25ff1d1344d858a7a5b577}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge@{merge}}
 \index{merge@{merge}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{merge(const Iterator begin, const Iterator end, const Iterator middle, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge (
+\subsubsection[{merge(const Iterator begin, const Iterator end, const Iterator middle, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{begin, }
 \item[{const Iterator}]{end, }
 \item[{const Iterator}]{middle, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_ad571bfe444232c0bff4c91e4a81ec0b1}
+)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_a4806cf41bd25ff1d1344d858a7a5b577}
 
 
 merge：算法导论第二章 2.\+3.\+1 
@@ -225,15 +225,15 @@ void
 
 Definition at line 42 of file mergesort.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_abfe60fdd700f01fa3efd688c65e1b243}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge\+\_\+sort@{merge\+\_\+sort}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_a38dce6f6996c858aef1096d75bb785db}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!merge\+\_\+sort@{merge\+\_\+sort}}
 \index{merge\+\_\+sort@{merge\+\_\+sort}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{merge\+\_\+sort(const Iterator begin, const Iterator end, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge\+\_\+sort (
+\subsubsection[{merge\+\_\+sort(const Iterator begin, const Iterator end, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::merge\+\_\+sort (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{begin, }
 \item[{const Iterator}]{end, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_abfe60fdd700f01fa3efd688c65e1b243}
+)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_a38dce6f6996c858aef1096d75bb785db}
 
 
 merge\+\_\+sort：算法导论第二章 2.\+3.\+1 
@@ -263,16 +263,16 @@ void
 
 Definition at line 86 of file mergesort.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_a3a0aaefb36c3d675b9dc6e539471c1c4}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!partition@{partition}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_a3a2d13a83cd168d9a10df0ed8c39f9ee}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!partition@{partition}}
 \index{partition@{partition}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{partition(const Iterator begin, const Iterator end, const Iterator partition\+\_\+iter, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ Iterator Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::partition (
+\subsubsection[{partition(const Iterator begin, const Iterator end, const Iterator partition\+\_\+iter, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ Iterator Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::partition (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{begin, }
 \item[{const Iterator}]{end, }
 \item[{const Iterator}]{partition\+\_\+iter, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_a3a0aaefb36c3d675b9dc6e539471c1c4}
+)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_a3a2d13a83cd168d9a10df0ed8c39f9ee}
 
 
 partition： 算法导论第7章快速排序中的划分算法 
@@ -308,15 +308,15 @@ partition： 算法导论第7章快速排序中的划分算法
 
 Definition at line 43 of file quicksort.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_a1915f2ec6aae8dbd66df40483d96eba2}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!quick\+\_\+sort@{quick\+\_\+sort}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_sort_algorithm_aa304e98b87d7ec1c17bd5cae534fb666}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}!quick\+\_\+sort@{quick\+\_\+sort}}
 \index{quick\+\_\+sort@{quick\+\_\+sort}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm}}
-\subsubsection[{quick\+\_\+sort(const Iterator begin, const Iterator end, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::quick\+\_\+sort (
+\subsubsection[{quick\+\_\+sort(const Iterator begin, const Iterator end, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Compare\+Type  = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::quick\+\_\+sort (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{begin, }
 \item[{const Iterator}]{end, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_a1915f2ec6aae8dbd66df40483d96eba2}
+)}\label{namespace_introduction_to_algorithm_1_1_sort_algorithm_aa304e98b87d7ec1c17bd5cae534fb666}
 
 
 quick\+\_\+sort： 算法导论第7章 

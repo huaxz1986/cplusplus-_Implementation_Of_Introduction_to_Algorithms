@@ -1,5 +1,5 @@
 var quicksort_8h =
 [
-    [ "partition", "quicksort_8h.html#a3a0aaefb36c3d675b9dc6e539471c1c4", null ],
-    [ "quick_sort", "quicksort_8h.html#a1915f2ec6aae8dbd66df40483d96eba2", null ]
+    [ "partition", "quicksort_8h.html#a3a2d13a83cd168d9a10df0ed8c39f9ee", null ],
+    [ "quick_sort", "quicksort_8h.html#aa304e98b87d7ec1c17bd5cae534fb666", null ]
 ];

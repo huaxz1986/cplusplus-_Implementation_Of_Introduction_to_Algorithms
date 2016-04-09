@@ -8,17 +8,17 @@ namespace IntroductionToAlgorithm
     //!Sort_Heap：用于堆排序的堆，算法导论第6章
     /*!
     *
-    * - 堆排序思想：假设对数组A[p...r]排序：首先将数组构建成一个最小堆（或者最大堆）。然后第一个元素就是堆中最小的元素。
-    * 将第一个元素与最后一个元素交换，同时堆的规模缩减1，再将堆维持最小堆性质。不断循环最后得到一个排序好的数组
+    * - 堆排序思想：假设对数组A[p...r]排序：首先将数组构建成一个最大堆（或者最小堆，这里的实现采用最大堆）。然后第一个元素就是堆中最大的元素。
+    * 将第一个元素与最后一个元素交换，同时堆的规模缩减1，再将堆维持最大堆性质。不断循环最后得到一个排序好的序列
     * - 时间复杂度 O(nlogn)
     * - 原地排序
     *
     * 堆排序有两个重要操作：
     *
-    * - heapify(index)操作：维持以index为根节点的子堆的性质。它比较index与其左右子节点的值，选取其最小的那个提升到index节点上。同时递归向下。具体见_heapify()方法说明
+    * - heapify(index)操作：维持以index为根节点的子堆的性质。它比较index与其左右子节点的值，选取其最大的那个提升到index节点上。同时递归向下。具体见_heapify()方法说明
     * - setupHeap()操作： 建堆操作。它从堆的最低层向上层反复调用heapify操作进行建堆。
     */
-        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
+        template<typename Iterator,typename CompareType=std::less<typename std::iterator_traits<Iterator>::value_type>>
         class Sort_Heap
         {
         public:
@@ -30,12 +30,12 @@ namespace IntroductionToAlgorithm
             * \param compare: 一个可调用对象，可用于比较两个对象的小于比较，默认为std::less<T>
             * \return void
             *
-            * 首先调用 _setupHeap()建堆。然后再反复抽取最小值到堆尾部，然后维持堆的性质。
+            * 首先调用 _setupHeap()建堆。然后再反复抽取最大值到堆尾部，然后维持堆的性质。
             *
             * - 时间复杂度 O(nlogn)
             * - 原地排序
             */
-            void operator () (const Iterator from, std::size_t size,Compare compare=Compare())
+            void operator () (const Iterator from, std::size_t size,CompareType compare=CompareType())
             {
                 _from=from;
                 _size=size;
@@ -53,12 +53,12 @@ namespace IntroductionToAlgorithm
             * \param compare: 一个可调用对象，可用于比较两个对象的小于比较，默认为std::less<T>
             * \return void
             *
-            * 从后一半的元素开始依次向前调用heapify操作（根据最小堆性质，除了最底层它是完全充满的）
+            * 从后一半的元素开始依次向前调用heapify操作（根据最大堆性质，除了最底层它是完全充满的）
             *
             * - 时间复杂度 O(nlogn)
             * - 原地操作
             */
-            void _setupHeap(Compare compare=Compare())
+            void _setupHeap(CompareType compare=CompareType())
             {
                 if(_size<=1)
                     return;
@@ -75,13 +75,13 @@ namespace IntroductionToAlgorithm
             * \param compare: 一个可调用对象，可用于比较两个对象的小于比较，默认为std::less<T>
             * \return void
             *
-            * 首先调用比较该节点与左右子节点的最小值。如果最小值为它本身，则维持了性质，返回；如果最小值不是它本身，那么必然为左、右子节点之一。
-            * 将该最小节点（假设为左子节点）交换到根节点，然后以左子节点递归调用heapify操作
+            * 首先调用比较该节点与左右子节点的最大值。如果最大值为它本身，则维持了性质，返回；如果最大值不是它本身，那么必然为左、右子节点之一。
+            * 将该最大节点（假设为左子节点）交换到根节点，然后以左子节点递归调用heapify操作
             *
             * - 时间复杂度 O(n)
             * - 原地操作
             */
-            void _heapify(std::size_t elementIndex,Compare compare=Compare())
+            void _heapify(std::size_t elementIndex,CompareType compare=CompareType())
             {
                 if(elementIndex>=_size)
                     return;
@@ -113,7 +113,7 @@ namespace IntroductionToAlgorithm
             * \param valid: 一个bool&值，用于返回，指示父节点是否有效
             * \return 父节点位置(std::size_t)
             *
-            * 根据最小堆的性质，一个子节点elementIndex的父节点是它的位置(elementIndex-1)/2。
+            * 根据最大堆的性质，一个子节点elementIndex的父节点是它的位置(elementIndex-1)/2。
             *
             * - 超出堆大小的节点，其父节点无效
             *
@@ -135,9 +135,9 @@ namespace IntroductionToAlgorithm
             * \param valid: 一个bool&值，用于返回，指示子节点是否有效
             * \return 左子节点位置(std::size_t)
             *
-            * 根据最小堆的性质，一个节点elementIndex的左子节点是它的位置(elementIndex/2)+1
+            * 根据最大堆的性质，一个节点elementIndex的左子节点是它的位置(elementIndex/2)+1
             *
-            * - 当最小堆大小为0、1时，它没有左子节点，左子节点无效
+            * - 当最大堆大小为0、1时，它没有左子节点，左子节点无效
             * - 当左子节点超过堆大小时，它无效
             *
             */
@@ -163,9 +163,9 @@ namespace IntroductionToAlgorithm
             * \param valid: 一个bool&值，用于返回，指示子节点是否有效
             * \return 右子节点位置(std::size_t)
             *
-            * 根据最小堆的性质，一个节点elementIndex的右子节点是它的位置(elementIndex/2)+2
+            * 根据最大堆的性质，一个节点elementIndex的右子节点是它的位置(elementIndex/2)+2
             *
-            * - 当最小堆大小为0、、1、2时，它没有右子节点，右子节点无效
+            * - 当最大堆大小为0、、1、2时，它没有右子节点，右子节点无效
             * - 当右子节点超过堆大小时，它无效
             *
             */

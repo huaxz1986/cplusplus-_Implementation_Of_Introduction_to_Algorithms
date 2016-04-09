@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dfs_5fvertex',['DFS_Vertex',['../class_d_f_s_vertex_test.html#aee693bcc01455e6f663b1404ce66e914',1,'DFSVertexTest']]]
+  ['bfs_5fvertex',['BFS_Vertex',['../class_b_f_s_vertex_test.html#a9ff4e5b50fe6468b08ee5e04f0527d7c',1,'BFSVertexTest']]]
 ];

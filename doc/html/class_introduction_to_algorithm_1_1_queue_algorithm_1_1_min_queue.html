@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Introduction_to_Algorithms: IntroductionToAlgorithm::QueueAlgorithm::MinQueue&lt; T, Compare &gt; Class Template Reference</title>
+<title>Introduction_to_Algorithms: IntroductionToAlgorithm::QueueAlgorithm::MinQueue&lt; T, TKeyType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -106,93 +106,179 @@ $(document).ready(function(){initNavTree('class_introduction_to_algorithm_1_1_qu
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IntroductionToAlgorithm::QueueAlgorithm::MinQueue&lt; T, Compare &gt; Class Template Reference</div>  </div>
+<div class="title">IntroductionToAlgorithm::QueueAlgorithm::MinQueue&lt; T, TKeyType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>MinQueue：最小优先级队列，算法导论第6章  
+<p>MinQueue：最小优先级队列，算法导论第6章6.5节  
  <a href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="minqueue_8h_source.html">minqueue.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a8f2f5b5d2b7097bbc6edda7b9c9228a6"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(std::shared_ptr&lt; T &gt;, std::shared_ptr&lt; T &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a></td></tr>
+<tr class="separator:a8f2f5b5d2b7097bbc6edda7b9c9228a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a391cb754ab172d1d4cdefd34130b917c"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; TKeyType &amp;(std::shared_ptr&lt; T &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a></td></tr>
+<tr class="separator:a391cb754ab172d1d4cdefd34130b917c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a86bf5a97695e09ab6fe255b68e72673d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a86bf5a97695e09ab6fe255b68e72673d">MinQueue</a> ()</td></tr>
-<tr class="separator:a86bf5a97695e09ab6fe255b68e72673d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8407e5922eceba5b30dfddc6bed309bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8407e5922eceba5b30dfddc6bed309bd">MinQueue</a> (std::size_t reseve_size)</td></tr>
-<tr class="separator:a8407e5922eceba5b30dfddc6bed309bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafd66150ecbd81743c5204e8fd1b6e2b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#aafd66150ecbd81743c5204e8fd1b6e2b">min</a> ()</td></tr>
-<tr class="memdesc:aafd66150ecbd81743c5204e8fd1b6e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">min:返回最小值  <a href="#aafd66150ecbd81743c5204e8fd1b6e2b">More...</a><br /></td></tr>
-<tr class="separator:aafd66150ecbd81743c5204e8fd1b6e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac040f9f8fe9a02d9e300e261708a3e6e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#ac040f9f8fe9a02d9e300e261708a3e6e">extract_min</a> ()</td></tr>
-<tr class="memdesc:ac040f9f8fe9a02d9e300e261708a3e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract_min:删除队列中最小值，并返回最小值  <a href="#ac040f9f8fe9a02d9e300e261708a3e6e">More...</a><br /></td></tr>
-<tr class="separator:ac040f9f8fe9a02d9e300e261708a3e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e72003afbf634cd9f7df7f61de1c36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#af0e72003afbf634cd9f7df7f61de1c36">insert</a> (std::shared_ptr&lt; T &gt; element)</td></tr>
-<tr class="memdesc:af0e72003afbf634cd9f7df7f61de1c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert:向队列中插入一个元素  <a href="#af0e72003afbf634cd9f7df7f61de1c36">More...</a><br /></td></tr>
-<tr class="separator:af0e72003afbf634cd9f7df7f61de1c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc9cdc8881918001bf922c3b2cd64c1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#abc9cdc8881918001bf922c3b2cd64c1c">is_empty</a> ()</td></tr>
-<tr class="memdesc:abc9cdc8881918001bf922c3b2cd64c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_empty:返回队列是否为空  <a href="#abc9cdc8881918001bf922c3b2cd64c1c">More...</a><br /></td></tr>
-<tr class="separator:abc9cdc8881918001bf922c3b2cd64c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95ee21038ee245f37623eedbd273fb43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a95ee21038ee245f37623eedbd273fb43">is_inqueue</a> (std::shared_ptr&lt; T &gt; element)</td></tr>
-<tr class="memdesc:a95ee21038ee245f37623eedbd273fb43"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_inqueue:返回指定元素是否在队列中  <a href="#a95ee21038ee245f37623eedbd273fb43">More...</a><br /></td></tr>
-<tr class="separator:a95ee21038ee245f37623eedbd273fb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f05999c02550096bf015a6e47a3ec7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a5f05999c02550096bf015a6e47a3ec7c">decreate_key</a> (std::size_t element_index, decltype(T().key) new_key, Compare compare=Compare())</td></tr>
-<tr class="memdesc:a5f05999c02550096bf015a6e47a3ec7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreate_key:缩减队列中某个元素的<code>key</code>  <a href="#a5f05999c02550096bf015a6e47a3ec7c">More...</a><br /></td></tr>
-<tr class="separator:a5f05999c02550096bf015a6e47a3ec7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e106d8a3062490328588593181a6ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a50e106d8a3062490328588593181a6ee">setupHeap</a> (Compare compare=Compare())</td></tr>
-<tr class="memdesc:a50e106d8a3062490328588593181a6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">setupHeap:建堆  <a href="#a50e106d8a3062490328588593181a6ee">More...</a><br /></td></tr>
-<tr class="separator:a50e106d8a3062490328588593181a6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae06cfa4dbe4464586b498b15f36081c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#ae06cfa4dbe4464586b498b15f36081c8">heapify</a> (std::size_t elementIndex, Compare compare=Compare())</td></tr>
-<tr class="memdesc:ae06cfa4dbe4464586b498b15f36081c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">heapify：维持堆性质  <a href="#ae06cfa4dbe4464586b498b15f36081c8">More...</a><br /></td></tr>
-<tr class="separator:ae06cfa4dbe4464586b498b15f36081c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e54e4e2c19918032b09e23e79a25e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a98e54e4e2c19918032b09e23e79a25e5">MinQueue</a> (<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a> compare, <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a> getKey)</td></tr>
+<tr class="memdesc:a98e54e4e2c19918032b09e23e79a25e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">显式构造函数  <a href="#a98e54e4e2c19918032b09e23e79a25e5">More...</a><br /></td></tr>
+<tr class="separator:a98e54e4e2c19918032b09e23e79a25e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770243b2227a15bdc2105dde6549c745"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a770243b2227a15bdc2105dde6549c745">MinQueue</a> (std::size_t reseve_size, <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a> compare, <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a> getKey)</td></tr>
+<tr class="memdesc:a770243b2227a15bdc2105dde6549c745"><td class="mdescLeft">&#160;</td><td class="mdescRight">显式构造函数  <a href="#a770243b2227a15bdc2105dde6549c745">More...</a><br /></td></tr>
+<tr class="separator:a770243b2227a15bdc2105dde6549c745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96293074ee6adef713e9e47059958ea2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a96293074ee6adef713e9e47059958ea2">min</a> ()</td></tr>
+<tr class="memdesc:a96293074ee6adef713e9e47059958ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">min:返回最小值  <a href="#a96293074ee6adef713e9e47059958ea2">More...</a><br /></td></tr>
+<tr class="separator:a96293074ee6adef713e9e47059958ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71022b9e1e9993ec5c5876da9e6e6eee"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a71022b9e1e9993ec5c5876da9e6e6eee">extract_min</a> ()</td></tr>
+<tr class="memdesc:a71022b9e1e9993ec5c5876da9e6e6eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract_min:删除队列中最小值，并返回最小值  <a href="#a71022b9e1e9993ec5c5876da9e6e6eee">More...</a><br /></td></tr>
+<tr class="separator:a71022b9e1e9993ec5c5876da9e6e6eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd899c42140b42a75507ed05ce98d047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#afd899c42140b42a75507ed05ce98d047">insert</a> (std::shared_ptr&lt; T &gt; element)</td></tr>
+<tr class="memdesc:afd899c42140b42a75507ed05ce98d047"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert:向队列中插入一个元素  <a href="#afd899c42140b42a75507ed05ce98d047">More...</a><br /></td></tr>
+<tr class="separator:afd899c42140b42a75507ed05ce98d047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b484baf6cd011a4b91aa77a644e5a44"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a1b484baf6cd011a4b91aa77a644e5a44">is_empty</a> ()</td></tr>
+<tr class="memdesc:a1b484baf6cd011a4b91aa77a644e5a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_empty:返回队列是否为空  <a href="#a1b484baf6cd011a4b91aa77a644e5a44">More...</a><br /></td></tr>
+<tr class="separator:a1b484baf6cd011a4b91aa77a644e5a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab905b477bfd6ae685a780586f0364050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#ab905b477bfd6ae685a780586f0364050">is_inqueue</a> (std::shared_ptr&lt; T &gt; element)</td></tr>
+<tr class="memdesc:ab905b477bfd6ae685a780586f0364050"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_inqueue:返回指定元素是否在队列中  <a href="#ab905b477bfd6ae685a780586f0364050">More...</a><br /></td></tr>
+<tr class="separator:ab905b477bfd6ae685a780586f0364050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa934049abcfedd59fa9ffe6d91fea30c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#aa934049abcfedd59fa9ffe6d91fea30c">decreate_key</a> (std::size_t element_index, TKeyType new_key)</td></tr>
+<tr class="memdesc:aa934049abcfedd59fa9ffe6d91fea30c"><td class="mdescLeft">&#160;</td><td class="mdescRight">decreate_key:缩减队列中某个元素的<code>key</code>  <a href="#aa934049abcfedd59fa9ffe6d91fea30c">More...</a><br /></td></tr>
+<tr class="separator:aa934049abcfedd59fa9ffe6d91fea30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a432c7c167a4f9a56c2988cfdc04620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a9a432c7c167a4f9a56c2988cfdc04620">setupHeap</a> ()</td></tr>
+<tr class="memdesc:a9a432c7c167a4f9a56c2988cfdc04620"><td class="mdescLeft">&#160;</td><td class="mdescRight">setupHeap:建堆  <a href="#a9a432c7c167a4f9a56c2988cfdc04620">More...</a><br /></td></tr>
+<tr class="separator:a9a432c7c167a4f9a56c2988cfdc04620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddfab80f781d5b5f7544164bf266f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a4ddfab80f781d5b5f7544164bf266f82">heapify</a> (std::size_t elementIndex)</td></tr>
+<tr class="memdesc:a4ddfab80f781d5b5f7544164bf266f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">heapify：维持堆性质  <a href="#a4ddfab80f781d5b5f7544164bf266f82">More...</a><br /></td></tr>
+<tr class="separator:a4ddfab80f781d5b5f7544164bf266f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a88390bf1df0ffcff26ac91f470fb587b"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a88390bf1df0ffcff26ac91f470fb587b">_parentIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
-<tr class="memdesc:a88390bf1df0ffcff26ac91f470fb587b"><td class="mdescLeft">&#160;</td><td class="mdescRight">_parentIndex:返回一个节点的父节点位置  <a href="#a88390bf1df0ffcff26ac91f470fb587b">More...</a><br /></td></tr>
-<tr class="separator:a88390bf1df0ffcff26ac91f470fb587b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a613d6ac06a5663dff135e2df36c4e42c"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a613d6ac06a5663dff135e2df36c4e42c">_lchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
-<tr class="memdesc:a613d6ac06a5663dff135e2df36c4e42c"><td class="mdescLeft">&#160;</td><td class="mdescRight">_lchildIndex:返回一个节点的左子节点位置  <a href="#a613d6ac06a5663dff135e2df36c4e42c">More...</a><br /></td></tr>
-<tr class="separator:a613d6ac06a5663dff135e2df36c4e42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af92770f4e79a6703c2c21107b3ce8d9d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#af92770f4e79a6703c2c21107b3ce8d9d">_rchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
-<tr class="memdesc:af92770f4e79a6703c2c21107b3ce8d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">_rchildIndex:返回一个节点的右子节点位置  <a href="#af92770f4e79a6703c2c21107b3ce8d9d">More...</a><br /></td></tr>
-<tr class="separator:af92770f4e79a6703c2c21107b3ce8d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7cac401c8cf45806e61aad3799eda0"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a3b7cac401c8cf45806e61aad3799eda0">_parentIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
+<tr class="memdesc:a3b7cac401c8cf45806e61aad3799eda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">_parentIndex:返回一个节点的父节点位置  <a href="#a3b7cac401c8cf45806e61aad3799eda0">More...</a><br /></td></tr>
+<tr class="separator:a3b7cac401c8cf45806e61aad3799eda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2a517cd63fc33c0403a4d4c83c7e9d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a0d2a517cd63fc33c0403a4d4c83c7e9d">_lchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
+<tr class="memdesc:a0d2a517cd63fc33c0403a4d4c83c7e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">_lchildIndex:返回一个节点的左子节点位置  <a href="#a0d2a517cd63fc33c0403a4d4c83c7e9d">More...</a><br /></td></tr>
+<tr class="separator:a0d2a517cd63fc33c0403a4d4c83c7e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7129becd0fd74b5d2c17702e65f32300"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a7129becd0fd74b5d2c17702e65f32300">_rchildIndex</a> (std::size_t elementIndex, bool &amp;valid)</td></tr>
+<tr class="memdesc:a7129becd0fd74b5d2c17702e65f32300"><td class="mdescLeft">&#160;</td><td class="mdescRight">_rchildIndex:返回一个节点的右子节点位置  <a href="#a7129becd0fd74b5d2c17702e65f32300">More...</a><br /></td></tr>
+<tr class="separator:a7129becd0fd74b5d2c17702e65f32300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aa5036c59645d1f17dfd5efc5760b7dd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#aa5036c59645d1f17dfd5efc5760b7dd4">_data</a></td></tr>
-<tr class="separator:aa5036c59645d1f17dfd5efc5760b7dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a4c6fb635e4c827d5511e1f6ac1ff67"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a6a4c6fb635e4c827d5511e1f6ac1ff67">_size</a></td></tr>
-<tr class="separator:a6a4c6fb635e4c827d5511e1f6ac1ff67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad463395cef741624e6d078e4e4fc624f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#ad463395cef741624e6d078e4e4fc624f">_data</a></td></tr>
+<tr class="separator:ad463395cef741624e6d078e4e4fc624f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de92802e37516dda2c01de776aba641"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a0de92802e37516dda2c01de776aba641">_size</a></td></tr>
+<tr class="separator:a0de92802e37516dda2c01de776aba641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de60762d317fc92c18e882dd50f8dfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a5de60762d317fc92c18e882dd50f8dfa">_compare</a></td></tr>
+<tr class="separator:a5de60762d317fc92c18e882dd50f8dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f791f9dd9d61dc2caf1d6b2b354f4c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a3f791f9dd9d61dc2caf1d6b2b354f4c4">_getKey</a></td></tr>
+<tr class="separator:a3f791f9dd9d61dc2caf1d6b2b354f4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, typename Compare = std::less&lt;T&gt;&gt;<br />
-class IntroductionToAlgorithm::QueueAlgorithm::MinQueue&lt; T, Compare &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T, typename TKeyType&gt;<br />
+class IntroductionToAlgorithm::QueueAlgorithm::MinQueue&lt; T, TKeyType &gt;</h3>
 
-<p>MinQueue：最小优先级队列，算法导论第6章 </p>
-<p>最小优先级队列采用最小堆实现 </p>
+<p>MinQueue：最小优先级队列，算法导论第6章6.5节 </p>
+<p>优先级队列是一种用来维护由一组元素构成集合S的数据结构，其中每个元素都有一个相关的值，称之为关键字。一个最小优先级队列支持以下操作：</p>
+<ul>
+<li>insert(S,x):将元素x插入到集合S中。</li>
+<li>min(S):返回S中具有最小关键字的元素</li>
+<li>extract_min(S):去掉并返回S中具有最小关键字的元素</li>
+<li>decrease_key(S,x,k):将元素x的关键字值减小到k,这里要求k的值小于x的原始关键字</li>
+</ul>
+<p>本算法的实现时，有以下几种变化：</p>
+<ul>
+<li>增加了以下的接口：<ul>
+<li>is_empty(S): 返回S是否为空</li>
+<li>is_inqueue(S,x):判断元素x是否在S中</li>
+<li>setupHeap(S):建立最小堆（由堆的接口遗留而来)</li>
+<li>heapify(S,index):操作堆的指定结点使得它符合最小堆条件（由堆的接口遗留下来）</li>
+</ul>
+</li>
+<li>增加了队列容量属性。队列容量由<code>_data</code>的大小来表征。默认将<code>_data</code>大小设为0；可以显式提供<code>reseve_size</code>参数来设置<code>_data</code>的大小。 队列容量用于限制队列大小。一旦队列已满，则下一次插入之前会将队列容量增加一倍；一旦队列不足队列的1/4，则一旦执行<code>extract_min</code>操作则将队列容量缩减至一半</li>
+<li>增加了两个特殊的可调用对象，这两个方法的引入使得最小优先级队列不仅可以应用于class和struct类型，也可以应用于int,double等非类的类型<ul>
+<li>_getKey:是一个std::function&lt;TKeyType&amp;(std::shared_ptr&lt;T&gt;)&gt;类型的对象，它可以接收std::shared_ptr&lt;T&gt;类型的参数，返回TKeyType类型的引用。 其中队列保存的是T类型数据的强引用，TKeyType是T类型数据的关键字类型。通过_getKey可以获取队列数据的关键字的引用。<ul>
+<li>对于class类型，TKeyType就是T对象的关键字类型，_getKey就是返回关键字的引用</li>
+<li>对于int等内置类型，TKeyType就是T本身。_getKey就是返回它自身的引用</li>
+</ul>
+</li>
+<li>_compare:是一个std::function&lt;bool (std::shared_ptr&lt;T&gt;,std::shared_ptr&lt;T&gt;)&gt;类型的对象，它用于队列中两个数据的大小比较。 </li>
+</ul>
+</li>
+</ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00020">20</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a86bf5a97695e09ab6fe255b68e72673d"></a>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00042">42</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a8f2f5b5d2b7097bbc6edda7b9c9228a6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;bool (std::shared_ptr&lt;T&gt;,std::shared_ptr&lt;T&gt;)&gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>一个可调用对象类型，该类型的对象可用于比较两个std::shared_ptr&lt;T&gt;的小于比较 </p>
+
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00045">45</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a391cb754ab172d1d4cdefd34130b917c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename TKeyType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;TKeyType&amp;(std::shared_ptr&lt;T&gt;)&gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>一个可调用对象，该类型的对象可用于获取std::shared_ptr&lt;T&gt;的关键字，并修改该关键字（返回的是关键字的引用） </p>
+
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00046">46</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a98e54e4e2c19918032b09e23e79a25e5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a> </td>
+          <td class="memname"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a>&#160;</td>
+          <td class="paramname"><em>compare</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a>&#160;</td>
+          <td class="paramname"><em>getKey</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -202,50 +288,85 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00023">23</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>显式构造函数 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">compare:一个可调用对象，可用于比较两个std::shared_ptr&lt;T&gt;对象的小于比较</td><td></td></tr>
+    <tr><td class="paramname">getKey：一个可调用对象，它的参数为std::shared_ptr&lt;T&gt;，返回TKey&amp;。通过它的返回值可以获取T的key，也可以修改T的key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00053">53</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8407e5922eceba5b30dfddc6bed309bd"></a>
+<a class="anchor" id="a770243b2227a15bdc2105dde6549c745"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a> </td>
+          <td class="memname"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::<a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue</a> </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>reseve_size</em></td><td>)</td>
+          <td class="paramname"><em>reseve_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a>&#160;</td>
+          <td class="paramname"><em>compare</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a>&#160;</td>
+          <td class="paramname"><em>getKey</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00024">24</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>显式构造函数 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reseve_size:指定队列的初始容量</td><td></td></tr>
+    <tr><td class="paramname">compare:一个可调用对象，可用于比较两个std::shared_ptr&lt;T&gt;对象的小于比较</td><td></td></tr>
+    <tr><td class="paramname">getKey：一个可调用对象，它的参数为std::shared_ptr&lt;T&gt;，返回TKey&amp;。通过它的返回值可以获取T的key，也可以修改T的key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00061">61</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a613d6ac06a5663dff135e2df36c4e42c"></a>
+<a class="anchor" id="a0d2a517cd63fc33c0403a4d4c83c7e9d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::_lchildIndex </td>
+          <td class="memname">std::size_t <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::_lchildIndex </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -284,21 +405,21 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>当左子节点超过堆大小时，它无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00259">259</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00301">301</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a88390bf1df0ffcff26ac91f470fb587b"></a>
+<a class="anchor" id="a3b7cac401c8cf45806e61aad3799eda0"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::_parentIndex </td>
+          <td class="memname">std::size_t <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::_parentIndex </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -336,21 +457,21 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>超出堆大小的节点，其父节点无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00236">236</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00278">278</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af92770f4e79a6703c2c21107b3ce8d9d"></a>
+<a class="anchor" id="a7129becd0fd74b5d2c17702e65f32300"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::size_t <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::_rchildIndex </td>
+          <td class="memname">std::size_t <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::_rchildIndex </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>elementIndex</em>, </td>
@@ -389,21 +510,21 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>当右子节点超过堆大小时，它无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00286">286</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00328">328</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5f05999c02550096bf015a6e47a3ec7c"></a>
+<a class="anchor" id="aa934049abcfedd59fa9ffe6d91fea30c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::decreate_key </td>
+          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::decreate_key </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>element_index</em>, </td>
@@ -411,14 +532,8 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">decltype(T().key)&#160;</td>
-          <td class="paramname"><em>new_key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Compare&#160;</td>
-          <td class="paramname"><em>compare</em> = <code>Compare()</code>&#160;</td>
+          <td class="paramtype">TKeyType&#160;</td>
+          <td class="paramname"><em>new_key</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -437,8 +552,7 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">element_index</td><td>待缩减元素的下标 </td></tr>
-    <tr><td class="paramname">new_key：待缩减元素的新&lt;tt&gt;key&lt;/tt&gt;</td><td></td></tr>
-    <tr><td class="paramname">compare:比较函数</td><td>缩减之前先判断缩减是否有效，若无效则抛出异常。</td></tr>
+    <tr><td class="paramname">new_key：待缩减元素的新&lt;tt&gt;key&lt;/tt&gt;，类型为TKey</td><td>缩减之前先判断缩减是否有效，若无效则抛出异常。</td></tr>
   </table>
   </dd>
 </dl>
@@ -459,21 +573,21 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>原地操作 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00147">147</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00191">191</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac040f9f8fe9a02d9e300e261708a3e6e"></a>
+<a class="anchor" id="a71022b9e1e9993ec5c5876da9e6e6eee"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;T&gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::extract_min </td>
+          <td class="memname">std::shared_ptr&lt;T&gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::extract_min </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -499,39 +613,31 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 </ul>
 </li>
 </ul>
-<p>时间复杂度 O(h)</p><ul>
+<p>一旦队列长度不足容量的1/4，则将队列容量设置为队列长度的一倍（为了防止极端情况，如_size=0，此时将队列容量设为队列长度的一倍加上2）</p>
+<ul>
+<li>时间复杂度 O(h),h为堆的高度</li>
 <li>原地操作 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00059">59</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00098">98</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae06cfa4dbe4464586b498b15f36081c8"></a>
+<a class="anchor" id="a4ddfab80f781d5b5f7544164bf266f82"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::heapify </td>
+          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::heapify </td>
           <td>(</td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>elementIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>elementIndex</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">Compare&#160;</td>
-          <td class="paramname"><em>compare</em> = <code>Compare()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -545,7 +651,6 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">elementIndex</td><td>: 要维持以该节点为根节点的子堆的堆性质 </td></tr>
-    <tr><td class="paramname">compare</td><td>一个可调用对象，可用于比较两个对象的小于比较，默认为std::less&lt;T&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -556,21 +661,21 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>原地操作 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00198">198</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00240">240</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af0e72003afbf634cd9f7df7f61de1c36"></a>
+<a class="anchor" id="afd899c42140b42a75507ed05ce98d047"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::insert </td>
+          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::insert </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; T &gt;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -599,25 +704,28 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <ul>
 <li>保留待插入元素的<code>key</code>，同时将待插入语元素的<code>key</code>设置为无穷大，并将待插入元素插入到队尾</li>
 <li>执行<code>decreate_key(..)</code>操作</li>
+</ul>
+<p>一旦队列已满，则将队列容量设置为队列长度的一倍（为了防止极端情况，如_size=0，此时将队列容量设为队列长度的一倍加上2）</p>
+<ul>
 <li>时间复杂度 O(h)</li>
 <li>原地操作 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00085">85</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00129">129</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abc9cdc8881918001bf922c3b2cd64c1c"></a>
+<a class="anchor" id="a1b484baf6cd011a4b91aa77a644e5a44"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::is_empty </td>
+          <td class="memname">bool <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::is_empty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -637,21 +745,21 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>时间复杂度 O(1) </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00103">103</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00148">148</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a95ee21038ee245f37623eedbd273fb43"></a>
+<a class="anchor" id="ab905b477bfd6ae685a780586f0364050"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::is_inqueue </td>
+          <td class="memname">bool <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::is_inqueue </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; T &gt;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -678,21 +786,21 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>时间复杂度 O(n) </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00117">117</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00162">162</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aafd66150ecbd81743c5204e8fd1b6e2b"></a>
+<a class="anchor" id="a96293074ee6adef713e9e47059958ea2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;T&gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::min </td>
+          <td class="memname">std::shared_ptr&lt;T&gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::min </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -712,24 +820,23 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>时间复杂度 O(1) </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00037">37</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00074">74</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a50e106d8a3062490328588593181a6ee"></a>
+<a class="anchor" id="a9a432c7c167a4f9a56c2988cfdc04620"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::setupHeap </td>
+          <td class="memname">void <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::setupHeap </td>
           <td>(</td>
-          <td class="paramtype">Compare&#160;</td>
-          <td class="paramname"><em>compare</em> = <code>Compare()</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -741,12 +848,6 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 </div><div class="memdoc">
 
 <p>setupHeap:建堆 </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">compare</td><td>一个可调用对象，可用于比较两个对象的小于比较，默认为std::less&lt;T&gt; </td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>void</dd></dl>
 <p>从后一半的元素开始依次向前调用heapify操作（根据最小堆性质，除了最底层它是完全充满的）</p>
 <ul>
@@ -754,22 +855,47 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 <li>原地操作 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00175">175</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00218">218</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aa5036c59645d1f17dfd5efc5760b7dd4"></a>
+<a class="anchor" id="a5de60762d317fc92c18e882dd50f8dfa"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::shared_ptr&lt;T&gt; &gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::_data</td>
+          <td class="memname"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a8f2f5b5d2b7097bbc6edda7b9c9228a6">CompareType</a> <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::_compare</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>一个可调用对象，可用于比较两个std::shared_ptr&lt;T&gt;的小于比较 </p>
+
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00346">346</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad463395cef741624e6d078e4e4fc624f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename TKeyType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;T&gt; &gt; <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::_data</td>
         </tr>
       </table>
   </td>
@@ -780,21 +906,46 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 </div><div class="memdoc">
 <p>最小优先级队列的数据 </p>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00302">302</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00344">344</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6a4c6fb635e4c827d5511e1f6ac1ff67"></a>
+<a class="anchor" id="a3f791f9dd9d61dc2caf1d6b2b354f4c4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
+template&lt;typename T, typename TKeyType&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, Compare &gt;::_size</td>
+          <td class="memname"><a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a391cb754ab172d1d4cdefd34130b917c">GetKeyType</a> <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::_getKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>一个可调用对象，可用于获取std::shared_ptr&lt;T&gt;的关键字，并修改该关键字（返回的是关键字的引用） </p>
+
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00347">347</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0de92802e37516dda2c01de776aba641"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename TKeyType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>&lt; T, TKeyType &gt;::_size</td>
         </tr>
       </table>
   </td>
@@ -805,7 +956,7 @@ template&lt;typename T , typename Compare  = std::less&lt;T&gt;&gt; </div>
 </div><div class="memdoc">
 <p>堆大小 </p>
 
-<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00303">303</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
+<p>Definition at line <a class="el" href="minqueue_8h_source.html#l00345">345</a> of file <a class="el" href="minqueue_8h_source.html">minqueue.h</a>.</p>
 
 </div>
 </div>

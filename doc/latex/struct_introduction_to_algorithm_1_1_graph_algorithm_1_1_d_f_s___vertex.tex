@@ -24,15 +24,17 @@ enum \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s__
  \}
 \item 
 typedef int \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aeb115a10366eb62880d2672d4e1da7a1}{V\+I\+D\+Type}
+\item 
+typedef K\+Type \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ab53cda3a7d135ed892b298c14d5579fe}{Key\+Type}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a91c4d3427c469cbb16459f6a34ac1307}{D\+F\+S\+\_\+\+Vertex} ()
 \begin{DoxyCompactList}\small\item\em 默认构造函数，将{\ttfamily color}设为白色，发现时间与完成时间默认为-\/1 \end{DoxyCompactList}\item 
-\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a9f93db7ee64b35d820b8cedeae0e3621}{D\+F\+S\+\_\+\+Vertex} (const K\+Type \&k)
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a2b44ef3bada5ce96e84fbd5e6b8c0e56}{D\+F\+S\+\_\+\+Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ab53cda3a7d135ed892b298c14d5579fe}{Key\+Type} \&k)
 \begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key} \end{DoxyCompactList}\item 
-\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a69dbf0c9db688cc6d2783f707da052df}{D\+F\+S\+\_\+\+Vertex} (const K\+Type \&k, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aeb115a10366eb62880d2672d4e1da7a1}{V\+I\+D\+Type} d)
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_adbee712bffa03e88e3624a144528fe54}{D\+F\+S\+\_\+\+Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ab53cda3a7d135ed892b298c14d5579fe}{Key\+Type} \&k, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aeb115a10366eb62880d2672d4e1da7a1}{V\+I\+D\+Type} d)
 \begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key}和编号 \end{DoxyCompactList}\item 
 void \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ab1969489b2a5d73191da5664b127226d}{set\+\_\+disovered} (int discover\+\_\+t)
 \begin{DoxyCompactList}\small\item\em set\+\_\+disovered：发现本顶点 \end{DoxyCompactList}\item 
@@ -81,6 +83,13 @@ Definition at line 26 of file dfs.\+h.
 
 
 \subsection{Member Typedef Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ab53cda3a7d135ed892b298c14d5579fe}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
+\subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ typedef K\+Type {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ab53cda3a7d135ed892b298c14d5579fe}
+顶点存储数据的类型 
+
+Definition at line 30 of file dfs.\+h.
+
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aeb115a10366eb62880d2672d4e1da7a1}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!V\+I\+D\+Type@{V\+I\+D\+Type}}
 \index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
 \subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aeb115a10366eb62880d2672d4e1da7a1}
@@ -107,7 +116,7 @@ Definition at line 29 of file dfs.\+h.
 \end{Desc}
 
 
-Definition at line 30 of file dfs.\+h.
+Definition at line 31 of file dfs.\+h.
 
 
 
@@ -125,15 +134,15 @@ Definition at line 30 of file dfs.\+h.
 
 
 
-Definition at line 34 of file dfs.\+h.
+Definition at line 35 of file dfs.\+h.
 
-\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a9f93db7ee64b35d820b8cedeae0e3621}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!D\+F\+S\+\_\+\+Vertex@{D\+F\+S\+\_\+\+Vertex}}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a2b44ef3bada5ce96e84fbd5e6b8c0e56}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!D\+F\+S\+\_\+\+Vertex@{D\+F\+S\+\_\+\+Vertex}}
 \index{D\+F\+S\+\_\+\+Vertex@{D\+F\+S\+\_\+\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
-\subsubsection[{D\+F\+S\+\_\+\+Vertex(const K\+Type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf D\+F\+S\+\_\+\+Vertex} (
+\subsubsection[{D\+F\+S\+\_\+\+Vertex(const Key\+Type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf D\+F\+S\+\_\+\+Vertex} (
 \begin{DoxyParamCaption}
-\item[{const K\+Type \&}]{k}
+\item[{const {\bf Key\+Type} \&}]{k}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a9f93db7ee64b35d820b8cedeae0e3621}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a2b44ef3bada5ce96e84fbd5e6b8c0e56}
 
 
 显式构造函数，指定{\ttfamily key} 
@@ -145,16 +154,16 @@ Definition at line 34 of file dfs.\+h.
 \end{DoxyParams}
 
 
-Definition at line 41 of file dfs.\+h.
+Definition at line 42 of file dfs.\+h.
 
-\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a69dbf0c9db688cc6d2783f707da052df}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!D\+F\+S\+\_\+\+Vertex@{D\+F\+S\+\_\+\+Vertex}}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_adbee712bffa03e88e3624a144528fe54}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!D\+F\+S\+\_\+\+Vertex@{D\+F\+S\+\_\+\+Vertex}}
 \index{D\+F\+S\+\_\+\+Vertex@{D\+F\+S\+\_\+\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
-\subsubsection[{D\+F\+S\+\_\+\+Vertex(const K\+Type \&k, V\+I\+D\+Type d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf D\+F\+S\+\_\+\+Vertex} (
+\subsubsection[{D\+F\+S\+\_\+\+Vertex(const Key\+Type \&k, V\+I\+D\+Type d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf D\+F\+S\+\_\+\+Vertex} (
 \begin{DoxyParamCaption}
-\item[{const K\+Type \&}]{k, }
+\item[{const {\bf Key\+Type} \&}]{k, }
 \item[{{\bf V\+I\+D\+Type}}]{d}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a69dbf0c9db688cc6d2783f707da052df}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_adbee712bffa03e88e3624a144528fe54}
 
 
 显式构造函数，指定{\ttfamily key}和编号 
@@ -168,7 +177,7 @@ Definition at line 41 of file dfs.\+h.
 \end{DoxyParams}
 
 
-Definition at line 51 of file dfs.\+h.
+Definition at line 52 of file dfs.\+h.
 
 
 
@@ -195,7 +204,7 @@ set\+\_\+disovered：发现本顶点
 \item 将本顶点的{\ttfamily discover\+\_\+time}设为{\ttfamily discover\+\_\+t} 
 \end{DoxyItemize}
 
-Definition at line 64 of file dfs.\+h.
+Definition at line 65 of file dfs.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a07353127c56aabb5c411ca7f4d28c553}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!set\+\_\+finished@{set\+\_\+finished}}
 \index{set\+\_\+finished@{set\+\_\+finished}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
@@ -219,7 +228,7 @@ set\+\_\+finished：设本顶点为搜索完毕状态
 \item 将本顶点的{\ttfamily finish\+\_\+time}设为{\ttfamily finish\+\_\+t} 
 \end{DoxyItemize}
 
-Definition at line 79 of file dfs.\+h.
+Definition at line 80 of file dfs.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a9a8a8c8b2ad1c3b6e90d2c2efb7cbe2e}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
@@ -237,7 +246,7 @@ to\+\_\+string：返回顶点的字符串描述
 \end{DoxyReturn}
 再{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}}基类的基础上输出{\ttfamily color}以及{\ttfamily parent}、{\ttfamily discover\+\_\+time}以及{\ttfamily finish\+\_\+time}信息。 
 
-Definition at line 90 of file dfs.\+h.
+Definition at line 91 of file dfs.\+h.
 
 
 
@@ -247,28 +256,28 @@ Definition at line 90 of file dfs.\+h.
 \subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ {\bf C\+O\+L\+O\+R} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::color}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_a9111c3d35ad67867402564643493655f}
 顶点颜色 
 
-Definition at line 115 of file dfs.\+h.
+Definition at line 116 of file dfs.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aab1b292c1d228d57ef3d20af908fe2cf}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!discover\+\_\+time@{discover\+\_\+time}}
 \index{discover\+\_\+time@{discover\+\_\+time}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
 \subsubsection[{discover\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::discover\+\_\+time}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aab1b292c1d228d57ef3d20af908fe2cf}
 顶点发现时间 
 
-Definition at line 113 of file dfs.\+h.
+Definition at line 114 of file dfs.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aa0f17c70784c1dcc199487e519814e61}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!finish\+\_\+time@{finish\+\_\+time}}
 \index{finish\+\_\+time@{finish\+\_\+time}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
 \subsubsection[{finish\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::finish\+\_\+time}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_aa0f17c70784c1dcc199487e519814e61}
 顶点完成时间 
 
-Definition at line 114 of file dfs.\+h.
+Definition at line 115 of file dfs.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ad243c81b3c0705a136b6a1e5debdb6ed}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}!parent@{parent}}
 \index{parent@{parent}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}}
 \subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type$>$ std\+::shared\+\_\+ptr$<${\bf D\+F\+S\+\_\+\+Vertex}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+D\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::parent}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex_ad243c81b3c0705a136b6a1e5debdb6ed}
 顶点父顶点的强引用 
 
-Definition at line 116 of file dfs.\+h.
+Definition at line 117 of file dfs.\+h.
 
 
 

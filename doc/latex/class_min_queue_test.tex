@@ -15,6 +15,21 @@ Inheritance diagram for Min\+Queue\+Test\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_min_queue_test}
 \end{center}
 \end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ bool(std\+::shared\+\_\+ptr$<$ int $>$, std\+::shared\+\_\+ptr$<$ int $>$)$>$ \hyperlink{class_min_queue_test_a627ceae9e25205d70955137bbfc863fd}{Int\+\_\+\+Compare\+\_\+\+Type}
+\item 
+typedef std\+::function$<$ int \&(std\+::shared\+\_\+ptr$<$ int $>$)$>$ \hyperlink{class_min_queue_test_a40648c6c5c338387bda62519dc99fc79}{Int\+\_\+\+Get\+\_\+\+Type}
+\item 
+typedef std\+::function$<$ bool(std\+::shared\+\_\+ptr$<$ \hyperlink{struct_node}{Node} $>$, std\+::shared\+\_\+ptr$<$ \hyperlink{struct_node}{Node} $>$)$>$ \hyperlink{class_min_queue_test_a25bfd5b74968c587db57133f107a5f61}{Struct\+\_\+\+Compare\+\_\+\+Type}
+\item 
+typedef std\+::function$<$ double \&(std\+::shared\+\_\+ptr$<$ \hyperlink{struct_node}{Node} $>$)$>$ \hyperlink{class_min_queue_test_aebcf6172ed7e9dd6f821fb1043f1cd6f}{Struct\+\_\+\+Get\+\_\+\+Type}
+\item 
+typedef \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue}{Min\+Queue}$<$ \hyperlink{struct_node}{Node}, double $>$ \hyperlink{class_min_queue_test_a9b7e5e987d5e856adc5beb6986dd96a3}{Struct\+\_\+\+Min\+Queue\+\_\+\+Type}
+\item 
+typedef \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue}{Min\+Queue}$<$ int, int $>$ \hyperlink{class_min_queue_test_ad81df38acc845934accb320c4dbdd582}{Int\+\_\+\+Min\+Queue\+\_\+\+Type}
+\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,7 +40,9 @@ void \hyperlink{class_min_queue_test_a3e949d54ecada54f713ff47d80eb513c}{Tear\+Do
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::shared\+\_\+ptr$<$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue}{Min\+Queue}$<$ \hyperlink{struct_node}{Node} $>$ $>$ \hyperlink{class_min_queue_test_a372d59dab9f706027a6be031a1ab99dc}{\+\_\+minqueue}
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_min_queue_test_a9b7e5e987d5e856adc5beb6986dd96a3}{Struct\+\_\+\+Min\+Queue\+\_\+\+Type} $>$ \hyperlink{class_min_queue_test_aed079eb9c6dd8460cc785b0fc6088a97}{\+\_\+strcut\+\_\+minqueue}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_min_queue_test_ad81df38acc845934accb320c4dbdd582}{Int\+\_\+\+Min\+Queue\+\_\+\+Type} $>$ \hyperlink{class_min_queue_test_a03f9ea0fcc4b820a539d32d6539c2df9}{\+\_\+int\+\_\+minqueue}
 \end{DoxyCompactItemize}
 
 
@@ -34,7 +51,52 @@ std\+::shared\+\_\+ptr$<$ \hyperlink{class_introduction_to_algorithm_1_1_queue_a
 
 {\ttfamily \hyperlink{class_min_queue_test}{Min\+Queue\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
 
-Definition at line 19 of file minqueue\+\_\+test.\+h.
+Definition at line 21 of file minqueue\+\_\+test.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_min_queue_test_a627ceae9e25205d70955137bbfc863fd}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!Int\+\_\+\+Compare\+\_\+\+Type@{Int\+\_\+\+Compare\+\_\+\+Type}}
+\index{Int\+\_\+\+Compare\+\_\+\+Type@{Int\+\_\+\+Compare\+\_\+\+Type}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{Int\+\_\+\+Compare\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$bool (std\+::shared\+\_\+ptr$<$int$>$,std\+::shared\+\_\+ptr$<$int$>$)$>$ {\bf Min\+Queue\+Test\+::\+Int\+\_\+\+Compare\+\_\+\+Type}}\label{class_min_queue_test_a627ceae9e25205d70955137bbfc863fd}
+当最小优先级队列存放的是int$\ast$数据时，相应的比较函数对象 
+
+Definition at line 24 of file minqueue\+\_\+test.\+h.
+
+\hypertarget{class_min_queue_test_a40648c6c5c338387bda62519dc99fc79}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!Int\+\_\+\+Get\+\_\+\+Type@{Int\+\_\+\+Get\+\_\+\+Type}}
+\index{Int\+\_\+\+Get\+\_\+\+Type@{Int\+\_\+\+Get\+\_\+\+Type}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{Int\+\_\+\+Get\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$int\&(std\+::shared\+\_\+ptr$<$int$>$)$>$ {\bf Min\+Queue\+Test\+::\+Int\+\_\+\+Get\+\_\+\+Type}}\label{class_min_queue_test_a40648c6c5c338387bda62519dc99fc79}
+当最小优先级队列存放的是int$\ast$数据时，获取key的函数对象 
+
+Definition at line 25 of file minqueue\+\_\+test.\+h.
+
+\hypertarget{class_min_queue_test_ad81df38acc845934accb320c4dbdd582}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!Int\+\_\+\+Min\+Queue\+\_\+\+Type@{Int\+\_\+\+Min\+Queue\+\_\+\+Type}}
+\index{Int\+\_\+\+Min\+Queue\+\_\+\+Type@{Int\+\_\+\+Min\+Queue\+\_\+\+Type}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{Int\+\_\+\+Min\+Queue\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Min\+Queue}$<$int,int$>$ {\bf Min\+Queue\+Test\+::\+Int\+\_\+\+Min\+Queue\+\_\+\+Type}}\label{class_min_queue_test_ad81df38acc845934accb320c4dbdd582}
+存放的是\+Node$\ast$数据的最小优先级队列，\+Node的关键字是double类型 
+
+Definition at line 29 of file minqueue\+\_\+test.\+h.
+
+\hypertarget{class_min_queue_test_a25bfd5b74968c587db57133f107a5f61}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!Struct\+\_\+\+Compare\+\_\+\+Type@{Struct\+\_\+\+Compare\+\_\+\+Type}}
+\index{Struct\+\_\+\+Compare\+\_\+\+Type@{Struct\+\_\+\+Compare\+\_\+\+Type}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{Struct\+\_\+\+Compare\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$bool (std\+::shared\+\_\+ptr$<${\bf Node}$>$,std\+::shared\+\_\+ptr$<${\bf Node}$>$)$>$ {\bf Min\+Queue\+Test\+::\+Struct\+\_\+\+Compare\+\_\+\+Type}}\label{class_min_queue_test_a25bfd5b74968c587db57133f107a5f61}
+当最小优先级队列存放的是\+Node$\ast$数据时，相应的比较函数对象 
+
+Definition at line 26 of file minqueue\+\_\+test.\+h.
+
+\hypertarget{class_min_queue_test_aebcf6172ed7e9dd6f821fb1043f1cd6f}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!Struct\+\_\+\+Get\+\_\+\+Type@{Struct\+\_\+\+Get\+\_\+\+Type}}
+\index{Struct\+\_\+\+Get\+\_\+\+Type@{Struct\+\_\+\+Get\+\_\+\+Type}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{Struct\+\_\+\+Get\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$double\&(std\+::shared\+\_\+ptr$<${\bf Node}$>$)$>$ {\bf Min\+Queue\+Test\+::\+Struct\+\_\+\+Get\+\_\+\+Type}}\label{class_min_queue_test_aebcf6172ed7e9dd6f821fb1043f1cd6f}
+当最小优先级队列存放的是\+Node$\ast$数据时，获取key的函数对象 
+
+Definition at line 27 of file minqueue\+\_\+test.\+h.
+
+\hypertarget{class_min_queue_test_a9b7e5e987d5e856adc5beb6986dd96a3}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!Struct\+\_\+\+Min\+Queue\+\_\+\+Type@{Struct\+\_\+\+Min\+Queue\+\_\+\+Type}}
+\index{Struct\+\_\+\+Min\+Queue\+\_\+\+Type@{Struct\+\_\+\+Min\+Queue\+\_\+\+Type}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{Struct\+\_\+\+Min\+Queue\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Min\+Queue}$<${\bf Node},double$>$ {\bf Min\+Queue\+Test\+::\+Struct\+\_\+\+Min\+Queue\+\_\+\+Type}}\label{class_min_queue_test_a9b7e5e987d5e856adc5beb6986dd96a3}
+存放的是int$\ast$数据的最小优先级队列，其关键字就是int本身 
+
+Definition at line 28 of file minqueue\+\_\+test.\+h.
 
 
 
@@ -48,7 +110,7 @@ Definition at line 19 of file minqueue\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_min_queue_test_ae801d45bf78b7bb80b278264d3a8e96a}
 
 
-Definition at line 24 of file minqueue\+\_\+test.\+h.
+Definition at line 31 of file minqueue\+\_\+test.\+h.
 
 \hypertarget{class_min_queue_test_a3e949d54ecada54f713ff47d80eb513c}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!Tear\+Down@{Tear\+Down}}
 \index{Tear\+Down@{Tear\+Down}!Min\+Queue\+Test@{Min\+Queue\+Test}}
@@ -59,17 +121,24 @@ Definition at line 24 of file minqueue\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_min_queue_test_a3e949d54ecada54f713ff47d80eb513c}
 
 
-Definition at line 28 of file minqueue\+\_\+test.\+h.
+Definition at line 41 of file minqueue\+\_\+test.\+h.
 
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_min_queue_test_a372d59dab9f706027a6be031a1ab99dc}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!\+\_\+minqueue@{\+\_\+minqueue}}
-\index{\+\_\+minqueue@{\+\_\+minqueue}!Min\+Queue\+Test@{Min\+Queue\+Test}}
-\subsubsection[{\+\_\+minqueue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Min\+Queue}$<${\bf Node}$>$ $>$ Min\+Queue\+Test\+::\+\_\+minqueue\hspace{0.3cm}{\ttfamily [protected]}}\label{class_min_queue_test_a372d59dab9f706027a6be031a1ab99dc}
+\hypertarget{class_min_queue_test_a03f9ea0fcc4b820a539d32d6539c2df9}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!\+\_\+int\+\_\+minqueue@{\+\_\+int\+\_\+minqueue}}
+\index{\+\_\+int\+\_\+minqueue@{\+\_\+int\+\_\+minqueue}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{\+\_\+int\+\_\+minqueue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Int\+\_\+\+Min\+Queue\+\_\+\+Type}$>$ Min\+Queue\+Test\+::\+\_\+int\+\_\+minqueue\hspace{0.3cm}{\ttfamily [protected]}}\label{class_min_queue_test_a03f9ea0fcc4b820a539d32d6539c2df9}
 指向一个最小优先级队列 
 
-Definition at line 29 of file minqueue\+\_\+test.\+h.
+Definition at line 43 of file minqueue\+\_\+test.\+h.
+
+\hypertarget{class_min_queue_test_aed079eb9c6dd8460cc785b0fc6088a97}{}\index{Min\+Queue\+Test@{Min\+Queue\+Test}!\+\_\+strcut\+\_\+minqueue@{\+\_\+strcut\+\_\+minqueue}}
+\index{\+\_\+strcut\+\_\+minqueue@{\+\_\+strcut\+\_\+minqueue}!Min\+Queue\+Test@{Min\+Queue\+Test}}
+\subsubsection[{\+\_\+strcut\+\_\+minqueue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Struct\+\_\+\+Min\+Queue\+\_\+\+Type}$>$ Min\+Queue\+Test\+::\+\_\+strcut\+\_\+minqueue\hspace{0.3cm}{\ttfamily [protected]}}\label{class_min_queue_test_aed079eb9c6dd8460cc785b0fc6088a97}
+指向一个最小优先级队列 
+
+Definition at line 42 of file minqueue\+\_\+test.\+h.
 
 
 

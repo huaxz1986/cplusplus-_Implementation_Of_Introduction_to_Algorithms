@@ -10,5 +10,6 @@ var struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph =
     [ "has_edge", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#aa0fd43a6621de69396f907e11cff5db4", null ],
     [ "vertex_edge_tuples", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a8d4f953211df8bd5d3fffe6e362a7fa3", null ],
     [ "weight", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a8279dc0ecc39324c1f0e38a3c0a2ef03", null ],
-    [ "array", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#ac02abc1501b57a7963ec1b388150429e", null ]
+    [ "array", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#ac02abc1501b57a7963ec1b388150429e", null ],
+    [ "NUM", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#aaff3f1cdb9f184027dd3f057d4a5b4bc", null ]
 ];

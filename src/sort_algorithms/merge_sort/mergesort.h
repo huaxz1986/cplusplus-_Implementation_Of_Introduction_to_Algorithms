@@ -38,8 +38,8 @@ namespace IntroductionToAlgorithm
     * - 时间复杂度 O(n)
     * - 归并时需要额外的空间 O(n)
     */
-        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
-                void merge(const Iterator begin,const Iterator end,const Iterator middle,Compare compare=Compare())
+        template<typename Iterator,typename CompareType=std::less<typename std::iterator_traits<Iterator>::value_type>>
+                void merge(const Iterator begin,const Iterator end,const Iterator middle,CompareType compare=CompareType())
         {
             typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             if(std::distance(begin,middle)<=0||std::distance(middle,end)<=0) return;
@@ -82,8 +82,8 @@ namespace IntroductionToAlgorithm
     * - 时间复杂度 O(nlgn)
     * - 非原地排序，归并时需要额外的空间 O(n)
     */
-        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
-                    void merge_sort(const Iterator begin,const Iterator end,Compare compare=Compare())
+        template<typename Iterator,typename CompareType=std::less<typename std::iterator_traits<Iterator>::value_type>>
+                    void merge_sort(const Iterator begin,const Iterator end,CompareType compare=CompareType())
         {
             //typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             auto size=std::distance(begin,end);

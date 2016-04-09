@@ -25,20 +25,24 @@ struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_verte
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a19237111c3b1ec2717c5e1aefe2f6d9b}{unlimit} ()
-\begin{DoxyCompactList}\small\item\em unlimit：返回正无穷的函数 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a4f664c13605fc87ca8d26f4aad5a9fa2}{is\+\_\+unlimit} (T t)
-\begin{DoxyCompactList}\small\item\em is\+\_\+unlimit：判断是否正无穷 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Graph\+Type , typename Action  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aa4b14f2da6462f3575a3f74b6558a575}{breadth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
+{\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9c57b397479972f84b4b10bc19968297}{breadth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
 \begin{DoxyCompactList}\small\item\em breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章xx节 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a01ece18a63d13cfe023c1f6360e63451}{visit} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\})
+{\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_af651a2b435fc270ab711e573d83a385d}{visit} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\})
 \begin{DoxyCompactList}\small\item\em visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5d500378f28e485a3b9a9b9cc74e4f97}{depth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action pre\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action post\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())
+{\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a3bb9faf89f84f73b716c25966786e078}{depth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type pre\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type post\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())
 \begin{DoxyCompactList}\small\item\em depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\const std\+::vector$<$ std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6d058c2aaa8714778b3f2ab8a24ff232}{scc} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
 \begin{DoxyCompactList}\small\item\em scc：强连通分量，算法导论22章22.5节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a804241e72be5f4c031190bc12a6b73a2}{topology\+\_\+sort} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
 \begin{DoxyCompactList}\small\item\em topology\+\_\+sort：拓扑排序，算法导论22章22.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6586a1f6485cc30b643ef752eee9b783}{kruskal} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ac79afa99e5119649d01d613fb01f3984}{prim} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a19237111c3b1ec2717c5e1aefe2f6d9b}{unlimit} ()
+\begin{DoxyCompactList}\small\item\em unlimit：返回正无穷的函数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a4f664c13605fc87ca8d26f4aad5a9fa2}{is\+\_\+unlimit} (T t)
+\begin{DoxyCompactList}\small\item\em is\+\_\+unlimit：判断是否正无穷 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Vertex\+Type $>$ }\\std\+::vector$<$ typename Vertex\+Type\+::\+V\+I\+D\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}{get\+\_\+path} (const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+from, const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+to)
 \begin{DoxyCompactList}\small\item\em get\+\_\+path：获取两个顶点之间的路径 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -49,15 +53,16 @@ Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}
 该命名空间内包含所有图算法 
 
 \subsection{Function Documentation}
-\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_aa4b14f2da6462f3575a3f74b6558a575}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9c57b397479972f84b4b10bc19968297}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}}
 \index{breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
-\subsubsection[{breadth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::breadth\+\_\+first\+\_\+search (
+\subsubsection[{breadth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{}, Action\+Type post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::breadth\+\_\+first\+\_\+search (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
 \item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{source\+\_\+id, }
-\item[{Action}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}}
+\item[{Action\+Type}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}, }
+\item[{Action\+Type}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_aa4b14f2da6462f3575a3f74b6558a575}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9c57b397479972f84b4b10bc19968297}
 
 
 breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章xx节 
@@ -68,7 +73,9 @@ breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章xx节
 \hline
 {\em source\+\_\+id：广度优先搜索的源点$<$tt$>$id$<$/tt$>$，必须有效。若无效则抛出异常} & \\
 \hline
-{\em action\+:一个可调用对象，它在每次搜索到一个顶点后立即调用。其参数为被搜索到的顶点$<$tt$>$id$<$/tt$>$。它默认是个空操作，即不执行任何操作。} & \\
+{\em pre\+\_\+action\+:一个可调用对象，在每次发现一个顶点时调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$。默认为空操作，即不进行任何操作} & \\
+\hline
+{\em post\+\_\+action\+:一个可调用对象，在每次对一个顶点搜索完成时调用，调用参数为该顶点的$<$tt$>$id$<$/tt$>$。默认为空操作，即不进行任何操作} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -105,20 +112,20 @@ breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章xx节
 
 广度优先树：对于\+G=(V,E)和源点s，定义图\+G的前驱子图为 G\+\_\+pai=(V\+\_\+pai,E\+\_\+pai)，其中 V\+\_\+pai=\{ v属于\+V\+: v.\+parent!=N\+I\+L\}并上\{s\}，\+E\+\_\+pai=\{(v.\+parent,v)\+:v属于(V\+\_\+pai-\/\{s\})\}。 即\+V\+\_\+pai由从源s可达的所有结点组成（包括s本身），\+E\+\_\+pai由\+V\+\_\+pai中去掉s之后的结点的入边组成，其中该入边的对端为结点的父结点。 B\+F\+S算法获取的前驱子图\+G\+\_\+pai包含一条从源结点s到结点v的唯一简单路径，而且该路径也是图\+G里面从源s到v之间的一条最短路径，因此前驱子图也称为广度优先树。 
 
-Definition at line 155 of file bfs.\+h.
+Definition at line 157 of file bfs.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5d500378f28e485a3b9a9b9cc74e4f97}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a3bb9faf89f84f73b716c25966786e078}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}}
 \index{depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
-\subsubsection[{depth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action pre\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action post\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::depth\+\_\+first\+\_\+search (
+\subsubsection[{depth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action\+Type pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type pre\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type post\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::depth\+\_\+first\+\_\+search (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
-\item[{Action}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action}]{pre\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action}]{post\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action\+Type}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action\+Type}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action\+Type}]{pre\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action\+Type}]{post\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
 \item[{const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&}]{search\+\_\+order = {\ttfamily std\+:\+:vector$<$typename~GraphType\+:\+:VIDType$>$()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5d500378f28e485a3b9a9b9cc74e4f97}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a3bb9faf89f84f73b716c25966786e078}
 
 
 depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节 
@@ -149,7 +156,7 @@ depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节
 
 
 \begin{DoxyItemize}
-\item 初始化：将所有结点染白色，并将它们的父结点置为空
+\item 初始化：将所有结点染白色，并将它们的父结点置为空(由于\+D\+F\+S\+\_\+\+Vertex构造函数将结点color设为白色，且将父结点置为空，因此在本算法中这个步骤可以省略)
 \item 将全局时间 time 置为0
 \item 遍历结点集\+V，取出结点v -\/若v是白色的（尚未发现），则调用 visit 操作 \begin{quote}
 当这里调用 visit 操作时，结点v会成为一棵树的根
@@ -199,7 +206,7 @@ depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节
 
 在无向图中，每条边要么是树边，要么是后向边。从来不会出现前向边和横向边。 
 
-Definition at line 230 of file dfs.\+h.
+Definition at line 231 of file dfs.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!get\+\_\+path@{get\+\_\+path}}
 \index{get\+\_\+path@{get\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -227,7 +234,7 @@ get\+\_\+path：获取两个顶点之间的路径
 
 要求{\ttfamily v\+\_\+from}与{\ttfamily v\+\_\+to}非空，否则抛出异常 
 
-Definition at line 131 of file header.\+h.
+Definition at line 140 of file header.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a4f664c13605fc87ca8d26f4aad5a9fa2}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!is\+\_\+unlimit@{is\+\_\+unlimit}}
 \index{is\+\_\+unlimit@{is\+\_\+unlimit}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -252,7 +259,30 @@ is\+\_\+unlimit：判断是否正无穷
 
 这里将大于等于{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/3}的数判断结果为正无穷 $>$因为考虑到正无穷减去一个数必须保证结果也是正无穷 
 
-Definition at line 105 of file algorithms.\+h.
+Definition at line 125 of file header.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6586a1f6485cc30b643ef752eee9b783}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!kruskal@{kruskal}}
+\index{kruskal@{kruskal}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{kruskal(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::kruskal (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6586a1f6485cc30b643ef752eee9b783}
+
+
+Definition at line 10 of file kruskal.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_ac79afa99e5119649d01d613fb01f3984}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!prim@{prim}}
+\index{prim@{prim}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{prim(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::prim (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{source\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_ac79afa99e5119649d01d613fb01f3984}
+
+
+Definition at line 10 of file prim.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6d058c2aaa8714778b3f2ab8a24ff232}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!scc@{scc}}
 \index{scc@{scc}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -349,19 +379,19 @@ unlimit：返回正无穷的函数
 
 这里将{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/2}设为正无穷，考虑到正无穷加上一个较大的数必须保证不能溢出 
 
-Definition at line 90 of file algorithms.\+h.
+Definition at line 110 of file header.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a01ece18a63d13cfe023c1f6360e63451}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!visit@{visit}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_af651a2b435fc270ab711e573d83a385d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!visit@{visit}}
 \index{visit@{visit}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
-\subsubsection[{visit(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::visit (
+\subsubsection[{visit(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action\+Type pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::visit (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
 \item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{v\+\_\+id, }
 \item[{int \&}]{time, }
-\item[{Action}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}}
+\item[{Action\+Type}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{Action\+Type}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a01ece18a63d13cfe023c1f6360e63451}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_af651a2b435fc270ab711e573d83a385d}
 
 
 visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节 
@@ -395,5 +425,5 @@ visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22�
 \item 当结点 v\+\_\+id 的相邻结点访问完毕，则全局时间 time 递增，然后将结点 v\+\_\+id 设置为完成状态 
 \end{DoxyItemize}
 
-Definition at line 142 of file dfs.\+h.
+Definition at line 143 of file dfs.\+h.
 

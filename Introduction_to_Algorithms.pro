@@ -39,23 +39,32 @@ HEADERS += \
     src/select_algorithms/randomized_select/randomizedselect_test.h \
     src/select_algorithms/good_select/goodselect.h \
     src/select_algorithms/good_select/goodselect_test.h \
-    src/graph_algorithms/basic_graph/matrix_graph/matrixgraph.h \
-    src/graph_algorithms/basic_graph/matrix_graph/matrixgraph_test.h \
-    src/graph_algorithms/basic_graph/graph_vertex/vertex.h \
-    src/graph_algorithms/basic_graph/graph_vertex/vertex_test.h \
-    src/graph_algorithms/basic_graph/graph_edge/edge.h \
-    src/graph_algorithms/basic_graph/graph_edge/edge_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/matrix_graph/matrixgraph.h \
+    src/graph_algorithms/basic_graph/graph_representation/matrix_graph/matrixgraph_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertex.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertex_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_edge/edge.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_edge/edge_test.h \
     src/graph_algorithms/basic_graph/graph_dfs/dfs.h \
     src/graph_algorithms/basic_graph/graph_dfs/dfs_test.h \
     src/graph_algorithms/basic_graph/graph_bfs/bfs.h \
     src/graph_algorithms/basic_graph/graph_bfs/bfs_test.h \
-    src/graph_algorithms/basic_graph/graph/graph.h \
-    src/graph_algorithms/basic_graph/graph/graph_test.h \
-    src/graph_algorithms/basic_graph/adjlist_graph/adjlistgraph.h \
-    src/graph_algorithms/basic_graph/adjlist_graph/adjlistgraph_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph/graph.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph/graph_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/adjlist_graph/adjlistgraph.h \
+    src/graph_algorithms/basic_graph/graph_representation/adjlist_graph/adjlistgraph_test.h \
     src/graph_algorithms/basic_graph/topology_sort/topologysort.h \
     src/graph_algorithms/basic_graph/topology_sort/topologysort_test.h \
     src/graph_algorithms/basic_graph/strong_connected_component/strongconnectedcomponent.h \
-    src/graph_algorithms/basic_graph/strong_connected_component/strongconnectedcomponent_test.h
+    src/graph_algorithms/basic_graph/strong_connected_component/strongconnectedcomponent_test.h \
+    src/queue_algorithms/min_queue/minqueue.h \
+    src/queue_algorithms/min_queue/minqueue_test.h \
+    src/graph_algorithms/minimum_spanning_tree/prim/prim.h \
+    src/graph_algorithms/minimum_spanning_tree/prim/prim_test.h \
+    src/graph_algorithms/minimum_spanning_tree/kruskal/kruskal.h \
+    src/graph_algorithms/minimum_spanning_tree/kruskal/kruskal_test.h \
+    src/set_algorithms/disjoint_set/disjointset.h \
+    src/set_algorithms/disjoint_set/disjointset_test.h
+
 
 

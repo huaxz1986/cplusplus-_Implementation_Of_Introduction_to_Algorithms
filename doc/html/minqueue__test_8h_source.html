@@ -115,52 +115,151 @@ $(document).ready(function(){initNavTree('minqueue__test_8h_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a>;</div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">    7</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>=10;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_node.html">    9</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_node.html">Node</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_node.html#a3020957813f200a9da836428aad2d8d7">   11</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_node.html#a3020957813f200a9da836428aad2d8d7">key</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_node.html">   10</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_node.html">Node</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="struct_node.html#a3c69606b98be4c0fe6cc2abbe554948e">   12</a></span>&#160;    <a class="code" href="struct_node.html#a3c69606b98be4c0fe6cc2abbe554948e">Node</a>(<span class="keywordtype">int</span> k):<a class="code" href="struct_node.html#afcabbedc2b739455060451607c6344e4">key</a>(k){}</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="struct_node.html#afcabbedc2b739455060451607c6344e4">   13</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_node.html#afcabbedc2b739455060451607c6344e4">key</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_min_queue_test.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_min_queue_test.html">MinQueueTest</a>:<span class="keyword">public</span> ::testing::Test</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#ae801d45bf78b7bb80b278264d3a8e96a">   24</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_min_queue_test.html#ae801d45bf78b7bb80b278264d3a8e96a">SetUp</a>()</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_min_queue_test.html#a372d59dab9f706027a6be031a1ab99dc">_minqueue</a>=std::make_shared&lt;MinQueue&lt;Node&gt;&gt;(<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a3e949d54ecada54f713ff47d80eb513c">   28</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_min_queue_test.html#a3e949d54ecada54f713ff47d80eb513c">TearDown</a>(){}</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a372d59dab9f706027a6be031a1ab99dc">   29</a></span>&#160;    std::shared_ptr&lt;MinQueue&lt;Node&gt;&gt; <a class="code" href="class_min_queue_test.html#a372d59dab9f706027a6be031a1ab99dc">_minqueue</a>;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">   33</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_min)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#a23b427e2a4b19b649fe2470df53d129b">   37</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_extract_min)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif // MINQUEUE_TEST</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="ttc" id="class_min_queue_test_html_a3e949d54ecada54f713ff47d80eb513c"><div class="ttname"><a href="class_min_queue_test.html#a3e949d54ecada54f713ff47d80eb513c">MinQueueTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00028">minqueue_test.h:28</a></div></div>
-<div class="ttc" id="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_html"><div class="ttname"><a href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a></div><div class="ttdoc">MinQueue：最小优先级队列，算法导论第6章 </div><div class="ttdef"><b>Definition:</b> <a href="minqueue_8h_source.html#l00020">minqueue.h:20</a></div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_min_queue_test.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_min_queue_test.html">MinQueueTest</a>:<span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a627ceae9e25205d70955137bbfc863fd">   24</a></span>&#160;    <span class="keyword">typedef</span> std::function&lt;bool (std::shared_ptr&lt;int&gt;,std::shared_ptr&lt;int&gt;)&gt; <a class="code" href="class_min_queue_test.html#a627ceae9e25205d70955137bbfc863fd">Int_Compare_Type</a> ; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a40648c6c5c338387bda62519dc99fc79">   25</a></span>&#160;    <span class="keyword">typedef</span> std::function&lt;int&amp;(std::shared_ptr&lt;int&gt;)&gt; <a class="code" href="class_min_queue_test.html#a40648c6c5c338387bda62519dc99fc79">Int_Get_Type</a>; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a25bfd5b74968c587db57133f107a5f61">   26</a></span>&#160;    <span class="keyword">typedef</span> std::function&lt;bool (std::shared_ptr&lt;Node&gt;,std::shared_ptr&lt;Node&gt;)&gt; <a class="code" href="class_min_queue_test.html#a25bfd5b74968c587db57133f107a5f61">Struct_Compare_Type</a> ;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#aebcf6172ed7e9dd6f821fb1043f1cd6f">   27</a></span>&#160;    <span class="keyword">typedef</span> std::function&lt;double&amp;(std::shared_ptr&lt;Node&gt;)&gt; <a class="code" href="class_min_queue_test.html#aebcf6172ed7e9dd6f821fb1043f1cd6f">Struct_Get_Type</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3">   28</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue&lt;Node,double&gt;</a> <a class="code" href="class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3">Struct_MinQueue_Type</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#ad81df38acc845934accb320c4dbdd582">   29</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue&lt;int,int&gt;</a> <a class="code" href="class_min_queue_test.html#ad81df38acc845934accb320c4dbdd582">Int_MinQueue_Type</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#ae801d45bf78b7bb80b278264d3a8e96a">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_min_queue_test.html#ae801d45bf78b7bb80b278264d3a8e96a">SetUp</a>()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="class_min_queue_test.html#a25bfd5b74968c587db57133f107a5f61">Struct_Compare_Type</a> node_compare=[](std::shared_ptr&lt;Node&gt; first,std::shared_ptr&lt;Node&gt; second){<span class="keywordflow">return</span> first-&gt;key&lt;second-&gt;key;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_min_queue_test.html#aebcf6172ed7e9dd6f821fb1043f1cd6f">Struct_Get_Type</a> node_get=[](std::shared_ptr&lt;Node&gt; node)-&gt;<span class="keywordtype">double</span>&amp; {<span class="keywordflow">return</span> node-&gt;key;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_min_queue_test.html#aed079eb9c6dd8460cc785b0fc6088a97">_strcut_minqueue</a>=std::make_shared&lt;Struct_MinQueue_Type&gt;(node_compare,node_get);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_min_queue_test.html#a627ceae9e25205d70955137bbfc863fd">Int_Compare_Type</a> int_compare=[](std::shared_ptr&lt;int&gt; first,std::shared_ptr&lt;int&gt;second){<span class="keywordflow">return</span> *first&lt;*second;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_min_queue_test.html#a40648c6c5c338387bda62519dc99fc79">Int_Get_Type</a> int_get=[](std::shared_ptr&lt;int&gt; node)-&gt;<span class="keywordtype">int</span>&amp;{<span class="keywordflow">return</span> *node;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_min_queue_test.html#a03f9ea0fcc4b820a539d32d6539c2df9">_int_minqueue</a>=std::make_shared&lt;Int_MinQueue_Type&gt;(int_compare,int_get);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a3e949d54ecada54f713ff47d80eb513c">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_min_queue_test.html#a3e949d54ecada54f713ff47d80eb513c">TearDown</a>(){}</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#aed079eb9c6dd8460cc785b0fc6088a97">   42</a></span>&#160;    std::shared_ptr&lt;Struct_MinQueue_Type&gt; <a class="code" href="class_min_queue_test.html#aed079eb9c6dd8460cc785b0fc6088a97">_strcut_minqueue</a>;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_min_queue_test.html#a03f9ea0fcc4b820a539d32d6539c2df9">   43</a></span>&#160;    std::shared_ptr&lt;Int_MinQueue_Type&gt; <a class="code" href="class_min_queue_test.html#a03f9ea0fcc4b820a539d32d6539c2df9">_int_minqueue</a>;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">   51</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_min)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    EXPECT_FALSE(_strcut_minqueue-&gt;min());</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    EXPECT_FALSE(_int_minqueue-&gt;min());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#a23b427e2a4b19b649fe2470df53d129b">   61</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_extract_min)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    EXPECT_FALSE(_strcut_minqueue-&gt;min());</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    EXPECT_FALSE(_int_minqueue-&gt;min());</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#ad8f979c4a970d6da46dce5fc51ad9be0">   71</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_insert)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>-1;i&gt;=0;i--)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        _strcut_minqueue-&gt;insert(std::make_shared&lt;Node&gt;(i));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        EXPECT_NEAR(_strcut_minqueue-&gt;min()-&gt;key,i,0.001)&lt;&lt;<span class="stringliteral">&quot;i:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    EXPECT_NEAR(_strcut_minqueue-&gt;min()-&gt;key,0,0.001);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>;i++)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;       EXPECT_NEAR(_strcut_minqueue-&gt;extract_min()-&gt;key,i,0.001)&lt;&lt;<span class="stringliteral">&quot;i:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=Q_NUM-1;i&gt;=0;i--)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        _int_minqueue-&gt;insert(std::make_shared&lt;int&gt;(i));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        EXPECT_EQ(*(_int_minqueue-&gt;min()),i)&lt;&lt;<span class="stringliteral">&quot;i:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    EXPECT_EQ(*(_int_minqueue-&gt;min()),0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>;i++)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;       EXPECT_EQ(*(_int_minqueue-&gt;extract_min()),i)&lt;&lt;<span class="stringliteral">&quot;i:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#abb112e00f9190db01bd4a0f1b5b0a614">  100</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_is_empty)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    EXPECT_TRUE(_strcut_minqueue-&gt;is_empty());</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    EXPECT_TRUE(_int_minqueue-&gt;is_empty());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    _strcut_minqueue-&gt;insert(std::make_shared&lt;Node&gt;(0));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    _int_minqueue-&gt;insert(std::make_shared&lt;int&gt;(0));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    EXPECT_FALSE(_strcut_minqueue-&gt;is_empty());</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    EXPECT_FALSE(_int_minqueue-&gt;is_empty());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#ac33dacf7d5fa2124c0450e2e42df92f2">  114</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_is_inqueue)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    std::shared_ptr&lt;Node&gt; nodes[<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>];</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    std::shared_ptr&lt;int&gt; ints[<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>;i++)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        nodes[i]=std::make_shared&lt;Node&gt;(i);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        ints[i]=std::make_shared&lt;int&gt;(i);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>;i++)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        _strcut_minqueue-&gt;insert(nodes[i]);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        _int_minqueue-&gt;insert(ints[i]);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    EXPECT_FALSE(_strcut_minqueue-&gt;is_inqueue(nodes[0]));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    EXPECT_FALSE(_int_minqueue-&gt;is_inqueue(ints[0]));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    EXPECT_THROW(_strcut_minqueue-&gt;is_inqueue(std::shared_ptr&lt;Node&gt;()),std::invalid_argument);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    EXPECT_THROW(_int_minqueue-&gt;is_inqueue(std::shared_ptr&lt;int&gt;()),std::invalid_argument);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;<a class="code" href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a>;i++)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        EXPECT_TRUE(_strcut_minqueue-&gt;is_inqueue(nodes[i]))&lt;&lt;<span class="stringliteral">&quot;i:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        EXPECT_TRUE(_int_minqueue-&gt;is_inqueue(ints[i]))&lt;&lt;<span class="stringliteral">&quot;i:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#aef5f2ca4ac17ec851b45200adfeb46ec">  143</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_decreate_key)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">// test_insert测试通过，则test_decreate_key隐含着测试通过</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#a06d0f0b537e5e33c402fd59bdc22a40e">  152</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_setupHeap)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">//该接口为遗留接口，因此这里不再测试</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="minqueue__test_8h.html#a90ff801f1417c5ee3336bb73ded2f7f2">  161</a></span>&#160;<a class="code" href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a>(<a class="code" href="class_min_queue_test.html">MinQueueTest</a>,test_heapify)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">// extract_min测试通过，则test_decreate_key隐含着测试通过</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif // MINQUEUE_TEST</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="ttc" id="class_min_queue_test_html_a03f9ea0fcc4b820a539d32d6539c2df9"><div class="ttname"><a href="class_min_queue_test.html#a03f9ea0fcc4b820a539d32d6539c2df9">MinQueueTest::_int_minqueue</a></div><div class="ttdeci">std::shared_ptr&lt; Int_MinQueue_Type &gt; _int_minqueue</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00043">minqueue_test.h:43</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_a3e949d54ecada54f713ff47d80eb513c"><div class="ttname"><a href="class_min_queue_test.html#a3e949d54ecada54f713ff47d80eb513c">MinQueueTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00041">minqueue_test.h:41</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_a9b7e5e987d5e856adc5beb6986dd96a3"><div class="ttname"><a href="class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3">MinQueueTest::Struct_MinQueue_Type</a></div><div class="ttdeci">MinQueue&lt; Node, double &gt; Struct_MinQueue_Type</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00028">minqueue_test.h:28</a></div></div>
+<div class="ttc" id="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_html"><div class="ttname"><a href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a></div><div class="ttdoc">MinQueue：最小优先级队列，算法导论第6章6.5节 </div><div class="ttdef"><b>Definition:</b> <a href="minqueue_8h_source.html#l00042">minqueue.h:42</a></div></div>
 <div class="ttc" id="minqueue__test_8h_html_a7ac202f010deb7a1a6f8ed1b8580d927"><div class="ttname"><a href="minqueue__test_8h.html#a7ac202f010deb7a1a6f8ed1b8580d927">Q_NUM</a></div><div class="ttdeci">const int Q_NUM</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00007">minqueue_test.h:7</a></div></div>
-<div class="ttc" id="class_min_queue_test_html_a372d59dab9f706027a6be031a1ab99dc"><div class="ttname"><a href="class_min_queue_test.html#a372d59dab9f706027a6be031a1ab99dc">MinQueueTest::_minqueue</a></div><div class="ttdeci">std::shared_ptr&lt; MinQueue&lt; Node &gt; &gt; _minqueue</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00029">minqueue_test.h:29</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_a25bfd5b74968c587db57133f107a5f61"><div class="ttname"><a href="class_min_queue_test.html#a25bfd5b74968c587db57133f107a5f61">MinQueueTest::Struct_Compare_Type</a></div><div class="ttdeci">std::function&lt; bool(std::shared_ptr&lt; Node &gt;, std::shared_ptr&lt; Node &gt;)&gt; Struct_Compare_Type</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00026">minqueue_test.h:26</a></div></div>
+<div class="ttc" id="struct_node_html_afcabbedc2b739455060451607c6344e4"><div class="ttname"><a href="struct_node.html#afcabbedc2b739455060451607c6344e4">Node::key</a></div><div class="ttdeci">double key</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00013">minqueue_test.h:13</a></div></div>
 <div class="ttc" id="minqueue_8h_html"><div class="ttname"><a href="minqueue_8h.html">minqueue.h</a></div></div>
-<div class="ttc" id="class_min_queue_test_html"><div class="ttname"><a href="class_min_queue_test.html">MinQueueTest</a></div><div class="ttdoc">MinQueueTest:测试类，用于为测试提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00019">minqueue_test.h:19</a></div></div>
-<div class="ttc" id="struct_node_html_a3020957813f200a9da836428aad2d8d7"><div class="ttname"><a href="struct_node.html#a3020957813f200a9da836428aad2d8d7">Node::key</a></div><div class="ttdeci">int key</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00011">minqueue_test.h:11</a></div></div>
-<div class="ttc" id="minqueue__test_8h_html_a7d7e9ad0b2c53dda93300e9da2009fd0"><div class="ttname"><a href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a></div><div class="ttdeci">TEST_F(MinQueueTest, test_min)</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00033">minqueue_test.h:33</a></div></div>
-<div class="ttc" id="struct_node_html"><div class="ttname"><a href="struct_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00009">minqueue_test.h:9</a></div></div>
-<div class="ttc" id="class_min_queue_test_html_ae801d45bf78b7bb80b278264d3a8e96a"><div class="ttname"><a href="class_min_queue_test.html#ae801d45bf78b7bb80b278264d3a8e96a">MinQueueTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00024">minqueue_test.h:24</a></div></div>
+<div class="ttc" id="class_min_queue_test_html"><div class="ttname"><a href="class_min_queue_test.html">MinQueueTest</a></div><div class="ttdoc">MinQueueTest:测试类，用于为测试提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00021">minqueue_test.h:21</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_aebcf6172ed7e9dd6f821fb1043f1cd6f"><div class="ttname"><a href="class_min_queue_test.html#aebcf6172ed7e9dd6f821fb1043f1cd6f">MinQueueTest::Struct_Get_Type</a></div><div class="ttdeci">std::function&lt; double &amp;(std::shared_ptr&lt; Node &gt;)&gt; Struct_Get_Type</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00027">minqueue_test.h:27</a></div></div>
+<div class="ttc" id="struct_node_html_a3c69606b98be4c0fe6cc2abbe554948e"><div class="ttname"><a href="struct_node.html#a3c69606b98be4c0fe6cc2abbe554948e">Node::Node</a></div><div class="ttdeci">Node(int k)</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00012">minqueue_test.h:12</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_aed079eb9c6dd8460cc785b0fc6088a97"><div class="ttname"><a href="class_min_queue_test.html#aed079eb9c6dd8460cc785b0fc6088a97">MinQueueTest::_strcut_minqueue</a></div><div class="ttdeci">std::shared_ptr&lt; Struct_MinQueue_Type &gt; _strcut_minqueue</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00042">minqueue_test.h:42</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_a40648c6c5c338387bda62519dc99fc79"><div class="ttname"><a href="class_min_queue_test.html#a40648c6c5c338387bda62519dc99fc79">MinQueueTest::Int_Get_Type</a></div><div class="ttdeci">std::function&lt; int &amp;(std::shared_ptr&lt; int &gt;)&gt; Int_Get_Type</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00025">minqueue_test.h:25</a></div></div>
+<div class="ttc" id="minqueue__test_8h_html_a7d7e9ad0b2c53dda93300e9da2009fd0"><div class="ttname"><a href="minqueue__test_8h.html#a7d7e9ad0b2c53dda93300e9da2009fd0">TEST_F</a></div><div class="ttdeci">TEST_F(MinQueueTest, test_min)</div><div class="ttdoc">MinQueueTest:测试最小优先级队列 </div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00051">minqueue_test.h:51</a></div></div>
+<div class="ttc" id="struct_node_html"><div class="ttname"><a href="struct_node.html">Node</a></div><div class="ttdoc">Node:用于测试的类型 </div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00010">minqueue_test.h:10</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_ad81df38acc845934accb320c4dbdd582"><div class="ttname"><a href="class_min_queue_test.html#ad81df38acc845934accb320c4dbdd582">MinQueueTest::Int_MinQueue_Type</a></div><div class="ttdeci">MinQueue&lt; int, int &gt; Int_MinQueue_Type</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00029">minqueue_test.h:29</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_ae801d45bf78b7bb80b278264d3a8e96a"><div class="ttname"><a href="class_min_queue_test.html#ae801d45bf78b7bb80b278264d3a8e96a">MinQueueTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00031">minqueue_test.h:31</a></div></div>
+<div class="ttc" id="class_min_queue_test_html_a627ceae9e25205d70955137bbfc863fd"><div class="ttname"><a href="class_min_queue_test.html#a627ceae9e25205d70955137bbfc863fd">MinQueueTest::Int_Compare_Type</a></div><div class="ttdeci">std::function&lt; bool(std::shared_ptr&lt; int &gt;, std::shared_ptr&lt; int &gt;)&gt; Int_Compare_Type</div><div class="ttdef"><b>Definition:</b> <a href="minqueue__test_8h_source.html#l00024">minqueue_test.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_19b2b5d3bb6428b36184e1dd76169eda.html">queue_algorithms</a></li><li class="navelem"><a class="el" href="dir_26f89fd3e393d266902efdf1ea20fe07.html">min_queue</a></li><li class="navelem"><a class="el" href="minqueue__test_8h.html">minqueue_test.h</a></li>
+    <li class="navelem"><a class="el" href="dir_8ed9dba4cd616b67da9b1338594e34e0.html">src</a></li><li class="navelem"><a class="el" href="dir_b144fdcc7226fc970a6ccdd8bb1f9004.html">queue_algorithms</a></li><li class="navelem"><a class="el" href="dir_28335c281b58f87353fdbfb23e024a8a.html">min_queue</a></li><li class="navelem"><a class="el" href="minqueue__test_8h.html">minqueue_test.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>

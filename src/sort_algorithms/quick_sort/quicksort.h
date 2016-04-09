@@ -39,8 +39,8 @@ namespace IntroductionToAlgorithm
      * - 时间复杂度 O(n)
      * - 原地操作
     */
-        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
-                        Iterator partition(const Iterator begin,const Iterator end,const Iterator partition_iter,Compare compare=Compare())
+        template<typename Iterator,typename CompareType=std::less<typename std::iterator_traits<Iterator>::value_type>>
+                        Iterator partition(const Iterator begin,const Iterator end,const Iterator partition_iter,CompareType compare=CompareType())
         {
             //typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             auto size=std::distance(begin,end);
@@ -77,8 +77,8 @@ namespace IntroductionToAlgorithm
          * - 最坏时间复杂度 O(n^2)， 期望时间复杂度 O(nlgn)。它平均性能非常好，是实际排序应用中最好的选择
          * - 原地排序
         */
-        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
-                        void quick_sort(const Iterator begin,const Iterator end,Compare compare=Compare())
+        template<typename Iterator,typename CompareType=std::less<typename std::iterator_traits<Iterator>::value_type>>
+                        void quick_sort(const Iterator begin,const Iterator end,CompareType compare=CompareType())
         {
             //typedef typename std::iterator_traits<Iterator>::value_type T;// 迭代器指向对象的值类型
             auto size=std::distance(begin,end);

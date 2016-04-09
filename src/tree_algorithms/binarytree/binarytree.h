@@ -11,9 +11,10 @@ namespace TreeAlgorithm
     *
     * 二叉树通过一个root（若引用）指向一个节点对象。当root为空时，树为空
     */
-    template<typename NodeType> struct BinaryTree
+    template<typename NodeT> struct BinaryTree
     {
-        typedef typename NodeType::KeyType T; /*!< 树的节点存储数据的类型*/
+        typedef NodeT NodeType; /*!< 树的节点类型*/
+        typedef typename NodeT::KeyType KeyType; /*!< 树的节点存储数据的类型*/
         //! 默认函数
         /*!
         *
@@ -54,8 +55,8 @@ namespace TreeAlgorithm
     *
     * 时间复杂度O(n)，空间复杂度O(1)
     */
-    template<typename NodeType,typename Action=std::function<void (typename NodeType::T)> >
-        void  inorder_walk( std::shared_ptr<NodeType> root,Action action=[](typename NodeType::T){})
+    template<typename NodeType,typename ActionType=std::function<void (typename NodeType::T)> >
+        void  inorder_walk( std::shared_ptr<NodeType> root,ActionType action=[](typename NodeType::T){})
     {
         if (root)
         {
@@ -78,8 +79,8 @@ namespace TreeAlgorithm
     *
     * 时间复杂度O(n)，空间复杂度O(1)
     */
-    template<typename NodeType,typename Action=std::function<void (typename NodeType::T)> >
-        void   preorder_walk( std::shared_ptr<NodeType> root,Action action=[](typename NodeType::T){})
+    template<typename NodeType,typename ActionType=std::function<void (typename NodeType::T)> >
+        void   preorder_walk( std::shared_ptr<NodeType> root,ActionType action=[](typename NodeType::T){})
     {
         if (root)
         {
@@ -104,8 +105,8 @@ namespace TreeAlgorithm
     *
     * 时间复杂度O(n)，空间复杂度O(1)
     */
-    template<typename NodeType,typename Action=std::function<void (typename NodeType::T)> >
-        void  postorder_walk( std::shared_ptr<NodeType> root,Action action=[](typename NodeType::T){})
+    template<typename NodeType,typename ActionType=std::function<void (typename NodeType::T)> >
+        void  postorder_walk( std::shared_ptr<NodeType> root,ActionType action=[](typename NodeType::T){})
     {
         if (root)
         {

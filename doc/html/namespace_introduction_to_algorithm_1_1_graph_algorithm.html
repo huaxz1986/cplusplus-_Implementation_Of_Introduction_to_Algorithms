@@ -140,26 +140,18 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a19237111c3b1ec2717c5e1aefe2f6d9b">unlimit</a> ()</td></tr>
-<tr class="memdesc:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">unlimit：返回正无穷的函数  <a href="#a19237111c3b1ec2717c5e1aefe2f6d9b">More...</a><br /></td></tr>
-<tr class="separator:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a4f664c13605fc87ca8d26f4aad5a9fa2">is_unlimit</a> (T t)</td></tr>
-<tr class="memdesc:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_unlimit：判断是否正无穷  <a href="#a4f664c13605fc87ca8d26f4aad5a9fa2">More...</a><br /></td></tr>
-<tr class="separator:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4b14f2da6462f3575a3f74b6558a575"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename Action  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </td></tr>
-<tr class="memitem:aa4b14f2da6462f3575a3f74b6558a575"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aa4b14f2da6462f3575a3f74b6558a575">breadth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, Action action=[](typename GraphType::VIDType){})</td></tr>
-<tr class="memdesc:aa4b14f2da6462f3575a3f74b6558a575"><td class="mdescLeft">&#160;</td><td class="mdescRight">breadth_first_search：广度优先搜索，算法导论22章xx节  <a href="#aa4b14f2da6462f3575a3f74b6558a575">More...</a><br /></td></tr>
-<tr class="separator:aa4b14f2da6462f3575a3f74b6558a575"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01ece18a63d13cfe023c1f6360e63451"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename Action  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
-<tr class="memitem:a01ece18a63d13cfe023c1f6360e63451"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a01ece18a63d13cfe023c1f6360e63451">visit</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType v_id, int &amp;time, Action pre_action=[](typename GraphType::VIDType, int){}, Action post_action=[](typename GraphType::VIDType, int){})</td></tr>
-<tr class="memdesc:a01ece18a63d13cfe023c1f6360e63451"><td class="mdescLeft">&#160;</td><td class="mdescRight">visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节  <a href="#a01ece18a63d13cfe023c1f6360e63451">More...</a><br /></td></tr>
-<tr class="separator:a01ece18a63d13cfe023c1f6360e63451"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename Action  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
-<tr class="memitem:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a5d500378f28e485a3b9a9b9cc74e4f97">depth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, Action pre_action=[](typename GraphType::VIDType, int){}, Action post_action=[](typename GraphType::VIDType, int){}, Action pre_root_action=[](typename GraphType::VIDType, int){}, Action post_root_action=[](typename GraphType::VIDType, int){}, const std::vector&lt; typename GraphType::VIDType &gt; &amp;search_order=std::vector&lt; typename GraphType::VIDType &gt;())</td></tr>
-<tr class="memdesc:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">depth_first_search：深度优先搜索，算法导论22章22.3节  <a href="#a5d500378f28e485a3b9a9b9cc74e4f97">More...</a><br /></td></tr>
-<tr class="separator:a5d500378f28e485a3b9a9b9cc74e4f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c57b397479972f84b4b10bc19968297"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </td></tr>
+<tr class="memitem:a9c57b397479972f84b4b10bc19968297"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a9c57b397479972f84b4b10bc19968297">breadth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, ActionType pre_action=[](typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType){})</td></tr>
+<tr class="memdesc:a9c57b397479972f84b4b10bc19968297"><td class="mdescLeft">&#160;</td><td class="mdescRight">breadth_first_search：广度优先搜索，算法导论22章xx节  <a href="#a9c57b397479972f84b4b10bc19968297">More...</a><br /></td></tr>
+<tr class="separator:a9c57b397479972f84b4b10bc19968297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af651a2b435fc270ab711e573d83a385d"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
+<tr class="memitem:af651a2b435fc270ab711e573d83a385d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#af651a2b435fc270ab711e573d83a385d">visit</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType v_id, int &amp;time, ActionType pre_action=[](typename GraphType::VIDType, int){}, ActionType post_action=[](typename GraphType::VIDType, int){})</td></tr>
+<tr class="memdesc:af651a2b435fc270ab711e573d83a385d"><td class="mdescLeft">&#160;</td><td class="mdescRight">visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节  <a href="#af651a2b435fc270ab711e573d83a385d">More...</a><br /></td></tr>
+<tr class="separator:af651a2b435fc270ab711e573d83a385d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb9faf89f84f73b716c25966786e078"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
+<tr class="memitem:a3bb9faf89f84f73b716c25966786e078"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a3bb9faf89f84f73b716c25966786e078">depth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, ActionType pre_action=[](typename GraphType::VIDType, int){}, ActionType post_action=[](typename GraphType::VIDType, int){}, ActionType pre_root_action=[](typename GraphType::VIDType, int){}, ActionType post_root_action=[](typename GraphType::VIDType, int){}, const std::vector&lt; typename GraphType::VIDType &gt; &amp;search_order=std::vector&lt; typename GraphType::VIDType &gt;())</td></tr>
+<tr class="memdesc:a3bb9faf89f84f73b716c25966786e078"><td class="mdescLeft">&#160;</td><td class="mdescRight">depth_first_search：深度优先搜索，算法导论22章22.3节  <a href="#a3bb9faf89f84f73b716c25966786e078">More...</a><br /></td></tr>
+<tr class="separator:a3bb9faf89f84f73b716c25966786e078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d058c2aaa8714778b3f2ab8a24ff232"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
 <tr class="memitem:a6d058c2aaa8714778b3f2ab8a24ff232"><td class="memTemplItemLeft" align="right" valign="top">const std::vector&lt; std::vector&lt; typename GraphType::VIDType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a6d058c2aaa8714778b3f2ab8a24ff232">scc</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
 <tr class="memdesc:a6d058c2aaa8714778b3f2ab8a24ff232"><td class="mdescLeft">&#160;</td><td class="mdescRight">scc：强连通分量，算法导论22章22.5节  <a href="#a6d058c2aaa8714778b3f2ab8a24ff232">More...</a><br /></td></tr>
@@ -168,6 +160,20 @@ Functions</h2></td></tr>
 <tr class="memitem:a804241e72be5f4c031190bc12a6b73a2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; typename GraphType::VIDType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">topology_sort</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
 <tr class="memdesc:a804241e72be5f4c031190bc12a6b73a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">topology_sort：拓扑排序，算法导论22章22.4节  <a href="#a804241e72be5f4c031190bc12a6b73a2">More...</a><br /></td></tr>
 <tr class="separator:a804241e72be5f4c031190bc12a6b73a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6586a1f6485cc30b643ef752eee9b783"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a6586a1f6485cc30b643ef752eee9b783"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a6586a1f6485cc30b643ef752eee9b783">kruskal</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
+<tr class="separator:a6586a1f6485cc30b643ef752eee9b783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79afa99e5119649d01d613fb01f3984"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:ac79afa99e5119649d01d613fb01f3984"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ac79afa99e5119649d01d613fb01f3984">prim</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id)</td></tr>
+<tr class="separator:ac79afa99e5119649d01d613fb01f3984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a19237111c3b1ec2717c5e1aefe2f6d9b">unlimit</a> ()</td></tr>
+<tr class="memdesc:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">unlimit：返回正无穷的函数  <a href="#a19237111c3b1ec2717c5e1aefe2f6d9b">More...</a><br /></td></tr>
+<tr class="separator:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a4f664c13605fc87ca8d26f4aad5a9fa2">is_unlimit</a> (T t)</td></tr>
+<tr class="memdesc:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_unlimit：判断是否正无穷  <a href="#a4f664c13605fc87ca8d26f4aad5a9fa2">More...</a><br /></td></tr>
+<tr class="separator:a4f664c13605fc87ca8d26f4aad5a9fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1581960f77507024b39572aeb6d1fbd6"><td class="memTemplParams" colspan="2">template&lt;typename VertexType &gt; </td></tr>
 <tr class="memitem:a1581960f77507024b39572aeb6d1fbd6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; typename VertexType::VIDType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a1581960f77507024b39572aeb6d1fbd6">get_path</a> (const std::shared_ptr&lt; VertexType &gt; v_from, const std::shared_ptr&lt; VertexType &gt; v_to)</td></tr>
 <tr class="memdesc:a1581960f77507024b39572aeb6d1fbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_path：获取两个顶点之间的路径  <a href="#a1581960f77507024b39572aeb6d1fbd6">More...</a><br /></td></tr>
@@ -177,11 +183,11 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Namespace of <a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html" title="Namespace of GraphAlgorithm. ">GraphAlgorithm</a>. </p>
 <p>该命名空间内包含所有图算法 </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aa4b14f2da6462f3575a3f74b6558a575"></a>
+<a class="anchor" id="a9c57b397479972f84b4b10bc19968297"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename GraphType , typename Action  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </div>
+template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::breadth_first_search </td>
@@ -198,8 +204,14 @@ template&lt;typename GraphType , typename Action  = std::function&lt; void(typen
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Action&#160;</td>
-          <td class="paramname"><em>action</em> = <code>[](typename&#160;GraphType::VIDType){}</code>&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
+          <td class="paramname"><em>pre_action</em> = <code>[](typename&#160;GraphType::VIDType){}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ActionType&#160;</td>
+          <td class="paramname"><em>post_action</em> = <code>[](typename&#160;GraphType::VIDType){}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -214,7 +226,8 @@ template&lt;typename GraphType , typename Action  = std::function&lt; void(typen
   <table class="params">
     <tr><td class="paramname">graph:指向图的强引用，必须非空。若为空则抛出异常</td><td></td></tr>
     <tr><td class="paramname">source_id：广度优先搜索的源点&lt;tt&gt;id&lt;/tt&gt;，必须有效。若无效则抛出异常</td><td></td></tr>
-    <tr><td class="paramname">action:一个可调用对象，它在每次搜索到一个顶点后立即调用。其参数为被搜索到的顶点&lt;tt&gt;id&lt;/tt&gt;。它默认是个空操作，即不执行任何操作。</td><td></td></tr>
+    <tr><td class="paramname">pre_action:一个可调用对象，在每次发现一个顶点时调用，调用参数为该顶点的&lt;tt&gt;id&lt;/tt&gt;。默认为空操作，即不进行任何操作</td><td></td></tr>
+    <tr><td class="paramname">post_action:一个可调用对象，在每次对一个顶点搜索完成时调用，调用参数为该顶点的&lt;tt&gt;id&lt;/tt&gt;。默认为空操作，即不进行任何操作</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -241,15 +254,15 @@ template&lt;typename GraphType , typename Action  = std::function&lt; void(typen
 <p>最短路径：广度优先搜索能找出给定源结点s到所有可以到达的结点之间的距离。定义从源s到结点v之间的最短路径距离 delt(s,v) 为从结点s到v之间的所有路径里面最少的边数。 如果从s到v没有路径，则 delt(s,v)=正无穷大 。我们定义从s到v之间的长度为 delt(s,v) 的路径为 s 到 v 的最短路径。可以证明：广度优先搜索可以正确计算出最短路径距离。</p>
 <p>广度优先树：对于G=(V,E)和源点s，定义图G的前驱子图为 G_pai=(V_pai,E_pai)，其中 V_pai={ v属于V: v.parent!=NIL}并上{s}，E_pai={(v.parent,v):v属于(V_pai-{s})}。 即V_pai由从源s可达的所有结点组成（包括s本身），E_pai由V_pai中去掉s之后的结点的入边组成，其中该入边的对端为结点的父结点。 BFS算法获取的前驱子图G_pai包含一条从源结点s到结点v的唯一简单路径，而且该路径也是图G里面从源s到v之间的一条最短路径，因此前驱子图也称为广度优先树。 </p>
 
-<p>Definition at line <a class="el" href="bfs_8h_source.html#l00155">155</a> of file <a class="el" href="bfs_8h_source.html">bfs.h</a>.</p>
+<p>Definition at line <a class="el" href="bfs_8h_source.html#l00157">157</a> of file <a class="el" href="bfs_8h_source.html">bfs.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5d500378f28e485a3b9a9b9cc74e4f97"></a>
+<a class="anchor" id="a3bb9faf89f84f73b716c25966786e078"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename GraphType , typename Action  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </div>
+template&lt;typename GraphType , typename ActionType  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::depth_first_search </td>
@@ -260,25 +273,25 @@ template&lt;typename GraphType , typename Action  = std::function&lt;void(typena
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Action&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
           <td class="paramname"><em>pre_action</em> = <code>[](typename&#160;GraphType::VIDType,int){}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Action&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
           <td class="paramname"><em>post_action</em> = <code>[](typename&#160;GraphType::VIDType,int){}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Action&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
           <td class="paramname"><em>pre_root_action</em> = <code>[](typename&#160;GraphType::VIDType,int){}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Action&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
           <td class="paramname"><em>post_root_action</em> = <code>[](typename&#160;GraphType::VIDType,int){}</code>, </td>
         </tr>
         <tr>
@@ -312,7 +325,7 @@ template&lt;typename GraphType , typename Action  = std::function&lt;void(typena
 <p>深度优先搜索维护一个全局的时间。每个结点v有两个时间戳，discover_time记录了v第一次被发现的时间（v涂上灰色的时刻）；finish_time记录了搜索完成v的相邻结点的时间（v涂上黑色的时刻）。 结点v在v.discover_time之前为白色，在v.discover_time之后与v.finish_time之前为灰色，在v.finish_time之后为黑色</p>
 <p>深度优先搜索步骤：</p>
 <ul>
-<li>初始化：将所有结点染白色，并将它们的父结点置为空</li>
+<li>初始化：将所有结点染白色，并将它们的父结点置为空(由于DFS_Vertex构造函数将结点color设为白色，且将父结点置为空，因此在本算法中这个步骤可以省略)</li>
 <li>将全局时间 time 置为0</li>
 <li>遍历结点集V，取出结点v -若v是白色的（尚未发现），则调用 visit 操作 <blockquote class="doxtable">
 <p>当这里调用 visit 操作时，结点v会成为一棵树的根</p>
@@ -351,7 +364,7 @@ template&lt;typename GraphType , typename Action  = std::function&lt;void(typena
 </ul>
 <p>在无向图中，每条边要么是树边，要么是后向边。从来不会出现前向边和横向边。 </p>
 
-<p>Definition at line <a class="el" href="dfs_8h_source.html#l00230">230</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
+<p>Definition at line <a class="el" href="dfs_8h_source.html#l00231">231</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
 
 </div>
 </div>
@@ -393,7 +406,7 @@ template&lt;typename VertexType &gt; </div>
 <p>获取从<code>v_from</code>到<code>v_to</code>之间的一条路径，该路径用途经的顶点的<code>id</code>来表示，是一个<code>std::vector&lt;typename VertexType::VIDType&gt;</code>类型。</p>
 <p>要求<code>v_from</code>与<code>v_to</code>非空，否则抛出异常 </p>
 
-<p>Definition at line <a class="el" href="header_8h_source.html#l00131">131</a> of file <a class="el" href="header_8h_source.html">header.h</a>.</p>
+<p>Definition at line <a class="el" href="header_8h_source.html#l00140">140</a> of file <a class="el" href="header_8h_source.html">header.h</a>.</p>
 
 </div>
 </div>
@@ -424,7 +437,57 @@ template&lt;typename T &gt; </div>
 <p>将本函数判断一个数是否正无穷；若是则返回true;若不是则返回false</p>
 <p>这里将大于等于<code>std::numeric_limits&lt;T&gt;::max()/3</code>的数判断结果为正无穷 &gt;因为考虑到正无穷减去一个数必须保证结果也是正无穷 </p>
 
-<p>Definition at line <a class="el" href="algorithms_8h_source.html#l00105">105</a> of file <a class="el" href="algorithms_8h_source.html">algorithms.h</a>.</p>
+<p>Definition at line <a class="el" href="header_8h_source.html#l00125">125</a> of file <a class="el" href="header_8h_source.html">header.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6586a1f6485cc30b643ef752eee9b783"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::kruskal </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="kruskal_8h_source.html#l00010">10</a> of file <a class="el" href="kruskal_8h_source.html">kruskal.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac79afa99e5119649d01d613fb01f3984"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::prim </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>source_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="prim_8h_source.html#l00010">10</a> of file <a class="el" href="prim_8h_source.html">prim.h</a>.</p>
 
 </div>
 </div>
@@ -527,15 +590,15 @@ template&lt;typename T &gt; </div>
 </ul>
 <p>这里将<code>std::numeric_limits&lt;T&gt;::max()/2</code>设为正无穷，考虑到正无穷加上一个较大的数必须保证不能溢出 </p>
 
-<p>Definition at line <a class="el" href="algorithms_8h_source.html#l00090">90</a> of file <a class="el" href="algorithms_8h_source.html">algorithms.h</a>.</p>
+<p>Definition at line <a class="el" href="header_8h_source.html#l00110">110</a> of file <a class="el" href="header_8h_source.html">header.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a01ece18a63d13cfe023c1f6360e63451"></a>
+<a class="anchor" id="af651a2b435fc270ab711e573d83a385d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename GraphType , typename Action  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </div>
+template&lt;typename GraphType , typename ActionType  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::visit </td>
@@ -558,13 +621,13 @@ template&lt;typename GraphType , typename Action  = std::function&lt;void(typena
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Action&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
           <td class="paramname"><em>pre_action</em> = <code>[](typename&#160;GraphType::VIDType,int){}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Action&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
           <td class="paramname"><em>post_action</em> = <code>[](typename&#160;GraphType::VIDType,int){}</code>&#160;</td>
         </tr>
         <tr>
@@ -598,7 +661,7 @@ template&lt;typename GraphType , typename Action  = std::function&lt;void(typena
 <li>当结点 v_id 的相邻结点访问完毕，则全局时间 time 递增，然后将结点 v_id 设置为完成状态 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="dfs_8h_source.html#l00142">142</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
+<p>Definition at line <a class="el" href="dfs_8h_source.html#l00143">143</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
 
 </div>
 </div>

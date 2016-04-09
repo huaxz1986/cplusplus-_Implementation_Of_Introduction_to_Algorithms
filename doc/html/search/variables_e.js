@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['rchild',['rchild',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a5b0994f31d2ca698326aed39bd6ced65',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
-  ['root',['root',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#a81c2f14ccd7e44e3bb305c66cef417bd',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTree']]],
+  ['rank',['rank',['../struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a1fd137f74ca1317bfb02d9e1640ce147',1,'IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode']]],
+  ['rchild',['rchild',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#aaccc444db582ed362bff4e50efbc47c7',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
+  ['root',['root',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#aa0d43af70ef50ff59740dced2e832074',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTree']]],
   ['root_5fnode',['root_node',['../class_binary_tree_node_test.html#a07aad40489fc19ed29863c82a6c14863',1,'BinaryTreeNodeTest']]]
 ];

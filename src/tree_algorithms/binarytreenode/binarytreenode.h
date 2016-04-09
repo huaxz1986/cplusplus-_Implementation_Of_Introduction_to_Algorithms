@@ -10,15 +10,16 @@ namespace TreeAlgorithm {
 *
 * 任何一个节点都有两个强引用指向左右子节点，以及一个弱引用指向它的父节点。节点还有一个`key`成员包含具体的数据
 */
-template<typename T> struct BinaryTreeNode
+template<typename KType> struct BinaryTreeNode
 {
 public:
+    typedef KType KeyType;  /*!< 节点保存的数据的类型*/
     //! 默认构造函数
     /*!
      * 所有的成员变量都采取默认值
      */
     BinaryTreeNode()
-        :parent(std::weak_ptr<BinaryTreeNode>()),lchild(std::shared_ptr<BinaryTreeNode>()),rchild(std::shared_ptr<BinaryTreeNode>()),key(T())
+        :parent(std::weak_ptr<BinaryTreeNode>()),lchild(std::shared_ptr<BinaryTreeNode>()),rchild(std::shared_ptr<BinaryTreeNode>()),key(KeyType())
     {}
     //! 显式构造函数
     /*!
@@ -26,10 +27,10 @@ public:
      *
      * 指定`key`成员需要赋值的数据
      */
-    explicit BinaryTreeNode(const T& keyvalue)
+    explicit BinaryTreeNode(const KeyType& keyvalue)
         :parent(std::weak_ptr<BinaryTreeNode>()),lchild(std::shared_ptr<BinaryTreeNode>()),rchild(std::shared_ptr<BinaryTreeNode>()),key(keyvalue)
     {}
-    typedef T KeyType;  /*!< 节点保存的数据的类型*/
+
     //! to_string:返回该节点的字符串描述
     /*!
      * \return : 本节点的描述字符串
@@ -103,7 +104,7 @@ public:
     std::weak_ptr<BinaryTreeNode> parent;   /*!< 节点的父节点的弱引用*/
     std::shared_ptr<BinaryTreeNode> lchild; /*!< 节点的左子节点的强引用*/
     std::shared_ptr<BinaryTreeNode> rchild; /*!< 节点的右子节点的强引用*/
-    T key;                                 /*!< 节点的保存的数据*/
+    KeyType key;                                 /*!< 节点的保存的数据*/
 };
 }
 }

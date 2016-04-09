@@ -2,19 +2,22 @@ var searchData=
 [
   ['_5f1e_5fgraph',['_1e_graph',['../class_b_f_s_test.html#a0158014634e67e6bee3f8f6b1e622ced',1,'BFSTest::_1e_graph()'],['../class_d_f_s_test.html#ae5351e523345888ffc64aa892d93d3c2',1,'DFSTest::_1e_graph()'],['../class_topology_sort_test.html#af1fe553500cfb175b236a0302d9044af',1,'TopologySortTest::_1e_graph()']]],
   ['_5f1v_5fgraph',['_1v_graph',['../class_b_f_s_test.html#a0d7cdb7946902c8d93945a35a222b9d7',1,'BFSTest::_1v_graph()'],['../class_d_f_s_test.html#a4dbae7784992bee522457b53da2141c2',1,'DFSTest::_1v_graph()'],['../class_topology_sort_test.html#a087401853f564307534465e2ac59c0ef',1,'TopologySortTest::_1v_graph()']]],
-  ['_5fdata',['_data',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#aa5036c59645d1f17dfd5efc5760b7dd4',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['_5fcompare',['_compare',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a5de60762d317fc92c18e882dd50f8dfa',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['_5fdata',['_data',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#ad463395cef741624e6d078e4e4fc624f',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
   ['_5fdefault_5fvertex',['_default_vertex',['../class_b_f_s_vertex_test.html#ab78f6c9cb070fe5a8992f61cc5f71920',1,'BFSVertexTest::_default_vertex()'],['../class_d_f_s_vertex_test.html#aeb4886b7d27389066e8ade9c7d5a1b87',1,'DFSVertexTest::_default_vertex()']]],
   ['_5fedge',['_edge',['../class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83',1,'EdgeTest']]],
   ['_5fempty_5fgraph',['_empty_graph',['../class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c',1,'GraphTest']]],
   ['_5fempty_5ftree',['_empty_tree',['../class_binary_tree_test.html#a66e48418e5449b663b2608f4914100d5',1,'BinaryTreeTest::_empty_tree()'],['../class_search_tree_test.html#a08832932ab11e000dcd1ba60da8bad5f',1,'SearchTreeTest::_empty_tree()']]],
-  ['_5ffrom',['_from',['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a9d05a5cc5c276302911ddeefbae0d9c4',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap']]],
+  ['_5ffrom',['_from',['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a484d28581bfe39a387d90852e38ac36c',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap']]],
+  ['_5fgetkey',['_getKey',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a3f791f9dd9d61dc2caf1d6b2b354f4c4',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['_5fint_5fminqueue',['_int_minqueue',['../class_min_queue_test.html#a03f9ea0fcc4b820a539d32d6539c2df9',1,'MinQueueTest']]],
   ['_5flist_5fgraph',['_list_graph',['../class_b_f_s_test.html#aacf800be44976478c190b2acd338377f',1,'BFSTest::_list_graph()'],['../class_d_f_s_test.html#a9607eac5350c4cdd449c353fed482efc',1,'DFSTest::_list_graph()'],['../class_s_c_c_test.html#a45ded9e0483b0f9c25bbbe8b058c8b77',1,'SCCTest::_list_graph()'],['../class_topology_sort_test.html#ac664dd33d2aa257a993c1835caa0d5ad',1,'TopologySortTest::_list_graph()']]],
-  ['_5fminqueue',['_minqueue',['../class_min_queue_test.html#a372d59dab9f706027a6be031a1ab99dc',1,'MinQueueTest']]],
   ['_5fn_5fvertexes_5fgraph',['_n_vertexes_graph',['../class_graph_test.html#a2dac828599509e577b5406d06f613a16',1,'GraphTest']]],
   ['_5fn_5fvertexes_5fm_5fedges_5fgraph',['_n_vertexes_m_edges_graph',['../class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f',1,'GraphTest']]],
   ['_5fnormal_5ftree',['_normal_tree',['../class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57',1,'BinaryTreeTest::_normal_tree()'],['../class_search_tree_test.html#a9982df0c932b171ff29dfe7abcebdc05',1,'SearchTreeTest::_normal_tree()']]],
   ['_5fnormal_5fvertex',['_normal_vertex',['../class_b_f_s_vertex_test.html#aedd37204d4a3723bd78fa72af7caa6e0',1,'BFSVertexTest::_normal_vertex()'],['../class_d_f_s_vertex_test.html#a7c88bbdb6487f913f67ed34f915381e4',1,'DFSVertexTest::_normal_vertex()']]],
   ['_5frlist_5fgraph',['_rlist_graph',['../class_d_f_s_test.html#a93a79d0654eb82517990c8f5419148a8',1,'DFSTest']]],
   ['_5fscc_5fgraph',['_scc_graph',['../class_s_c_c_test.html#a4752a3091b185c9f5e5beddb842211e5',1,'SCCTest']]],
-  ['_5fsize',['_size',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a6a4c6fb635e4c827d5511e1f6ac1ff67',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::_size()'],['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a7d35f22bc361d54b1665e0fbfe37e2d5',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap::_size()']]]
+  ['_5fsize',['_size',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a0de92802e37516dda2c01de776aba641',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::_size()'],['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a57a42830d3b52d60d2ec1dfd11e2bda6',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap::_size()']]],
+  ['_5fstrcut_5fminqueue',['_strcut_minqueue',['../class_min_queue_test.html#aed079eb9c6dd8460cc785b0fc6088a97',1,'MinQueueTest']]]
 ];

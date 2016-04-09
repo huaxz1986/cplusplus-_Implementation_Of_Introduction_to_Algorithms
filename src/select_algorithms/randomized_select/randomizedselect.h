@@ -42,9 +42,9 @@ namespace IntroductionToAlgorithm
      * - 时间复杂度：最坏情况下为O(n^2)，期望时间为O(n)
      * - 原地操作
     */
-        template<typename Iterator,typename Compare=std::less<typename std::iterator_traits<Iterator>::value_type>>
+        template<typename Iterator,typename CompareType=std::less<typename std::iterator_traits<Iterator>::value_type>>
                     typename std::iterator_traits<Iterator>::value_type
-                    randomized_select(const Iterator begin,const Iterator end,typename std::iterator_traits<Iterator>::difference_type rank,Compare compare=Compare())
+                    randomized_select(const Iterator begin,const Iterator end,typename std::iterator_traits<Iterator>::difference_type rank,CompareType compare=CompareType())
         {
             //typedef typename std::iterator_traits<Iterator>::value_type T;
             auto size=std::distance(begin,end);

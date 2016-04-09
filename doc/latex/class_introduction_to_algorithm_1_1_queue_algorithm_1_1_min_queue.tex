@@ -1,100 +1,186 @@
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue}{}\section{Introduction\+To\+Algorithm\+:\+:Queue\+Algorithm\+:\+:Min\+Queue$<$ T, Compare $>$ Class Template Reference}
-\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue$<$ T, Compare $>$@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue$<$ T, Compare $>$}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue}{}\section{Introduction\+To\+Algorithm\+:\+:Queue\+Algorithm\+:\+:Min\+Queue$<$ T, T\+Key\+Type $>$ Class Template Reference}
+\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue$<$ T, T\+Key\+Type $>$@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue$<$ T, T\+Key\+Type $>$}}
 
 
-Min\+Queue：最小优先级队列，算法导论第6章  
+Min\+Queue：最小优先级队列，算法导论第6章6.5节  
 
 
 
 
 {\ttfamily \#include $<$minqueue.\+h$>$}
 
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ bool(std\+::shared\+\_\+ptr$<$ T $>$, std\+::shared\+\_\+ptr$<$ T $>$)$>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8f2f5b5d2b7097bbc6edda7b9c9228a6}{Compare\+Type}
+\item 
+typedef std\+::function$<$ T\+Key\+Type \&(std\+::shared\+\_\+ptr$<$ T $>$)$>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a391cb754ab172d1d4cdefd34130b917c}{Get\+Key\+Type}
+\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a86bf5a97695e09ab6fe255b68e72673d}{Min\+Queue} ()
-\item 
-\hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8407e5922eceba5b30dfddc6bed309bd}{Min\+Queue} (std\+::size\+\_\+t reseve\+\_\+size)
-\item 
-std\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aafd66150ecbd81743c5204e8fd1b6e2b}{min} ()
+\hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a98e54e4e2c19918032b09e23e79a25e5}{Min\+Queue} (\hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8f2f5b5d2b7097bbc6edda7b9c9228a6}{Compare\+Type} compare, \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a391cb754ab172d1d4cdefd34130b917c}{Get\+Key\+Type} get\+Key)
+\begin{DoxyCompactList}\small\item\em 显式构造函数 \end{DoxyCompactList}\item 
+\hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a770243b2227a15bdc2105dde6549c745}{Min\+Queue} (std\+::size\+\_\+t reseve\+\_\+size, \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8f2f5b5d2b7097bbc6edda7b9c9228a6}{Compare\+Type} compare, \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a391cb754ab172d1d4cdefd34130b917c}{Get\+Key\+Type} get\+Key)
+\begin{DoxyCompactList}\small\item\em 显式构造函数 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a96293074ee6adef713e9e47059958ea2}{min} ()
 \begin{DoxyCompactList}\small\item\em min\+:返回最小值 \end{DoxyCompactList}\item 
-std\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ac040f9f8fe9a02d9e300e261708a3e6e}{extract\+\_\+min} ()
+std\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a71022b9e1e9993ec5c5876da9e6e6eee}{extract\+\_\+min} ()
 \begin{DoxyCompactList}\small\item\em extract\+\_\+min\+:删除队列中最小值，并返回最小值 \end{DoxyCompactList}\item 
-void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_af0e72003afbf634cd9f7df7f61de1c36}{insert} (std\+::shared\+\_\+ptr$<$ T $>$ element)
+void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_afd899c42140b42a75507ed05ce98d047}{insert} (std\+::shared\+\_\+ptr$<$ T $>$ element)
 \begin{DoxyCompactList}\small\item\em insert\+:向队列中插入一个元素 \end{DoxyCompactList}\item 
-bool \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_abc9cdc8881918001bf922c3b2cd64c1c}{is\+\_\+empty} ()
+bool \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a1b484baf6cd011a4b91aa77a644e5a44}{is\+\_\+empty} ()
 \begin{DoxyCompactList}\small\item\em is\+\_\+empty\+:返回队列是否为空 \end{DoxyCompactList}\item 
-bool \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a95ee21038ee245f37623eedbd273fb43}{is\+\_\+inqueue} (std\+::shared\+\_\+ptr$<$ T $>$ element)
+bool \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ab905b477bfd6ae685a780586f0364050}{is\+\_\+inqueue} (std\+::shared\+\_\+ptr$<$ T $>$ element)
 \begin{DoxyCompactList}\small\item\em is\+\_\+inqueue\+:返回指定元素是否在队列中 \end{DoxyCompactList}\item 
-void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a5f05999c02550096bf015a6e47a3ec7c}{decreate\+\_\+key} (std\+::size\+\_\+t element\+\_\+index, decltype(T().key) new\+\_\+key, Compare compare=Compare())
+void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aa934049abcfedd59fa9ffe6d91fea30c}{decreate\+\_\+key} (std\+::size\+\_\+t element\+\_\+index, T\+Key\+Type new\+\_\+key)
 \begin{DoxyCompactList}\small\item\em decreate\+\_\+key\+:缩减队列中某个元素的{\ttfamily key} \end{DoxyCompactList}\item 
-void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a50e106d8a3062490328588593181a6ee}{setup\+Heap} (Compare compare=Compare())
+void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a9a432c7c167a4f9a56c2988cfdc04620}{setup\+Heap} ()
 \begin{DoxyCompactList}\small\item\em setup\+Heap\+:建堆 \end{DoxyCompactList}\item 
-void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ae06cfa4dbe4464586b498b15f36081c8}{heapify} (std\+::size\+\_\+t element\+Index, Compare compare=Compare())
+void \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a4ddfab80f781d5b5f7544164bf266f82}{heapify} (std\+::size\+\_\+t element\+Index)
 \begin{DoxyCompactList}\small\item\em heapify：维持堆性质 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a88390bf1df0ffcff26ac91f470fb587b}{\+\_\+parent\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a3b7cac401c8cf45806e61aad3799eda0}{\+\_\+parent\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
 \begin{DoxyCompactList}\small\item\em \+\_\+parent\+Index\+:返回一个节点的父节点位置 \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a613d6ac06a5663dff135e2df36c4e42c}{\+\_\+lchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a0d2a517cd63fc33c0403a4d4c83c7e9d}{\+\_\+lchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
 \begin{DoxyCompactList}\small\item\em \+\_\+lchild\+Index\+:返回一个节点的左子节点位置 \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_af92770f4e79a6703c2c21107b3ce8d9d}{\+\_\+rchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a7129becd0fd74b5d2c17702e65f32300}{\+\_\+rchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
 \begin{DoxyCompactList}\small\item\em \+\_\+rchild\+Index\+:返回一个节点的右子节点位置 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aa5036c59645d1f17dfd5efc5760b7dd4}{\+\_\+data}
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ad463395cef741624e6d078e4e4fc624f}{\+\_\+data}
 \item 
-unsigned \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a6a4c6fb635e4c827d5511e1f6ac1ff67}{\+\_\+size}
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a0de92802e37516dda2c01de776aba641}{\+\_\+size}
+\item 
+\hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8f2f5b5d2b7097bbc6edda7b9c9228a6}{Compare\+Type} \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a5de60762d317fc92c18e882dd50f8dfa}{\+\_\+compare}
+\item 
+\hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a391cb754ab172d1d4cdefd34130b917c}{Get\+Key\+Type} \hyperlink{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a3f791f9dd9d61dc2caf1d6b2b354f4c4}{\+\_\+get\+Key}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-\subsubsection*{template$<$typename T, typename Compare = std\+::less$<$\+T$>$$>$class Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue$<$ T, Compare $>$}
+\subsubsection*{template$<$typename T, typename T\+Key\+Type$>$class Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue$<$ T, T\+Key\+Type $>$}
 
-Min\+Queue：最小优先级队列，算法导论第6章 
+Min\+Queue：最小优先级队列，算法导论第6章6.5节 
 
-最小优先级队列采用最小堆实现 
+优先级队列是一种用来维护由一组元素构成集合\+S的数据结构，其中每个元素都有一个相关的值，称之为关键字。一个最小优先级队列支持以下操作：
 
-Definition at line 20 of file minqueue.\+h.
+
+\begin{DoxyItemize}
+\item insert(\+S,x)\+:将元素x插入到集合\+S中。
+\item min(\+S)\+:返回\+S中具有最小关键字的元素
+\item extract\+\_\+min(\+S)\+:去掉并返回\+S中具有最小关键字的元素
+\item decrease\+\_\+key(\+S,x,k)\+:将元素x的关键字值减小到k,这里要求k的值小于x的原始关键字
+\end{DoxyItemize}
+
+本算法的实现时，有以下几种变化：
+
+
+\begin{DoxyItemize}
+\item 增加了以下的接口：
+\begin{DoxyItemize}
+\item is\+\_\+empty(\+S)\+: 返回\+S是否为空
+\item is\+\_\+inqueue(\+S,x)\+:判断元素x是否在\+S中
+\item setup\+Heap(\+S)\+:建立最小堆（由堆的接口遗留而来)
+\item heapify(\+S,index)\+:操作堆的指定结点使得它符合最小堆条件（由堆的接口遗留下来）
+\end{DoxyItemize}
+\item 增加了队列容量属性。队列容量由{\ttfamily \+\_\+data}的大小来表征。默认将{\ttfamily \+\_\+data}大小设为0；可以显式提供{\ttfamily reseve\+\_\+size}参数来设置{\ttfamily \+\_\+data}的大小。 队列容量用于限制队列大小。一旦队列已满，则下一次插入之前会将队列容量增加一倍；一旦队列不足队列的1/4，则一旦执行{\ttfamily extract\+\_\+min}操作则将队列容量缩减至一半
+\item 增加了两个特殊的可调用对象，这两个方法的引入使得最小优先级队列不仅可以应用于class和struct类型，也可以应用于int,double等非类的类型
+\begin{DoxyItemize}
+\item \+\_\+get\+Key\+:是一个std\+:\+:function$<$T\+Key\+Type\&(std\+::shared\+\_\+ptr$<$\+T$>$)$>$类型的对象，它可以接收std\+::shared\+\_\+ptr$<$\+T$>$类型的参数，返回\+T\+Key\+Type类型的引用。 其中队列保存的是\+T类型数据的强引用，\+T\+Key\+Type是\+T类型数据的关键字类型。通过\+\_\+get\+Key可以获取队列数据的关键字的引用。
+\begin{DoxyItemize}
+\item 对于class类型，\+T\+Key\+Type就是\+T对象的关键字类型，\+\_\+get\+Key就是返回关键字的引用
+\item 对于int等内置类型，\+T\+Key\+Type就是\+T本身。\+\_\+get\+Key就是返回它自身的引用
+\end{DoxyItemize}
+\item \+\_\+compare\+:是一个std\+:\+:function$<$bool (std\+::shared\+\_\+ptr$<$\+T$>$,std\+::shared\+\_\+ptr$<$\+T$>$)$>$类型的对象，它用于队列中两个数据的大小比较。 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Definition at line 42 of file minqueue.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8f2f5b5d2b7097bbc6edda7b9c9228a6}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!Compare\+Type@{Compare\+Type}}
+\index{Compare\+Type@{Compare\+Type}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
+\subsubsection[{Compare\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ typedef std\+::function$<$bool (std\+::shared\+\_\+ptr$<$T$>$,std\+::shared\+\_\+ptr$<$T$>$)$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::{\bf Compare\+Type}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8f2f5b5d2b7097bbc6edda7b9c9228a6}
+一个可调用对象类型，该类型的对象可用于比较两个std\+::shared\+\_\+ptr$<$\+T$>$的小于比较 
+
+Definition at line 45 of file minqueue.\+h.
+
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a391cb754ab172d1d4cdefd34130b917c}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!Get\+Key\+Type@{Get\+Key\+Type}}
+\index{Get\+Key\+Type@{Get\+Key\+Type}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
+\subsubsection[{Get\+Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ typedef std\+::function$<$T\+Key\+Type\&(std\+::shared\+\_\+ptr$<$T$>$)$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::{\bf Get\+Key\+Type}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a391cb754ab172d1d4cdefd34130b917c}
+一个可调用对象，该类型的对象可用于获取std\+::shared\+\_\+ptr$<$\+T$>$的关键字，并修改该关键字（返回的是关键字的引用） 
+
+Definition at line 46 of file minqueue.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a86bf5a97695e09ab6fe255b68e72673d}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!Min\+Queue@{Min\+Queue}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a98e54e4e2c19918032b09e23e79a25e5}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!Min\+Queue@{Min\+Queue}}
 \index{Min\+Queue@{Min\+Queue}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{Min\+Queue()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::{\bf Min\+Queue} (
+\subsubsection[{Min\+Queue(\+Compare\+Type compare, Get\+Key\+Type get\+Key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::{\bf Min\+Queue} (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Compare\+Type}}]{compare, }
+\item[{{\bf Get\+Key\+Type}}]{get\+Key}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a86bf5a97695e09ab6fe255b68e72673d}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a98e54e4e2c19918032b09e23e79a25e5}
 
 
-Definition at line 23 of file minqueue.\+h.
+显式构造函数 
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8407e5922eceba5b30dfddc6bed309bd}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!Min\+Queue@{Min\+Queue}}
+
+\begin{DoxyParams}{Parameters}
+{\em compare\+:一个可调用对象，可用于比较两个std\+::shared\+\_\+ptr$<$\+T$>$对象的小于比较} & \\
+\hline
+{\em get\+Key：一个可调用对象，它的参数为std\+::shared\+\_\+ptr$<$\+T$>$，返回\+T\+Key\&。通过它的返回值可以获取\+T的key，也可以修改\+T的key} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file minqueue.\+h.
+
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a770243b2227a15bdc2105dde6549c745}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!Min\+Queue@{Min\+Queue}}
 \index{Min\+Queue@{Min\+Queue}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{Min\+Queue(std\+::size\+\_\+t reseve\+\_\+size)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::{\bf Min\+Queue} (
+\subsubsection[{Min\+Queue(std\+::size\+\_\+t reseve\+\_\+size, Compare\+Type compare, Get\+Key\+Type get\+Key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::{\bf Min\+Queue} (
 \begin{DoxyParamCaption}
-\item[{std\+::size\+\_\+t}]{reseve\+\_\+size}
+\item[{std\+::size\+\_\+t}]{reseve\+\_\+size, }
+\item[{{\bf Compare\+Type}}]{compare, }
+\item[{{\bf Get\+Key\+Type}}]{get\+Key}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a8407e5922eceba5b30dfddc6bed309bd}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a770243b2227a15bdc2105dde6549c745}
 
 
-Definition at line 24 of file minqueue.\+h.
+显式构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reseve\+\_\+size\+:指定队列的初始容量} & \\
+\hline
+{\em compare\+:一个可调用对象，可用于比较两个std\+::shared\+\_\+ptr$<$\+T$>$对象的小于比较} & \\
+\hline
+{\em get\+Key：一个可调用对象，它的参数为std\+::shared\+\_\+ptr$<$\+T$>$，返回\+T\+Key\&。通过它的返回值可以获取\+T的key，也可以修改\+T的key} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file minqueue.\+h.
 
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a613d6ac06a5663dff135e2df36c4e42c}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+lchild\+Index@{\+\_\+lchild\+Index}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a0d2a517cd63fc33c0403a4d4c83c7e9d}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+lchild\+Index@{\+\_\+lchild\+Index}}
 \index{\+\_\+lchild\+Index@{\+\_\+lchild\+Index}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{\+\_\+lchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::\+\_\+lchild\+Index (
+\subsubsection[{\+\_\+lchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::\+\_\+lchild\+Index (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+Index, }
 \item[{bool \&}]{valid}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a613d6ac06a5663dff135e2df36c4e42c}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a0d2a517cd63fc33c0403a4d4c83c7e9d}
 
 
 \+\_\+lchild\+Index\+:返回一个节点的左子节点位置 
@@ -117,16 +203,16 @@ Definition at line 24 of file minqueue.\+h.
 \item 当左子节点超过堆大小时，它无效 
 \end{DoxyItemize}
 
-Definition at line 259 of file minqueue.\+h.
+Definition at line 301 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a88390bf1df0ffcff26ac91f470fb587b}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+parent\+Index@{\+\_\+parent\+Index}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a3b7cac401c8cf45806e61aad3799eda0}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+parent\+Index@{\+\_\+parent\+Index}}
 \index{\+\_\+parent\+Index@{\+\_\+parent\+Index}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{\+\_\+parent\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::\+\_\+parent\+Index (
+\subsubsection[{\+\_\+parent\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::\+\_\+parent\+Index (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+Index, }
 \item[{bool \&}]{valid}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a88390bf1df0ffcff26ac91f470fb587b}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a3b7cac401c8cf45806e61aad3799eda0}
 
 
 \+\_\+parent\+Index\+:返回一个节点的父节点位置 
@@ -148,16 +234,16 @@ Definition at line 259 of file minqueue.\+h.
 \item 超出堆大小的节点，其父节点无效 
 \end{DoxyItemize}
 
-Definition at line 236 of file minqueue.\+h.
+Definition at line 278 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_af92770f4e79a6703c2c21107b3ce8d9d}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+rchild\+Index@{\+\_\+rchild\+Index}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a7129becd0fd74b5d2c17702e65f32300}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+rchild\+Index@{\+\_\+rchild\+Index}}
 \index{\+\_\+rchild\+Index@{\+\_\+rchild\+Index}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{\+\_\+rchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::\+\_\+rchild\+Index (
+\subsubsection[{\+\_\+rchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::\+\_\+rchild\+Index (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+Index, }
 \item[{bool \&}]{valid}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_af92770f4e79a6703c2c21107b3ce8d9d}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a7129becd0fd74b5d2c17702e65f32300}
 
 
 \+\_\+rchild\+Index\+:返回一个节点的右子节点位置 
@@ -180,17 +266,16 @@ Definition at line 236 of file minqueue.\+h.
 \item 当右子节点超过堆大小时，它无效 
 \end{DoxyItemize}
 
-Definition at line 286 of file minqueue.\+h.
+Definition at line 328 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a5f05999c02550096bf015a6e47a3ec7c}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!decreate\+\_\+key@{decreate\+\_\+key}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aa934049abcfedd59fa9ffe6d91fea30c}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!decreate\+\_\+key@{decreate\+\_\+key}}
 \index{decreate\+\_\+key@{decreate\+\_\+key}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{decreate\+\_\+key(std\+::size\+\_\+t element\+\_\+index, decltype(\+T().\+key) new\+\_\+key, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::decreate\+\_\+key (
+\subsubsection[{decreate\+\_\+key(std\+::size\+\_\+t element\+\_\+index, T\+Key\+Type new\+\_\+key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::decreate\+\_\+key (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+\_\+index, }
-\item[{decltype(T().key)}]{new\+\_\+key, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{T\+Key\+Type}]{new\+\_\+key}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a5f05999c02550096bf015a6e47a3ec7c}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aa934049abcfedd59fa9ffe6d91fea30c}
 
 
 decreate\+\_\+key\+:缩减队列中某个元素的{\ttfamily key} 
@@ -199,9 +284,7 @@ decreate\+\_\+key\+:缩减队列中某个元素的{\ttfamily key}
 \begin{DoxyParams}{Parameters}
 {\em element\+\_\+index} & 待缩减元素的下标 \\
 \hline
-{\em new\+\_\+key：待缩减元素的新$<$tt$>$key$<$/tt$>$} & \\
-\hline
-{\em compare\+:比较函数} & 缩减之前先判断缩减是否有效，若无效则抛出异常。\\
+{\em new\+\_\+key：待缩减元素的新$<$tt$>$key$<$/tt$>$，类型为\+T\+Key} & 缩减之前先判断缩减是否有效，若无效则抛出异常。\\
 \hline
 \end{DoxyParams}
 
@@ -225,15 +308,15 @@ decreate\+\_\+key\+:缩减队列中某个元素的{\ttfamily key}
 \item 原地操作 
 \end{DoxyItemize}
 
-Definition at line 147 of file minqueue.\+h.
+Definition at line 191 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ac040f9f8fe9a02d9e300e261708a3e6e}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!extract\+\_\+min@{extract\+\_\+min}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a71022b9e1e9993ec5c5876da9e6e6eee}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!extract\+\_\+min@{extract\+\_\+min}}
 \index{extract\+\_\+min@{extract\+\_\+min}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{extract\+\_\+min()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ std\+::shared\+\_\+ptr$<$T$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::extract\+\_\+min (
+\subsubsection[{extract\+\_\+min()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ std\+::shared\+\_\+ptr$<$T$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::extract\+\_\+min (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ac040f9f8fe9a02d9e300e261708a3e6e}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a71022b9e1e9993ec5c5876da9e6e6eee}
 
 
 extract\+\_\+min\+:删除队列中最小值，并返回最小值 
@@ -255,21 +338,23 @@ extract\+\_\+min\+:删除队列中最小值，并返回最小值
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-时间复杂度 O(h)
+一旦队列长度不足容量的1/4，则将队列容量设置为队列长度的一倍（为了防止极端情况，如\+\_\+size=0，此时将队列容量设为队列长度的一倍加上2）
+
+
 \begin{DoxyItemize}
+\item 时间复杂度 O(h),h为堆的高度
 \item 原地操作 
 \end{DoxyItemize}
 
-Definition at line 59 of file minqueue.\+h.
+Definition at line 98 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ae06cfa4dbe4464586b498b15f36081c8}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!heapify@{heapify}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a4ddfab80f781d5b5f7544164bf266f82}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!heapify@{heapify}}
 \index{heapify@{heapify}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{heapify(std\+::size\+\_\+t element\+Index, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::heapify (
+\subsubsection[{heapify(std\+::size\+\_\+t element\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::heapify (
 \begin{DoxyParamCaption}
-\item[{std\+::size\+\_\+t}]{element\+Index, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{std\+::size\+\_\+t}]{element\+Index}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ae06cfa4dbe4464586b498b15f36081c8}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a4ddfab80f781d5b5f7544164bf266f82}
 
 
 heapify：维持堆性质 
@@ -277,8 +362,6 @@ heapify：维持堆性质
 
 \begin{DoxyParams}{Parameters}
 {\em element\+Index} & \+: 要维持以该节点为根节点的子堆的堆性质 \\
-\hline
-{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -292,15 +375,15 @@ void
 \item 原地操作 
 \end{DoxyItemize}
 
-Definition at line 198 of file minqueue.\+h.
+Definition at line 240 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_af0e72003afbf634cd9f7df7f61de1c36}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!insert@{insert}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_afd899c42140b42a75507ed05ce98d047}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!insert@{insert}}
 \index{insert@{insert}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{insert(std\+::shared\+\_\+ptr$<$ T $>$ element)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::insert (
+\subsubsection[{insert(std\+::shared\+\_\+ptr$<$ T $>$ element)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::insert (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ T $>$}]{element}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_af0e72003afbf634cd9f7df7f61de1c36}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_afd899c42140b42a75507ed05ce98d047}
 
 
 insert\+:向队列中插入一个元素 
@@ -323,19 +406,25 @@ insert\+:向队列中插入一个元素
 \begin{DoxyItemize}
 \item 保留待插入元素的{\ttfamily key}，同时将待插入语元素的{\ttfamily key}设置为无穷大，并将待插入元素插入到队尾
 \item 执行{\ttfamily decreate\+\_\+key(..)}操作
+\end{DoxyItemize}
+
+一旦队列已满，则将队列容量设置为队列长度的一倍（为了防止极端情况，如\+\_\+size=0，此时将队列容量设为队列长度的一倍加上2）
+
+
+\begin{DoxyItemize}
 \item 时间复杂度 O(h)
 \item 原地操作 
 \end{DoxyItemize}
 
-Definition at line 85 of file minqueue.\+h.
+Definition at line 129 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_abc9cdc8881918001bf922c3b2cd64c1c}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!is\+\_\+empty@{is\+\_\+empty}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a1b484baf6cd011a4b91aa77a644e5a44}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!is\+\_\+empty@{is\+\_\+empty}}
 \index{is\+\_\+empty@{is\+\_\+empty}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{is\+\_\+empty()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ bool {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::is\+\_\+empty (
+\subsubsection[{is\+\_\+empty()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ bool {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::is\+\_\+empty (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_abc9cdc8881918001bf922c3b2cd64c1c}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a1b484baf6cd011a4b91aa77a644e5a44}
 
 
 is\+\_\+empty\+:返回队列是否为空 
@@ -350,15 +439,15 @@ is\+\_\+empty\+:返回队列是否为空
 \item 时间复杂度 O(1) 
 \end{DoxyItemize}
 
-Definition at line 103 of file minqueue.\+h.
+Definition at line 148 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a95ee21038ee245f37623eedbd273fb43}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!is\+\_\+inqueue@{is\+\_\+inqueue}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ab905b477bfd6ae685a780586f0364050}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!is\+\_\+inqueue@{is\+\_\+inqueue}}
 \index{is\+\_\+inqueue@{is\+\_\+inqueue}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{is\+\_\+inqueue(std\+::shared\+\_\+ptr$<$ T $>$ element)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ bool {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::is\+\_\+inqueue (
+\subsubsection[{is\+\_\+inqueue(std\+::shared\+\_\+ptr$<$ T $>$ element)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ bool {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::is\+\_\+inqueue (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ T $>$}]{element}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a95ee21038ee245f37623eedbd273fb43}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ab905b477bfd6ae685a780586f0364050}
 
 
 is\+\_\+inqueue\+:返回指定元素是否在队列中 
@@ -378,15 +467,15 @@ is\+\_\+inqueue\+:返回指定元素是否在队列中
 \item 时间复杂度 O(n) 
 \end{DoxyItemize}
 
-Definition at line 117 of file minqueue.\+h.
+Definition at line 162 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aafd66150ecbd81743c5204e8fd1b6e2b}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!min@{min}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a96293074ee6adef713e9e47059958ea2}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!min@{min}}
 \index{min@{min}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{min()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ std\+::shared\+\_\+ptr$<$T$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::min (
+\subsubsection[{min()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ std\+::shared\+\_\+ptr$<$T$>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::min (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aafd66150ecbd81743c5204e8fd1b6e2b}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a96293074ee6adef713e9e47059958ea2}
 
 
 min\+:返回最小值 
@@ -401,24 +490,19 @@ min\+:返回最小值
 \item 时间复杂度 O(1) 
 \end{DoxyItemize}
 
-Definition at line 37 of file minqueue.\+h.
+Definition at line 74 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a50e106d8a3062490328588593181a6ee}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!setup\+Heap@{setup\+Heap}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a9a432c7c167a4f9a56c2988cfdc04620}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!setup\+Heap@{setup\+Heap}}
 \index{setup\+Heap@{setup\+Heap}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{setup\+Heap(\+Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::setup\+Heap (
+\subsubsection[{setup\+Heap()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ void {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::setup\+Heap (
 \begin{DoxyParamCaption}
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+{}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a50e106d8a3062490328588593181a6ee}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a9a432c7c167a4f9a56c2988cfdc04620}
 
 
 setup\+Heap\+:建堆 
 
-
-\begin{DoxyParams}{Parameters}
-{\em compare} & 一个可调用对象，可用于比较两个对象的小于比较，默认为std\+::less$<$\+T$>$ \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 void
 \end{DoxyReturn}
@@ -430,24 +514,38 @@ void
 \item 原地操作 
 \end{DoxyItemize}
 
-Definition at line 175 of file minqueue.\+h.
+Definition at line 218 of file minqueue.\+h.
 
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aa5036c59645d1f17dfd5efc5760b7dd4}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+data@{\+\_\+data}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a5de60762d317fc92c18e882dd50f8dfa}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+compare@{\+\_\+compare}}
+\index{\+\_\+compare@{\+\_\+compare}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
+\subsubsection[{\+\_\+compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ {\bf Compare\+Type} {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::\+\_\+compare\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a5de60762d317fc92c18e882dd50f8dfa}
+一个可调用对象，可用于比较两个std\+::shared\+\_\+ptr$<$\+T$>$的小于比较 
+
+Definition at line 346 of file minqueue.\+h.
+
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ad463395cef741624e6d078e4e4fc624f}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+data@{\+\_\+data}}
 \index{\+\_\+data@{\+\_\+data}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ std\+::vector$<$std\+::shared\+\_\+ptr$<$T$>$ $>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_aa5036c59645d1f17dfd5efc5760b7dd4}
+\subsubsection[{\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ std\+::vector$<$std\+::shared\+\_\+ptr$<$T$>$ $>$ {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_ad463395cef741624e6d078e4e4fc624f}
 最小优先级队列的数据 
 
-Definition at line 302 of file minqueue.\+h.
+Definition at line 344 of file minqueue.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a6a4c6fb635e4c827d5511e1f6ac1ff67}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+size@{\+\_\+size}}
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a3f791f9dd9d61dc2caf1d6b2b354f4c4}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+get\+Key@{\+\_\+get\+Key}}
+\index{\+\_\+get\+Key@{\+\_\+get\+Key}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
+\subsubsection[{\+\_\+get\+Key}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ {\bf Get\+Key\+Type} {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::\+\_\+get\+Key\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a3f791f9dd9d61dc2caf1d6b2b354f4c4}
+一个可调用对象，可用于获取std\+::shared\+\_\+ptr$<$\+T$>$的关键字，并修改该关键字（返回的是关键字的引用） 
+
+Definition at line 347 of file minqueue.\+h.
+
+\hypertarget{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a0de92802e37516dda2c01de776aba641}{}\index{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}!\+\_\+size@{\+\_\+size}}
 \index{\+\_\+size@{\+\_\+size}!Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue@{Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}}
-\subsubsection[{\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename Compare  = std\+::less$<$\+T$>$$>$ unsigned {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, Compare $>$\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a6a4c6fb635e4c827d5511e1f6ac1ff67}
+\subsubsection[{\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename T\+Key\+Type$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Queue\+Algorithm\+::\+Min\+Queue}$<$ T, T\+Key\+Type $>$\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_a0de92802e37516dda2c01de776aba641}
 堆大小 
 
-Definition at line 303 of file minqueue.\+h.
+Definition at line 345 of file minqueue.\+h.
 
 
 

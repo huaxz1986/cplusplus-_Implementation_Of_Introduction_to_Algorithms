@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('binarytree_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree&lt; NodeType &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree&lt; NodeT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">BinaryTree：二叉树，算法导论10章10.4节  <a href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -133,18 +133,18 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aff9afe8e77b1aaaa5715b270fecd73c4"><td class="memTemplParams" colspan="2">template&lt;typename NodeType , typename Action  = std::function&lt;void (typename NodeType::T)&gt;&gt; </td></tr>
-<tr class="memitem:aff9afe8e77b1aaaa5715b270fecd73c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#aff9afe8e77b1aaaa5715b270fecd73c4">IntroductionToAlgorithm::TreeAlgorithm::inorder_walk</a> (std::shared_ptr&lt; NodeType &gt; root, Action action=[](typename NodeType::T){})</td></tr>
-<tr class="memdesc:aff9afe8e77b1aaaa5715b270fecd73c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">inorder_walk：二叉树的中序遍历  <a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#aff9afe8e77b1aaaa5715b270fecd73c4">More...</a><br /></td></tr>
-<tr class="separator:aff9afe8e77b1aaaa5715b270fecd73c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8e2e0051f5d4dc51ff841616f84e29"><td class="memTemplParams" colspan="2">template&lt;typename NodeType , typename Action  = std::function&lt;void (typename NodeType::T)&gt;&gt; </td></tr>
-<tr class="memitem:a8b8e2e0051f5d4dc51ff841616f84e29"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a8b8e2e0051f5d4dc51ff841616f84e29">IntroductionToAlgorithm::TreeAlgorithm::preorder_walk</a> (std::shared_ptr&lt; NodeType &gt; root, Action action=[](typename NodeType::T){})</td></tr>
-<tr class="memdesc:a8b8e2e0051f5d4dc51ff841616f84e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">preorder_walk：二叉树的前序遍历  <a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a8b8e2e0051f5d4dc51ff841616f84e29">More...</a><br /></td></tr>
-<tr class="separator:a8b8e2e0051f5d4dc51ff841616f84e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7566f0820ffb23ae663f8d783a86da3"><td class="memTemplParams" colspan="2">template&lt;typename NodeType , typename Action  = std::function&lt;void (typename NodeType::T)&gt;&gt; </td></tr>
-<tr class="memitem:ac7566f0820ffb23ae663f8d783a86da3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#ac7566f0820ffb23ae663f8d783a86da3">IntroductionToAlgorithm::TreeAlgorithm::postorder_walk</a> (std::shared_ptr&lt; NodeType &gt; root, Action action=[](typename NodeType::T){})</td></tr>
-<tr class="memdesc:ac7566f0820ffb23ae663f8d783a86da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">postorder_walk：二叉树的后序遍历  <a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#ac7566f0820ffb23ae663f8d783a86da3">More...</a><br /></td></tr>
-<tr class="separator:ac7566f0820ffb23ae663f8d783a86da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9431ca8d1a40f70b6c72c732fc5892"><td class="memTemplParams" colspan="2">template&lt;typename NodeType , typename ActionType  = std::function&lt;void (typename NodeType::T)&gt;&gt; </td></tr>
+<tr class="memitem:abd9431ca8d1a40f70b6c72c732fc5892"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">IntroductionToAlgorithm::TreeAlgorithm::inorder_walk</a> (std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</td></tr>
+<tr class="memdesc:abd9431ca8d1a40f70b6c72c732fc5892"><td class="mdescLeft">&#160;</td><td class="mdescRight">inorder_walk：二叉树的中序遍历  <a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">More...</a><br /></td></tr>
+<tr class="separator:abd9431ca8d1a40f70b6c72c732fc5892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d57267cd5fea456f6e001dc22d07c85"><td class="memTemplParams" colspan="2">template&lt;typename NodeType , typename ActionType  = std::function&lt;void (typename NodeType::T)&gt;&gt; </td></tr>
+<tr class="memitem:a3d57267cd5fea456f6e001dc22d07c85"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">IntroductionToAlgorithm::TreeAlgorithm::preorder_walk</a> (std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</td></tr>
+<tr class="memdesc:a3d57267cd5fea456f6e001dc22d07c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">preorder_walk：二叉树的前序遍历  <a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">More...</a><br /></td></tr>
+<tr class="separator:a3d57267cd5fea456f6e001dc22d07c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b5467191bd51c25ad7e7bfbed51339"><td class="memTemplParams" colspan="2">template&lt;typename NodeType , typename ActionType  = std::function&lt;void (typename NodeType::T)&gt;&gt; </td></tr>
+<tr class="memitem:a49b5467191bd51c25ad7e7bfbed51339"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">IntroductionToAlgorithm::TreeAlgorithm::postorder_walk</a> (std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</td></tr>
+<tr class="memdesc:a49b5467191bd51c25ad7e7bfbed51339"><td class="mdescLeft">&#160;</td><td class="mdescRight">postorder_walk：二叉树的后序遍历  <a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">More...</a><br /></td></tr>
+<tr class="separator:a49b5467191bd51c25ad7e7bfbed51339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96be2938a006ec461c1b0a59d6bee3b5"><td class="memTemplParams" colspan="2">template&lt;typename NodeType &gt; </td></tr>
 <tr class="memitem:a96be2938a006ec461c1b0a59d6bee3b5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">IntroductionToAlgorithm::TreeAlgorithm::left_rotate</a> (std::shared_ptr&lt; NodeType &gt; node, std::shared_ptr&lt; NodeType &gt; &amp;root)</td></tr>
 <tr class="memdesc:a96be2938a006ec461c1b0a59d6bee3b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">left_rotate：二叉树的左旋转操作  <a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">More...</a><br /></td></tr>
@@ -163,7 +163,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ff577957ad9f11830dd2bab50bc1d868.html">tree_algorithms</a></li><li class="navelem"><a class="el" href="dir_2e2209c8bf12dc6ba6c467ff02aa6988.html">binarytree</a></li><li class="navelem"><a class="el" href="binarytree_8h.html">binarytree.h</a></li>
+    <li class="navelem"><a class="el" href="dir_8ed9dba4cd616b67da9b1338594e34e0.html">src</a></li><li class="navelem"><a class="el" href="dir_2a06141a7764b24a0bfc3200068bd811.html">tree_algorithms</a></li><li class="navelem"><a class="el" href="dir_fd969146925b6d16f48b118241ca662a.html">binarytree</a></li><li class="navelem"><a class="el" href="binarytree_8h.html">binarytree.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>

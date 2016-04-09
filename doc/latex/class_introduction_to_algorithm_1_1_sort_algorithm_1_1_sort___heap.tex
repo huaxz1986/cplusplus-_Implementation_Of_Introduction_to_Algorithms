@@ -1,5 +1,5 @@
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap}{}\section{Introduction\+To\+Algorithm\+:\+:Sort\+Algorithm\+:\+:Sort\+\_\+\+Heap$<$ Iterator, Compare $>$ Class Template Reference}
-\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap$<$ Iterator, Compare $>$@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap$<$ Iterator, Compare $>$}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap}{}\section{Introduction\+To\+Algorithm\+:\+:Sort\+Algorithm\+:\+:Sort\+\_\+\+Heap$<$ Iterator, Compare\+Type $>$ Class Template Reference}
+\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap$<$ Iterator, Compare\+Type $>$@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap$<$ Iterator, Compare\+Type $>$}}
 
 
 Sort\+\_\+\+Heap：用于堆排序的堆，算法导论第6章  
@@ -12,43 +12,43 @@ Sort\+\_\+\+Heap：用于堆排序的堆，算法导论第6章
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_aa28e65622bff17971244413fbccbc478}{T}
+typedef std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a5af910656f5d3c65d47f992dbf380c61}{T}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a836a88c4f12e3eebc131be2ed7ef0bf3}{operator()} (const Iterator from, std\+::size\+\_\+t size, Compare compare=Compare())
+void \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_adfaf638a6fd27c6295f7ac0a07484a00}{operator()} (const Iterator from, std\+::size\+\_\+t size, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em operator() \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a9efd56574722e687d7024d484056bd81}{\+\_\+setup\+Heap} (Compare compare=Compare())
+void \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a64c05fac6da6e6e0d63e733640d0cf97}{\+\_\+setup\+Heap} (Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em \+\_\+setup\+Heap\+:建堆 \end{DoxyCompactList}\item 
-void \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_ad0fbc2d900bc5bcbfc1e94d431d439c1}{\+\_\+heapify} (std\+::size\+\_\+t element\+Index, Compare compare=Compare())
+void \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a0535910130c6c750faf7801059e4a9fa}{\+\_\+heapify} (std\+::size\+\_\+t element\+Index, Compare\+Type compare=Compare\+Type())
 \begin{DoxyCompactList}\small\item\em \+\_\+heapify：维持堆性质 \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a66dd5ab1a501f00f9857602d9a32a2af}{\+\_\+parent\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a72f5fa2e41901a80fdb9a3bcece8a33f}{\+\_\+parent\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
 \begin{DoxyCompactList}\small\item\em \+\_\+parent\+Index\+:返回一个节点的父节点位置 \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_aaf19e3c85dbfc8e2fd53644207a5008e}{\+\_\+lchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_af4033a3e0cd7dab78cb1081f3dece165}{\+\_\+lchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
 \begin{DoxyCompactList}\small\item\em \+\_\+lchild\+Index\+:返回一个节点的左子节点位置 \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a07cb956eda45dffe0c229c5fce03fd96}{\+\_\+rchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a71532dbfd31fdb854aa46dbca6e411ac}{\+\_\+rchild\+Index} (std\+::size\+\_\+t element\+Index, bool \&valid)
 \begin{DoxyCompactList}\small\item\em \+\_\+rchild\+Index\+:返回一个节点的右子节点位置 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Iterator \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a9d05a5cc5c276302911ddeefbae0d9c4}{\+\_\+from}
+Iterator \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a484d28581bfe39a387d90852e38ac36c}{\+\_\+from}
 \item 
-std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a7d35f22bc361d54b1665e0fbfe37e2d5}{\+\_\+size}
+std\+::size\+\_\+t \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a57a42830d3b52d60d2ec1dfd11e2bda6}{\+\_\+size}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-\subsubsection*{template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$class Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap$<$ Iterator, Compare $>$}
+\subsubsection*{template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$class Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap$<$ Iterator, Compare\+Type $>$}
 
 Sort\+\_\+\+Heap：用于堆排序的堆，算法导论第6章 
 
 
 \begin{DoxyItemize}
-\item 堆排序思想：假设对数组\+A\mbox{[}p...r\mbox{]}排序：首先将数组构建成一个最小堆（或者最大堆）。然后第一个元素就是堆中最小的元素。 将第一个元素与最后一个元素交换，同时堆的规模缩减1，再将堆维持最小堆性质。不断循环最后得到一个排序好的数组
+\item 堆排序思想：假设对数组\+A\mbox{[}p...r\mbox{]}排序：首先将数组构建成一个最大堆（或者最小堆，这里的实现采用最大堆）。然后第一个元素就是堆中最大的元素。 将第一个元素与最后一个元素交换，同时堆的规模缩减1，再将堆维持最大堆性质。不断循环最后得到一个排序好的序列
 \item 时间复杂度 O(nlogn)
 \item 原地排序
 \end{DoxyItemize}
@@ -57,7 +57,7 @@ Sort\+\_\+\+Heap：用于堆排序的堆，算法导论第6章
 
 
 \begin{DoxyItemize}
-\item heapify(index)操作：维持以index为根节点的子堆的性质。它比较index与其左右子节点的值，选取其最小的那个提升到index节点上。同时递归向下。具体见\+\_\+heapify()方法说明
+\item heapify(index)操作：维持以index为根节点的子堆的性质。它比较index与其左右子节点的值，选取其最大的那个提升到index节点上。同时递归向下。具体见\+\_\+heapify()方法说明
 \item setup\+Heap()操作： 建堆操作。它从堆的最低层向上层反复调用heapify操作进行建堆。 
 \end{DoxyItemize}
 
@@ -66,9 +66,9 @@ Definition at line 22 of file heapsort.\+h.
 
 
 \subsection{Member Typedef Documentation}
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_aa28e65622bff17971244413fbccbc478}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!T@{T}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a5af910656f5d3c65d47f992dbf380c61}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!T@{T}}
 \index{T@{T}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ typedef std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::{\bf T}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_aa28e65622bff17971244413fbccbc478}
+\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ typedef std\+::iterator\+\_\+traits$<$Iterator$>$\+::value\+\_\+type {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::{\bf T}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a5af910656f5d3c65d47f992dbf380c61}
 迭代器指向对象的值类型 
 
 Definition at line 25 of file heapsort.\+h.
@@ -76,14 +76,14 @@ Definition at line 25 of file heapsort.\+h.
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_ad0fbc2d900bc5bcbfc1e94d431d439c1}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+heapify@{\+\_\+heapify}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a0535910130c6c750faf7801059e4a9fa}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+heapify@{\+\_\+heapify}}
 \index{\+\_\+heapify@{\+\_\+heapify}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{\+\_\+heapify(std\+::size\+\_\+t element\+Index, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::\+\_\+heapify (
+\subsubsection[{\+\_\+heapify(std\+::size\+\_\+t element\+Index, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::\+\_\+heapify (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+Index, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_ad0fbc2d900bc5bcbfc1e94d431d439c1}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a0535910130c6c750faf7801059e4a9fa}
 
 
 \+\_\+heapify：维持堆性质 
@@ -98,7 +98,7 @@ Definition at line 25 of file heapsort.\+h.
 \begin{DoxyReturn}{Returns}
 void
 \end{DoxyReturn}
-首先调用比较该节点与左右子节点的最小值。如果最小值为它本身，则维持了性质，返回；如果最小值不是它本身，那么必然为左、右子节点之一。 将该最小节点（假设为左子节点）交换到根节点，然后以左子节点递归调用heapify操作
+首先调用比较该节点与左右子节点的最大值。如果最大值为它本身，则维持了性质，返回；如果最大值不是它本身，那么必然为左、右子节点之一。 将该最大节点（假设为左子节点）交换到根节点，然后以左子节点递归调用heapify操作
 
 
 \begin{DoxyItemize}
@@ -108,14 +108,14 @@ void
 
 Definition at line 84 of file heapsort.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_aaf19e3c85dbfc8e2fd53644207a5008e}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+lchild\+Index@{\+\_\+lchild\+Index}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_af4033a3e0cd7dab78cb1081f3dece165}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+lchild\+Index@{\+\_\+lchild\+Index}}
 \index{\+\_\+lchild\+Index@{\+\_\+lchild\+Index}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{\+\_\+lchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::\+\_\+lchild\+Index (
+\subsubsection[{\+\_\+lchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::\+\_\+lchild\+Index (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+Index, }
 \item[{bool \&}]{valid}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_aaf19e3c85dbfc8e2fd53644207a5008e}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_af4033a3e0cd7dab78cb1081f3dece165}
 
 
 \+\_\+lchild\+Index\+:返回一个节点的左子节点位置 
@@ -130,24 +130,24 @@ Definition at line 84 of file heapsort.\+h.
 \begin{DoxyReturn}{Returns}
 左子节点位置(std\+::size\+\_\+t)
 \end{DoxyReturn}
-根据最小堆的性质，一个节点element\+Index的左子节点是它的位置(element\+Index/2)+1
+根据最大堆的性质，一个节点element\+Index的左子节点是它的位置(element\+Index/2)+1
 
 
 \begin{DoxyItemize}
-\item 当最小堆大小为0、1时，它没有左子节点，左子节点无效
+\item 当最大堆大小为0、1时，它没有左子节点，左子节点无效
 \item 当左子节点超过堆大小时，它无效 
 \end{DoxyItemize}
 
 Definition at line 144 of file heapsort.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a66dd5ab1a501f00f9857602d9a32a2af}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+parent\+Index@{\+\_\+parent\+Index}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a72f5fa2e41901a80fdb9a3bcece8a33f}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+parent\+Index@{\+\_\+parent\+Index}}
 \index{\+\_\+parent\+Index@{\+\_\+parent\+Index}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{\+\_\+parent\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::\+\_\+parent\+Index (
+\subsubsection[{\+\_\+parent\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::\+\_\+parent\+Index (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+Index, }
 \item[{bool \&}]{valid}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a66dd5ab1a501f00f9857602d9a32a2af}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a72f5fa2e41901a80fdb9a3bcece8a33f}
 
 
 \+\_\+parent\+Index\+:返回一个节点的父节点位置 
@@ -162,7 +162,7 @@ Definition at line 144 of file heapsort.\+h.
 \begin{DoxyReturn}{Returns}
 父节点位置(std\+::size\+\_\+t)
 \end{DoxyReturn}
-根据最小堆的性质，一个子节点element\+Index的父节点是它的位置(element\+Index-\/1)/2。
+根据最大堆的性质，一个子节点element\+Index的父节点是它的位置(element\+Index-\/1)/2。
 
 
 \begin{DoxyItemize}
@@ -171,14 +171,14 @@ Definition at line 144 of file heapsort.\+h.
 
 Definition at line 121 of file heapsort.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a07cb956eda45dffe0c229c5fce03fd96}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+rchild\+Index@{\+\_\+rchild\+Index}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a71532dbfd31fdb854aa46dbca6e411ac}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+rchild\+Index@{\+\_\+rchild\+Index}}
 \index{\+\_\+rchild\+Index@{\+\_\+rchild\+Index}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{\+\_\+rchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::\+\_\+rchild\+Index (
+\subsubsection[{\+\_\+rchild\+Index(std\+::size\+\_\+t element\+Index, bool \&valid)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::\+\_\+rchild\+Index (
 \begin{DoxyParamCaption}
 \item[{std\+::size\+\_\+t}]{element\+Index, }
 \item[{bool \&}]{valid}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a07cb956eda45dffe0c229c5fce03fd96}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a71532dbfd31fdb854aa46dbca6e411ac}
 
 
 \+\_\+rchild\+Index\+:返回一个节点的右子节点位置 
@@ -193,23 +193,23 @@ Definition at line 121 of file heapsort.\+h.
 \begin{DoxyReturn}{Returns}
 右子节点位置(std\+::size\+\_\+t)
 \end{DoxyReturn}
-根据最小堆的性质，一个节点element\+Index的右子节点是它的位置(element\+Index/2)+2
+根据最大堆的性质，一个节点element\+Index的右子节点是它的位置(element\+Index/2)+2
 
 
 \begin{DoxyItemize}
-\item 当最小堆大小为0、、1、2时，它没有右子节点，右子节点无效
+\item 当最大堆大小为0、、1、2时，它没有右子节点，右子节点无效
 \item 当右子节点超过堆大小时，它无效 
 \end{DoxyItemize}
 
 Definition at line 172 of file heapsort.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a9efd56574722e687d7024d484056bd81}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+setup\+Heap@{\+\_\+setup\+Heap}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a64c05fac6da6e6e0d63e733640d0cf97}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+setup\+Heap@{\+\_\+setup\+Heap}}
 \index{\+\_\+setup\+Heap@{\+\_\+setup\+Heap}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{\+\_\+setup\+Heap(\+Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::\+\_\+setup\+Heap (
+\subsubsection[{\+\_\+setup\+Heap(\+Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::\+\_\+setup\+Heap (
 \begin{DoxyParamCaption}
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a9efd56574722e687d7024d484056bd81}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a64c05fac6da6e6e0d63e733640d0cf97}
 
 
 \+\_\+setup\+Heap\+:建堆 
@@ -222,7 +222,7 @@ Definition at line 172 of file heapsort.\+h.
 \begin{DoxyReturn}{Returns}
 void
 \end{DoxyReturn}
-从后一半的元素开始依次向前调用heapify操作（根据最小堆性质，除了最底层它是完全充满的）
+从后一半的元素开始依次向前调用heapify操作（根据最大堆性质，除了最底层它是完全充满的）
 
 
 \begin{DoxyItemize}
@@ -232,15 +232,15 @@ void
 
 Definition at line 61 of file heapsort.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a836a88c4f12e3eebc131be2ed7ef0bf3}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!operator()@{operator()}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_adfaf638a6fd27c6295f7ac0a07484a00}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!operator()@{operator()}}
 \index{operator()@{operator()}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{operator()(const Iterator from, std\+::size\+\_\+t size, Compare compare=\+Compare())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::operator() (
+\subsubsection[{operator()(const Iterator from, std\+::size\+\_\+t size, Compare\+Type compare=\+Compare\+Type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ void {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::operator() (
 \begin{DoxyParamCaption}
 \item[{const Iterator}]{from, }
 \item[{std\+::size\+\_\+t}]{size, }
-\item[{Compare}]{compare = {\ttfamily Compare()}}
+\item[{Compare\+Type}]{compare = {\ttfamily CompareType()}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a836a88c4f12e3eebc131be2ed7ef0bf3}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_adfaf638a6fd27c6295f7ac0a07484a00}
 
 
 operator() 
@@ -257,7 +257,7 @@ operator()
 \begin{DoxyReturn}{Returns}
 void
 \end{DoxyReturn}
-首先调用 \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a9efd56574722e687d7024d484056bd81}{\+\_\+setup\+Heap()}建堆。然后再反复抽取最小值到堆尾部，然后维持堆的性质。
+首先调用 \hyperlink{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a64c05fac6da6e6e0d63e733640d0cf97}{\+\_\+setup\+Heap()}建堆。然后再反复抽取最大值到堆尾部，然后维持堆的性质。
 
 
 \begin{DoxyItemize}
@@ -270,16 +270,16 @@ Definition at line 38 of file heapsort.\+h.
 
 
 \subsection{Member Data Documentation}
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a9d05a5cc5c276302911ddeefbae0d9c4}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+from@{\+\_\+from}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a484d28581bfe39a387d90852e38ac36c}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+from@{\+\_\+from}}
 \index{\+\_\+from@{\+\_\+from}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{\+\_\+from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ Iterator {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::\+\_\+from\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a9d05a5cc5c276302911ddeefbae0d9c4}
+\subsubsection[{\+\_\+from}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ Iterator {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::\+\_\+from\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a484d28581bfe39a387d90852e38ac36c}
 堆根节点位置 
 
 Definition at line 188 of file heapsort.\+h.
 
-\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a7d35f22bc361d54b1665e0fbfe37e2d5}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+size@{\+\_\+size}}
+\hypertarget{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a57a42830d3b52d60d2ec1dfd11e2bda6}{}\index{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}!\+\_\+size@{\+\_\+size}}
 \index{\+\_\+size@{\+\_\+size}!Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap@{Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}}
-\subsubsection[{\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare $>$\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a7d35f22bc361d54b1665e0fbfe37e2d5}
+\subsubsection[{\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator, typename Compare\+Type = std\+::less$<$typename std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type$>$$>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Sort\+Algorithm\+::\+Sort\+\_\+\+Heap}$<$ Iterator, Compare\+Type $>$\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}\label{class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap_a57a42830d3b52d60d2ec1dfd11e2bda6}
 堆大小 
 
 Definition at line 189 of file heapsort.\+h.

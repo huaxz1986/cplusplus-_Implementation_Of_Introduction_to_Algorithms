@@ -13,5 +13,6 @@ var struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph =
     [ "vertex_edge_tuples", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#a906d21b803bfae5095066df1e31c891c", null ],
     [ "weight", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#a9304b6a4c45f368452f6ff9065334536", null ],
     [ "invalid_weight", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#accc79376e509d7ffa016ef5003512976", null ],
-    [ "matrix", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#ae1febbc0e4a86c325a16a942947a03bf", null ]
+    [ "matrix", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#ae1febbc0e4a86c325a16a942947a03bf", null ],
+    [ "NUM", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#a68d153cb2714464d5c432d667e29f28f", null ]
 ];

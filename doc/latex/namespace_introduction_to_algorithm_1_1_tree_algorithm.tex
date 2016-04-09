@@ -17,11 +17,11 @@ class \hyperlink{class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_t
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Node\+Type , typename Action  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm_aff9afe8e77b1aaaa5715b270fecd73c4}{inorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action action=\mbox{[}$\,$\mbox{]}(typename Node\+Type\+::\+T)\{\})
+{\footnotesize template$<$typename Node\+Type , typename Action\+Type  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm_abd9431ca8d1a40f70b6c72c732fc5892}{inorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action\+Type action=\mbox{[}$\,$\mbox{]}(typename Node\+Type\+::\+T)\{\})
 \begin{DoxyCompactList}\small\item\em inorder\+\_\+walk：二叉树的中序遍历 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Node\+Type , typename Action  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm_a8b8e2e0051f5d4dc51ff841616f84e29}{preorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action action=\mbox{[}$\,$\mbox{]}(typename Node\+Type\+::\+T)\{\})
+{\footnotesize template$<$typename Node\+Type , typename Action\+Type  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm_a3d57267cd5fea456f6e001dc22d07c85}{preorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action\+Type action=\mbox{[}$\,$\mbox{]}(typename Node\+Type\+::\+T)\{\})
 \begin{DoxyCompactList}\small\item\em preorder\+\_\+walk：二叉树的前序遍历 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Node\+Type , typename Action  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm_ac7566f0820ffb23ae663f8d783a86da3}{postorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action action=\mbox{[}$\,$\mbox{]}(typename Node\+Type\+::\+T)\{\})
+{\footnotesize template$<$typename Node\+Type , typename Action\+Type  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm_a49b5467191bd51c25ad7e7bfbed51339}{postorder\+\_\+walk} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action\+Type action=\mbox{[}$\,$\mbox{]}(typename Node\+Type\+::\+T)\{\})
 \begin{DoxyCompactList}\small\item\em postorder\+\_\+walk：二叉树的后序遍历 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Node\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm_a96be2938a006ec461c1b0a59d6bee3b5}{left\+\_\+rotate} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ node, std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \&root)
 \begin{DoxyCompactList}\small\item\em left\+\_\+rotate：二叉树的左旋转操作 \end{DoxyCompactList}\item 
@@ -37,14 +37,14 @@ Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_tree_algorithm}{
 该命名空间内包含所有树算法 
 
 \subsection{Function Documentation}
-\hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_aff9afe8e77b1aaaa5715b270fecd73c4}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!inorder\+\_\+walk@{inorder\+\_\+walk}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_abd9431ca8d1a40f70b6c72c732fc5892}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!inorder\+\_\+walk@{inorder\+\_\+walk}}
 \index{inorder\+\_\+walk@{inorder\+\_\+walk}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}}
-\subsubsection[{inorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action action=[](typename Node\+Type\+::\+T)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Action  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ void Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::inorder\+\_\+walk (
+\subsubsection[{inorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action\+Type action=[](typename Node\+Type\+::\+T)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Action\+Type  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ void Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::inorder\+\_\+walk (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{root, }
-\item[{Action}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~NodeType\+:\+:T)\{\}}}
+\item[{Action\+Type}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~NodeType\+:\+:T)\{\}}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_tree_algorithm_aff9afe8e77b1aaaa5715b270fecd73c4}
+)}\label{namespace_introduction_to_algorithm_1_1_tree_algorithm_abd9431ca8d1a40f70b6c72c732fc5892}
 
 
 inorder\+\_\+walk：二叉树的中序遍历 
@@ -68,7 +68,7 @@ void
 
 时间复杂度\+O(n)，空间复杂度\+O(1) 
 
-Definition at line 58 of file binarytree.\+h.
+Definition at line 59 of file binarytree.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_a96be2938a006ec461c1b0a59d6bee3b5}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!left\+\_\+rotate@{left\+\_\+rotate}}
 \index{left\+\_\+rotate@{left\+\_\+rotate}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}}
@@ -107,16 +107,16 @@ void
 
 时间复杂度\+O(1)，空间复杂度\+O(1) 
 
-Definition at line 138 of file binarytree.\+h.
+Definition at line 139 of file binarytree.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_ac7566f0820ffb23ae663f8d783a86da3}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!postorder\+\_\+walk@{postorder\+\_\+walk}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_a49b5467191bd51c25ad7e7bfbed51339}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!postorder\+\_\+walk@{postorder\+\_\+walk}}
 \index{postorder\+\_\+walk@{postorder\+\_\+walk}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}}
-\subsubsection[{postorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action action=[](typename Node\+Type\+::\+T)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Action  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ void Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::postorder\+\_\+walk (
+\subsubsection[{postorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action\+Type action=[](typename Node\+Type\+::\+T)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Action\+Type  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ void Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::postorder\+\_\+walk (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{root, }
-\item[{Action}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~NodeType\+:\+:T)\{\}}}
+\item[{Action\+Type}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~NodeType\+:\+:T)\{\}}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_tree_algorithm_ac7566f0820ffb23ae663f8d783a86da3}
+)}\label{namespace_introduction_to_algorithm_1_1_tree_algorithm_a49b5467191bd51c25ad7e7bfbed51339}
 
 
 postorder\+\_\+walk：二叉树的后序遍历 
@@ -142,16 +142,16 @@ void
 
 时间复杂度\+O(n)，空间复杂度\+O(1) 
 
-Definition at line 108 of file binarytree.\+h.
+Definition at line 109 of file binarytree.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_a8b8e2e0051f5d4dc51ff841616f84e29}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!preorder\+\_\+walk@{preorder\+\_\+walk}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_a3d57267cd5fea456f6e001dc22d07c85}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!preorder\+\_\+walk@{preorder\+\_\+walk}}
 \index{preorder\+\_\+walk@{preorder\+\_\+walk}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}}
-\subsubsection[{preorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action action=[](typename Node\+Type\+::\+T)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Action  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ void Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::preorder\+\_\+walk (
+\subsubsection[{preorder\+\_\+walk(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ root, Action\+Type action=[](typename Node\+Type\+::\+T)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type , typename Action\+Type  = std\+::function$<$void (typename Node\+Type\+::\+T)$>$$>$ void Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::preorder\+\_\+walk (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{root, }
-\item[{Action}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~NodeType\+:\+:T)\{\}}}
+\item[{Action\+Type}]{action = {\ttfamily \mbox{[}\mbox{]}(typename~NodeType\+:\+:T)\{\}}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_tree_algorithm_a8b8e2e0051f5d4dc51ff841616f84e29}
+)}\label{namespace_introduction_to_algorithm_1_1_tree_algorithm_a3d57267cd5fea456f6e001dc22d07c85}
 
 
 preorder\+\_\+walk：二叉树的前序遍历 
@@ -175,7 +175,7 @@ void
 
 时间复杂度\+O(n)，空间复杂度\+O(1) 
 
-Definition at line 82 of file binarytree.\+h.
+Definition at line 83 of file binarytree.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_adeb83a10f8daa65c5cf5921737a04da0}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!right\+\_\+rotate@{right\+\_\+rotate}}
 \index{right\+\_\+rotate@{right\+\_\+rotate}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}}
@@ -212,7 +212,7 @@ void
 \end{DoxyPre}
 } 时间复杂度\+O(1)，空间复杂度\+O(1) 
 
-Definition at line 185 of file binarytree.\+h.
+Definition at line 186 of file binarytree.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_tree_algorithm_a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}!transplant@{transplant}}
 \index{transplant@{transplant}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm}}
@@ -250,5 +250,5 @@ void
 \end{DoxyPre}
 } 时间复杂度\+O(1)，空间复杂度\+O(1) 
 
-Definition at line 230 of file binarytree.\+h.
+Definition at line 231 of file binarytree.\+h.
 

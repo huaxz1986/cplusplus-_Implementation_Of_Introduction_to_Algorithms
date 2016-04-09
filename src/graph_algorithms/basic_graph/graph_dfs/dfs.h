@@ -1,8 +1,8 @@
 #ifndef DFS
 #define DFS
 #include<src/header.h>
-#include"../graph_vertex/vertex.h"
-#include"../graph/graph.h"
+#include"../graph_representation/graph_vertex/vertex.h"
+#include"../graph_representation/graph/graph.h"
 #include<functional>
 namespace IntroductionToAlgorithm
 {
@@ -27,6 +27,7 @@ namespace IntroductionToAlgorithm
         {
 
              typedef int VIDType;      /*!< 顶点编号的数据类型*/
+             typedef KType KeyType;  /*!< 顶点存储数据的类型*/
              enum class COLOR{WHITE,GRAY,BLACK}; /*!< 顶点颜色的枚举类型*/
 
 
@@ -38,8 +39,8 @@ namespace IntroductionToAlgorithm
              *
              * 顶点的颜色默认设为白色，发现时间与完成时间默认为-1
              */
-             explicit DFS_Vertex(const KType&k):
-                 color(COLOR::WHITE),discover_time(-1),finish_time(-1),Vertex<KType>(k)
+             explicit DFS_Vertex(const KeyType&k):
+                 color(COLOR::WHITE),discover_time(-1),finish_time(-1),Vertex<KeyType>(k)
              {}
              //!显式构造函数，指定`key`和编号
              /*!
@@ -48,8 +49,8 @@ namespace IntroductionToAlgorithm
              *
              * 顶点的颜色默认设为白色，发现时间与完成时间默认为-1
              */
-             DFS_Vertex(const KType&k,VIDType d):
-                 color(COLOR::WHITE),discover_time(-1),finish_time(-1),Vertex<KType>(k,d)
+             DFS_Vertex(const KeyType&k,VIDType d):
+                 color(COLOR::WHITE),discover_time(-1),finish_time(-1),Vertex<KeyType>(k,d)
              {}
              //!set_disovered：发现本顶点
              /*!
@@ -90,7 +91,7 @@ namespace IntroductionToAlgorithm
              std::string to_string()
              {
                 std::ostringstream os;
-                os<<Vertex<KType>::to_string()<<"\t color:";
+                os<<Vertex<KeyType>::to_string()<<"\t color:";
                 switch (color) {
                 case COLOR::WHITE:
                     os<<"WHITE";
@@ -138,9 +139,9 @@ namespace IntroductionToAlgorithm
         * - 当结点 v_id 的相邻结点访问完毕，则全局时间 time 递增，然后将结点 v_id 设置为完成状态
         *
         */
-        template<typename GraphType,typename Action=std::function<void(typename GraphType::VIDType,int)>>
+        template<typename GraphType,typename ActionType=std::function<void(typename GraphType::VIDType,int)>>
                     void visit(std::shared_ptr<GraphType> graph,typename GraphType::VIDType v_id,int&time,
-                     Action pre_action=[](typename GraphType::VIDType,int){},Action post_action=[](typename GraphType::VIDType,int){})
+                     ActionType pre_action=[](typename GraphType::VIDType,int){},ActionType post_action=[](typename GraphType::VIDType,int){})
         {
             if(!graph)
                 throw std::invalid_argument("visit error: graph must not be nullptr!");
@@ -156,10 +157,10 @@ namespace IntroductionToAlgorithm
             {
                 auto another_id=std::get<1>(edge);
                 auto another_vertex=graph->vertexes.at(another_id);
-                if(another_vertex->color==GraphType::VType::COLOR::WHITE)
+                if(another_vertex->color==GraphType::VertexType::COLOR::WHITE)
                 {
                     another_vertex->parent=graph->vertexes.at(v_id);
-                    visit<GraphType,Action>(graph,another_id,time,pre_action,post_action);
+                    visit<GraphType,ActionType>(graph,another_id,time,pre_action,post_action);
                 }
             }
             //*********** 完成本顶点的搜索
@@ -187,7 +188,7 @@ namespace IntroductionToAlgorithm
         *
         * 深度优先搜索步骤：
         *
-        * - 初始化：将所有结点染白色，并将它们的父结点置为空
+        * - 初始化：将所有结点染白色，并将它们的父结点置为空(由于DFS_Vertex构造函数将结点color设为白色，且将父结点置为空，因此在本算法中这个步骤可以省略)
         * - 将全局时间 time 置为0
         * - 遍历结点集V，取出结点v
         *   -若v是白色的（尚未发现），则调用 visit 操作
@@ -226,12 +227,12 @@ namespace IntroductionToAlgorithm
         * 在无向图中，每条边要么是树边，要么是后向边。从来不会出现前向边和横向边。
         *
         */
-        template<typename GraphType,typename Action=std::function<void(typename GraphType::VIDType,int)>>
+        template<typename GraphType,typename ActionType=std::function<void(typename GraphType::VIDType,int)>>
                     void  depth_first_search(std::shared_ptr<GraphType> graph,
-                               Action pre_action=[](typename GraphType::VIDType,int){},
-                               Action post_action=[](typename GraphType::VIDType,int){},
-                               Action pre_root_action=[](typename GraphType::VIDType,int){},
-                               Action post_root_action=[](typename GraphType::VIDType,int){},
+                               ActionType pre_action=[](typename GraphType::VIDType,int){},
+                               ActionType post_action=[](typename GraphType::VIDType,int){},
+                               ActionType pre_root_action=[](typename GraphType::VIDType,int){},
+                               ActionType post_root_action=[](typename GraphType::VIDType,int){},
                                const std::vector<typename GraphType::VIDType>& search_order=std::vector<typename GraphType::VIDType>())
         {
             typedef typename GraphType::VIDType VIDType;
@@ -253,10 +254,10 @@ namespace IntroductionToAlgorithm
                 if(v_id<0||v_id>=GraphType::NUM||!graph->vertexes.at(v_id)) //顶点为空
                     continue;
                 auto v=graph->vertexes.at(v_id);
-                if(v->color==GraphType::VType::COLOR::WHITE)
+                if(v->color==GraphType::VertexType::COLOR::WHITE)
                 {
                     pre_root_action(v_id,time);
-                    visit<GraphType,Action>(graph,v->id,time,pre_action,post_action);
+                    visit<GraphType,ActionType>(graph,v->id,time,pre_action,post_action);
                     post_root_action(v_id,time);
                 }
             }

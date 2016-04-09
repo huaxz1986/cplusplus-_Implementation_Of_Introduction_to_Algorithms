@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['longest_5fcommon_5fsubsequence_2eh',['longest_common_subsequence.h',['../lcs_2longest__common__subsequence_8h.html',1,'']]],
-  ['longest_5fcommon_5fsubsequence_2eh',['longest_common_subsequence.h',['../longest__common__subsequence_8h.html',1,'']]],
-  ['longest_5fcommon_5fsubsequence_5ftest_2eh',['longest_common_subsequence_test.h',['../lcs_2longest__common__subsequence__test_8h.html',1,'']]],
-  ['longest_5fcommon_5fsubsequence_5ftest_2eh',['longest_common_subsequence_test.h',['../longest__common__subsequence__test_8h.html',1,'']]]
+  ['kruskal_2eh',['kruskal.h',['../kruskal_8h.html',1,'']]],
+  ['kruskal_5ftest_2eh',['kruskal_test.h',['../kruskal__test_8h.html',1,'']]]
 ];

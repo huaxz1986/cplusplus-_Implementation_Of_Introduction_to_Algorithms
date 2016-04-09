@@ -33,16 +33,17 @@
 #include"src/tree_algorithms/binarytree/binarytree_test.h"
 #include"src/tree_algorithms/searchtree/searchtree_test.h"
 #include"src/queue_algorithms/min_queue/minqueue_test.h"
-#include"src/graph_algorithms/basic_graph/graph_vertex/vertex_test.h"
-#include"src/graph_algorithms/basic_graph/graph_edge/edge_test.h"
-#include"src/graph_algorithms/basic_graph/matrix_graph/matrixgraph_test.h"
-#include"src/graph_algorithms/basic_graph/adjlist_graph/adjlistgraph_test.h"
-#include"src/graph_algorithms/basic_graph/graph/graph_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertex_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_edge/edge_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/matrix_graph/matrixgraph_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/adjlist_graph/adjlistgraph_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph/graph_test.h"
 #include"src/graph_algorithms/basic_graph/graph_bfs/bfs_test.h"
 #include"src/graph_algorithms/basic_graph/graph_dfs/dfs_test.h"
 #include"src/graph_algorithms/basic_graph/topology_sort/topologysort_test.h"
 #include"src/graph_algorithms/basic_graph/strong_connected_component/strongconnectedcomponent_test.h"
-
+#include"src/queue_algorithms/min_queue/minqueue_test.h"
+#include"src/set_algorithms/disjoint_set/disjointset_test.h"
 int main(int argc,char** argv)
 {
     ::testing::InitGoogleTest(&argc,argv);
