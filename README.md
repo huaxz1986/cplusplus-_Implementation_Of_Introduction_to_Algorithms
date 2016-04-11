@@ -57,6 +57,12 @@ src\
 					graph_dfs：图的深度优先搜索算法
 					topology_sort：有向无环图的拓扑排序算法
 					strong_connected_component:有向图的强连通分量算法
+					connected_component:无向图的连通分量算法
+			minimum_spanning_tree\ ：最小生成树算法
+					kruskal ： 最小生成树的 kruskal 算法
+					prim : 最小生成树的 prim 算法
+			single_source_shortest_path\: 单源最短路径算法
+					bellman_ford :单源最短路径的 bellman_ford算法
 		...(未完待续)
 doc\      ：由doxygen自动生成的文档
 Doxyfile  :doxygen配置文件
