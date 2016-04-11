@@ -1,8 +1,25 @@
+/*
+ * Copyright 2016- huaxz <huaxz1986@163.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: huaxz1986@163.com (huaxz)
+ */
 #ifndef BFS
 #define BFS
 #include<src/header.h>
 #include"../graph_representation/graph_vertex/vertex.h"
-#include"../graph_representation/graph/graph.h"
 #include<queue>
 #include<functional>
 namespace IntroductionToAlgorithm
@@ -81,7 +98,9 @@ namespace IntroductionToAlgorithm
                      throw std::invalid_argument("set_found error: v_parent must not be null!");
                  color=COLOR::GRAY;
                  parent=v_parent;
-                 this->key=v_parent->key+1;
+                 if(v_parent->key==unlimit<KeyType>()) this->key=v_parent->key;
+                 else this->key=v_parent->key+1;
+
              }
              //!to_string：返回顶点的字符串描述
              /*!
@@ -116,7 +135,7 @@ namespace IntroductionToAlgorithm
              std::shared_ptr<BFS_Vertex> parent;     /*!< 顶点父顶点的强引用*/
         };
 
-        //!breadth_first_search：广度优先搜索，算法导论22章xx节
+        //!breadth_first_search：广度优先搜索，算法导论22章22.2节
         /*!
         * \param graph:指向图的强引用，必须非空。若为空则抛出异常
         * \param source_id：广度优先搜索的源点`id`，必须有效。若无效则抛出异常
@@ -136,7 +155,7 @@ namespace IntroductionToAlgorithm
         * 给定图 G=(V,E)和一个可以识别的源点`s`。。所有的结点在一开始都被涂上白色。每个结点的颜色存放在属性`color`中；
         * 每个结点的前驱结点放在属性`parent`中。每个结点的属性`key`存放的是从源点到本结点的距离。该算法使用一个先进先出的队列Q来管理灰色结点集。
         *
-        * - 将所有结点涂为白色，`key`属性设置为正无穷；
+        * - 将所有结点涂为白色，`key`属性设置为正无穷，父结点置为空；
         * - 将源点涂为灰色，源点前驱设为空，源点的`key`设为0；
         * - 将源点加入队列Q中；Q中存放的都是已发现但是尚未处理完成的结点
         * - 循环直到队列Q为空，在循环中执行以下操作：
@@ -170,8 +189,9 @@ namespace IntroductionToAlgorithm
             for(auto& v:graph->vertexes)
             {
                 if(!v) continue;
-                v->color=VertexType::COLOR::WHITE; //由于BFS_Vertex的构造函数将color成员设置为WHITE，因此这句可以省略
+                v->color=VertexType::COLOR::WHITE;
                 v->key=unlimit<typename VertexType::KeyType>();
+                v->parent=std::shared_ptr<VertexType>();
             }
             //************* 处理源顶点 ****************
             graph->vertexes.at(source_id)->set_source();

@@ -5,7 +5,8 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -24,9 +25,7 @@ var NAVTREE =
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -35,8 +34,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "adjlistgraph_8h.html",
-"dir_f44c2af64913d750a860b1a7088a5b4e.html",
-"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html#ab53cda3a7d135ed892b298c14d5579fe"
+"class_set_vertex_test.html#a69651499454a1fea72d3ec2c4c1db15c",
+"namespaceanonymous__namespace_02minqueue__test_8h_03.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

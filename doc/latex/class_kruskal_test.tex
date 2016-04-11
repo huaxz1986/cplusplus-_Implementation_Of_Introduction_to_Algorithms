@@ -1,0 +1,129 @@
+\hypertarget{class_kruskal_test}{}\section{Kruskal\+Test Class Reference}
+\label{class_kruskal_test}\index{Kruskal\+Test@{Kruskal\+Test}}
+
+
+\hyperlink{class_kruskal_test}{Kruskal\+Test}\+:测试类，用于为测试提供基础数据  
+
+
+
+
+{\ttfamily \#include $<$kruskal\+\_\+test.\+h$>$}
+
+Inheritance diagram for Kruskal\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_kruskal_test}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ K\+\_\+\+N\+U\+M, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{Set\+Vertex}$<$ int $>$ $>$ \hyperlink{class_kruskal_test_a4cf4187bb360392a6e5829dacdf6fd6c}{G\+Type}
+\item 
+typedef std\+::function$<$ void(\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{Set\+Vertex}$<$ int $>$\+::V\+I\+D\+Type,\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{Set\+Vertex}$<$ int $>$\+::V\+I\+D\+Type)$>$ \hyperlink{class_kruskal_test_aa93c0a0f0cb0efdaeb56ea76b6861bef}{Action\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_kruskal_test_a8dec8e2cc34987a27862ce70a4557a39}{Set\+Up} ()
+\item 
+void \hyperlink{class_kruskal_test_afd7bb087cf8a63329181fc7a34b81625}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_kruskal_test_a4cf4187bb360392a6e5829dacdf6fd6c}{G\+Type} $>$ \hyperlink{class_kruskal_test_a10424b1b5e9d63288d1751ee0e6115b4}{\+\_\+1v\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_kruskal_test_a4cf4187bb360392a6e5829dacdf6fd6c}{G\+Type} $>$ \hyperlink{class_kruskal_test_ac4ef5fe84afa9d1774edd0f0d8e31e48}{\+\_\+1e\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_kruskal_test_a4cf4187bb360392a6e5829dacdf6fd6c}{G\+Type} $>$ \hyperlink{class_kruskal_test_ac63161fae446d5ec15c82562d81b0d45}{\+\_\+list\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_kruskal_test_a4cf4187bb360392a6e5829dacdf6fd6c}{G\+Type} $>$ \hyperlink{class_kruskal_test_a70183c9dedc39d09d71da4b3cecb59a4}{\+\_\+all\+\_\+edges\+\_\+graph}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_kruskal_test}{Kruskal\+Test}\+:测试类，用于为测试提供基础数据 
+
+{\ttfamily \hyperlink{class_kruskal_test}{Kruskal\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
+
+Definition at line 38 of file kruskal\+\_\+test.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_kruskal_test_aa93c0a0f0cb0efdaeb56ea76b6861bef}{}\index{Kruskal\+Test@{Kruskal\+Test}!Action\+Type@{Action\+Type}}
+\index{Action\+Type@{Action\+Type}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{Action\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$void({\bf Set\+Vertex}$<$int$>$\+::V\+I\+D\+Type ,{\bf Set\+Vertex}$<$int$>$\+::V\+I\+D\+Type)$>$ {\bf Kruskal\+Test\+::\+Action\+Type}}\label{class_kruskal_test_aa93c0a0f0cb0efdaeb56ea76b6861bef}
+模板实例化的\+Action类型 
+
+Definition at line 42 of file kruskal\+\_\+test.\+h.
+
+\hypertarget{class_kruskal_test_a4cf4187bb360392a6e5829dacdf6fd6c}{}\index{Kruskal\+Test@{Kruskal\+Test}!G\+Type@{G\+Type}}
+\index{G\+Type@{G\+Type}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<$K\+\_\+\+N\+U\+M,{\bf Set\+Vertex}$<$int$>$ $>$ {\bf Kruskal\+Test\+::\+G\+Type}}\label{class_kruskal_test_a4cf4187bb360392a6e5829dacdf6fd6c}
+模板实例化的图类型，该图的顶点类型为{\ttfamily Set\+Vertex$<$int$>$} 
+
+Definition at line 41 of file kruskal\+\_\+test.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_kruskal_test_a8dec8e2cc34987a27862ce70a4557a39}{}\index{Kruskal\+Test@{Kruskal\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{Set\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Kruskal\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_kruskal_test_a8dec8e2cc34987a27862ce70a4557a39}
+
+
+Definition at line 44 of file kruskal\+\_\+test.\+h.
+
+\hypertarget{class_kruskal_test_afd7bb087cf8a63329181fc7a34b81625}{}\index{Kruskal\+Test@{Kruskal\+Test}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{Tear\+Down()}]{\setlength{\rightskip}{0pt plus 5cm}void Kruskal\+Test\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_kruskal_test_afd7bb087cf8a63329181fc7a34b81625}
+
+
+Definition at line 72 of file kruskal\+\_\+test.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_kruskal_test_ac4ef5fe84afa9d1774edd0f0d8e31e48}{}\index{Kruskal\+Test@{Kruskal\+Test}!\+\_\+1e\+\_\+graph@{\+\_\+1e\+\_\+graph}}
+\index{\+\_\+1e\+\_\+graph@{\+\_\+1e\+\_\+graph}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{\+\_\+1e\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Kruskal\+Test\+::\+\_\+1e\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_kruskal_test_ac4ef5fe84afa9d1774edd0f0d8e31e48}
+指向一个图，该图只有一条边 
+
+Definition at line 74 of file kruskal\+\_\+test.\+h.
+
+\hypertarget{class_kruskal_test_a10424b1b5e9d63288d1751ee0e6115b4}{}\index{Kruskal\+Test@{Kruskal\+Test}!\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}}
+\index{\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{\+\_\+1v\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Kruskal\+Test\+::\+\_\+1v\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_kruskal_test_a10424b1b5e9d63288d1751ee0e6115b4}
+指向一个图，该图只有一个顶点 
+
+Definition at line 73 of file kruskal\+\_\+test.\+h.
+
+\hypertarget{class_kruskal_test_a70183c9dedc39d09d71da4b3cecb59a4}{}\index{Kruskal\+Test@{Kruskal\+Test}!\+\_\+all\+\_\+edges\+\_\+graph@{\+\_\+all\+\_\+edges\+\_\+graph}}
+\index{\+\_\+all\+\_\+edges\+\_\+graph@{\+\_\+all\+\_\+edges\+\_\+graph}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{\+\_\+all\+\_\+edges\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Kruskal\+Test\+::\+\_\+all\+\_\+edges\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_kruskal_test_a70183c9dedc39d09d71da4b3cecb59a4}
+指向一个图，该图中任意一对顶点之间都有边 
+
+Definition at line 76 of file kruskal\+\_\+test.\+h.
+
+\hypertarget{class_kruskal_test_ac63161fae446d5ec15c82562d81b0d45}{}\index{Kruskal\+Test@{Kruskal\+Test}!\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}}
+\index{\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}!Kruskal\+Test@{Kruskal\+Test}}
+\subsubsection[{\+\_\+list\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Kruskal\+Test\+::\+\_\+list\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_kruskal_test_ac63161fae446d5ec15c82562d81b0d45}
+指向一个图，该图的边组成一个链条 
+
+Definition at line 75 of file kruskal\+\_\+test.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/minimum\+\_\+spanning\+\_\+tree/kruskal/\hyperlink{kruskal__test_8h}{kruskal\+\_\+test.\+h}\end{DoxyCompactItemize}

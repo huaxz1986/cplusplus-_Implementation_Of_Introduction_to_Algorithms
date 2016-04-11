@@ -107,235 +107,254 @@ $(document).ready(function(){initNavTree('binarytree__test_8h_source.html','');}
 <div class="title">binarytree_test.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="binarytree__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BINARYTREE_TEST</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BINARYTREE_TEST</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="binarytree_8h.html">binarytree.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&lt;sstream&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">IntroductionToAlgorithm::TreeAlgorithm::inorder_walk</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">IntroductionToAlgorithm::TreeAlgorithm::preorder_walk</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">IntroductionToAlgorithm::TreeAlgorithm::postorder_walk</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">IntroductionToAlgorithm::TreeAlgorithm::transplant</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>:<span class="keyword">public</span> ::testing::Test</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b">   21</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html">BinaryTreeNode&lt;int&gt;</a> <a class="code" href="class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b">Node</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ab650cb6b7b008479f5294b1ed65871e5">   23</a></span>&#160;    <a class="code" href="class_binary_tree_test.html#ab650cb6b7b008479f5294b1ed65871e5">BinaryTreeTest</a>(){}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ab718ba725e8099dda414f5dbc11e881b">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_binary_tree_test.html#ab718ba725e8099dda414f5dbc11e881b">SetUp</a>()</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::shared_ptr&lt;Node&gt; nodes[9];</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;9;i++)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            nodes[i]=std::make_shared&lt;Node&gt;(i);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        nodes[1]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[0]);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        nodes[2]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[0]);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        nodes[0]-&gt;lchild=nodes[1];</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        nodes[0]-&gt;rchild=nodes[2];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        nodes[3]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[1]);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        nodes[4]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[1]);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        nodes[1]-&gt;lchild=nodes[3];</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        nodes[1]-&gt;rchild=nodes[4];</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        nodes[5]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[2]);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        nodes[6]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[2]);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        nodes[2]-&gt;lchild=nodes[5];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        nodes[2]-&gt;rchild=nodes[6];</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        nodes[7]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[3]);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        nodes[8]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[3]);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        nodes[3]-&gt;lchild=nodes[7];</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        nodes[3]-&gt;rchild=nodes[8];</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">_normal_tree</a>.<a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#aa0d43af70ef50ff59740dced2e832074">root</a>=(nodes[0]);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">/*           0</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">        *          /   \</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">        *         1     2</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">        *        / \   /  \</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">        *       3   4  5   6</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">        *      / \</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">        *     7   8</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ac8daf6a6b88e89733c0ade6da7d4a897">   70</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_binary_tree_test.html#ac8daf6a6b88e89733c0ade6da7d4a897">TearDown</a>(){}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#a66e48418e5449b663b2608f4914100d5">   72</a></span>&#160;    <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">BinaryTree&lt;Node&gt;</a> <a class="code" href="class_binary_tree_test.html#a66e48418e5449b663b2608f4914100d5">_empty_tree</a>;   </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">   73</a></span>&#160;    <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">BinaryTree&lt;Node&gt;</a> <a class="code" href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">_normal_tree</a>;   </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">   77</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_tree)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    EXPECT_EQ(_empty_tree.to_xml(),<span class="stringliteral">&quot;tree is empty!&quot;</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    EXPECT_NE(_normal_tree.to_xml(),<span class="stringliteral">&quot;tree is empty!&quot;</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a22cc40ea8db4f5d34805f511619dfff3">   87</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_inorder_walk)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::ostringstream os;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_empty_tree.root,do_work);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    EXPECT_EQ(os.str(),std::string());</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    os.flush();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;5;2;6;&quot;</span>));</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">/*           0               中序遍历: 7;3;8;1;4;0;5;2;6;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">    *          /   \</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">    *         1     2</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    *        / \   /  \</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">    *       3   4  5   6</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">    *      / \</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">    *     7   8</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a440e046ae8fac09ca881f3a9e80c4e71">  110</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_preorder_walk)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::ostringstream os;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">preorder_walk</a>(_empty_tree.root,do_work);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    EXPECT_EQ(os.str(),std::string());</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    os.flush();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">preorder_walk</a>(_normal_tree.root,do_work);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;0;1;3;7;8;4;2;5;6;&quot;</span>));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">/*           0               前序遍历: 0;1;3;7;8;4;2;5;6;</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    *          /   \</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">    *         1     2</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">    *        / \   /  \</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">    *       3   4  5   6</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">    *      / \</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">    *     7   8</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#ac5df656308412011ed795e761c0ba7ab">  133</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_postorder_walk)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    std::ostringstream os;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">postorder_walk</a>(_empty_tree.root,do_work);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    EXPECT_EQ(os.str(),std::string());</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    os.flush();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">postorder_walk</a>(_normal_tree.root,do_work);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;8;3;4;1;5;6;2;0;&quot;</span>));</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment">/*           0               后序遍历: 7;8;3;4;1;5;6;2;0;</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">    *          /   \</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    *         1     2</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">    *        / \   /  \</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">    *       3   4  5   6</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">    *      / \</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">    *     7   8</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a93344246964f08775c477e99df8e0213">  156</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_left_rotate)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    std::ostringstream os;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">left_rotate</a>(_empty_tree.root,_empty_tree.root);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">auto</span> old_root=_normal_tree.root; <span class="comment">//原根节点</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">auto</span> old_root_right=old_root-&gt;rchild;<span class="comment">//原根节点的右子</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">left_rotate</a>(_normal_tree.root,_normal_tree.root);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    EXPECT_NE(old_root.get(),_normal_tree.root.get());</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    EXPECT_EQ(_normal_tree.root-&gt;lchild.get(),old_root.get());</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    EXPECT_EQ(old_root_right.get(),_normal_tree.root.get());</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;5;2;6;&quot;</span>));</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">/*           0               左旋                      2</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    *          /   \                                    /    \</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">    *         1     2                                  0      6</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">    *        / \   /  \                              /  \</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment">    *       3   4  5   6                            1    5</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">    *      / \                                    /   \</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">    *     7   8                                  3     4</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">    *                                          /   \</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">    *                                         7     8</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a5377352f5bcd00c7fe8c30c9bac3cd91">  188</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_right_rotate)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    std::ostringstream os;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0">right_rotate</a>(_empty_tree.root,_empty_tree.root);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">auto</span> old_root=_normal_tree.root;  <span class="comment">//原根节点</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">auto</span> old_root_left=old_root-&gt;lchild;<span class="comment">//原根节点的左子</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0">right_rotate</a>(_normal_tree.root,_normal_tree.root);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    EXPECT_NE(old_root.get(),_normal_tree.root.get());</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    EXPECT_EQ(_normal_tree.root-&gt;rchild.get(),old_root.get());</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    EXPECT_EQ(old_root_left.get(),_normal_tree.root.get());</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;5;2;6;&quot;</span>));</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="comment">/*           0               右旋                       1</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">    *          /   \                                    /      \</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">    *         1     2                                  3        0</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">    *        / \   /  \                              /   \     /  \</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">    *       3   4  5   6                            7     8   4    2</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">    *      / \                                                    /  \</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">    *     7   8                                                  5    6</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">    *</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">    *</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#ad4f004637e8414b0d1ae2736dc4156ac">  219</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_right_transplant)</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    std::ostringstream os;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    EXPECT_THROW(<a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">transplant</a>(_empty_tree.root,_empty_tree.root,_empty_tree.root),std::invalid_argument);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">auto</span> old_root=_normal_tree.root;  <span class="comment">//原根节点</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">auto</span> old_src=old_root-&gt;lchild;<span class="comment">//原根节点的左子</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">auto</span> old_dst=old_root-&gt;rchild; <span class="comment">//原根节点的右子</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">transplant</a>(old_src,old_dst,_normal_tree.root); <span class="comment">//左子剪切到右子</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    EXPECT_EQ(old_root,_normal_tree.root);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    EXPECT_EQ(_normal_tree.root-&gt;rchild.get(),old_src.get());</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    EXPECT_EQ(old_src-&gt;parent.lock().get(),_normal_tree.root.get());</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;7;3;8;1;4;&quot;</span>));</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">/*           0               剪切 1--&gt;2                  0                0</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">    *         //   \\                            (父--&gt;子)/     \\           |(子--&gt;父)</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">    *         1      2                                  1        1           2</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">    *       //  \\ //  \\                             // \\    //  \\      //   \\</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">    *       3    4 5    6                             3   4    3    4      5     6</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">    *     // \\                                     // \\    //  \\</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">    *     7   8                                    7    8    7    8</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">    *</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">    *</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">#endif // BINARYTREE_TEST</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a49b5467191bd51c25ad7e7bfbed51339"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">IntroductionToAlgorithm::TreeAlgorithm::postorder_walk</a></div><div class="ttdeci">void postorder_walk(std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</div><div class="ttdoc">postorder_walk：二叉树的后序遍历 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00109">binarytree.h:109</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a3d57267cd5fea456f6e001dc22d07c85"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">IntroductionToAlgorithm::TreeAlgorithm::preorder_walk</a></div><div class="ttdeci">void preorder_walk(std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</div><div class="ttdoc">preorder_walk：二叉树的前序遍历 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00083">binarytree.h:83</a></div></div>
-<div class="ttc" id="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree</a></div><div class="ttdoc">BinaryTree：二叉树，算法导论10章10.4节 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00014">binarytree.h:14</a></div></div>
-<div class="ttc" id="class_binary_tree_test_html_ac8daf6a6b88e89733c0ade6da7d4a897"><div class="ttname"><a href="class_binary_tree_test.html#ac8daf6a6b88e89733c0ade6da7d4a897">BinaryTreeTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdoc">TearDown:在每一个测试结束之后执行 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00070">binarytree_test.h:70</a></div></div>
-<div class="ttc" id="class_binary_tree_test_html"><div class="ttname"><a href="class_binary_tree_test.html">BinaryTreeTest</a></div><div class="ttdoc">BinaryTreeTest:测试类，用于为测试提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00018">binarytree_test.h:18</a></div></div>
-<div class="ttc" id="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode</a></div><div class="ttdoc">BinaryTreeNode：二叉树的节点，算法导论xx章xx节 </div><div class="ttdef"><b>Definition:</b> <a href="binarytreenode_8h_source.html#l00013">binarytreenode.h:13</a></div></div>
-<div class="ttc" id="class_binary_tree_test_html_ab650cb6b7b008479f5294b1ed65871e5"><div class="ttname"><a href="class_binary_tree_test.html#ab650cb6b7b008479f5294b1ed65871e5">BinaryTreeTest::BinaryTreeTest</a></div><div class="ttdeci">BinaryTreeTest()</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00023">binarytree_test.h:23</a></div></div>
-<div class="ttc" id="class_binary_tree_test_html_a36a98db1094f92c94b7d7893c8975f57"><div class="ttname"><a href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">BinaryTreeTest::_normal_tree</a></div><div class="ttdeci">BinaryTree&lt; Node &gt; _normal_tree</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00073">binarytree_test.h:73</a></div></div>
+<a href="binarytree__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2016- huaxz &lt;huaxz1986@163.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Author: huaxz1986@163.com (huaxz)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef BINARYTREE_TEST</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define BINARYTREE_TEST</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="binarytree_8h.html">binarytree.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include&quot;../binarytreenode/binarytreenode.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include&lt;sstream&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">IntroductionToAlgorithm::TreeAlgorithm::inorder_walk</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">IntroductionToAlgorithm::TreeAlgorithm::preorder_walk</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">IntroductionToAlgorithm::TreeAlgorithm::postorder_walk</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">IntroductionToAlgorithm::TreeAlgorithm::transplant</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>:<span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b">   40</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html">BinaryTreeNode&lt;int&gt;</a> <a class="code" href="class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b">Node</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ab650cb6b7b008479f5294b1ed65871e5">   42</a></span>&#160;    <a class="code" href="class_binary_tree_test.html#ab650cb6b7b008479f5294b1ed65871e5">BinaryTreeTest</a>(){}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ab718ba725e8099dda414f5dbc11e881b">   49</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_binary_tree_test.html#ab718ba725e8099dda414f5dbc11e881b">SetUp</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::shared_ptr&lt;Node&gt; nodes[9];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;9;i++)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            nodes[i]=std::make_shared&lt;Node&gt;(i);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        nodes[1]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[0]);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        nodes[2]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[0]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        nodes[0]-&gt;lchild=nodes[1];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        nodes[0]-&gt;rchild=nodes[2];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        nodes[3]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[1]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        nodes[4]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[1]);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        nodes[1]-&gt;lchild=nodes[3];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        nodes[1]-&gt;rchild=nodes[4];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        nodes[5]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[2]);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        nodes[6]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[2]);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        nodes[2]-&gt;lchild=nodes[5];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        nodes[2]-&gt;rchild=nodes[6];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        nodes[7]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[3]);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        nodes[8]-&gt;parent=std::weak_ptr&lt;Node&gt;(nodes[3]);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        nodes[3]-&gt;lchild=nodes[7];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        nodes[3]-&gt;rchild=nodes[8];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">_normal_tree</a>.<a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#aa0d43af70ef50ff59740dced2e832074">root</a>=(nodes[0]);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">/*           0</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">        *          /   \</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">        *         1     2</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">        *        / \   /  \</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">        *       3   4  5   6</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">        *      / \</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">        *     7   8</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#ac8daf6a6b88e89733c0ade6da7d4a897">   89</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_binary_tree_test.html#ac8daf6a6b88e89733c0ade6da7d4a897">TearDown</a>(){}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#a66e48418e5449b663b2608f4914100d5">   91</a></span>&#160;    <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">BinaryTree&lt;Node&gt;</a> <a class="code" href="class_binary_tree_test.html#a66e48418e5449b663b2608f4914100d5">_empty_tree</a>;   </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">   92</a></span>&#160;    <a class="code" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">BinaryTree&lt;Node&gt;</a> <a class="code" href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">_normal_tree</a>;   </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">   96</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_tree)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    EXPECT_EQ(_empty_tree.to_xml(),<span class="stringliteral">&quot;tree is empty!&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    EXPECT_NE(_normal_tree.to_xml(),<span class="stringliteral">&quot;tree is empty!&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a22cc40ea8db4f5d34805f511619dfff3">  106</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_inorder_walk)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    std::ostringstream os;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_empty_tree.root,do_work);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    EXPECT_EQ(os.str(),std::string());</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    os.flush();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;5;2;6;&quot;</span>));</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">/*           0               中序遍历: 7;3;8;1;4;0;5;2;6;</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">    *          /   \</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">    *         1     2</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">    *        / \   /  \</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">    *       3   4  5   6</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">    *      / \</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">    *     7   8</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a440e046ae8fac09ca881f3a9e80c4e71">  129</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_preorder_walk)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    std::ostringstream os;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">preorder_walk</a>(_empty_tree.root,do_work);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    EXPECT_EQ(os.str(),std::string());</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    os.flush();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">preorder_walk</a>(_normal_tree.root,do_work);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;0;1;3;7;8;4;2;5;6;&quot;</span>));</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">/*           0               前序遍历: 0;1;3;7;8;4;2;5;6;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">    *          /   \</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">    *         1     2</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">    *        / \   /  \</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">    *       3   4  5   6</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">    *      / \</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">    *     7   8</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#ac5df656308412011ed795e761c0ba7ab">  152</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_postorder_walk)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    std::ostringstream os;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">postorder_walk</a>(_empty_tree.root,do_work);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    EXPECT_EQ(os.str(),std::string());</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    os.flush();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">postorder_walk</a>(_normal_tree.root,do_work);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;8;3;4;1;5;6;2;0;&quot;</span>));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="comment">/*           0               后序遍历: 7;8;3;4;1;5;6;2;0;</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">    *          /   \</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">    *         1     2</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">    *        / \   /  \</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">    *       3   4  5   6</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">    *      / \</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">    *     7   8</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a93344246964f08775c477e99df8e0213">  175</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_left_rotate)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    std::ostringstream os;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">left_rotate</a>(_empty_tree.root,_empty_tree.root);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">auto</span> old_root=_normal_tree.root; <span class="comment">//原根节点</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">auto</span> old_root_right=old_root-&gt;rchild;<span class="comment">//原根节点的右子</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">left_rotate</a>(_normal_tree.root,_normal_tree.root);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    EXPECT_NE(old_root.get(),_normal_tree.root.get());</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    EXPECT_EQ(_normal_tree.root-&gt;lchild.get(),old_root.get());</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    EXPECT_EQ(old_root_right.get(),_normal_tree.root.get());</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;5;2;6;&quot;</span>));</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">/*           0               左旋                      2</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">    *          /   \                                    /    \</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    *         1     2                                  0      6</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">    *        / \   /  \                              /  \</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">    *       3   4  5   6                            1    5</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">    *      / \                                    /   \</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">    *     7   8                                  3     4</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">    *                                          /   \</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">    *                                         7     8</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#a5377352f5bcd00c7fe8c30c9bac3cd91">  207</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_right_rotate)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    std::ostringstream os;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0">right_rotate</a>(_empty_tree.root,_empty_tree.root);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">auto</span> old_root=_normal_tree.root;  <span class="comment">//原根节点</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keyword">auto</span> old_root_left=old_root-&gt;lchild;<span class="comment">//原根节点的左子</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0">right_rotate</a>(_normal_tree.root,_normal_tree.root);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    EXPECT_NE(old_root.get(),_normal_tree.root.get());</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    EXPECT_EQ(_normal_tree.root-&gt;rchild.get(),old_root.get());</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    EXPECT_EQ(old_root_left.get(),_normal_tree.root.get());</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;5;2;6;&quot;</span>));</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="comment">/*           0               右旋                       1</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">    *          /   \                                    /      \</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">    *         1     2                                  3        0</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">    *        / \   /  \                              /   \     /  \</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">    *       3   4  5   6                            7     8   4    2</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">    *      / \                                                    /  \</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">    *     7   8                                                  5    6</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">    *</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">    *</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="binarytree__test_8h.html#ad4f004637e8414b0d1ae2736dc4156ac">  238</a></span>&#160;<a class="code" href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a>(<a class="code" href="class_binary_tree_test.html">BinaryTreeTest</a>,test_right_transplant)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;{</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    std::ostringstream os;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">auto</span> do_work=[&amp;os](<span class="keywordtype">int</span> val){ os&lt;&lt;val&lt;&lt;<span class="stringliteral">&quot;;&quot;</span>;};</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    EXPECT_THROW(<a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">transplant</a>(_empty_tree.root,_empty_tree.root,_empty_tree.root),std::invalid_argument);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">auto</span> old_root=_normal_tree.root;  <span class="comment">//原根节点</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">auto</span> old_src=old_root-&gt;lchild;<span class="comment">//原根节点的左子</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">auto</span> old_dst=old_root-&gt;rchild; <span class="comment">//原根节点的右子</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">transplant</a>(old_src,old_dst,_normal_tree.root); <span class="comment">//左子剪切到右子</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    EXPECT_EQ(old_root,_normal_tree.root);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    EXPECT_EQ(_normal_tree.root-&gt;rchild.get(),old_src.get());</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    EXPECT_EQ(old_src-&gt;parent.lock().get(),_normal_tree.root.get());</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">inorder_walk</a>(_normal_tree.root,do_work);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    EXPECT_EQ(os.str(),std::string(<span class="stringliteral">&quot;7;3;8;1;4;0;7;3;8;1;4;&quot;</span>));</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">/*           0               剪切 1--&gt;2                  0                0</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">    *         //   \\                            (父--&gt;子)/     \\           |(子--&gt;父)</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="comment">    *         1      2                                  1        1           2</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">    *       //  \\ //  \\                             // \\    //  \\      //   \\</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment">    *       3    4 5    6                             3   4    3    4      5     6</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">    *     // \\                                     // \\    //  \\</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment">    *     7   8                                    7    8    7    8</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment">    *</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">    *</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#endif // BINARYTREE_TEST</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a49b5467191bd51c25ad7e7bfbed51339"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a49b5467191bd51c25ad7e7bfbed51339">IntroductionToAlgorithm::TreeAlgorithm::postorder_walk</a></div><div class="ttdeci">void postorder_walk(std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</div><div class="ttdoc">postorder_walk：二叉树的后序遍历 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00127">binarytree.h:127</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a3d57267cd5fea456f6e001dc22d07c85"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a3d57267cd5fea456f6e001dc22d07c85">IntroductionToAlgorithm::TreeAlgorithm::preorder_walk</a></div><div class="ttdeci">void preorder_walk(std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</div><div class="ttdoc">preorder_walk：二叉树的前序遍历 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00101">binarytree.h:101</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree</a></div><div class="ttdoc">BinaryTree：二叉树，算法导论10章10.4节 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00032">binarytree.h:32</a></div></div>
+<div class="ttc" id="class_binary_tree_test_html_ac8daf6a6b88e89733c0ade6da7d4a897"><div class="ttname"><a href="class_binary_tree_test.html#ac8daf6a6b88e89733c0ade6da7d4a897">BinaryTreeTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdoc">TearDown:在每一个测试结束之后执行 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00089">binarytree_test.h:89</a></div></div>
+<div class="ttc" id="class_binary_tree_test_html"><div class="ttname"><a href="class_binary_tree_test.html">BinaryTreeTest</a></div><div class="ttdoc">BinaryTreeTest:测试类，用于为测试提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00037">binarytree_test.h:37</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html">IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode</a></div><div class="ttdoc">BinaryTreeNode：二叉树的节点，算法导论xx章xx节 </div><div class="ttdef"><b>Definition:</b> <a href="binarytreenode_8h_source.html#l00031">binarytreenode.h:31</a></div></div>
+<div class="ttc" id="class_binary_tree_test_html_ab650cb6b7b008479f5294b1ed65871e5"><div class="ttname"><a href="class_binary_tree_test.html#ab650cb6b7b008479f5294b1ed65871e5">BinaryTreeTest::BinaryTreeTest</a></div><div class="ttdeci">BinaryTreeTest()</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00042">binarytree_test.h:42</a></div></div>
+<div class="ttc" id="class_binary_tree_test_html_a36a98db1094f92c94b7d7893c8975f57"><div class="ttname"><a href="class_binary_tree_test.html#a36a98db1094f92c94b7d7893c8975f57">BinaryTreeTest::_normal_tree</a></div><div class="ttdeci">BinaryTree&lt; Node &gt; _normal_tree</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00092">binarytree_test.h:92</a></div></div>
 <div class="ttc" id="binarytree_8h_html"><div class="ttname"><a href="binarytree_8h.html">binarytree.h</a></div></div>
-<div class="ttc" id="class_binary_tree_test_html_a66e48418e5449b663b2608f4914100d5"><div class="ttname"><a href="class_binary_tree_test.html#a66e48418e5449b663b2608f4914100d5">BinaryTreeTest::_empty_tree</a></div><div class="ttdeci">BinaryTree&lt; Node &gt; _empty_tree</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00072">binarytree_test.h:72</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_abd9431ca8d1a40f70b6c72c732fc5892"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">IntroductionToAlgorithm::TreeAlgorithm::inorder_walk</a></div><div class="ttdeci">void inorder_walk(std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</div><div class="ttdoc">inorder_walk：二叉树的中序遍历 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00059">binarytree.h:59</a></div></div>
-<div class="ttc" id="class_binary_tree_test_html_ad4aa3d3d01bf0b1b820fffa58e81e15b"><div class="ttname"><a href="class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b">BinaryTreeTest::Node</a></div><div class="ttdeci">BinaryTreeNode&lt; int &gt; Node</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00021">binarytree_test.h:21</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">IntroductionToAlgorithm::TreeAlgorithm::transplant</a></div><div class="ttdeci">void transplant(std::shared_ptr&lt; NodeType &gt; node_src, std::shared_ptr&lt; NodeType &gt;node_dst, std::shared_ptr&lt; NodeType &gt; &amp;root)</div><div class="ttdoc">transplant：二叉树的剪切操作 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00231">binarytree.h:231</a></div></div>
-<div class="ttc" id="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_html_aa0d43af70ef50ff59740dced2e832074"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#aa0d43af70ef50ff59740dced2e832074">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree::root</a></div><div class="ttdeci">std::shared_ptr&lt; NodeType &gt; root</div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00041">binarytree.h:41</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a96be2938a006ec461c1b0a59d6bee3b5"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">IntroductionToAlgorithm::TreeAlgorithm::left_rotate</a></div><div class="ttdeci">void left_rotate(std::shared_ptr&lt; NodeType &gt; node, std::shared_ptr&lt; NodeType &gt; &amp;root)</div><div class="ttdoc">left_rotate：二叉树的左旋转操作 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00139">binarytree.h:139</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_adeb83a10f8daa65c5cf5921737a04da0"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0">IntroductionToAlgorithm::TreeAlgorithm::right_rotate</a></div><div class="ttdeci">void right_rotate(std::shared_ptr&lt; NodeType &gt; node, std::shared_ptr&lt; NodeType &gt; &amp;root)</div><div class="ttdoc">right_rotate：二叉树的右旋转操作 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00186">binarytree.h:186</a></div></div>
-<div class="ttc" id="binarytree__test_8h_html_ad232823b4358b06935529fab1c600de3"><div class="ttname"><a href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a></div><div class="ttdeci">TEST_F(BinaryTreeTest, test_tree)</div><div class="ttdoc">test_tree:测试空树、非空树 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00077">binarytree_test.h:77</a></div></div>
-<div class="ttc" id="class_binary_tree_test_html_ab718ba725e8099dda414f5dbc11e881b"><div class="ttname"><a href="class_binary_tree_test.html#ab718ba725e8099dda414f5dbc11e881b">BinaryTreeTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdoc">SetUp:在每一个测试开始之前执行 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00030">binarytree_test.h:30</a></div></div>
+<div class="ttc" id="class_binary_tree_test_html_a66e48418e5449b663b2608f4914100d5"><div class="ttname"><a href="class_binary_tree_test.html#a66e48418e5449b663b2608f4914100d5">BinaryTreeTest::_empty_tree</a></div><div class="ttdeci">BinaryTree&lt; Node &gt; _empty_tree</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00091">binarytree_test.h:91</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_abd9431ca8d1a40f70b6c72c732fc5892"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892">IntroductionToAlgorithm::TreeAlgorithm::inorder_walk</a></div><div class="ttdeci">void inorder_walk(std::shared_ptr&lt; NodeType &gt; root, ActionType action=[](typename NodeType::T){})</div><div class="ttdoc">inorder_walk：二叉树的中序遍历 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00077">binarytree.h:77</a></div></div>
+<div class="ttc" id="class_binary_tree_test_html_ad4aa3d3d01bf0b1b820fffa58e81e15b"><div class="ttname"><a href="class_binary_tree_test.html#ad4aa3d3d01bf0b1b820fffa58e81e15b">BinaryTreeTest::Node</a></div><div class="ttdeci">BinaryTreeNode&lt; int &gt; Node</div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00040">binarytree_test.h:40</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a4fb6d9c7d8b75a8d6ec4ee79fc0b1de5">IntroductionToAlgorithm::TreeAlgorithm::transplant</a></div><div class="ttdeci">void transplant(std::shared_ptr&lt; NodeType &gt; node_src, std::shared_ptr&lt; NodeType &gt;node_dst, std::shared_ptr&lt; NodeType &gt; &amp;root)</div><div class="ttdoc">transplant：二叉树的剪切操作 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00249">binarytree.h:249</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_html_aa0d43af70ef50ff59740dced2e832074"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#aa0d43af70ef50ff59740dced2e832074">IntroductionToAlgorithm::TreeAlgorithm::BinaryTree::root</a></div><div class="ttdeci">std::shared_ptr&lt; NodeType &gt; root</div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00059">binarytree.h:59</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_a96be2938a006ec461c1b0a59d6bee3b5"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#a96be2938a006ec461c1b0a59d6bee3b5">IntroductionToAlgorithm::TreeAlgorithm::left_rotate</a></div><div class="ttdeci">void left_rotate(std::shared_ptr&lt; NodeType &gt; node, std::shared_ptr&lt; NodeType &gt; &amp;root)</div><div class="ttdoc">left_rotate：二叉树的左旋转操作 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00157">binarytree.h:157</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_tree_algorithm_html_adeb83a10f8daa65c5cf5921737a04da0"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0">IntroductionToAlgorithm::TreeAlgorithm::right_rotate</a></div><div class="ttdeci">void right_rotate(std::shared_ptr&lt; NodeType &gt; node, std::shared_ptr&lt; NodeType &gt; &amp;root)</div><div class="ttdoc">right_rotate：二叉树的右旋转操作 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree_8h_source.html#l00204">binarytree.h:204</a></div></div>
+<div class="ttc" id="binarytree__test_8h_html_ad232823b4358b06935529fab1c600de3"><div class="ttname"><a href="binarytree__test_8h.html#ad232823b4358b06935529fab1c600de3">TEST_F</a></div><div class="ttdeci">TEST_F(BinaryTreeTest, test_tree)</div><div class="ttdoc">test_tree:测试空树、非空树 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00096">binarytree_test.h:96</a></div></div>
+<div class="ttc" id="class_binary_tree_test_html_ab718ba725e8099dda414f5dbc11e881b"><div class="ttname"><a href="class_binary_tree_test.html#ab718ba725e8099dda414f5dbc11e881b">BinaryTreeTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdoc">SetUp:在每一个测试开始之前执行 </div><div class="ttdef"><b>Definition:</b> <a href="binarytree__test_8h_source.html#l00049">binarytree_test.h:49</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

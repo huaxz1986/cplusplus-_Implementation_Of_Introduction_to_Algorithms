@@ -1,0 +1,20 @@
+\hypertarget{bellmanford_8h}{}\section{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/bellman\+\_\+ford/bellmanford.h File Reference}
+\label{bellmanford_8h}\index{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/bellman\+\_\+ford/bellmanford.\+h@{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/bellman\+\_\+ford/bellmanford.\+h}}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include \char`\"{}src/header.\+h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5ed496e8825564d0f9fcfe3b0ac41dec}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::initialize\+\_\+single\+\_\+source} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
+\begin{DoxyCompactList}\small\item\em initialize\+\_\+single\+\_\+source：单源最短路径的初始化操作，算法导论22章xx节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Vertex\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_afe2bd83fca7df7e07ece9a59b8e7f5a6}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::relax} (std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ from, std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ to, typename Vertex\+Type\+::\+Key\+Type weight)
+\begin{DoxyCompactList}\small\item\em relax：单源最短路径的松弛操作，算法导论22章xx节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ae96d9b844260ee3ce9225055040c631b}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::bellman\+\_\+ford} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
+\begin{DoxyCompactList}\small\item\em bellman\+\_\+ford：单源最短路径的bellman\+\_\+ford算法，算法导论22章xx节 \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -18,7 +18,7 @@ Inheritance diagram for D\+F\+S\+Test\+:\begin{figure}[H]
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ \hyperlink{dfs__test_8h_a3555131dfa4d016ec8c65706e1835074}{D\+F\+S\+\_\+\+N}, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex}{D\+F\+S\+\_\+\+Vertex}$<$ double $>$ $>$ \hyperlink{class_d_f_s_test_a32b63a9c79f6f7e7021daacf076a1512}{G\+Type}
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ D\+F\+S\+\_\+\+N, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex}{D\+F\+S\+\_\+\+Vertex}$<$ double $>$ $>$ \hyperlink{class_d_f_s_test_a32b63a9c79f6f7e7021daacf076a1512}{G\+Type}
 \item 
 typedef std\+::function$<$ void(\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex}{D\+F\+S\+\_\+\+Vertex}$<$ double $>$\+::V\+I\+D\+Type v\+\_\+id, int time)$>$ \hyperlink{class_d_f_s_test_ac4c131b9b4f9de55192b1c634dc1c37f}{Action\+Type}
 \end{DoxyCompactItemize}
@@ -47,7 +47,7 @@ std\+::shared\+\_\+ptr$<$ \hyperlink{class_d_f_s_test_a32b63a9c79f6f7e7021daacf0
 
 {\ttfamily \hyperlink{class_d_f_s_test}{D\+F\+S\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
 
-Definition at line 96 of file dfs\+\_\+test.\+h.
+Definition at line 118 of file dfs\+\_\+test.\+h.
 
 
 
@@ -57,14 +57,14 @@ Definition at line 96 of file dfs\+\_\+test.\+h.
 \subsubsection[{Action\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$void({\bf D\+F\+S\+\_\+\+Vertex}$<$double$>$\+::V\+I\+D\+Type v\+\_\+id,int time)$>$ {\bf D\+F\+S\+Test\+::\+Action\+Type}}\label{class_d_f_s_test_ac4c131b9b4f9de55192b1c634dc1c37f}
 模板实例化的\+Action类型 
 
-Definition at line 100 of file dfs\+\_\+test.\+h.
+Definition at line 122 of file dfs\+\_\+test.\+h.
 
 \hypertarget{class_d_f_s_test_a32b63a9c79f6f7e7021daacf076a1512}{}\index{D\+F\+S\+Test@{D\+F\+S\+Test}!G\+Type@{G\+Type}}
 \index{G\+Type@{G\+Type}!D\+F\+S\+Test@{D\+F\+S\+Test}}
-\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<${\bf D\+F\+S\+\_\+\+N},{\bf D\+F\+S\+\_\+\+Vertex}$<$double$>$ $>$ {\bf D\+F\+S\+Test\+::\+G\+Type}}\label{class_d_f_s_test_a32b63a9c79f6f7e7021daacf076a1512}
+\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<$D\+F\+S\+\_\+\+N,{\bf D\+F\+S\+\_\+\+Vertex}$<$double$>$ $>$ {\bf D\+F\+S\+Test\+::\+G\+Type}}\label{class_d_f_s_test_a32b63a9c79f6f7e7021daacf076a1512}
 模板实例化的图类型，该图的顶点类型为{\ttfamily D\+F\+S\+\_\+\+Vertex$<$double$>$} 
 
-Definition at line 99 of file dfs\+\_\+test.\+h.
+Definition at line 121 of file dfs\+\_\+test.\+h.
 
 
 
@@ -78,7 +78,7 @@ Definition at line 99 of file dfs\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_d_f_s_test_aa8af56e0d079eb7c2b0ba7b6535d7d61}
 
 
-Definition at line 102 of file dfs\+\_\+test.\+h.
+Definition at line 124 of file dfs\+\_\+test.\+h.
 
 \hypertarget{class_d_f_s_test_afbe32ab6557cbca62368b480e1df593a}{}\index{D\+F\+S\+Test@{D\+F\+S\+Test}!Tear\+Down@{Tear\+Down}}
 \index{Tear\+Down@{Tear\+Down}!D\+F\+S\+Test@{D\+F\+S\+Test}}
@@ -89,7 +89,7 @@ Definition at line 102 of file dfs\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_d_f_s_test_afbe32ab6557cbca62368b480e1df593a}
 
 
-Definition at line 127 of file dfs\+\_\+test.\+h.
+Definition at line 149 of file dfs\+\_\+test.\+h.
 
 
 
@@ -99,28 +99,28 @@ Definition at line 127 of file dfs\+\_\+test.\+h.
 \subsubsection[{\+\_\+1e\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ D\+F\+S\+Test\+::\+\_\+1e\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_d_f_s_test_ae5351e523345888ffc64aa892d93d3c2}
 指向一个图，该图只有一条边 
 
-Definition at line 129 of file dfs\+\_\+test.\+h.
+Definition at line 151 of file dfs\+\_\+test.\+h.
 
 \hypertarget{class_d_f_s_test_a4dbae7784992bee522457b53da2141c2}{}\index{D\+F\+S\+Test@{D\+F\+S\+Test}!\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}}
 \index{\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}!D\+F\+S\+Test@{D\+F\+S\+Test}}
 \subsubsection[{\+\_\+1v\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ D\+F\+S\+Test\+::\+\_\+1v\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_d_f_s_test_a4dbae7784992bee522457b53da2141c2}
 指向一个图，该图只有一个顶点 
 
-Definition at line 128 of file dfs\+\_\+test.\+h.
+Definition at line 150 of file dfs\+\_\+test.\+h.
 
 \hypertarget{class_d_f_s_test_a9607eac5350c4cdd449c353fed482efc}{}\index{D\+F\+S\+Test@{D\+F\+S\+Test}!\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}}
 \index{\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}!D\+F\+S\+Test@{D\+F\+S\+Test}}
 \subsubsection[{\+\_\+list\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ D\+F\+S\+Test\+::\+\_\+list\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_d_f_s_test_a9607eac5350c4cdd449c353fed482efc}
 指向一个图，该图的边组成一个链条，该图用顺序搜索 
 
-Definition at line 130 of file dfs\+\_\+test.\+h.
+Definition at line 152 of file dfs\+\_\+test.\+h.
 
 \hypertarget{class_d_f_s_test_a93a79d0654eb82517990c8f5419148a8}{}\index{D\+F\+S\+Test@{D\+F\+S\+Test}!\+\_\+rlist\+\_\+graph@{\+\_\+rlist\+\_\+graph}}
 \index{\+\_\+rlist\+\_\+graph@{\+\_\+rlist\+\_\+graph}!D\+F\+S\+Test@{D\+F\+S\+Test}}
 \subsubsection[{\+\_\+rlist\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ D\+F\+S\+Test\+::\+\_\+rlist\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_d_f_s_test_a93a79d0654eb82517990c8f5419148a8}
 指向一个图，该图的边组成一个链条，该图用逆序搜索 
 
-Definition at line 131 of file dfs\+\_\+test.\+h.
+Definition at line 153 of file dfs\+\_\+test.\+h.
 
 
 

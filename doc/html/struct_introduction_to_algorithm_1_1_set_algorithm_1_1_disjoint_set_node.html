@@ -149,8 +149,8 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a03e58ee7a2d6949283fafcd1de53e53b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a8f801679de129d80a99ad683430c534a">KeyType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a03e58ee7a2d6949283fafcd1de53e53b">value</a></td></tr>
-<tr class="separator:a03e58ee7a2d6949283fafcd1de53e53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01535aa5e8ba05dceedd5c475d61c18"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a8f801679de129d80a99ad683430c534a">KeyType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ae01535aa5e8ba05dceedd5c475d61c18">value</a></td></tr>
+<tr class="separator:ae01535aa5e8ba05dceedd5c475d61c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fd137f74ca1317bfb02d9e1640ce147"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a1fd137f74ca1317bfb02d9e1640ce147">rank</a></td></tr>
 <tr class="separator:a1fd137f74ca1317bfb02d9e1640ce147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5cf3f4d739ecd0c1f6d3b3005e21993"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html">DisjointSetNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ad5cf3f4d739ecd0c1f6d3b3005e21993">parent</a></td></tr>
@@ -175,7 +175,7 @@ struct IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode&lt; KType &gt;</h3
 </ul>
 <p>如果单独采用按秩合并或者路径压缩，它们每一个都能改善不相交集合森林上操作的运行时间；而一起使用这两种启发式策略时，这种改善更大。 当同时使用按秩合并和路径压缩时，最坏情况下的运行时间为O(m*alpha*n))，这里alpha(n)是一个增长非常慢的函数。在任何一个可以想得到的不相交集合数据结构的应用中， alpha(n)&lt;=4。其中n为结点个数，m为操作次数（运用了摊还分析） </p>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00036">36</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00054">54</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a8f801679de129d80a99ad683430c534a"></a>
 <div class="memitem">
@@ -190,7 +190,7 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>结点保存的数据类型 </p>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00038">38</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00056">56</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ template&lt;typename KType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00047">47</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00065">65</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ template&lt;typename KType &gt; </div>
 </dl>
 <p>find_set过程是一个 two_pass method，当它递归时，第一趟沿着查找路径向上直到找到树根； 当递归回溯时，第二趟沿着搜索树向下更新每个节点，使其父节点直接指向树根 </p>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00065">65</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00083">83</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -316,7 +316,7 @@ template&lt;typename KType &gt; </div>
 <li>如果 nodeX 和 nodeY非空，但是nodeX或者nodeY不是根结点，抛出异常 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00105">105</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00123">123</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +352,7 @@ template&lt;typename KType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00081">81</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00099">99</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -399,7 +399,7 @@ template&lt;typename KType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00132">132</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00150">150</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>结点的父指针 </p>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00051">51</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00069">69</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -434,24 +434,24 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>结点的秩 </p>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00050">50</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00068">68</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a03e58ee7a2d6949283fafcd1de53e53b"></a>
+<a class="anchor" id="ae01535aa5e8ba05dceedd5c475d61c18"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename KType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a8f801679de129d80a99ad683430c534a">KeyType</a>&gt; <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html">IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode</a>&lt; KType &gt;::value</td>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a8f801679de129d80a99ad683430c534a">KeyType</a>&gt; <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html">IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode</a>&lt; KType &gt;::value</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>结点保存的数据的指针 </p>
+<p>结点保存的数据的弱指针 </p>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00049">49</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00067">67</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>

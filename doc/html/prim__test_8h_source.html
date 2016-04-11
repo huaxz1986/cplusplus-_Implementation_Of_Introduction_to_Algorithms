@@ -107,14 +107,145 @@ $(document).ready(function(){initNavTree('prim__test_8h_source.html','');});
 <div class="title">prim_test.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="prim__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PRIM_TEST</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PRIM_TEST</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="prim_8h.html">prim.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#endif // PRIM_TEST</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<a href="prim__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2016- huaxz &lt;huaxz1986@163.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Author: huaxz1986@163.com (huaxz)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef PRIM_TEST</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define PRIM_TEST</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="prim_8h.html">prim.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include&quot;../../basic_graph/graph_representation/graph_vertex/vertex.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include&quot;../../basic_graph/graph_representation/graph/graph.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">IntroductionToAlgorithm::GraphAlgorithm::Graph</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">IntroductionToAlgorithm::GraphAlgorithm::prim</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p.html">IntroductionToAlgorithm::GraphAlgorithm::VertexP</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespaceanonymous__namespace_02prim__test_8h_03.html">   29</a></span>&#160;<span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">   30</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>= 10;  </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_prim_test.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_prim_test.html">PrimTest</a>:<span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_prim_test.html#a007bd8e1bdac3f8548d0a4bebce87881">   41</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">Graph&lt;PRIM_N,VertexP&lt;int&gt;</a>&gt; <a class="code" href="class_prim_test.html#a007bd8e1bdac3f8548d0a4bebce87881">GType</a>; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_prim_test.html#a834237db99fdb38480aa6ba46b509e9e">   42</a></span>&#160;<span class="keyword">typedef</span> std::function&lt;void(VertexP&lt;int&gt;::VIDType v_id)&gt; <a class="code" href="class_prim_test.html#a834237db99fdb38480aa6ba46b509e9e">ActionType</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_prim_test.html#a9f2e77a9785f9ae04e8c3ea72fb6b127">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_prim_test.html#a9f2e77a9785f9ae04e8c3ea72fb6b127">SetUp</a>()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_prim_test.html#a7ff7449d84167db478a33a4dbb1b2e78">_1v_graph</a>=std::make_shared&lt;GType&gt;(-1);<span class="comment">//边的无效权重为-1</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_prim_test.html#a7ff7449d84167db478a33a4dbb1b2e78">_1v_graph</a>-&gt;add_vertex(0);  <span class="comment">//该图只有一个顶点</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_prim_test.html#a256859b15df61e1cd0c96065bf19dc71">_1e_graph</a>=std::make_shared&lt;GType&gt;(-1);<span class="comment">//边的无效权重为-1</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_prim_test.html#a256859b15df61e1cd0c96065bf19dc71">_1e_graph</a>-&gt;add_vertex(0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_prim_test.html#a256859b15df61e1cd0c96065bf19dc71">_1e_graph</a>-&gt;add_vertex(0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="class_prim_test.html#a256859b15df61e1cd0c96065bf19dc71">_1e_graph</a>-&gt;add_edge(std::make_tuple(0,1,1));  <span class="comment">//该图只有一条边</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//****  含顶点图和边图：10个顶点，9条边   ****</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="class_prim_test.html#aeac490b81dfcef56b2a8b656942b012a">_list_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>;i++)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_prim_test.html#aeac490b81dfcef56b2a8b656942b012a">_list_graph</a>-&gt;add_vertex(0);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;PRIM_N-1;i++)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <a class="code" href="class_prim_test.html#aeac490b81dfcef56b2a8b656942b012a">_list_graph</a>-&gt;add_edge(std::make_tuple(i,i+1,i+1)); <span class="comment">//该图的边是从左到右组成一个链条</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//****  含顶点图和边图：10个顶点，90条边   ****</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_prim_test.html#a25281c926fc389770548b0f035e41615">_all_edges_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>;i++)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="class_prim_test.html#a25281c926fc389770548b0f035e41615">_all_edges_graph</a>-&gt;add_vertex(0);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>;i++)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>;j++)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">if</span>(i==j) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">else</span> <a class="code" href="class_prim_test.html#a25281c926fc389770548b0f035e41615">_all_edges_graph</a>-&gt;add_edge(std::make_tuple(i,j,i+j)); <span class="comment">//该图中任意一对顶点之间都有边</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_prim_test.html#a5894c9275a0bfda59f7b5661ece6b984">   71</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_prim_test.html#a5894c9275a0bfda59f7b5661ece6b984">TearDown</a>(){}</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_prim_test.html#a7ff7449d84167db478a33a4dbb1b2e78">   72</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_prim_test.html#a7ff7449d84167db478a33a4dbb1b2e78">_1v_graph</a>;     </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_prim_test.html#a256859b15df61e1cd0c96065bf19dc71">   73</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_prim_test.html#a256859b15df61e1cd0c96065bf19dc71">_1e_graph</a>;     </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_prim_test.html#aeac490b81dfcef56b2a8b656942b012a">   74</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_prim_test.html#aeac490b81dfcef56b2a8b656942b012a">_list_graph</a>;   </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_prim_test.html#a25281c926fc389770548b0f035e41615">   75</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_prim_test.html#a25281c926fc389770548b0f035e41615">_all_edges_graph</a>;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="prim__test_8h.html#a871c5204ed4313995140ed3efe211c90">   81</a></span>&#160;<a class="code" href="prim__test_8h.html#a871c5204ed4313995140ed3efe211c90">TEST_F</a>(<a class="code" href="class_prim_test.html">PrimTest</a>,test_prim)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//************* 单点图 **************</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::vector&lt;GType::VIDType&gt; ids;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        ActionType pre_action=[&amp;ids](GType::VIDType id){ids.push_back(<span class="keywordtype">id</span>);};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        EXPECT_THROW(<a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a>(_1v_graph,1,pre_action),std::invalid_argument);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a>(_1v_graph,0,pre_action),0);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        EXPECT_EQ(ids.size(),1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        EXPECT_EQ(ids.at(0),0);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//************** 单边图 ******************</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::vector&lt;GType::VIDType&gt; ids;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        ActionType pre_action=[&amp;ids](GType::VIDType id){ids.push_back(<span class="keywordtype">id</span>);};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a>(_1e_graph,0,pre_action),1);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        EXPECT_EQ(ids,std::vector&lt;GType::VIDType&gt;({0,1}));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//************** 单链图 ******************</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        std::vector&lt;GType::VIDType&gt; ids;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        ActionType pre_action=[&amp;ids](GType::VIDType id){ids.push_back(<span class="keywordtype">id</span>);};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a>(_list_graph,0,pre_action),(<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>-1)*<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>/2);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        std::vector&lt;GType::VIDType&gt; result_ids;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>;i++)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;           result_ids.push_back(i);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;           <span class="keywordflow">if</span>(i==0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                EXPECT_EQ(_list_graph-&gt;vertexes.at(i)-&gt;parent,_list_graph-&gt;vertexes.at(i-1));</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        EXPECT_EQ(ids,result_ids);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">//***************** 任意一对顶点之间都有边的图  **************</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">//边(u,v)的权重为(u.id+v.id)，因此最小生成树是一个星形状，中心点为id=0的源点</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        std::vector&lt;GType::VIDType&gt; ids;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        ActionType pre_action=[&amp;ids](GType::VIDType id){ids.push_back(<span class="keywordtype">id</span>);};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a>(_all_edges_graph,0,pre_action),(<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>-1)*<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>/2);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        std::vector&lt;GType::VIDType&gt; result_ids;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">PRIM_N</a>;i++)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;           result_ids.push_back(i);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;           <span class="keywordflow">if</span>(i==0) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                EXPECT_EQ(_all_edges_graph-&gt;vertexes.at(i)-&gt;parent,_all_edges_graph-&gt;vertexes.at(0))&lt;&lt;<span class="stringliteral">&quot;i:&quot;</span>&lt;&lt;i;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        EXPECT_EQ(ids,result_ids);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif // PRIM_TEST</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="ttc" id="class_prim_test_html_a25281c926fc389770548b0f035e41615"><div class="ttname"><a href="class_prim_test.html#a25281c926fc389770548b0f035e41615">PrimTest::_all_edges_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _all_edges_graph</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00075">prim_test.h:75</a></div></div>
+<div class="ttc" id="class_prim_test_html"><div class="ttname"><a href="class_prim_test.html">PrimTest</a></div><div class="ttdoc">PrimTest:测试类，用于为测试提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00038">prim_test.h:38</a></div></div>
+<div class="ttc" id="class_prim_test_html_a9f2e77a9785f9ae04e8c3ea72fb6b127"><div class="ttname"><a href="class_prim_test.html#a9f2e77a9785f9ae04e8c3ea72fb6b127">PrimTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00044">prim_test.h:44</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p.html">IntroductionToAlgorithm::GraphAlgorithm::VertexP</a></div><div class="ttdoc">VertexP：图的顶点，它带一个parent属性，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8h_source.html#l00078">vertex.h:78</a></div></div>
+<div class="ttc" id="prim__test_8h_html_a871c5204ed4313995140ed3efe211c90"><div class="ttname"><a href="prim__test_8h.html#a871c5204ed4313995140ed3efe211c90">TEST_F</a></div><div class="ttdeci">TEST_F(PrimTest, test_prim)</div><div class="ttdoc">PrimTest:测试最小生成树的prim方法 </div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00081">prim_test.h:81</a></div></div>
 <div class="ttc" id="prim_8h_html"><div class="ttname"><a href="prim_8h.html">prim.h</a></div></div>
+<div class="ttc" id="class_prim_test_html_a007bd8e1bdac3f8548d0a4bebce87881"><div class="ttname"><a href="class_prim_test.html#a007bd8e1bdac3f8548d0a4bebce87881">PrimTest::GType</a></div><div class="ttdeci">Graph&lt; PRIM_N, VertexP&lt; int &gt; &gt; GType</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00041">prim_test.h:41</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">IntroductionToAlgorithm::GraphAlgorithm::Graph</a></div><div class="ttdoc">Graph：图，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00042">graph.h:42</a></div></div>
+<div class="ttc" id="class_prim_test_html_aeac490b81dfcef56b2a8b656942b012a"><div class="ttname"><a href="class_prim_test.html#aeac490b81dfcef56b2a8b656942b012a">PrimTest::_list_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _list_graph</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00074">prim_test.h:74</a></div></div>
+<div class="ttc" id="class_prim_test_html_a7ff7449d84167db478a33a4dbb1b2e78"><div class="ttname"><a href="class_prim_test.html#a7ff7449d84167db478a33a4dbb1b2e78">PrimTest::_1v_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _1v_graph</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00072">prim_test.h:72</a></div></div>
+<div class="ttc" id="namespaceanonymous__namespace_02prim__test_8h_03_html_acd86cf553b1e2d6a5422054e595a4ea5"><div class="ttname"><a href="namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5">anonymous_namespace{prim_test.h}::PRIM_N</a></div><div class="ttdeci">const int PRIM_N</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00030">prim_test.h:30</a></div></div>
+<div class="ttc" id="class_prim_test_html_a5894c9275a0bfda59f7b5661ece6b984"><div class="ttname"><a href="class_prim_test.html#a5894c9275a0bfda59f7b5661ece6b984">PrimTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00071">prim_test.h:71</a></div></div>
+<div class="ttc" id="class_prim_test_html_a256859b15df61e1cd0c96065bf19dc71"><div class="ttname"><a href="class_prim_test.html#a256859b15df61e1cd0c96065bf19dc71">PrimTest::_1e_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _1e_graph</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00073">prim_test.h:73</a></div></div>
+<div class="ttc" id="class_prim_test_html_a834237db99fdb38480aa6ba46b509e9e"><div class="ttname"><a href="class_prim_test.html#a834237db99fdb38480aa6ba46b509e9e">PrimTest::ActionType</a></div><div class="ttdeci">std::function&lt; void(VertexP&lt; int &gt;::VIDType v_id)&gt; ActionType</div><div class="ttdef"><b>Definition:</b> <a href="prim__test_8h_source.html#l00042">prim_test.h:42</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_aba1581358d79ba82dc4fd0c15bc987e6"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">IntroductionToAlgorithm::GraphAlgorithm::prim</a></div><div class="ttdeci">GraphType::EWeightType prim(std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, ActionType pre_action=[](typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType){})</div><div class="ttdoc">prim：最小生成树的Prim算法，算法导论22章23.2节 </div><div class="ttdef"><b>Definition:</b> <a href="prim_8h_source.html#l00068">prim.h:68</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,3 +1,21 @@
+/*
+ * Copyright 2016- huaxz <huaxz1986@163.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: huaxz1986@163.com (huaxz)
+ */
 #ifndef MINQUEUE
 #define MINQUEUE
 #include<vector>
@@ -110,6 +128,7 @@ namespace IntroductionToAlgorithm
             //!insert:向队列中插入一个元素
             /*!
             * \param element: 待插入元素，如果元素为空引用则直接返回
+            * \return: 插入的元素在队列中的位置。若元素为空指针则返回-1
             *
             * 插入之前首先判断队列是否已满。若队列已满，则将`_data`扩容为大小`_size*2+2`。
             *
@@ -126,15 +145,18 @@ namespace IntroductionToAlgorithm
             * - 原地操作
             */
 
-            void insert(std::shared_ptr<T> element)
+            int insert(std::shared_ptr<T> element)
             {
-                if(! element)  return;
+                if(! element)  return -1;
                 if(_size==_data.size()) _data.resize(_size*2+2);
-                _data[_size++]=element;
+                int index=_size;
+                _size++;
+                _data[index]=element;
                 TKeyType& k=_getKey(element);
                 TKeyType old_k=k;
                 k=unlimit<TKeyType>();
-                decreate_key(_size-1,old_k);
+                decreate_key(index,old_k);
+                return index;
             }
             //!is_empty:返回队列是否为空
             /*!
@@ -153,19 +175,22 @@ namespace IntroductionToAlgorithm
             //!is_inqueue:返回指定元素是否在队列中
             /*!
             * \param element:待判定的元素，要求非空。若它为空引用则抛出异常
-            * \return 待判定的元素是否在队列中
+            * \return 指定元素在队列中的下标
             *
-            * 从前到后依次遍历队列，如果队列中某个元素等于`element`，则返回`true`；否则返回`false`
+            * 从前到后依次遍历队列，如果队列中某个元素等于`element`，则返回非负整数值，
+            * 代表它在队列的std::vector中的位置；否则返回-1
             *
-            * - 时间复杂度 O(n)
+            * - 时间复杂度 O(h)
             */
-            bool is_inqueue(std::shared_ptr<T> element)
+            int index_inqueue(std::shared_ptr<T> element)
             {
                 if(!element) throw std::invalid_argument("is_inqueue error: element must not be nullptr!");
-                for(const auto& item:_data)
-                    if(item.get()==element.get())
-                        return true;
-                return false;
+                for(std::size_t index=0;index<_size;index++)
+                {
+                    if(element==_data[index])
+                        return index;
+                }
+                return -1;
             }
             //!decreate_key:缩减队列中某个元素的`key`
             /*!
@@ -192,7 +217,7 @@ namespace IntroductionToAlgorithm
             {
                 if(element_index>=_size)
                     throw std::invalid_argument("decreate_key error: element_index must less than _size!");
-                if(new_key>=_getKey(_data.at(element_index)))
+                if(new_key>_getKey(_data.at(element_index)))
                     throw std::invalid_argument("decreate_key error: new_key less _data.at(element_index)->key!");
 
                 _getKey(_data.at(element_index))=new_key;

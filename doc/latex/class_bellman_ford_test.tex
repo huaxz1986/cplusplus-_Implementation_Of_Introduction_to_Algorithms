@@ -1,0 +1,129 @@
+\hypertarget{class_bellman_ford_test}{}\section{Bellman\+Ford\+Test Class Reference}
+\label{class_bellman_ford_test}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+
+
+\hyperlink{class_bellman_ford_test}{Bellman\+Ford\+Test}\+:测试类，用于为测试提供基础数据  
+
+
+
+
+{\ttfamily \#include $<$bellmanford\+\_\+test.\+h$>$}
+
+Inheritance diagram for Bellman\+Ford\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bellman_ford_test}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ B\+\_\+\+N\+U\+M, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p}{Vertex\+P}$<$ int $>$ $>$ \hyperlink{class_bellman_ford_test_a81e8794fcae1d04ceb23de43c5944829}{Graph\+Type}
+\item 
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p}{Vertex\+P}$<$ int $>$ \hyperlink{class_bellman_ford_test_a823a571f7e631ee9e4f712440b35159d}{Vertex\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_bellman_ford_test_a8cb2e8d725e4c06914dafc73c73d94c6}{Set\+Up} ()
+\item 
+void \hyperlink{class_bellman_ford_test_a16ea847b45d890f27adf9381decdb5c8}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_bellman_ford_test_a81e8794fcae1d04ceb23de43c5944829}{Graph\+Type} $>$ \hyperlink{class_bellman_ford_test_a1e228fdc8f10f3932dfa93969b22740a}{\+\_\+1v\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_bellman_ford_test_a81e8794fcae1d04ceb23de43c5944829}{Graph\+Type} $>$ \hyperlink{class_bellman_ford_test_a13720ba4e090b0accf73283c15a7f0ec}{\+\_\+1e\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_bellman_ford_test_a81e8794fcae1d04ceb23de43c5944829}{Graph\+Type} $>$ \hyperlink{class_bellman_ford_test_a80eda504410ddbef790a30a0d4049185}{\+\_\+normal\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_bellman_ford_test_a81e8794fcae1d04ceb23de43c5944829}{Graph\+Type} $>$ \hyperlink{class_bellman_ford_test_a179a0a6d2ae9d6a2404ef5e5f9a06869}{\+\_\+minus\+\_\+graph}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_bellman_ford_test}{Bellman\+Ford\+Test}\+:测试类，用于为测试提供基础数据 
+
+{\ttfamily \hyperlink{class_bellman_ford_test}{Bellman\+Ford\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
+
+Definition at line 40 of file bellmanford\+\_\+test.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_bellman_ford_test_a81e8794fcae1d04ceb23de43c5944829}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!Graph\+Type@{Graph\+Type}}
+\index{Graph\+Type@{Graph\+Type}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{Graph\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<$B\+\_\+\+N\+U\+M,{\bf Vertex\+P}$<$int$>$ $>$ {\bf Bellman\+Ford\+Test\+::\+Graph\+Type}}\label{class_bellman_ford_test_a81e8794fcae1d04ceb23de43c5944829}
+模板实例化的图类型，该图的顶点类型为{\ttfamily Vertex\+P$<$int$>$} 
+
+Definition at line 43 of file bellmanford\+\_\+test.\+h.
+
+\hypertarget{class_bellman_ford_test_a823a571f7e631ee9e4f712440b35159d}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!Vertex\+Type@{Vertex\+Type}}
+\index{Vertex\+Type@{Vertex\+Type}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{Vertex\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Vertex\+P}$<$int$>$ {\bf Bellman\+Ford\+Test\+::\+Vertex\+Type}}\label{class_bellman_ford_test_a823a571f7e631ee9e4f712440b35159d}
+图的顶点类型为{\ttfamily Vertex\+P$<$int$>$} 
+
+Definition at line 44 of file bellmanford\+\_\+test.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bellman_ford_test_a8cb2e8d725e4c06914dafc73c73d94c6}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{Set\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Bellman\+Ford\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_bellman_ford_test_a8cb2e8d725e4c06914dafc73c73d94c6}
+
+
+Definition at line 46 of file bellmanford\+\_\+test.\+h.
+
+\hypertarget{class_bellman_ford_test_a16ea847b45d890f27adf9381decdb5c8}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{Tear\+Down()}]{\setlength{\rightskip}{0pt plus 5cm}void Bellman\+Ford\+Test\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_bellman_ford_test_a16ea847b45d890f27adf9381decdb5c8}
+
+
+Definition at line 72 of file bellmanford\+\_\+test.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_bellman_ford_test_a13720ba4e090b0accf73283c15a7f0ec}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!\+\_\+1e\+\_\+graph@{\+\_\+1e\+\_\+graph}}
+\index{\+\_\+1e\+\_\+graph@{\+\_\+1e\+\_\+graph}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{\+\_\+1e\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Graph\+Type}$>$ Bellman\+Ford\+Test\+::\+\_\+1e\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_bellman_ford_test_a13720ba4e090b0accf73283c15a7f0ec}
+指向一个图，该图只有一条边 
+
+Definition at line 75 of file bellmanford\+\_\+test.\+h.
+
+\hypertarget{class_bellman_ford_test_a1e228fdc8f10f3932dfa93969b22740a}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}}
+\index{\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{\+\_\+1v\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Graph\+Type}$>$ Bellman\+Ford\+Test\+::\+\_\+1v\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_bellman_ford_test_a1e228fdc8f10f3932dfa93969b22740a}
+指向一个图，该图只有一个顶点 
+
+Definition at line 74 of file bellmanford\+\_\+test.\+h.
+
+\hypertarget{class_bellman_ford_test_a179a0a6d2ae9d6a2404ef5e5f9a06869}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!\+\_\+minus\+\_\+graph@{\+\_\+minus\+\_\+graph}}
+\index{\+\_\+minus\+\_\+graph@{\+\_\+minus\+\_\+graph}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{\+\_\+minus\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Graph\+Type}$>$ Bellman\+Ford\+Test\+::\+\_\+minus\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_bellman_ford_test_a179a0a6d2ae9d6a2404ef5e5f9a06869}
+指向一个图，该图的边包含负权值回路 
+
+Definition at line 77 of file bellmanford\+\_\+test.\+h.
+
+\hypertarget{class_bellman_ford_test_a80eda504410ddbef790a30a0d4049185}{}\index{Bellman\+Ford\+Test@{Bellman\+Ford\+Test}!\+\_\+normal\+\_\+graph@{\+\_\+normal\+\_\+graph}}
+\index{\+\_\+normal\+\_\+graph@{\+\_\+normal\+\_\+graph}!Bellman\+Ford\+Test@{Bellman\+Ford\+Test}}
+\subsubsection[{\+\_\+normal\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Graph\+Type}$>$ Bellman\+Ford\+Test\+::\+\_\+normal\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_bellman_ford_test_a80eda504410ddbef790a30a0d4049185}
+指向一个图，该图的边组成一条链条 
+
+Definition at line 76 of file bellmanford\+\_\+test.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/bellman\+\_\+ford/\hyperlink{bellmanford__test_8h}{bellmanford\+\_\+test.\+h}\end{DoxyCompactItemize}

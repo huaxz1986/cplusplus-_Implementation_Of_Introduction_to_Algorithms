@@ -1,0 +1,93 @@
+\hypertarget{class_connected_component_test}{}\section{Connected\+Component\+Test Class Reference}
+\label{class_connected_component_test}\index{Connected\+Component\+Test@{Connected\+Component\+Test}}
+
+
+\hyperlink{class_connected_component_test}{Connected\+Component\+Test}\+:测试类，用于为测试提供基础数据  
+
+
+
+
+{\ttfamily \#include $<$connectedcomponent\+\_\+test.\+h$>$}
+
+Inheritance diagram for Connected\+Component\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_connected_component_test}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ C\+\_\+\+N\+U\+M, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{Set\+Vertex}$<$ int $>$ $>$ \hyperlink{class_connected_component_test_a819b25542e9db5882ec64edb3bb78ff7}{G\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_connected_component_test_afd13b98fdaada57ea00e2bbde46144e2}{Set\+Up} ()
+\item 
+void \hyperlink{class_connected_component_test_a677db9fd4b9c973df7b78b402bf0a0f6}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_connected_component_test_a819b25542e9db5882ec64edb3bb78ff7}{G\+Type} $>$ \hyperlink{class_connected_component_test_a0f05d0ae37619e84f604aa51aa20cd28}{\+\_\+graph}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_connected_component_test}{Connected\+Component\+Test}\+:测试类，用于为测试提供基础数据 
+
+{\ttfamily \hyperlink{class_connected_component_test}{Connected\+Component\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
+
+Definition at line 95 of file connectedcomponent\+\_\+test.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_connected_component_test_a819b25542e9db5882ec64edb3bb78ff7}{}\index{Connected\+Component\+Test@{Connected\+Component\+Test}!G\+Type@{G\+Type}}
+\index{G\+Type@{G\+Type}!Connected\+Component\+Test@{Connected\+Component\+Test}}
+\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<$C\+\_\+\+N\+U\+M,{\bf Set\+Vertex}$<$int$>$ $>$ {\bf Connected\+Component\+Test\+::\+G\+Type}}\label{class_connected_component_test_a819b25542e9db5882ec64edb3bb78ff7}
+模板实例化的图类型，该图的顶点类型为{\ttfamily Set\+Vertex$<$int$>$} 
+
+Definition at line 98 of file connectedcomponent\+\_\+test.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_connected_component_test_afd13b98fdaada57ea00e2bbde46144e2}{}\index{Connected\+Component\+Test@{Connected\+Component\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Connected\+Component\+Test@{Connected\+Component\+Test}}
+\subsubsection[{Set\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Connected\+Component\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_connected_component_test_afd13b98fdaada57ea00e2bbde46144e2}
+
+
+Definition at line 100 of file connectedcomponent\+\_\+test.\+h.
+
+\hypertarget{class_connected_component_test_a677db9fd4b9c973df7b78b402bf0a0f6}{}\index{Connected\+Component\+Test@{Connected\+Component\+Test}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Connected\+Component\+Test@{Connected\+Component\+Test}}
+\subsubsection[{Tear\+Down()}]{\setlength{\rightskip}{0pt plus 5cm}void Connected\+Component\+Test\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_connected_component_test_a677db9fd4b9c973df7b78b402bf0a0f6}
+
+
+Definition at line 113 of file connectedcomponent\+\_\+test.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_connected_component_test_a0f05d0ae37619e84f604aa51aa20cd28}{}\index{Connected\+Component\+Test@{Connected\+Component\+Test}!\+\_\+graph@{\+\_\+graph}}
+\index{\+\_\+graph@{\+\_\+graph}!Connected\+Component\+Test@{Connected\+Component\+Test}}
+\subsubsection[{\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Connected\+Component\+Test\+::\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_connected_component_test_a0f05d0ae37619e84f604aa51aa20cd28}
+测试连通分量的图的强指针 
+
+Definition at line 115 of file connectedcomponent\+\_\+test.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/connected\+\_\+component/\hyperlink{connectedcomponent__test_8h}{connectedcomponent\+\_\+test.\+h}\end{DoxyCompactItemize}

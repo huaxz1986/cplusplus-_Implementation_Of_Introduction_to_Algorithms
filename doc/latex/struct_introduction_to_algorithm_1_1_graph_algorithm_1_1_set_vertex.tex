@@ -1,0 +1,169 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Set\+Vertex$<$ K\+Type $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex$<$ K\+Type $>$@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex$<$ K\+Type $>$}}
+
+
+Set\+Vertex：图的顶点，它带一个node属性，算法导论22章22.1节  
+
+
+
+
+{\ttfamily \#include $<$connectedcomponent.\+h$>$}
+
+Inheritance diagram for Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Set\+Vertex$<$ K\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef K\+Type \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a0cfdcd9af991198be63495f7fb60965d}{Key\+Type}
+\item 
+typedef int \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae69791a589d95b0f4f378e08b75b041c}{V\+I\+D\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a7a0dde758217623dbfb55598f677a4d7}{Set\+Vertex} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae06d5b123f6a035074d270e1424ad7ec}{Set\+Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a0cfdcd9af991198be63495f7fb60965d}{Key\+Type} \&k)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key} \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a86fd87e5d48a1b1f94ba643bd05bcc1f}{Set\+Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a0cfdcd9af991198be63495f7fb60965d}{Key\+Type} \&k, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae69791a589d95b0f4f378e08b75b041c}{V\+I\+D\+Type} d)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key}和编号 \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_adb2f006ec656e2ca7c125191c601e307}{to\+\_\+string} () const 
+\begin{DoxyCompactList}\small\item\em to\+\_\+string：返回顶点的字符串描述 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node}{Disjoint\+Set\+Node}$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{Set\+Vertex} $>$ $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_aa01ac00440b97a31134559be597fe772}{node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K\+Type$>$struct Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex$<$ K\+Type $>$}
+
+Set\+Vertex：图的顶点，它带一个node属性，算法导论22章22.1节 
+
+它继承自\+Vertex，区别在于多了一个node成员变量，这个node是指向\+Disjoint\+Set\+Node$<$\+Set\+Vertex$>$对象的强指针。 而\+Disjoint\+Set\+Node$<$\+Set\+Vertex$>$的value成员变量是指向\+Set\+Vertex的弱指针，二者可以相互访问。 $>$Set\+Vertex没有父结点指针。要想访问\+Set\+Vertex的父结点，首先要取得它对应的\+Disjoint\+Set\+Node结点。然后获取该\+Disjoint\+Set\+Node结点的父结点。 然后通过该父结点获取value指向的\+Set\+Vertex即可。 
+
+Definition at line 37 of file connectedcomponent.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a0cfdcd9af991198be63495f7fb60965d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
+\subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef K\+Type {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a0cfdcd9af991198be63495f7fb60965d}
+顶点存储数据的类型 
+
+Definition at line 39 of file connectedcomponent.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae69791a589d95b0f4f378e08b75b041c}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!V\+I\+D\+Type@{V\+I\+D\+Type}}
+\index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
+\subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae69791a589d95b0f4f378e08b75b041c}
+顶点编号的数据类型 
+
+Definition at line 40 of file connectedcomponent.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a7a0dde758217623dbfb55598f677a4d7}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!Set\+Vertex@{Set\+Vertex}}
+\index{Set\+Vertex@{Set\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
+\subsubsection[{Set\+Vertex()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::{\bf Set\+Vertex} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a7a0dde758217623dbfb55598f677a4d7}
+
+
+默认构造函数 
+
+
+
+Definition at line 44 of file connectedcomponent.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae06d5b123f6a035074d270e1424ad7ec}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!Set\+Vertex@{Set\+Vertex}}
+\index{Set\+Vertex@{Set\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
+\subsubsection[{Set\+Vertex(const Key\+Type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::{\bf Set\+Vertex} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\+Type} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae06d5b123f6a035074d270e1424ad7ec}
+
+
+显式构造函数，指定{\ttfamily key} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file connectedcomponent.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a86fd87e5d48a1b1f94ba643bd05bcc1f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!Set\+Vertex@{Set\+Vertex}}
+\index{Set\+Vertex@{Set\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
+\subsubsection[{Set\+Vertex(const Key\+Type \&k, V\+I\+D\+Type d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::{\bf Set\+Vertex} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\+Type} \&}]{k, }
+\item[{{\bf V\+I\+D\+Type}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a86fd87e5d48a1b1f94ba643bd05bcc1f}
+
+
+显式构造函数，指定{\ttfamily key}和编号 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & \\
+\hline
+{\em d\+:顶点的编号} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file connectedcomponent.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_adb2f006ec656e2ca7c125191c601e307}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
+\subsubsection[{to\+\_\+string() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ virtual std\+::string {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_adb2f006ec656e2ca7c125191c601e307}
+
+
+to\+\_\+string：返回顶点的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+:顶点的字符串描述
+\end{DoxyReturn}
+依次输出顶点的{\ttfamily id}、{\ttfamily key}、{\ttfamily parent}信息。 
+
+Reimplemented from \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_aa8b0ab227cd3945eace9ef55f8837925}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Vertex$<$ K\+Type $>$}.
+
+
+
+Definition at line 63 of file connectedcomponent.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_aa01ac00440b97a31134559be597fe772}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!node@{node}}
+\index{node@{node}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::shared\+\_\+ptr$<${\bf Disjoint\+Set\+Node}$<${\bf Set\+Vertex}$>$ $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::node}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_aa01ac00440b97a31134559be597fe772}
+顶点对应的\+Disjoint\+Set\+Node的强指针 
+
+Definition at line 76 of file connectedcomponent.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/connected\+\_\+component/\hyperlink{connectedcomponent_8h}{connectedcomponent.\+h}\end{DoxyCompactItemize}

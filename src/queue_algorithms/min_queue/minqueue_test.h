@@ -1,10 +1,31 @@
+/*
+ * Copyright 2016- huaxz <huaxz1986@163.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: huaxz1986@163.com (huaxz)
+ */
 #ifndef MINQUEUE_TEST
 #define MINQUEUE_TEST
 #include"src/google_test/gtest.h"
 #include"minqueue.h"
 
 using IntroductionToAlgorithm::QueueAlgorithm::MinQueue;
-const int Q_NUM=10;
+namespace  {
+    const int Q_NUM=10;
+}
+
 
 //!Node:用于测试的类型
 struct Node
@@ -109,9 +130,9 @@ TEST_F(MinQueueTest,test_is_empty)
 //!MinQueueTest:测试最小优先级队列
 /*!
 *
-* `test_is_inqueue`：测试`is_inqueue(...)`成员方法
+* `test_index_inqueue`：测试`index_inqueue(...)`成员方法
 */
-TEST_F(MinQueueTest,test_is_inqueue)
+TEST_F(MinQueueTest,test_index_inqueue)
 {
     std::shared_ptr<Node> nodes[Q_NUM];
     std::shared_ptr<int> ints[Q_NUM];
@@ -122,17 +143,17 @@ TEST_F(MinQueueTest,test_is_inqueue)
     }
     for(int i=1;i<Q_NUM;i++)
     {
-        _strcut_minqueue->insert(nodes[i]);
-        _int_minqueue->insert(ints[i]);
+        EXPECT_EQ(_strcut_minqueue->insert(nodes[i]),i-1);
+        EXPECT_EQ(_int_minqueue->insert(ints[i]),i-1);
     }
-    EXPECT_FALSE(_strcut_minqueue->is_inqueue(nodes[0]));
-    EXPECT_FALSE(_int_minqueue->is_inqueue(ints[0]));
-    EXPECT_THROW(_strcut_minqueue->is_inqueue(std::shared_ptr<Node>()),std::invalid_argument);
-    EXPECT_THROW(_int_minqueue->is_inqueue(std::shared_ptr<int>()),std::invalid_argument);
+    EXPECT_EQ(_strcut_minqueue->index_inqueue(nodes[0]),-1);
+    EXPECT_EQ(_int_minqueue->index_inqueue(ints[0]),-1);
+    EXPECT_THROW(_strcut_minqueue->index_inqueue(std::shared_ptr<Node>()),std::invalid_argument);
+    EXPECT_THROW(_int_minqueue->index_inqueue(std::shared_ptr<int>()),std::invalid_argument);
     for(int i=1;i<Q_NUM;i++)
     {
-        EXPECT_TRUE(_strcut_minqueue->is_inqueue(nodes[i]))<<"i:"<<i;
-        EXPECT_TRUE(_int_minqueue->is_inqueue(ints[i]))<<"i:"<<i;
+        EXPECT_EQ(_strcut_minqueue->index_inqueue(nodes[i]),i-1)<<"i:"<<i;
+        EXPECT_EQ(_int_minqueue->index_inqueue(ints[i]),i-1)<<"i:"<<i;
     }
 }
 //!MinQueueTest:测试最小优先级队列

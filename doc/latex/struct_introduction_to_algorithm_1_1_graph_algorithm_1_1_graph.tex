@@ -27,9 +27,9 @@ typedef V\+Type \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_
 \begin{DoxyCompactList}\small\item\em 显式构造函数，为图的矩阵指定{\ttfamily invalid\+\_\+weight} \end{DoxyCompactList}\item 
 \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a554fe807fb375fe4e56e5b0a0ac21477}{Graph} ()
 \begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
-void \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a36d53ae51c00fe9bdfea74c01cf92102}{add\+\_\+vertex} (const typename Vertex\+Type\+::\+Key\+Type \&key)
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a507632614d13e91d29acbf8acb0b0f0f}{V\+I\+D\+Type} \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a172f460e7f689fa42dcb3f1130d3fa64}{add\+\_\+vertex} (const typename Vertex\+Type\+::\+Key\+Type \&key)
 \begin{DoxyCompactList}\small\item\em add\+\_\+vertex\+:添加一个顶点 \end{DoxyCompactList}\item 
-void \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a34da6cd63b4ff8cf4498ef10c8f643b0}{add\+\_\+vertex} (const typename Vertex\+Type\+::\+Key\+Type \&key, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a507632614d13e91d29acbf8acb0b0f0f}{V\+I\+D\+Type} id)
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a507632614d13e91d29acbf8acb0b0f0f}{V\+I\+D\+Type} \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_ad22898c16f9f614c0826bd62500317de}{add\+\_\+vertex} (const typename Vertex\+Type\+::\+Key\+Type \&key, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a507632614d13e91d29acbf8acb0b0f0f}{V\+I\+D\+Type} id)
 \begin{DoxyCompactList}\small\item\em add\+\_\+vertex\+:添加一个顶点 \end{DoxyCompactList}\item 
 void \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_ae36e2ef188da844f75a673516a6c7225}{modify\+\_\+vertex} (const typename Vertex\+Type\+::\+Key\+Type \&newkey, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a507632614d13e91d29acbf8acb0b0f0f}{V\+I\+D\+Type} id)
 \begin{DoxyCompactList}\small\item\em modify\+\_\+vertex\+:修改一个顶点的数据 \end{DoxyCompactList}\item 
@@ -84,7 +84,7 @@ Graph：图，算法导论22章22.1节
 
 图支持插入、修改顶点操作，插入、修改边操作（由图的矩阵以及图的邻接表来代理），以及返回边、返回权重（由图的矩阵以及图的邻接表来代理）。 
 
-Definition at line 24 of file graph.\+h.
+Definition at line 42 of file graph.\+h.
 
 
 
@@ -94,28 +94,28 @@ Definition at line 24 of file graph.\+h.
 \subsubsection[{Edge\+Tuple\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ typedef std\+::tuple$<${\bf V\+I\+D\+Type},{\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::{\bf Edge\+Tuple\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_ad1eb485d135eb8076a44b00904ae2f5a}
 边的三元素（顶点1编号，顶点2编号，权重)组成的元组 
 
-Definition at line 28 of file graph.\+h.
+Definition at line 46 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a77f6d3ef31203e0d6ebd2ed87928978a}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!E\+Weight\+Type@{E\+Weight\+Type}}
 \index{E\+Weight\+Type@{E\+Weight\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
 \subsubsection[{E\+Weight\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::{\bf E\+Weight\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a77f6d3ef31203e0d6ebd2ed87928978a}
 权重的类型 
 
-Definition at line 27 of file graph.\+h.
+Definition at line 45 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a95fc613ee7f50f11c84d56c19dc6d321}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!Vertex\+Type@{Vertex\+Type}}
 \index{Vertex\+Type@{Vertex\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
 \subsubsection[{Vertex\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ typedef V\+Type {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::{\bf Vertex\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a95fc613ee7f50f11c84d56c19dc6d321}
 顶点的类型 
 
-Definition at line 29 of file graph.\+h.
+Definition at line 47 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a507632614d13e91d29acbf8acb0b0f0f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!V\+I\+D\+Type@{V\+I\+D\+Type}}
 \index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
 \subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a507632614d13e91d29acbf8acb0b0f0f}
 顶点编号的类型 
 
-Definition at line 26 of file graph.\+h.
+Definition at line 44 of file graph.\+h.
 
 
 
@@ -138,7 +138,7 @@ Definition at line 26 of file graph.\+h.
 \end{DoxyParams}
 
 
-Definition at line 36 of file graph.\+h.
+Definition at line 54 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a554fe807fb375fe4e56e5b0a0ac21477}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!Graph@{Graph}}
 \index{Graph@{Graph}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -153,7 +153,7 @@ Definition at line 36 of file graph.\+h.
 
 
 
-Definition at line 39 of file graph.\+h.
+Definition at line 57 of file graph.\+h.
 
 
 
@@ -184,7 +184,7 @@ add\+\_\+edge\+:添加一条边
 
 在添加边时，同时向图的矩阵、图的邻接表中添加边 
 
-Definition at line 104 of file graph.\+h.
+Definition at line 127 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_abda82467495ef0109b14061a6bbe84b9}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!add\+\_\+edges@{add\+\_\+edges}}
 \index{add\+\_\+edges@{add\+\_\+edges}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -207,36 +207,15 @@ add\+\_\+edges\+:添加一组边
 \end{DoxyParams}
 在添加边时，同时向图的矩阵、图的邻接表中添加边 
 
-Definition at line 125 of file graph.\+h.
+Definition at line 148 of file graph.\+h.
 
-\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a36d53ae51c00fe9bdfea74c01cf92102}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!add\+\_\+vertex@{add\+\_\+vertex}}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a172f460e7f689fa42dcb3f1130d3fa64}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!add\+\_\+vertex@{add\+\_\+vertex}}
 \index{add\+\_\+vertex@{add\+\_\+vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
-\subsubsection[{add\+\_\+vertex(const typename Vertex\+Type\+::\+Key\+Type \&key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ void {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::add\+\_\+vertex (
+\subsubsection[{add\+\_\+vertex(const typename Vertex\+Type\+::\+Key\+Type \&key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ {\bf V\+I\+D\+Type} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::add\+\_\+vertex (
 \begin{DoxyParamCaption}
 \item[{const typename Vertex\+Type\+::\+Key\+Type \&}]{key}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a36d53ae51c00fe9bdfea74c01cf92102}
-
-
-add\+\_\+vertex\+:添加一个顶点 
-
-
-\begin{DoxyParams}{Parameters}
-{\em key\+:顶点存放的数据} & 如果已经有了\+N个顶点，则图的顶点已满，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常.\\
-\hline
-\end{DoxyParams}
-在每一次添加顶点之前会从{\ttfamily next\+\_\+empty\+\_\+vertex·指定的位置处开始寻找可以添加顶点的地方。如果找不到可以添加顶点的地方，则抛出}std\+::invalid\+\_\+argument`异常 
-
-Definition at line 49 of file graph.\+h.
-
-\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a34da6cd63b4ff8cf4498ef10c8f643b0}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!add\+\_\+vertex@{add\+\_\+vertex}}
-\index{add\+\_\+vertex@{add\+\_\+vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
-\subsubsection[{add\+\_\+vertex(const typename Vertex\+Type\+::\+Key\+Type \&key, V\+I\+D\+Type id)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ void {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::add\+\_\+vertex (
-\begin{DoxyParamCaption}
-\item[{const typename Vertex\+Type\+::\+Key\+Type \&}]{key, }
-\item[{{\bf V\+I\+D\+Type}}]{id}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a34da6cd63b4ff8cf4498ef10c8f643b0}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a172f460e7f689fa42dcb3f1130d3fa64}
 
 
 add\+\_\+vertex\+:添加一个顶点 
@@ -245,16 +224,45 @@ add\+\_\+vertex\+:添加一个顶点
 \begin{DoxyParams}{Parameters}
 {\em key\+:顶点存放的数据} & \\
 \hline
-{\em id\+:指定该顶点的$<$tt$>$id$<$/tt$>$} & 
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 顶点的id
+\end{DoxyReturn}
+如果已经有了\+N个顶点，则图的顶点已满，则抛出{\ttfamily std\+::invalid\+\_\+argument}异常.
+
+在每一次添加顶点之前会从{\ttfamily next\+\_\+empty\+\_\+vertex·指定的位置处开始寻找可以添加顶点的地方。如果找不到可以添加顶点的地方，则抛出}std\+::invalid\+\_\+argument`异常 
+
+Definition at line 68 of file graph.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_ad22898c16f9f614c0826bd62500317de}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!add\+\_\+vertex@{add\+\_\+vertex}}
+\index{add\+\_\+vertex@{add\+\_\+vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
+\subsubsection[{add\+\_\+vertex(const typename Vertex\+Type\+::\+Key\+Type \&key, V\+I\+D\+Type id)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ {\bf V\+I\+D\+Type} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::add\+\_\+vertex (
+\begin{DoxyParamCaption}
+\item[{const typename Vertex\+Type\+::\+Key\+Type \&}]{key, }
+\item[{{\bf V\+I\+D\+Type}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_ad22898c16f9f614c0826bd62500317de}
+
+
+add\+\_\+vertex\+:添加一个顶点 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+:顶点存放的数据} & \\
+\hline
+{\em id\+:指定该顶点的$<$tt$>$id$<$/tt$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 顶点的id
+\end{DoxyReturn}
+
 \begin{DoxyItemize}
 \item 如果{\ttfamily id$<$0}或者{\ttfamily id$>$=N}，则抛出异常。因为正常的顶点{\ttfamily id}在{\ttfamily \mbox{[}0,N)}之间
 \item 如果已经存在某个顶点的{\ttfamily id}为指定的{\ttfamily id}，则抛出异常 
-\end{DoxyItemize}\\
-\hline
-\end{DoxyParams}
+\end{DoxyItemize}
 
-
-Definition at line 66 of file graph.\+h.
+Definition at line 88 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_abfbc7f8a38017fd1422b5c6f1e8b6594}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!adjust\+\_\+edge@{adjust\+\_\+edge}}
 \index{adjust\+\_\+edge@{adjust\+\_\+edge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -284,7 +292,7 @@ adjust\+\_\+edge\+:修改一条边的权重
 \item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效 
 \end{DoxyItemize}
 
-Definition at line 148 of file graph.\+h.
+Definition at line 171 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a0cadf10557297a2cb10aec457eb70b3f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!edge\+\_\+tuples@{edge\+\_\+tuples}}
 \index{edge\+\_\+tuples@{edge\+\_\+tuples}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -302,7 +310,7 @@ edge\+\_\+tuples\+:返回图中所有边的三元素元组集合，这里集合�
 \end{DoxyReturn}
 要求图的矩阵和图的邻接表都返回同样的结果 
 
-Definition at line 163 of file graph.\+h.
+Definition at line 186 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_ac6f3559ac73a84a45285d2906b9f7557}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!has\+\_\+edge@{has\+\_\+edge}}
 \index{has\+\_\+edge@{has\+\_\+edge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -336,7 +344,7 @@ has\+\_\+edge\+:返回图中指定顶点之间是否存在边
 \item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效 
 \end{DoxyItemize}
 
-Definition at line 202 of file graph.\+h.
+Definition at line 225 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_aec06e55b6164700f65dcc08dafe79666}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!inverse@{inverse}}
 \index{inverse@{inverse}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -362,7 +370,7 @@ inverse\+:返回图的一个镜像
 
 {\ttfamily inverse}方法首先新建一个图，再根据原图的顶点来执行顶点的深拷贝。然后再获取原图的边的反向边，将该反向边作为镜像图的边 
 
-Definition at line 246 of file graph.\+h.
+Definition at line 269 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_ae36e2ef188da844f75a673516a6c7225}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!modify\+\_\+vertex@{modify\+\_\+vertex}}
 \index{modify\+\_\+vertex@{modify\+\_\+vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -389,7 +397,7 @@ modify\+\_\+vertex\+:修改一个顶点的数据
 \end{DoxyParams}
 
 
-Definition at line 82 of file graph.\+h.
+Definition at line 105 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a1a36b41adf54b242ff40610eae219eda}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!vertex\+\_\+edge\+\_\+tuples@{vertex\+\_\+edge\+\_\+tuples}}
 \index{vertex\+\_\+edge\+\_\+tuples@{vertex\+\_\+edge\+\_\+tuples}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -418,7 +426,7 @@ vertex\+\_\+edge\+\_\+tuples\+:返回图中从指定顶点出发的边的三元�
 \item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效 
 \end{DoxyItemize}
 
-Definition at line 179 of file graph.\+h.
+Definition at line 202 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a9736f238bdedf0d6fccc064e6acea65d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!weight@{weight}}
 \index{weight@{weight}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
@@ -452,7 +460,7 @@ weight\+:返回图中指定顶点之间的边的权重
 \item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效 
 \end{DoxyItemize}
 
-Definition at line 225 of file graph.\+h.
+Definition at line 248 of file graph.\+h.
 
 
 
@@ -462,35 +470,35 @@ Definition at line 225 of file graph.\+h.
 \subsubsection[{adj\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ {\bf A\+D\+J\+List\+Graph}$<$N$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::adj\+List}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a4442db9dd1bbb7fe543353df4fa1ba9f}
 
 
-Definition at line 266 of file graph.\+h.
+Definition at line 289 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a498323460ec613f12e1039afdca6c10a}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!matrix@{matrix}}
 \index{matrix@{matrix}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
 \subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ {\bf Matrix\+Graph}$<$N$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::matrix}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a498323460ec613f12e1039afdca6c10a}
 
 
-Definition at line 265 of file graph.\+h.
+Definition at line 288 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a07a8f2eafc8175787a6ce1f26f1252d0}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!next\+\_\+empty\+\_\+vertex@{next\+\_\+empty\+\_\+vertex}}
 \index{next\+\_\+empty\+\_\+vertex@{next\+\_\+empty\+\_\+vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
 \subsubsection[{next\+\_\+empty\+\_\+vertex}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ std\+::size\+\_\+t {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::next\+\_\+empty\+\_\+vertex}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_a07a8f2eafc8175787a6ce1f26f1252d0}
 
 
-Definition at line 264 of file graph.\+h.
+Definition at line 287 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_aba53db2c8cade306553fc1e03f138aa2}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!N\+U\+M@{N\+U\+M}}
 \index{N\+U\+M@{N\+U\+M}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
 \subsubsection[{N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ const unsigned {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::N\+U\+M =N\hspace{0.3cm}{\ttfamily [static]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_aba53db2c8cade306553fc1e03f138aa2}
 顶点的最大容量 
 
-Definition at line 30 of file graph.\+h.
+Definition at line 48 of file graph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_aea254564996a6a172f001ebf7f3c5f65}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}!vertexes@{vertexes}}
 \index{vertexes@{vertexes}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}}
 \subsubsection[{vertexes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N, typename V\+Type $>$ std\+::array$<$std\+::shared\+\_\+ptr$<${\bf Vertex\+Type}$>$,N$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Graph}$<$ N, V\+Type $>$\+::vertexes}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_aea254564996a6a172f001ebf7f3c5f65}
 
 
-Definition at line 263 of file graph.\+h.
+Definition at line 286 of file graph.\+h.
 
 
 

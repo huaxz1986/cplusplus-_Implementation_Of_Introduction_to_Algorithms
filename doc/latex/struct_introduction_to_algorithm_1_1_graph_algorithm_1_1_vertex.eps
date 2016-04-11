@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 52.356021
+%%BoundingBox: 0 0 500 26.178010
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 9.550000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 19.100000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
 /rows 2 def
-/cols 2 def
+/cols 4 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -176,6 +176,8 @@ boxfont setfont
 (IntroductionToAlgorithm::GraphAlgorithm::Vertex< KType >) cw
 (IntroductionToAlgorithm::GraphAlgorithm::BFS_Vertex< KType >) cw
 (IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex< KType >) cw
+(IntroductionToAlgorithm::GraphAlgorithm::SetVertex< KType >) cw
+(IntroductionToAlgorithm::GraphAlgorithm::VertexP< KType >) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -187,17 +189,23 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (IntroductionToAlgorithm::GraphAlgorithm::Vertex< KType >) 0.500000 1.000000 box
+ (IntroductionToAlgorithm::GraphAlgorithm::Vertex< KType >) 1.500000 1.000000 box
  (IntroductionToAlgorithm::GraphAlgorithm::BFS_Vertex< KType >) 0.000000 0.000000 box
  (IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex< KType >) 1.000000 0.000000 box
+ (IntroductionToAlgorithm::GraphAlgorithm::SetVertex< KType >) 2.000000 0.000000 box
+ (IntroductionToAlgorithm::GraphAlgorithm::VertexP< KType >) 3.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 0.500000 0.250000 out
+1 1.500000 0.250000 out
 solid
-0.000000 1.000000 1.000000 conn
+0.000000 3.000000 1.000000 conn
 solid
 0 0.000000 0.750000 in
 solid
 0 1.000000 0.750000 in
+solid
+0 2.000000 0.750000 in
+solid
+0 3.000000 0.750000 in

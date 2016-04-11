@@ -107,56 +107,74 @@ $(document).ready(function(){initNavTree('edge__test_8h_source.html','');});
 <div class="title">edge_test.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="edge__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GRAPHEDGE_TEST</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GRAPHEDGE_TEST</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="edge_8h.html">edge.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&quot;../graph_vertex/vertex.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html">IntroductionToAlgorithm::GraphAlgorithm::Edge</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_edge_test.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_edge_test.html">EdgeTest</a>:<span class="keyword">public</span> ::testing::Test</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_edge_test.html#a983bfc4e56ab07fc54c55f71815d39e6">   17</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">Vertex&lt;double&gt;</a> <a class="code" href="class_edge_test.html#a983bfc4e56ab07fc54c55f71815d39e6">Node</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_edge_test.html#af1f1a79b9cc810c2548e1d2d0071f1bc">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_edge_test.html#af1f1a79b9cc810c2548e1d2d0071f1bc">SetUp</a>(){</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">_edge</a>=std::make_shared&lt;Edge&lt;Node&gt;&gt;(std::make_shared&lt;Node&gt;(16.0,0),std::make_shared&lt;Node&gt;(17.0,1),2);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_edge_test.html#a14e4e78eddefbfedeebeb075fa74cbad">   22</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_edge_test.html#a14e4e78eddefbfedeebeb075fa74cbad">TearDown</a>(){}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">   24</a></span>&#160;    std::shared_ptr&lt;Edge&lt;Node&gt;&gt; <a class="code" href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">_edge</a>;  </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">   31</a></span>&#160;<a class="code" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a>(<a class="code" href="class_edge_test.html">EdgeTest</a>,test_data_member)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    EXPECT_TRUE(_edge-&gt;vertex1-&gt;id==0 &amp;&amp;_edge-&gt;vertex2-&gt;id==1 &amp;&amp;_edge-&gt;weight==2 );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="edge__test_8h.html#aa005e61674db2460dbc999243b9e247f">   40</a></span>&#160;<a class="code" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a>(<a class="code" href="class_edge_test.html">EdgeTest</a>,test_to_string)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    EXPECT_EQ(_edge-&gt;to_string(),<span class="stringliteral">&quot;edge weight:2\t vertex[id1:0,id2:1]&quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<a href="edge__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2016- huaxz &lt;huaxz1986@163.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Author: huaxz1986@163.com (huaxz)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef GRAPHEDGE_TEST</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define GRAPHEDGE_TEST</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="edge_8h.html">edge.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include&quot;../graph_vertex/vertex.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html">IntroductionToAlgorithm::GraphAlgorithm::Edge</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_edge_test.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_edge_test.html">EdgeTest</a>:<span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_edge_test.html#a983bfc4e56ab07fc54c55f71815d39e6">   35</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">Vertex&lt;double&gt;</a> <a class="code" href="class_edge_test.html#a983bfc4e56ab07fc54c55f71815d39e6">Node</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_edge_test.html#af1f1a79b9cc810c2548e1d2d0071f1bc">   37</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_edge_test.html#af1f1a79b9cc810c2548e1d2d0071f1bc">SetUp</a>(){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">_edge</a>=std::make_shared&lt;Edge&lt;Node&gt;&gt;(std::make_shared&lt;Node&gt;(16.0,0),std::make_shared&lt;Node&gt;(17.0,1),2);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_edge_test.html#a14e4e78eddefbfedeebeb075fa74cbad">   40</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_edge_test.html#a14e4e78eddefbfedeebeb075fa74cbad">TearDown</a>(){}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">   42</a></span>&#160;    std::shared_ptr&lt;Edge&lt;Node&gt;&gt; <a class="code" href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">_edge</a>;  </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="edge__test_8h.html#a4a5b29e9f004de6baa67d01e2c7d0a74">   48</a></span>&#160;<a class="code" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a>(<a class="code" href="class_edge_test.html">EdgeTest</a>,test_edge_tuple)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    EXPECT_EQ(_edge-&gt;edge_tuple(),std::make_tuple(0,1,2));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">   49</a></span>&#160;<a class="code" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a>(<a class="code" href="class_edge_test.html">EdgeTest</a>,test_data_member)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    EXPECT_TRUE(_edge-&gt;vertex1-&gt;id==0 &amp;&amp;_edge-&gt;vertex2-&gt;id==1 &amp;&amp;_edge-&gt;weight==2 );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif // GRAPHEDGE_TEST</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html">IntroductionToAlgorithm::GraphAlgorithm::Edge</a></div><div class="ttdoc">Edge：图的边，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00020">edge.h:20</a></div></div>
-<div class="ttc" id="class_edge_test_html_a983bfc4e56ab07fc54c55f71815d39e6"><div class="ttname"><a href="class_edge_test.html#a983bfc4e56ab07fc54c55f71815d39e6">EdgeTest::Node</a></div><div class="ttdeci">Vertex&lt; double &gt; Node</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00017">edge_test.h:17</a></div></div>
-<div class="ttc" id="class_edge_test_html_af1f1a79b9cc810c2548e1d2d0071f1bc"><div class="ttname"><a href="class_edge_test.html#af1f1a79b9cc810c2548e1d2d0071f1bc">EdgeTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00019">edge_test.h:19</a></div></div>
-<div class="ttc" id="class_edge_test_html_a8ab903577f2907ee1110d5f5f4d16b83"><div class="ttname"><a href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">EdgeTest::_edge</a></div><div class="ttdeci">std::shared_ptr&lt; Edge&lt; Node &gt; &gt; _edge</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00024">edge_test.h:24</a></div></div>
-<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a></div><div class="ttdoc">Vertex：图的顶点，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8h_source.html#l00022">vertex.h:22</a></div></div>
-<div class="ttc" id="class_edge_test_html"><div class="ttname"><a href="class_edge_test.html">EdgeTest</a></div><div class="ttdoc">EdgeTest:测试类，用于为测试Edge提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00014">edge_test.h:14</a></div></div>
-<div class="ttc" id="class_edge_test_html_a14e4e78eddefbfedeebeb075fa74cbad"><div class="ttname"><a href="class_edge_test.html#a14e4e78eddefbfedeebeb075fa74cbad">EdgeTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00022">edge_test.h:22</a></div></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="edge__test_8h.html#aa005e61674db2460dbc999243b9e247f">   58</a></span>&#160;<a class="code" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a>(<a class="code" href="class_edge_test.html">EdgeTest</a>,test_to_string)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    EXPECT_EQ(_edge-&gt;to_string(),<span class="stringliteral">&quot;edge weight:2\t vertex[id1:0,id2:1]&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="edge__test_8h.html#a4a5b29e9f004de6baa67d01e2c7d0a74">   66</a></span>&#160;<a class="code" href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a>(<a class="code" href="class_edge_test.html">EdgeTest</a>,test_edge_tuple)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    EXPECT_EQ(_edge-&gt;edge_tuple(),std::make_tuple(0,1,2));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // GRAPHEDGE_TEST</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html">IntroductionToAlgorithm::GraphAlgorithm::Edge</a></div><div class="ttdoc">Edge：图的边，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="edge_8h_source.html#l00038">edge.h:38</a></div></div>
+<div class="ttc" id="class_edge_test_html_a983bfc4e56ab07fc54c55f71815d39e6"><div class="ttname"><a href="class_edge_test.html#a983bfc4e56ab07fc54c55f71815d39e6">EdgeTest::Node</a></div><div class="ttdeci">Vertex&lt; double &gt; Node</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00035">edge_test.h:35</a></div></div>
+<div class="ttc" id="class_edge_test_html_af1f1a79b9cc810c2548e1d2d0071f1bc"><div class="ttname"><a href="class_edge_test.html#af1f1a79b9cc810c2548e1d2d0071f1bc">EdgeTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00037">edge_test.h:37</a></div></div>
+<div class="ttc" id="class_edge_test_html_a8ab903577f2907ee1110d5f5f4d16b83"><div class="ttname"><a href="class_edge_test.html#a8ab903577f2907ee1110d5f5f4d16b83">EdgeTest::_edge</a></div><div class="ttdeci">std::shared_ptr&lt; Edge&lt; Node &gt; &gt; _edge</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00042">edge_test.h:42</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a></div><div class="ttdoc">Vertex：图的顶点，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8h_source.html#l00038">vertex.h:38</a></div></div>
+<div class="ttc" id="class_edge_test_html"><div class="ttname"><a href="class_edge_test.html">EdgeTest</a></div><div class="ttdoc">EdgeTest:测试类，用于为测试Edge提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00032">edge_test.h:32</a></div></div>
+<div class="ttc" id="class_edge_test_html_a14e4e78eddefbfedeebeb075fa74cbad"><div class="ttname"><a href="class_edge_test.html#a14e4e78eddefbfedeebeb075fa74cbad">EdgeTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00040">edge_test.h:40</a></div></div>
 <div class="ttc" id="edge_8h_html"><div class="ttname"><a href="edge_8h.html">edge.h</a></div></div>
-<div class="ttc" id="edge__test_8h_html_a786cb1db88a0b2f11d1857db41c9da5b"><div class="ttname"><a href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a></div><div class="ttdeci">TEST_F(EdgeTest, test_data_member)</div><div class="ttdoc">test_edge：测试边 </div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00031">edge_test.h:31</a></div></div>
+<div class="ttc" id="edge__test_8h_html_a786cb1db88a0b2f11d1857db41c9da5b"><div class="ttname"><a href="edge__test_8h.html#a786cb1db88a0b2f11d1857db41c9da5b">TEST_F</a></div><div class="ttdeci">TEST_F(EdgeTest, test_data_member)</div><div class="ttdoc">test_edge：测试边 </div><div class="ttdef"><b>Definition:</b> <a href="edge__test_8h_source.html#l00049">edge_test.h:49</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

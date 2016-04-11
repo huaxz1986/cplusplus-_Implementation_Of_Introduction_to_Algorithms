@@ -18,7 +18,7 @@ Inheritance diagram for Graph\+Test\+:\begin{figure}[H]
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ \hyperlink{graph__test_8h_abad8d08eab108f595a7ea22132648528}{G\+\_\+\+N}, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}$<$ double $>$ $>$ \hyperlink{class_graph_test_a35200ea3d08690769c40550cba2ecd5a}{G\+Type}
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ G\+\_\+\+N, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}$<$ double $>$ $>$ \hyperlink{class_graph_test_a35200ea3d08690769c40550cba2ecd5a}{G\+Type}
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -43,17 +43,17 @@ std\+::shared\+\_\+ptr$<$ \hyperlink{class_graph_test_a35200ea3d08690769c40550cb
 
 {\ttfamily \hyperlink{class_graph_test}{Graph\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
 
-Definition at line 16 of file graph\+\_\+test.\+h.
+Definition at line 36 of file graph\+\_\+test.\+h.
 
 
 
 \subsection{Member Typedef Documentation}
 \hypertarget{class_graph_test_a35200ea3d08690769c40550cba2ecd5a}{}\index{Graph\+Test@{Graph\+Test}!G\+Type@{G\+Type}}
 \index{G\+Type@{G\+Type}!Graph\+Test@{Graph\+Test}}
-\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<${\bf G\+\_\+\+N},{\bf Vertex}$<$double$>$ $>$ {\bf Graph\+Test\+::\+G\+Type}}\label{class_graph_test_a35200ea3d08690769c40550cba2ecd5a}
+\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<$G\+\_\+\+N,{\bf Vertex}$<$double$>$ $>$ {\bf Graph\+Test\+::\+G\+Type}}\label{class_graph_test_a35200ea3d08690769c40550cba2ecd5a}
 模板实例化的图类型，该图的顶点类型为{\ttfamily Vertex$<$double$>$} 
 
-Definition at line 19 of file graph\+\_\+test.\+h.
+Definition at line 39 of file graph\+\_\+test.\+h.
 
 
 
@@ -67,7 +67,7 @@ Definition at line 19 of file graph\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_graph_test_a2f0d213d11ea0b8245c526379674b91b}
 
 
-Definition at line 22 of file graph\+\_\+test.\+h.
+Definition at line 42 of file graph\+\_\+test.\+h.
 
 \hypertarget{class_graph_test_a53c606b64363a694f425a844dfabc08e}{}\index{Graph\+Test@{Graph\+Test}!Tear\+Down@{Tear\+Down}}
 \index{Tear\+Down@{Tear\+Down}!Graph\+Test@{Graph\+Test}}
@@ -78,7 +78,7 @@ Definition at line 22 of file graph\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_graph_test_a53c606b64363a694f425a844dfabc08e}
 
 
-Definition at line 38 of file graph\+\_\+test.\+h.
+Definition at line 58 of file graph\+\_\+test.\+h.
 
 
 
@@ -88,21 +88,21 @@ Definition at line 38 of file graph\+\_\+test.\+h.
 \subsubsection[{\+\_\+empty\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Graph\+Test\+::\+\_\+empty\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_graph_test_a1dbaf4ba93fa17246e6fef78b5dd678c}
 指向一个空图 
 
-Definition at line 40 of file graph\+\_\+test.\+h.
+Definition at line 60 of file graph\+\_\+test.\+h.
 
 \hypertarget{class_graph_test_a2dac828599509e577b5406d06f613a16}{}\index{Graph\+Test@{Graph\+Test}!\+\_\+n\+\_\+vertexes\+\_\+graph@{\+\_\+n\+\_\+vertexes\+\_\+graph}}
 \index{\+\_\+n\+\_\+vertexes\+\_\+graph@{\+\_\+n\+\_\+vertexes\+\_\+graph}!Graph\+Test@{Graph\+Test}}
 \subsubsection[{\+\_\+n\+\_\+vertexes\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Graph\+Test\+::\+\_\+n\+\_\+vertexes\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_graph_test_a2dac828599509e577b5406d06f613a16}
 指向一个含有n结点,0条边的图 
 
-Definition at line 41 of file graph\+\_\+test.\+h.
+Definition at line 61 of file graph\+\_\+test.\+h.
 
 \hypertarget{class_graph_test_aaa662e57a6eb46a91c59464871b4907f}{}\index{Graph\+Test@{Graph\+Test}!\+\_\+n\+\_\+vertexes\+\_\+m\+\_\+edges\+\_\+graph@{\+\_\+n\+\_\+vertexes\+\_\+m\+\_\+edges\+\_\+graph}}
 \index{\+\_\+n\+\_\+vertexes\+\_\+m\+\_\+edges\+\_\+graph@{\+\_\+n\+\_\+vertexes\+\_\+m\+\_\+edges\+\_\+graph}!Graph\+Test@{Graph\+Test}}
 \subsubsection[{\+\_\+n\+\_\+vertexes\+\_\+m\+\_\+edges\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Graph\+Test\+::\+\_\+n\+\_\+vertexes\+\_\+m\+\_\+edges\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_graph_test_aaa662e57a6eb46a91c59464871b4907f}
 指向一个含有n结点,m条边的图 
 
-Definition at line 42 of file graph\+\_\+test.\+h.
+Definition at line 62 of file graph\+\_\+test.\+h.
 
 
 

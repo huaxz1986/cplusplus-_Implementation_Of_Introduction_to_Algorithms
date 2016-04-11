@@ -107,70 +107,88 @@ $(document).ready(function(){initNavTree('goodselect_8h_source.html','');});
 <div class="title">goodselect.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="goodselect_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GOODSELECT</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GOODSELECT</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&lt;vector&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="quicksort_8h.html">src/sort_algorithms/quick_sort/quicksort.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">namespace </span>SelectAlgorithm</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    template&lt;typename Iterator,typename CompareType=std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::value_type</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">   34</a></span>&#160;                <a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(<span class="keyword">const</span> Iterator begin,<span class="keyword">const</span> Iterator end,<span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::difference_type rank,CompareType compare=CompareType())</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#aa304e98b87d7ec1c17bd5cae534fb666">IntroductionToAlgorithm::SortAlgorithm::quick_sort</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a2d13a83cd168d9a10df0ed8c39f9ee">IntroductionToAlgorithm::SortAlgorithm::partition</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::value_type T;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">auto</span> size=std::distance(begin,end);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            assert(size&gt;0);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            assert(rank&lt;size);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span>(size==1)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">return</span> *begin;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">// *********  将序列划分为5个元素一组的区间，最后一组可能不满5个元素；对每组进行排序，取出其中值放入vector中  *********</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keyword">auto</span> iter=begin;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            std::vector&lt;T&gt; middle_nums;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">while</span>(iter&lt;end)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keyword">auto</span> from=iter;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keyword">auto</span> to=iter+5;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span>(to&gt;end)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    to=end;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#aa304e98b87d7ec1c17bd5cae534fb666">quick_sort</a>(from,to,compare);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                middle_nums.push_back(*(from+(to-from-1)/2));</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                iter+=5;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">// ********* 取出这些中值的中值 ************</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            T mid_of_middles=<a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(middle_nums.begin(),middle_nums.end(),middle_nums.size()/2,compare); <span class="comment">//所有中值的中值</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            iter=begin;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">while</span>(std::distance(iter,end)&gt;0&amp;&amp;*iter!=mid_of_middles) <span class="comment">//得到中值的中值在原序列中的位置</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                iter++;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//********* 划分 **************</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keyword">auto</span> mid_of_middles_iter=<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a2d13a83cd168d9a10df0ed8c39f9ee">partition</a>(begin,end,iter,compare); <span class="comment">//以中值的中值作为一个划分值</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">// ********** 判别 ***************</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keyword">auto</span> mid_of_middles_rank=std::distance(begin,mid_of_middles_iter);<span class="comment">//中值的中值在划分之后的排序</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">if</span>(mid_of_middles_rank== rank)  <span class="comment">//找到了该排位的数</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">return</span> *mid_of_middles_iter;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(mid_of_middles_rank&lt;rank) <span class="comment">//已知某排位的数位次较低，则指定排位数的元素在它右侧</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(mid_of_middles_iter+1,end,rank-mid_of_middles_rank-1,compare); <span class="comment">//mid_of_middles_iter+1，则找右侧的第rank-mid_of_middles_rank-1位</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">else</span>                   <span class="comment">//已知某排位的数位次较高，则指定排位数的元素在它左侧</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(begin,mid_of_middles_iter,rank,compare);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif // GOODSELECT</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_select_algorithm_html_af7d1f100ddee11d1de6bde2cd86d8be3"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">IntroductionToAlgorithm::SelectAlgorithm::good_select</a></div><div class="ttdeci">std::iterator_traits&lt; Iterator &gt;::value_type good_select(const Iterator begin, const Iterator end, typename std::iterator_traits&lt; Iterator &gt;::difference_type rank, CompareType compare=CompareType())</div><div class="ttdoc">good_select： 算法导论第9章9.3 最坏时间为O(n)的顺序统计量选择算法 </div><div class="ttdef"><b>Definition:</b> <a href="goodselect_8h_source.html#l00034">goodselect.h:34</a></div></div>
+<a href="goodselect_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2016- huaxz &lt;huaxz1986@163.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Author: huaxz1986@163.com (huaxz)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef GOODSELECT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define GOODSELECT</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&lt;vector&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="quicksort_8h.html">src/sort_algorithms/quick_sort/quicksort.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">namespace </span>SelectAlgorithm</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    template&lt;typename Iterator,typename CompareType=std::less&lt;typename std::iterator_traits&lt;Iterator&gt;::value_type&gt;&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::value_type</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">   52</a></span>&#160;                <a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(<span class="keyword">const</span> Iterator begin,<span class="keyword">const</span> Iterator end,<span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::difference_type rank,CompareType compare=CompareType())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#aa304e98b87d7ec1c17bd5cae534fb666">IntroductionToAlgorithm::SortAlgorithm::quick_sort</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a2d13a83cd168d9a10df0ed8c39f9ee">IntroductionToAlgorithm::SortAlgorithm::partition</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::value_type T;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">auto</span> size=std::distance(begin,end);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            assert(size&gt;0);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            assert(rank&lt;size);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span>(size==1)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">return</span> *begin;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">// *********  将序列划分为5个元素一组的区间，最后一组可能不满5个元素；对每组进行排序，取出其中值放入vector中  *********</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keyword">auto</span> iter=begin;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            std::vector&lt;T&gt; middle_nums;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">while</span>(iter&lt;end)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keyword">auto</span> from=iter;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keyword">auto</span> to=iter+5;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">if</span>(to&gt;end)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    to=end;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#aa304e98b87d7ec1c17bd5cae534fb666">quick_sort</a>(from,to,compare);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                middle_nums.push_back(*(from+(to-from-1)/2));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                iter+=5;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">// ********* 取出这些中值的中值 ************</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            T mid_of_middles=<a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(middle_nums.begin(),middle_nums.end(),middle_nums.size()/2,compare); <span class="comment">//所有中值的中值</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            iter=begin;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">while</span>(std::distance(iter,end)&gt;0&amp;&amp;*iter!=mid_of_middles) <span class="comment">//得到中值的中值在原序列中的位置</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                iter++;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="comment">//********* 划分 **************</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keyword">auto</span> mid_of_middles_iter=<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a2d13a83cd168d9a10df0ed8c39f9ee">partition</a>(begin,end,iter,compare); <span class="comment">//以中值的中值作为一个划分值</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// ********** 判别 ***************</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keyword">auto</span> mid_of_middles_rank=std::distance(begin,mid_of_middles_iter);<span class="comment">//中值的中值在划分之后的排序</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span>(mid_of_middles_rank== rank)  <span class="comment">//找到了该排位的数</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">return</span> *mid_of_middles_iter;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(mid_of_middles_rank&lt;rank) <span class="comment">//已知某排位的数位次较低，则指定排位数的元素在它右侧</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(mid_of_middles_iter+1,end,rank-mid_of_middles_rank-1,compare); <span class="comment">//mid_of_middles_iter+1，则找右侧的第rank-mid_of_middles_rank-1位</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">else</span>                   <span class="comment">//已知某排位的数位次较高，则指定排位数的元素在它左侧</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">good_select</a>(begin,mid_of_middles_iter,rank,compare);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif // GOODSELECT</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_select_algorithm_html_af7d1f100ddee11d1de6bde2cd86d8be3"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_select_algorithm.html#af7d1f100ddee11d1de6bde2cd86d8be3">IntroductionToAlgorithm::SelectAlgorithm::good_select</a></div><div class="ttdeci">std::iterator_traits&lt; Iterator &gt;::value_type good_select(const Iterator begin, const Iterator end, typename std::iterator_traits&lt; Iterator &gt;::difference_type rank, CompareType compare=CompareType())</div><div class="ttdoc">good_select： 算法导论第9章9.3 最坏时间为O(n)的顺序统计量选择算法 </div><div class="ttdef"><b>Definition:</b> <a href="goodselect_8h_source.html#l00052">goodselect.h:52</a></div></div>
 <div class="ttc" id="quicksort_8h_html"><div class="ttname"><a href="quicksort_8h.html">quicksort.h</a></div></div>
 <div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_a3a2d13a83cd168d9a10df0ed8c39f9ee"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a3a2d13a83cd168d9a10df0ed8c39f9ee">IntroductionToAlgorithm::SortAlgorithm::partition</a></div><div class="ttdeci">Iterator partition(const Iterator begin, const Iterator end, const Iterator partition_iter, CompareType compare=CompareType())</div><div class="ttdoc">partition： 算法导论第7章快速排序中的划分算法 </div><div class="ttdef"><b>Definition:</b> <a href="quicksort_8h_source.html#l00043">quicksort.h:43</a></div></div>
 <div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_aa304e98b87d7ec1c17bd5cae534fb666"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#aa304e98b87d7ec1c17bd5cae534fb666">IntroductionToAlgorithm::SortAlgorithm::quick_sort</a></div><div class="ttdeci">void quick_sort(const Iterator begin, const Iterator end, CompareType compare=CompareType())</div><div class="ttdoc">quick_sort： 算法导论第7章 </div><div class="ttdef"><b>Definition:</b> <a href="quicksort_8h_source.html#l00081">quicksort.h:81</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_html"><div class="ttname"><a href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="longest__common__subsequence_8h_source.html#l00006">longest_common_subsequence.h:6</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_html"><div class="ttname"><a href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="longest__common__subsequence_8h_source.html#l00024">longest_common_subsequence.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

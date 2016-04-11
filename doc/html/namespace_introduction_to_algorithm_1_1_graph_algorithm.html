@@ -134,15 +134,29 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html">MatrixGraph</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MatrixGraph：图的矩阵表示，算法导论22章22.1节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex.html">SetVertex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetVertex：图的顶点，它带一个node属性，算法导论22章22.1节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">Vertex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertex：图的顶点，算法导论22章22.1节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p.html">VertexP</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">VertexP：图的顶点，它带一个parent属性，算法导论22章22.1节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a31fe8fc6f732112632c51221e739a7d4"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a31fe8fc6f732112632c51221e739a7d4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a31fe8fc6f732112632c51221e739a7d4">connected_component</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
+<tr class="memdesc:a31fe8fc6f732112632c51221e739a7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">connected_component：无向图的连通分量，算法导论21章21.1节  <a href="#a31fe8fc6f732112632c51221e739a7d4">More...</a><br /></td></tr>
+<tr class="separator:a31fe8fc6f732112632c51221e739a7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac368f242de9f06c7d936cba4aa0ab40b"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:ac368f242de9f06c7d936cba4aa0ab40b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ac368f242de9f06c7d936cba4aa0ab40b">same_component</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType id1, typename GraphType::VIDType id2)</td></tr>
+<tr class="memdesc:ac368f242de9f06c7d936cba4aa0ab40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">same_component：返回无向图的两个顶点是否位于同一个连通分量中。算法导论21章21.1节  <a href="#ac368f242de9f06c7d936cba4aa0ab40b">More...</a><br /></td></tr>
+<tr class="separator:ac368f242de9f06c7d936cba4aa0ab40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c57b397479972f84b4b10bc19968297"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </td></tr>
 <tr class="memitem:a9c57b397479972f84b4b10bc19968297"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a9c57b397479972f84b4b10bc19968297">breadth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, ActionType pre_action=[](typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType){})</td></tr>
-<tr class="memdesc:a9c57b397479972f84b4b10bc19968297"><td class="mdescLeft">&#160;</td><td class="mdescRight">breadth_first_search：广度优先搜索，算法导论22章xx节  <a href="#a9c57b397479972f84b4b10bc19968297">More...</a><br /></td></tr>
+<tr class="memdesc:a9c57b397479972f84b4b10bc19968297"><td class="mdescLeft">&#160;</td><td class="mdescRight">breadth_first_search：广度优先搜索，算法导论22章22.2节  <a href="#a9c57b397479972f84b4b10bc19968297">More...</a><br /></td></tr>
 <tr class="separator:a9c57b397479972f84b4b10bc19968297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af651a2b435fc270ab711e573d83a385d"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt;void(typename GraphType::VIDType,int)&gt;&gt; </td></tr>
 <tr class="memitem:af651a2b435fc270ab711e573d83a385d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#af651a2b435fc270ab711e573d83a385d">visit</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType v_id, int &amp;time, ActionType pre_action=[](typename GraphType::VIDType, int){}, ActionType post_action=[](typename GraphType::VIDType, int){})</td></tr>
@@ -160,12 +174,26 @@ Functions</h2></td></tr>
 <tr class="memitem:a804241e72be5f4c031190bc12a6b73a2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; typename GraphType::VIDType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">topology_sort</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
 <tr class="memdesc:a804241e72be5f4c031190bc12a6b73a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">topology_sort：拓扑排序，算法导论22章22.4节  <a href="#a804241e72be5f4c031190bc12a6b73a2">More...</a><br /></td></tr>
 <tr class="separator:a804241e72be5f4c031190bc12a6b73a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6586a1f6485cc30b643ef752eee9b783"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
-<tr class="memitem:a6586a1f6485cc30b643ef752eee9b783"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a6586a1f6485cc30b643ef752eee9b783">kruskal</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
-<tr class="separator:a6586a1f6485cc30b643ef752eee9b783"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac79afa99e5119649d01d613fb01f3984"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
-<tr class="memitem:ac79afa99e5119649d01d613fb01f3984"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ac79afa99e5119649d01d613fb01f3984">prim</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id)</td></tr>
-<tr class="separator:ac79afa99e5119649d01d613fb01f3984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType,typename GraphType::VIDType)&gt;&gt; </td></tr>
+<tr class="memitem:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memTemplItemLeft" align="right" valign="top">GraphType::EWeightType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a2575c09c42d0b30b57702c9379d2fbfb">kruskal</a> (std::shared_ptr&lt; GraphType &gt; graph, ActionType pre_action=[](typename GraphType::VIDType, typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType, typename GraphType::VIDType){})</td></tr>
+<tr class="memdesc:a2575c09c42d0b30b57702c9379d2fbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">kruskal：最小生成树的Kruskal算法，算法导论22章23.2节  <a href="#a2575c09c42d0b30b57702c9379d2fbfb">More...</a><br /></td></tr>
+<tr class="separator:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba1581358d79ba82dc4fd0c15bc987e6"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </td></tr>
+<tr class="memitem:aba1581358d79ba82dc4fd0c15bc987e6"><td class="memTemplItemLeft" align="right" valign="top">GraphType::EWeightType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, ActionType pre_action=[](typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType){})</td></tr>
+<tr class="memdesc:aba1581358d79ba82dc4fd0c15bc987e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">prim：最小生成树的Prim算法，算法导论22章23.2节  <a href="#aba1581358d79ba82dc4fd0c15bc987e6">More...</a><br /></td></tr>
+<tr class="separator:aba1581358d79ba82dc4fd0c15bc987e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed496e8825564d0f9fcfe3b0ac41dec"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a5ed496e8825564d0f9fcfe3b0ac41dec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a5ed496e8825564d0f9fcfe3b0ac41dec">initialize_single_source</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id)</td></tr>
+<tr class="memdesc:a5ed496e8825564d0f9fcfe3b0ac41dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize_single_source：单源最短路径的初始化操作，算法导论22章xx节  <a href="#a5ed496e8825564d0f9fcfe3b0ac41dec">More...</a><br /></td></tr>
+<tr class="separator:a5ed496e8825564d0f9fcfe3b0ac41dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2bd83fca7df7e07ece9a59b8e7f5a6"><td class="memTemplParams" colspan="2">template&lt;typename VertexType &gt; </td></tr>
+<tr class="memitem:afe2bd83fca7df7e07ece9a59b8e7f5a6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#afe2bd83fca7df7e07ece9a59b8e7f5a6">relax</a> (std::shared_ptr&lt; VertexType &gt; from, std::shared_ptr&lt; VertexType &gt; to, typename VertexType::KeyType weight)</td></tr>
+<tr class="memdesc:afe2bd83fca7df7e07ece9a59b8e7f5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">relax：单源最短路径的松弛操作，算法导论22章xx节  <a href="#afe2bd83fca7df7e07ece9a59b8e7f5a6">More...</a><br /></td></tr>
+<tr class="separator:afe2bd83fca7df7e07ece9a59b8e7f5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96d9b844260ee3ce9225055040c631b"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:ae96d9b844260ee3ce9225055040c631b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ae96d9b844260ee3ce9225055040c631b">bellman_ford</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id)</td></tr>
+<tr class="memdesc:ae96d9b844260ee3ce9225055040c631b"><td class="mdescLeft">&#160;</td><td class="mdescRight">bellman_ford：单源最短路径的bellman_ford算法，算法导论22章xx节  <a href="#ae96d9b844260ee3ce9225055040c631b">More...</a><br /></td></tr>
+<tr class="separator:ae96d9b844260ee3ce9225055040c631b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a19237111c3b1ec2717c5e1aefe2f6d9b">unlimit</a> ()</td></tr>
 <tr class="memdesc:a19237111c3b1ec2717c5e1aefe2f6d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">unlimit：返回正无穷的函数  <a href="#a19237111c3b1ec2717c5e1aefe2f6d9b">More...</a><br /></td></tr>
@@ -183,6 +211,62 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Namespace of <a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html" title="Namespace of GraphAlgorithm. ">GraphAlgorithm</a>. </p>
 <p>该命名空间内包含所有图算法 </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ae96d9b844260ee3ce9225055040c631b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IntroductionToAlgorithm::GraphAlgorithm::bellman_ford </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>source_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bellman_ford：单源最短路径的bellman_ford算法，算法导论22章xx节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指向图的强指针，必须非空。若为空则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">source_id：最小生成树的根结点&lt;tt&gt;id&lt;/tt&gt;，必须有效。若无效则抛出异常</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 是否不包含可以从源结点可达的权重为负值的环路。若返回值为true，则说明不包含可以从源结点可达的权重为负值的环路</dd></dl>
+<p>单源最短路径问题：给定一个带权重的有向图G=(V,E)和权重函数w:E-&gt;R，该权重函数将每条边映射到实数值的权重上。图中一条路径p=&lt;v0,v1,...vk&gt;的权重 w(p)=w(v0,v1)+w(v1,v2)+...+w(v(k-1),vk)。定义结点u到结点v的最短路径权重 delt(u,v)为：</p>
+<ul>
+<li>min{w(p):u&ndash;&gt;v(通过路径p)}，如果存在一条从结点u到结点v的路径</li>
+<li>正无穷 ，如果不存在一条从结点u到结点v的路径</li>
+</ul>
+<p>从结点u到结点v的最短路径定义为任何一条权重w(p)=delt(u,v)的从u到v的路径p。</p>
+<p>给定图G=(V,E)，对每个结点v我们维持一个前驱结点v.pai。在最短路径算法中，由pai值诱导的前驱子图G_pai=(V_pai,E_pai)，其中 V_pai={v属于V:v.pai!=nil}并上源点s， E_pai是V_pai中所有结点的pai值诱导的边的集合：E_pai={(v.pai,v)属于E:v属于V_pai-{s} }。算法终止时，G_pai是一棵最短路径树：该树包含了从源结点s 到每个可以从s到达的结点的一条最短路径。</p>
+<p>需要指出的是：最短路径不一定是唯一的，最短路径树叶不一定是唯一的。</p>
+<p>Bellman-Ford算法解决的是一般情况下的单源最短路径问题。在这里边的权重可以为负值。给定带权的有向图G=(V,E)和权重函数w:E-&gt;R，Bellman-Ford 算法返回一个bool值，表明是否存在一个从源结点可达的权重为负值的环路。若存在这样的一个环路，算法告诉我们不存在解决方案；若不存在这样的环路， 算法将给出最短路径和它们的权重。</p>
+<p>Bellman-Ford算法通过对边的松弛操作来渐近的降低从源s到每个结点v的最短路径估计值v.key，直到该估计值与实际的最短路径权重相同为止。算法步骤：</p>
+<ul>
+<li>执行单源最短路径的初始化过程</li>
+<li>进行|V|-1次处理，每次处理过程为：对图的每一条边进行一次松弛操作</li>
+<li>检查图中是否存在权重为负的环路并返回与之相适应的布尔值</li>
+</ul>
+<p>性能：时间复杂度为O(VE) </p>
+
+<p>Definition at line <a class="el" href="bellmanford_8h_source.html#l00132">132</a> of file <a class="el" href="bellmanford_8h_source.html">bellmanford.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9c57b397479972f84b4b10bc19968297"></a>
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +305,7 @@ template&lt;typename GraphType , typename ActionType  = std::function&lt; void(t
       </table>
 </div><div class="memdoc">
 
-<p>breadth_first_search：广度优先搜索，算法导论22章xx节 </p>
+<p>breadth_first_search：广度优先搜索，算法导论22章22.2节 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">graph:指向图的强引用，必须非空。若为空则抛出异常</td><td></td></tr>
@@ -240,7 +324,7 @@ template&lt;typename GraphType , typename ActionType  = std::function&lt; void(t
 <p>广度优先搜索：该算法维护已经发现结点和未发现结点的边界，沿着其广度方向向外扩展。每个结点有三种颜色：白色、灰色、黑色。 白色结点表示未发现；灰色结点表示已发现但是未处理完成；黑色结点表示已处理完成。其中灰色结点就是边界。</p>
 <p>给定图 G=(V,E)和一个可以识别的源点<code>s</code>。。所有的结点在一开始都被涂上白色。每个结点的颜色存放在属性<code>color</code>中； 每个结点的前驱结点放在属性<code>parent</code>中。每个结点的属性<code>key</code>存放的是从源点到本结点的距离。该算法使用一个先进先出的队列Q来管理灰色结点集。</p>
 <ul>
-<li>将所有结点涂为白色，<code>key</code>属性设置为正无穷；</li>
+<li>将所有结点涂为白色，<code>key</code>属性设置为正无穷，父结点置为空；</li>
 <li>将源点涂为灰色，源点前驱设为空，源点的<code>key</code>设为0；</li>
 <li>将源点加入队列Q中；Q中存放的都是已发现但是尚未处理完成的结点</li>
 <li>循环直到队列Q为空，在循环中执行以下操作：<ul>
@@ -254,7 +338,43 @@ template&lt;typename GraphType , typename ActionType  = std::function&lt; void(t
 <p>最短路径：广度优先搜索能找出给定源结点s到所有可以到达的结点之间的距离。定义从源s到结点v之间的最短路径距离 delt(s,v) 为从结点s到v之间的所有路径里面最少的边数。 如果从s到v没有路径，则 delt(s,v)=正无穷大 。我们定义从s到v之间的长度为 delt(s,v) 的路径为 s 到 v 的最短路径。可以证明：广度优先搜索可以正确计算出最短路径距离。</p>
 <p>广度优先树：对于G=(V,E)和源点s，定义图G的前驱子图为 G_pai=(V_pai,E_pai)，其中 V_pai={ v属于V: v.parent!=NIL}并上{s}，E_pai={(v.parent,v):v属于(V_pai-{s})}。 即V_pai由从源s可达的所有结点组成（包括s本身），E_pai由V_pai中去掉s之后的结点的入边组成，其中该入边的对端为结点的父结点。 BFS算法获取的前驱子图G_pai包含一条从源结点s到结点v的唯一简单路径，而且该路径也是图G里面从源s到v之间的一条最短路径，因此前驱子图也称为广度优先树。 </p>
 
-<p>Definition at line <a class="el" href="bfs_8h_source.html#l00157">157</a> of file <a class="el" href="bfs_8h_source.html">bfs.h</a>.</p>
+<p>Definition at line <a class="el" href="bfs_8h_source.html#l00176">176</a> of file <a class="el" href="bfs_8h_source.html">bfs.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31fe8fc6f732112632c51221e739a7d4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::connected_component </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>connected_component：无向图的连通分量，算法导论21章21.1节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指向图的强指针，必须非空。若为空则抛出异常</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>:void</dd></dl>
+<p>connected_component函数使用不相交集合操作来计算一个无向图的连通分量。一旦connected_component函数与处理了该图，same_component 函数就会回答两个顶点是否在同一个连通分量。</p>
+<p>connected_component算法步骤：</p>
+<ul>
+<li>将每个顶点v放入它自己的集合中</li>
+<li>对每一条边(u,v)，它将包含u和v的集合进行合并</li>
+</ul>
+<p>在处理完搜有边之后，两个顶点在相同的连通分量当且仅当与之对应的对象在相同的集合中 </p>
+
+<p>Definition at line <a class="el" href="connectedcomponent_8h_source.html#l00094">94</a> of file <a class="el" href="connectedcomponent_8h_source.html">connectedcomponent.h</a>.</p>
 
 </div>
 </div>
@@ -364,7 +484,7 @@ template&lt;typename GraphType , typename ActionType  = std::function&lt;void(ty
 </ul>
 <p>在无向图中，每条边要么是树边，要么是后向边。从来不会出现前向边和横向边。 </p>
 
-<p>Definition at line <a class="el" href="dfs_8h_source.html#l00231">231</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
+<p>Definition at line <a class="el" href="dfs_8h_source.html#l00248">248</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
 
 </div>
 </div>
@@ -410,6 +530,53 @@ template&lt;typename VertexType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a5ed496e8825564d0f9fcfe3b0ac41dec"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::initialize_single_source </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>source_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize_single_source：单源最短路径的初始化操作，算法导论22章xx节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指向图的强指针，必须非空。若为空则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">source_id：最小生成树的根结点&lt;tt&gt;id&lt;/tt&gt;，必须有效。若无效则抛出异常</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p><code>source_id</code>在以下情况下无效：</p>
+<ul>
+<li><code>source_id</code>不在区间<code>[0,N)</code>之间时，<code>source_id</code>无效</li>
+<li><code>graph</code>中不存在某个顶点的<code>id</code>等于<code>source_id</code>时，<code>source_id</code>无效</li>
+</ul>
+<p>单源最短路径的初始化操作将所有的结点的<code>key</code>设置为正无穷，将所有结点的<code>parent</code>设为空。然后将源结点的<code>key</code>设为0。</p>
+<p>性能：时间复杂度O(V) </p>
+
+<p>Definition at line <a class="el" href="bellmanford_8h_source.html#l00043">43</a> of file <a class="el" href="bellmanford_8h_source.html">bellmanford.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4f664c13605fc87ca8d26f4aad5a9fa2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -441,34 +608,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6586a1f6485cc30b643ef752eee9b783"></a>
+<a class="anchor" id="a2575c09c42d0b30b57702c9379d2fbfb"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename GraphType &gt; </div>
+template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType,typename GraphType::VIDType)&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::kruskal </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
-          <td class="paramname"><em>graph</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="kruskal_8h_source.html#l00010">10</a> of file <a class="el" href="kruskal_8h_source.html">kruskal.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac79afa99e5119649d01d613fb01f3984"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename GraphType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::prim </td>
+          <td class="memname">GraphType::EWeightType IntroductionToAlgorithm::GraphAlgorithm::kruskal </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
           <td class="paramname"><em>graph</em>, </td>
@@ -476,8 +623,14 @@ template&lt;typename GraphType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename GraphType::VIDType&#160;</td>
-          <td class="paramname"><em>source_id</em>&#160;</td>
+          <td class="paramtype">ActionType&#160;</td>
+          <td class="paramname"><em>pre_action</em> = <code>[](typename&#160;GraphType::VIDType,typename&#160;GraphType::VIDType){}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ActionType&#160;</td>
+          <td class="paramname"><em>post_action</em> = <code>[](typename&#160;GraphType::VIDType,typename&#160;GraphType::VIDType){}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -487,7 +640,210 @@ template&lt;typename GraphType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="prim_8h_source.html#l00010">10</a> of file <a class="el" href="prim_8h_source.html">prim.h</a>.</p>
+<p>kruskal：最小生成树的Kruskal算法，算法导论22章23.2节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指向图的强指针，必须非空。若为空则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">source_id：最小生成树的根结点&lt;tt&gt;id&lt;/tt&gt;，必须有效。若无效则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">pre_action:一个可调用对象，在每次从最小优先级队列中弹出最小顶点时立即调用，调用参数为该顶点的&lt;tt&gt;id&lt;/tt&gt;。默认为空操作，即不进行任何操作</td><td></td></tr>
+    <tr><td class="paramname">post_action:一个可调用对象，在每次从最小优先级队列中弹出最小顶点并处理完它的边时立即调用，调用参数为该顶点的&lt;tt&gt;id&lt;/tt&gt;。默认为空操作，即不进行任何操作</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 最小生成树的权重</dd></dl>
+<p>最小生成树：对于一个连通无向图G=(V,E)，对于每一条边(u,v)属于E都赋予了一个权重w(u,v)。我们希望找出一个无环子集T，其中T为E的子集，使得所有的顶点V位于T中， 同时T具有最小的权重。由于T是无环的，且连通所有结点因此T必然是一棵树。我们称这样的树为生成树。称从G中求取该生成树的问题为最小生成树问题。</p>
+<p>通用的最小生成树使用贪心策略。该策略在每个时刻找到最小生成树的一条边，并在整个策略过程中维持循环不变式：边的集合A在每次循环之前是某棵最小生成树的一个子集。</p>
+<p>在每一步，选择一条边(u,v)，将其加入集合A中，使得A不违反循环不变式。称这样的边(u,v)为边集合A的安全边。</p>
+<p>在Kruskal算法中集合A是一个森林，其结点就是G的结点。Kruskal算法找到安全边的办法是：在所有连接森林中两棵不同树的边里面，找到权重最小的边(u,v)。</p>
+<p>Kruskal算法使用一个不相交集合数据结构来维护几个互不相交的元素集合。每个集合代表当前森林中的一棵树。算法步骤如下：</p>
+<ul>
+<li>初始化：将集合A置为空；对G中的每一个结点v,以它为根构造一棵单根树</li>
+<li>将G中的边E按照权重单调递增的顺序排序</li>
+<li>循环挑选E中的(u,v)，按照单调增的顺序。在循环内执行：<ul>
+<li>如果u所在的树不等于v所在的树，则将(u,v)加入A中，并且合并u所在的树与v所在的树</li>
+</ul>
+</li>
+</ul>
+<p>&gt;根据算法的特征，如果图中只有一个顶点，算法得到的集合A为空集；但是实际上集合A应该包含该顶点。这是算法在极端情况下的BUG。</p>
+<p>性能：Kruskal算法运行时间依赖于不相交集合数据结构的实现方式。如果采用算法导论21.3节讨论的不相交集合森林实现（也是我在src/set_algorithms/disjoint_set中实现的）， 则Kruskal算法的时间为 O(ElgV) </p>
+
+<p>Definition at line <a class="el" href="kruskal_8h_source.html#l00062">62</a> of file <a class="el" href="kruskal_8h_source.html">kruskal.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba1581358d79ba82dc4fd0c15bc987e6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">GraphType::EWeightType IntroductionToAlgorithm::GraphAlgorithm::prim </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>source_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ActionType&#160;</td>
+          <td class="paramname"><em>pre_action</em> = <code>[](typename&#160;GraphType::VIDType){}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ActionType&#160;</td>
+          <td class="paramname"><em>post_action</em> = <code>[](typename&#160;GraphType::VIDType){}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>prim：最小生成树的Prim算法，算法导论22章23.2节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指向图的强指针，必须非空。若为空则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">source_id：最小生成树的根结点&lt;tt&gt;id&lt;/tt&gt;，必须有效。若无效则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">pre_action:一个可调用对象，在每次从最小优先级队列中弹出最小顶点时立即调用，调用参数为该顶点的&lt;tt&gt;id&lt;/tt&gt;。默认为空操作，即不进行任何操作</td><td></td></tr>
+    <tr><td class="paramname">post_action:一个可调用对象，在每次从最小优先级队列中弹出最小顶点并处理完它的边时立即调用，调用参数为该顶点的&lt;tt&gt;id&lt;/tt&gt;。默认为空操作，即不进行任何操作</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 最小生成树的权重</dd></dl>
+<p><code>source_id</code>在以下情况下无效：</p>
+<ul>
+<li><code>source_id</code>不在区间<code>[0,N)</code>之间时，<code>source_id</code>无效</li>
+<li><code>graph</code>中不存在某个顶点的<code>id</code>等于<code>source_id</code>时，<code>source_id</code>无效</li>
+</ul>
+<p>最小生成树：对于一个连通无向图G=(V,E)，对于每一条边(u,v)属于E都赋予了一个权重w(u,v)。我们希望找出一个无环子集T，其中T为E的子集，使得所有的顶点V位于T中， 同时T具有最小的权重。由于T是无环的，且连通所有结点因此T必然是一棵树。我们称这样的树为生成树。称从G中求取该生成树的问题为最小生成树问题。</p>
+<p>通用的最小生成树使用贪心策略。该策略在每个时刻找到最小生成树的一条边，并在整个策略过程中维持循环不变式：边的集合A在每次循环之前是某棵最小生成树的一个子集。</p>
+<p>在每一步，选择一条边(u,v)，将其加入集合A中，使得A不违反循环不变式。称这样的边(u,v)为边集合A的安全边。</p>
+<p>在Prim算法所具有的一个性质是集合A中的边总是构成一棵树。这棵树从一个任意的根结点r开始，一直长大到覆盖V中的所有结点为止。算法每一步在连接集合A和A之外的结点的所有边中， 选择一条边加入到A中（经特殊选择的边）。</p>
+<p>为了有效地实现Prim算法，需要一种快速的方法来选择一条新的边以便加入到由集合A中的边所构成的树中。在算法执行过程中，所有不在树A中的结点都存放在一个基于key的属性的最小优先级队列Q中。 对于每个结点v，属性v.key保存的是连接v和树中结点的所有边中最小边的权重。若这样的边不存在则权重为正无穷。属性v.pai给出的是结点v在树中的父结点。 下面是算法步骤：</p>
+<ul>
+<li>初始化：将所有结点的key设为正无穷，所有结点的父结点置为空(结点构造时，父结点默认为空）</li>
+<li>设置源点：将源点的key设为0，</li>
+<li>构造最小优先级队列：将所有顶点放入最小优先级队列Q中</li>
+<li>循环，直到最小优先级队列为空。循环中执行下列操作：<ul>
+<li>弹出最小优先级队列的头部顶点u</li>
+<li>从结点u出发的所有边，找出它的另一端的结点v。如果v也在Q中，且w(u,v)&lt;v.key，则证明(u,v)是v到集合A的最短边，因此设置v.pai=u,v.key=w(u,v) &gt;这里隐含着一个最小优先级队列的decreate_key操作</li>
+</ul>
+</li>
+</ul>
+<p>性能：Prim总时间代价为O(VlgV+ElgV)=O(ElgV)(使用最小堆实现的最小优先级队列），或者O(E+VlgV)（使用斐波那契堆实现最小优先级队列） </p>
+
+<p>Definition at line <a class="el" href="prim_8h_source.html#l00068">68</a> of file <a class="el" href="prim_8h_source.html">prim.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe2bd83fca7df7e07ece9a59b8e7f5a6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VertexType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::relax </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; VertexType &gt;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; VertexType &gt;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename VertexType::KeyType&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>relax：单源最短路径的松弛操作，算法导论22章xx节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from:松弛有向边的起始结点，必须非空。若为空则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">to：松弛有向边的终止结点，必须非空且不等于from。若为空或者等于from则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">weight:有向边的权重</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p>对每一个结点v来说，我们维持一个属性v.key，它记录了从源结点s到结点v的最短路径权重的上界。我们称v.key为s到v的最短路径估计。</p>
+<p>松弛过程是测试一下是否可以对从s到v的最短路径进行改善的过程，测试方法为： 将结点s到u之间的最短路径估计加上(u,v)边的权重，并与当前的s到v之间的最短路径估计进行比较。如果前者较小则对v.key和v.parent进行更新。</p>
+<p>性能：时间复杂度O(1) </p>
+
+<p>Definition at line <a class="el" href="bellmanford_8h_source.html#l00082">82</a> of file <a class="el" href="bellmanford_8h_source.html">bellmanford.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac368f242de9f06c7d936cba4aa0ab40b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IntroductionToAlgorithm::GraphAlgorithm::same_component </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>id1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>id2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>same_component：返回无向图的两个顶点是否位于同一个连通分量中。算法导论21章21.1节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指向图的强指针，必须非空。若为空则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">id1:第一个顶点，必须有效。若无效则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">id2:第二个顶点，必须有效。若无效则抛出异常</td><td>当满足以下条件之一时，id无效的情况：</td></tr>
+  </table>
+  </dd>
+</dl>
+<ul>
+<li>id小于0或者大于等于<code>GraphType::NUM</code></li>
+<li><code>graph-&gt;vertexes.at(id1)</code>为空</li>
+</ul>
+<p>在执行 same_component函数之前必须先执行 connected_component函数对无向图进行预处理。 </p>
+
+<p>Definition at line <a class="el" href="connectedcomponent_8h_source.html#l00143">143</a> of file <a class="el" href="connectedcomponent_8h_source.html">connectedcomponent.h</a>.</p>
 
 </div>
 </div>
@@ -529,7 +885,7 @@ template&lt;typename GraphType &gt; </div>
 </ul>
 <p>性能：时间复杂度O(V+E) </p>
 
-<p>Definition at line <a class="el" href="strongconnectedcomponent_8h_source.html#l00030">30</a> of file <a class="el" href="strongconnectedcomponent_8h_source.html">strongconnectedcomponent.h</a>.</p>
+<p>Definition at line <a class="el" href="strongconnectedcomponent_8h_source.html#l00048">48</a> of file <a class="el" href="strongconnectedcomponent_8h_source.html">strongconnectedcomponent.h</a>.</p>
 
 </div>
 </div>
@@ -562,7 +918,7 @@ template&lt;typename GraphType &gt; </div>
 <p>引理：一个有向图G=(V,E)是无环的当且仅当对其进行深度优先搜索时不产生后向边。</p>
 <p>性能：时间复杂度O(V+E) </p>
 
-<p>Definition at line <a class="el" href="topologysort_8h_source.html#l00025">25</a> of file <a class="el" href="topologysort_8h_source.html">topologysort.h</a>.</p>
+<p>Definition at line <a class="el" href="topologysort_8h_source.html#l00043">43</a> of file <a class="el" href="topologysort_8h_source.html">topologysort.h</a>.</p>
 
 </div>
 </div>
@@ -661,7 +1017,7 @@ template&lt;typename GraphType , typename ActionType  = std::function&lt;void(ty
 <li>当结点 v_id 的相邻结点访问完毕，则全局时间 time 递增，然后将结点 v_id 设置为完成状态 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="dfs_8h_source.html#l00143">143</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
+<p>Definition at line <a class="el" href="dfs_8h_source.html#l00160">160</a> of file <a class="el" href="dfs_8h_source.html">dfs.h</a>.</p>
 
 </div>
 </div>

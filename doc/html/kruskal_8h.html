@@ -111,7 +111,6 @@ $(document).ready(function(){initNavTree('kruskal_8h.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="disjointset_8h_source.html">src/set_algorithms/disjoint_set/disjointset.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="graph_8h_source.html">../../basic_graph/graph_representation/graph/graph.h</a>&quot;</code><br />
 </div>
 <p><a href="kruskal_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -126,9 +125,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6586a1f6485cc30b643ef752eee9b783"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
-<tr class="memitem:a6586a1f6485cc30b643ef752eee9b783"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a6586a1f6485cc30b643ef752eee9b783">IntroductionToAlgorithm::GraphAlgorithm::kruskal</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
-<tr class="separator:a6586a1f6485cc30b643ef752eee9b783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType,typename GraphType::VIDType)&gt;&gt; </td></tr>
+<tr class="memitem:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memTemplItemLeft" align="right" valign="top">GraphType::EWeightType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a2575c09c42d0b30b57702c9379d2fbfb">IntroductionToAlgorithm::GraphAlgorithm::kruskal</a> (std::shared_ptr&lt; GraphType &gt; graph, ActionType pre_action=[](typename GraphType::VIDType, typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType, typename GraphType::VIDType){})</td></tr>
+<tr class="memdesc:a2575c09c42d0b30b57702c9379d2fbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">kruskal：最小生成树的Kruskal算法，算法导论22章23.2节  <a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a2575c09c42d0b30b57702c9379d2fbfb">More...</a><br /></td></tr>
+<tr class="separator:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -8,5 +8,5 @@ var bfs__test_8h =
     [ "TEST_F", "bfs__test_8h.html#a59fff68a64eead9fa4c520e8bc260dd4", null ],
     [ "TEST_F", "bfs__test_8h.html#aae6dae424159e6c34db10d7e2e86a808", null ],
     [ "TEST_F", "bfs__test_8h.html#a92afb083c64a0576b07befc8aa74b342", null ],
-    [ "BFS_N", "bfs__test_8h.html#a03ae95bcf3deb5cb7f847e18cef466d1", null ]
+    [ "BFS_N", "bfs__test_8h.html#a7ef7694f8bba52249972564b4086098c", null ]
 ];

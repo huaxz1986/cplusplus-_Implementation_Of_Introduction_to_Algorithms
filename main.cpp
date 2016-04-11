@@ -42,8 +42,12 @@
 #include"src/graph_algorithms/basic_graph/graph_dfs/dfs_test.h"
 #include"src/graph_algorithms/basic_graph/topology_sort/topologysort_test.h"
 #include"src/graph_algorithms/basic_graph/strong_connected_component/strongconnectedcomponent_test.h"
+#include"src/graph_algorithms/basic_graph/connected_component/connectedcomponent_test.h"
 #include"src/queue_algorithms/min_queue/minqueue_test.h"
 #include"src/set_algorithms/disjoint_set/disjointset_test.h"
+#include"src/graph_algorithms/minimum_spanning_tree/prim/prim_test.h"
+#include"src/graph_algorithms/minimum_spanning_tree/kruskal/kruskal_test.h"
+#include"src/graph_algorithms/single_source_shortest_path/bellman_ford/bellmanford_test.h"
 int main(int argc,char** argv)
 {
     ::testing::InitGoogleTest(&argc,argv);

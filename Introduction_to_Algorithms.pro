@@ -64,7 +64,11 @@ HEADERS += \
     src/graph_algorithms/minimum_spanning_tree/kruskal/kruskal.h \
     src/graph_algorithms/minimum_spanning_tree/kruskal/kruskal_test.h \
     src/set_algorithms/disjoint_set/disjointset.h \
-    src/set_algorithms/disjoint_set/disjointset_test.h
+    src/set_algorithms/disjoint_set/disjointset_test.h \
+    src/graph_algorithms/basic_graph/connected_component/connectedcomponent.h \
+    src/graph_algorithms/basic_graph/connected_component/connectedcomponent_test.h \
+    src/graph_algorithms/single_source_shortest_path/bellman_ford/bellmanford.h \
+    src/graph_algorithms/single_source_shortest_path/bellman_ford/bellmanford_test.h
 
 
 

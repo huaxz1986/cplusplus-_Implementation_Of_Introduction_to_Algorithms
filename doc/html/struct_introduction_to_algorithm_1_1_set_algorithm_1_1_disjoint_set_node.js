@@ -8,5 +8,5 @@ var struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node =
     [ "union_set", "struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#aeb6281c8d6ec20987015fb1d1421b309", null ],
     [ "parent", "struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ad5cf3f4d739ecd0c1f6d3b3005e21993", null ],
     [ "rank", "struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a1fd137f74ca1317bfb02d9e1640ce147", null ],
-    [ "value", "struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a03e58ee7a2d6949283fafcd1de53e53b", null ]
+    [ "value", "struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ae01535aa5e8ba05dceedd5c475d61c18", null ]
 ];

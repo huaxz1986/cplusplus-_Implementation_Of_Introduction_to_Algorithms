@@ -49,7 +49,7 @@ Binary\+Tree\+Node：二叉树的节点，算法导论xx章xx节
 
 任何一个节点都有两个强引用指向左右子节点，以及一个弱引用指向它的父节点。节点还有一个{\ttfamily key}成员包含具体的数据 
 
-Definition at line 13 of file binarytreenode.\+h.
+Definition at line 31 of file binarytreenode.\+h.
 
 
 
@@ -59,7 +59,7 @@ Definition at line 13 of file binarytreenode.\+h.
 \subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef K\+Type {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ K\+Type $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_adbd8539e7a907c3a8fe7a8b79e7032e8}
 节点保存的数据的类型 
 
-Definition at line 16 of file binarytreenode.\+h.
+Definition at line 34 of file binarytreenode.\+h.
 
 
 
@@ -77,7 +77,7 @@ Definition at line 16 of file binarytreenode.\+h.
 
 所有的成员变量都采取默认值 
 
-Definition at line 21 of file binarytreenode.\+h.
+Definition at line 39 of file binarytreenode.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a8382a5ddc6f9c8cbfeacd0f0163d8c4d}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!Binary\+Tree\+Node@{Binary\+Tree\+Node}}
 \index{Binary\+Tree\+Node@{Binary\+Tree\+Node}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
@@ -97,7 +97,7 @@ Definition at line 21 of file binarytreenode.\+h.
 \end{DoxyParams}
 
 
-Definition at line 30 of file binarytreenode.\+h.
+Definition at line 48 of file binarytreenode.\+h.
 
 
 
@@ -118,7 +118,7 @@ is\+\_\+left\+\_\+child\+:判断本节点是否左子节点。
 \end{DoxyReturn}
 
 
-Definition at line 81 of file binarytreenode.\+h.
+Definition at line 99 of file binarytreenode.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a34c1912a2a7e9caa7a67354218fd7640}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!is\+\_\+right\+\_\+child@{is\+\_\+right\+\_\+child}}
 \index{is\+\_\+right\+\_\+child@{is\+\_\+right\+\_\+child}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
@@ -136,7 +136,7 @@ is\+\_\+right\+\_\+child\+:判断本节点是否右子节点。
 \end{DoxyReturn}
 
 
-Definition at line 95 of file binarytreenode.\+h.
+Definition at line 113 of file binarytreenode.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_ae552fb23243e499a60ef73375fabe239}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
@@ -154,7 +154,7 @@ to\+\_\+string\+:返回该节点的字符串描述
 \end{DoxyReturn}
 该函数打印本节点的{\ttfamily key}，以及父节点（若存在）、子节点（若存在）的{\ttfamily key} 
 
-Definition at line 40 of file binarytreenode.\+h.
+Definition at line 58 of file binarytreenode.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a694d14f0b33f2f052f11148ecbe1684e}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!to\+\_\+xml@{to\+\_\+xml}}
 \index{to\+\_\+xml@{to\+\_\+xml}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
@@ -172,7 +172,7 @@ to\+\_\+xml\+:返回以该节点为根的子树的{\ttfamily xml}描述。
 \end{DoxyReturn}
 该函数返回以本节点为根的子树的{\ttfamily xml}描述。对子节点递归调用从而生成{\ttfamily xml}数据 
 
-Definition at line 61 of file binarytreenode.\+h.
+Definition at line 79 of file binarytreenode.\+h.
 
 
 
@@ -182,28 +182,28 @@ Definition at line 61 of file binarytreenode.\+h.
 \subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Key\+Type} {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ K\+Type $>$\+::key}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_af3cb8030ab05ccaf1a69a86c9f468b8d}
 节点的保存的数据 
 
-Definition at line 107 of file binarytreenode.\+h.
+Definition at line 125 of file binarytreenode.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a3e056b1d34820497ac3a23a16180be2b}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!lchild@{lchild}}
 \index{lchild@{lchild}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
 \subsubsection[{lchild}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::shared\+\_\+ptr$<${\bf Binary\+Tree\+Node}$>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ K\+Type $>$\+::lchild}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_a3e056b1d34820497ac3a23a16180be2b}
 节点的左子节点的强引用 
 
-Definition at line 105 of file binarytreenode.\+h.
+Definition at line 123 of file binarytreenode.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_aa94cbc785416ba74505661baac55a9fd}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!parent@{parent}}
 \index{parent@{parent}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
 \subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::weak\+\_\+ptr$<${\bf Binary\+Tree\+Node}$>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ K\+Type $>$\+::parent}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_aa94cbc785416ba74505661baac55a9fd}
 节点的父节点的弱引用 
 
-Definition at line 104 of file binarytreenode.\+h.
+Definition at line 122 of file binarytreenode.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_aaccc444db582ed362bff4e50efbc47c7}{}\index{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}!rchild@{rchild}}
 \index{rchild@{rchild}!Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node@{Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}}
 \subsubsection[{rchild}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::shared\+\_\+ptr$<${\bf Binary\+Tree\+Node}$>$ {\bf Introduction\+To\+Algorithm\+::\+Tree\+Algorithm\+::\+Binary\+Tree\+Node}$<$ K\+Type $>$\+::rchild}\label{struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node_aaccc444db582ed362bff4e50efbc47c7}
 节点的右子节点的强引用 
 
-Definition at line 106 of file binarytreenode.\+h.
+Definition at line 124 of file binarytreenode.\+h.
 
 
 

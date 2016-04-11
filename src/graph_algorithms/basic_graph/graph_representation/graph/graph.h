@@ -1,3 +1,21 @@
+/*
+ * Copyright 2016- huaxz <huaxz1986@163.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: huaxz1986@163.com (huaxz)
+ */
 #ifndef GRAPH
 #define GRAPH
 #include"../matrix_graph/matrixgraph.h"
@@ -41,35 +59,40 @@ namespace IntroductionToAlgorithm
             //!add_vertex:添加一个顶点
             /*!
             * \param  key:顶点存放的数据
+            * \return: 顶点的id
             *
             * 如果已经有了N个顶点，则图的顶点已满，则抛出`std::invalid_argument`异常.
             *
             * 在每一次添加顶点之前会从`next_empty_vertex·指定的位置处开始寻找可以添加顶点的地方。如果找不到可以添加顶点的地方，则抛出`std::invalid_argument`异常
             */
-            void add_vertex(const typename VertexType::KeyType& key)
+            VIDType add_vertex(const typename VertexType::KeyType& key)
             {
                 while(next_empty_vertex<N&&vertexes.at(next_empty_vertex))
                     next_empty_vertex++;
                 if(next_empty_vertex>=N)
                     throw std::invalid_argument("add_vertex error:Graph Vertex is full, can not add vertex.");
-                vertexes.at(next_empty_vertex)=std::make_shared<VertexType>(key,next_empty_vertex);
+                VIDType v_id=next_empty_vertex;
+                vertexes.at(next_empty_vertex)=std::make_shared<VertexType>(key,v_id);
                 next_empty_vertex++;
+                return v_id;
             }
             //!add_vertex:添加一个顶点
             /*!
             * \param  key:顶点存放的数据
             * \param id:指定该顶点的`id`
+            * \return: 顶点的id
             *
             * - 如果`id<0`或者`id>=N`，则抛出异常。因为正常的顶点`id`在`[0,N)`之间
             * - 如果已经存在某个顶点的`id`为指定的`id`，则抛出异常
             */
-            void add_vertex(const typename VertexType::KeyType &key,VIDType id)
+            VIDType add_vertex(const typename VertexType::KeyType &key,VIDType id)
             {
                 if(id<0||id>=N)
                     throw std::invalid_argument("add_vertex error:id must >=0 and <N.");
                 if(vertexes.at(id))
                     throw std::invalid_argument("add_vertex error: vertex of id has existed.");
                 vertexes.at(id)=std::make_shared<VertexType>(key,id);
+                return id;
             }
             //!modify_vertex:修改一个顶点的数据
             /*!

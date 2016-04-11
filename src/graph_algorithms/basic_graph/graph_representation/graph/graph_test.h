@@ -1,3 +1,21 @@
+/*
+ * Copyright 2016- huaxz <huaxz1986@163.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: huaxz1986@163.com (huaxz)
+ */
 #ifndef GRAPH_TEST
 #define GRAPH_TEST
 #include"src/google_test/gtest.h"
@@ -6,7 +24,9 @@
 using IntroductionToAlgorithm::GraphAlgorithm::Graph;
 using IntroductionToAlgorithm::GraphAlgorithm::Vertex;
 
-const int G_N= 10; /*!< 测试的图顶点数量*/
+namespace {
+    const int G_N= 10; /*!< 测试的图顶点数量*/
+}
 
 //!GraphTest:测试类，用于为测试提供基础数据
 /*!
@@ -51,7 +71,7 @@ TEST_F(GraphTest,test_add_vertex)
 {
     for(int i=0;i<G_N;i++) //空图：可以任意添加顶点
     {
-        _empty_graph->add_vertex(i);
+        EXPECT_EQ(_empty_graph->add_vertex(i),i);
         EXPECT_NEAR(_empty_graph->vertexes.at(i)->key,i,0.01);
         EXPECT_EQ(_empty_graph->vertexes.at(i)->id,i);
     }
@@ -71,7 +91,7 @@ TEST_F(GraphTest,test_add_vertex_with_id)
 {
     for(int i=0;i<G_N;i++) //空图：可以任意添加顶点
     {
-        _empty_graph->add_vertex(i,G_N-i-1);
+        EXPECT_EQ(_empty_graph->add_vertex(i,G_N-i-1),G_N-i-1);
     }
     for(int i=0;i<G_N;i++)
     {

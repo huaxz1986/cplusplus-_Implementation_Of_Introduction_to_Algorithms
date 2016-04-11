@@ -107,47 +107,65 @@ $(document).ready(function(){initNavTree('radixsort_8h_source.html','');});
 <div class="title">radixsort.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="radixsort_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef RADIXSORT</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define RADIXSORT</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;../insert_sort/insertsort.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&lt;cmath&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include&lt;cassert&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">namespace </span>SortAlgorithm</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">   21</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; T <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">digi_on_N</a>(T num,std::size_t n)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;       static_assert(std::is_integral&lt;T&gt;::value, <span class="stringliteral">&quot;T must be integer!&quot;</span>); <span class="comment">//必须针对整数才能取指定位数上的数字</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;       <span class="keywordflow">return</span> num/(T)std::pow(10,n)-num/(T)std::pow(10,n+1)*10;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352">   49</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352">radix_sort</a>(<span class="keyword">const</span> Iterator begin,<span class="keyword">const</span> Iterator end,std::size_t radix_width)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;     {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::value_type T;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        assert(radix_width!=0); <span class="comment">//位数为有效的，0位数无效</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        static_assert(std::is_integral&lt;T&gt;::value, <span class="stringliteral">&quot;sequence to be sorted must be integer!&quot;</span>); <span class="comment">//必须针对整数进行基数排序</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">auto</span> size=std::distance(begin,end);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span>(size&lt;=1)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">for</span>(std::size_t i=0;i&lt;radix_width;i++) <span class="comment">//从最低位(第0位为个位）到 （RADIXWITH-1）位的位数进行排序（一共RADIXWITH位）</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">auto</span> compare=[i](T little, T big){<span class="keywordflow">return</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">digi_on_N</a>(little,i)&lt;<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">digi_on_N</a>(big,i);}; <span class="comment">//必须用 &lt; 比较才是稳定排序，否则是不稳定排序，不能用快排（非稳定）</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            insert_sort&lt;Iterator,decltype(compare)&gt;(begin,end,compare);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;     }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif // RADIXSORT</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_ad16d57510168e93b3d7439bf8ba48352"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352">IntroductionToAlgorithm::SortAlgorithm::radix_sort</a></div><div class="ttdeci">void radix_sort(const Iterator begin, const Iterator end, std::size_t radix_width)</div><div class="ttdoc">radix_sort：算法导论第8章 8.3 </div><div class="ttdef"><b>Definition:</b> <a href="radixsort_8h_source.html#l00049">radixsort.h:49</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_html"><div class="ttname"><a href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="longest__common__subsequence_8h_source.html#l00006">longest_common_subsequence.h:6</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_a563e87041fc859e7bafe4a11a790dec2"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">IntroductionToAlgorithm::SortAlgorithm::digi_on_N</a></div><div class="ttdeci">T digi_on_N(T num, std::size_t n)</div><div class="ttdoc">digi_on_N ： 获取正整数指定位数上的数字 </div><div class="ttdef"><b>Definition:</b> <a href="radixsort_8h_source.html#l00021">radixsort.h:21</a></div></div>
+<a href="radixsort_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2016- huaxz &lt;huaxz1986@163.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Author: huaxz1986@163.com (huaxz)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef RADIXSORT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define RADIXSORT</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;../insert_sort/insertsort.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&lt;cmath&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include&lt;cassert&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">namespace </span>SortAlgorithm</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">   39</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt; T <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">digi_on_N</a>(T num,std::size_t n)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;       static_assert(std::is_integral&lt;T&gt;::value, <span class="stringliteral">&quot;T must be integer!&quot;</span>); <span class="comment">//必须针对整数才能取指定位数上的数字</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;       <span class="keywordflow">return</span> num/(T)std::pow(10,n)-num/(T)std::pow(10,n+1)*10;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352">   67</a></span>&#160;                <span class="keywordtype">void</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352">radix_sort</a>(<span class="keyword">const</span> Iterator begin,<span class="keyword">const</span> Iterator end,std::size_t radix_width)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;     {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">typedef</span> <span class="keyword">typename</span> std::iterator_traits&lt;Iterator&gt;::value_type T;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        assert(radix_width!=0); <span class="comment">//位数为有效的，0位数无效</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        static_assert(std::is_integral&lt;T&gt;::value, <span class="stringliteral">&quot;sequence to be sorted must be integer!&quot;</span>); <span class="comment">//必须针对整数进行基数排序</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">auto</span> size=std::distance(begin,end);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span>(size&lt;=1)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">for</span>(std::size_t i=0;i&lt;radix_width;i++) <span class="comment">//从最低位(第0位为个位）到 （RADIXWITH-1）位的位数进行排序（一共RADIXWITH位）</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keyword">auto</span> compare=[i](T little, T big){<span class="keywordflow">return</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">digi_on_N</a>(little,i)&lt;<a class="code" href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">digi_on_N</a>(big,i);}; <span class="comment">//必须用 &lt; 比较才是稳定排序，否则是不稳定排序，不能用快排（非稳定）</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            insert_sort&lt;Iterator,decltype(compare)&gt;(begin,end,compare);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;     }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif // RADIXSORT</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_ad16d57510168e93b3d7439bf8ba48352"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352">IntroductionToAlgorithm::SortAlgorithm::radix_sort</a></div><div class="ttdeci">void radix_sort(const Iterator begin, const Iterator end, std::size_t radix_width)</div><div class="ttdoc">radix_sort：算法导论第8章 8.3 </div><div class="ttdef"><b>Definition:</b> <a href="radixsort_8h_source.html#l00067">radixsort.h:67</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_html"><div class="ttname"><a href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="longest__common__subsequence_8h_source.html#l00024">longest_common_subsequence.h:24</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_sort_algorithm_html_a563e87041fc859e7bafe4a11a790dec2"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a563e87041fc859e7bafe4a11a790dec2">IntroductionToAlgorithm::SortAlgorithm::digi_on_N</a></div><div class="ttdeci">T digi_on_N(T num, std::size_t n)</div><div class="ttdoc">digi_on_N ： 获取正整数指定位数上的数字 </div><div class="ttdef"><b>Definition:</b> <a href="radixsort_8h_source.html#l00039">radixsort.h:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

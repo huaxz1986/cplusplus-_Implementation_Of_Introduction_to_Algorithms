@@ -1,8 +1,30 @@
+/*
+ * Copyright 2016- huaxz <huaxz1986@163.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: huaxz1986@163.com (huaxz)
+ */
 #ifndef DFS_TEST
 #define DFS_TEST
 #include"src/google_test/gtest.h"
 #include"dfs.h"
-const int DFS_N= 10;  /*!< 测试的图顶点数量*/
+#include"../graph_representation/graph/graph.h"
+namespace  {
+    const int DFS_N= 10;  /*!< 测试的图顶点数量*/
+}
+
 
 using IntroductionToAlgorithm::GraphAlgorithm::Graph;
 using IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex;
@@ -110,14 +132,14 @@ protected:
         _1e_graph->add_edge(std::make_tuple(0,1,1));  //该图只有一条边
 
 
-        //****  含顶点图和边图：10个顶点，45条边（任意两点之间都有边，但是都是单向边）   ****
+        //****  含顶点图和边图：10个顶点，9条边   ****
         _list_graph=std::make_shared<GType>(-1); //边的无效权重为-1
         for(int i=0;i<BFS_N;i++)
             _list_graph->add_vertex(1+i/BFS_N);
         for(int i=0;i<BFS_N-1;i++)
                 _list_graph->add_edge(std::make_tuple(i,i+1,10+i)); //该图的边是从左到右组成一个链条
 
-        //****  含顶点图和边图：10个顶点，45条边（任意两点之间都有边，但是都是单向边）   ****
+        //****  含顶点图和边图：10个顶点，9条边   ****
         _rlist_graph=std::make_shared<GType>(-1); //边的无效权重为-1
         for(int i=0;i<BFS_N;i++)
             _rlist_graph->add_vertex(1+i/BFS_N);

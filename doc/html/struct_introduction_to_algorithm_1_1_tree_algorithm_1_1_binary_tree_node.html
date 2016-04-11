@@ -164,7 +164,7 @@ struct IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode&lt; KType &gt;</h3
 <p>BinaryTreeNode：二叉树的节点，算法导论xx章xx节 </p>
 <p>任何一个节点都有两个强引用指向左右子节点，以及一个弱引用指向它的父节点。节点还有一个<code>key</code>成员包含具体的数据 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00013">13</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00031">31</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="adbd8539e7a907c3a8fe7a8b79e7032e8"></a>
 <div class="memitem">
@@ -179,7 +179,7 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>节点保存的数据的类型 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00016">16</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00034">34</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -210,7 +210,7 @@ template&lt;typename KType &gt; </div>
 <p>默认构造函数 </p>
 <p>所有的成员变量都采取默认值 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00021">21</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00039">39</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -246,7 +246,7 @@ template&lt;typename KType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00030">30</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00048">48</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -277,7 +277,7 @@ template&lt;typename KType &gt; </div>
 <p>is_left_child:判断本节点是否左子节点。 </p>
 <dl class="section return"><dt>Returns</dt><dd>返回<code>true</code>或者<code>false</code> 该函数判断本节点是否是左子节点。如果本节点的父节点为空，则返回<code>false</code>；如果本节点的父节点非空且本节点是父节点的左子节点，则返回<code>true</code>；否则返回<code>false</code> </dd></dl>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00081">81</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00099">99</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -307,7 +307,7 @@ template&lt;typename KType &gt; </div>
 <p>is_right_child:判断本节点是否右子节点。 </p>
 <dl class="section return"><dt>Returns</dt><dd>返回<code>true</code>或者<code>false</code> 该函数判断本节点是否是右子节点。如果本节点的父节点为空，则返回<code>false</code>；如果本节点的父节点非空且本节点是父节点的右子节点，则返回<code>true</code>；否则返回<code>false</code> </dd></dl>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00095">95</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00113">113</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -338,7 +338,7 @@ template&lt;typename KType &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>: 本节点的描述字符串</dd></dl>
 <p>该函数打印本节点的<code>key</code>，以及父节点（若存在）、子节点（若存在）的<code>key</code> </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00040">40</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00058">58</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +369,7 @@ template&lt;typename KType &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>: 本节点子树的<code>xml</code>描述的字符串</dd></dl>
 <p>该函数返回以本节点为根的子树的<code>xml</code>描述。对子节点递归调用从而生成<code>xml</code>数据 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00061">61</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00079">79</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>节点的保存的数据 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00107">107</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00125">125</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>节点的左子节点的强引用 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00105">105</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00123">123</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -421,7 +421,7 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>节点的父节点的弱引用 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00104">104</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00122">122</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>
@@ -438,7 +438,7 @@ template&lt;typename KType &gt; </div>
 </div><div class="memdoc">
 <p>节点的右子节点的强引用 </p>
 
-<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00106">106</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
+<p>Definition at line <a class="el" href="binarytreenode_8h_source.html#l00124">124</a> of file <a class="el" href="binarytreenode_8h_source.html">binarytreenode.h</a>.</p>
 
 </div>
 </div>

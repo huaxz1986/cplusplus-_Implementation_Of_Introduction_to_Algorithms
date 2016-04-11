@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['Node',['../struct_node.html',1,'']]]
+  ['kruskaltest',['KruskalTest',['../class_kruskal_test.html',1,'']]]
 ];

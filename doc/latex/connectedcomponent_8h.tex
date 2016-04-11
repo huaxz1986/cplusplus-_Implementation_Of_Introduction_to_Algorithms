@@ -1,0 +1,23 @@
+\hypertarget{connectedcomponent_8h}{}\section{src/graph\+\_\+algorithms/basic\+\_\+graph/connected\+\_\+component/connectedcomponent.h File Reference}
+\label{connectedcomponent_8h}\index{src/graph\+\_\+algorithms/basic\+\_\+graph/connected\+\_\+component/connectedcomponent.\+h@{src/graph\+\_\+algorithms/basic\+\_\+graph/connected\+\_\+component/connectedcomponent.\+h}}
+{\ttfamily \#include \char`\"{}../../basic\+\_\+graph/graph\+\_\+representation/graph\+\_\+vertex/vertex.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/set\+\_\+algorithms/disjoint\+\_\+set/disjointset.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex$<$ K\+Type $>$}
+\begin{DoxyCompactList}\small\item\em Set\+Vertex：图的顶点，它带一个node属性，算法导论22章22.1节 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a31fe8fc6f732112632c51221e739a7d4}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::connected\+\_\+component} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em connected\+\_\+component：无向图的连通分量，算法导论21章21.1节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ac368f242de9f06c7d936cba4aa0ab40b}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::same\+\_\+component} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type id1, typename Graph\+Type\+::\+V\+I\+D\+Type id2)
+\begin{DoxyCompactList}\small\item\em same\+\_\+component：返回无向图的两个顶点是否位于同一个连通分量中。算法导论21章21.1节 \end{DoxyCompactList}\end{DoxyCompactItemize}

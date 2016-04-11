@@ -107,274 +107,295 @@ $(document).ready(function(){initNavTree('graph__test_8h_source.html','');});
 <div class="title">graph_test.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="graph__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GRAPH_TEST</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GRAPH_TEST</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;../graph_vertex/vertex.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="graph_8h.html">graph.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">IntroductionToAlgorithm::GraphAlgorithm::Graph</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">    9</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>= 10; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_graph_test.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graph_test.html">GraphTest</a>:<span class="keyword">public</span> ::testing::Test</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_graph_test.html#a35200ea3d08690769c40550cba2ecd5a">   19</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">Graph&lt;G_N,Vertex&lt;double&gt;</a>&gt; <a class="code" href="class_graph_test.html#a35200ea3d08690769c40550cba2ecd5a">GType</a>; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_graph_test.html#a2f0d213d11ea0b8245c526379674b91b">   22</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graph_test.html#a2f0d213d11ea0b8245c526379674b91b">SetUp</a>(){</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">//****  空图：0个顶点，0条边   ****</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">_empty_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//****  含顶点图：10个顶点   ****</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">_n_vertexes_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            _n_vertexes_graph-&gt;add_vertex(i/G_N);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">//****  含顶点图和边图：10个顶点，9条边   ****</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>-&gt;add_vertex(1+i/G_N);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i+1;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>-&gt;add_edge(std::make_tuple(i,j,i*10+j));</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_graph_test.html#a53c606b64363a694f425a844dfabc08e">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graph_test.html#a53c606b64363a694f425a844dfabc08e">TearDown</a>(){}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">   40</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">_empty_graph</a>;    </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">   41</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">_n_vertexes_graph</a>; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">   42</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">   50</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_vertex)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++) <span class="comment">//空图：可以任意添加顶点</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        _empty_graph-&gt;add_vertex(i);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        EXPECT_NEAR(_empty_graph-&gt;vertexes.at(i)-&gt;key,i,0.01);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        EXPECT_EQ(_empty_graph-&gt;vertexes.at(i)-&gt;id,i);</div>
+<a href="graph__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2016- huaxz &lt;huaxz1986@163.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Author: huaxz1986@163.com (huaxz)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef GRAPH_TEST</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define GRAPH_TEST</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;../graph_vertex/vertex.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="graph_8h.html">graph.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">IntroductionToAlgorithm::GraphAlgorithm::Graph</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespaceanonymous__namespace_02graph__test_8h_03.html">   27</a></span>&#160;<span class="keyword">namespace </span>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">   28</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>= 10; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_graph_test.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graph_test.html">GraphTest</a>:<span class="keyword">public</span> ::testing::Test</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_graph_test.html#a35200ea3d08690769c40550cba2ecd5a">   39</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">Graph&lt;G_N,Vertex&lt;double&gt;</a>&gt; <a class="code" href="class_graph_test.html#a35200ea3d08690769c40550cba2ecd5a">GType</a>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_graph_test.html#a2f0d213d11ea0b8245c526379674b91b">   42</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graph_test.html#a2f0d213d11ea0b8245c526379674b91b">SetUp</a>(){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">//****  空图：0个顶点，0条边   ****</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">_empty_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">//****  含顶点图：10个顶点   ****</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">_n_vertexes_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            _n_vertexes_graph-&gt;add_vertex(i/G_N);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">//****  含顶点图和边图：10个顶点，9条边   ****</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>=std::make_shared&lt;GType&gt;(-1); <span class="comment">//边的无效权重为-1</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>-&gt;add_vertex(1+i/G_N);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i+1;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>-&gt;add_edge(std::make_tuple(i,j,i*10+j));</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++) <span class="comment">//满图：不可以添加顶点</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        EXPECT_THROW(_empty_graph-&gt;add_vertex(i),std::invalid_argument);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        EXPECT_THROW(_n_vertexes_graph-&gt;add_vertex(i),std::invalid_argument);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_vertex(i),std::invalid_argument);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_graph_test.html#a53c606b64363a694f425a844dfabc08e">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_graph_test.html#a53c606b64363a694f425a844dfabc08e">TearDown</a>(){}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">   60</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">_empty_graph</a>;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">   61</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">_n_vertexes_graph</a>; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">   62</a></span>&#160;    std::shared_ptr&lt;GType&gt; <a class="code" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">_n_vertexes_m_edges_graph</a>; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a9611084dd0e7dde18e30311a1f1c0525">   70</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_vertex_with_id)</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">   70</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_vertex)</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++) <span class="comment">//空图：可以任意添加顶点</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++) <span class="comment">//空图：可以任意添加顶点</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        _empty_graph-&gt;add_vertex(i,G_N-i-1);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        EXPECT_NEAR(_empty_graph-&gt;vertexes.at(i)-&gt;key,G_N-i-1,0.01);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        EXPECT_EQ(_empty_graph-&gt;vertexes.at(i)-&gt;id,i);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)<span class="comment">//满图：不可以添加顶点</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        EXPECT_THROW(_empty_graph-&gt;add_vertex(i,i),std::invalid_argument);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        EXPECT_THROW(_n_vertexes_graph-&gt;add_vertex(i,i),std::invalid_argument);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_vertex(i,i),std::invalid_argument);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a5166743e2230390ac96f5e287b763589">   93</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_modify_vertex)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++) <span class="comment">//空图：不可以修改顶点</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        EXPECT_THROW(_empty_graph-&gt;modify_vertex(1.0,i),std::invalid_argument);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)  <span class="comment">//满图：可以任意修改顶点</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        EXPECT_NEAR(_n_vertexes_graph-&gt;vertexes.at(i)-&gt;key,i/<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>,0.01);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        _n_vertexes_graph-&gt;modify_vertex(9.0,i);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        EXPECT_NEAR(_n_vertexes_graph-&gt;vertexes.at(i)-&gt;key,9.0,0.01);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        EXPECT_NEAR(_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;key,1+i/<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>,0.01);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        _n_vertexes_m_edges_graph-&gt;modify_vertex(10.0,i);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        EXPECT_NEAR(_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;key,10.0,0.01);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        EXPECT_EQ(_empty_graph-&gt;add_vertex(i),i);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        EXPECT_NEAR(_empty_graph-&gt;vertexes.at(i)-&gt;key,i,0.01);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        EXPECT_EQ(_empty_graph-&gt;vertexes.at(i)-&gt;id,i);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++) <span class="comment">//满图：不可以添加顶点</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        EXPECT_THROW(_empty_graph-&gt;add_vertex(i),std::invalid_argument);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        EXPECT_THROW(_n_vertexes_graph-&gt;add_vertex(i),std::invalid_argument);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_vertex(i),std::invalid_argument);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a9611084dd0e7dde18e30311a1f1c0525">   90</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_vertex_with_id)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++) <span class="comment">//空图：可以任意添加顶点</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        EXPECT_EQ(_empty_graph-&gt;add_vertex(i,G_N-i-1),G_N-i-1);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        EXPECT_NEAR(_empty_graph-&gt;vertexes.at(i)-&gt;key,G_N-i-1,0.01);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        EXPECT_EQ(_empty_graph-&gt;vertexes.at(i)-&gt;id,i);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)<span class="comment">//满图：不可以添加顶点</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        EXPECT_THROW(_empty_graph-&gt;add_vertex(i,i),std::invalid_argument);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        EXPECT_THROW(_n_vertexes_graph-&gt;add_vertex(i,i),std::invalid_argument);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_vertex(i,i),std::invalid_argument);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="graph__test_8h.html#af9f41b341d4e5b5b93fe1d0ba371d6c4">  115</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_weight)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            EXPECT_THROW(_empty_graph-&gt;weight(i,j),std::invalid_argument);    <span class="comment">//空图：没有顶点没有边</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            EXPECT_THROW(_n_vertexes_graph-&gt;weight(i,j),std::invalid_argument);<span class="comment">//无边有顶点的图：没有边</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;weight(i,j),std::invalid_argument);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;weight(i,j),i*10+j);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a5166743e2230390ac96f5e287b763589">  113</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_modify_vertex)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++) <span class="comment">//空图：不可以修改顶点</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        EXPECT_THROW(_empty_graph-&gt;modify_vertex(1.0,i),std::invalid_argument);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)  <span class="comment">//满图：可以任意修改顶点</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        EXPECT_NEAR(_n_vertexes_graph-&gt;vertexes.at(i)-&gt;key,i/<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>,0.01);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        _n_vertexes_graph-&gt;modify_vertex(9.0,i);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        EXPECT_NEAR(_n_vertexes_graph-&gt;vertexes.at(i)-&gt;key,9.0,0.01);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        EXPECT_NEAR(_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;key,1+i/<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>,0.01);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        _n_vertexes_m_edges_graph-&gt;modify_vertex(10.0,i);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        EXPECT_NEAR(_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;key,10.0,0.01);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="graph__test_8h.html#ae2ffbd20a0a67c03c7bb4cc00df88154">  133</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_has_edge)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            EXPECT_THROW(_empty_graph-&gt;has_edge(i,j),std::invalid_argument); <span class="comment">//空图：没有顶点没有边</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            EXPECT_FALSE(_n_vertexes_graph-&gt;has_edge(i,j));   <span class="comment">//无边有顶点的图：没有边</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                EXPECT_FALSE(_n_vertexes_m_edges_graph-&gt;has_edge(i,j));</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                EXPECT_TRUE(_n_vertexes_m_edges_graph-&gt;has_edge(i,j));</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="graph__test_8h.html#af018dbd6c870fba57fac5e0995db6790">  151</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_edge)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            EXPECT_THROW(_empty_graph-&gt;add_edge(std::make_tuple(i,j,i*j)),std::invalid_argument);  <span class="comment">//空图：没有顶点没有边</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            _n_vertexes_graph-&gt;add_edge(std::make_tuple(i,j,i*j));  <span class="comment">//无边有顶点的图：没有边</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            EXPECT_EQ(_n_vertexes_graph-&gt;weight(i,j),i*j);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                _n_vertexes_m_edges_graph-&gt;add_edge(std::make_tuple(i,j,i*j));</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;weight(i,j),i*j);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            }<span class="keywordflow">else</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_edge(std::make_tuple(i,j,i*j)),std::invalid_argument);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a5a11c06b4be631854ad876ee82280ba0">  174</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_edges)</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    std::vector&lt;typename GType::EdgeTupleType&gt; tuples;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            tuples.push_back(std::make_tuple(i,j,9));</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    EXPECT_THROW(_empty_graph-&gt;add_edges(tuples.begin(),tuples.end()),std::invalid_argument);  <span class="comment">//空图：没有顶点没有边</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    _n_vertexes_graph-&gt;add_edges(tuples.begin(),tuples.end());  <span class="comment">//无边有顶点的图：没有边</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    EXPECT_EQ(_n_vertexes_graph-&gt;edge_tuples(),tuples);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_edges(tuples.begin(),tuples.end()),std::invalid_argument);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="graph__test_8h.html#adcb79e1f23c2e7f6a3dd20abd2db92c2">  192</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_adjust_edge)</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            EXPECT_THROW(_empty_graph-&gt;adjust_edge(i,j,0),std::invalid_argument);<span class="comment">//空图：没有顶点没有边</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            EXPECT_THROW(_n_vertexes_graph-&gt;adjust_edge(i,j,0),std::invalid_argument); <span class="comment">//无边有顶点的图：没有边</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;adjust_edge(i,j,0),std::invalid_argument);</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            }<span class="keywordflow">else</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                _n_vertexes_m_edges_graph-&gt;adjust_edge(i,j,i*j);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;weight(i,j),i*j);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="graph__test_8h.html#ad1c11dd442ecc55efe66f47431a5d871">  214</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_edge_tuples)</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    EXPECT_EQ(_empty_graph-&gt;edge_tuples().size(),0);<span class="comment">//空图：没有顶点没有边</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    EXPECT_EQ(_n_vertexes_graph-&gt;edge_tuples().size(),0);<span class="comment">//无边有顶点的图：没有边</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    std::vector&lt;typename GType::EdgeTupleType&gt; real_tuples;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i+1;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            real_tuples.push_back(std::make_tuple(i,j,i*10+j));</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;edge_tuples(),real_tuples);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="graph__test_8h.html#ae5016dbe2662a83d84a25fea160b3540">  230</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_vertex_edge_tuples)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        EXPECT_THROW(_empty_graph-&gt;vertex_edge_tuples(i),std::invalid_argument);<span class="comment">//空图：没有顶点没有边</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        EXPECT_EQ(_n_vertexes_graph-&gt;vertex_edge_tuples(i).size(),0);<span class="comment">//无边有顶点的图：没有边</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    {</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        std::vector&lt;typename GType::EdgeTupleType&gt; real_tuples;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i+1;j&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;j++)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            real_tuples.push_back(std::make_tuple(i,j,i*10+j));</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;vertex_edge_tuples(i),real_tuples);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="graph__test_8h.html#afc5787e371a4cbb391cfd9a40e7a627e">  251</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_inverse)</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">auto</span> empty_inverse=_empty_graph-&gt;inverse();</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">auto</span> _n_vertexes_inverse=_n_vertexes_graph-&gt;inverse();</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">auto</span> _n_vertexes_m_edges_inverse=_n_vertexes_m_edges_graph-&gt;inverse();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">//无效边权重相同</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    EXPECT_EQ(empty_inverse-&gt;matrix.invalid_weight,_empty_graph-&gt;matrix.invalid_weight);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    EXPECT_EQ(_n_vertexes_inverse-&gt;matrix.invalid_weight,_n_vertexes_graph-&gt;matrix.invalid_weight);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;matrix.invalid_weight,_n_vertexes_m_edges_graph-&gt;matrix.invalid_weight);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">//顶点相同</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a>;i++)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span>(empty_inverse-&gt;vertexes.at(i))</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                EXPECT_EQ(empty_inverse-&gt;vertexes.at(i)-&gt;id,_empty_graph-&gt;vertexes.at(i)-&gt;id);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                EXPECT_EQ(empty_inverse-&gt;vertexes.at(i)-&gt;key,_empty_graph-&gt;vertexes.at(i)-&gt;key);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        }<span class="keywordflow">else</span>   EXPECT_FALSE(_empty_graph-&gt;vertexes.at(i));</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span>(_n_vertexes_inverse-&gt;vertexes.at(i))</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                EXPECT_EQ(_n_vertexes_inverse-&gt;vertexes.at(i)-&gt;id,_n_vertexes_graph-&gt;vertexes.at(i)-&gt;id);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                EXPECT_EQ(_n_vertexes_inverse-&gt;vertexes.at(i)-&gt;key,_n_vertexes_graph-&gt;vertexes.at(i)-&gt;key);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }<span class="keywordflow">else</span>   EXPECT_FALSE(_n_vertexes_graph-&gt;vertexes.at(i));</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="graph__test_8h.html#af9f41b341d4e5b5b93fe1d0ba371d6c4">  135</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_weight)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            EXPECT_THROW(_empty_graph-&gt;weight(i,j),std::invalid_argument);    <span class="comment">//空图：没有顶点没有边</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            EXPECT_THROW(_n_vertexes_graph-&gt;weight(i,j),std::invalid_argument);<span class="comment">//无边有顶点的图：没有边</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;weight(i,j),std::invalid_argument);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;weight(i,j),i*10+j);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="graph__test_8h.html#ae2ffbd20a0a67c03c7bb4cc00df88154">  153</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_has_edge)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            EXPECT_THROW(_empty_graph-&gt;has_edge(i,j),std::invalid_argument); <span class="comment">//空图：没有顶点没有边</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            EXPECT_FALSE(_n_vertexes_graph-&gt;has_edge(i,j));   <span class="comment">//无边有顶点的图：没有边</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                EXPECT_FALSE(_n_vertexes_m_edges_graph-&gt;has_edge(i,j));</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                EXPECT_TRUE(_n_vertexes_m_edges_graph-&gt;has_edge(i,j));</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="graph__test_8h.html#af018dbd6c870fba57fac5e0995db6790">  171</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_edge)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            EXPECT_THROW(_empty_graph-&gt;add_edge(std::make_tuple(i,j,i*j)),std::invalid_argument);  <span class="comment">//空图：没有顶点没有边</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            _n_vertexes_graph-&gt;add_edge(std::make_tuple(i,j,i*j));  <span class="comment">//无边有顶点的图：没有边</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            EXPECT_EQ(_n_vertexes_graph-&gt;weight(i,j),i*j);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                _n_vertexes_m_edges_graph-&gt;add_edge(std::make_tuple(i,j,i*j));</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;weight(i,j),i*j);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            }<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_edge(std::make_tuple(i,j,i*j)),std::invalid_argument);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="graph__test_8h.html#a5a11c06b4be631854ad876ee82280ba0">  194</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_add_edges)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;{</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    std::vector&lt;typename GType::EdgeTupleType&gt; tuples;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            tuples.push_back(std::make_tuple(i,j,9));</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    EXPECT_THROW(_empty_graph-&gt;add_edges(tuples.begin(),tuples.end()),std::invalid_argument);  <span class="comment">//空图：没有顶点没有边</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    _n_vertexes_graph-&gt;add_edges(tuples.begin(),tuples.end());  <span class="comment">//无边有顶点的图：没有边</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    EXPECT_EQ(_n_vertexes_graph-&gt;edge_tuples(),tuples);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;add_edges(tuples.begin(),tuples.end()),std::invalid_argument);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="graph__test_8h.html#adcb79e1f23c2e7f6a3dd20abd2db92c2">  212</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_adjust_edge)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;{</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            EXPECT_THROW(_empty_graph-&gt;adjust_edge(i,j,0),std::invalid_argument);<span class="comment">//空图：没有顶点没有边</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            EXPECT_THROW(_n_vertexes_graph-&gt;adjust_edge(i,j,0),std::invalid_argument); <span class="comment">//无边有顶点的图：没有边</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">if</span>(j&lt;=i)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                EXPECT_THROW(_n_vertexes_m_edges_graph-&gt;adjust_edge(i,j,0),std::invalid_argument);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            }<span class="keywordflow">else</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                _n_vertexes_m_edges_graph-&gt;adjust_edge(i,j,i*j);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;weight(i,j),i*j);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="graph__test_8h.html#ad1c11dd442ecc55efe66f47431a5d871">  234</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_edge_tuples)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    EXPECT_EQ(_empty_graph-&gt;edge_tuples().size(),0);<span class="comment">//空图：没有顶点没有边</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    EXPECT_EQ(_n_vertexes_graph-&gt;edge_tuples().size(),0);<span class="comment">//无边有顶点的图：没有边</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    std::vector&lt;typename GType::EdgeTupleType&gt; real_tuples;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i+1;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            real_tuples.push_back(std::make_tuple(i,j,i*10+j));</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;edge_tuples(),real_tuples);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="graph__test_8h.html#ae5016dbe2662a83d84a25fea160b3540">  250</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_vertex_edge_tuples)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        EXPECT_THROW(_empty_graph-&gt;vertex_edge_tuples(i),std::invalid_argument);<span class="comment">//空图：没有顶点没有边</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        EXPECT_EQ(_n_vertexes_graph-&gt;vertex_edge_tuples(i).size(),0);<span class="comment">//无边有顶点的图：没有边</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        std::vector&lt;typename GType::EdgeTupleType&gt; real_tuples;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=i+1;j&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;j++)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            real_tuples.push_back(std::make_tuple(i,j,i*10+j));</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        EXPECT_EQ(_n_vertexes_m_edges_graph-&gt;vertex_edge_tuples(i),real_tuples);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="graph__test_8h.html#afc5787e371a4cbb391cfd9a40e7a627e">  271</a></span>&#160;<a class="code" href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a>(<a class="code" href="class_graph_test.html">GraphTest</a>,test_inverse)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">auto</span> empty_inverse=_empty_graph-&gt;inverse();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keyword">auto</span> _n_vertexes_inverse=_n_vertexes_graph-&gt;inverse();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keyword">auto</span> _n_vertexes_m_edges_inverse=_n_vertexes_m_edges_graph-&gt;inverse();</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">if</span>(_n_vertexes_m_edges_inverse-&gt;vertexes.at(i))</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;vertexes.at(i)-&gt;id,_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;id);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;vertexes.at(i)-&gt;key,_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;key);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        }<span class="keywordflow">else</span>   EXPECT_FALSE(_n_vertexes_m_edges_graph-&gt;vertexes.at(i));</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">//边反向</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    EXPECT_EQ(empty_inverse-&gt;edge_tuples().size(),0);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    EXPECT_EQ(_n_vertexes_inverse-&gt;edge_tuples().size(),0);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;edge_tuples().size(),_n_vertexes_m_edges_graph-&gt;edge_tuples().size());</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">auto</span> edges=_n_vertexes_m_edges_graph-&gt;edge_tuples();</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">auto</span> r_edges=_n_vertexes_m_edges_inverse-&gt;edge_tuples();</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;edges.size();i++)</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">auto</span> edge=edges.at(i);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keyword">auto</span> r_edge=std::make_tuple(std::get&lt;1&gt;(edge),std::get&lt;0&gt;(edge),std::get&lt;2&gt;(edge));</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keywordtype">bool</span> founded=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;r_edges.size();j++)</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">if</span>(r_edges.at(j)==r_edge)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                founded=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        EXPECT_TRUE(founded);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">#endif // GRAPH_TEST</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="ttc" id="graph__test_8h_html_a26bd955cb44c452c6e74e2e29b630cd7"><div class="ttname"><a href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a></div><div class="ttdeci">TEST_F(GraphTest, test_add_vertex)</div><div class="ttdoc">graph_test:Graph </div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00050">graph_test.h:50</a></div></div>
-<div class="ttc" id="class_graph_test_html_aaa662e57a6eb46a91c59464871b4907f"><div class="ttname"><a href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">GraphTest::_n_vertexes_m_edges_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _n_vertexes_m_edges_graph</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00042">graph_test.h:42</a></div></div>
-<div class="ttc" id="class_graph_test_html_a35200ea3d08690769c40550cba2ecd5a"><div class="ttname"><a href="class_graph_test.html#a35200ea3d08690769c40550cba2ecd5a">GraphTest::GType</a></div><div class="ttdeci">Graph&lt; G_N, Vertex&lt; double &gt; &gt; GType</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00019">graph_test.h:19</a></div></div>
-<div class="ttc" id="class_graph_test_html"><div class="ttname"><a href="class_graph_test.html">GraphTest</a></div><div class="ttdoc">GraphTest:测试类，用于为测试提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00016">graph_test.h:16</a></div></div>
-<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a></div><div class="ttdoc">Vertex：图的顶点，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8h_source.html#l00022">vertex.h:22</a></div></div>
-<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">IntroductionToAlgorithm::GraphAlgorithm::Graph</a></div><div class="ttdoc">Graph：图，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00024">graph.h:24</a></div></div>
-<div class="ttc" id="class_graph_test_html_a53c606b64363a694f425a844dfabc08e"><div class="ttname"><a href="class_graph_test.html#a53c606b64363a694f425a844dfabc08e">GraphTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00038">graph_test.h:38</a></div></div>
-<div class="ttc" id="class_graph_test_html_a2f0d213d11ea0b8245c526379674b91b"><div class="ttname"><a href="class_graph_test.html#a2f0d213d11ea0b8245c526379674b91b">GraphTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00022">graph_test.h:22</a></div></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">//无效边权重相同</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    EXPECT_EQ(empty_inverse-&gt;matrix.invalid_weight,_empty_graph-&gt;matrix.invalid_weight);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    EXPECT_EQ(_n_vertexes_inverse-&gt;matrix.invalid_weight,_n_vertexes_graph-&gt;matrix.invalid_weight);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;matrix.invalid_weight,_n_vertexes_m_edges_graph-&gt;matrix.invalid_weight);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">//顶点相同</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">G_N</a>;i++)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span>(empty_inverse-&gt;vertexes.at(i))</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                EXPECT_EQ(empty_inverse-&gt;vertexes.at(i)-&gt;id,_empty_graph-&gt;vertexes.at(i)-&gt;id);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                EXPECT_EQ(empty_inverse-&gt;vertexes.at(i)-&gt;key,_empty_graph-&gt;vertexes.at(i)-&gt;key);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }<span class="keywordflow">else</span>   EXPECT_FALSE(_empty_graph-&gt;vertexes.at(i));</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">if</span>(_n_vertexes_inverse-&gt;vertexes.at(i))</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                EXPECT_EQ(_n_vertexes_inverse-&gt;vertexes.at(i)-&gt;id,_n_vertexes_graph-&gt;vertexes.at(i)-&gt;id);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                EXPECT_EQ(_n_vertexes_inverse-&gt;vertexes.at(i)-&gt;key,_n_vertexes_graph-&gt;vertexes.at(i)-&gt;key);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }<span class="keywordflow">else</span>   EXPECT_FALSE(_n_vertexes_graph-&gt;vertexes.at(i));</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">if</span>(_n_vertexes_m_edges_inverse-&gt;vertexes.at(i))</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;vertexes.at(i)-&gt;id,_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;id);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;vertexes.at(i)-&gt;key,_n_vertexes_m_edges_graph-&gt;vertexes.at(i)-&gt;key);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }<span class="keywordflow">else</span>   EXPECT_FALSE(_n_vertexes_m_edges_graph-&gt;vertexes.at(i));</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">//边反向</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    EXPECT_EQ(empty_inverse-&gt;edge_tuples().size(),0);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    EXPECT_EQ(_n_vertexes_inverse-&gt;edge_tuples().size(),0);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    EXPECT_EQ(_n_vertexes_m_edges_inverse-&gt;edge_tuples().size(),_n_vertexes_m_edges_graph-&gt;edge_tuples().size());</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keyword">auto</span> edges=_n_vertexes_m_edges_graph-&gt;edge_tuples();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keyword">auto</span> r_edges=_n_vertexes_m_edges_inverse-&gt;edge_tuples();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;edges.size();i++)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keyword">auto</span> edge=edges.at(i);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keyword">auto</span> r_edge=std::make_tuple(std::get&lt;1&gt;(edge),std::get&lt;0&gt;(edge),std::get&lt;2&gt;(edge));</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordtype">bool</span> founded=<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;r_edges.size();j++)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span>(r_edges.at(j)==r_edge)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                founded=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        EXPECT_TRUE(founded);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#endif // GRAPH_TEST</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="ttc" id="graph__test_8h_html_a26bd955cb44c452c6e74e2e29b630cd7"><div class="ttname"><a href="graph__test_8h.html#a26bd955cb44c452c6e74e2e29b630cd7">TEST_F</a></div><div class="ttdeci">TEST_F(GraphTest, test_add_vertex)</div><div class="ttdoc">graph_test:Graph </div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00070">graph_test.h:70</a></div></div>
+<div class="ttc" id="namespaceanonymous__namespace_02graph__test_8h_03_html_ad767d40dd9cf8d521b2bba3b9bd71061"><div class="ttname"><a href="namespaceanonymous__namespace_02graph__test_8h_03.html#ad767d40dd9cf8d521b2bba3b9bd71061">anonymous_namespace{graph_test.h}::G_N</a></div><div class="ttdeci">const int G_N</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00028">graph_test.h:28</a></div></div>
+<div class="ttc" id="class_graph_test_html_aaa662e57a6eb46a91c59464871b4907f"><div class="ttname"><a href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">GraphTest::_n_vertexes_m_edges_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _n_vertexes_m_edges_graph</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00062">graph_test.h:62</a></div></div>
+<div class="ttc" id="class_graph_test_html_a35200ea3d08690769c40550cba2ecd5a"><div class="ttname"><a href="class_graph_test.html#a35200ea3d08690769c40550cba2ecd5a">GraphTest::GType</a></div><div class="ttdeci">Graph&lt; G_N, Vertex&lt; double &gt; &gt; GType</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00039">graph_test.h:39</a></div></div>
+<div class="ttc" id="class_graph_test_html"><div class="ttname"><a href="class_graph_test.html">GraphTest</a></div><div class="ttdoc">GraphTest:测试类，用于为测试提供基础数据 </div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00036">graph_test.h:36</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html">IntroductionToAlgorithm::GraphAlgorithm::Vertex</a></div><div class="ttdoc">Vertex：图的顶点，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="vertex_8h_source.html#l00038">vertex.h:38</a></div></div>
+<div class="ttc" id="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph_html"><div class="ttname"><a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">IntroductionToAlgorithm::GraphAlgorithm::Graph</a></div><div class="ttdoc">Graph：图，算法导论22章22.1节 </div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00042">graph.h:42</a></div></div>
+<div class="ttc" id="class_graph_test_html_a53c606b64363a694f425a844dfabc08e"><div class="ttname"><a href="class_graph_test.html#a53c606b64363a694f425a844dfabc08e">GraphTest::TearDown</a></div><div class="ttdeci">void TearDown()</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00058">graph_test.h:58</a></div></div>
+<div class="ttc" id="class_graph_test_html_a2f0d213d11ea0b8245c526379674b91b"><div class="ttname"><a href="class_graph_test.html#a2f0d213d11ea0b8245c526379674b91b">GraphTest::SetUp</a></div><div class="ttdeci">void SetUp()</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00042">graph_test.h:42</a></div></div>
 <div class="ttc" id="graph_8h_html"><div class="ttname"><a href="graph_8h.html">graph.h</a></div></div>
-<div class="ttc" id="class_graph_test_html_a2dac828599509e577b5406d06f613a16"><div class="ttname"><a href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">GraphTest::_n_vertexes_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _n_vertexes_graph</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00041">graph_test.h:41</a></div></div>
-<div class="ttc" id="graph__test_8h_html_abad8d08eab108f595a7ea22132648528"><div class="ttname"><a href="graph__test_8h.html#abad8d08eab108f595a7ea22132648528">G_N</a></div><div class="ttdeci">const int G_N</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00009">graph_test.h:9</a></div></div>
-<div class="ttc" id="class_graph_test_html_a1dbaf4ba93fa17246e6fef78b5dd678c"><div class="ttname"><a href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">GraphTest::_empty_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _empty_graph</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00040">graph_test.h:40</a></div></div>
+<div class="ttc" id="class_graph_test_html_a2dac828599509e577b5406d06f613a16"><div class="ttname"><a href="class_graph_test.html#a2dac828599509e577b5406d06f613a16">GraphTest::_n_vertexes_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _n_vertexes_graph</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00061">graph_test.h:61</a></div></div>
+<div class="ttc" id="class_graph_test_html_a1dbaf4ba93fa17246e6fef78b5dd678c"><div class="ttname"><a href="class_graph_test.html#a1dbaf4ba93fa17246e6fef78b5dd678c">GraphTest::_empty_graph</a></div><div class="ttdeci">std::shared_ptr&lt; GType &gt; _empty_graph</div><div class="ttdef"><b>Definition:</b> <a href="graph__test_8h_source.html#l00060">graph_test.h:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

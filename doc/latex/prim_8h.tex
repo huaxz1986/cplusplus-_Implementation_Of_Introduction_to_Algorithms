@@ -1,7 +1,8 @@
 \hypertarget{prim_8h}{}\section{src/graph\+\_\+algorithms/minimum\+\_\+spanning\+\_\+tree/prim/prim.h File Reference}
 \label{prim_8h}\index{src/graph\+\_\+algorithms/minimum\+\_\+spanning\+\_\+tree/prim/prim.\+h@{src/graph\+\_\+algorithms/minimum\+\_\+spanning\+\_\+tree/prim/prim.\+h}}
-{\ttfamily \#include \char`\"{}../../basic\+\_\+graph/graph\+\_\+representation/graph/graph.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$functional$>$}\\*
 {\ttfamily \#include \char`\"{}src/queue\+\_\+algorithms/min\+\_\+queue/minqueue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/header.\+h\char`\"{}}\\*
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -12,5 +13,5 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ac79afa99e5119649d01d613fb01f3984}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::prim} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\Graph\+Type\+::\+E\+Weight\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aba1581358d79ba82dc4fd0c15bc987e6}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::prim} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
+\begin{DoxyCompactList}\small\item\em prim：最小生成树的\+Prim算法，算法导论22章23.2节 \end{DoxyCompactList}\end{DoxyCompactItemize}

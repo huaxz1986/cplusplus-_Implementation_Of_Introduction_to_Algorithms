@@ -1,8 +1,25 @@
+/*
+ * Copyright 2016- huaxz <huaxz1986@163.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: huaxz1986@163.com (huaxz)
+ */
 #ifndef DFS
 #define DFS
 #include<src/header.h>
 #include"../graph_representation/graph_vertex/vertex.h"
-#include"../graph_representation/graph/graph.h"
 #include<functional>
 namespace IntroductionToAlgorithm
 {
@@ -236,6 +253,7 @@ namespace IntroductionToAlgorithm
                                const std::vector<typename GraphType::VIDType>& search_order=std::vector<typename GraphType::VIDType>())
         {
             typedef typename GraphType::VIDType VIDType;
+            typedef typename GraphType::VertexType VertexType;
             if(!graph)
                 throw std::invalid_argument("depth_first_search error: graph must not be nullptr!");
             //************  创建真实的 search_order ****************
@@ -246,6 +264,15 @@ namespace IntroductionToAlgorithm
                     real_search_order.push_back(i);
             }else
                 real_search_order=search_order;
+
+            //************* 初始化顶点 ****************
+            for(auto& v:graph->vertexes)
+            {
+                if(!v) continue;
+                v->color=VertexType::COLOR::WHITE;
+                v->key=0;
+                v->parent=std::shared_ptr<VertexType>();
+            }
 
             //*************** 深度优先搜索 *************
             int time=0;

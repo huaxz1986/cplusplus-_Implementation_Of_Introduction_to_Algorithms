@@ -18,7 +18,7 @@ Inheritance diagram for Topology\+Sort\+Test\+:\begin{figure}[H]
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ \hyperlink{topologysort__test_8h_aa3c6150ee8a91064cbf6c5380b7567ae}{T\+P\+S\+\_\+\+N}, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex}{D\+F\+S\+\_\+\+Vertex}$<$ double $>$ $>$ \hyperlink{class_topology_sort_test_aa530f6f774d1b97dbb3968d9e445ce21}{G\+Type}
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ T\+P\+S\+\_\+\+N, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex}{D\+F\+S\+\_\+\+Vertex}$<$ double $>$ $>$ \hyperlink{class_topology_sort_test_aa530f6f774d1b97dbb3968d9e445ce21}{G\+Type}
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -43,17 +43,17 @@ std\+::shared\+\_\+ptr$<$ \hyperlink{class_topology_sort_test_aa530f6f774d1b97db
 
 {\ttfamily \hyperlink{class_topology_sort_test}{Topology\+Sort\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
 
-Definition at line 17 of file topologysort\+\_\+test.\+h.
+Definition at line 38 of file topologysort\+\_\+test.\+h.
 
 
 
 \subsection{Member Typedef Documentation}
 \hypertarget{class_topology_sort_test_aa530f6f774d1b97dbb3968d9e445ce21}{}\index{Topology\+Sort\+Test@{Topology\+Sort\+Test}!G\+Type@{G\+Type}}
 \index{G\+Type@{G\+Type}!Topology\+Sort\+Test@{Topology\+Sort\+Test}}
-\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<${\bf T\+P\+S\+\_\+\+N},{\bf D\+F\+S\+\_\+\+Vertex}$<$double$>$ $>$ {\bf Topology\+Sort\+Test\+::\+G\+Type}}\label{class_topology_sort_test_aa530f6f774d1b97dbb3968d9e445ce21}
+\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<$T\+P\+S\+\_\+\+N,{\bf D\+F\+S\+\_\+\+Vertex}$<$double$>$ $>$ {\bf Topology\+Sort\+Test\+::\+G\+Type}}\label{class_topology_sort_test_aa530f6f774d1b97dbb3968d9e445ce21}
 模板实例化的图类型，该图的顶点类型为{\ttfamily D\+F\+S\+\_\+\+Vertex$<$double$>$} 
 
-Definition at line 20 of file topologysort\+\_\+test.\+h.
+Definition at line 41 of file topologysort\+\_\+test.\+h.
 
 
 
@@ -67,7 +67,7 @@ Definition at line 20 of file topologysort\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_topology_sort_test_aa1b6dad41e9cbf8b6633a355ac743957}
 
 
-Definition at line 23 of file topologysort\+\_\+test.\+h.
+Definition at line 44 of file topologysort\+\_\+test.\+h.
 
 \hypertarget{class_topology_sort_test_a1195b18b412ae18f9011d4821b50eb1f}{}\index{Topology\+Sort\+Test@{Topology\+Sort\+Test}!Tear\+Down@{Tear\+Down}}
 \index{Tear\+Down@{Tear\+Down}!Topology\+Sort\+Test@{Topology\+Sort\+Test}}
@@ -78,7 +78,7 @@ Definition at line 23 of file topologysort\+\_\+test.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_topology_sort_test_a1195b18b412ae18f9011d4821b50eb1f}
 
 
-Definition at line 41 of file topologysort\+\_\+test.\+h.
+Definition at line 62 of file topologysort\+\_\+test.\+h.
 
 
 
@@ -88,21 +88,21 @@ Definition at line 41 of file topologysort\+\_\+test.\+h.
 \subsubsection[{\+\_\+1e\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Topology\+Sort\+Test\+::\+\_\+1e\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_topology_sort_test_af1fe553500cfb175b236a0302d9044af}
 指向一个图，该图只有一条边 
 
-Definition at line 43 of file topologysort\+\_\+test.\+h.
+Definition at line 64 of file topologysort\+\_\+test.\+h.
 
 \hypertarget{class_topology_sort_test_a087401853f564307534465e2ac59c0ef}{}\index{Topology\+Sort\+Test@{Topology\+Sort\+Test}!\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}}
 \index{\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}!Topology\+Sort\+Test@{Topology\+Sort\+Test}}
 \subsubsection[{\+\_\+1v\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Topology\+Sort\+Test\+::\+\_\+1v\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_topology_sort_test_a087401853f564307534465e2ac59c0ef}
 指向一个图，该图只有一个顶点 
 
-Definition at line 42 of file topologysort\+\_\+test.\+h.
+Definition at line 63 of file topologysort\+\_\+test.\+h.
 
 \hypertarget{class_topology_sort_test_ac664dd33d2aa257a993c1835caa0d5ad}{}\index{Topology\+Sort\+Test@{Topology\+Sort\+Test}!\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}}
 \index{\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}!Topology\+Sort\+Test@{Topology\+Sort\+Test}}
 \subsubsection[{\+\_\+list\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Topology\+Sort\+Test\+::\+\_\+list\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_topology_sort_test_ac664dd33d2aa257a993c1835caa0d5ad}
 指向一个图，该图的边组成一个链条 
 
-Definition at line 44 of file topologysort\+\_\+test.\+h.
+Definition at line 65 of file topologysort\+\_\+test.\+h.
 
 
 

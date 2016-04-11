@@ -68,7 +68,7 @@ Matrix\+Graph：图的矩阵表示，算法导论22章22.1节
 
 为了便于计算，这里并不管理边和顶点，只是维护矩阵。边、顶点与矩阵的同步由使用者确保。 
 
-Definition at line 19 of file matrixgraph.\+h.
+Definition at line 37 of file matrixgraph.\+h.
 
 
 
@@ -78,21 +78,21 @@ Definition at line 19 of file matrixgraph.\+h.
 \subsubsection[{Edge\+Tuple\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef std\+::tuple$<${\bf V\+I\+D\+Type},{\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf Edge\+Tuple\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ad698e07bacdb3f332c4f5d34bdb49463}
 边的三元素（顶点1编号，顶点2编号，权重)组成的元组 
 
-Definition at line 23 of file matrixgraph.\+h.
+Definition at line 41 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af54dbf6d171b89b81b490de13f1fb02f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!E\+Weight\+Type@{E\+Weight\+Type}}
 \index{E\+Weight\+Type@{E\+Weight\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
 \subsubsection[{E\+Weight\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf E\+Weight\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_af54dbf6d171b89b81b490de13f1fb02f}
 权重的类型 
 
-Definition at line 22 of file matrixgraph.\+h.
+Definition at line 40 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae97378c88e8d65a880334f31a352e71d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!V\+I\+D\+Type@{V\+I\+D\+Type}}
 \index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
 \subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae97378c88e8d65a880334f31a352e71d}
 顶点编号的类型 
 
-Definition at line 21 of file matrixgraph.\+h.
+Definition at line 39 of file matrixgraph.\+h.
 
 
 
@@ -115,7 +115,7 @@ Definition at line 21 of file matrixgraph.\+h.
 \end{DoxyParams}
 
 
-Definition at line 29 of file matrixgraph.\+h.
+Definition at line 47 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a5e0154a5eed096fe10a03519022fd24d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!Matrix\+Graph@{Matrix\+Graph}}
 \index{Matrix\+Graph@{Matrix\+Graph}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
@@ -130,7 +130,7 @@ Definition at line 29 of file matrixgraph.\+h.
 
 
 
-Definition at line 36 of file matrixgraph.\+h.
+Definition at line 54 of file matrixgraph.\+h.
 
 
 
@@ -155,7 +155,7 @@ add\+\_\+edge\+:添加一条边
 要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
 
 
-Definition at line 48 of file matrixgraph.\+h.
+Definition at line 66 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a0fac196d4c47c2855267eb2cf888ef14}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!add\+\_\+edges@{add\+\_\+edges}}
 \index{add\+\_\+edges@{add\+\_\+edges}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
@@ -180,7 +180,7 @@ add\+\_\+edges\+:添加一组边
 要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
 
 
-Definition at line 69 of file matrixgraph.\+h.
+Definition at line 87 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_aa16d1f2e6949d0adccc30b0704013e6d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!adjust\+\_\+edge@{adjust\+\_\+edge}}
 \index{adjust\+\_\+edge@{adjust\+\_\+edge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
@@ -208,7 +208,7 @@ adjust\+\_\+edge\+:修改一条边的权重
 \end{DoxyParams}
 
 
-Definition at line 90 of file matrixgraph.\+h.
+Definition at line 108 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a2bad3638c9ecb614f65b19fe155f5cd7}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!edge\+\_\+tuples@{edge\+\_\+tuples}}
 \index{edge\+\_\+tuples@{edge\+\_\+tuples}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
@@ -226,7 +226,7 @@ edge\+\_\+tuples\+:返回图中所有边的三元素元组集合，这里集合�
 \end{DoxyReturn}
 
 
-Definition at line 103 of file matrixgraph.\+h.
+Definition at line 121 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ab5eb0a563c39a088d16e349cb3d73a2d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!has\+\_\+edge@{has\+\_\+edge}}
 \index{has\+\_\+edge@{has\+\_\+edge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
@@ -257,7 +257,7 @@ has\+\_\+edge\+:返回图中指定顶点之间是否存在边
 \item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间没有边时，返回{\ttfamily false} 
 \end{DoxyItemize}
 
-Definition at line 150 of file matrixgraph.\+h.
+Definition at line 168 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a906d21b803bfae5095066df1e31c891c}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!vertex\+\_\+edge\+\_\+tuples@{vertex\+\_\+edge\+\_\+tuples}}
 \index{vertex\+\_\+edge\+\_\+tuples@{vertex\+\_\+edge\+\_\+tuples}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
@@ -283,7 +283,7 @@ vertex\+\_\+edge\+\_\+tuples\+:返回图中从指定顶点出发的边的三元�
 \item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效 
 \end{DoxyItemize}
 
-Definition at line 123 of file matrixgraph.\+h.
+Definition at line 141 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a9304b6a4c45f368452f6ff9065334536}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!weight@{weight}}
 \index{weight@{weight}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
@@ -315,7 +315,7 @@ weight\+:返回图中指定顶点之间的边的权重
 \item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间无边时，抛出异常 
 \end{DoxyItemize}
 
-Definition at line 171 of file matrixgraph.\+h.
+Definition at line 189 of file matrixgraph.\+h.
 
 
 
@@ -325,21 +325,21 @@ Definition at line 171 of file matrixgraph.\+h.
 \subsubsection[{invalid\+\_\+weight}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ const {\bf E\+Weight\+Type} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::invalid\+\_\+weight}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_accc79376e509d7ffa016ef5003512976}
 无效权重，是一个const值，一旦图被初始化之后就无法改变 
 
-Definition at line 183 of file matrixgraph.\+h.
+Definition at line 201 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae1febbc0e4a86c325a16a942947a03bf}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!matrix@{matrix}}
 \index{matrix@{matrix}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
 \subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ std\+::array$<$std\+::array$<${\bf E\+Weight\+Type},N$>$, N$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::matrix}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_ae1febbc0e4a86c325a16a942947a03bf}
 图的矩阵 
 
-Definition at line 182 of file matrixgraph.\+h.
+Definition at line 200 of file matrixgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a68d153cb2714464d5c432d667e29f28f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}!N\+U\+M@{N\+U\+M}}
 \index{N\+U\+M@{N\+U\+M}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}}
 \subsubsection[{N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ const unsigned {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Matrix\+Graph}$<$ N $>$\+::N\+U\+M =N\hspace{0.3cm}{\ttfamily [static]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph_a68d153cb2714464d5c432d667e29f28f}
 顶点的最大容量 
 
-Definition at line 24 of file matrixgraph.\+h.
+Definition at line 42 of file matrixgraph.\+h.
 
 
 

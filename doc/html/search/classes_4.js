@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['graph',['Graph',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
-  ['graphadjlisttest',['GraphADJListTest',['../class_graph_a_d_j_list_test.html',1,'']]],
-  ['graphmatrixtest',['GraphMatrixTest',['../class_graph_matrix_test.html',1,'']]],
-  ['graphtest',['GraphTest',['../class_graph_test.html',1,'']]]
+  ['edge',['Edge',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
+  ['edgetest',['EdgeTest',['../class_edge_test.html',1,'']]]
 ];

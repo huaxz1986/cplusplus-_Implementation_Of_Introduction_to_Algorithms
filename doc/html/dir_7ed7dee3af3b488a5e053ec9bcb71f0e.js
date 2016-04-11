@@ -1,5 +1,6 @@
 var dir_7ed7dee3af3b488a5e053ec9bcb71f0e =
 [
+    [ "connected_component", "dir_966addc6db910c2e3b980d98ab4f4c9d.html", "dir_966addc6db910c2e3b980d98ab4f4c9d" ],
     [ "graph_bfs", "dir_f03ae458bd8634417764c043ef3e5472.html", "dir_f03ae458bd8634417764c043ef3e5472" ],
     [ "graph_dfs", "dir_0378c045220c77c61c3962fa329eda72.html", "dir_0378c045220c77c61c3962fa329eda72" ],
     [ "graph_representation", "dir_d12496f1fc7378ee9aea361c57814de0.html", "dir_d12496f1fc7378ee9aea361c57814de0" ],

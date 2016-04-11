@@ -61,7 +61,7 @@ A\+D\+J\+List\+Graph：图的邻接表表示，算法导论22章22.1节
 
 为了便于计算，这里并不管理边和顶点，只是维护邻接表。边、顶点与邻接表的同步由使用者确保。 
 
-Definition at line 19 of file adjlistgraph.\+h.
+Definition at line 35 of file adjlistgraph.\+h.
 
 
 
@@ -71,21 +71,21 @@ Definition at line 19 of file adjlistgraph.\+h.
 \subsubsection[{Edge\+Tuple\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef std\+::tuple$<${\bf V\+I\+D\+Type},{\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::{\bf Edge\+Tuple\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a6757574602df8359b10e37079c789eb6}
 边的三元素（顶点1编号，顶点2编号，权重)组成的元组 
 
-Definition at line 23 of file adjlistgraph.\+h.
+Definition at line 39 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a8b9518587536b482cfd8c2fc7f5c9678}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!E\+Weight\+Type@{E\+Weight\+Type}}
 \index{E\+Weight\+Type@{E\+Weight\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
 \subsubsection[{E\+Weight\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::{\bf E\+Weight\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a8b9518587536b482cfd8c2fc7f5c9678}
 权重的类型 
 
-Definition at line 22 of file adjlistgraph.\+h.
+Definition at line 38 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aa42303d15a6a0e4cf6fad5c1327c1d79}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!V\+I\+D\+Type@{V\+I\+D\+Type}}
 \index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
 \subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aa42303d15a6a0e4cf6fad5c1327c1d79}
 顶点编号的类型 
 
-Definition at line 21 of file adjlistgraph.\+h.
+Definition at line 37 of file adjlistgraph.\+h.
 
 
 
@@ -110,7 +110,7 @@ add\+\_\+edge\+:添加一条边
 要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
 
 
-Definition at line 34 of file adjlistgraph.\+h.
+Definition at line 50 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aeb48c70f535eae9367540bb53ee21c4f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!add\+\_\+edges@{add\+\_\+edges}}
 \index{add\+\_\+edges@{add\+\_\+edges}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
@@ -135,7 +135,7 @@ add\+\_\+edges\+:添加一组边
 要求边的顶点均在{\ttfamily \mbox{[}0,N)}这个半闭半开区间。如果任何一个值超过该区间则认为顶点{\ttfamily id}无效，直接返回而不作添加\end{quote}
 
 
-Definition at line 55 of file adjlistgraph.\+h.
+Definition at line 71 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a945dcb0463cf00ddf694d107b019b118}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!adjust\+\_\+edge@{adjust\+\_\+edge}}
 \index{adjust\+\_\+edge@{adjust\+\_\+edge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
@@ -163,7 +163,7 @@ adjust\+\_\+edge\+:修改一条边的权重
 \end{DoxyParams}
 
 
-Definition at line 76 of file adjlistgraph.\+h.
+Definition at line 92 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a32b5e8f3382a8e5508b8e4651ddf245f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!edge\+\_\+tuples@{edge\+\_\+tuples}}
 \index{edge\+\_\+tuples@{edge\+\_\+tuples}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
@@ -181,7 +181,7 @@ edge\+\_\+tuples\+:返回图中所有边的三元素元组集合，这里集合�
 \end{DoxyReturn}
 
 
-Definition at line 97 of file adjlistgraph.\+h.
+Definition at line 113 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aa0fd43a6621de69396f907e11cff5db4}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!has\+\_\+edge@{has\+\_\+edge}}
 \index{has\+\_\+edge@{has\+\_\+edge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
@@ -212,7 +212,7 @@ has\+\_\+edge\+:返回图中指定顶点之间是否存在边
 \item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间没有边时，返回{\ttfamily false} 
 \end{DoxyItemize}
 
-Definition at line 138 of file adjlistgraph.\+h.
+Definition at line 154 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a8d4f953211df8bd5d3fffe6e362a7fa3}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!vertex\+\_\+edge\+\_\+tuples@{vertex\+\_\+edge\+\_\+tuples}}
 \index{vertex\+\_\+edge\+\_\+tuples@{vertex\+\_\+edge\+\_\+tuples}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
@@ -238,7 +238,7 @@ vertex\+\_\+edge\+\_\+tuples\+:返回图中从指定顶点出发的边的三元�
 \item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效 
 \end{DoxyItemize}
 
-Definition at line 114 of file adjlistgraph.\+h.
+Definition at line 130 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_a8279dc0ecc39324c1f0e38a3c0a2ef03}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!weight@{weight}}
 \index{weight@{weight}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
@@ -270,7 +270,7 @@ weight\+:返回图中指定顶点之间的边的权重
 \item 当{\ttfamily id\+\_\+from}与{\ttfamily id\+\_\+to}之间无边时，抛出异常 
 \end{DoxyItemize}
 
-Definition at line 164 of file adjlistgraph.\+h.
+Definition at line 180 of file adjlistgraph.\+h.
 
 
 
@@ -280,14 +280,14 @@ Definition at line 164 of file adjlistgraph.\+h.
 \subsubsection[{array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ std\+::array$<$std\+::vector$<$std\+::pair$<${\bf V\+I\+D\+Type},{\bf E\+Weight\+Type}$>$ $>$,N$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::array}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_ac02abc1501b57a7963ec1b388150429e}
 图的邻接表 
 
-Definition at line 179 of file adjlistgraph.\+h.
+Definition at line 195 of file adjlistgraph.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaff3f1cdb9f184027dd3f057d4a5b4bc}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}!N\+U\+M@{N\+U\+M}}
 \index{N\+U\+M@{N\+U\+M}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}}
 \subsubsection[{N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ const unsigned {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+A\+D\+J\+List\+Graph}$<$ N $>$\+::N\+U\+M =N\hspace{0.3cm}{\ttfamily [static]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph_aaff3f1cdb9f184027dd3f057d4a5b4bc}
 顶点的最大容量 
 
-Definition at line 24 of file adjlistgraph.\+h.
+Definition at line 40 of file adjlistgraph.\+h.
 
 
 

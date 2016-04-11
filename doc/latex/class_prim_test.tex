@@ -1,0 +1,129 @@
+\hypertarget{class_prim_test}{}\section{Prim\+Test Class Reference}
+\label{class_prim_test}\index{Prim\+Test@{Prim\+Test}}
+
+
+\hyperlink{class_prim_test}{Prim\+Test}\+:测试类，用于为测试提供基础数据  
+
+
+
+
+{\ttfamily \#include $<$prim\+\_\+test.\+h$>$}
+
+Inheritance diagram for Prim\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_prim_test}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ P\+R\+I\+M\+\_\+\+N, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p}{Vertex\+P}$<$ int $>$ $>$ \hyperlink{class_prim_test_a007bd8e1bdac3f8548d0a4bebce87881}{G\+Type}
+\item 
+typedef std\+::function$<$ void(\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p}{Vertex\+P}$<$ int $>$\+::V\+I\+D\+Type v\+\_\+id)$>$ \hyperlink{class_prim_test_a834237db99fdb38480aa6ba46b509e9e}{Action\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_prim_test_a9f2e77a9785f9ae04e8c3ea72fb6b127}{Set\+Up} ()
+\item 
+void \hyperlink{class_prim_test_a5894c9275a0bfda59f7b5661ece6b984}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_prim_test_a007bd8e1bdac3f8548d0a4bebce87881}{G\+Type} $>$ \hyperlink{class_prim_test_a7ff7449d84167db478a33a4dbb1b2e78}{\+\_\+1v\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_prim_test_a007bd8e1bdac3f8548d0a4bebce87881}{G\+Type} $>$ \hyperlink{class_prim_test_a256859b15df61e1cd0c96065bf19dc71}{\+\_\+1e\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_prim_test_a007bd8e1bdac3f8548d0a4bebce87881}{G\+Type} $>$ \hyperlink{class_prim_test_aeac490b81dfcef56b2a8b656942b012a}{\+\_\+list\+\_\+graph}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_prim_test_a007bd8e1bdac3f8548d0a4bebce87881}{G\+Type} $>$ \hyperlink{class_prim_test_a25281c926fc389770548b0f035e41615}{\+\_\+all\+\_\+edges\+\_\+graph}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_prim_test}{Prim\+Test}\+:测试类，用于为测试提供基础数据 
+
+{\ttfamily \hyperlink{class_prim_test}{Prim\+Test}}是 {\ttfamily \+::testing\+::\+Test} 的子类。它主要用于为每一个{\ttfamily T\+E\+S\+T\+\_\+\+F}准备测试环境 
+
+Definition at line 38 of file prim\+\_\+test.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_prim_test_a834237db99fdb38480aa6ba46b509e9e}{}\index{Prim\+Test@{Prim\+Test}!Action\+Type@{Action\+Type}}
+\index{Action\+Type@{Action\+Type}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{Action\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::function$<$void({\bf Vertex\+P}$<$int$>$\+::V\+I\+D\+Type v\+\_\+id)$>$ {\bf Prim\+Test\+::\+Action\+Type}}\label{class_prim_test_a834237db99fdb38480aa6ba46b509e9e}
+模板实例化的\+Action类型 
+
+Definition at line 42 of file prim\+\_\+test.\+h.
+
+\hypertarget{class_prim_test_a007bd8e1bdac3f8548d0a4bebce87881}{}\index{Prim\+Test@{Prim\+Test}!G\+Type@{G\+Type}}
+\index{G\+Type@{G\+Type}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{G\+Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Graph}$<$P\+R\+I\+M\+\_\+\+N,{\bf Vertex\+P}$<$int$>$ $>$ {\bf Prim\+Test\+::\+G\+Type}}\label{class_prim_test_a007bd8e1bdac3f8548d0a4bebce87881}
+模板实例化的图类型，该图的顶点类型为{\ttfamily Vertex\+P$<$int$>$} 
+
+Definition at line 41 of file prim\+\_\+test.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_prim_test_a9f2e77a9785f9ae04e8c3ea72fb6b127}{}\index{Prim\+Test@{Prim\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{Set\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Prim\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_prim_test_a9f2e77a9785f9ae04e8c3ea72fb6b127}
+
+
+Definition at line 44 of file prim\+\_\+test.\+h.
+
+\hypertarget{class_prim_test_a5894c9275a0bfda59f7b5661ece6b984}{}\index{Prim\+Test@{Prim\+Test}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{Tear\+Down()}]{\setlength{\rightskip}{0pt plus 5cm}void Prim\+Test\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_prim_test_a5894c9275a0bfda59f7b5661ece6b984}
+
+
+Definition at line 71 of file prim\+\_\+test.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_prim_test_a256859b15df61e1cd0c96065bf19dc71}{}\index{Prim\+Test@{Prim\+Test}!\+\_\+1e\+\_\+graph@{\+\_\+1e\+\_\+graph}}
+\index{\+\_\+1e\+\_\+graph@{\+\_\+1e\+\_\+graph}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{\+\_\+1e\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Prim\+Test\+::\+\_\+1e\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_prim_test_a256859b15df61e1cd0c96065bf19dc71}
+指向一个图，该图只有一条边 
+
+Definition at line 73 of file prim\+\_\+test.\+h.
+
+\hypertarget{class_prim_test_a7ff7449d84167db478a33a4dbb1b2e78}{}\index{Prim\+Test@{Prim\+Test}!\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}}
+\index{\+\_\+1v\+\_\+graph@{\+\_\+1v\+\_\+graph}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{\+\_\+1v\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Prim\+Test\+::\+\_\+1v\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_prim_test_a7ff7449d84167db478a33a4dbb1b2e78}
+指向一个图，该图只有一个顶点 
+
+Definition at line 72 of file prim\+\_\+test.\+h.
+
+\hypertarget{class_prim_test_a25281c926fc389770548b0f035e41615}{}\index{Prim\+Test@{Prim\+Test}!\+\_\+all\+\_\+edges\+\_\+graph@{\+\_\+all\+\_\+edges\+\_\+graph}}
+\index{\+\_\+all\+\_\+edges\+\_\+graph@{\+\_\+all\+\_\+edges\+\_\+graph}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{\+\_\+all\+\_\+edges\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Prim\+Test\+::\+\_\+all\+\_\+edges\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_prim_test_a25281c926fc389770548b0f035e41615}
+指向一个图，该图中任意一对顶点之间都有边 
+
+Definition at line 75 of file prim\+\_\+test.\+h.
+
+\hypertarget{class_prim_test_aeac490b81dfcef56b2a8b656942b012a}{}\index{Prim\+Test@{Prim\+Test}!\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}}
+\index{\+\_\+list\+\_\+graph@{\+\_\+list\+\_\+graph}!Prim\+Test@{Prim\+Test}}
+\subsubsection[{\+\_\+list\+\_\+graph}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf G\+Type}$>$ Prim\+Test\+::\+\_\+list\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_prim_test_aeac490b81dfcef56b2a8b656942b012a}
+指向一个图，该图的边组成一个链条 
+
+Definition at line 74 of file prim\+\_\+test.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/minimum\+\_\+spanning\+\_\+tree/prim/\hyperlink{prim__test_8h}{prim\+\_\+test.\+h}\end{DoxyCompactItemize}

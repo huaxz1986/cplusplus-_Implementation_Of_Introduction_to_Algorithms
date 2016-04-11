@@ -1,0 +1,117 @@
+\hypertarget{class_graph_1_1_d_a_g___short_path}{}\section{Graph\+:\+:D\+A\+G\+\_\+\+Short\+Path$<$ N $>$ Class Template Reference}
+\label{class_graph_1_1_d_a_g___short_path}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path$<$ N $>$@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path$<$ N $>$}}
+
+
+{\ttfamily \#include $<$dagshortpath.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Basic\+Node$<$ int $>$ \hyperlink{class_graph_1_1_d_a_g___short_path_a8f3964a826d60ad359488d56ad78f0e6}{Node\+Type}
+\item 
+typedef Basic\+Graph$<$ N $>$\+::\hyperlink{class_graph_1_1_d_a_g___short_path_a27c383b64a1c96d6d62623c88e52722b}{Edge\+Array\+Type} \hyperlink{class_graph_1_1_d_a_g___short_path_a27c383b64a1c96d6d62623c88e52722b}{Edge\+Array\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_graph_1_1_d_a_g___short_path_aceb6532eadcc0ffe67685cda5896919e}{access} (V\+Type source, const Basic\+Graph$<$ N $>$ \&graph)
+\item 
+void \hyperlink{class_graph_1_1_d_a_g___short_path_adadd1974c5e3eda3c2480d6e3c2c7d4a}{print\+Path} (\hyperlink{class_graph_1_1_d_a_g___short_path_a8f3964a826d60ad359488d56ad78f0e6}{Node\+Type} $\ast$\hyperlink{class_graph_1_1_d_a_g___short_path_a7818ffaf2695c21ff4b44b65126f5897}{nodes})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_graph_1_1_d_a_g___short_path_ac89e6307d0e43e9d499d3e8c59ac3867}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graph_1_1_d_a_g___short_path_a8f3964a826d60ad359488d56ad78f0e6}{Node\+Type} \hyperlink{class_graph_1_1_d_a_g___short_path_a7818ffaf2695c21ff4b44b65126f5897}{nodes} \mbox{[}N\mbox{]}
+\item 
+Topology\+Sorter$<$ N $>$ \hyperlink{class_graph_1_1_d_a_g___short_path_abc5a032ce3ec9a62f01d31447de4e2f2}{sorter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned N$>$class Graph\+::\+D\+A\+G\+\_\+\+Short\+Path$<$ N $>$}
+
+
+
+Definition at line 6 of file dagshortpath.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_graph_1_1_d_a_g___short_path_a27c383b64a1c96d6d62623c88e52722b}{}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}!Edge\+Array\+Type@{Edge\+Array\+Type}}
+\index{Edge\+Array\+Type@{Edge\+Array\+Type}!Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}}
+\subsubsection[{Edge\+Array\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef Basic\+Graph$<$N$>$\+::{\bf Edge\+Array\+Type} {\bf Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}$<$ N $>$\+::{\bf Edge\+Array\+Type}}\label{class_graph_1_1_d_a_g___short_path_a27c383b64a1c96d6d62623c88e52722b}
+
+
+Definition at line 10 of file dagshortpath.\+h.
+
+\hypertarget{class_graph_1_1_d_a_g___short_path_a8f3964a826d60ad359488d56ad78f0e6}{}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}!Node\+Type@{Node\+Type}}
+\index{Node\+Type@{Node\+Type}!Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}}
+\subsubsection[{Node\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ typedef Basic\+Node$<$int$>$ {\bf Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}$<$ N $>$\+::{\bf Node\+Type}}\label{class_graph_1_1_d_a_g___short_path_a8f3964a826d60ad359488d56ad78f0e6}
+
+
+Definition at line 9 of file dagshortpath.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graph_1_1_d_a_g___short_path_aceb6532eadcc0ffe67685cda5896919e}{}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}!access@{access}}
+\index{access@{access}!Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}}
+\subsubsection[{access(\+V\+Type source, const Basic\+Graph$<$ N $>$ \&graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ void {\bf Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}$<$ N $>$\+::access (
+\begin{DoxyParamCaption}
+\item[{V\+Type}]{source, }
+\item[{const Basic\+Graph$<$ N $>$ \&}]{graph}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_1_1_d_a_g___short_path_aceb6532eadcc0ffe67685cda5896919e}
+
+
+Definition at line 11 of file dagshortpath.\+h.
+
+\hypertarget{class_graph_1_1_d_a_g___short_path_ac89e6307d0e43e9d499d3e8c59ac3867}{}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}!clear@{clear}}
+\index{clear@{clear}!Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ void {\bf Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}$<$ N $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_graph_1_1_d_a_g___short_path_ac89e6307d0e43e9d499d3e8c59ac3867}
+
+
+Definition at line 33 of file dagshortpath.\+h.
+
+\hypertarget{class_graph_1_1_d_a_g___short_path_adadd1974c5e3eda3c2480d6e3c2c7d4a}{}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}!print\+Path@{print\+Path}}
+\index{print\+Path@{print\+Path}!Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}}
+\subsubsection[{print\+Path(\+Node\+Type $\ast$nodes)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ void {\bf Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}$<$ N $>$\+::print\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type} $\ast$}]{nodes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_graph_1_1_d_a_g___short_path_adadd1974c5e3eda3c2480d6e3c2c7d4a}
+
+
+Definition at line 26 of file dagshortpath.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graph_1_1_d_a_g___short_path_a7818ffaf2695c21ff4b44b65126f5897}{}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}!nodes@{nodes}}
+\index{nodes@{nodes}!Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}}
+\subsubsection[{nodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ {\bf Node\+Type} {\bf Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}$<$ N $>$\+::nodes\mbox{[}N\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{class_graph_1_1_d_a_g___short_path_a7818ffaf2695c21ff4b44b65126f5897}
+
+
+Definition at line 43 of file dagshortpath.\+h.
+
+\hypertarget{class_graph_1_1_d_a_g___short_path_abc5a032ce3ec9a62f01d31447de4e2f2}{}\index{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}!sorter@{sorter}}
+\index{sorter@{sorter}!Graph\+::\+D\+A\+G\+\_\+\+Short\+Path@{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}}
+\subsubsection[{sorter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned N$>$ Topology\+Sorter$<$N$>$ {\bf Graph\+::\+D\+A\+G\+\_\+\+Short\+Path}$<$ N $>$\+::sorter\hspace{0.3cm}{\ttfamily [private]}}\label{class_graph_1_1_d_a_g___short_path_abc5a032ce3ec9a62f01d31447de4e2f2}
+
+
+Definition at line 44 of file dagshortpath.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/dag\+\_\+shortest\+\_\+path/\hyperlink{dagshortpath_8h}{dagshortpath.\+h}\end{DoxyCompactItemize}
