@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['prim_2eh',['prim.h',['../prim_8h.html',1,'']]],
-  ['prim_5ftest_2eh',['prim_test.h',['../prim__test_8h.html',1,'']]]
+  ['longest_5fcommon_5fsubsequence_2eh',['longest_common_subsequence.h',['../longest__common__subsequence_8h.html',1,'']]],
+  ['longest_5fcommon_5fsubsequence_5ftest_2eh',['longest_common_subsequence_test.h',['../longest__common__subsequence__test_8h.html',1,'']]]
 ];

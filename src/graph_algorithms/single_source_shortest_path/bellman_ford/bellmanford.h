@@ -24,7 +24,7 @@ namespace IntroductionToAlgorithm
 {
     namespace GraphAlgorithm
     {
-        //!initialize_single_source：单源最短路径的初始化操作，算法导论22章xx节
+        //!initialize_single_source：单源最短路径的初始化操作，算法导论24章24.1节
         /*!
         * \param graph:指向图的强指针，必须非空。若为空则抛出异常
         * \param source_id：最小生成树的根结点`id`，必须有效。若无效则抛出异常
@@ -62,7 +62,7 @@ namespace IntroductionToAlgorithm
 
         }
 
-        //!relax：单源最短路径的松弛操作，算法导论22章xx节
+        //!relax：单源最短路径的松弛操作，算法导论24章24.1节
         /*!
         * \param from:松弛有向边的起始结点，必须非空。若为空则抛出异常
         * \param to：松弛有向边的终止结点，必须非空且不等于from。若为空或者等于from则抛出异常
@@ -95,11 +95,13 @@ namespace IntroductionToAlgorithm
 
         }
 
-        //!bellman_ford：单源最短路径的bellman_ford算法，算法导论22章xx节
+        //!bellman_ford：单源最短路径的bellman_ford算法，算法导论24章24.1节
         /*!
         * \param graph:指向图的强指针，必须非空。若为空则抛出异常
         * \param source_id：最小生成树的根结点`id`，必须有效。若无效则抛出异常
         * \return: 是否不包含可以从源结点可达的权重为负值的环路。若返回值为true，则说明不包含可以从源结点可达的权重为负值的环路
+        *
+        * ## 单源最短路径
         *
         * 单源最短路径问题：给定一个带权重的有向图G=(V,E)和权重函数w:E->R，该权重函数将每条边映射到实数值的权重上。图中一条路径p=<v0,v1,...vk>的权重
         * w(p)=w(v0,v1)+w(v1,v2)+...+w(v(k-1),vk)。定义结点u到结点v的最短路径权重 delt(u,v)为：
@@ -115,18 +117,27 @@ namespace IntroductionToAlgorithm
         *
         * 需要指出的是：最短路径不一定是唯一的，最短路径树叶不一定是唯一的。
         *
+        *
+        * ## Bellman-Ford算法
+        *
+        * ### 算法原理
+        *
         * Bellman-Ford算法解决的是一般情况下的单源最短路径问题。在这里边的权重可以为负值。给定带权的有向图G=(V,E)和权重函数w:E->R，Bellman-Ford
         * 算法返回一个bool值，表明是否存在一个从源结点可达的权重为负值的环路。若存在这样的一个环路，算法告诉我们不存在解决方案；若不存在这样的环路，
         * 算法将给出最短路径和它们的权重。
         *
-        * Bellman-Ford算法通过对边的松弛操作来渐近的降低从源s到每个结点v的最短路径估计值v.key，直到该估计值与实际的最短路径权重相同为止。算法步骤：
+        * Bellman-Ford算法通过对边的松弛操作来渐近的降低从源s到每个结点v的最短路径估计值v.key，直到该估计值与实际的最短路径权重相同为止。
+        *
+        * ### 算法步骤
         *
         * - 执行单源最短路径的初始化过程
         * - 进行|V|-1次处理，每次处理过程为：对图的每一条边进行一次松弛操作
         * - 检查图中是否存在权重为负的环路并返回与之相适应的布尔值
         *
         *
-        * 性能：时间复杂度为O(VE)
+        * ### 算法性能
+        *
+        * 时间复杂度为O(VE)
         *
         */
         template<typename GraphType> bool bellman_ford(std::shared_ptr<GraphType> graph, typename GraphType::VIDType source_id)

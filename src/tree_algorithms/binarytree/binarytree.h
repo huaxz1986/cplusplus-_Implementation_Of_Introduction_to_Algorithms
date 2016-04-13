@@ -18,7 +18,7 @@
  */
 #ifndef BINARYTREE
 #define BINARYTREE
-
+#include<memory>
 #include<functional>
 namespace IntroductionToAlgorithm
 {

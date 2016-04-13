@@ -29,36 +29,54 @@ struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_verte
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::pair$<$ std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab951caca0797ff2907a180fe81609c70}{floyd\+\_\+warshall} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em floyd\+\_\+warshall：返回所有节点对的最短路径的floyd\+\_\+warshall算法。算法导论25章25.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::shared\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}$<$ Graph\+Type\+::\+N\+U\+M+1, typename Graph\+Type\+::\+Vertex\+Type $>$ $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a267d39a5bb09200f37a1cd2f0ad4f69f}{graph\+\_\+plus\+\_\+1v} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em graph\+\_\+plus\+\_\+1v：根据图graph生成一个新图。算法导论25章25.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a856b132d068d0553355203a16cdec97d}{johnson} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em johnson：返回所有节点对的最短路径的johnson算法。算法导论25章25.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\Matrix\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a680307505286ae3230d1843c342e874e}{extend\+\_\+path} (const Matrix\+Type \&L, const Matrix\+Type \&W)
+\begin{DoxyCompactList}\small\item\em extend\+\_\+path：扩展一条边，算法导论25章25.1节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab9dcca59a42c708c137571d194c45bd9}{matrix\+\_\+shortest\+\_\+path} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em matrix\+\_\+shortest\+\_\+path：返回所有节点对的最短路径的矩阵乘法算法。算法导论25章25.1节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6eb979447eeb937df4158f9646e20dde}{matrix\+\_\+shortest\+\_\+path\+\_\+fast} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
+\begin{DoxyCompactList}\small\item\em matrix\+\_\+shortest\+\_\+path：返回所有节点对的最短路径的矩阵乘法复平方算法。算法导论25章25.1节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a31fe8fc6f732112632c51221e739a7d4}{connected\+\_\+component} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
 \begin{DoxyCompactList}\small\item\em connected\+\_\+component：无向图的连通分量，算法导论21章21.1节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ac368f242de9f06c7d936cba4aa0ab40b}{same\+\_\+component} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type id1, typename Graph\+Type\+::\+V\+I\+D\+Type id2)
 \begin{DoxyCompactList}\small\item\em same\+\_\+component：返回无向图的两个顶点是否位于同一个连通分量中。算法导论21章21.1节 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9c57b397479972f84b4b10bc19968297}{breadth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a8839165b9e3d4c8c2ccac4cdc28aadd5}{breadth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$ pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$ post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
 \begin{DoxyCompactList}\small\item\em breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章22.2节 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_af651a2b435fc270ab711e573d83a385d}{visit} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\})
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5fbba98b1c6a8b55f026158acc815768}{visit} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\})
 \begin{DoxyCompactList}\small\item\em visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a3bb9faf89f84f73b716c25966786e078}{depth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type pre\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, Action\+Type post\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9f44099f26242f50087b3cc16dff965f}{depth\+\_\+first\+\_\+search} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ pre\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ post\+\_\+root\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, int)\{\}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())
 \begin{DoxyCompactList}\small\item\em depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\const std\+::vector$<$ std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6d058c2aaa8714778b3f2ab8a24ff232}{scc} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
 \begin{DoxyCompactList}\small\item\em scc：强连通分量，算法导论22章22.5节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a804241e72be5f4c031190bc12a6b73a2}{topology\+\_\+sort} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
 \begin{DoxyCompactList}\small\item\em topology\+\_\+sort：拓扑排序，算法导论22章22.4节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type,typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\Graph\+Type\+::\+E\+Weight\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2575c09c42d0b30b57702c9379d2fbfb}{kruskal} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
-\begin{DoxyCompactList}\small\item\em kruskal：最小生成树的\+Kruskal算法，算法导论22章23.2节 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em kruskal：最小生成树的\+Kruskal算法，算法导论23章23.2节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\Graph\+Type\+::\+E\+Weight\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aba1581358d79ba82dc4fd0c15bc987e6}{prim} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
-\begin{DoxyCompactList}\small\item\em prim：最小生成树的\+Prim算法，算法导论22章23.2节 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em prim：最小生成树的\+Prim算法，算法导论23章23.2节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5ed496e8825564d0f9fcfe3b0ac41dec}{initialize\+\_\+single\+\_\+source} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
-\begin{DoxyCompactList}\small\item\em initialize\+\_\+single\+\_\+source：单源最短路径的初始化操作，算法导论22章xx节 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em initialize\+\_\+single\+\_\+source：单源最短路径的初始化操作，算法导论24章24.1节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Vertex\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_afe2bd83fca7df7e07ece9a59b8e7f5a6}{relax} (std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ from, std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ to, typename Vertex\+Type\+::\+Key\+Type weight)
-\begin{DoxyCompactList}\small\item\em relax：单源最短路径的松弛操作，算法导论22章xx节 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em relax：单源最短路径的松弛操作，算法导论24章24.1节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ae96d9b844260ee3ce9225055040c631b}{bellman\+\_\+ford} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
-\begin{DoxyCompactList}\small\item\em bellman\+\_\+ford：单源最短路径的bellman\+\_\+ford算法，算法导论22章xx节 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em bellman\+\_\+ford：单源最短路径的bellman\+\_\+ford算法，算法导论24章24.1节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aec7fe196e6aee4c8e6004a05495c8813}{dag\+\_\+shortest\+\_\+path} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
+\begin{DoxyCompactList}\small\item\em dag\+\_\+shortest\+\_\+path：有向无环图的单源最短路径的dag\+\_\+shortest\+\_\+path算法，算法导论24章24.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_acac554e111d6377c630865258dd6aa19}{dijkstra} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
+\begin{DoxyCompactList}\small\item\em dijkstra：单源最短路径的dijkstra算法，算法导论24章24.3节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a19237111c3b1ec2717c5e1aefe2f6d9b}{unlimit} ()
 \begin{DoxyCompactList}\small\item\em unlimit：返回正无穷的函数 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a4f664c13605fc87ca8d26f4aad5a9fa2}{is\+\_\+unlimit} (T t)
 \begin{DoxyCompactList}\small\item\em is\+\_\+unlimit：判断是否正无穷 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Vertex\+Type $>$ }\\std\+::vector$<$ typename Vertex\+Type\+::\+V\+I\+D\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}{get\+\_\+path} (const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+from, const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+to)
-\begin{DoxyCompactList}\small\item\em get\+\_\+path：获取两个顶点之间的路径 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em get\+\_\+path：获取两个顶点之间的路径 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Matrix\+Type $>$ }\\std\+::string \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a97d248a07f1b31df52be3de3b5570237}{matrix\+\_\+string} (const Matrix\+Type \&matrix)
+\begin{DoxyCompactList}\small\item\em matrix\+\_\+string：获取矩阵的字符串描述 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -77,7 +95,7 @@ Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}
 )}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_ae96d9b844260ee3ce9225055040c631b}
 
 
-bellman\+\_\+ford：单源最短路径的bellman\+\_\+ford算法，算法导论22章xx节 
+bellman\+\_\+ford：单源最短路径的bellman\+\_\+ford算法，算法导论24章24.1节 
 
 
 \begin{DoxyParams}{Parameters}
@@ -89,6 +107,8 @@ bellman\+\_\+ford：单源最短路径的bellman\+\_\+ford算法，算法导论2
 \begin{DoxyReturn}{Returns}
 \+: 是否不包含可以从源结点可达的权重为负值的环路。若返回值为true，则说明不包含可以从源结点可达的权重为负值的环路
 \end{DoxyReturn}
+\subsubsection*{单源最短路径}
+
 单源最短路径问题：给定一个带权重的有向图\+G=(V,E)和权重函数w\+:E-\/$>$R，该权重函数将每条边映射到实数值的权重上。图中一条路径p=$<$v0,v1,...vk$>$的权重 w(p)=w(v0,v1)+w(v1,v2)+...+w(v(k-\/1),vk)。定义结点u到结点v的最短路径权重 delt(u,v)为：
 
 
@@ -103,9 +123,15 @@ bellman\+\_\+ford：单源最短路径的bellman\+\_\+ford算法，算法导论2
 
 需要指出的是：最短路径不一定是唯一的，最短路径树叶不一定是唯一的。
 
+\subsubsection*{Bellman-\/\+Ford算法}
+
+\paragraph*{算法原理}
+
 Bellman-\/\+Ford算法解决的是一般情况下的单源最短路径问题。在这里边的权重可以为负值。给定带权的有向图\+G=(V,E)和权重函数w\+:E-\/$>$R，\+Bellman-\/\+Ford 算法返回一个bool值，表明是否存在一个从源结点可达的权重为负值的环路。若存在这样的一个环路，算法告诉我们不存在解决方案；若不存在这样的环路， 算法将给出最短路径和它们的权重。
 
-Bellman-\/\+Ford算法通过对边的松弛操作来渐近的降低从源s到每个结点v的最短路径估计值v.key，直到该估计值与实际的最短路径权重相同为止。算法步骤：
+Bellman-\/\+Ford算法通过对边的松弛操作来渐近的降低从源s到每个结点v的最短路径估计值v.key，直到该估计值与实际的最短路径权重相同为止。
+
+\paragraph*{算法步骤}
 
 
 \begin{DoxyItemize}
@@ -114,20 +140,22 @@ Bellman-\/\+Ford算法通过对边的松弛操作来渐近的降低从源s到每
 \item 检查图中是否存在权重为负的环路并返回与之相适应的布尔值
 \end{DoxyItemize}
 
-性能：时间复杂度为\+O(\+V\+E) 
+\paragraph*{算法性能}
 
-Definition at line 132 of file bellmanford.\+h.
+时间复杂度为\+O(\+V\+E) 
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9c57b397479972f84b4b10bc19968297}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}}
+Definition at line 143 of file bellmanford.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a8839165b9e3d4c8c2ccac4cdc28aadd5}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}}
 \index{breadth\+\_\+first\+\_\+search@{breadth\+\_\+first\+\_\+search}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
-\subsubsection[{breadth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{}, Action\+Type post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::breadth\+\_\+first\+\_\+search (
+\subsubsection[{breadth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$ pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$ post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::breadth\+\_\+first\+\_\+search (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
 \item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{source\+\_\+id, }
-\item[{Action\+Type}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}, }
-\item[{Action\+Type}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}}
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}, }
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType)\{\}}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9c57b397479972f84b4b10bc19968297}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a8839165b9e3d4c8c2ccac4cdc28aadd5}
 
 
 breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章22.2节 
@@ -177,7 +205,7 @@ breadth\+\_\+first\+\_\+search：广度优先搜索，算法导论22章22.2节
 
 广度优先树：对于\+G=(V,E)和源点s，定义图\+G的前驱子图为 G\+\_\+pai=(V\+\_\+pai,E\+\_\+pai)，其中 V\+\_\+pai=\{ v属于\+V\+: v.\+parent!=N\+I\+L\}并上\{s\}，\+E\+\_\+pai=\{(v.\+parent,v)\+:v属于(V\+\_\+pai-\/\{s\})\}。 即\+V\+\_\+pai由从源s可达的所有结点组成（包括s本身），\+E\+\_\+pai由\+V\+\_\+pai中去掉s之后的结点的入边组成，其中该入边的对端为结点的父结点。 B\+F\+S算法获取的前驱子图\+G\+\_\+pai包含一条从源结点s到结点v的唯一简单路径，而且该路径也是图\+G里面从源s到v之间的一条最短路径，因此前驱子图也称为广度优先树。 
 
-Definition at line 176 of file bfs.\+h.
+Definition at line 68 of file bfs.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a31fe8fc6f732112632c51221e739a7d4}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!connected\+\_\+component@{connected\+\_\+component}}
 \index{connected\+\_\+component@{connected\+\_\+component}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -210,20 +238,79 @@ connected\+\_\+component算法步骤：
 
 在处理完搜有边之后，两个顶点在相同的连通分量当且仅当与之对应的对象在相同的集合中 
 
-Definition at line 94 of file connectedcomponent.\+h.
+Definition at line 44 of file connectedcomponent.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a3bb9faf89f84f73b716c25966786e078}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}}
-\index{depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
-\subsubsection[{depth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action\+Type pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type pre\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type post\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::depth\+\_\+first\+\_\+search (
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_aec7fe196e6aee4c8e6004a05495c8813}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!dag\+\_\+shortest\+\_\+path@{dag\+\_\+shortest\+\_\+path}}
+\index{dag\+\_\+shortest\+\_\+path@{dag\+\_\+shortest\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{dag\+\_\+shortest\+\_\+path(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::dag\+\_\+shortest\+\_\+path (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
-\item[{Action\+Type}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action\+Type}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action\+Type}]{pre\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action\+Type}]{post\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{source\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_aec7fe196e6aee4c8e6004a05495c8813}
+
+
+dag\+\_\+shortest\+\_\+path：有向无环图的单源最短路径的dag\+\_\+shortest\+\_\+path算法，算法导论24章24.2节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指向图的强指针，必须非空。若为空则抛出异常} & \\
+\hline
+{\em source\+\_\+id：最小生成树的根结点$<$tt$>$id$<$/tt$>$，必须有效。若无效则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+\subsubsection*{单源最短路径}
+
+单源最短路径问题：给定一个带权重的有向图\+G=(V,E)和权重函数w\+:E-\/$>$R，该权重函数将每条边映射到实数值的权重上。图中一条路径p=$<$v0,v1,...vk$>$的权重 w(p)=w(v0,v1)+w(v1,v2)+...+w(v(k-\/1),vk)。定义结点u到结点v的最短路径权重 delt(u,v)为：
+
+
+\begin{DoxyItemize}
+\item min\{w(p)\+:u--$>$v(通过路径p)\}，如果存在一条从结点u到结点v的路径
+\item 正无穷 ，如果不存在一条从结点u到结点v的路径
+\end{DoxyItemize}
+
+从结点u到结点v的最短路径定义为任何一条权重w(p)=delt(u,v)的从u到v的路径p。
+
+给定图\+G=(V,E)，对每个结点v我们维持一个前驱结点v.\+pai。在最短路径算法中，由pai值诱导的前驱子图\+G\+\_\+pai=(V\+\_\+pai,E\+\_\+pai)，其中 V\+\_\+pai=\{v属于\+V\+:v.\+pai!=nil\}并上源点s， E\+\_\+pai是\+V\+\_\+pai中所有结点的pai值诱导的边的集合：\+E\+\_\+pai=\{(v.\+pai,v)属于\+E\+:v属于\+V\+\_\+pai-\/\{s\} \}。算法终止时，\+G\+\_\+pai是一棵最短路径树：该树包含了从源结点s 到每个可以从s到达的结点的一条最短路径。
+
+需要指出的是：最短路径不一定是唯一的，最短路径树叶不一定是唯一的。
+
+\subsubsection*{dag\+\_\+shortest\+\_\+path算法}
+
+\paragraph*{算法原理}
+
+dag\+\_\+shortest\+\_\+path算法解决的是有向无环图中的单源最短路径问题。在有向无环图中不存在环路因此也就不存在权重为负值的环路，最短路径都是存在的。 dag\+\_\+shortest\+\_\+path根据结点的拓扑排序次数来对带权重的有向无环图进行边的松弛操作，可以再\+O(V+\+E)时间内计算出单源最短路径。
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 对有向无环图进行拓扑排序
+\item 执行单源最短路径的初始化过程
+\item 按照顶点的拓扑排序的顺序依次处理，每次处理过程为：对该顶点出发的每一条边进行一次松弛操作
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+时间复杂度为\+O(V+\+E) 
+
+Definition at line 71 of file dagshortpath.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9f44099f26242f50087b3cc16dff965f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}}
+\index{depth\+\_\+first\+\_\+search@{depth\+\_\+first\+\_\+search}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{depth\+\_\+first\+\_\+search(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ pre\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ post\+\_\+root\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&search\+\_\+order=std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::depth\+\_\+first\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$}]{pre\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$}]{post\+\_\+root\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
 \item[{const std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \&}]{search\+\_\+order = {\ttfamily std\+:\+:vector$<$typename~GraphType\+:\+:VIDType$>$()}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a3bb9faf89f84f73b716c25966786e078}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a9f44099f26242f50087b3cc16dff965f}
 
 
 depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节 
@@ -304,7 +391,216 @@ depth\+\_\+first\+\_\+search：深度优先搜索，算法导论22章22.3节
 
 在无向图中，每条边要么是树边，要么是后向边。从来不会出现前向边和横向边。 
 
-Definition at line 248 of file dfs.\+h.
+Definition at line 138 of file dfs.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_acac554e111d6377c630865258dd6aa19}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{dijkstra(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::dijkstra (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{source\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_acac554e111d6377c630865258dd6aa19}
+
+
+dijkstra：单源最短路径的dijkstra算法，算法导论24章24.3节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指向图的强指针，必须非空。若为空则抛出异常} & \\
+\hline
+{\em source\+\_\+id：最小生成树的根结点$<$tt$>$id$<$/tt$>$，必须有效。若无效则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+\subsubsection*{单源最短路径}
+
+单源最短路径问题：给定一个带权重的有向图\+G=(V,E)和权重函数w\+:E-\/$>$R，该权重函数将每条边映射到实数值的权重上。图中一条路径p=$<$v0,v1,...vk$>$的权重 w(p)=w(v0,v1)+w(v1,v2)+...+w(v(k-\/1),vk)。定义结点u到结点v的最短路径权重 delt(u,v)为：
+
+
+\begin{DoxyItemize}
+\item min\{w(p)\+:u--$>$v(通过路径p)\}，如果存在一条从结点u到结点v的路径
+\item 正无穷 ，如果不存在一条从结点u到结点v的路径
+\end{DoxyItemize}
+
+从结点u到结点v的最短路径定义为任何一条权重w(p)=delt(u,v)的从u到v的路径p。
+
+给定图\+G=(V,E)，对每个结点v我们维持一个前驱结点v.\+pai。在最短路径算法中，由pai值诱导的前驱子图\+G\+\_\+pai=(V\+\_\+pai,E\+\_\+pai)，其中 V\+\_\+pai=\{v属于\+V\+:v.\+pai!=nil\}并上源点s， E\+\_\+pai是\+V\+\_\+pai中所有结点的pai值诱导的边的集合：\+E\+\_\+pai=\{(v.\+pai,v)属于\+E\+:v属于\+V\+\_\+pai-\/\{s\} \}。算法终止时，\+G\+\_\+pai是一棵最短路径树：该树包含了从源结点s 到每个可以从s到达的结点的一条最短路径。
+
+需要指出的是：最短路径不一定是唯一的，最短路径树叶不一定是唯一的。
+
+\subsubsection*{Dijkstra算法}
+
+\paragraph*{算法原理}
+
+Dijkstra算法解决的是有向图中的单源最短路径问题。\+Dijkstra算法要求所有边的权重都为非负值。
+
+Dijkstra算法核心信息是一组结点集合 S 。从源结点s 到集合 S 中的每一个结点之间的最短路径已经被找到。算法重复从结点集合 V-\/\+S 中选择最短路径估计最小的结点u, 将u加入到集合\+S中，然后对所有从u出发的边进行松弛。本算法利用最小优先队列\+Q来保存结点集合，每个结点的关键字为它的key值。
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 调用 {\ttfamily initialize\+\_\+single\+\_\+source}函数对图的顶点进行初始化
+\item 将集合\+S置为空，将所有顶点放入最小优先队列\+Q
+\item 循环操作直到\+Q为空，循环内执行以下操作：
+\begin{DoxyItemize}
+\item 弹出最小优先级队列队首元素u
+\item 将u对应的结点放入集合\+S中
+\item 对从u出发的边且另一端在\+Q中的边进行松弛。松弛过程隐含着\+Q的一个{\ttfamily decreate\+\_\+key()}方法的调用
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+时间复杂度为\+O(V$^\wedge$2+\+E) 
+
+Definition at line 77 of file dijkstra.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a680307505286ae3230d1843c342e874e}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!extend\+\_\+path@{extend\+\_\+path}}
+\index{extend\+\_\+path@{extend\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{extend\+\_\+path(const Matrix\+Type \&\+L, const Matrix\+Type \&\+W)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ Matrix\+Type Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::extend\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Type \&}]{L, }
+\item[{const Matrix\+Type \&}]{W}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a680307505286ae3230d1843c342e874e}
+
+
+extend\+\_\+path：扩展一条边，算法导论25章25.1节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+:初始\+L矩阵} & \\
+\hline
+{\em W} & 图的权重矩阵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 扩展之后的\+L矩阵
+\end{DoxyReturn}
+该函数作为 matrix\+\_\+shortest\+\_\+path 的辅助函数 $>$这里要求 Matrix\+Type是一个n$\ast$n的矩阵。如果\+Matrix\+Type不是一个n$\ast$n的矩阵，则编译失败
+
+算法步骤如下：
+
+
+\begin{DoxyItemize}
+\item 外层循环 i 从 0...N-\/1(N次)
+\begin{DoxyItemize}
+\item 内层循环 j 从 0...N-\/1(N次)
+\begin{DoxyItemize}
+\item 将new\+L\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}设为正无穷，对所有的k,k 从 0...N-\/1(N次)，选取 L\mbox{[}i\mbox{]}\mbox{[}k\mbox{]}+\+W\mbox{[}k\mbox{]}\mbox{[}j\mbox{]}的最小值赋值给new\+L\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item 最终返回 new\+L
+\end{DoxyItemize}
+
+性能：时间复杂度 O(n$^\wedge$3) 
+
+Definition at line 48 of file matrix\+\_\+shortest\+\_\+path.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab951caca0797ff2907a180fe81609c70}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!floyd\+\_\+warshall@{floyd\+\_\+warshall}}
+\index{floyd\+\_\+warshall@{floyd\+\_\+warshall}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{floyd\+\_\+warshall(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::pair$<$ std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type ,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$, std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type ,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$ $>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::floyd\+\_\+warshall (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab951caca0797ff2907a180fe81609c70}
+
+
+floyd\+\_\+warshall：返回所有节点对的最短路径的floyd\+\_\+warshall算法。算法导论25章25.2节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定的有向图。它必须非空，否则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 一个n$\ast$n的矩阵(d\+\_\+i\+\_\+j)与n$\ast$n的矩阵(p\+\_\+i\+\_\+j)的std\+::pair，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重, p\+\_\+i\+\_\+j 为从结点i到j的一条最短路径上j的前驱结点
+\end{DoxyReturn}
+\subsubsection*{所有结点对的最短路径}
+
+给定一个带权重的有向图\+G=(V,E)，其权重函数为w\+:E-\/$>$R，该函数将边映射到实值权重上。我们希望找到对于所有的结点对u,v属于\+V，找出一条从结点u 到结点v的最短路径，以及这条路径的权重。
+
+与单源最短路径不同中使用邻接表来表示图不同，本章的多数算法使用邻接矩阵来表示图。该矩阵代表的是一个有n个结点的有向图\+G=(V,E)的边的权重\+W=(w\+\_\+i\+\_\+j)， 其中 w\+\_\+i\+\_\+j =\+:
+
+
+\begin{DoxyItemize}
+\item 0\+:若i=j
+\item 有向边(i,j)的权重，若i!=j且(i,j)属于\+E
+\item 正无穷，若 i!=j且(i,j)不属于\+E
+\end{DoxyItemize}
+
+我们允许存在负权重的边，目前仍然假定图中不存在权重为负值的环路。
+
+本章讨论的所有结点对最短路径的算法的输出也是一个n$\ast$n的矩阵\+D=(d\+\_\+i\+\_\+j)，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重。
+
+有时候为了解决所有结点对最短路径问题，我们不仅要计算出最短路径权重，还需要计算出前驱结点矩阵 I\+I=(pai\+\_\+i\+\_\+j)，其中 pai\+\_\+i\+\_\+j在i=j或者从i到j 不存在路径时为\+N\+I\+L，在其他情况下给出的是从结点i到结点j的某条最短路径上结点j的前驱结点。由矩阵\+I\+I的第i行所诱导的子图应当是一棵根节点为i 的最短路径树。
+
+\subsubsection*{floyd\+\_\+warshall 算法}
+
+\paragraph*{算法原理}
+
+floyd\+\_\+warshall也是采用一种动态规划算法来解决问题。假定图\+G中的所有结点为\+V=\{1,2,3...n\},考虑其中的一个子集\{1,2,...k\}，这里k是某个小于n的整数。 图中可以存在负权重的边，但是不能存在权重为负的环路。对于任意结点对i,j属于\+V，考虑从结点i到结点j的所有中间结点均取自集合\{1,2,...k\}的路径，并且假设p为其中权重最小的路径。
+
+
+\begin{DoxyItemize}
+\item 若结点k不是路径p的中间结点，则路径p上的所有中间结点都属于集合\{1,2,3,...k-\/1\}。则结点i到j的中间结点取自集合\{1,2,...k-\/1\} 的一条最短路径也是从结点i到j的中间结点取自\{1,2...k)的一条最短路径
+\item 若结点k是路径p上的中间结点，则路径p分解为 i--$>$k(经过p1)--$>$j(经过p2)，则路径p1是结点i到k的中间结点取自集合\{1,2...k-\/1\} 的一条最短路径。路径p2是结点k到j的中间结点取自集合\{1,2,...k-\/1\}的一条最短路径。
+\end{DoxyItemize}
+
+根据以上观测，设d\+\_\+i\+\_\+j$<$k$>$为从结点i到结点j的所有中间结点全部取自集合\{1,2...k\}的一条最短路径的权重。当k=0时，从结点i到j 的一条不包含编号大于0的中间结点的路径将没有任何中间结点。这样的路径最多只有一条边，因此d\+\_\+i\+\_\+j$<$0$>$=w\+\_\+i\+\_\+j。因此d\+\_\+i\+\_\+j$<$k$>$为：
+
+
+\begin{DoxyItemize}
+\item w\+\_\+i\+\_\+j：当k=0
+\item min(d\+\_\+i\+\_\+j$<$k-\/1$>$,d\+\_\+i\+\_\+k$<$k-\/1$>$+d\+\_\+k\+\_\+j$<$k-\/1$>$：当k$>$0
+\end{DoxyItemize}
+
+对任何路径来说，所有中间结点都属于集合\{1,2,...n\}，则矩阵\+D$<$n$>$=(d\+\_\+i\+\_\+j$<$n$>$)
+
+我们可以在计算矩阵\+D$<$k$>$的同时计算出前驱矩阵\+I\+I，即计算一个矩阵序列 I\+I$<$0$>$,I\+I$<$1$>$...I\+I$<$k$>$。这里定义\+I\+I$<$k$>$=(pai\+\_\+i\+\_\+j$<$k$>$)， pai\+\_\+i\+\_\+j$<$k$>$为从结点i到j的一条所有中间结点都取自集合\{1,2,...k\}的最短路径上j的前驱结点。
+
+当k=0时，从i到j的一条最短路径没有中间结点，因此 pai\+\_\+i\+\_\+j$<$0$>$=\+:
+
+
+\begin{DoxyItemize}
+\item null\+:若i=j或者w\+\_\+i\+\_\+j=正无穷
+\item i ：若i!=j且w\+\_\+i\+\_\+j!=正无穷
+\end{DoxyItemize}
+
+对于 k$>$=1，若结点k不是路径p的中间结点，则路径p上的所有中间结点都属于集合\{1,2,3,...k-\/1\}，则 pai\+\_\+i\+\_\+j$<$k$>$=pai\+\_\+i\+\_\+j$<$k-\/1$>$; 若结点k是路径p的中间结点,考虑路径 i--$>$k--$>$j，这里 k!=j，则pai\+\_\+i\+\_\+j$<$k$>$=pai\+\_\+k\+\_\+j$<$k-\/1$>$。因此当k$>$=1时，pai\+\_\+i\+\_\+j$<$k$>$=\+:
+
+
+\begin{DoxyItemize}
+\item pai\+\_\+i\+\_\+j$<$k-\/1$>$：当d\+\_\+i\+\_\+j$<$k-\/1$>$ $<$= d\+\_\+i\+\_\+k$<$k-\/1$>$+dk\+\_\+j$<$k-\/1$>$
+\item pai\+\_\+k\+\_\+j$<$k-\/1$>$\+: 当 d\+\_\+i\+\_\+j$<$k-\/1$>$ $>$ d\+\_\+i\+\_\+k$<$k-\/1$>$+dk\+\_\+j$<$k-\/1$>$
+\end{DoxyItemize}
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 初始化：从图中获取结果矩阵\+D，以及父矩阵\+P
+\item 外层循环 k 从 0..N-\/1(N次)
+\begin{DoxyItemize}
+\item 新建 D$<$k$>$,P$<$k$>$，同时执行内层循环 i 从 0..N-\/1(N次)
+\item 执行最内层循环 j 从 0..N-\/1(N次)
+\begin{DoxyItemize}
+\item 根据递推公式对d\+\_\+i\+\_\+j$<$k$>$和p\+\_\+i\+\_\+j$<$k$>$赋值(此时\+D等于\+D$<$k-\/1$>$，\+P等于\+P$<$k-\/1$>$
+\end{DoxyItemize}
+\item 将\+D$<$k$>$赋值给\+D,P$<$k$>$赋值给\+P
+\end{DoxyItemize}
+\item 返回 std\+::make\+\_\+pair(\+D,\+P)
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+时间复杂度 O(\+V$^\wedge$3) 
+
+Definition at line 109 of file floyd\+\_\+warshall.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!get\+\_\+path@{get\+\_\+path}}
 \index{get\+\_\+path@{get\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -332,7 +628,32 @@ get\+\_\+path：获取两个顶点之间的路径
 
 要求{\ttfamily v\+\_\+from}与{\ttfamily v\+\_\+to}非空，否则抛出异常 
 
-Definition at line 140 of file header.\+h.
+Definition at line 141 of file header.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a267d39a5bb09200f37a1cd2f0ad4f69f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!graph\+\_\+plus\+\_\+1v@{graph\+\_\+plus\+\_\+1v}}
+\index{graph\+\_\+plus\+\_\+1v@{graph\+\_\+plus\+\_\+1v}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{graph\+\_\+plus\+\_\+1v(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::shared\+\_\+ptr$<${\bf Graph}$<$Graph\+Type\+::\+N\+U\+M+1,typename Graph\+Type\+::\+Vertex\+Type$>$ $>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::graph\+\_\+plus\+\_\+1v (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a267d39a5bb09200f37a1cd2f0ad4f69f}
+
+
+graph\+\_\+plus\+\_\+1v：根据图graph生成一个新图。算法导论25章25.2节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定的有向图。它必须非空，否则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 一个新图
+\end{DoxyReturn}
+根据图graph生成一个新图new\+\_\+graph。new\+\_\+graph的顶点 graph的顶点加上一个新顶点s； new\+\_\+graph的边为graph的边加上\{(s,v)\+:v属于graph的顶点\}; new\+\_\+graph的边的权重为graph的边权重，以及 w(s,v)=0 $>$注意：设原图有\+N个顶点，则新图有\+N+1个顶点
+
+本函数是 johnson 算法的辅助函数 
+
+Definition at line 46 of file johnson.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5ed496e8825564d0f9fcfe3b0ac41dec}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!initialize\+\_\+single\+\_\+source@{initialize\+\_\+single\+\_\+source}}
 \index{initialize\+\_\+single\+\_\+source@{initialize\+\_\+single\+\_\+source}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -344,7 +665,7 @@ Definition at line 140 of file header.\+h.
 )}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5ed496e8825564d0f9fcfe3b0ac41dec}
 
 
-initialize\+\_\+single\+\_\+source：单源最短路径的初始化操作，算法导论22章xx节 
+initialize\+\_\+single\+\_\+source：单源最短路径的初始化操作，算法导论24章24.1节 
 
 
 \begin{DoxyParams}{Parameters}
@@ -393,7 +714,82 @@ is\+\_\+unlimit：判断是否正无穷
 
 这里将大于等于{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/3}的数判断结果为正无穷 $>$因为考虑到正无穷减去一个数必须保证结果也是正无穷 
 
-Definition at line 125 of file header.\+h.
+Definition at line 126 of file header.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a856b132d068d0553355203a16cdec97d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!johnson@{johnson}}
+\index{johnson@{johnson}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{johnson(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type ,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::johnson (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a856b132d068d0553355203a16cdec97d}
+
+
+johnson：返回所有节点对的最短路径的johnson算法。算法导论25章25.3节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定的有向图。它必须非空，否则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 一个n$\ast$n的矩阵(d\+\_\+i\+\_\+j)，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重
+\end{DoxyReturn}
+\subsubsection*{所有结点对的最短路径}
+
+给定一个带权重的有向图\+G=(V,E)，其权重函数为w\+:E-\/$>$R，该函数将边映射到实值权重上。我们希望找到对于所有的结点对u,v属于\+V，找出一条从结点u 到结点v的最短路径，以及这条路径的权重。
+
+与单源最短路径不同中使用邻接表来表示图不同，本章的多数算法使用邻接矩阵来表示图。该矩阵代表的是一个有n个结点的有向图\+G=(V,E)的边的权重\+W=(w\+\_\+i\+\_\+j)， 其中 w\+\_\+i\+\_\+j =\+:
+
+
+\begin{DoxyItemize}
+\item 0\+:若i=j
+\item 有向边(i,j)的权重，若i!=j且(i,j)属于\+E
+\item 正无穷，若 i!=j且(i,j)不属于\+E
+\end{DoxyItemize}
+
+我们允许存在负权重的边，目前仍然假定图中不存在权重为负值的环路。
+
+本章讨论的所有结点对最短路径的算法的输出也是一个n$\ast$n的矩阵\+D=(d\+\_\+i\+\_\+j)，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重。
+
+有时候为了解决所有结点对最短路径问题，我们不仅要计算出最短路径权重，还需要计算出前驱结点矩阵 I\+I=(pai\+\_\+i\+\_\+j)，其中 pai\+\_\+i\+\_\+j在i=j或者从i到j 不存在路径时为\+N\+I\+L，在其他情况下给出的是从结点i到结点j的某条最短路径上结点j的前驱结点。由矩阵\+I\+I的第i行所诱导的子图应当是一棵根节点为i 的最短路径树。
+
+\subsubsection*{Johnson算法}
+
+\paragraph*{算法原理}
+
+对于稀疏图来说\+Johnson算法的渐近表现要优于重复平方法和\+Floyd-\/\+Warshall算法。\+Johnson算法要么返回一个包含所有结点对的最短路径权重的矩阵， 要么报告输入图中包含一个权重为负值的环路。\+Johnson算法在运行中需要使用\+Dijkstra算法和\+Bellman-\/\+Ford算法作为自己的子程序。
+
+Johnson算法使用一种称为重赋权重的技术。若图\+G=(V,E)中所有边权重w都为非负值，则可以通过对每一对顶点运行一次\+Dijkstra 算法来找到所有顶点对直接的最短路径。如果图\+G包含负权重的边，但没有权重为负值的环路，则需要计算出一组新的非负权重值，然后用同样的方法。 新赋的权重w\textquotesingle{}要求满足一下性质：
+
+
+\begin{DoxyItemize}
+\item 对于所有结点对u,v属于\+V，一条路径p实在使用权重函数w时从u到v的一条最短路径，当且仅当p实在使用权重函数w\textquotesingle{} 时从u到v的一条最短路径
+\item 对于所有的边(u,v)，新权重w\textquotesingle{}(u,v)非负
+\end{DoxyItemize}
+
+对于给定的有向图\+G=(V,E)，权重函数w：\+E-\/$>$R 。我们制作一副新图\+G\textquotesingle{}=(V\textquotesingle{},E\textquotesingle{})，其中\+V\textquotesingle{}=V并上\{s\}，s是一个新结点，s不属于\+V。 E\textquotesingle{}=E并上\{(s,v);v属于\+V\}。我们对权重函数w进行扩展，使得对于所有结点v属于\+V，有w(s,v)=0。 对所有的结点v属于\+V\textquotesingle{}，我们定义h(v)=delt(s,v)。定义w\textquotesingle{}(u,v)=w(u,v)+h(u)-\/h(v)
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 重赋权重：
+\begin{DoxyItemize}
+\item 创建新图 new\+\_\+graph
+\item 对新图执行 bellman\+\_\+ford 的调用，源点为新创建的结点s
+\item 如果有负权值的环路，则抛出异常。
+\item 如果没有负权重环路，则创建h函数，并对new\+\_\+graph中的所有边执行重新赋权
+\end{DoxyItemize}
+\item 在 new\+\_\+graph上，除了新的顶点s之外的所有顶点v,以v为源顶点执行dijkstra过程。\+D\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}等于 new\+\_\+graph 中以i为源点到j的最短路径的权重的修正值， 修正的方法就是重新赋权的逆过程。
+\item 返回矩阵 D
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+时间复杂度 O（\+V$^\wedge$2 lg\+V + V\+E) 
+
+Definition at line 139 of file johnson.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2575c09c42d0b30b57702c9379d2fbfb}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!kruskal@{kruskal}}
 \index{kruskal@{kruskal}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -406,7 +802,7 @@ Definition at line 125 of file header.\+h.
 )}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2575c09c42d0b30b57702c9379d2fbfb}
 
 
-kruskal：最小生成树的\+Kruskal算法，算法导论22章23.2节 
+kruskal：最小生成树的\+Kruskal算法，算法导论23章23.2节 
 
 
 \begin{DoxyParams}{Parameters}
@@ -422,15 +818,21 @@ kruskal：最小生成树的\+Kruskal算法，算法导论22章23.2节
 \begin{DoxyReturn}{Returns}
 \+: 最小生成树的权重
 \end{DoxyReturn}
+\subsubsection*{最小生成树}
+
 最小生成树：对于一个连通无向图\+G=(V,E)，对于每一条边(u,v)属于\+E都赋予了一个权重w(u,v)。我们希望找出一个无环子集\+T，其中\+T为\+E的子集，使得所有的顶点\+V位于\+T中， 同时\+T具有最小的权重。由于\+T是无环的，且连通所有结点因此\+T必然是一棵树。我们称这样的树为生成树。称从\+G中求取该生成树的问题为最小生成树问题。
 
 通用的最小生成树使用贪心策略。该策略在每个时刻找到最小生成树的一条边，并在整个策略过程中维持循环不变式：边的集合\+A在每次循环之前是某棵最小生成树的一个子集。
 
 在每一步，选择一条边(u,v)，将其加入集合\+A中，使得\+A不违反循环不变式。称这样的边(u,v)为边集合\+A的安全边。
 
-在\+Kruskal算法中集合\+A是一个森林，其结点就是\+G的结点。\+Kruskal算法找到安全边的办法是：在所有连接森林中两棵不同树的边里面，找到权重最小的边(u,v)。
+\subsubsection*{Kruskal 算法}
 
-Kruskal算法使用一个不相交集合数据结构来维护几个互不相交的元素集合。每个集合代表当前森林中的一棵树。算法步骤如下：
+\paragraph*{算法原理}
+
+在\+Kruskal算法中集合\+A是一个森林，其结点就是\+G的结点。\+Kruskal算法找到安全边的办法是：在所有连接森林中两棵不同树的边里面，找到权重最小的边(u,v)。 Kruskal算法使用一个不相交集合数据结构来维护几个互不相交的元素集合。每个集合代表当前森林中的一棵树
+
+\paragraph*{算法步骤}
 
 
 \begin{DoxyItemize}
@@ -444,9 +846,172 @@ Kruskal算法使用一个不相交集合数据结构来维护几个互不相交�
 
 $>$根据算法的特征，如果图中只有一个顶点，算法得到的集合\+A为空集；但是实际上集合\+A应该包含该顶点。这是算法在极端情况下的\+B\+U\+G。
 
-性能：\+Kruskal算法运行时间依赖于不相交集合数据结构的实现方式。如果采用算法导论21.3节讨论的不相交集合森林实现（也是我在src/set\+\_\+algorithms/disjoint\+\_\+set中实现的）， 则\+Kruskal算法的时间为 O(\+Elg\+V) 
+\paragraph*{算法性能}
 
-Definition at line 62 of file kruskal.\+h.
+Kruskal算法运行时间依赖于不相交集合数据结构的实现方式。如果采用算法导论21.3节讨论的不相交集合森林实现（也是我在src/set\+\_\+algorithms/disjoint\+\_\+set中实现的）， 则\+Kruskal算法的时间为 O(\+Elg\+V) 
+
+Definition at line 69 of file kruskal.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab9dcca59a42c708c137571d194c45bd9}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!matrix\+\_\+shortest\+\_\+path@{matrix\+\_\+shortest\+\_\+path}}
+\index{matrix\+\_\+shortest\+\_\+path@{matrix\+\_\+shortest\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{matrix\+\_\+shortest\+\_\+path(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type ,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::matrix\+\_\+shortest\+\_\+path (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab9dcca59a42c708c137571d194c45bd9}
+
+
+matrix\+\_\+shortest\+\_\+path：返回所有节点对的最短路径的矩阵乘法算法。算法导论25章25.1节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定的有向图。它必须非空，否则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 一个n$\ast$n的矩阵(d\+\_\+i\+\_\+j)，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重
+\end{DoxyReturn}
+\subsubsection*{所有结点对的最短路径}
+
+给定一个带权重的有向图\+G=(V,E)，其权重函数为w\+:E-\/$>$R，该函数将边映射到实值权重上。我们希望找到对于所有的结点对u,v属于\+V，找出一条从结点u 到结点v的最短路径，以及这条路径的权重。
+
+与单源最短路径不同中使用邻接表来表示图不同，本章的多数算法使用邻接矩阵来表示图。该矩阵代表的是一个有n个结点的有向图\+G=(V,E)的边的权重\+W=(w\+\_\+i\+\_\+j)， 其中 w\+\_\+i\+\_\+j =\+:
+
+
+\begin{DoxyItemize}
+\item 0\+:若i=j
+\item 有向边(i,j)的权重，若i!=j且(i,j)属于\+E
+\item 正无穷，若 i!=j且(i,j)不属于\+E
+\end{DoxyItemize}
+
+我们允许存在负权重的边，目前仍然假定图中不存在权重为负值的环路。
+
+本章讨论的所有结点对最短路径的算法的输出也是一个n$\ast$n的矩阵\+D=(d\+\_\+i\+\_\+j)，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重。
+
+有时候为了解决所有结点对最短路径问题，我们不仅要计算出最短路径权重，还需要计算出前驱结点矩阵 I\+I=(pai\+\_\+i\+\_\+j)，其中 pai\+\_\+i\+\_\+j在i=j或者从i到j 不存在路径时为\+N\+I\+L，在其他情况下给出的是从结点i到结点j的某条最短路径上结点j的前驱结点。由矩阵\+I\+I的第i行所诱导的子图应当是一棵根节点为i 的最短路径树。
+
+\subsubsection*{matrix\+\_\+shortest\+\_\+path 算法}
+
+\paragraph*{算法原理}
+
+matrix\+\_\+shortest\+\_\+path采用动态规划算法求解。考虑从结点i到j的一条最短路径p，假定p最多包含m条边，假定没有权重为负值的环路，且m为有限值。 如果 i=j，则p的权重为0且不包含任何边；如果i和j不同，则将路径p分解为 i--$>$k(经过路径p\textquotesingle{})--$>$j，其中路径p\textquotesingle{}最多包含m-\/1条边。
+
+定义 l\+\_\+i\+\_\+j$<$m$>$为从结点i到j的最多包含m条边的任意路径中的最小权重，则有：l\+\_\+i\+\_\+j$<$m$>$=
+
+
+\begin{DoxyItemize}
+\item 0：如果i=j
+\item 正无穷\+:如果 i!=j
+\end{DoxyItemize}
+
+对于m$>$=1，我们有： l\+\_\+i\+\_\+j$<$m$>$=min(l\+\_\+i\+\_\+j$<$m-\/1$>$，min\+\_\+(1$<$=k$<$=n)\{l\+\_\+i\+\_\+k$<$m-\/1$>$+w\+\_\+k\+\_\+j\})=min\+\_\+(1$<$=k$<$=n)\{l\+\_\+i\+\_\+k$<$m-\/1$>$+w\+\_\+k\+\_\+j\}。 如果图\+G不包含负值的环路，则对于每一对结点i,j，如果他们delt(i,j)$<$正无穷，则从i到j之间存在一条最短路径。由于该路径是简单路径， 则包含的边最多为n-\/1条。因此delt(i,j)=l\+\_\+i\+\_\+j$<$n-\/1$>$=l\+\_\+i\+\_\+j$<$n$>$=...
+
+matrix\+\_\+shortest\+\_\+path算法根据输入矩阵\+W=(w\+\_\+i\+\_\+j)，计算出矩阵序列 L$<$1$>$，\+L$<$2$>$,...L$<$n-\/1$>$。最后的矩阵\+L$<$n-\/1$>$包含的是最短路径的权重。 其中\+L$<$1$>$=W。算法的核心是extend\+\_\+path函数，它将最近计算出的路径扩展了一条边
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 初始化：从图中获取权重矩阵 W
+\item 执行循环扩展\+L，其中 L$<$0$>$=W, L$<$k$>$=extend\+\_\+path(L$<$k-\/1$>$,W)
+\item 最终返回 L$<$N-\/1$>$
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+时间复杂度\+O(\+V$^\wedge$4) 
+
+Definition at line 129 of file matrix\+\_\+shortest\+\_\+path.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6eb979447eeb937df4158f9646e20dde}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!matrix\+\_\+shortest\+\_\+path\+\_\+fast@{matrix\+\_\+shortest\+\_\+path\+\_\+fast}}
+\index{matrix\+\_\+shortest\+\_\+path\+\_\+fast@{matrix\+\_\+shortest\+\_\+path\+\_\+fast}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{matrix\+\_\+shortest\+\_\+path\+\_\+fast(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type ,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::matrix\+\_\+shortest\+\_\+path\+\_\+fast (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6eb979447eeb937df4158f9646e20dde}
+
+
+matrix\+\_\+shortest\+\_\+path：返回所有节点对的最短路径的矩阵乘法复平方算法。算法导论25章25.1节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定的有向图。它必须非空，否则抛出异常} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 一个n$\ast$n的矩阵(d\+\_\+i\+\_\+j)，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重
+\end{DoxyReturn}
+\subsubsection*{所有结点对的最短路径}
+
+给定一个带权重的有向图\+G=(V,E)，其权重函数为w\+:E-\/$>$R，该函数将边映射到实值权重上。我们希望找到对于所有的结点对u,v属于\+V，找出一条从结点u 到结点v的最短路径，以及这条路径的权重。
+
+与单源最短路径不同中使用邻接表来表示图不同，本章的多数算法使用邻接矩阵来表示图。该矩阵代表的是一个有n个结点的有向图\+G=(V,E)的边的权重\+W=(w\+\_\+i\+\_\+j)， 其中 w\+\_\+i\+\_\+j =\+:
+
+
+\begin{DoxyItemize}
+\item 0\+:若i=j
+\item 有向边(i,j)的权重，若i!=j且(i,j)属于\+E
+\item 正无穷，若 i!=j且(i,j)不属于\+E
+\end{DoxyItemize}
+
+我们允许存在负权重的边，目前仍然假定图中不存在权重为负值的环路。
+
+本章讨论的所有结点对最短路径的算法的输出也是一个n$\ast$n的矩阵\+D=(d\+\_\+i\+\_\+j)，其中 d\+\_\+i\+\_\+j 代表的是结点i到j的一条最短路径的权重。
+
+有时候为了解决所有结点对最短路径问题，我们不仅要计算出最短路径权重，还需要计算出前驱结点矩阵 I\+I=(pai\+\_\+i\+\_\+j)，其中 pai\+\_\+i\+\_\+j在i=j或者从i到j 不存在路径时为\+N\+I\+L，在其他情况下给出的是从结点i到结点j的某条最短路径上结点j的前驱结点。由矩阵\+I\+I的第i行所诱导的子图应当是一棵根节点为i 的最短路径树。
+
+\subsubsection*{matrix\+\_\+shortest\+\_\+path\+\_\+fast 算法}
+
+\paragraph*{算法原理}
+
+matrix\+\_\+shortest\+\_\+path\+\_\+fast改进了算法matrix\+\_\+shortest\+\_\+path。因为我们的目标并不是计算所有的\+L$<$m$>$矩阵，我们感兴趣的仅仅是矩阵\+L$<$n-\/1$>$。 由matrix\+\_\+shortest\+\_\+path过程定义的矩阵乘法是相关的，因此可以仅用t个矩阵乘积来计算矩阵\+L$<$n-\/1$>$，其中 n为大于lg(n-\/1)的最小整数。 因此可以用复平方技术来计算上述矩阵序列：
+
+
+\begin{DoxyItemize}
+\item L$<$1$>$=W
+\item L$<$2$>$=W$^\wedge$2=W.\+W
+\item L$<$4$>$=W$^\wedge$4=W$^\wedge$2.W$^\wedge$2
+\item L$<$8$>$=W$^\wedge$8=W$^\wedge$4.W$^\wedge$4 ....
+\end{DoxyItemize}
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 初始化：从图中获取权重矩阵 W
+\item 执行循环扩展\+L，其中 L$<$0$>$=W, L$<$2$\ast$k$>$=extend\+\_\+path(\+L$<$k$>$,\+L$<$k$>$)
+\item 最终返回 L$<$log(N-\/1)的上界整数$>$
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+时间复杂度\+O(\+V$^\wedge$3lg\+V) 
+
+Definition at line 211 of file matrix\+\_\+shortest\+\_\+path.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a97d248a07f1b31df52be3de3b5570237}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!matrix\+\_\+string@{matrix\+\_\+string}}
+\index{matrix\+\_\+string@{matrix\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{matrix\+\_\+string(const Matrix\+Type \&matrix)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ std\+::string Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::matrix\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Type \&}]{matrix}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a97d248a07f1b31df52be3de3b5570237}
+
+
+matrix\+\_\+string：获取矩阵的字符串描述 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & 矩阵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 矩阵的字符串描述
+\end{DoxyReturn}
+获取矩阵{\ttfamily matrix}的字符串描述。 
+
+Definition at line 169 of file header.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_aba1581358d79ba82dc4fd0c15bc987e6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!prim@{prim}}
 \index{prim@{prim}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -460,7 +1025,7 @@ Definition at line 62 of file kruskal.\+h.
 )}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_aba1581358d79ba82dc4fd0c15bc987e6}
 
 
-prim：最小生成树的\+Prim算法，算法导论22章23.2节 
+prim：最小生成树的\+Prim算法，算法导论23章23.2节 
 
 
 \begin{DoxyParams}{Parameters}
@@ -484,15 +1049,23 @@ prim：最小生成树的\+Prim算法，算法导论22章23.2节
 \item {\ttfamily graph}中不存在某个顶点的{\ttfamily id}等于{\ttfamily source\+\_\+id}时，{\ttfamily source\+\_\+id}无效
 \end{DoxyItemize}
 
+\subsubsection*{最小生成树}
+
 最小生成树：对于一个连通无向图\+G=(V,E)，对于每一条边(u,v)属于\+E都赋予了一个权重w(u,v)。我们希望找出一个无环子集\+T，其中\+T为\+E的子集，使得所有的顶点\+V位于\+T中， 同时\+T具有最小的权重。由于\+T是无环的，且连通所有结点因此\+T必然是一棵树。我们称这样的树为生成树。称从\+G中求取该生成树的问题为最小生成树问题。
 
 通用的最小生成树使用贪心策略。该策略在每个时刻找到最小生成树的一条边，并在整个策略过程中维持循环不变式：边的集合\+A在每次循环之前是某棵最小生成树的一个子集。
 
 在每一步，选择一条边(u,v)，将其加入集合\+A中，使得\+A不违反循环不变式。称这样的边(u,v)为边集合\+A的安全边。
 
+\subsubsection*{Prim算法}
+
+\paragraph*{算法原理}
+
 在\+Prim算法所具有的一个性质是集合\+A中的边总是构成一棵树。这棵树从一个任意的根结点r开始，一直长大到覆盖\+V中的所有结点为止。算法每一步在连接集合\+A和\+A之外的结点的所有边中， 选择一条边加入到\+A中（经特殊选择的边）。
 
-为了有效地实现\+Prim算法，需要一种快速的方法来选择一条新的边以便加入到由集合\+A中的边所构成的树中。在算法执行过程中，所有不在树\+A中的结点都存放在一个基于key的属性的最小优先级队列\+Q中。 对于每个结点v，属性v.\+key保存的是连接v和树中结点的所有边中最小边的权重。若这样的边不存在则权重为正无穷。属性v.\+pai给出的是结点v在树中的父结点。 下面是算法步骤：
+为了有效地实现\+Prim算法，需要一种快速的方法来选择一条新的边以便加入到由集合\+A中的边所构成的树中。在算法执行过程中，所有不在树\+A中的结点都存放在一个基于key的属性的最小优先级队列\+Q中。 对于每个结点v，属性v.\+key保存的是连接v和树中结点的所有边中最小边的权重。若这样的边不存在则权重为正无穷。属性v.\+pai给出的是结点v在树中的父结点。
+
+\paragraph*{算法步骤}
 
 
 \begin{DoxyItemize}
@@ -506,9 +1079,11 @@ prim：最小生成树的\+Prim算法，算法导论22章23.2节
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-性能：\+Prim总时间代价为\+O(Vlg\+V+\+Elg\+V)=O(\+Elg\+V)(使用最小堆实现的最小优先级队列），或者\+O(E+\+Vlg\+V)（使用斐波那契堆实现最小优先级队列） 
+\paragraph*{算法性能}
 
-Definition at line 68 of file prim.\+h.
+Prim总时间代价为\+O(Vlg\+V+\+Elg\+V)=O(\+Elg\+V)(使用最小堆实现的最小优先级队列），或者\+O(E+\+Vlg\+V)（使用斐波那契堆实现最小优先级队列） 
+
+Definition at line 77 of file prim.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_afe2bd83fca7df7e07ece9a59b8e7f5a6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!relax@{relax}}
 \index{relax@{relax}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -521,7 +1096,7 @@ Definition at line 68 of file prim.\+h.
 )}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_afe2bd83fca7df7e07ece9a59b8e7f5a6}
 
 
-relax：单源最短路径的松弛操作，算法导论22章xx节 
+relax：单源最短路径的松弛操作，算法导论24章24.1节 
 
 
 \begin{DoxyParams}{Parameters}
@@ -573,7 +1148,7 @@ same\+\_\+component：返回无向图的两个顶点是否位于同一个连通�
 
 在执行 same\+\_\+component函数之前必须先执行 connected\+\_\+component函数对无向图进行预处理。 
 
-Definition at line 143 of file connectedcomponent.\+h.
+Definition at line 93 of file connectedcomponent.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a6d058c2aaa8714778b3f2ab8a24ff232}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!scc@{scc}}
 \index{scc@{scc}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -644,7 +1219,7 @@ topology\+\_\+sort：拓扑排序，算法导论22章22.4节
 
 性能：时间复杂度\+O(V+\+E) 
 
-Definition at line 43 of file topologysort.\+h.
+Definition at line 45 of file topologysort.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a19237111c3b1ec2717c5e1aefe2f6d9b}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!unlimit@{unlimit}}
 \index{unlimit@{unlimit}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -670,19 +1245,19 @@ unlimit：返回正无穷的函数
 
 这里将{\ttfamily std\+::numeric\+\_\+limits$<$T$>$\+::max()/2}设为正无穷，考虑到正无穷加上一个较大的数必须保证不能溢出 
 
-Definition at line 110 of file header.\+h.
+Definition at line 111 of file header.\+h.
 
-\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_af651a2b435fc270ab711e573d83a385d}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!visit@{visit}}
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5fbba98b1c6a8b55f026158acc815768}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!visit@{visit}}
 \index{visit@{visit}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
-\subsubsection[{visit(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, Action\+Type pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, Action\+Type post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$void(typename Graph\+Type\+::\+V\+I\+D\+Type,int)$>$$>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::visit (
+\subsubsection[{visit(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, int \&time, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{}, std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$ post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type, int)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::visit (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
 \item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{v\+\_\+id, }
 \item[{int \&}]{time, }
-\item[{Action\+Type}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
-\item[{Action\+Type}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}}
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$}]{pre\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}, }
+\item[{std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type, int)$>$}]{post\+\_\+action = {\ttfamily \mbox{[}\mbox{]}(typename~GraphType\+:\+:VIDType,int)\{\}}}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_af651a2b435fc270ab711e573d83a385d}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5fbba98b1c6a8b55f026158acc815768}
 
 
 visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22章22.3节 
@@ -716,5 +1291,5 @@ visit：深度优先搜索的辅助函数，用于访问顶点，算法导论22�
 \item 当结点 v\+\_\+id 的相邻结点访问完毕，则全局时间 time 递增，然后将结点 v\+\_\+id 设置为完成状态 
 \end{DoxyItemize}
 
-Definition at line 160 of file dfs.\+h.
+Definition at line 49 of file dfs.\+h.
 

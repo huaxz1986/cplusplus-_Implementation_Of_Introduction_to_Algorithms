@@ -5,6 +5,6 @@ var searchData=
   ['binarytree',['BinaryTree',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#adc9b1c18fd12ab56de09e92005848abf',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTree']]],
   ['binarytreenode',['BinaryTreeNode',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a8e8de673785852b0c091916f5fb64e78',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode::BinaryTreeNode()'],['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a8382a5ddc6f9c8cbfeacd0f0163d8c4d',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode::BinaryTreeNode(const KeyType &amp;keyvalue)']]],
   ['binarytreetest',['BinaryTreeTest',['../class_binary_tree_test.html#ab650cb6b7b008479f5294b1ed65871e5',1,'BinaryTreeTest']]],
-  ['breadth_5ffirst_5fsearch',['breadth_first_search',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a9c57b397479972f84b4b10bc19968297',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
+  ['breadth_5ffirst_5fsearch',['breadth_first_search',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a8839165b9e3d4c8c2ccac4cdc28aadd5',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['bucket_5fsort',['bucket_sort',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html#a1c3f0138b22c1e0c0bbfa67490ec51f1',1,'IntroductionToAlgorithm::SortAlgorithm']]]
 ];

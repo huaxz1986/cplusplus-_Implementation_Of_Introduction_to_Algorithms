@@ -68,48 +68,7 @@ namespace IntroductionToAlgorithm
             }
             KeyType key;  /*!< 顶点存储数据*/
             const VIDType id;   /*!< 顶点id，一旦顶点生成则id不可变*/
-        };
-
-        //!VertexP：图的顶点，它带一个parent属性，算法导论22章22.1节
-        /*!
-        *
-        * 它继承自Vertex，区别在于多了一个parent成员变量
-        */
-        template<typename KType> struct VertexP:public Vertex<KType>
-        {
-            typedef KType KeyType;    /*!< 顶点存储数据的类型*/
-            typedef int VIDType;      /*!< 顶点编号的数据类型*/
-
-            //!默认构造函数
-            VertexP(){}
-            //!显式构造函数，指定`key`
-            /*!
-            * \param  k:顶点存放的数据
-            */
-            explicit VertexP(const KeyType&k):Vertex<KeyType>(k){}
-            //!显式构造函数，指定`key`和编号
-            /*!
-            * \param  k:顶点存放的数据
-            * \param  d:顶点的编号
-            */
-            VertexP(const KeyType&k,VIDType d):Vertex<KeyType>(k,d){}
-
-            //!to_string：返回顶点的字符串描述
-            /*!
-            * \return :顶点的字符串描述
-            *
-            * 依次输出顶点的`id`、`key`、`parent`信息。
-            */
-            virtual std::string to_string() const
-            {
-                std::ostringstream os;
-                os<<Vertex<KeyType>::to_string()<<"\t parent:";
-                if(parent) os<<parent->id;
-                else os<<"nullptr";
-                return os.str();
-            }
-            std::shared_ptr<VertexP> parent;/*!< 顶点的父顶点的强指针*/
-        };
+        };        
     }
 }
 #endif // GRAPHVERTEX

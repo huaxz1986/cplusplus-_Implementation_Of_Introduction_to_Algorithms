@@ -20,6 +20,7 @@
 #define MATRIXGRAPH_TEST
 #include"src/google_test/gtest.h"
 #include"matrixgraph.h"
+#include<memory>
 namespace  {
     const int MTXNUM =10; /*!< 测试的图顶点数量*/
 }

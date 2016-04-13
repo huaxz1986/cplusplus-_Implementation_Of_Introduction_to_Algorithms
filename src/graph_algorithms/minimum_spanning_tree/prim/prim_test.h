@@ -20,7 +20,7 @@
 #define PRIM_TEST
 #include"src/google_test/gtest.h"
 #include"prim.h"
-#include"../../basic_graph/graph_representation/graph_vertex/vertex.h"
+#include"../../basic_graph/graph_representation/graph_vertex/vertexp.h"
 #include"../../basic_graph/graph_representation/graph/graph.h"
 using IntroductionToAlgorithm::GraphAlgorithm::Graph;
 using IntroductionToAlgorithm::GraphAlgorithm::prim;

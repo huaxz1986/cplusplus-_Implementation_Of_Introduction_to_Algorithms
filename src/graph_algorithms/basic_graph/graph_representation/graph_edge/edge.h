@@ -19,6 +19,7 @@
 #ifndef GRAPHEDGE
 #define GRAPHEDGE
 #include<tuple>
+#include<memory>
 namespace IntroductionToAlgorithm
 {
     namespace GraphAlgorithm

@@ -118,12 +118,17 @@ find\+\_\+set：返回结点所在集合的代表结点
 
 
 \begin{DoxyParams}{Parameters}
-{\em node\+:要查找的结点。它必须非空，否则抛出异常} & 该操作简单沿着指向父节点的指针找到树的根。树的根的特征是：它的父节点就是它本身。 若结点不在不相交集合森林中（当结点的父节点指针为空时），则抛出异常。\\
+{\em node\+:要查找的结点。它必须非空，否则抛出异常} & \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 结点所在集合的代表结点的强指针
+\end{DoxyReturn}
+该操作简单沿着指向父节点的指针找到树的根。树的根的特征是：它的父节点就是它本身。 若结点不在不相交集合森林中（当结点的父节点指针为空时），则抛出异常。
+
 find\+\_\+set过程是一个 two\+\_\+pass method，当它递归时，第一趟沿着查找路径向上直到找到树根； 当递归回溯时，第二趟沿着搜索树向下更新每个节点，使其父节点直接指向树根 
 
-Definition at line 83 of file disjointset.\+h.
+Definition at line 84 of file disjointset.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node_ac5fff2fa07d82ed04529aa9159d37efc}{}\index{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node@{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node}!link\+\_\+set@{link\+\_\+set}}
 \index{link\+\_\+set@{link\+\_\+set}!Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node@{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node}}
@@ -150,7 +155,7 @@ link\+\_\+set：链接集合
 \item 如果 node\+X 和 node\+Y非空，但是node\+X或者node\+Y不是根结点，抛出异常 
 \end{DoxyItemize}
 
-Definition at line 123 of file disjointset.\+h.
+Definition at line 124 of file disjointset.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node_a7346337c6f47bf066844c7101058cd92}{}\index{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node@{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node}!make\+\_\+set@{make\+\_\+set}}
 \index{make\+\_\+set@{make\+\_\+set}!Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node@{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node}}
@@ -170,7 +175,7 @@ make\+\_\+set：创建集合
 \end{DoxyParams}
 
 
-Definition at line 99 of file disjointset.\+h.
+Definition at line 100 of file disjointset.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node_aeb6281c8d6ec20987015fb1d1421b309}{}\index{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node@{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node}!union\+\_\+set@{union\+\_\+set}}
 \index{union\+\_\+set@{union\+\_\+set}!Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node@{Introduction\+To\+Algorithm\+::\+Set\+Algorithm\+::\+Disjoint\+Set\+Node}}
@@ -193,7 +198,7 @@ union\+\_\+set：合并集合
 \end{DoxyParams}
 
 
-Definition at line 150 of file disjointset.\+h.
+Definition at line 151 of file disjointset.\+h.
 
 
 

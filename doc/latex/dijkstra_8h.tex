@@ -1,14 +1,17 @@
 \hypertarget{dijkstra_8h}{}\section{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/dijkstra/dijkstra.h File Reference}
 \label{dijkstra_8h}\index{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/dijkstra/dijkstra.\+h@{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/dijkstra/dijkstra.\+h}}
-{\ttfamily \#include \char`\"{}basicgraph.\+h\char`\"{}}\\*
-{\ttfamily \#include \char`\"{}minqueue.\+h\char`\"{}}\\*
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \hyperlink{class_graph_1_1_d_i_j_k_s_t_r_a___short_path}{Graph\+::\+D\+I\+J\+K\+S\+T\+R\+A\+\_\+\+Short\+Path$<$ N $>$}
-\end{DoxyCompactItemize}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}../bellman\+\_\+ford/bellmanford.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/queue\+\_\+algorithms/min\+\_\+queue/minqueue.\+h\char`\"{}}\\*
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \hyperlink{namespace_graph}{Graph}
-\end{DoxyCompactItemize}
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_acac554e111d6377c630865258dd6aa19}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::dijkstra} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
+\begin{DoxyCompactList}\small\item\em dijkstra：单源最短路径的dijkstra算法，算法导论24章24.3节 \end{DoxyCompactList}\end{DoxyCompactItemize}

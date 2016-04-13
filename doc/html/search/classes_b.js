@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['topologysorttest',['TopologySortTest',['../class_topology_sort_test.html',1,'']]]
+  ['primtest',['PrimTest',['../class_prim_test.html',1,'']]]
 ];

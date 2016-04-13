@@ -128,30 +128,34 @@ $(document).ready(function(){initNavTree('topologysort_8h_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef TOPOLOGYSORT</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define TOPOLOGYSORT</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;../graph_dfs/dfs.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">namespace </span>GraphAlgorithm</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&lt;vector&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include&lt;functional&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">namespace </span>GraphAlgorithm</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">   43</a></span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> GraphType&gt; std::vector&lt;typename GraphType::VIDType&gt; <a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">topology_sort</a>(std::shared_ptr&lt;GraphType&gt; graph)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> GraphType::VIDType VIDType;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span>(!graph)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;topology_sort error: graph must not be nullptr!&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            std::vector&lt;VIDType&gt; sorted_result;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">auto</span> empty_action=[](VIDType v_id,<span class="keywordtype">int</span> time){};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">auto</span> finish_action=[&amp;sorted_result](VIDType v_id,<span class="keywordtype">int</span> time){sorted_result.insert(sorted_result.begin(),v_id);};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            depth_first_search&lt;GraphType,std::function&lt;void(typename GraphType::VIDType v_id,int time)&gt;&gt;(graph,empty_action,finish_action);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> sorted_result;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // TOPOLOGYSORT</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_a804241e72be5f4c031190bc12a6b73a2"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">IntroductionToAlgorithm::GraphAlgorithm::topology_sort</a></div><div class="ttdeci">std::vector&lt; typename GraphType::VIDType &gt; topology_sort(std::shared_ptr&lt; GraphType &gt; graph)</div><div class="ttdoc">topology_sort：拓扑排序，算法导论22章22.4节 </div><div class="ttdef"><b>Definition:</b> <a href="topologysort_8h_source.html#l00043">topologysort.h:43</a></div></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">   45</a></span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> GraphType&gt; std::vector&lt;typename GraphType::VIDType&gt; <a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">topology_sort</a>(std::shared_ptr&lt;GraphType&gt; graph)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> GraphType::VIDType VIDType;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">typedef</span> std::function&lt;void(VIDType v_id,int time)&gt; ActionType;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">if</span>(!graph)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;topology_sort error: graph must not be nullptr!&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::vector&lt;VIDType&gt; sorted_result;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            ActionType empty_action=[](VIDType v_id,<span class="keywordtype">int</span> time){};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            ActionType finish_action=[&amp;sorted_result](VIDType v_id,<span class="keywordtype">int</span> time){sorted_result.insert(sorted_result.begin(),v_id);};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a9f44099f26242f50087b3cc16dff965f">depth_first_search</a>(graph,empty_action,finish_action,empty_action,empty_action);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> sorted_result;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif // TOPOLOGYSORT</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_a9f44099f26242f50087b3cc16dff965f"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a9f44099f26242f50087b3cc16dff965f">IntroductionToAlgorithm::GraphAlgorithm::depth_first_search</a></div><div class="ttdeci">void depth_first_search(std::shared_ptr&lt; GraphType &gt; graph, std::function&lt; void(typename GraphType::VIDType, int)&gt; pre_action=[](typename GraphType::VIDType, int){}, std::function&lt; void(typename GraphType::VIDType, int)&gt; post_action=[](typename GraphType::VIDType, int){}, std::function&lt; void(typename GraphType::VIDType, int)&gt; pre_root_action=[](typename GraphType::VIDType, int){}, std::function&lt; void(typename GraphType::VIDType, int)&gt; post_root_action=[](typename GraphType::VIDType, int){}, const std::vector&lt; typename GraphType::VIDType &gt; &amp;search_order=std::vector&lt; typename GraphType::VIDType &gt;())</div><div class="ttdoc">depth_first_search：深度优先搜索，算法导论22章22.3节 </div><div class="ttdef"><b>Definition:</b> <a href="dfs_8h_source.html#l00138">dfs.h:138</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_a804241e72be5f4c031190bc12a6b73a2"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">IntroductionToAlgorithm::GraphAlgorithm::topology_sort</a></div><div class="ttdeci">std::vector&lt; typename GraphType::VIDType &gt; topology_sort(std::shared_ptr&lt; GraphType &gt; graph)</div><div class="ttdoc">topology_sort：拓扑排序，算法导论22章22.4节 </div><div class="ttdef"><b>Definition:</b> <a href="topologysort_8h_source.html#l00045">topologysort.h:45</a></div></div>
 <div class="ttc" id="namespace_introduction_to_algorithm_html"><div class="ttname"><a href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="longest__common__subsequence_8h_source.html#l00024">longest_common_subsequence.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

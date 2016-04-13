@@ -7,7 +7,7 @@ B\+F\+S\+\_\+\+Vertex：用于广度优先搜索的顶点类型，算法导论22
 
 
 
-{\ttfamily \#include $<$bfs.\+h$>$}
+{\ttfamily \#include $<$bfs\+\_\+vertex.\+h$>$}
 
 Inheritance diagram for Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:B\+F\+S\+\_\+\+Vertex$<$ K\+Type $>$\+:\begin{figure}[H]
 \begin{center}
@@ -72,7 +72,7 @@ B\+F\+S\+\_\+\+Vertex：用于广度优先搜索的顶点类型，算法导论22
 \item {\ttfamily set\+\_\+found(v\+\_\+parent)}：发现本顶点 
 \end{DoxyItemize}
 
-Definition at line 43 of file bfs.\+h.
+Definition at line 42 of file bfs\+\_\+vertex.\+h.
 
 
 
@@ -82,14 +82,14 @@ Definition at line 43 of file bfs.\+h.
 \subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef K\+Type {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a1e47ba34939458c68d7ccee8ebeccad2}
 顶点存储数据的类型 
 
-Definition at line 47 of file bfs.\+h.
+Definition at line 46 of file bfs\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a62cef758843cdaeefae2fc196f6bdb46}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!V\+I\+D\+Type@{V\+I\+D\+Type}}
 \index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
 \subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a62cef758843cdaeefae2fc196f6bdb46}
 顶点编号的数据类型 
 
-Definition at line 46 of file bfs.\+h.
+Definition at line 45 of file bfs\+\_\+vertex.\+h.
 
 
 
@@ -110,7 +110,7 @@ Definition at line 46 of file bfs.\+h.
 \end{Desc}
 
 
-Definition at line 48 of file bfs.\+h.
+Definition at line 47 of file bfs\+\_\+vertex.\+h.
 
 
 
@@ -128,7 +128,7 @@ Definition at line 48 of file bfs.\+h.
 
 
 
-Definition at line 52 of file bfs.\+h.
+Definition at line 51 of file bfs\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_abf41ef42dff5af509e9b42658882f604}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}}
 \index{B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
@@ -148,7 +148,7 @@ Definition at line 52 of file bfs.\+h.
 \end{DoxyParams}
 
 
-Definition at line 59 of file bfs.\+h.
+Definition at line 58 of file bfs\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3765fd695d8452180bafbb42baec744f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}}
 \index{B\+F\+S\+\_\+\+Vertex@{B\+F\+S\+\_\+\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
@@ -171,7 +171,7 @@ Definition at line 59 of file bfs.\+h.
 \end{DoxyParams}
 
 
-Definition at line 67 of file bfs.\+h.
+Definition at line 66 of file bfs\+\_\+vertex.\+h.
 
 
 
@@ -200,7 +200,7 @@ set\+\_\+found：发现本顶点
 
 这里要求{\ttfamily v\+\_\+parent}非空。若{\ttfamily v\+\_\+parent}为空则抛出异常 
 
-Definition at line 95 of file bfs.\+h.
+Definition at line 94 of file bfs\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a3f5b9ba686fae02e01cd899261fe6793}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!set\+\_\+source@{set\+\_\+source}}
 \index{set\+\_\+source@{set\+\_\+source}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
@@ -221,7 +221,7 @@ set\+\_\+source：设本顶点为源点
 \item 将本顶点的{\ttfamily parent}设为空 
 \end{DoxyItemize}
 
-Definition at line 77 of file bfs.\+h.
+Definition at line 76 of file bfs\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a73aa1fb33a2616818b709d04e79a007e}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
@@ -239,7 +239,7 @@ to\+\_\+string：返回顶点的字符串描述
 \end{DoxyReturn}
 再{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex}{Vertex}}基类的基础上输出{\ttfamily color}以及{\ttfamily parent}信息。 
 
-Definition at line 111 of file bfs.\+h.
+Definition at line 110 of file bfs\+\_\+vertex.\+h.
 
 
 
@@ -249,17 +249,17 @@ Definition at line 111 of file bfs.\+h.
 \subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf C\+O\+L\+O\+R} {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::color}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a7ab527ab8514bcb65e56edbe62b28fbb}
 顶点颜色 
 
-Definition at line 134 of file bfs.\+h.
+Definition at line 133 of file bfs\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a11202710469656d7fb04635430355c41}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}!parent@{parent}}
 \index{parent@{parent}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}}
 \subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::shared\+\_\+ptr$<${\bf B\+F\+S\+\_\+\+Vertex}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+B\+F\+S\+\_\+\+Vertex}$<$ K\+Type $>$\+::parent}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex_a11202710469656d7fb04635430355c41}
 顶点父顶点的强引用 
 
-Definition at line 135 of file bfs.\+h.
+Definition at line 134 of file bfs\+\_\+vertex.\+h.
 
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+bfs/\hyperlink{bfs_8h}{bfs.\+h}\end{DoxyCompactItemize}
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/graph\+\_\+vertex/\hyperlink{bfs__vertex_8h}{bfs\+\_\+vertex.\+h}\end{DoxyCompactItemize}

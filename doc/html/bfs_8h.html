@@ -104,26 +104,19 @@ $(document).ready(function(){initNavTree('bfs_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">bfs.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="header_8h_source.html">src/header.h</a>&gt;</code><br />
-<code>#include &quot;<a class="el" href="vertex_8h_source.html">../graph_representation/graph_vertex/vertex.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;queue&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="header_8h_source.html">src/header.h</a>&quot;</code><br />
 </div>
 <p><a href="bfs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html">IntroductionToAlgorithm::GraphAlgorithm::BFS_Vertex&lt; KType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">BFS_Vertex：用于广度优先搜索的顶点类型，算法导论22章22.2节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespace_introduction_to_algorithm"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></td></tr>
@@ -135,10 +128,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9c57b397479972f84b4b10bc19968297"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType)&gt;&gt; </td></tr>
-<tr class="memitem:a9c57b397479972f84b4b10bc19968297"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a9c57b397479972f84b4b10bc19968297">IntroductionToAlgorithm::GraphAlgorithm::breadth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, ActionType pre_action=[](typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType){})</td></tr>
-<tr class="memdesc:a9c57b397479972f84b4b10bc19968297"><td class="mdescLeft">&#160;</td><td class="mdescRight">breadth_first_search：广度优先搜索，算法导论22章22.2节  <a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a9c57b397479972f84b4b10bc19968297">More...</a><br /></td></tr>
-<tr class="separator:a9c57b397479972f84b4b10bc19968297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8839165b9e3d4c8c2ccac4cdc28aadd5"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a8839165b9e3d4c8c2ccac4cdc28aadd5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a8839165b9e3d4c8c2ccac4cdc28aadd5">IntroductionToAlgorithm::GraphAlgorithm::breadth_first_search</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, std::function&lt; void(typename GraphType::VIDType)&gt; pre_action=[](typename GraphType::VIDType){}, std::function&lt; void(typename GraphType::VIDType)&gt; post_action=[](typename GraphType::VIDType){})</td></tr>
+<tr class="memdesc:a8839165b9e3d4c8c2ccac4cdc28aadd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">breadth_first_search：广度优先搜索，算法导论22章22.2节  <a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a8839165b9e3d4c8c2ccac4cdc28aadd5">More...</a><br /></td></tr>
+<tr class="separator:a8839165b9e3d4c8c2ccac4cdc28aadd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

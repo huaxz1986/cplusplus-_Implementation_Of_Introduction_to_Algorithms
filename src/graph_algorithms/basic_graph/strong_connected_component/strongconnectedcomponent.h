@@ -55,7 +55,7 @@ namespace IntroductionToAlgorithm
             std::vector<VIDType> finished_order;
             auto empty_action=[](VIDType v_id,int time){};
             auto finish_action=[&finished_order](VIDType v_id,int time){finished_order.insert(finished_order.begin(),v_id);}; //完成时间逆序
-            depth_first_search<GraphType,std::function<void(typename GraphType::VIDType v_id,int time)>>(graph,empty_action,finish_action);
+            depth_first_search(graph,empty_action,finish_action);
             //*********** 转置图的深度优先搜索*********
             std::vector<std::vector<typename GraphType::VIDType>> result;
             int current_root_id=-1;
@@ -64,7 +64,7 @@ namespace IntroductionToAlgorithm
             auto pre_action=[&result,&current_root_id](VIDType v_id,int time){result.at(current_root_id).push_back(v_id);}; //将结点`id`添加到强连通分量中
 
             auto inverse_G=graph->inverse();
-            depth_first_search<GraphType,std::function<void(typename GraphType::VIDType v_id,int time)>>(inverse_G,pre_action,empty_action,pre_root_action,empty_action,finished_order);
+            depth_first_search(inverse_G,pre_action,empty_action,pre_root_action,empty_action,finished_order);
 
             //**********  剔除单根树 *************
             std::vector<std::vector<typename GraphType::VIDType>> real_result;

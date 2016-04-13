@@ -68,7 +68,25 @@ HEADERS += \
     src/graph_algorithms/basic_graph/connected_component/connectedcomponent.h \
     src/graph_algorithms/basic_graph/connected_component/connectedcomponent_test.h \
     src/graph_algorithms/single_source_shortest_path/bellman_ford/bellmanford.h \
-    src/graph_algorithms/single_source_shortest_path/bellman_ford/bellmanford_test.h
+    src/graph_algorithms/single_source_shortest_path/bellman_ford/bellmanford_test.h \
+    src/graph_algorithms/single_source_shortest_path/dag_shortest_path/dagshortpath.h \
+    src/graph_algorithms/single_source_shortest_path/dag_shortest_path/dagshortpath_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/bfs_vertex.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/bfs_vertex_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/dfs_vertex.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/dfs_vertex_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertexp.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertexp_test.h \
+    src/graph_algorithms/single_source_shortest_path/dijkstra/dijkstra.h \
+    src/graph_algorithms/single_source_shortest_path/dijkstra/dijkstra_test.h \
+    src/graph_algorithms/all_node_pair_shortest_path/matrix_shortest_path/matrix_shortest_path.h \
+    src/graph_algorithms/all_node_pair_shortest_path/matrix_shortest_path/matrix_shortest_path_test.h \
+    src/graph_algorithms/all_node_pair_shortest_path/floyd_warshall/floyd_warshall.h \
+    src/graph_algorithms/all_node_pair_shortest_path/floyd_warshall/floyd_warshall_test.h \
+    src/graph_algorithms/all_node_pair_shortest_path/johnson/johnson.h \
+    src/graph_algorithms/all_node_pair_shortest_path/johnson/johnson_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex_test.h
 
 
 

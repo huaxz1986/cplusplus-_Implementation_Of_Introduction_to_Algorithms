@@ -137,70 +137,70 @@ $(document).ready(function(){initNavTree('prim_8h_source.html','');});
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">namespace </span>GraphAlgorithm</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> GraphType,<span class="keyword">typename</span> ActionType=std::function&lt; <span class="keywordtype">void</span>(<span class="keyword">typename</span> GraphType::VIDType)&gt;&gt;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">   68</a></span>&#160;        <span class="keyword">typename</span> GraphType::EWeightType <a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a>(std::shared_ptr&lt;GraphType&gt; graph,<span class="keyword">typename</span> GraphType::VIDType source_id,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;             ActionType pre_action=[](<span class="keyword">typename</span> GraphType::VIDType){},ActionType post_action=[](<span class="keyword">typename</span> GraphType::VIDType){})</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> GraphType::VertexType VertexType;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> VertexType::KeyType KeyType;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span>(!graph)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;prim error: graph must not be nullptr!&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span>(source_id&lt;0||source_id&gt;=GraphType::NUM||!graph-&gt;vertexes.at(source_id))</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;prim error: source_id muse belongs [0,N) and graph-&gt;vertexes[source_id] must not be nullptr!&quot;</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keyword">auto</span> vertex_compare=[](std::shared_ptr&lt;VertexType&gt; first,std::shared_ptr&lt;VertexType&gt; second){<span class="keywordflow">return</span> first-&gt;key&lt;second-&gt;key;};</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">auto</span> vertex_key_get=[](std::shared_ptr&lt;VertexType&gt; v)-&gt;KeyType&amp; {<span class="keywordflow">return</span> v-&gt;key;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue&lt;VertexType,KeyType&gt;</a> min_queue(vertex_compare,vertex_key_get);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">//********** 初始化顶点  ****************</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;GraphType::NUM;i++)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keyword">auto</span> vertex=graph-&gt;vertexes.at(i);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">if</span>(vertex)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <span class="keywordflow">if</span>(i==source_id) vertex-&gt;key=0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keywordflow">else</span> vertex-&gt;key=unlimit&lt;KeyType&gt;();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    vertex-&gt;parent=std::shared_ptr&lt;VertexType&gt;();<span class="comment">//初始化所有结点</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    min_queue.insert(vertex);                  <span class="comment">//添加顶点到最小优先级队列中</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keyword">typename</span> GraphType::EWeightType weight=0;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">while</span>(!min_queue.is_empty())</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keyword">auto</span> minNode=min_queue.extract_min();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                pre_action(minNode-&gt;id);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keyword">auto</span> edges =graph-&gt;vertex_edge_tuples(minNode-&gt;id);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; edge_tuple:edges)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    <span class="keyword">auto</span> another_id=std::get&lt;1&gt;(edge_tuple);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keyword">auto</span> another_vertex=graph-&gt;vertexes.at(another_id);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    <span class="keyword">auto</span> edge_weight=std::get&lt;2&gt;(edge_tuple);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    <span class="keyword">auto</span> index=min_queue.index_inqueue(another_vertex);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    <span class="keywordflow">if</span>(index&gt;=0&amp;&amp; edge_weight&lt;another_vertex-&gt;key)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                        another_vertex-&gt;parent=minNode;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        another_vertex-&gt;key=edge_weight;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        min_queue.decreate_key(index,edge_weight); <span class="comment">//这里隐含着一个最小优先级队列的decreate_key操作</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                post_action(minNode-&gt;id);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                weight+=minNode-&gt;key;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">return</span> weight;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif // PRIM</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> GraphType,<span class="keyword">typename</span> ActionType=std::function&lt; <span class="keywordtype">void</span>(<span class="keyword">typename</span> GraphType::VIDType)&gt;&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">   77</a></span>&#160;        <span class="keyword">typename</span> GraphType::EWeightType <a class="code" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">prim</a>(std::shared_ptr&lt;GraphType&gt; graph,<span class="keyword">typename</span> GraphType::VIDType source_id,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;             ActionType pre_action=[](<span class="keyword">typename</span> GraphType::VIDType){},ActionType post_action=[](<span class="keyword">typename</span> GraphType::VIDType){})</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> GraphType::VertexType VertexType;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keyword">typedef</span> <span class="keyword">typename</span> VertexType::KeyType KeyType;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span>(!graph)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;prim error: graph must not be nullptr!&quot;</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span>(source_id&lt;0||source_id&gt;=GraphType::NUM||!graph-&gt;vertexes.at(source_id))</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;prim error: source_id muse belongs [0,N) and graph-&gt;vertexes[source_id] must not be nullptr!&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keyword">auto</span> vertex_compare=[](std::shared_ptr&lt;VertexType&gt; first,std::shared_ptr&lt;VertexType&gt; second){<span class="keywordflow">return</span> first-&gt;key&lt;second-&gt;key;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keyword">auto</span> vertex_key_get=[](std::shared_ptr&lt;VertexType&gt; v)-&gt;KeyType&amp; {<span class="keywordflow">return</span> v-&gt;key;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">MinQueue&lt;VertexType,KeyType&gt;</a> min_queue(vertex_compare,vertex_key_get);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">//********** 初始化顶点  ****************</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;GraphType::NUM;i++)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keyword">auto</span> vertex=graph-&gt;vertexes.at(i);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="keywordflow">if</span>(vertex)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    <span class="keywordflow">if</span>(i==source_id) vertex-&gt;key=0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keywordflow">else</span> vertex-&gt;key=unlimit&lt;KeyType&gt;();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    vertex-&gt;parent=std::shared_ptr&lt;VertexType&gt;();<span class="comment">//初始化所有结点</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    min_queue.insert(vertex);                  <span class="comment">//添加顶点到最小优先级队列中</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keyword">typename</span> GraphType::EWeightType weight=0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">while</span>(!min_queue.is_empty())</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keyword">auto</span> minNode=min_queue.extract_min();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                pre_action(minNode-&gt;id);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keyword">auto</span> edges =graph-&gt;vertex_edge_tuples(minNode-&gt;id);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; edge_tuple:edges)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    <span class="keyword">auto</span> another_id=std::get&lt;1&gt;(edge_tuple);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keyword">auto</span> another_vertex=graph-&gt;vertexes.at(another_id);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="keyword">auto</span> edge_weight=std::get&lt;2&gt;(edge_tuple);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <span class="keyword">auto</span> index=min_queue.index_inqueue(another_vertex);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    <span class="keywordflow">if</span>(index&gt;=0&amp;&amp; edge_weight&lt;another_vertex-&gt;key)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                        another_vertex-&gt;parent=minNode;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                        another_vertex-&gt;key=edge_weight;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        min_queue.decreate_key(index,edge_weight); <span class="comment">//这里隐含着一个最小优先级队列的decreate_key操作</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                post_action(minNode-&gt;id);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                weight+=minNode-&gt;key;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">return</span> weight;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif // PRIM</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
 <div class="ttc" id="header_8h_html"><div class="ttname"><a href="header_8h.html">header.h</a></div></div>
 <div class="ttc" id="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue_html"><div class="ttname"><a href="class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html">IntroductionToAlgorithm::QueueAlgorithm::MinQueue</a></div><div class="ttdoc">MinQueue：最小优先级队列，算法导论第6章6.5节 </div><div class="ttdef"><b>Definition:</b> <a href="minqueue_8h_source.html#l00060">minqueue.h:60</a></div></div>
 <div class="ttc" id="minqueue_8h_html"><div class="ttname"><a href="minqueue_8h.html">minqueue.h</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_a19237111c3b1ec2717c5e1aefe2f6d9b"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a19237111c3b1ec2717c5e1aefe2f6d9b">IntroductionToAlgorithm::GraphAlgorithm::unlimit</a></div><div class="ttdeci">T unlimit()</div><div class="ttdoc">unlimit：返回正无穷的函数 </div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00110">header.h:110</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_a19237111c3b1ec2717c5e1aefe2f6d9b"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a19237111c3b1ec2717c5e1aefe2f6d9b">IntroductionToAlgorithm::GraphAlgorithm::unlimit</a></div><div class="ttdeci">T unlimit()</div><div class="ttdoc">unlimit：返回正无穷的函数 </div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00111">header.h:111</a></div></div>
 <div class="ttc" id="namespace_introduction_to_algorithm_html"><div class="ttname"><a href="namespace_introduction_to_algorithm.html">IntroductionToAlgorithm</a></div><div class="ttdoc">Namespace of IntrodunctionToAlgorithm. </div><div class="ttdef"><b>Definition:</b> <a href="longest__common__subsequence_8h_source.html#l00024">longest_common_subsequence.h:24</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_aba1581358d79ba82dc4fd0c15bc987e6"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">IntroductionToAlgorithm::GraphAlgorithm::prim</a></div><div class="ttdeci">GraphType::EWeightType prim(std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, ActionType pre_action=[](typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType){})</div><div class="ttdoc">prim：最小生成树的Prim算法，算法导论22章23.2节 </div><div class="ttdef"><b>Definition:</b> <a href="prim_8h_source.html#l00068">prim.h:68</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_graph_algorithm_html_aba1581358d79ba82dc4fd0c15bc987e6"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aba1581358d79ba82dc4fd0c15bc987e6">IntroductionToAlgorithm::GraphAlgorithm::prim</a></div><div class="ttdeci">GraphType::EWeightType prim(std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType source_id, ActionType pre_action=[](typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType){})</div><div class="ttdoc">prim：最小生成树的Prim算法，算法导论23章23.2节 </div><div class="ttdef"><b>Definition:</b> <a href="prim_8h_source.html#l00077">prim.h:77</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

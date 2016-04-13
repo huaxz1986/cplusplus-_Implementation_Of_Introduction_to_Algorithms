@@ -21,6 +21,7 @@
 #include"src/google_test/gtest.h"
 #include"connectedcomponent.h"
 #include"../../basic_graph/graph_representation/graph/graph.h"
+#include"../../basic_graph/graph_representation/graph_vertex/set_vertex.h"
 
 using IntroductionToAlgorithm::GraphAlgorithm::SetVertex;
 using IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode;
@@ -29,62 +30,6 @@ using IntroductionToAlgorithm::GraphAlgorithm::connected_component;
 using IntroductionToAlgorithm::GraphAlgorithm::same_component;
 namespace{
     const int C_NUM=10;  /*!< 图顶点数量*/
-}
-//!SetVertexTest:测试类，用于为测试提供基础数据
-/*!
-*
-* `SetVertexTest`是 `::testing::Test` 的子类。它主要用于为每一个`TEST_F`准备测试环境
-*/
-class SetVertexTest:public ::testing::Test
-{
-public:
-
-protected:
-    void SetUp()
-    {
-        _default_vertex=std::make_shared<SetVertex<double>>();
-        _normal_vertex=std::make_shared<SetVertex<double>>(1.5,1);
-    }
-    void TearDown(){}
-    std::shared_ptr<SetVertex<double>> _default_vertex;     /*!< 指向顶点，默认构造*/
-    std::shared_ptr<SetVertex<double>> _normal_vertex;     /*!< 指向顶点，显式构造*/
-};
-//!test_data_member：测试SetVertex
-/*!
-*
-* `test_data_member`：测试SetVertex的成员变量
-*/
-TEST_F(SetVertexTest,test_data_member)
-{
-    EXPECT_EQ(_default_vertex->id,-1);
-    EXPECT_NEAR(_default_vertex->key,0.0,0.001);
-    EXPECT_FALSE(_default_vertex->node);
-
-    EXPECT_EQ(_normal_vertex->id,1);
-    EXPECT_NEAR(_normal_vertex->key,1.5,0.001);
-    EXPECT_FALSE(_normal_vertex->node);
-}
-//!test_to_string：测试SetVertex
-/*!
-*
-* `test_to_string`：测试SetVertex的`to_string()`方法
-*/
-TEST_F(SetVertexTest,test_to_string)
-{
-    typedef DisjointSetNode<SetVertex<double>> NodeType;
-    EXPECT_EQ(_default_vertex->to_string(),"vertex id:-1\t key:0\t parent:nullptr");
-    EXPECT_EQ(_normal_vertex->to_string(),"vertex id:1\t key:1.5\t parent:nullptr");
-
-    std::shared_ptr<NodeType>node1=std::make_shared<NodeType>(_default_vertex);
-    _default_vertex->node=node1;
-
-    std::shared_ptr<NodeType>node2=std::make_shared<NodeType>(_normal_vertex);
-    _normal_vertex->node=node2;
-
-    node2->parent=node1;
-
-    EXPECT_EQ(_default_vertex->to_string(),"vertex id:-1\t key:0\t parent:nullptr");
-    EXPECT_EQ(_normal_vertex->to_string(),"vertex id:1\t key:1.5\t parent:-1");
 }
 
 //!ConnectedComponentTest:测试类，用于为测试提供基础数据

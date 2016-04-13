@@ -20,8 +20,8 @@
 #define KRUSKAL_TEST
 #include"src/google_test/gtest.h"
 #include"kruskal.h"
-#include"../../basic_graph/connected_component/connectedcomponent.h"
 #include"../../basic_graph/graph_representation/graph/graph.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex.h"
 using IntroductionToAlgorithm::GraphAlgorithm::Graph;
 using IntroductionToAlgorithm::GraphAlgorithm::kruskal;
 using IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode;
@@ -55,17 +55,17 @@ protected:
 
         //****  含顶点图和边图：10个顶点，9条边   ****
         _list_graph=std::make_shared<GType>(-1); //边的无效权重为-1
-        for(int i=0;i<PRIM_N;i++)
+        for(int i=0;i<K_NUM;i++)
             _list_graph->add_vertex(0);
-        for(int i=0;i<PRIM_N-1;i++)
+        for(int i=0;i<K_NUM-1;i++)
                 _list_graph->add_edge(std::make_tuple(i,i+1,i+1)); //该图的边是从左到右组成一个链条
 
         //****  含顶点图和边图：10个顶点，90条边   ****
         _all_edges_graph=std::make_shared<GType>(-1); //边的无效权重为-1
-        for(int i=0;i<PRIM_N;i++)
+        for(int i=0;i<K_NUM;i++)
             _all_edges_graph->add_vertex(0);
-        for(int i=0;i<PRIM_N;i++)
-            for(int j=0;j<PRIM_N;j++)
+        for(int i=0;i<K_NUM;i++)
+            for(int j=0;j<K_NUM;j++)
                 if(i==j) continue;
                 else _all_edges_graph->add_edge(std::make_tuple(i,j,i+j)); //该图中任意一对顶点之间都有边
     }

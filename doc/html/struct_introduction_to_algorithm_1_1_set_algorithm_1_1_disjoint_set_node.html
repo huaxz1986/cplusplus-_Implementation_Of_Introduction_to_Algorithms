@@ -259,13 +259,15 @@ template&lt;typename KType &gt; </div>
 <p>find_set：返回结点所在集合的代表结点 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node:要查找的结点。它必须非空，否则抛出异常</td><td>该操作简单沿着指向父节点的指针找到树的根。树的根的特征是：它的父节点就是它本身。 若结点不在不相交集合森林中（当结点的父节点指针为空时），则抛出异常。</td></tr>
+    <tr><td class="paramname">node:要查找的结点。它必须非空，否则抛出异常</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>: 结点所在集合的代表结点的强指针</dd></dl>
+<p>该操作简单沿着指向父节点的指针找到树的根。树的根的特征是：它的父节点就是它本身。 若结点不在不相交集合森林中（当结点的父节点指针为空时），则抛出异常。</p>
 <p>find_set过程是一个 two_pass method，当它递归时，第一趟沿着查找路径向上直到找到树根； 当递归回溯时，第二趟沿着搜索树向下更新每个节点，使其父节点直接指向树根 </p>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00083">83</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00084">84</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -316,7 +318,7 @@ template&lt;typename KType &gt; </div>
 <li>如果 nodeX 和 nodeY非空，但是nodeX或者nodeY不是根结点，抛出异常 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00123">123</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00124">124</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -352,7 +354,7 @@ template&lt;typename KType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00099">99</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00100">100</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>
@@ -399,7 +401,7 @@ template&lt;typename KType &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00150">150</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
+<p>Definition at line <a class="el" href="disjointset_8h_source.html#l00151">151</a> of file <a class="el" href="disjointset_8h_source.html">disjointset.h</a>.</p>
 
 </div>
 </div>

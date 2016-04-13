@@ -20,6 +20,8 @@
 #define STRONGCONNECTEDCOMPONENT_TEST
 #include"src/google_test/gtest.h"
 #include"strongconnectedcomponent.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph/graph.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/dfs_vertex.h"
 using IntroductionToAlgorithm::GraphAlgorithm::Graph;
 using IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex;
 using IntroductionToAlgorithm::GraphAlgorithm::scc;
@@ -47,18 +49,18 @@ protected:
 
         //****  含顶点图和边图：10个顶点，9条边  ****
         _list_graph=std::make_shared<GType>(-1); //边的无效权重为-1
-        for(int i=0;i<BFS_N;i++)
-            _list_graph->add_vertex(1+i/BFS_N);
-        for(int i=0;i<BFS_N-1;i++)
+        for(int i=0;i<SCC_N;i++)
+            _list_graph->add_vertex(1+i/SCC_N);
+        for(int i=0;i<SCC_N-1;i++)
                 _list_graph->add_edge(std::make_tuple(i,i+1,10+i)); //该图的边是从左到右组成一个链条
 
         //****  含顶点图和边图：10个顶点，10条边  ****
         _scc_graph=std::make_shared<GType>(-1); //边的无效权重为-1
-        for(int i=0;i<BFS_N;i++)
-            _scc_graph->add_vertex(1+i/BFS_N);
-        for(int i=0;i<BFS_N-1;i++)
+        for(int i=0;i<SCC_N;i++)
+            _scc_graph->add_vertex(1+i/SCC_N);
+        for(int i=0;i<SCC_N-1;i++)
                 _scc_graph->add_edge(std::make_tuple(i,i+1,10+i));
-        _scc_graph->add_edge(std::make_tuple(BFS_N-1,0,10+BFS_N-1));
+        _scc_graph->add_edge(std::make_tuple(SCC_N-1,0,10+SCC_N-1));
     }
     void TearDown(){}
     std::shared_ptr<GType> _list_graph;  /*!< 指向一个图，该图的边组成一个链条*/

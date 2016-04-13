@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['struct_5fcompare_5ftype',['Struct_Compare_Type',['../class_min_queue_test.html#a25bfd5b74968c587db57133f107a5f61',1,'MinQueueTest']]],
-  ['struct_5fget_5ftype',['Struct_Get_Type',['../class_min_queue_test.html#aebcf6172ed7e9dd6f821fb1043f1cd6f',1,'MinQueueTest']]],
-  ['struct_5fminqueue_5ftype',['Struct_MinQueue_Type',['../class_min_queue_test.html#a9b7e5e987d5e856adc5beb6986dd96a3',1,'MinQueueTest']]]
+  ['t',['T',['../class_introduction_to_algorithm_1_1_sort_algorithm_1_1_sort___heap.html#a5af910656f5d3c65d47f992dbf380c61',1,'IntroductionToAlgorithm::SortAlgorithm::Sort_Heap::T()'],['../class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a0a9b2de6326042f2a1fa8a3a0def67ab',1,'IntroductionToAlgorithm::TreeAlgorithm::SearchTree::T()']]]
 ];

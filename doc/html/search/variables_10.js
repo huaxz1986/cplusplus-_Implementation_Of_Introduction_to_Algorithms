@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tps_5fn',['TPS_N',['../namespaceanonymous__namespace_02topologysort__test_8h_03.html#a2fd3a3f56c40d84a7330ad41b2620485',1,'anonymous_namespace{topologysort_test.h}']]]
+  ['s_5fnum',['S_NUM',['../namespaceanonymous__namespace_02disjointset__test_8h_03.html#a9fd4f77b008da8d9816385f53c064001',1,'anonymous_namespace{disjointset_test.h}']]],
+  ['scc_5fn',['SCC_N',['../namespaceanonymous__namespace_02strongconnectedcomponent__test_8h_03.html#a16ade4f6cba9de3ca5ace5a83ba72457',1,'anonymous_namespace{strongconnectedcomponent_test.h}']]]
 ];

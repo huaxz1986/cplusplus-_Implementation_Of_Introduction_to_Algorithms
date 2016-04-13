@@ -21,7 +21,7 @@
 #include"src/google_test/gtest.h"
 #include"bellmanford.h"
 #include"../../basic_graph/graph_representation/graph/graph.h"
-#include"../../basic_graph/graph_representation/graph_vertex/vertex.h"
+#include"../../basic_graph/graph_representation/graph_vertex/vertexp.h"
 using IntroductionToAlgorithm::GraphAlgorithm::Graph;
 using IntroductionToAlgorithm::GraphAlgorithm::VertexP;
 using IntroductionToAlgorithm::GraphAlgorithm::initialize_single_source;

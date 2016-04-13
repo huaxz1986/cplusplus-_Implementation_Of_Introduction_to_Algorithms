@@ -20,7 +20,7 @@
 #define ADJLISTGRAPH_TEST
 #include"src/google_test/gtest.h"
 #include"adjlistgraph.h"
-
+#include<memory>
 namespace {
     const int ADJ_NUM=10;/*!< 测试的图顶点数量*/
 }

@@ -185,8 +185,20 @@ namespace IntroductionToAlgorithm
             */
             const std::vector<EdgeTupleType> edge_tuples() const
             {
-                assert(matrix.edge_tuples()==adjList.edge_tuples());
-                return matrix.edge_tuples();
+                auto edges1=matrix.edge_tuples();
+                auto edges2=adjList.edge_tuples();
+                auto compare=[](const EdgeTupleType& e1,const EdgeTupleType&e2)->bool {
+                    if(
+                            (std::get<0>(e1) < std::get<0>(e2))||
+                            ( (std::get<0>(e1) == std::get<0>(e2))&&(std::get<1>(e1) < std::get<1>(e2)) ) ||
+                            ( (std::get<0>(e1) == std::get<0>(e2))&&(std::get<1>(e1) == std::get<1>(e2))&&(std::get<2>(e1) < std::get<2>(e2)) )
+                        ) return true;
+                   return false;
+                };
+                std::sort(edges1.begin(),edges1.end(),compare);
+                std::sort(edges2.begin(),edges2.end(),compare);
+                assert(edges1==edges2);
+                return edges1;
             }
 
             //!vertex_edge_tuples:返回图中从指定顶点出发的边的三元素元组集合，这里集合采用`std::vector<std::tuple<VIDType,VIDType,EWeightType>>`

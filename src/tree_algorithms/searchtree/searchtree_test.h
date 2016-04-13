@@ -20,6 +20,8 @@
 #define SEARCHTREE_TEST
 #include"src/google_test/gtest.h"
 #include"searchtree.h"
+#include"../binarytreenode/binarytreenode.h"
+#include"../binarytree/binarytree.h"
 #include<sstream>
 
 namespace   {

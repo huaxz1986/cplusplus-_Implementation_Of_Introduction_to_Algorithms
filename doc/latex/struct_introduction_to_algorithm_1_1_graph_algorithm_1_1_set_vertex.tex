@@ -7,7 +7,7 @@ Set\+Vertex：图的顶点，它带一个node属性，算法导论22章22.1节
 
 
 
-{\ttfamily \#include $<$connectedcomponent.\+h$>$}
+{\ttfamily \#include $<$set\+\_\+vertex.\+h$>$}
 
 Inheritance diagram for Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Set\+Vertex$<$ K\+Type $>$\+:\begin{figure}[H]
 \begin{center}
@@ -47,7 +47,7 @@ Set\+Vertex：图的顶点，它带一个node属性，算法导论22章22.1节
 
 它继承自\+Vertex，区别在于多了一个node成员变量，这个node是指向\+Disjoint\+Set\+Node$<$\+Set\+Vertex$>$对象的强指针。 而\+Disjoint\+Set\+Node$<$\+Set\+Vertex$>$的value成员变量是指向\+Set\+Vertex的弱指针，二者可以相互访问。 $>$Set\+Vertex没有父结点指针。要想访问\+Set\+Vertex的父结点，首先要取得它对应的\+Disjoint\+Set\+Node结点。然后获取该\+Disjoint\+Set\+Node结点的父结点。 然后通过该父结点获取value指向的\+Set\+Vertex即可。 
 
-Definition at line 37 of file connectedcomponent.\+h.
+Definition at line 36 of file set\+\_\+vertex.\+h.
 
 
 
@@ -57,14 +57,14 @@ Definition at line 37 of file connectedcomponent.\+h.
 \subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef K\+Type {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a0cfdcd9af991198be63495f7fb60965d}
 顶点存储数据的类型 
 
-Definition at line 39 of file connectedcomponent.\+h.
+Definition at line 38 of file set\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae69791a589d95b0f4f378e08b75b041c}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!V\+I\+D\+Type@{V\+I\+D\+Type}}
 \index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
 \subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae69791a589d95b0f4f378e08b75b041c}
 顶点编号的数据类型 
 
-Definition at line 40 of file connectedcomponent.\+h.
+Definition at line 39 of file set\+\_\+vertex.\+h.
 
 
 
@@ -82,7 +82,7 @@ Definition at line 40 of file connectedcomponent.\+h.
 
 
 
-Definition at line 44 of file connectedcomponent.\+h.
+Definition at line 43 of file set\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_ae06d5b123f6a035074d270e1424ad7ec}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!Set\+Vertex@{Set\+Vertex}}
 \index{Set\+Vertex@{Set\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
@@ -102,7 +102,7 @@ Definition at line 44 of file connectedcomponent.\+h.
 \end{DoxyParams}
 
 
-Definition at line 49 of file connectedcomponent.\+h.
+Definition at line 48 of file set\+\_\+vertex.\+h.
 
 \hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_a86fd87e5d48a1b1f94ba643bd05bcc1f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}!Set\+Vertex@{Set\+Vertex}}
 \index{Set\+Vertex@{Set\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}}
@@ -125,7 +125,7 @@ Definition at line 49 of file connectedcomponent.\+h.
 \end{DoxyParams}
 
 
-Definition at line 55 of file connectedcomponent.\+h.
+Definition at line 54 of file set\+\_\+vertex.\+h.
 
 
 
@@ -150,7 +150,7 @@ Reimplemented from \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorit
 
 
 
-Definition at line 63 of file connectedcomponent.\+h.
+Definition at line 62 of file set\+\_\+vertex.\+h.
 
 
 
@@ -160,10 +160,10 @@ Definition at line 63 of file connectedcomponent.\+h.
 \subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ std\+::shared\+\_\+ptr$<${\bf Disjoint\+Set\+Node}$<${\bf Set\+Vertex}$>$ $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Set\+Vertex}$<$ K\+Type $>$\+::node}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex_aa01ac00440b97a31134559be597fe772}
 顶点对应的\+Disjoint\+Set\+Node的强指针 
 
-Definition at line 76 of file connectedcomponent.\+h.
+Definition at line 75 of file set\+\_\+vertex.\+h.
 
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/graph\+\_\+algorithms/basic\+\_\+graph/connected\+\_\+component/\hyperlink{connectedcomponent_8h}{connectedcomponent.\+h}\end{DoxyCompactItemize}
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/graph\+\_\+vertex/\hyperlink{set__vertex_8h}{set\+\_\+vertex.\+h}\end{DoxyCompactItemize}

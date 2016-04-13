@@ -1,13 +1,18 @@
 \hypertarget{dagshortpath_8h}{}\section{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/dag\+\_\+shortest\+\_\+path/dagshortpath.h File Reference}
 \label{dagshortpath_8h}\index{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/dag\+\_\+shortest\+\_\+path/dagshortpath.\+h@{src/graph\+\_\+algorithms/single\+\_\+source\+\_\+shortest\+\_\+path/dag\+\_\+shortest\+\_\+path/dagshortpath.\+h}}
-{\ttfamily \#include \char`\"{}topologysorter.\+h\char`\"{}}\\*
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \hyperlink{class_graph_1_1_d_a_g___short_path}{Graph\+::\+D\+A\+G\+\_\+\+Short\+Path$<$ N $>$}
-\end{DoxyCompactItemize}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include \char`\"{}../bellman\+\_\+ford/bellmanford.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../basic\+\_\+graph/topology\+\_\+sort/topologysort.\+h\char`\"{}}\\*
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \hyperlink{namespace_graph}{Graph}
-\end{DoxyCompactItemize}
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aec7fe196e6aee4c8e6004a05495c8813}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::dag\+\_\+shortest\+\_\+path} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id)
+\begin{DoxyCompactList}\small\item\em dag\+\_\+shortest\+\_\+path：有向无环图的单源最短路径的dag\+\_\+shortest\+\_\+path算法，算法导论24章24.2节 \end{DoxyCompactList}\end{DoxyCompactItemize}

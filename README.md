@@ -58,11 +58,17 @@ src\
 					topology_sort：有向无环图的拓扑排序算法
 					strong_connected_component:有向图的强连通分量算法
 					connected_component:无向图的连通分量算法
-			minimum_spanning_tree\ ：最小生成树算法
+			minimum_spanning_tree\ ：无向图最小生成树算法
 					kruskal ： 最小生成树的 kruskal 算法
 					prim : 最小生成树的 prim 算法
-			single_source_shortest_path\: 单源最短路径算法
+			single_source_shortest_path\: 有向图单源最短路径算法
 					bellman_ford :单源最短路径的 bellman_ford算法
+					dag_shortest_path:单源最短路径的dag_shortest_path算法
+					dijkstra：单源最短路径的dijkstra算法
+			all_node_pair_shortest_path\ :有向图所有结点对之间的最短路径算法
+					matrix_shortest_path：结点对之间最短路径的矩阵算法和复平方算法
+					floyd_warshall：所有结点对之间最短路径的floyd_warshall算法
+					johnson:所有结点对之间最短路径的johnson算法	
 		...(未完待续)
 doc\      ：由doxygen自动生成的文档
 Doxyfile  :doxygen配置文件
@@ -73,7 +79,9 @@ Introduction_to_Algorithms.pro :Qt项目配置文件
   使用时只需要包含相应的头文件即可
 * 本项目所有算法都是用 `C++ Template`实现，因此算法的实现都在`.h`文件中
 * 本项目所有算法都有测试代码。如快速排序在`quicksort.h`中，快速排序的测试代码在`quicksort_test.h`中，二者位于同一目录下
-* 本项目所有的命名空间、函数、类以及必要的成员都打上了`doxygen`注释，可以方便的进行文档化
+* 本项目所有的命名空间、函数、类以及必要的成员都打上了`doxygen`注释，可以方便的进行文档化。目前`\doc`文件夹中已经有转换过来的`html`文件，你也可以自己利用doxygen来执行文档转换工作。文档化之后的帮助文档在浏览器中打开如图所示：
+
+![doc文件](./doc.JPG)
 
  **本文档仅用于个人学习目的，未经许可不得用于商业目的，转载请注明出处**
 

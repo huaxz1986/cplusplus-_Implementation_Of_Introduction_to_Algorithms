@@ -24,7 +24,6 @@
 using IntroductionToAlgorithm::GraphAlgorithm::is_unlimit;
 using IntroductionToAlgorithm::GraphAlgorithm::unlimit;
 using IntroductionToAlgorithm::GraphAlgorithm::Vertex;
-using IntroductionToAlgorithm::GraphAlgorithm::VertexP;
 //!test_unlimit：测试 unlimit和is_unlimit函数
 /*!
 *
@@ -67,36 +66,6 @@ TEST(test_vertex,vertex_test)
         auto v=Vertex<int>(0,1); //指定了key,id
         EXPECT_EQ(v.id,1);
         EXPECT_EQ(v.to_string(),"vertex id:1\t key:0");
-    }
-}
-
-//!test_vertex_p：测试VertexP
-/*!
-*
-* 测试VertexP的构造、以及方法
-*/
-TEST(test_vertex_p,vertexp_test)
-{
-    {
-        auto v=VertexP<int>(); //默认构造
-        EXPECT_EQ(v.id,-1);
-        EXPECT_EQ(v.key,0);
-        EXPECT_FALSE(v.parent);
-        EXPECT_EQ(v.to_string(),"vertex id:-1\t key:0\t parent:nullptr");
-    }
-    {
-        auto v=VertexP<int>(10); //指定了key
-        EXPECT_EQ(v.id,-1);
-        EXPECT_EQ(v.key,10);
-        EXPECT_FALSE(v.parent);
-        EXPECT_EQ(v.to_string(),"vertex id:-1\t key:10\t parent:nullptr");
-    }
-    {
-        auto v=VertexP<int>(0,1); //指定了key,id
-        EXPECT_EQ(v.id,1);
-        EXPECT_EQ(v.key,0);
-        EXPECT_FALSE(v.parent);
-        EXPECT_EQ(v.to_string(),"vertex id:1\t key:0\t parent:nullptr");
     }
 }
 #endif // GRAPHVERTEX_TEST

@@ -17,7 +17,6 @@
  * Author: huaxz1986@163.com (huaxz)
  */
 
-#include <iostream>
 #include"src/google_test/gtest.h"
 #include"src/sort_algorithms/insert_sort/insertsort_test.h"
 #include"src/sort_algorithms/quick_sort/quicksort_test.h"
@@ -34,6 +33,10 @@
 #include"src/tree_algorithms/searchtree/searchtree_test.h"
 #include"src/queue_algorithms/min_queue/minqueue_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertex_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/bfs_vertex_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/dfs_vertex_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertexp_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/graph_edge/edge_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/matrix_graph/matrixgraph_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/adjlist_graph/adjlistgraph_test.h"
@@ -48,6 +51,11 @@
 #include"src/graph_algorithms/minimum_spanning_tree/prim/prim_test.h"
 #include"src/graph_algorithms/minimum_spanning_tree/kruskal/kruskal_test.h"
 #include"src/graph_algorithms/single_source_shortest_path/bellman_ford/bellmanford_test.h"
+#include"src/graph_algorithms/single_source_shortest_path/dag_shortest_path/dagshortpath_test.h"
+#include"src/graph_algorithms/single_source_shortest_path/dijkstra/dijkstra_test.h"
+#include"src/graph_algorithms/all_node_pair_shortest_path/matrix_shortest_path/matrix_shortest_path_test.h"
+#include"src/graph_algorithms/all_node_pair_shortest_path/floyd_warshall/floyd_warshall_test.h"
+#include"src/graph_algorithms/all_node_pair_shortest_path/johnson/johnson_test.h"
 int main(int argc,char** argv)
 {
     ::testing::InitGoogleTest(&argc,argv);

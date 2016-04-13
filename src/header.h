@@ -26,6 +26,7 @@
 #include<algorithm>
 #include<memory>
 #include<vector>
+#include<ostream>
 namespace IntroductionToAlgorithm
 {
     //! Namespace of  SortAlgorithm
@@ -156,7 +157,29 @@ namespace IntroductionToAlgorithm
                 result.push_back(v_to->id);
             }
             return result;
-    }
+        }
+
+        //!matrix_string：获取矩阵的字符串描述
+        /*!
+        * \param matrix: 矩阵
+        * \return : 矩阵的字符串描述
+        *
+        * 获取矩阵`matrix`的字符串描述。
+        */
+        template<typename MatrixType> std::string matrix_string(const MatrixType&matrix)
+        {
+            std::size_t row_num=std::tuple_size<MatrixType>::value;  //行数
+            std::size_t col_num=std::tuple_size<typename MatrixType::value_type>::value;//列数
+            std::ostringstream os;
+
+            for(int i=0;i<row_num;i++)
+            {
+                os<<"\nrow["<<i<<"]:\t";
+                for(int j=0;j<col_num;j++)
+                    os<<matrix[i][j]<<"\t";
+            }
+            return os.str();
+        }
 
     }
 }

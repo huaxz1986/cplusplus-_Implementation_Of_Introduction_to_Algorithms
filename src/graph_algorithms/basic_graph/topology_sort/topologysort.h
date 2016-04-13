@@ -19,6 +19,8 @@
 #ifndef TOPOLOGYSORT
 #define TOPOLOGYSORT
 #include"../graph_dfs/dfs.h"
+#include<vector>
+#include<functional>
 namespace IntroductionToAlgorithm
 {
     namespace GraphAlgorithm
@@ -43,13 +45,14 @@ namespace IntroductionToAlgorithm
         template<typename GraphType> std::vector<typename GraphType::VIDType> topology_sort(std::shared_ptr<GraphType> graph)
         {
             typedef typename GraphType::VIDType VIDType;
+            typedef std::function<void(VIDType v_id,int time)> ActionType;
             if(!graph)
                 throw std::invalid_argument("topology_sort error: graph must not be nullptr!");
 
             std::vector<VIDType> sorted_result;
-            auto empty_action=[](VIDType v_id,int time){};
-            auto finish_action=[&sorted_result](VIDType v_id,int time){sorted_result.insert(sorted_result.begin(),v_id);};
-            depth_first_search<GraphType,std::function<void(typename GraphType::VIDType v_id,int time)>>(graph,empty_action,finish_action);
+            ActionType empty_action=[](VIDType v_id,int time){};
+            ActionType finish_action=[&sorted_result](VIDType v_id,int time){sorted_result.insert(sorted_result.begin(),v_id);};
+            depth_first_search(graph,empty_action,finish_action,empty_action,empty_action);
             return sorted_result;
         }
     }

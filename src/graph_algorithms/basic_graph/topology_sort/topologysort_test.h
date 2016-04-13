@@ -20,6 +20,8 @@
 #define TOPOLOGYSORT_TEST
 #include"src/google_test/gtest.h"
 #include"topologysort.h"
+#include"../../basic_graph/graph_representation/graph_vertex/dfs_vertex.h"
+#include"../../basic_graph/graph_representation/graph/graph.h"
 
 using IntroductionToAlgorithm::GraphAlgorithm::Graph;
 using IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex;
@@ -54,9 +56,9 @@ protected:
 
         //****  含顶点图和边图：10个顶点，9条边   ****
         _list_graph=std::make_shared<GType>(-1); //边的无效权重为-1
-        for(int i=0;i<BFS_N;i++)
-            _list_graph->add_vertex(1+i/BFS_N);
-        for(int i=0;i<BFS_N-1;i++)
+        for(int i=0;i<TPS_N;i++)
+            _list_graph->add_vertex(1+i/TPS_N);
+        for(int i=0;i<TPS_N-1;i++)
                 _list_graph->add_edge(std::make_tuple(i,i+1,10+i)); //该图的边是从左到右组成一个链条
     }
     void TearDown(){}
