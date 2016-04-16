@@ -1,0 +1,165 @@
+\hypertarget{class_automation___matcher}{}\section{Automation\+\_\+\+Matcher$<$ T $>$ Class Template Reference}
+\label{class_automation___matcher}\index{Automation\+\_\+\+Matcher$<$ T $>$@{Automation\+\_\+\+Matcher$<$ T $>$}}
+
+
+{\ttfamily \#include $<$automationmatcher.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_automation___matcher_a818a0df5478849f26cf9b2f20a1774b3}{Automation\+\_\+\+Matcher} (const std\+::vector$<$ T $>$ \&ele)
+\item 
+std\+::vector$<$ unsigned $>$ \hyperlink{class_automation___matcher_ae1b8ad0f17937da89b65317c10ed6c50}{match} (const std\+::vector$<$ T $>$ \&S, const std\+::vector$<$ T $>$ \&P)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_automation___matcher_a2e86ddd1f79e2010d88b7fed4134ab62}{clear} ()
+\item 
+void \hyperlink{class_automation___matcher_ae8f903cf93f423bf6b5e607a0c683d22}{get\+\_\+transition} (const std\+::vector$<$ T $>$ \&P)
+\item 
+bool \hyperlink{class_automation___matcher_afb0fcb2027c0408ced759b23db742a34}{is\+End} (const std\+::vector$<$ T $>$ \&P, unsigned k, unsigned q, unsigned ele\+Index)
+\item 
+unsigned \hyperlink{class_automation___matcher_a9500e82ee94303a0bfb2102931e7c378}{index} (const T \&t)
+\item 
+void \hyperlink{class_automation___matcher_a43fa3ed5757fcb90a3d07597613b284b}{print\+P} (const std\+::vector$<$ T $>$ \&P, unsigned k)
+\item 
+void \hyperlink{class_automation___matcher_af6f9f34d905659a5c8a02f7903fa5aeb}{print\+Translation} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ T $>$ \hyperlink{class_automation___matcher_aa459af0a82dba703653cbef2dffed577}{Elements}
+\item 
+std\+::vector$<$ std\+::vector$<$ unsigned $>$ $>$ \hyperlink{class_automation___matcher_a06be1889b30f1c180a5325d2694fb995}{matrix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Automation\+\_\+\+Matcher$<$ T $>$}
+
+
+
+Definition at line 8 of file automationmatcher.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_automation___matcher_a818a0df5478849f26cf9b2f20a1774b3}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{Automation\+\_\+\+Matcher(const std\+::vector$<$ T $>$ \&ele)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::{\bf Automation\+\_\+\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{ele}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_automation___matcher_a818a0df5478849f26cf9b2f20a1774b3}
+
+
+Definition at line 11 of file automationmatcher.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_automation___matcher_a2e86ddd1f79e2010d88b7fed4134ab62}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!clear@{clear}}
+\index{clear@{clear}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_automation___matcher_a2e86ddd1f79e2010d88b7fed4134ab62}
+
+
+Definition at line 35 of file automationmatcher.\+h.
+
+\hypertarget{class_automation___matcher_ae8f903cf93f423bf6b5e607a0c683d22}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!get\+\_\+transition@{get\+\_\+transition}}
+\index{get\+\_\+transition@{get\+\_\+transition}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{get\+\_\+transition(const std\+::vector$<$ T $>$ \&\+P)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::get\+\_\+transition (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{P}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_automation___matcher_ae8f903cf93f423bf6b5e607a0c683d22}
+
+
+Definition at line 39 of file automationmatcher.\+h.
+
+\hypertarget{class_automation___matcher_a9500e82ee94303a0bfb2102931e7c378}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!index@{index}}
+\index{index@{index}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{index(const T \&t)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ unsigned {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::index (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_automation___matcher_a9500e82ee94303a0bfb2102931e7c378}
+
+
+Definition at line 90 of file automationmatcher.\+h.
+
+\hypertarget{class_automation___matcher_afb0fcb2027c0408ced759b23db742a34}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!is\+End@{is\+End}}
+\index{is\+End@{is\+End}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{is\+End(const std\+::vector$<$ T $>$ \&\+P, unsigned k, unsigned q, unsigned ele\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::is\+End (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{P, }
+\item[{unsigned}]{k, }
+\item[{unsigned}]{q, }
+\item[{unsigned}]{ele\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_automation___matcher_afb0fcb2027c0408ced759b23db742a34}
+
+
+Definition at line 69 of file automationmatcher.\+h.
+
+\hypertarget{class_automation___matcher_ae1b8ad0f17937da89b65317c10ed6c50}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!match@{match}}
+\index{match@{match}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{match(const std\+::vector$<$ T $>$ \&\+S, const std\+::vector$<$ T $>$ \&\+P)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::vector$<$unsigned$>$ {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::match (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{S, }
+\item[{const std\+::vector$<$ T $>$ \&}]{P}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_automation___matcher_ae1b8ad0f17937da89b65317c10ed6c50}
+
+
+Definition at line 12 of file automationmatcher.\+h.
+
+\hypertarget{class_automation___matcher_a43fa3ed5757fcb90a3d07597613b284b}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!print\+P@{print\+P}}
+\index{print\+P@{print\+P}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{print\+P(const std\+::vector$<$ T $>$ \&\+P, unsigned k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::print\+P (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{P, }
+\item[{unsigned}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_automation___matcher_a43fa3ed5757fcb90a3d07597613b284b}
+
+
+Definition at line 99 of file automationmatcher.\+h.
+
+\hypertarget{class_automation___matcher_af6f9f34d905659a5c8a02f7903fa5aeb}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!print\+Translation@{print\+Translation}}
+\index{print\+Translation@{print\+Translation}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{print\+Translation()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::print\+Translation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_automation___matcher_af6f9f34d905659a5c8a02f7903fa5aeb}
+
+
+Definition at line 105 of file automationmatcher.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_automation___matcher_aa459af0a82dba703653cbef2dffed577}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!Elements@{Elements}}
+\index{Elements@{Elements}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{Elements}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::vector$<$T$>$ {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::Elements\hspace{0.3cm}{\ttfamily [private]}}\label{class_automation___matcher_aa459af0a82dba703653cbef2dffed577}
+
+
+Definition at line 119 of file automationmatcher.\+h.
+
+\hypertarget{class_automation___matcher_a06be1889b30f1c180a5325d2694fb995}{}\index{Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}!matrix@{matrix}}
+\index{matrix@{matrix}!Automation\+\_\+\+Matcher@{Automation\+\_\+\+Matcher}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::vector$<$std\+::vector$<$unsigned$>$ $>$ {\bf Automation\+\_\+\+Matcher}$<$ T $>$\+::matrix\hspace{0.3cm}{\ttfamily [private]}}\label{class_automation___matcher_a06be1889b30f1c180a5325d2694fb995}
+
+
+Definition at line 120 of file automationmatcher.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/string\+\_\+matching\+\_\+algorithms/automation\+\_\+match/\hyperlink{automationmatcher_8h}{automationmatcher.\+h}\end{DoxyCompactItemize}

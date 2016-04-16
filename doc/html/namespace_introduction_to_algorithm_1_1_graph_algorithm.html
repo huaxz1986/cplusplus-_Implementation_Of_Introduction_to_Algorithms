@@ -128,8 +128,20 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html">Edge</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edge：图的边，算法导论22章22.1节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex.html">FlowVertex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FlowVertex：推送-重贴标签算法图的顶点，算法导论26章26.4节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex.html">FrontFlowVertex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">FrontFlowVertex：relabel_to_front算法的图的结点的数据结构，算法导论26章26.4节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html">Graph</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graph：图，算法导论22章22.1节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html">List</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">List：链表数据结构  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html">ListNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ListNode：链表结点的数据结构  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html">MatrixGraph</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MatrixGraph：图的矩阵表示，算法导论22章22.1节  <a href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#details">More...</a><br /></td></tr>
@@ -198,6 +210,50 @@ Functions</h2></td></tr>
 <tr class="memitem:a804241e72be5f4c031190bc12a6b73a2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; typename GraphType::VIDType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a804241e72be5f4c031190bc12a6b73a2">topology_sort</a> (std::shared_ptr&lt; GraphType &gt; graph)</td></tr>
 <tr class="memdesc:a804241e72be5f4c031190bc12a6b73a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">topology_sort：拓扑排序，算法导论22章22.4节  <a href="#a804241e72be5f4c031190bc12a6b73a2">More...</a><br /></td></tr>
 <tr class="separator:a804241e72be5f4c031190bc12a6b73a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8cd65d7cf2d584f86cfd92494bdbf4"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:acc8cd65d7cf2d584f86cfd92494bdbf4"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; GraphType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#acc8cd65d7cf2d584f86cfd92494bdbf4">create_Gf</a> (const std::shared_ptr&lt; GraphType &gt; graph, std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;flow)</td></tr>
+<tr class="memdesc:acc8cd65d7cf2d584f86cfd92494bdbf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">create_Gf：根据指定流网络生成一个残余网络。算法导论26章26.2节  <a href="#acc8cd65d7cf2d584f86cfd92494bdbf4">More...</a><br /></td></tr>
+<tr class="separator:acc8cd65d7cf2d584f86cfd92494bdbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a29754883e1edd7bd95a76634444a2"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a23a29754883e1edd7bd95a76634444a2"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a23a29754883e1edd7bd95a76634444a2">ford_fulkerson</a> (const std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType src, typename GraphType::VIDType dst)</td></tr>
+<tr class="memdesc:a23a29754883e1edd7bd95a76634444a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ford_fulkerson：最大流的ford_fulkerson算法。算法导论26章26.2节  <a href="#a23a29754883e1edd7bd95a76634444a2">More...</a><br /></td></tr>
+<tr class="separator:a23a29754883e1edd7bd95a76634444a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd520b7e33d8c1e72b05210d784ac258"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:abd520b7e33d8c1e72b05210d784ac258"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#abd520b7e33d8c1e72b05210d784ac258">push</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType u_id, typename GraphType::VIDType v_id, std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;flow)</td></tr>
+<tr class="memdesc:abd520b7e33d8c1e72b05210d784ac258"><td class="mdescLeft">&#160;</td><td class="mdescRight">push：generic_push_relabel算法的push操作。算法导论26章26.4节  <a href="#abd520b7e33d8c1e72b05210d784ac258">More...</a><br /></td></tr>
+<tr class="separator:abd520b7e33d8c1e72b05210d784ac258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27dfe859312abba6639bca7b232d4bd6"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a27dfe859312abba6639bca7b232d4bd6"><td class="memTemplItemLeft" align="right" valign="top">GraphType::VIDType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a27dfe859312abba6639bca7b232d4bd6">min_v_at_Ef</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType u_id, const std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;flow)</td></tr>
+<tr class="memdesc:a27dfe859312abba6639bca7b232d4bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">min_v_at_Ef：relabel操作中的min_v_at_Ef操作。算法导论26章26.4节  <a href="#a27dfe859312abba6639bca7b232d4bd6">More...</a><br /></td></tr>
+<tr class="separator:a27dfe859312abba6639bca7b232d4bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143924362cc9f23ca452c3ca0e292ff3"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a143924362cc9f23ca452c3ca0e292ff3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a143924362cc9f23ca452c3ca0e292ff3">relabel</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType u_id, const std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;flow)</td></tr>
+<tr class="memdesc:a143924362cc9f23ca452c3ca0e292ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">relabel：generic_push_relabel算法的relabel操作。算法导论26章26.4节  <a href="#a143924362cc9f23ca452c3ca0e292ff3">More...</a><br /></td></tr>
+<tr class="separator:a143924362cc9f23ca452c3ca0e292ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf3e258f5ae9aed76158255fa603c00"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:aeaf3e258f5ae9aed76158255fa603c00"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aeaf3e258f5ae9aed76158255fa603c00">initialize_preflow</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType src, std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;flow)</td></tr>
+<tr class="memdesc:aeaf3e258f5ae9aed76158255fa603c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize_preflow：generic_push_relabel算法的初始化操作。算法导论26章26.4节  <a href="#aeaf3e258f5ae9aed76158255fa603c00">More...</a><br /></td></tr>
+<tr class="separator:aeaf3e258f5ae9aed76158255fa603c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab134ec014d01e25ec2ed7d2c97babe23"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:ab134ec014d01e25ec2ed7d2c97babe23"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ab134ec014d01e25ec2ed7d2c97babe23">generic_push_relabel</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType src, typename GraphType::VIDType dst)</td></tr>
+<tr class="memdesc:ab134ec014d01e25ec2ed7d2c97babe23"><td class="mdescLeft">&#160;</td><td class="mdescRight">generic_push_relabel：最大流的推送-重贴标签算法。算法导论26章26.4节  <a href="#ab134ec014d01e25ec2ed7d2c97babe23">More...</a><br /></td></tr>
+<tr class="separator:ab134ec014d01e25ec2ed7d2c97babe23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae42c12c93664d94b5a6f9980fe8540"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:a2ae42c12c93664d94b5a6f9980fe8540"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a2ae42c12c93664d94b5a6f9980fe8540">discharge</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType u_id, std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;flow)</td></tr>
+<tr class="memdesc:a2ae42c12c93664d94b5a6f9980fe8540"><td class="mdescLeft">&#160;</td><td class="mdescRight">discharge：最大流的前置重贴标签算法中的释放操作。算法导论26章26.5节  <a href="#a2ae42c12c93664d94b5a6f9980fe8540">More...</a><br /></td></tr>
+<tr class="separator:a2ae42c12c93664d94b5a6f9980fe8540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a1917551c87991625d8402593ec863"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:ad6a1917551c87991625d8402593ec863"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html">List</a>&lt; <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html">ListNode</a>&lt; typename GraphType::VertexType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ad6a1917551c87991625d8402593ec863">create_L</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType src, typename GraphType::VIDType dst)</td></tr>
+<tr class="memdesc:ad6a1917551c87991625d8402593ec863"><td class="mdescLeft">&#160;</td><td class="mdescRight">create_L：前置重贴标签算法中的创建L链表操作  <a href="#ad6a1917551c87991625d8402593ec863">More...</a><br /></td></tr>
+<tr class="separator:ad6a1917551c87991625d8402593ec863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1dfc9c1874850fb1415db3644497777"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:af1dfc9c1874850fb1415db3644497777"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#af1dfc9c1874850fb1415db3644497777">initial_vertex_NList</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType src, typename GraphType::VIDType dst)</td></tr>
+<tr class="memdesc:af1dfc9c1874850fb1415db3644497777"><td class="mdescLeft">&#160;</td><td class="mdescRight">initial_vertex_NList：前置重贴标签算法中的初始化邻接链表操作  <a href="#af1dfc9c1874850fb1415db3644497777">More...</a><br /></td></tr>
+<tr class="separator:af1dfc9c1874850fb1415db3644497777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafb73bda29c4e389edb048a5e5d8d2b"><td class="memTemplParams" colspan="2">template&lt;typename GraphType &gt; </td></tr>
+<tr class="memitem:abafb73bda29c4e389edb048a5e5d8d2b"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#abafb73bda29c4e389edb048a5e5d8d2b">relabel_to_front</a> (std::shared_ptr&lt; GraphType &gt; graph, typename GraphType::VIDType src, typename GraphType::VIDType dst)</td></tr>
+<tr class="memdesc:abafb73bda29c4e389edb048a5e5d8d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">relabel_to_front：最大流的前置重贴标签算法。算法导论26章26.5节  <a href="#abafb73bda29c4e389edb048a5e5d8d2b">More...</a><br /></td></tr>
+<tr class="separator:abafb73bda29c4e389edb048a5e5d8d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memTemplParams" colspan="2">template&lt;typename GraphType , typename ActionType  = std::function&lt; void(typename GraphType::VIDType,typename GraphType::VIDType)&gt;&gt; </td></tr>
 <tr class="memitem:a2575c09c42d0b30b57702c9379d2fbfb"><td class="memTemplItemLeft" align="right" valign="top">GraphType::EWeightType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a2575c09c42d0b30b57702c9379d2fbfb">kruskal</a> (std::shared_ptr&lt; GraphType &gt; graph, ActionType pre_action=[](typename GraphType::VIDType, typename GraphType::VIDType){}, ActionType post_action=[](typename GraphType::VIDType, typename GraphType::VIDType){})</td></tr>
 <tr class="memdesc:a2575c09c42d0b30b57702c9379d2fbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">kruskal：最小生成树的Kruskal算法，算法导论23章23.2节  <a href="#a2575c09c42d0b30b57702c9379d2fbfb">More...</a><br /></td></tr>
@@ -416,6 +472,111 @@ template&lt;typename GraphType &gt; </div>
 <p>在处理完搜有边之后，两个顶点在相同的连通分量当且仅当与之对应的对象在相同的集合中 </p>
 
 <p>Definition at line <a class="el" href="connectedcomponent_8h_source.html#l00044">44</a> of file <a class="el" href="connectedcomponent_8h_source.html">connectedcomponent.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acc8cd65d7cf2d584f86cfd92494bdbf4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;GraphType&gt; IntroductionToAlgorithm::GraphAlgorithm::create_Gf </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>create_Gf：根据指定流网络生成一个残余网络。算法导论26章26.2节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">flow</td><td>一个流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 残余网络</dd></dl>
+<h2>残余网络</h2>
+<p>给定网络G(V,E)和流量f，残余网络Gf(V,Ef)由那些仍有空间对流量进行调整的边构成。Gf中的顶点就是原图G中的顶点。残余网络Gf中的边可以由以下组成：</p>
+<ul>
+<li>若(u,v)属于E，且f(u,v)&lt;c(u,v)，则存在边(u,v)属于Ef，且cf(u,v)=c(u,v)-f(u,v)，表示沿着该方向图G中还能流通cf大小的流量</li>
+<li>若(u,v)属于E，则存在边(v,u)属于Ef,且 cf(v,u)=c(u,v)，表示沿着(u,v)的反方向（即(v,u)方向)可以压入cf大小的反向流量 <blockquote class="doxtable">
+<p>这里f(u,v)为边(u,v)上的流；c(u,v)为图G的边(u,v)的容量；cf(u,v)为残余网络Gf上的边(u,v)的容量 </p>
+</blockquote>
+</li>
+</ul>
+<p>这里假定容量c&gt;0，一旦容量c=0表示边不存在（禁止流通）；f&gt;=0，表示流是正向的。同时假定图中不存在双向边： 图G中不可能同时存在边(u,v)以及边(v,u)（即管道是单向的）</p>
+<p>要求graph的无效权重为0，否则抛出异常</p>
+<p>性能：时间复杂度 O(V+E) </p>
+
+<p>Definition at line <a class="el" href="fordfulkerson_8h_source.html#l00054">54</a> of file <a class="el" href="fordfulkerson_8h_source.html">fordfulkerson.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6a1917551c87991625d8402593ec863"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html">List</a>&lt;<a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html">ListNode</a>&lt;typename GraphType::VertexType&gt; &gt; IntroductionToAlgorithm::GraphAlgorithm::create_L </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>create_L：前置重贴标签算法中的创建L链表操作 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">src</td><td>流的源点，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">dst</td><td>流的汇点，必须有效否则抛出异常 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 初始化的L链表</dd></dl>
+<p>如果src、dst任何一个顶点无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<p>该操作将所有的除s、t之外的顶点加入到L链表中 </p>
+
+<p>Definition at line <a class="el" href="relabeltofront_8h_source.html#l00113">113</a> of file <a class="el" href="relabeltofront_8h_source.html">relabeltofront.h</a>.</p>
 
 </div>
 </div>
@@ -655,6 +816,68 @@ template&lt;typename GraphType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a2ae42c12c93664d94b5a6f9980fe8540"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::discharge </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>u_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>discharge：最大流的前置重贴标签算法中的释放操作。算法导论26章26.5节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">u_id</td><td>图的顶点id，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">flow</td><td>预流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p>如果顶点无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<p>对于溢出结点u,如果将其所有多余的流通过许可边推送到相邻的结点上，则称该结点得到释放。 在释放过程中，需要对结点u进行重贴标签操作，这使得从结点u发出的边成为许可边。discharge(u) 操作步骤如下：</p>
+<ul>
+<li>循环，条件为u.e&gt;0，循环内操作为：<ul>
+<li>获取u.current，假设为v</li>
+<li>如果v为空，即遍历到u.N链表的末尾，则对u执行relabel操作，然后将u.current指向u.N链表的头部</li>
+<li>如果 v非空，且满足 push 操作的条件(c_f(u,v)&gt;0且 u.h=v.h+1)，则执行push操作</li>
+<li>如果 v 非空，但不满足 push 操作，则 u.current指向u.N链表的下一个结点 </li>
+</ul>
+</li>
+</ul>
+
+<p>Definition at line <a class="el" href="relabeltofront_8h_source.html#l00053">53</a> of file <a class="el" href="relabeltofront_8h_source.html">relabeltofront.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a680307505286ae3230d1843c342e874e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -788,6 +1011,229 @@ template&lt;typename GraphType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a23a29754883e1edd7bd95a76634444a2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;std::array&lt;typename GraphType::EWeightType,GraphType::NUM&gt;,GraphType::NUM&gt; IntroductionToAlgorithm::GraphAlgorithm::ford_fulkerson </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ford_fulkerson：最大流的ford_fulkerson算法。算法导论26章26.2节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">src</td><td>流的源点，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">dst</td><td>流的汇点，必须有效否则抛出异常 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 最大流矩阵</dd></dl>
+<p>如果src、dst任何一个顶点无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<h2>最大流</h2>
+<p>流网络G=（V,E）是一个有向图，图中每条边(u,v)属于E都有一个正的容量值c(u,v)&gt;0。而且如果边集合E中包含一条边(u,v)，则图中不存在反向边 (v,u)。为方便起见，假设(u,v)不属于E,定义c(u,v)=0（即无效权重为0），并且在图中不允许自循环。</p>
+<p>在流网络中存在两个特殊点：源结点s和汇点t。假定每一个结点都在从源点s到汇点t的某条路径上。即对于每个结点v属于E，存在某条路径 s&ndash;&gt;v&ndash;&gt;t。</p>
+<p>G中的流是一个实值函数f:V*V&ndash;&gt;R，满足下面两条性质：</p>
+<ul>
+<li>容量限制：对于所有结点u,v属于V，要求0&lt;= f(u,v) &lt;= c(u,v)</li>
+<li>流量守恒： 对于所有结点u属于V-{s,t}，要求：从u进入的流等于从u出去的流</li>
+</ul>
+<p>对于(u,v)不属于E的情况，从结点u到v之间没有流，因此f(u,v)=0。我们称非负数值f(u,v)为从结点u到v的流。一个流f的值 |f|=从源点流出的总流量- 流入源结点的总流量</p>
+<p>最大流问题：给定流网络G、一个源结点s、一个汇点t,找出值最大的一个流</p>
+<h2>ford_fulkerson算法</h2>
+<h3>算法原理</h3>
+<p>ford_fulkerson 算法更准确的称呼是一种方法而不是算法，因为它包含了几种运行时间各不相同的具体实现。 它依赖于三种重要思想：残余网络、增广路径和切割。</p>
+<h4>残余网络</h4>
+<p>给定流网络G(V,E)和流量f，残余网络Gf(V,Ef)由那些仍有空间对流量进行调整的边构成。 Gf中的顶点就是原图G中的顶点。残余网络Gf中的边可以由以下组成：</p>
+<ul>
+<li>若(u,v)属于E，且f(u,v)&lt;c(u,v)，则存在边(u,v)属于Ef，且cf(u,v)=c(u,v)-f(u,v)，表示沿着该方向图G中还能流通cf大小的流量</li>
+<li>若(u,v)属于E，则存在边(v,u)属于Ef,且 cf(v,u)=c(u,v)，表示沿着(u,v)的反方向（即(v,u)方向)可以压入cf大小的反向流量 <blockquote class="doxtable">
+<p>这里f(u,v)为边(u,v)上的流；c(u,v)为图G的边(u,v)的容量；cf(u,v)为残余网络Gf上的边(u,v)的容量 </p>
+</blockquote>
+</li>
+</ul>
+<h4>增广路径</h4>
+<p>给定流网络G=(V,E)和流f，增广路径p是残余网络Gf中一条源结点s到汇点t的简单路径。我们称一条增广路径 p上能够为每条边增加的流量的最大值为路径p的残余容量，定义为 cf(p)= min {cf(u,v):(u,v)属于路径p}</p>
+<h4>最大流和最小切割定理</h4>
+<p>流网络G=(V,E)的一个切割(S,T)是将结点集合V划分为S和T=V-S两个集合，使得s属于S，t属于T。切割(S,T) 的容量c(S,T)=c(u,v)的累加，其中u属于S,v属于T</p>
+<p>设f为流网络G=(V,E)中的一个流，该流网络的源点为s，汇点为t，则下面的条件是等价的：</p>
+<ul>
+<li>f是G的一个最大流</li>
+<li>残余网络Gf不包括任何增广路径</li>
+<li>|f|=c(S,T)，其中(S,T)是流网络G的某个切割</li>
+</ul>
+<h3>算法步骤</h3>
+<p>ford_fulkerson算法循环增加流的值。在开始的时候对于所有的结点u,v属于V，f(u,v)=0。在每一轮迭代中， 我们将图G的流值进行增加，方法就是在G的残余网络Gf中寻找一条增广路径。算法步骤如下：</p>
+<ul>
+<li>初始化： 创建流矩阵flow，flow[i][j]均初始化为0</li>
+<li>循环迭代：<ul>
+<li>根据flow和G创建残余网络Gf，寻找增广路径</li>
+<li>若增广路径不存在，则跳出迭代，证明现在的流就是最大流</li>
+<li>若增广路径存在，则更新流矩阵。更新方法为：<ul>
+<li>取出增广路径的残余容量 cf(p)= min {cf(u,v):(u,v)属于路径p}，然后更新增广路径p中的边(u,v)：<ul>
+<li>若(u,v)属于图G的边E，则 flow[u][v]=flow[u][v]+cf(p)</li>
+<li>若(v,u)属于图G的边E，则 flow[u][v]=flow[u][v]-cf(p)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回流矩阵 flow</li>
+</ul>
+<h3>算法性能</h3>
+<p>ford_fulkerson算法运行时间取决于如何寻找增广路径。如果选择不好，算法可能不会终止：流的值会随着后续的递增而增加， 但是它却不一定收敛于最大的流值。如果用广度优先搜索来寻找增广路径，算法的运行时间将会是多项式数量级。</p>
+<p>假定最大流问题中的容量均为整数，由于流量值每次迭代中最少增加一个单位，因此算法运行时间为 O(E|f*|) ,|f*|为最大流的值 </p>
+
+<p>Definition at line <a class="el" href="fordfulkerson_8h_source.html#l00178">178</a> of file <a class="el" href="fordfulkerson_8h_source.html">fordfulkerson.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab134ec014d01e25ec2ed7d2c97babe23"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;std::array&lt;typename GraphType::EWeightType,GraphType::NUM&gt;,GraphType::NUM&gt; IntroductionToAlgorithm::GraphAlgorithm::generic_push_relabel </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>generic_push_relabel：最大流的推送-重贴标签算法。算法导论26章26.4节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">src</td><td>流的源点，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">dst</td><td>流的汇点，必须有效否则抛出异常 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 最大流矩阵</dd></dl>
+<p>如果src、dst任何一个顶点无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<h2>最大流</h2>
+<p>流网络G=（V,E）是一个有向图，图中每条边(u,v)属于E都有一个正的容量值c(u,v)&gt;0。而且如果边集合E中包含一条边(u,v)，则图中不存在反向边 (v,u)。为方便起见，假设(u,v)不属于E,定义c(u,v)=0（即无效权重为0），并且在图中不允许自循环。</p>
+<p>在流网络中存在两个特殊点：源结点s和汇点t。假定每一个结点都在从源点s到汇点t的某条路径上。即对于每个结点v属于E，存在某条路径 s&ndash;&gt;v&ndash;&gt;t。</p>
+<p>G中的流是一个实值函数f:V*V&ndash;&gt;R，满足下面两条性质：</p>
+<ul>
+<li>容量限制：对于所有结点u,v属于V，要求0&lt;= f(u,v) &lt;= c(u,v)</li>
+<li>流量守恒： 对于所有结点u属于V-{s,t}，要求：从u进入的流等于从u出去的流</li>
+</ul>
+<p>对于(u,v)不属于E的情况，从结点u到v之间没有流，因此f(u,v)=0。我们称非负数值f(u,v)为从结点u到v的流。一个流f的值 |f|=从源点流出的总流量- 流入源结点的总流量</p>
+<p>最大流问题：给定流网络G、一个源结点s、一个汇点t,找出值最大的一个流</p>
+<h2>generic_push_relabel 算法</h2>
+<h3>算法原理</h3>
+<p>目前最大流的最快实现是基于推送-重贴标签算法。推送-重贴标签算法比 Ford-fulkserson的局域性更强。它不是对整个残余网络进行检查， 而是一个结点一个结点的查看，每一步只检查当前结点的邻结点。与 Ford-fulkerson 方法不同， 推送-重贴标签算法并不在整个执行过程中保持流量守恒性质，而是维持一个预流，该流是一个 V*V &ndash;&gt; R的函数f,它满足容量限制单不满足流量守恒性质。 进入一个点的流量可以超过流出该结点的流量，我们称结点u的 （进入流量-流出流量）=e(u)为结点u的超额流。 对于结点u属于V-{s,t}，如果 e(u)&gt;0，则称结点u溢出。</p>
+<p>考虑一个流网络G=(V,E)，我们将有向边看作管道，连接管道的结点有两个性质：</p>
+<ul>
+<li>为了容纳额外的流e，每个结点都隐藏有一个外流的管道，该管道通向一个容量无穷大的水库</li>
+<li>每个结点都有一个高度h，高度的值随着算法的推进而增加</li>
+</ul>
+<p>高度h满足下面性质：h(s)=|V|,h(t)=0,对于所有的边(u,v)属于E_f（残余网络中的边），则有 h(u)&lt;=h(v)+1</p>
+<p>结点的高度h决定了流的推送方向：我们只从高处向低处push流。我们将源的高度固定在|V|，将汇点的高度固定在0。其他结点的高度初始时为0， 但是随着时间的推移而不断增加。</p>
+<p>generic_push_relabel算法首先从源结点往下发送尽可能多的流到汇点，发送的流量为源结点所发出的所有管道的流量之和。 当流进入一个中间结点时，他们被收集在该结点的水库中。</p>
+<p>算法过程中，可能发现所有离开结点u的未充满的管道高度都比u大或者和u相等。此时为了消除结点u的超额流量，必须增加结点u的高度。 这就是“重贴标签”操作，我们将结点u的高度增加到比其最低的邻居结点的高度多1个单位的高度，这里要求结点u到该邻居结点的管道必须未充满。 因此在执行重贴标签后，一个结点u至少有一个流出管道。可以通过它推送更多的流。</p>
+<p>最终一旦所有水库为空，则预流不但是“合法”的流，也是一个最大流。</p>
+<h3>基本操作</h3>
+<h4>push 操作</h4>
+<p>如果一个结点 u是一个溢出结点，则至少有一条入边，假设为(v,u)，且f(v,u)&gt;0。此时残留网络G_f中的边c_f(u,v)&gt;0。如果此时还有h(u)=h(v)+1， 则可以对边(u,v)执行push操作。</p>
+<p>因为结点u有一个正的超额流u.e，且边(u,v)的残余容量为正，因此可以增加结点u到v的流，增加的幅度为min(u.e,c_f(u,v))，这种幅度的增加不会导致 u.e为负值或者容量 c(u,v) 被突破</p>
+<p>push操作步骤：</p>
+<ul>
+<li>计算残余容量 c_f(u,v)</li>
+<li>计算流的增加幅度 delt_f=min(u.e,c_f(u,v))</li>
+<li>更新流：<ul>
+<li>如果 (u,v) 属于 E，则 f(u,v) += delt_f</li>
+<li>如果 (v,u) 属于 E，则 f(v,u) -= delt_f</li>
+</ul>
+</li>
+<li>更新溢出流量：<ul>
+<li>u.e -= delt(u,v)</li>
+<li>v.e += delt(u,v)</li>
+</ul>
+</li>
+</ul>
+<h4>relabel 操作</h4>
+<p>如果结点u溢出，并且对于所有边(u,v)属于E_f(残留网络G_f中的边)，有u.h&lt;=v.h，则可以对结点u执行relabel操作。 当调用relabel操作时，E_f必须包含至少一条从结点u出发的边。</p>
+<p>relabel 步骤：</p>
+<ul>
+<li>计算 min{v.h:(u,v)属于E_f}</li>
+<li>u.h=1+ min{v.h:(u,v)属于E_f}</li>
+</ul>
+<h3>算法步骤</h3>
+<ul>
+<li>初始化操作：<ul>
+<li>初始化预流 flow: flow(u,v)=c(u,v)如果u=s;否则 flow(u,v)=0</li>
+<li>初始化高度函数 h: h(s)=|V|;h(u)=0, u属于 V-{s}</li>
+<li>初始化超额流量 e： e(u)=c(s,u)，u为与源s相邻的结点; e(u)=0，u为与源s不相邻的结点; e(s)初始化为所有s出发的管道之后的相反数</li>
+</ul>
+</li>
+<li>执行循环，直到所有结点u属于V-{s,t}不存在超额流量e为止。循环内执行：<ul>
+<li>如果可以执行 push 操作，则执行push操作</li>
+<li>如果不能执行 push 操作，又由于存在超额流量 e&gt;0 的结点，因此必然可以执行 relabel 操作。则执行 relabel 操作</li>
+</ul>
+</li>
+</ul>
+<h3>算法性能</h3>
+<p>算法性能：时间复杂度 O(V^2 E) </p>
+
+<p>Definition at line <a class="el" href="genericpushrelabel_8h_source.html#l00373">373</a> of file <a class="el" href="genericpushrelabel_8h_source.html">genericpushrelabel.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1581960f77507024b39572aeb6d1fbd6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -858,6 +1304,120 @@ template&lt;typename GraphType &gt; </div>
 <p>本函数是 johnson 算法的辅助函数 </p>
 
 <p>Definition at line <a class="el" href="johnson_8h_source.html#l00046">46</a> of file <a class="el" href="johnson_8h_source.html">johnson.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1dfc9c1874850fb1415db3644497777"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::initial_vertex_NList </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initial_vertex_NList：前置重贴标签算法中的初始化邻接链表操作 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">src</td><td>流的源点，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">dst</td><td>流的汇点，必须有效否则抛出异常 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p>如果src、dst任何一个顶点无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<p>该操作将初始化除了s、t之外所有顶点的邻接链表 </p>
+
+<p>Definition at line <a class="el" href="relabeltofront_8h_source.html#l00153">153</a> of file <a class="el" href="relabeltofront_8h_source.html">relabeltofront.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeaf3e258f5ae9aed76158255fa603c00"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::initialize_preflow </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize_preflow：generic_push_relabel算法的初始化操作。算法导论26章26.4节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">src</td><td>流的源点，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">flow</td><td>预流的引用（执行过程中会更新预流） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p>如果src无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<p>初始化操作执行下列操作：</p>
+<ul>
+<li>初始化预流 flow: flow(u,v)=c(u,v)如果u=s;否则 flow(u,v)=0</li>
+<li>初始化高度函数 h: h(s)=|V|;h(u)=0, u属于 V-{s}</li>
+<li>初始化超额流量 e： e(u)=c(s,u)，u为与源s相邻的结点; e(u)=0，u为与源s不相邻的结点; e(s)初始化为所有s出发的管道之后的相反数 <blockquote class="doxtable">
+<p>由顶点的<code>key</code>属性存储超额流量e</p>
+</blockquote>
+</li>
+</ul>
+
+<p>Definition at line <a class="el" href="genericpushrelabel_8h_source.html#l00227">227</a> of file <a class="el" href="genericpushrelabel_8h_source.html">genericpushrelabel.h</a>.</p>
 
 </div>
 </div>
@@ -1214,6 +1774,54 @@ template&lt;typename MatrixType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a27dfe859312abba6639bca7b232d4bd6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">GraphType::VIDType IntroductionToAlgorithm::GraphAlgorithm::min_v_at_Ef </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>u_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>min_v_at_Ef：relabel操作中的min_v_at_Ef操作。算法导论26章26.4节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">u_id</td><td>结点u的id，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">flow</td><td>预流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 所有边(u,v)属于E_f(残留网络G_f中的边)中，高度最小的结点v</dd></dl>
+<p>该方法扫描Ef中所有从u出发的边(u,v)，找出高度最小的结点v </p>
+
+<p>Definition at line <a class="el" href="genericpushrelabel_8h_source.html#l00124">124</a> of file <a class="el" href="genericpushrelabel_8h_source.html">genericpushrelabel.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aba1581358d79ba82dc4fd0c15bc987e6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1291,6 +1899,242 @@ template&lt;typename GraphType , typename ActionType  = std::function&lt; void(t
 <p>Prim总时间代价为O(VlgV+ElgV)=O(ElgV)(使用最小堆实现的最小优先级队列），或者O(E+VlgV)（使用斐波那契堆实现最小优先级队列） </p>
 
 <p>Definition at line <a class="el" href="prim_8h_source.html#l00077">77</a> of file <a class="el" href="prim_8h_source.html">prim.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd520b7e33d8c1e72b05210d784ac258"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::push </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>u_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>v_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>push：generic_push_relabel算法的push操作。算法导论26章26.4节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">u_id</td><td>结点u的id，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">v_id</td><td>结点v的id，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">flow</td><td>预流的引用（执行过程中会更新预流） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p>如果u_id或者v_id无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<p>如果一个结点 u是一个溢出结点，则至少有一条入边，假设为(v,u)，且f(v,u)&gt;0。此时残留网络G_f中的边c_f(u,v)&gt;0。如果此时还有h(u)=h(v)+1， 则可以对边(u,v)执行push操作。</p>
+<p>因为结点u有一个正的超额流u.e，且边(u,v)的残余容量为正，因此可以增加结点u到v的流，增加的幅度为min(u.e,c_f(u,v))，这种幅度的增加不会导致 u.e为负值或者容量 c(u,v) 被突破</p>
+<p>push操作步骤：</p>
+<ul>
+<li>计算残余容量 c_f(u,v)</li>
+<li>计算流的增加幅度 delt_f=min(u.e,c_f(u,v))</li>
+<li>更新流：<ul>
+<li>如果 (u,v) 属于 E，则 f(u,v) += delt_f</li>
+<li>如果 (v,u) 属于 E，则 f(v,u) -= delt_f</li>
+</ul>
+</li>
+<li>更新溢出流量：<ul>
+<li>u.e -= delt(u,v)</li>
+<li>v.e += delt(u,v)</li>
+</ul>
+</li>
+</ul>
+<blockquote class="doxtable">
+<ul>
+<li>由顶点的<code>key</code>属性存储超额流量e *</li>
+<li>执行push(u,v)时，要求存在残留边 (u,v)属于Ef，且c_f(u,v)&gt;0；否则抛出异常</li>
+<li>执行push(u,v)时，要求 u.e&gt;0；否则抛出异常</li>
+</ul>
+</blockquote>
+
+<p>Definition at line <a class="el" href="genericpushrelabel_8h_source.html#l00067">67</a> of file <a class="el" href="genericpushrelabel_8h_source.html">genericpushrelabel.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a143924362cc9f23ca452c3ca0e292ff3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::GraphAlgorithm::relabel </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>u_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; std::array&lt; typename GraphType::EWeightType, GraphType::NUM &gt;, GraphType::NUM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>relabel：generic_push_relabel算法的relabel操作。算法导论26章26.4节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">u_id</td><td>结点u的id，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">flow</td><td>预流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p>如果结点u溢出（如果不是溢出则抛出异常），并且对于所有边(u,v)属于E_f(残留网络G_f中的边)，有u.h&lt;=v.h，则可以对结点u执行relabel操作。 当调用relabel操作时，E_f必须包含至少一条从结点u出发的边，否则抛出异常。</p>
+<p>relabel 步骤：</p>
+<ul>
+<li>计算 min{v.h:(u,v)属于E_f}</li>
+<li>u.h=1+ min{v.h:(u,v)属于E_f}</li>
+</ul>
+<p>当对于存在边(u,v)属于E_f(残留网络G_f中的边)，有u.h&gt;v.h时，抛出异常 </p>
+
+<p>Definition at line <a class="el" href="genericpushrelabel_8h_source.html#l00184">184</a> of file <a class="el" href="genericpushrelabel_8h_source.html">genericpushrelabel.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abafb73bda29c4e389edb048a5e5d8d2b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename GraphType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;std::array&lt;typename GraphType::EWeightType,GraphType::NUM&gt;,GraphType::NUM&gt; IntroductionToAlgorithm::GraphAlgorithm::relabel_to_front </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; GraphType &gt;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename GraphType::VIDType&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>relabel_to_front：最大流的前置重贴标签算法。算法导论26章26.5节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph:指定流网络。它必须非空，否则抛出异常</td><td></td></tr>
+    <tr><td class="paramname">src</td><td>流的源点，必须有效否则抛出异常 </td></tr>
+    <tr><td class="paramname">dst</td><td>流的汇点，必须有效否则抛出异常 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 最大流矩阵</dd></dl>
+<p>如果src、dst任何一个顶点无效，则抛出异常：</p>
+<ul>
+<li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
+<li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
+</ul>
+<h2>最大流</h2>
+<p>流网络G=（V,E）是一个有向图，图中每条边(u,v)属于E都有一个正的容量值c(u,v)&gt;0。而且如果边集合E中包含一条边(u,v)，则图中不存在反向边 (v,u)。为方便起见，假设(u,v)不属于E,定义c(u,v)=0（即无效权重为0），并且在图中不允许自循环。</p>
+<p>在流网络中存在两个特殊点：源结点s和汇点t。假定每一个结点都在从源点s到汇点t的某条路径上。即对于每个结点v属于E，存在某条路径 s&ndash;&gt;v&ndash;&gt;t。</p>
+<p>G中的流是一个实值函数f:V*V&ndash;&gt;R，满足下面两条性质：</p>
+<ul>
+<li>容量限制：对于所有结点u,v属于V，要求0&lt;= f(u,v) &lt;= c(u,v)</li>
+<li>流量守恒： 对于所有结点u属于V-{s,t}，要求：从u进入的流等于从u出去的流</li>
+</ul>
+<p>对于(u,v)不属于E的情况，从结点u到v之间没有流，因此f(u,v)=0。我们称非负数值f(u,v)为从结点u到v的流。一个流f的值 |f|=从源点流出的总流量- 流入源结点的总流量</p>
+<p>最大流问题：给定流网络G、一个源结点s、一个汇点t,找出值最大的一个流</p>
+<h2>relabel_to_front 算法</h2>
+<h3>算法原理</h3>
+<p>&gt;本节的一些概念参考 generic_push_relabel 算法</p>
+<p>推送-重贴标签方法允许我们以任意次序执行基本操作。但是，如果仔细选择这个次序，并且对网络数据结构进行高效管理，我们可以获取更高的算法性能。</p>
+<p>前置重贴标签算法在执行过程中维持一个网络中的结点的链表。算法从头到尾对链表进行扫描，每次选择一个溢出结点u。 然后对结点u进行“释放”，即对所选结点执行推送操作和重贴标签操作，直到结点u不再拥有正值的超额流量为止。 每次在算法对一个结点进行重贴标签操作时，我们都将该结点移动到链表的最前面（也就是“前置重贴标签算法”的名字由来），然后算法进行一次新的扫描。</p>
+<p>设图G=(V,E)是一个源点s汇点t的流网络，f是G中的一个预流（它满足容量限制单不满足流量守恒性质），h是一个高度函数。 对于边(u,v)，如果c_f(u,v)&gt;0且h(u)=h(v)+1，则边(u,v)是一条许可边；否则边(u,v)是一条非许可边。许可边意义是：在残余网络中， 流可以经过它进行推送的边。许可网络指图G_f_h=(V,E_f_h)，其中E_f_h是许可边的集合。</p>
+<p>在前置重贴标签算法中，我们将所有边都组织为“邻接链表”。给定流网络G=(V,E)，对于结点u属于V，其邻接链表u.N是结点u在图G 中的邻接结点所构成的一个单链表（包括了u的上游和下游的邻接结点）：若边(u,v)属于E或者边(v,u)属于E，则结点v将出现在链表u.N中。 &gt;邻接链表u.N包含的结点是所有可能存在残留边(u,v)的结点v</p>
+<p>属性u.N.head指向的是邻接表u.N中的第一个结点；v.next-neighbor指向的是邻接链表u.N中位于结点v后面的一个结点。如果v是链表中最后一个结点， 则该指针的值为NIL</p>
+<p>前置重贴标签算法以任意次序遍历每一个邻接链表，该次序在算法整个执行过程中不变。对于每个结点u，属性u.current指向的是u.N 链表中当前正在考虑的结点。初始情况下u.current指向u.N.head</p>
+<h3>基本操作</h3>
+<h4>discharge 操作</h4>
+<p>对于溢出结点u,如果将其所有多余的流通过许可边推送到相邻的结点上，则称该结点得到释放。 在释放过程中，需要对结点u进行重贴标签操作，这使得从结点u发出的边成为许可边。discharge(u) 操作步骤如下：</p>
+<ul>
+<li>循环，条件为u.e&gt;0，循环内操作为：<ul>
+<li>获取u.current，假设为v</li>
+<li>如果v为空，即遍历到u.N链表的末尾，则对u执行relabel操作，然后将u.current指向u.N链表的头部</li>
+<li>如果 v非空，且满足 push 操作的条件(c_f(u,v)&gt;0且 u.h=v.h+1)，则执行push操作</li>
+<li>如果 v 非空，但不满足 push 操作，则 u.current指向u.N链表的下一个结点</li>
+</ul>
+</li>
+</ul>
+<h3>算法步骤</h3>
+<ul>
+<li>初始化预流操作（与 generic_push_relabel 算法相同）</li>
+<li>对所有的非s、t的结点，将它们加入到链表L中（顺序任意）</li>
+<li>对所有的非s、t的结点u,初始化u.current为u.N.head</li>
+<li>设置u为L.head</li>
+<li>循环，条件为u!=NIL，循环中操作：<ul>
+<li>保留u.h为oldh</li>
+<li>对u执行discharge操作</li>
+<li>如果u.h&gt;oldh，证明对u执行了重贴标签操作，此时将u移动到L的头部</li>
+<li>u=u.next（提取u在L中的下一个）</li>
+</ul>
+</li>
+</ul>
+<h3>算法性能</h3>
+<p>算法性能：时间复杂度 O(V^3) </p>
+
+<p>Definition at line <a class="el" href="relabeltofront_8h_source.html#l00280">280</a> of file <a class="el" href="relabeltofront_8h_source.html">relabeltofront.h</a>.</p>
 
 </div>
 </div>

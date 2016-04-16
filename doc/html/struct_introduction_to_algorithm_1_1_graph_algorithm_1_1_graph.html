@@ -378,9 +378,10 @@ template&lt;unsigned N, typename VType &gt; </div>
 <li>如果指定的顶点<code>id</code>不在<code>[0,N)</code>之间，则无效</li>
 <li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效</li>
 </ul>
-<p>在添加边时，同时向图的矩阵、图的邻接表中添加边 </p>
+<p>在添加边时，同时向图的矩阵、图的邻接表中添加边</p>
+<p>如果添加的边是无效权重，则直接返回而不添加 </p>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00127">127</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00129">129</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -430,7 +431,7 @@ template&lt;typename Iterator &gt; </div>
 </dl>
 <p>在添加边时，同时向图的矩阵、图的邻接表中添加边 </p>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00148">148</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00151">151</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -579,7 +580,7 @@ template&lt;unsigned N, typename VType &gt; </div>
 <li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00171">171</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00174">174</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -610,7 +611,7 @@ template&lt;unsigned N, typename VType &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>:图中所有边的三元素元组集合</dd></dl>
 <p>要求图的矩阵和图的邻接表都返回同样的结果 </p>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00186">186</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00189">189</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -664,7 +665,7 @@ template&lt;unsigned N, typename VType &gt; </div>
 <li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00237">237</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00253">253</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -700,7 +701,7 @@ template&lt;unsigned N, typename VType &gt; </div>
 </ul>
 <p><code>inverse</code>方法首先新建一个图，再根据原图的顶点来执行顶点的深拷贝。然后再获取原图的边的反向边，将该反向边作为镜像图的边 </p>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00281">281</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00299">299</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -793,7 +794,7 @@ template&lt;unsigned N, typename VType &gt; </div>
 <li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00214">214</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00217">217</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -847,7 +848,7 @@ template&lt;unsigned N, typename VType &gt; </div>
 <li>如果不存在某个顶点与指定的顶点<code>id</code>相同，则无效 </li>
 </ul>
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00260">260</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00278">278</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -864,7 +865,7 @@ template&lt;unsigned N, typename VType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00301">301</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00319">319</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +881,7 @@ template&lt;unsigned N, typename VType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00300">300</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00318">318</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -896,7 +897,7 @@ template&lt;unsigned N, typename VType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00299">299</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00317">317</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -937,7 +938,7 @@ template&lt;unsigned N, typename VType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="graph_8h_source.html#l00298">298</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p>Definition at line <a class="el" href="graph_8h_source.html#l00316">316</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>

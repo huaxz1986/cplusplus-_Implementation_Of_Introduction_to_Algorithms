@@ -22,6 +22,7 @@ var searchData=
   ['dijkstra_2eh',['dijkstra.h',['../dijkstra_8h.html',1,'']]],
   ['dijkstra_5ftest_2eh',['dijkstra_test.h',['../dijkstra__test_8h.html',1,'']]],
   ['dijkstratest',['DijkstraTest',['../class_dijkstra_test.html',1,'']]],
+  ['discharge',['discharge',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a2ae42c12c93664d94b5a6f9980fe8540',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['discover_5ftime',['discover_time',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html#aab1b292c1d228d57ef3d20af908fe2cf',1,'IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex']]],
   ['disjointset_2eh',['disjointset.h',['../disjointset_8h.html',1,'']]],
   ['disjointset_5ftest_2eh',['disjointset_test.h',['../disjointset__test_8h.html',1,'']]],

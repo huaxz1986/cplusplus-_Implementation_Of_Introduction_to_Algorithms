@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['match_2eh',['match.h',['../match_8h.html',1,'']]],
+  ['match_5ftest_2eh',['match_test.h',['../match__test_8h.html',1,'']]],
   ['matrix_5fshortest_5fpath_2eh',['matrix_shortest_path.h',['../matrix__shortest__path_8h.html',1,'']]],
   ['matrix_5fshortest_5fpath_5ftest_2eh',['matrix_shortest_path_test.h',['../matrix__shortest__path__test_8h.html',1,'']]],
   ['matrixgraph_2eh',['matrixgraph.h',['../matrixgraph_8h.html',1,'']]],

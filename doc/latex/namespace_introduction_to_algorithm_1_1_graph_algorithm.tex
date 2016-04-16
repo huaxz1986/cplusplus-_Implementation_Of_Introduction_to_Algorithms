@@ -16,8 +16,16 @@ struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s
 \begin{DoxyCompactList}\small\item\em D\+F\+S\+\_\+\+Vertex：用于深度优先搜索的顶点类型，算法导论22章22.3节 \end{DoxyCompactList}\item 
 struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge}{Edge}
 \begin{DoxyCompactList}\small\item\em Edge：图的边，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex}{Flow\+Vertex}
+\begin{DoxyCompactList}\small\item\em Flow\+Vertex：推送-\/重贴标签算法图的顶点，算法导论26章26.4节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex}{Front\+Flow\+Vertex}
+\begin{DoxyCompactList}\small\item\em Front\+Flow\+Vertex：relabel\+\_\+to\+\_\+front算法的图的结点的数据结构，算法导论26章26.4节 \end{DoxyCompactList}\item 
 struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph}{Graph}
 \begin{DoxyCompactList}\small\item\em Graph：图，算法导论22章22.1节 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list}{List}
+\begin{DoxyCompactList}\small\item\em List：链表数据结构 \end{DoxyCompactList}\item 
+struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node}{List\+Node}
+\begin{DoxyCompactList}\small\item\em List\+Node：链表结点的数据结构 \end{DoxyCompactList}\item 
 struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph}{Matrix\+Graph}
 \begin{DoxyCompactList}\small\item\em Matrix\+Graph：图的矩阵表示，算法导论22章22.1节 \end{DoxyCompactList}\item 
 struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex}{Set\+Vertex}
@@ -55,6 +63,28 @@ struct \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_verte
 \begin{DoxyCompactList}\small\item\em scc：强连通分量，算法导论22章22.5节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::vector$<$ typename Graph\+Type\+::\+V\+I\+D\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a804241e72be5f4c031190bc12a6b73a2}{topology\+\_\+sort} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph)
 \begin{DoxyCompactList}\small\item\em topology\+\_\+sort：拓扑排序，算法导论22章22.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_acc8cd65d7cf2d584f86cfd92494bdbf4}{create\+\_\+\+Gf} (const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em create\+\_\+\+Gf：根据指定流网络生成一个残余网络。算法导论26章26.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a23a29754883e1edd7bd95a76634444a2}{ford\+\_\+fulkerson} (const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em ford\+\_\+fulkerson：最大流的ford\+\_\+fulkerson算法。算法导论26章26.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_abd520b7e33d8c1e72b05210d784ac258}{push} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em push：generic\+\_\+push\+\_\+relabel算法的push操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\Graph\+Type\+::\+V\+I\+D\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a27dfe859312abba6639bca7b232d4bd6}{min\+\_\+v\+\_\+at\+\_\+\+Ef} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em min\+\_\+v\+\_\+at\+\_\+\+Ef：relabel操作中的min\+\_\+v\+\_\+at\+\_\+\+Ef操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a143924362cc9f23ca452c3ca0e292ff3}{relabel} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em relabel：generic\+\_\+push\+\_\+relabel算法的relabel操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aeaf3e258f5ae9aed76158255fa603c00}{initialize\+\_\+preflow} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em initialize\+\_\+preflow：generic\+\_\+push\+\_\+relabel算法的初始化操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab134ec014d01e25ec2ed7d2c97babe23}{generic\+\_\+push\+\_\+relabel} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em generic\+\_\+push\+\_\+relabel：最大流的推送-\/重贴标签算法。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2ae42c12c93664d94b5a6f9980fe8540}{discharge} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em discharge：最大流的前置重贴标签算法中的释放操作。算法导论26章26.5节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list}{List}$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node}{List\+Node}$<$ typename Graph\+Type\+::\+Vertex\+Type $>$ $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ad6a1917551c87991625d8402593ec863}{create\+\_\+\+L} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em create\+\_\+\+L：前置重贴标签算法中的创建\+L链表操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_af1dfc9c1874850fb1415db3644497777}{initial\+\_\+vertex\+\_\+\+N\+List} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em initial\+\_\+vertex\+\_\+\+N\+List：前置重贴标签算法中的初始化邻接链表操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_abafb73bda29c4e389edb048a5e5d8d2b}{relabel\+\_\+to\+\_\+front} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em relabel\+\_\+to\+\_\+front：最大流的前置重贴标签算法。算法导论26章26.5节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type,typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\Graph\+Type\+::\+E\+Weight\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2575c09c42d0b30b57702c9379d2fbfb}{kruskal} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type, typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
 \begin{DoxyCompactList}\small\item\em kruskal：最小生成树的\+Kruskal算法，算法导论23章23.2节 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ }\\Graph\+Type\+::\+E\+Weight\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aba1581358d79ba82dc4fd0c15bc987e6}{prim} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\}, Action\+Type post\+\_\+action=\mbox{[}$\,$\mbox{]}(typename Graph\+Type\+::\+V\+I\+D\+Type)\{\})
@@ -239,6 +269,85 @@ connected\+\_\+component算法步骤：
 在处理完搜有边之后，两个顶点在相同的连通分量当且仅当与之对应的对象在相同的集合中 
 
 Definition at line 44 of file connectedcomponent.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_acc8cd65d7cf2d584f86cfd92494bdbf4}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!create\+\_\+\+Gf@{create\+\_\+\+Gf}}
+\index{create\+\_\+\+Gf@{create\+\_\+\+Gf}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{create\+\_\+\+Gf(const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::shared\+\_\+ptr$<$Graph\+Type$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::create\+\_\+\+Gf (
+\begin{DoxyParamCaption}
+\item[{const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&}]{flow}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_acc8cd65d7cf2d584f86cfd92494bdbf4}
+
+
+create\+\_\+\+Gf：根据指定流网络生成一个残余网络。算法导论26章26.2节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em flow} & 一个流 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 残余网络
+\end{DoxyReturn}
+\subsubsection*{残余网络}
+
+给定网络\+G(\+V,\+E)和流量f，残余网络\+Gf(\+V,\+Ef)由那些仍有空间对流量进行调整的边构成。\+Gf中的顶点就是原图\+G中的顶点。残余网络\+Gf中的边可以由以下组成：
+
+
+\begin{DoxyItemize}
+\item 若(u,v)属于\+E，且f(u,v)$<$c(u,v)，则存在边(u,v)属于\+Ef，且cf(u,v)=c(u,v)-\/f(u,v)，表示沿着该方向图\+G中还能流通cf大小的流量
+\item 若(u,v)属于\+E，则存在边(v,u)属于\+Ef,且 cf(v,u)=c(u,v)，表示沿着(u,v)的反方向（即(v,u)方向)可以压入cf大小的反向流量 \begin{quote}
+这里f(u,v)为边(u,v)上的流；c(u,v)为图\+G的边(u,v)的容量；cf(u,v)为残余网络\+Gf上的边(u,v)的容量 \end{quote}
+
+\end{DoxyItemize}
+
+这里假定容量c$>$0，一旦容量c=0表示边不存在（禁止流通）；f$>$=0，表示流是正向的。同时假定图中不存在双向边： 图\+G中不可能同时存在边(u,v)以及边(v,u)（即管道是单向的）
+
+要求graph的无效权重为0，否则抛出异常
+
+性能：时间复杂度 O(V+\+E) 
+
+Definition at line 54 of file fordfulkerson.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_ad6a1917551c87991625d8402593ec863}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!create\+\_\+\+L@{create\+\_\+\+L}}
+\index{create\+\_\+\+L@{create\+\_\+\+L}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{create\+\_\+\+L(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ {\bf List}$<${\bf List\+Node}$<$typename Graph\+Type\+::\+Vertex\+Type$>$ $>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::create\+\_\+\+L (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{src, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{dst}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_ad6a1917551c87991625d8402593ec863}
+
+
+create\+\_\+\+L：前置重贴标签算法中的创建\+L链表操作 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em src} & 流的源点，必须有效否则抛出异常 \\
+\hline
+{\em dst} & 流的汇点，必须有效否则抛出异常 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 初始化的\+L链表
+\end{DoxyReturn}
+如果src、dst任何一个顶点无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+该操作将所有的除s、t之外的顶点加入到\+L链表中 
+
+Definition at line 113 of file relabeltofront.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_aec7fe196e6aee4c8e6004a05495c8813}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!dag\+\_\+shortest\+\_\+path@{dag\+\_\+shortest\+\_\+path}}
 \index{dag\+\_\+shortest\+\_\+path@{dag\+\_\+shortest\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -459,6 +568,54 @@ Dijkstra算法核心信息是一组结点集合 S 。从源结点s 到集合 S �
 
 Definition at line 77 of file dijkstra.\+h.
 
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2ae42c12c93664d94b5a6f9980fe8540}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!discharge@{discharge}}
+\index{discharge@{discharge}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{discharge(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::discharge (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{u\+\_\+id, }
+\item[{std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&}]{flow}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2ae42c12c93664d94b5a6f9980fe8540}
+
+
+discharge：最大流的前置重贴标签算法中的释放操作。算法导论26章26.5节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em u\+\_\+id} & 图的顶点id，必须有效否则抛出异常 \\
+\hline
+{\em flow} & 预流 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+如果顶点无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+对于溢出结点u,如果将其所有多余的流通过许可边推送到相邻的结点上，则称该结点得到释放。 在释放过程中，需要对结点u进行重贴标签操作，这使得从结点u发出的边成为许可边。discharge(u) 操作步骤如下：
+
+
+\begin{DoxyItemize}
+\item 循环，条件为u.\+e$>$0，循环内操作为：
+\begin{DoxyItemize}
+\item 获取u.\+current，假设为v
+\item 如果v为空，即遍历到u.\+N链表的末尾，则对u执行relabel操作，然后将u.\+current指向u.\+N链表的头部
+\item 如果 v非空，且满足 push 操作的条件(c\+\_\+f(u,v)$>$0且 u.\+h=v.\+h+1)，则执行push操作
+\item 如果 v 非空，但不满足 push 操作，则 u.\+current指向u.\+N链表的下一个结点 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Definition at line 53 of file relabeltofront.\+h.
+
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a680307505286ae3230d1843c342e874e}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!extend\+\_\+path@{extend\+\_\+path}}
 \index{extend\+\_\+path@{extend\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
 \subsubsection[{extend\+\_\+path(const Matrix\+Type \&\+L, const Matrix\+Type \&\+W)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matrix\+Type $>$ Matrix\+Type Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::extend\+\_\+path (
@@ -602,6 +759,259 @@ floyd\+\_\+warshall也是采用一种动态规划算法来解决问题。假定�
 
 Definition at line 109 of file floyd\+\_\+warshall.\+h.
 
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a23a29754883e1edd7bd95a76634444a2}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!ford\+\_\+fulkerson@{ford\+\_\+fulkerson}}
+\index{ford\+\_\+fulkerson@{ford\+\_\+fulkerson}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{ford\+\_\+fulkerson(const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::ford\+\_\+fulkerson (
+\begin{DoxyParamCaption}
+\item[{const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{src, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{dst}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a23a29754883e1edd7bd95a76634444a2}
+
+
+ford\+\_\+fulkerson：最大流的ford\+\_\+fulkerson算法。算法导论26章26.2节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em src} & 流的源点，必须有效否则抛出异常 \\
+\hline
+{\em dst} & 流的汇点，必须有效否则抛出异常 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 最大流矩阵
+\end{DoxyReturn}
+如果src、dst任何一个顶点无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+\subsubsection*{最大流}
+
+流网络\+G=（\+V,E）是一个有向图，图中每条边(u,v)属于\+E都有一个正的容量值c(u,v)$>$0。而且如果边集合\+E中包含一条边(u,v)，则图中不存在反向边 (v,u)。为方便起见，假设(u,v)不属于\+E,定义c(u,v)=0（即无效权重为0），并且在图中不允许自循环。
+
+在流网络中存在两个特殊点：源结点s和汇点t。假定每一个结点都在从源点s到汇点t的某条路径上。即对于每个结点v属于\+E，存在某条路径 s--$>$v--$>$t。
+
+G中的流是一个实值函数f\+:V$\ast$\+V--$>$R，满足下面两条性质：
+
+
+\begin{DoxyItemize}
+\item 容量限制：对于所有结点u,v属于\+V，要求0$<$= f(u,v) $<$= c(u,v)
+\item 流量守恒： 对于所有结点u属于\+V-\/\{s,t\}，要求：从u进入的流等于从u出去的流
+\end{DoxyItemize}
+
+对于(u,v)不属于\+E的情况，从结点u到v之间没有流，因此f(u,v)=0。我们称非负数值f(u,v)为从结点u到v的流。一个流f的值 $\vert$f$\vert$=从源点流出的总流量-\/ 流入源结点的总流量
+
+最大流问题：给定流网络\+G、一个源结点s、一个汇点t,找出值最大的一个流
+
+\subsubsection*{ford\+\_\+fulkerson算法}
+
+\paragraph*{算法原理}
+
+ford\+\_\+fulkerson 算法更准确的称呼是一种方法而不是算法，因为它包含了几种运行时间各不相同的具体实现。 它依赖于三种重要思想：残余网络、增广路径和切割。
+
+\subparagraph*{残余网络}
+
+给定流网络\+G(\+V,\+E)和流量f，残余网络\+Gf(\+V,\+Ef)由那些仍有空间对流量进行调整的边构成。 Gf中的顶点就是原图\+G中的顶点。残余网络\+Gf中的边可以由以下组成：
+
+
+\begin{DoxyItemize}
+\item 若(u,v)属于\+E，且f(u,v)$<$c(u,v)，则存在边(u,v)属于\+Ef，且cf(u,v)=c(u,v)-\/f(u,v)，表示沿着该方向图\+G中还能流通cf大小的流量
+\item 若(u,v)属于\+E，则存在边(v,u)属于\+Ef,且 cf(v,u)=c(u,v)，表示沿着(u,v)的反方向（即(v,u)方向)可以压入cf大小的反向流量 \begin{quote}
+这里f(u,v)为边(u,v)上的流；c(u,v)为图\+G的边(u,v)的容量；cf(u,v)为残余网络\+Gf上的边(u,v)的容量 \end{quote}
+
+\end{DoxyItemize}
+
+\subparagraph*{增广路径}
+
+给定流网络\+G=(V,E)和流f，增广路径p是残余网络\+Gf中一条源结点s到汇点t的简单路径。我们称一条增广路径 p上能够为每条边增加的流量的最大值为路径p的残余容量，定义为 cf(p)= min \{cf(u,v)\+:(u,v)属于路径p\}
+
+\subparagraph*{最大流和最小切割定理}
+
+流网络\+G=(V,E)的一个切割(\+S,\+T)是将结点集合\+V划分为\+S和\+T=V-\/\+S两个集合，使得s属于\+S，t属于\+T。切割(S,T) 的容量c(\+S,\+T)=c(u,v)的累加，其中u属于\+S,v属于\+T
+
+设f为流网络\+G=(V,E)中的一个流，该流网络的源点为s，汇点为t，则下面的条件是等价的：
+
+
+\begin{DoxyItemize}
+\item f是\+G的一个最大流
+\item 残余网络\+Gf不包括任何增广路径
+\item $\vert$f$\vert$=c(\+S,\+T)，其中(\+S,\+T)是流网络\+G的某个切割
+\end{DoxyItemize}
+
+\paragraph*{算法步骤}
+
+ford\+\_\+fulkerson算法循环增加流的值。在开始的时候对于所有的结点u,v属于\+V，f(u,v)=0。在每一轮迭代中， 我们将图\+G的流值进行增加，方法就是在\+G的残余网络\+Gf中寻找一条增广路径。算法步骤如下：
+
+
+\begin{DoxyItemize}
+\item 初始化： 创建流矩阵flow，flow\mbox{[}i\mbox{]}\mbox{[}j\mbox{]}均初始化为0
+\item 循环迭代：
+\begin{DoxyItemize}
+\item 根据flow和\+G创建残余网络\+Gf，寻找增广路径
+\item 若增广路径不存在，则跳出迭代，证明现在的流就是最大流
+\item 若增广路径存在，则更新流矩阵。更新方法为：
+\begin{DoxyItemize}
+\item 取出增广路径的残余容量 cf(p)= min \{cf(u,v)\+:(u,v)属于路径p\}，然后更新增广路径p中的边(u,v)：
+\begin{DoxyItemize}
+\item 若(u,v)属于图\+G的边\+E，则 flow\mbox{[}u\mbox{]}\mbox{[}v\mbox{]}=flow\mbox{[}u\mbox{]}\mbox{[}v\mbox{]}+cf(p)
+\item 若(v,u)属于图\+G的边\+E，则 flow\mbox{[}u\mbox{]}\mbox{[}v\mbox{]}=flow\mbox{[}u\mbox{]}\mbox{[}v\mbox{]}-\/cf(p)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item 返回流矩阵 flow
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+ford\+\_\+fulkerson算法运行时间取决于如何寻找增广路径。如果选择不好，算法可能不会终止：流的值会随着后续的递增而增加， 但是它却不一定收敛于最大的流值。如果用广度优先搜索来寻找增广路径，算法的运行时间将会是多项式数量级。
+
+假定最大流问题中的容量均为整数，由于流量值每次迭代中最少增加一个单位，因此算法运行时间为 O(E$\vert$f$\ast$$\vert$) ,$\vert$f$\ast$$\vert$为最大流的值 
+
+Definition at line 178 of file fordfulkerson.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab134ec014d01e25ec2ed7d2c97babe23}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!generic\+\_\+push\+\_\+relabel@{generic\+\_\+push\+\_\+relabel}}
+\index{generic\+\_\+push\+\_\+relabel@{generic\+\_\+push\+\_\+relabel}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{generic\+\_\+push\+\_\+relabel(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::generic\+\_\+push\+\_\+relabel (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{src, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{dst}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab134ec014d01e25ec2ed7d2c97babe23}
+
+
+generic\+\_\+push\+\_\+relabel：最大流的推送-\/重贴标签算法。算法导论26章26.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em src} & 流的源点，必须有效否则抛出异常 \\
+\hline
+{\em dst} & 流的汇点，必须有效否则抛出异常 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 最大流矩阵
+\end{DoxyReturn}
+如果src、dst任何一个顶点无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+\subsubsection*{最大流}
+
+流网络\+G=（\+V,E）是一个有向图，图中每条边(u,v)属于\+E都有一个正的容量值c(u,v)$>$0。而且如果边集合\+E中包含一条边(u,v)，则图中不存在反向边 (v,u)。为方便起见，假设(u,v)不属于\+E,定义c(u,v)=0（即无效权重为0），并且在图中不允许自循环。
+
+在流网络中存在两个特殊点：源结点s和汇点t。假定每一个结点都在从源点s到汇点t的某条路径上。即对于每个结点v属于\+E，存在某条路径 s--$>$v--$>$t。
+
+G中的流是一个实值函数f\+:V$\ast$\+V--$>$R，满足下面两条性质：
+
+
+\begin{DoxyItemize}
+\item 容量限制：对于所有结点u,v属于\+V，要求0$<$= f(u,v) $<$= c(u,v)
+\item 流量守恒： 对于所有结点u属于\+V-\/\{s,t\}，要求：从u进入的流等于从u出去的流
+\end{DoxyItemize}
+
+对于(u,v)不属于\+E的情况，从结点u到v之间没有流，因此f(u,v)=0。我们称非负数值f(u,v)为从结点u到v的流。一个流f的值 $\vert$f$\vert$=从源点流出的总流量-\/ 流入源结点的总流量
+
+最大流问题：给定流网络\+G、一个源结点s、一个汇点t,找出值最大的一个流
+
+\subsubsection*{generic\+\_\+push\+\_\+relabel 算法}
+
+\paragraph*{算法原理}
+
+目前最大流的最快实现是基于推送-\/重贴标签算法。推送-\/重贴标签算法比 Ford-\/fulkserson的局域性更强。它不是对整个残余网络进行检查， 而是一个结点一个结点的查看，每一步只检查当前结点的邻结点。与 Ford-\/fulkerson 方法不同， 推送-\/重贴标签算法并不在整个执行过程中保持流量守恒性质，而是维持一个预流，该流是一个 V$\ast$\+V --$>$ R的函数f,它满足容量限制单不满足流量守恒性质。 进入一个点的流量可以超过流出该结点的流量，我们称结点u的 （进入流量-\/流出流量）=e(u)为结点u的超额流。 对于结点u属于\+V-\/\{s,t\}，如果 e(u)$>$0，则称结点u溢出。
+
+考虑一个流网络\+G=(V,E)，我们将有向边看作管道，连接管道的结点有两个性质：
+
+
+\begin{DoxyItemize}
+\item 为了容纳额外的流e，每个结点都隐藏有一个外流的管道，该管道通向一个容量无穷大的水库
+\item 每个结点都有一个高度h，高度的值随着算法的推进而增加
+\end{DoxyItemize}
+
+高度h满足下面性质：h(s)=$\vert$\+V$\vert$,h(t)=0,对于所有的边(u,v)属于\+E\+\_\+f（残余网络中的边），则有 h(u)$<$=h(v)+1
+
+结点的高度h决定了流的推送方向：我们只从高处向低处push流。我们将源的高度固定在$\vert$\+V$\vert$，将汇点的高度固定在0。其他结点的高度初始时为0， 但是随着时间的推移而不断增加。
+
+generic\+\_\+push\+\_\+relabel算法首先从源结点往下发送尽可能多的流到汇点，发送的流量为源结点所发出的所有管道的流量之和。 当流进入一个中间结点时，他们被收集在该结点的水库中。
+
+算法过程中，可能发现所有离开结点u的未充满的管道高度都比u大或者和u相等。此时为了消除结点u的超额流量，必须增加结点u的高度。 这就是“重贴标签”操作，我们将结点u的高度增加到比其最低的邻居结点的高度多1个单位的高度，这里要求结点u到该邻居结点的管道必须未充满。 因此在执行重贴标签后，一个结点u至少有一个流出管道。可以通过它推送更多的流。
+
+最终一旦所有水库为空，则预流不但是“合法”的流，也是一个最大流。
+
+\paragraph*{基本操作}
+
+\subparagraph*{push 操作}
+
+如果一个结点 u是一个溢出结点，则至少有一条入边，假设为(v,u)，且f(v,u)$>$0。此时残留网络\+G\+\_\+f中的边c\+\_\+f(u,v)$>$0。如果此时还有h(u)=h(v)+1， 则可以对边(u,v)执行push操作。
+
+因为结点u有一个正的超额流u.\+e，且边(u,v)的残余容量为正，因此可以增加结点u到v的流，增加的幅度为min(u.\+e,c\+\_\+f(u,v))，这种幅度的增加不会导致 u.\+e为负值或者容量 c(u,v) 被突破
+
+push操作步骤：
+
+
+\begin{DoxyItemize}
+\item 计算残余容量 c\+\_\+f(u,v)
+\item 计算流的增加幅度 delt\+\_\+f=min(u.\+e,c\+\_\+f(u,v))
+\item 更新流：
+\begin{DoxyItemize}
+\item 如果 (u,v) 属于 E，则 f(u,v) += delt\+\_\+f
+\item 如果 (v,u) 属于 E，则 f(v,u) -\/= delt\+\_\+f
+\end{DoxyItemize}
+\item 更新溢出流量：
+\begin{DoxyItemize}
+\item u.\+e -\/= delt(u,v)
+\item v.\+e += delt(u,v)
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subparagraph*{relabel 操作}
+
+如果结点u溢出，并且对于所有边(u,v)属于\+E\+\_\+f(残留网络\+G\+\_\+f中的边)，有u.\+h$<$=v.\+h，则可以对结点u执行relabel操作。 当调用relabel操作时，\+E\+\_\+f必须包含至少一条从结点u出发的边。
+
+relabel 步骤：
+
+
+\begin{DoxyItemize}
+\item 计算 min\{v.\+h\+:(u,v)属于\+E\+\_\+f\}
+\item u.\+h=1+ min\{v.\+h\+:(u,v)属于\+E\+\_\+f\}
+\end{DoxyItemize}
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 初始化操作：
+\begin{DoxyItemize}
+\item 初始化预流 flow\+: flow(u,v)=c(u,v)如果u=s;否则 flow(u,v)=0
+\item 初始化高度函数 h\+: h(s)=$\vert$\+V$\vert$;h(u)=0, u属于 V-\/\{s\}
+\item 初始化超额流量 e： e(u)=c(s,u)，u为与源s相邻的结点; e(u)=0，u为与源s不相邻的结点; e(s)初始化为所有s出发的管道之后的相反数
+\end{DoxyItemize}
+\item 执行循环，直到所有结点u属于\+V-\/\{s,t\}不存在超额流量e为止。循环内执行：
+\begin{DoxyItemize}
+\item 如果可以执行 push 操作，则执行push操作
+\item 如果不能执行 push 操作，又由于存在超额流量 e$>$0 的结点，因此必然可以执行 relabel 操作。则执行 relabel 操作
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+算法性能：时间复杂度 O(\+V$^\wedge$2 E) 
+
+Definition at line 373 of file genericpushrelabel.\+h.
+
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a1581960f77507024b39572aeb6d1fbd6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!get\+\_\+path@{get\+\_\+path}}
 \index{get\+\_\+path@{get\+\_\+path}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
 \subsubsection[{get\+\_\+path(const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+from, const std\+::shared\+\_\+ptr$<$ Vertex\+Type $>$ v\+\_\+to)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Vertex\+Type $>$ std\+::vector$<$typename Vertex\+Type\+::\+V\+I\+D\+Type$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::get\+\_\+path (
@@ -654,6 +1064,89 @@ graph\+\_\+plus\+\_\+1v：根据图graph生成一个新图。算法导论25章25
 本函数是 johnson 算法的辅助函数 
 
 Definition at line 46 of file johnson.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_af1dfc9c1874850fb1415db3644497777}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!initial\+\_\+vertex\+\_\+\+N\+List@{initial\+\_\+vertex\+\_\+\+N\+List}}
+\index{initial\+\_\+vertex\+\_\+\+N\+List@{initial\+\_\+vertex\+\_\+\+N\+List}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{initial\+\_\+vertex\+\_\+\+N\+List(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::initial\+\_\+vertex\+\_\+\+N\+List (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{src, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{dst}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_af1dfc9c1874850fb1415db3644497777}
+
+
+initial\+\_\+vertex\+\_\+\+N\+List：前置重贴标签算法中的初始化邻接链表操作 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em src} & 流的源点，必须有效否则抛出异常 \\
+\hline
+{\em dst} & 流的汇点，必须有效否则抛出异常 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+如果src、dst任何一个顶点无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+该操作将初始化除了s、t之外所有顶点的邻接链表 
+
+Definition at line 153 of file relabeltofront.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_aeaf3e258f5ae9aed76158255fa603c00}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!initialize\+\_\+preflow@{initialize\+\_\+preflow}}
+\index{initialize\+\_\+preflow@{initialize\+\_\+preflow}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{initialize\+\_\+preflow(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::initialize\+\_\+preflow (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{src, }
+\item[{std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&}]{flow}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_aeaf3e258f5ae9aed76158255fa603c00}
+
+
+initialize\+\_\+preflow：generic\+\_\+push\+\_\+relabel算法的初始化操作。算法导论26章26.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em src} & 流的源点，必须有效否则抛出异常 \\
+\hline
+{\em flow} & 预流的引用（执行过程中会更新预流） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+如果src无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+初始化操作执行下列操作：
+
+
+\begin{DoxyItemize}
+\item 初始化预流 flow\+: flow(u,v)=c(u,v)如果u=s;否则 flow(u,v)=0
+\item 初始化高度函数 h\+: h(s)=$\vert$\+V$\vert$;h(u)=0, u属于 V-\/\{s\}
+\item 初始化超额流量 e： e(u)=c(s,u)，u为与源s相邻的结点; e(u)=0，u为与源s不相邻的结点; e(s)初始化为所有s出发的管道之后的相反数 \begin{quote}
+由顶点的{\ttfamily key}属性存储超额流量e\end{quote}
+
+\end{DoxyItemize}
+
+Definition at line 227 of file genericpushrelabel.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a5ed496e8825564d0f9fcfe3b0ac41dec}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!initialize\+\_\+single\+\_\+source@{initialize\+\_\+single\+\_\+source}}
 \index{initialize\+\_\+single\+\_\+source@{initialize\+\_\+single\+\_\+source}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
@@ -1013,6 +1506,35 @@ matrix\+\_\+string：获取矩阵的字符串描述
 
 Definition at line 169 of file header.\+h.
 
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a27dfe859312abba6639bca7b232d4bd6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!min\+\_\+v\+\_\+at\+\_\+\+Ef@{min\+\_\+v\+\_\+at\+\_\+\+Ef}}
+\index{min\+\_\+v\+\_\+at\+\_\+\+Ef@{min\+\_\+v\+\_\+at\+\_\+\+Ef}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{min\+\_\+v\+\_\+at\+\_\+\+Ef(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ Graph\+Type\+::\+V\+I\+D\+Type Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::min\+\_\+v\+\_\+at\+\_\+\+Ef (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{u\+\_\+id, }
+\item[{const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&}]{flow}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a27dfe859312abba6639bca7b232d4bd6}
+
+
+min\+\_\+v\+\_\+at\+\_\+\+Ef：relabel操作中的min\+\_\+v\+\_\+at\+\_\+\+Ef操作。算法导论26章26.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em u\+\_\+id} & 结点u的id，必须有效否则抛出异常 \\
+\hline
+{\em flow} & 预流 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 所有边(u,v)属于\+E\+\_\+f(残留网络\+G\+\_\+f中的边)中，高度最小的结点v
+\end{DoxyReturn}
+该方法扫描\+Ef中所有从u出发的边(u,v)，找出高度最小的结点v 
+
+Definition at line 124 of file genericpushrelabel.\+h.
+
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_aba1581358d79ba82dc4fd0c15bc987e6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!prim@{prim}}
 \index{prim@{prim}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
 \subsubsection[{prim(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type source\+\_\+id, Action\+Type pre\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{}, Action\+Type post\+\_\+action=[](typename Graph\+Type\+::\+V\+I\+D\+Type)\lcurly{}\rcurly{})}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type , typename Action\+Type  = std\+::function$<$ void(typename Graph\+Type\+::\+V\+I\+D\+Type)$>$$>$ Graph\+Type\+::\+E\+Weight\+Type Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::prim (
@@ -1084,6 +1606,223 @@ prim：最小生成树的\+Prim算法，算法导论23章23.2节
 Prim总时间代价为\+O(Vlg\+V+\+Elg\+V)=O(\+Elg\+V)(使用最小堆实现的最小优先级队列），或者\+O(E+\+Vlg\+V)（使用斐波那契堆实现最小优先级队列） 
 
 Definition at line 77 of file prim.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_abd520b7e33d8c1e72b05210d784ac258}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!push@{push}}
+\index{push@{push}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{push(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::push (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{u\+\_\+id, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{v\+\_\+id, }
+\item[{std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&}]{flow}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_abd520b7e33d8c1e72b05210d784ac258}
+
+
+push：generic\+\_\+push\+\_\+relabel算法的push操作。算法导论26章26.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em u\+\_\+id} & 结点u的id，必须有效否则抛出异常 \\
+\hline
+{\em v\+\_\+id} & 结点v的id，必须有效否则抛出异常 \\
+\hline
+{\em flow} & 预流的引用（执行过程中会更新预流） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+如果u\+\_\+id或者v\+\_\+id无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+如果一个结点 u是一个溢出结点，则至少有一条入边，假设为(v,u)，且f(v,u)$>$0。此时残留网络\+G\+\_\+f中的边c\+\_\+f(u,v)$>$0。如果此时还有h(u)=h(v)+1， 则可以对边(u,v)执行push操作。
+
+因为结点u有一个正的超额流u.\+e，且边(u,v)的残余容量为正，因此可以增加结点u到v的流，增加的幅度为min(u.\+e,c\+\_\+f(u,v))，这种幅度的增加不会导致 u.\+e为负值或者容量 c(u,v) 被突破
+
+push操作步骤：
+
+
+\begin{DoxyItemize}
+\item 计算残余容量 c\+\_\+f(u,v)
+\item 计算流的增加幅度 delt\+\_\+f=min(u.\+e,c\+\_\+f(u,v))
+\item 更新流：
+\begin{DoxyItemize}
+\item 如果 (u,v) 属于 E，则 f(u,v) += delt\+\_\+f
+\item 如果 (v,u) 属于 E，则 f(v,u) -\/= delt\+\_\+f
+\end{DoxyItemize}
+\item 更新溢出流量：
+\begin{DoxyItemize}
+\item u.\+e -\/= delt(u,v)
+\item v.\+e += delt(u,v)
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{quote}
+
+\begin{DoxyItemize}
+\item 由顶点的{\ttfamily key}属性存储超额流量e $\ast$
+\item 执行push(u,v)时，要求存在残留边 (u,v)属于\+Ef，且c\+\_\+f(u,v)$>$0；否则抛出异常
+\item 执行push(u,v)时，要求 u.\+e$>$0；否则抛出异常
+\end{DoxyItemize}\end{quote}
+
+
+Definition at line 67 of file genericpushrelabel.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_a143924362cc9f23ca452c3ca0e292ff3}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!relabel@{relabel}}
+\index{relabel@{relabel}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{relabel(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ void Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::relabel (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{u\+\_\+id, }
+\item[{const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&}]{flow}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_a143924362cc9f23ca452c3ca0e292ff3}
+
+
+relabel：generic\+\_\+push\+\_\+relabel算法的relabel操作。算法导论26章26.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em u\+\_\+id} & 结点u的id，必须有效否则抛出异常 \\
+\hline
+{\em flow} & 预流 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+如果结点u溢出（如果不是溢出则抛出异常），并且对于所有边(u,v)属于\+E\+\_\+f(残留网络\+G\+\_\+f中的边)，有u.\+h$<$=v.\+h，则可以对结点u执行relabel操作。 当调用relabel操作时，\+E\+\_\+f必须包含至少一条从结点u出发的边，否则抛出异常。
+
+relabel 步骤：
+
+
+\begin{DoxyItemize}
+\item 计算 min\{v.\+h\+:(u,v)属于\+E\+\_\+f\}
+\item u.\+h=1+ min\{v.\+h\+:(u,v)属于\+E\+\_\+f\}
+\end{DoxyItemize}
+
+当对于存在边(u,v)属于\+E\+\_\+f(残留网络\+G\+\_\+f中的边)，有u.\+h$>$v.\+h时，抛出异常 
+
+Definition at line 184 of file genericpushrelabel.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_abafb73bda29c4e389edb048a5e5d8d2b}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!relabel\+\_\+to\+\_\+front@{relabel\+\_\+to\+\_\+front}}
+\index{relabel\+\_\+to\+\_\+front@{relabel\+\_\+to\+\_\+front}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}
+\subsubsection[{relabel\+\_\+to\+\_\+front(std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Graph\+Type $>$ std\+::array$<$std\+::array$<$typename Graph\+Type\+::\+E\+Weight\+Type,Graph\+Type\+::\+N\+U\+M$>$,Graph\+Type\+::\+N\+U\+M$>$ Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::relabel\+\_\+to\+\_\+front (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Graph\+Type $>$}]{graph, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{src, }
+\item[{typename Graph\+Type\+::\+V\+I\+D\+Type}]{dst}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_graph_algorithm_abafb73bda29c4e389edb048a5e5d8d2b}
+
+
+relabel\+\_\+to\+\_\+front：最大流的前置重贴标签算法。算法导论26章26.5节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+:指定流网络。它必须非空，否则抛出异常} & \\
+\hline
+{\em src} & 流的源点，必须有效否则抛出异常 \\
+\hline
+{\em dst} & 流的汇点，必须有效否则抛出异常 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 最大流矩阵
+\end{DoxyReturn}
+如果src、dst任何一个顶点无效，则抛出异常：
+
+
+\begin{DoxyItemize}
+\item 如果指定的顶点{\ttfamily id}不在{\ttfamily \mbox{[}0,N)}之间，则无效
+\item 如果不存在某个顶点与指定的顶点{\ttfamily id}相同，则无效
+\end{DoxyItemize}
+
+\subsubsection*{最大流}
+
+流网络\+G=（\+V,E）是一个有向图，图中每条边(u,v)属于\+E都有一个正的容量值c(u,v)$>$0。而且如果边集合\+E中包含一条边(u,v)，则图中不存在反向边 (v,u)。为方便起见，假设(u,v)不属于\+E,定义c(u,v)=0（即无效权重为0），并且在图中不允许自循环。
+
+在流网络中存在两个特殊点：源结点s和汇点t。假定每一个结点都在从源点s到汇点t的某条路径上。即对于每个结点v属于\+E，存在某条路径 s--$>$v--$>$t。
+
+G中的流是一个实值函数f\+:V$\ast$\+V--$>$R，满足下面两条性质：
+
+
+\begin{DoxyItemize}
+\item 容量限制：对于所有结点u,v属于\+V，要求0$<$= f(u,v) $<$= c(u,v)
+\item 流量守恒： 对于所有结点u属于\+V-\/\{s,t\}，要求：从u进入的流等于从u出去的流
+\end{DoxyItemize}
+
+对于(u,v)不属于\+E的情况，从结点u到v之间没有流，因此f(u,v)=0。我们称非负数值f(u,v)为从结点u到v的流。一个流f的值 $\vert$f$\vert$=从源点流出的总流量-\/ 流入源结点的总流量
+
+最大流问题：给定流网络\+G、一个源结点s、一个汇点t,找出值最大的一个流
+
+\subsubsection*{relabel\+\_\+to\+\_\+front 算法}
+
+\paragraph*{算法原理}
+
+$>$本节的一些概念参考 generic\+\_\+push\+\_\+relabel 算法
+
+推送-\/重贴标签方法允许我们以任意次序执行基本操作。但是，如果仔细选择这个次序，并且对网络数据结构进行高效管理，我们可以获取更高的算法性能。
+
+前置重贴标签算法在执行过程中维持一个网络中的结点的链表。算法从头到尾对链表进行扫描，每次选择一个溢出结点u。 然后对结点u进行“释放”，即对所选结点执行推送操作和重贴标签操作，直到结点u不再拥有正值的超额流量为止。 每次在算法对一个结点进行重贴标签操作时，我们都将该结点移动到链表的最前面（也就是“前置重贴标签算法”的名字由来），然后算法进行一次新的扫描。
+
+设图\+G=(V,E)是一个源点s汇点t的流网络，f是\+G中的一个预流（它满足容量限制单不满足流量守恒性质），h是一个高度函数。 对于边(u,v)，如果c\+\_\+f(u,v)$>$0且h(u)=h(v)+1，则边(u,v)是一条许可边；否则边(u,v)是一条非许可边。许可边意义是：在残余网络中， 流可以经过它进行推送的边。许可网络指图\+G\+\_\+f\+\_\+h=(V,E\+\_\+f\+\_\+h)，其中\+E\+\_\+f\+\_\+h是许可边的集合。
+
+在前置重贴标签算法中，我们将所有边都组织为“邻接链表”。给定流网络\+G=(V,E)，对于结点u属于\+V，其邻接链表u.\+N是结点u在图\+G 中的邻接结点所构成的一个单链表（包括了u的上游和下游的邻接结点）：若边(u,v)属于\+E或者边(v,u)属于\+E，则结点v将出现在链表u.\+N中。 $>$邻接链表u.\+N包含的结点是所有可能存在残留边(u,v)的结点v
+
+属性u.\+N.\+head指向的是邻接表u.\+N中的第一个结点；v.\+next-\/neighbor指向的是邻接链表u.N中位于结点v后面的一个结点。如果v是链表中最后一个结点， 则该指针的值为\+N\+I\+L
+
+前置重贴标签算法以任意次序遍历每一个邻接链表，该次序在算法整个执行过程中不变。对于每个结点u，属性u.\+current指向的是u.\+N 链表中当前正在考虑的结点。初始情况下u.\+current指向u.\+N.\+head
+
+\paragraph*{基本操作}
+
+\subparagraph*{discharge 操作}
+
+对于溢出结点u,如果将其所有多余的流通过许可边推送到相邻的结点上，则称该结点得到释放。 在释放过程中，需要对结点u进行重贴标签操作，这使得从结点u发出的边成为许可边。discharge(u) 操作步骤如下：
+
+
+\begin{DoxyItemize}
+\item 循环，条件为u.\+e$>$0，循环内操作为：
+\begin{DoxyItemize}
+\item 获取u.\+current，假设为v
+\item 如果v为空，即遍历到u.\+N链表的末尾，则对u执行relabel操作，然后将u.\+current指向u.\+N链表的头部
+\item 如果 v非空，且满足 push 操作的条件(c\+\_\+f(u,v)$>$0且 u.\+h=v.\+h+1)，则执行push操作
+\item 如果 v 非空，但不满足 push 操作，则 u.\+current指向u.\+N链表的下一个结点
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 初始化预流操作（与 generic\+\_\+push\+\_\+relabel 算法相同）
+\item 对所有的非s、t的结点，将它们加入到链表\+L中（顺序任意）
+\item 对所有的非s、t的结点u,初始化u.\+current为u.\+N.\+head
+\item 设置u为\+L.\+head
+\item 循环，条件为u!=N\+I\+L，循环中操作：
+\begin{DoxyItemize}
+\item 保留u.\+h为oldh
+\item 对u执行discharge操作
+\item 如果u.\+h$>$oldh，证明对u执行了重贴标签操作，此时将u移动到\+L的头部
+\item u=u.\+next（提取u在\+L中的下一个）
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\paragraph*{算法性能}
+
+算法性能：时间复杂度 O(\+V$^\wedge$3) 
+
+Definition at line 280 of file relabeltofront.\+h.
 
 \hypertarget{namespace_introduction_to_algorithm_1_1_graph_algorithm_afe2bd83fca7df7e07ece9a59b8e7f5a6}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}!relax@{relax}}
 \index{relax@{relax}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}}

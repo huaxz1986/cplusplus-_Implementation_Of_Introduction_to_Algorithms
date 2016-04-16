@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['rank',['rank',['../struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a1fd137f74ca1317bfb02d9e1640ce147',1,'IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode']]],
-  ['rchild',['rchild',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#aaccc444db582ed362bff4e50efbc47c7',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
-  ['root',['root',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#aa0d43af70ef50ff59740dced2e832074',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTree']]],
-  ['root_5fnode',['root_node',['../class_binary_tree_node_test.html#a07aad40489fc19ed29863c82a6c14863',1,'BinaryTreeNodeTest']]]
+  ['parent',['parent',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a11202710469656d7fb04635430355c41',1,'IntroductionToAlgorithm::GraphAlgorithm::BFS_Vertex::parent()'],['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html#ad243c81b3c0705a136b6a1e5debdb6ed',1,'IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex::parent()'],['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p.html#ad7af59de5b07b0f26de28e9085b710ea',1,'IntroductionToAlgorithm::GraphAlgorithm::VertexP::parent()'],['../struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ad5cf3f4d739ecd0c1f6d3b3005e21993',1,'IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode::parent()'],['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#aa94cbc785416ba74505661baac55a9fd',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode::parent()']]],
+  ['pi',['pi',['../class_k_m_p___matcher.html#aa9f9d7ea70dd1c590bee7de00b25ffeb',1,'KMP_Matcher']]],
+  ['pr_5fn',['PR_N',['../namespaceanonymous__namespace_02genericpushrelabel__test_8h_03.html#af519cdaca560a53a83d9d1ec43fdb834',1,'anonymous_namespace{genericpushrelabel_test.h}']]],
+  ['prim_5fn',['PRIM_N',['../namespaceanonymous__namespace_02prim__test_8h_03.html#acd86cf553b1e2d6a5422054e595a4ea5',1,'anonymous_namespace{prim_test.h}']]]
 ];

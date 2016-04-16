@@ -16,8 +16,8 @@
  *
  * Author: huaxz1986@163.com (huaxz)
  */
-#ifndef GRAPHVERTEX_TEST
-#define GRAPHVERTEX_TEST
+#ifndef VERTEX_TEST
+#define VERTEX_TEST
 #include"src/google_test/gtest.h"
 #include"vertex.h"
 #include"src/header.h"
@@ -68,5 +68,5 @@ TEST(test_vertex,vertex_test)
         EXPECT_EQ(v.to_string(),"vertex id:1\t key:0");
     }
 }
-#endif // GRAPHVERTEX_TEST
+#endif // VERTEX_TEST
 

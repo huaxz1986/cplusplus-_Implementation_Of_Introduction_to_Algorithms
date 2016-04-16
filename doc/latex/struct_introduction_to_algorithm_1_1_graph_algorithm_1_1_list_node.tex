@@ -1,0 +1,103 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:List\+Node$<$ Value\+Type $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node$<$ Value\+Type $>$@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node$<$ Value\+Type $>$}}
+
+
+List\+Node：链表结点的数据结构  
+
+
+
+
+{\ttfamily \#include $<$front\+\_\+flow\+\_\+vertex.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a28a10edc3e4414f2b3f41945bb886be4}{List\+Node} ()
+\begin{DoxyCompactList}\small\item\em List\+Node默认构造函数 \end{DoxyCompactList}\item 
+std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a09b7805e42547e2cf808e6be7b202be5}{to\+\_\+string} () const 
+\begin{DoxyCompactList}\small\item\em to\+\_\+string：返回结点的字符串描述 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ Value\+Type $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a77c644bba4a2996906d1d5b5be300b00}{value}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node}{List\+Node} $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a78e88960b96014607258bf721c2023d1}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Value\+Type$>$struct Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node$<$ Value\+Type $>$}
+
+List\+Node：链表结点的数据结构 
+
+链表结点包含两个数据成员：
+
+
+\begin{DoxyItemize}
+\item value：链表结点保存数据的弱指针（因为该保存数据有个强指针指向本结点）
+\item next\+:指向本链表中当前结点的下一个结点的强指针 
+\end{DoxyItemize}
+
+Definition at line 133 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a28a10edc3e4414f2b3f41945bb886be4}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}!List\+Node@{List\+Node}}
+\index{List\+Node@{List\+Node}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}}
+\subsubsection[{List\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}$<$ Value\+Type $>$\+::{\bf List\+Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a28a10edc3e4414f2b3f41945bb886be4}
+
+
+List\+Node默认构造函数 
+
+默认构造函数完成两个设置：value设为空指针，next设为空指针 
+
+Definition at line 141 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a09b7805e42547e2cf808e6be7b202be5}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}}
+\subsubsection[{to\+\_\+string() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\+Type $>$ std\+::string {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}$<$ Value\+Type $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a09b7805e42547e2cf808e6be7b202be5}
+
+
+to\+\_\+string：返回结点的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+:顶点的字符串描述
+\end{DoxyReturn}
+主要是返回 {\ttfamily value}成员的字符串描述 
+
+Definition at line 150 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a78e88960b96014607258bf721c2023d1}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}!next@{next}}
+\index{next@{next}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\+Type $>$ std\+::shared\+\_\+ptr$<${\bf List\+Node}$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}$<$ Value\+Type $>$\+::next}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a78e88960b96014607258bf721c2023d1}
+指向本链表中当前结点的下一个结点的强指针 
+
+Definition at line 143 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a77c644bba4a2996906d1d5b5be300b00}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}!value@{value}}
+\index{value@{value}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\+Type $>$ std\+::weak\+\_\+ptr$<$Value\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List\+Node}$<$ Value\+Type $>$\+::value}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node_a77c644bba4a2996906d1d5b5be300b00}
+链表结点保存数据的弱指针 
+
+Definition at line 142 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/graph\+\_\+vertex/\hyperlink{front__flow__vertex_8h}{front\+\_\+flow\+\_\+vertex.\+h}\end{DoxyCompactItemize}

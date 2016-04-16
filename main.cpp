@@ -37,6 +37,8 @@
 #include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/dfs_vertex_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/vertexp_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/flow_vertex_test.h"
+#include"src/graph_algorithms/basic_graph/graph_representation/graph_vertex/front_flow_vertex_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/graph_edge/edge_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/matrix_graph/matrixgraph_test.h"
 #include"src/graph_algorithms/basic_graph/graph_representation/adjlist_graph/adjlistgraph_test.h"
@@ -56,6 +58,10 @@
 #include"src/graph_algorithms/all_node_pair_shortest_path/matrix_shortest_path/matrix_shortest_path_test.h"
 #include"src/graph_algorithms/all_node_pair_shortest_path/floyd_warshall/floyd_warshall_test.h"
 #include"src/graph_algorithms/all_node_pair_shortest_path/johnson/johnson_test.h"
+#include"src/graph_algorithms/max_flow/ford_fulkerson/fordfulkerson_test.h"
+#include"src/graph_algorithms/max_flow/generic_push_relabel/genericpushrelabel_test.h"
+#include"src/graph_algorithms/max_flow/relabel_to_front/relabeltofront_test.h"
+#include"src/string_matching_algorithms/regular_match/match_test.h"
 int main(int argc,char** argv)
 {
     ::testing::InitGoogleTest(&argc,argv);

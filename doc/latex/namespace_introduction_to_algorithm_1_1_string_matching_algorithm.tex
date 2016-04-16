@@ -1,0 +1,67 @@
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm}{}\section{Introduction\+To\+Algorithm\+:\+:String\+Matching\+Algorithm Namespace Reference}
+\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+
+
+Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm}{String\+Matching\+Algorithm}.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator1 , typename Iterator2 $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_abd6d1a2ecf0964999ca1a7c0cd8eaaa3}{match} (const Iterator1 iter1\+\_\+begin, const Iterator1 iter1\+\_\+end, const Iterator2 iter2\+\_\+begin, const Iterator2 iter2\+\_\+end)
+\begin{DoxyCompactList}\small\item\em match： 常规的字符串匹配算法，算法导论第xx章 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm}{String\+Matching\+Algorithm}. 
+
+该命名空间内包含所有字符串匹配算法 
+
+\subsection{Function Documentation}
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_abd6d1a2ecf0964999ca1a7c0cd8eaaa3}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!match@{match}}
+\index{match@{match}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{match(const Iterator1 iter1\+\_\+begin, const Iterator1 iter1\+\_\+end, const Iterator2 iter2\+\_\+begin, const Iterator2 iter2\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator1 , typename Iterator2 $>$ std\+::vector$<$int$>$ Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::match (
+\begin{DoxyParamCaption}
+\item[{const Iterator1}]{iter1\+\_\+begin, }
+\item[{const Iterator1}]{iter1\+\_\+end, }
+\item[{const Iterator2}]{iter2\+\_\+begin, }
+\item[{const Iterator2}]{iter2\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_abd6d1a2ecf0964999ca1a7c0cd8eaaa3}
+
+
+match： 常规的字符串匹配算法，算法导论第xx章 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter1\+\_\+begin} & \+: 被比较序列\+S的起始迭代器 \\
+\hline
+{\em iter1\+\_\+end} & 被比较序列\+S的终止迭代器 \\
+\hline
+{\em iter2\+\_\+begin} & \+: 比较序列\+T的起始迭代器 \\
+\hline
+{\em iter2\+\_\+end} & 比较序列\+T的终止迭代器 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 被比较序列\+S中的匹配位置组成的 std\+::vector
+\end{DoxyReturn}
+设被比较序列\+S的长度为len1，比较序列\+T的长度为len2，则match算法执行一一比较来计算匹配位置：
+
+
+\begin{DoxyItemize}
+\item 对\+S，遍历其从 0$\sim$len1-\/len2的位置，在每一个位置上比较
+\item 比较时，假设\+S的当前位置为i,则比较 S\mbox{[}i,i+len2-\/1\mbox{]}与\+T。当二者每一个字符都相等时，则匹配
+\item 将找到的每一个匹配点存入std\+::vector中然后返回
+\end{DoxyItemize}
+
+$>$这里要求len1大于0，len2$>$=0(比较序列可以为空字符串)；否则抛出异常 \begin{quote}
+
+
+$>$这里要求比较序列\+S和比较序列\+T的元素类型相等，否则编译失败 \end{quote}
+
+
+算法性能： 时间复杂度 O(m$\ast$n)，其中被比较序列\+S长度为n ,比较序列\+T长度为m 
+
+Definition at line 29 of file match.\+h.
+

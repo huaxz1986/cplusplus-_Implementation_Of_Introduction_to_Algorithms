@@ -1,0 +1,150 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:List$<$ Node\+Type $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List$<$ Node\+Type $>$@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List$<$ Node\+Type $>$}}
+
+
+List：链表数据结构  
+
+
+
+
+{\ttfamily \#include $<$front\+\_\+flow\+\_\+vertex.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a286b76ddec66a739312a2f5cef3ae544}{List} ()
+\begin{DoxyCompactList}\small\item\em List默认构造函数 \end{DoxyCompactList}\item 
+void \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a03267a13e44d42586d44460d04138cc1}{add} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ element)
+\begin{DoxyCompactList}\small\item\em add\+:添加元素 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_abd886aeac60fbdfa0290cafd7d67b718}{front\+\_\+of} (std\+::shared\+\_\+ptr$<$ Node\+Type $>$ element) const 
+\begin{DoxyCompactList}\small\item\em front\+\_\+of\+:链表指定元素前面的元素 \end{DoxyCompactList}\item 
+std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a7a75e61d7a61923e5b185e1b4781d29f}{to\+\_\+string} () const 
+\begin{DoxyCompactList}\small\item\em to\+\_\+string：返回链表的字符串描述 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a78a07f79c1c8133b74f23ec794e0557e}{head}
+\item 
+std\+::shared\+\_\+ptr$<$ Node\+Type $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_ad321a5c55f1f58c6054b7925ea007f89}{current}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Node\+Type$>$struct Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List$<$ Node\+Type $>$}
+
+List：链表数据结构 
+
+链表包含两个数据成员：
+
+
+\begin{DoxyItemize}
+\item head：指向链表头部的元素的强指针
+\item current\+:指向链表当前处理元素的强指针 
+\end{DoxyItemize}
+
+Definition at line 37 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a286b76ddec66a739312a2f5cef3ae544}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}!List@{List}}
+\index{List@{List}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}}
+\subsubsection[{List()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}$<$ Node\+Type $>$\+::{\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a286b76ddec66a739312a2f5cef3ae544}
+
+
+List默认构造函数 
+
+默认构造函数完成两个设置：head设为空指针，current设为空指针 
+
+Definition at line 48 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a03267a13e44d42586d44460d04138cc1}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}!add@{add}}
+\index{add@{add}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}}
+\subsubsection[{add(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ element)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ void {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}$<$ Node\+Type $>$\+::add (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a03267a13e44d42586d44460d04138cc1}
+
+
+add\+:添加元素 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+:被添加元素的强指针} & 若element为空指针则直接返回；否则将element添加到表头 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_abd886aeac60fbdfa0290cafd7d67b718}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}!front\+\_\+of@{front\+\_\+of}}
+\index{front\+\_\+of@{front\+\_\+of}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}}
+\subsubsection[{front\+\_\+of(std\+::shared\+\_\+ptr$<$ Node\+Type $>$ element) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}$<$ Node\+Type $>$\+::front\+\_\+of (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ Node\+Type $>$}]{element}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_abd886aeac60fbdfa0290cafd7d67b718}
+
+
+front\+\_\+of\+:链表指定元素前面的元素 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+:指定的元素} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+:指定元素前面元素的强指针
+\end{DoxyReturn}
+若element为空指针则抛出异常。否则遍历列表。若找到指定元素，则返回其前面元素的指针；若找不到指定元素， 则抛出异常 
+
+Definition at line 81 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a7a75e61d7a61923e5b185e1b4781d29f}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}}
+\subsubsection[{to\+\_\+string() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::string {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}$<$ Node\+Type $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a7a75e61d7a61923e5b185e1b4781d29f}
+
+
+to\+\_\+string：返回链表的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+:链表的字符串描述
+\end{DoxyReturn}
+依次拼接各结点的字符串描述 
+
+Definition at line 106 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_ad321a5c55f1f58c6054b7925ea007f89}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}!current@{current}}
+\index{current@{current}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}}
+\subsubsection[{current}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}$<$ Node\+Type $>$\+::current}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_ad321a5c55f1f58c6054b7925ea007f89}
+指向链表当前处理元素的强指针 
+
+Definition at line 40 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a78a07f79c1c8133b74f23ec794e0557e}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}!head@{head}}
+\index{head@{head}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Node\+Type$>$ std\+::shared\+\_\+ptr$<$Node\+Type$>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+List}$<$ Node\+Type $>$\+::head}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_a78a07f79c1c8133b74f23ec794e0557e}
+指向链表头部的元素的强指针 
+
+Definition at line 39 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/graph\+\_\+vertex/\hyperlink{front__flow__vertex_8h}{front\+\_\+flow\+\_\+vertex.\+h}\end{DoxyCompactItemize}

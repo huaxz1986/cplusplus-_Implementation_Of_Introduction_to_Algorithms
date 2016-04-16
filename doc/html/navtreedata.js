@@ -34,9 +34,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "adjlistgraph_8h.html",
-"class_prim_test.html#a834237db99fdb38480aa6ba46b509e9e",
-"matrixgraph_8h.html",
-"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p.html#ad7af59de5b07b0f26de28e9085b710ea"
+"class_johnson_test.html#ac738b463d046ce889761224801f56372",
+"genericpushrelabel_8h.html#aeaf3e258f5ae9aed76158255fa603c00",
+"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a8b9518587536b482cfd8c2fc7f5c9678"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -86,7 +86,21 @@ HEADERS += \
     src/graph_algorithms/all_node_pair_shortest_path/johnson/johnson.h \
     src/graph_algorithms/all_node_pair_shortest_path/johnson/johnson_test.h \
     src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex.h \
-    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex_test.h
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/set_vertex_test.h \
+    src/graph_algorithms/max_flow/ford_fulkerson/fordfulkerson.h \
+    src/graph_algorithms/max_flow/ford_fulkerson/fordfulkerson_test.h \
+    src/graph_algorithms/max_flow/generic_push_relabel/genericpushrelabel.h \
+    src/graph_algorithms/max_flow/generic_push_relabel/genericpushrelabel_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/flow_vertex.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/flow_vertex_test.h \
+    src/graph_algorithms/max_flow/relabel_to_front/relabeltofront.h \
+    src/graph_algorithms/max_flow/relabel_to_front/relabeltofront_test.h \
+    src/string_matching_algorithms/regular_match/match.h \
+    src/string_matching_algorithms/regular_match/match_test.h \
+    src/string_matching_algorithms/robin_karp_match/robinkarpmatch.h \
+    src/string_matching_algorithms/robin_karp_match/robinkarpmatch_test.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/front_flow_vertex.h \
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/front_flow_vertex_test.h
 
 
 

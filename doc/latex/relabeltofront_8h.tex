@@ -1,0 +1,23 @@
+\hypertarget{relabeltofront_8h}{}\section{src/graph\+\_\+algorithms/max\+\_\+flow/relabel\+\_\+to\+\_\+front/relabeltofront.h File Reference}
+\label{relabeltofront_8h}\index{src/graph\+\_\+algorithms/max\+\_\+flow/relabel\+\_\+to\+\_\+front/relabeltofront.\+h@{src/graph\+\_\+algorithms/max\+\_\+flow/relabel\+\_\+to\+\_\+front/relabeltofront.\+h}}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include \char`\"{}../generic\+\_\+push\+\_\+relabel/genericpushrelabel.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../basic\+\_\+graph/graph\+\_\+representation/graph\+\_\+vertex/front\+\_\+flow\+\_\+vertex.\+h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a2ae42c12c93664d94b5a6f9980fe8540}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::discharge} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em discharge：最大流的前置重贴标签算法中的释放操作。算法导论26章26.5节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\List$<$ List\+Node$<$ typename Graph\+Type\+::\+Vertex\+Type $>$ $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ad6a1917551c87991625d8402593ec863}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::create\+\_\+\+L} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em create\+\_\+\+L：前置重贴标签算法中的创建\+L链表操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_af1dfc9c1874850fb1415db3644497777}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::initial\+\_\+vertex\+\_\+\+N\+List} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em initial\+\_\+vertex\+\_\+\+N\+List：前置重贴标签算法中的初始化邻接链表操作 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_abafb73bda29c4e389edb048a5e5d8d2b}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::relabel\+\_\+to\+\_\+front} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em relabel\+\_\+to\+\_\+front：最大流的前置重贴标签算法。算法导论26章26.5节 \end{DoxyCompactList}\end{DoxyCompactItemize}

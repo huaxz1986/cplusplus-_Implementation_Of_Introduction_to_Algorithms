@@ -1,0 +1,26 @@
+\hypertarget{genericpushrelabel_8h}{}\section{src/graph\+\_\+algorithms/max\+\_\+flow/generic\+\_\+push\+\_\+relabel/genericpushrelabel.h File Reference}
+\label{genericpushrelabel_8h}\index{src/graph\+\_\+algorithms/max\+\_\+flow/generic\+\_\+push\+\_\+relabel/genericpushrelabel.\+h@{src/graph\+\_\+algorithms/max\+\_\+flow/generic\+\_\+push\+\_\+relabel/genericpushrelabel.\+h}}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$array$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}src/header.\+h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_abd520b7e33d8c1e72b05210d784ac258}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::push} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, typename Graph\+Type\+::\+V\+I\+D\+Type v\+\_\+id, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em push：generic\+\_\+push\+\_\+relabel算法的push操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\Graph\+Type\+::\+V\+I\+D\+Type \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a27dfe859312abba6639bca7b232d4bd6}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::min\+\_\+v\+\_\+at\+\_\+\+Ef} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em min\+\_\+v\+\_\+at\+\_\+\+Ef：relabel操作中的min\+\_\+v\+\_\+at\+\_\+\+Ef操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a143924362cc9f23ca452c3ca0e292ff3}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::relabel} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type u\+\_\+id, const std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em relabel：generic\+\_\+push\+\_\+relabel算法的relabel操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_aeaf3e258f5ae9aed76158255fa603c00}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::initialize\+\_\+preflow} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em initialize\+\_\+preflow：generic\+\_\+push\+\_\+relabel算法的初始化操作。算法导论26章26.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_ab134ec014d01e25ec2ed7d2c97babe23}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::generic\+\_\+push\+\_\+relabel} (std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em generic\+\_\+push\+\_\+relabel：最大流的推送-\/重贴标签算法。算法导论26章26.4节 \end{DoxyCompactList}\end{DoxyCompactItemize}

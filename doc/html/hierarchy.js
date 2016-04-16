@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "IntroductionToAlgorithm::GraphAlgorithm::ADJListGraph< N >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html", null ],
+    [ "Automation_Matcher< T >", "class_automation___matcher.html", null ],
     [ "IntroductionToAlgorithm::TreeAlgorithm::BinaryTree< NodeT >", "struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html", null ],
     [ "IntroductionToAlgorithm::TreeAlgorithm::BinaryTree< Node >", "struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html", [
       [ "IntroductionToAlgorithm::TreeAlgorithm::SearchTree< Node >", "class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html", null ]
@@ -12,6 +13,10 @@ var hierarchy =
     [ "IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode< KType >", "struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::Edge< VType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::Graph< N, VType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html", null ],
+    [ "KMP_Matcher< T >", "class_k_m_p___matcher.html", null ],
+    [ "IntroductionToAlgorithm::GraphAlgorithm::List< NodeType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html", null ],
+    [ "IntroductionToAlgorithm::GraphAlgorithm::List< IntroductionToAlgorithm::GraphAlgorithm::ListNode< IntroductionToAlgorithm::GraphAlgorithm::FrontFlowVertex > >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html", null ],
+    [ "IntroductionToAlgorithm::GraphAlgorithm::ListNode< ValueType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::MatrixGraph< N >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html", null ],
     [ "IntroductionToAlgorithm::QueueAlgorithm::MinQueue< T, TKeyType >", "class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html", null ],
     [ "Node", "struct_node.html", null ],
@@ -30,6 +35,9 @@ var hierarchy =
       [ "DisjointSetNodeTest", "class_disjoint_set_node_test.html", null ],
       [ "EdgeTest", "class_edge_test.html", null ],
       [ "FloydWarshallTest", "class_floyd_warshall_test.html", null ],
+      [ "FordFulkersonTest", "class_ford_fulkerson_test.html", null ],
+      [ "FrontFlowVertexTest", "class_front_flow_vertex_test.html", null ],
+      [ "GenericPushRelabelTest", "class_generic_push_relabel_test.html", null ],
       [ "GraphADJListTest", "class_graph_a_d_j_list_test.html", null ],
       [ "GraphMatrixTest", "class_graph_matrix_test.html", null ],
       [ "GraphTest", "class_graph_test.html", null ],
@@ -38,6 +46,7 @@ var hierarchy =
       [ "MatrixShortestPathTest", "class_matrix_shortest_path_test.html", null ],
       [ "MinQueueTest", "class_min_queue_test.html", null ],
       [ "PrimTest", "class_prim_test.html", null ],
+      [ "RelabelToFrontTest", "class_relabel_to_front_test.html", null ],
       [ "SCCTest", "class_s_c_c_test.html", null ],
       [ "SearchTreeTest", "class_search_tree_test.html", null ],
       [ "SetVertexTest", "class_set_vertex_test.html", null ],
@@ -46,6 +55,9 @@ var hierarchy =
     [ "IntroductionToAlgorithm::GraphAlgorithm::Vertex< KType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html", [
       [ "IntroductionToAlgorithm::GraphAlgorithm::BFS_Vertex< KType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html", null ],
       [ "IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex< KType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html", null ],
+      [ "IntroductionToAlgorithm::GraphAlgorithm::FlowVertex< KType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex.html", [
+        [ "IntroductionToAlgorithm::GraphAlgorithm::FrontFlowVertex< KType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex.html", null ]
+      ] ],
       [ "IntroductionToAlgorithm::GraphAlgorithm::SetVertex< KType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_set_vertex.html", null ],
       [ "IntroductionToAlgorithm::GraphAlgorithm::VertexP< KType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex_p.html", null ]
     ] ]

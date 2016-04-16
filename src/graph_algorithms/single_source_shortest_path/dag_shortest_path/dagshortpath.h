@@ -71,7 +71,6 @@ namespace IntroductionToAlgorithm
         template<typename GraphType> void dag_shortest_path(std::shared_ptr<GraphType> graph, typename GraphType::VIDType source_id)
         {
             typedef typename GraphType::VIDType VIDType;
-            typedef std::function<void(VIDType v_id,int time)> ActionType;
             if(!graph)
                 throw std::invalid_argument("dag_shortest_path error: graph must not be nullptr!");
             if(source_id<0||source_id>=GraphType::NUM||!graph->vertexes.at(source_id))

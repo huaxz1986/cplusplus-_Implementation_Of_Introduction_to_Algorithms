@@ -140,7 +140,6 @@ namespace IntroductionToAlgorithm
         {
             typedef typename GraphType::EWeightType EWeightType;
             typedef typename GraphType::VertexType VertexType;
-            typedef typename  GraphType::EdgeTupleType EdgeTupleType;
             typedef Graph<GraphType::NUM+1,VertexType> NewGrapyType;
             typedef std::array<std::array<EWeightType,GraphType::NUM>,GraphType::NUM> MatrixType;
 

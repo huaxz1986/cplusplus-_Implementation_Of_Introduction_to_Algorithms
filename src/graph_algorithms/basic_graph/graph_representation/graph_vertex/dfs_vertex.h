@@ -102,7 +102,7 @@ namespace IntroductionToAlgorithm
              /*!
              * \return :顶点的字符串描述
              *
-             * 再`Vertex`基类的基础上输出`color`以及`parent`、`discover_time`以及`finish_time`信息。
+             * 在`Vertex`基类的基础上输出`color`以及`parent`、`discover_time`以及`finish_time`信息。
              */
              std::string to_string()
              {

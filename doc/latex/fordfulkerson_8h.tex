@@ -1,0 +1,22 @@
+\hypertarget{fordfulkerson_8h}{}\section{src/graph\+\_\+algorithms/max\+\_\+flow/ford\+\_\+fulkerson/fordfulkerson.h File Reference}
+\label{fordfulkerson_8h}\index{src/graph\+\_\+algorithms/max\+\_\+flow/ford\+\_\+fulkerson/fordfulkerson.\+h@{src/graph\+\_\+algorithms/max\+\_\+flow/ford\+\_\+fulkerson/fordfulkerson.\+h}}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$array$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include \char`\"{}src/header.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../basic\+\_\+graph/graph\+\_\+bfs/bfs.\+h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm}{Graph\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_acc8cd65d7cf2d584f86cfd92494bdbf4}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::create\+\_\+\+Gf} (const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \&flow)
+\begin{DoxyCompactList}\small\item\em create\+\_\+\+Gf：根据指定流网络生成一个残余网络。算法导论26章26.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Graph\+Type $>$ }\\std\+::array$<$ std\+::array$<$ typename Graph\+Type\+::\+E\+Weight\+Type, Graph\+Type\+::\+N\+U\+M $>$, Graph\+Type\+::\+N\+U\+M $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_graph_algorithm_a23a29754883e1edd7bd95a76634444a2}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::ford\+\_\+fulkerson} (const std\+::shared\+\_\+ptr$<$ Graph\+Type $>$ graph, typename Graph\+Type\+::\+V\+I\+D\+Type src, typename Graph\+Type\+::\+V\+I\+D\+Type dst)
+\begin{DoxyCompactList}\small\item\em ford\+\_\+fulkerson：最大流的ford\+\_\+fulkerson算法。算法导论26章26.2节 \end{DoxyCompactList}\end{DoxyCompactItemize}

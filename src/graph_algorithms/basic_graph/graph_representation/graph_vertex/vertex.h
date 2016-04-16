@@ -16,8 +16,8 @@
  *
  * Author: huaxz1986@163.com (huaxz)
  */
-#ifndef GRAPHVERTEX
-#define GRAPHVERTEX
+#ifndef VERTEX
+#define VERTEX
 #include<memory>
 #include<sstream>
 namespace IntroductionToAlgorithm
@@ -71,5 +71,5 @@ namespace IntroductionToAlgorithm
         };        
     }
 }
-#endif // GRAPHVERTEX
+#endif // VERTEX
 

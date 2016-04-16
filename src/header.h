@@ -182,5 +182,14 @@ namespace IntroductionToAlgorithm
         }
 
     }
+    //! Namespace of  StringMatchingAlgorithm
+    /*!
+    *
+    * 该命名空间内包含所有字符串匹配算法
+    */
+    namespace StringMatchingAlgorithm {
+
+
+    }
 }
 #endif // HEADERH

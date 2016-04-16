@@ -123,6 +123,8 @@ namespace IntroductionToAlgorithm
             * - 如果不存在某个顶点与指定的顶点`id`相同，则无效
             *
             * 在添加边时，同时向图的矩阵、图的邻接表中添加边
+            *
+            * 如果添加的边是无效权重，则直接返回而不添加
             */
             void add_edge(const EdgeTupleType& edge_tuple)
             {
@@ -133,6 +135,7 @@ namespace IntroductionToAlgorithm
                     throw std::invalid_argument("add edge error:id must >=0 and <N.");
                 if(!vertexes.at(id1) || !vertexes.at(id2))
                     throw std::invalid_argument("add edge error: vertex of id does not exist.");
+                if(std::get<2>(edge_tuple)==matrix.invalid_weight) return;
                 matrix.add_edge(edge_tuple);
                 adjList.add_edge(edge_tuple);
             }
@@ -217,8 +220,21 @@ namespace IntroductionToAlgorithm
                     throw std::invalid_argument("vertex_edge_tuples error:id must >=0 and <N.");
                 if(!vertexes.at(id))
                     throw std::invalid_argument("vertex_edge_tuples error: vertex of id does not exist.");
-                assert(matrix.vertex_edge_tuples(id)==adjList.vertex_edge_tuples(id));
-                return matrix.vertex_edge_tuples(id);
+
+                auto edges1=matrix.vertex_edge_tuples(id);
+                auto edges2=adjList.vertex_edge_tuples(id);
+                auto compare=[](const EdgeTupleType& e1,const EdgeTupleType&e2)->bool {
+                    if(
+                            (std::get<0>(e1) < std::get<0>(e2))||
+                            ( (std::get<0>(e1) == std::get<0>(e2))&&(std::get<1>(e1) < std::get<1>(e2)) ) ||
+                            ( (std::get<0>(e1) == std::get<0>(e2))&&(std::get<1>(e1) == std::get<1>(e2))&&(std::get<2>(e1) < std::get<2>(e2)) )
+                        ) return true;
+                   return false;
+                };
+                std::sort(edges1.begin(),edges1.end(),compare);
+                std::sort(edges2.begin(),edges2.end(),compare);
+                assert(edges1==edges2);
+                return edges1;
             }
 
             //!has_edge:返回图中指定顶点之间是否存在边
@@ -240,6 +256,8 @@ namespace IntroductionToAlgorithm
                     throw std::invalid_argument("has edge error:id must >=0 and <N.");
                 if(!vertexes.at(id_from) || !vertexes.at(id_to))
                     throw std::invalid_argument("has edge error: vertex of id does not exist.");
+               auto m=matrix.has_edge(id_from,id_to);
+               auto a=adjList.has_edge(id_from,id_to);
                assert(matrix.has_edge(id_from,id_to)==adjList.has_edge(id_from,id_to));
                return matrix.has_edge(id_from,id_to);
             }

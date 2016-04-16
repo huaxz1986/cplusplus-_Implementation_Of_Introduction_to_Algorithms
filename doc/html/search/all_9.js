@@ -3,7 +3,10 @@ var searchData=
   ['dynamicprogrammingalgorithm',['DynamicProgrammingAlgorithm',['../namespace_introduction_to_algorithm_1_1_dynamic_programming_algorithm.html',1,'IntroductionToAlgorithm']]],
   ['graphalgorithm',['GraphAlgorithm',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html',1,'IntroductionToAlgorithm']]],
   ['id',['id',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_vertex.html#a76668b285452856d184a245b7b35b7c1',1,'IntroductionToAlgorithm::GraphAlgorithm::Vertex']]],
+  ['index',['index',['../class_automation___matcher.html#a9500e82ee94303a0bfb2102931e7c378',1,'Automation_Matcher']]],
   ['index_5finqueue',['index_inqueue',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a545dbdb76e0b6e9c4227e558ab9b1239',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue']]],
+  ['initial_5fvertex_5fnlist',['initial_vertex_NList',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#af1dfc9c1874850fb1415db3644497777',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
+  ['initialize_5fpreflow',['initialize_preflow',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#aeaf3e258f5ae9aed76158255fa603c00',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['initialize_5fsingle_5fsource',['initialize_single_source',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a5ed496e8825564d0f9fcfe3b0ac41dec',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['inorder_5fwalk',['inorder_walk',['../namespace_introduction_to_algorithm_1_1_tree_algorithm.html#abd9431ca8d1a40f70b6c72c732fc5892',1,'IntroductionToAlgorithm::TreeAlgorithm']]],
   ['insert',['insert',['../class_introduction_to_algorithm_1_1_queue_algorithm_1_1_min_queue.html#a0992696959d7300082654529becd1765',1,'IntroductionToAlgorithm::QueueAlgorithm::MinQueue::insert()'],['../class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a83724f0079d16419d4cceba74602cee1',1,'IntroductionToAlgorithm::TreeAlgorithm::SearchTree::insert()']]],
@@ -20,9 +23,11 @@ var searchData=
   ['is_5fleft_5fchild',['is_left_child',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a54a90606ceb604a1a4d01056429a8a06',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
   ['is_5fright_5fchild',['is_right_child',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#a34c1912a2a7e9caa7a67354218fd7640',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode']]],
   ['is_5funlimit',['is_unlimit',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a4f664c13605fc87ca8d26f4aad5a9fa2',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
+  ['isend',['isEnd',['../class_automation___matcher.html#afb0fcb2027c0408ced759b23db742a34',1,'Automation_Matcher']]],
   ['queuealgorithm',['QueueAlgorithm',['../namespace_introduction_to_algorithm_1_1_queue_algorithm.html',1,'IntroductionToAlgorithm']]],
   ['selectalgorithm',['SelectAlgorithm',['../namespace_introduction_to_algorithm_1_1_select_algorithm.html',1,'IntroductionToAlgorithm']]],
   ['setalgorithm',['SetAlgorithm',['../namespace_introduction_to_algorithm_1_1_set_algorithm.html',1,'IntroductionToAlgorithm']]],
   ['sortalgorithm',['SortAlgorithm',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html',1,'IntroductionToAlgorithm']]],
+  ['stringmatchingalgorithm',['StringMatchingAlgorithm',['../namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html',1,'IntroductionToAlgorithm']]],
   ['treealgorithm',['TreeAlgorithm',['../namespace_introduction_to_algorithm_1_1_tree_algorithm.html',1,'IntroductionToAlgorithm']]]
 ];

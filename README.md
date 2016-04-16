@@ -15,7 +15,7 @@
 * 《算法导论》中的算法全部是用伪代码写的，因此大量的语言细节被忽略。比如边界条件的处理
 * 在算法转换为代码过程中会对算法有着更深刻的理解
 
-因此在去年底我在电脑上对算法导论的算法用C++实现了一遍。为了更好地促进学习，现在我将这些代码进行了整理（主要是增加了`Doxygen`注释，以及利用`gooletest`增加了测试代码）
+因此在去年底我在电脑上对算法导论的算法用C++实现了一遍。为了更好地促进学习，现在我将这些代码进行了整理（主要是增加了`Doxygen`注释，以及利用`googletest`增加了测试代码）
 
 ## 结构
 
@@ -68,7 +68,11 @@ src\
 			all_node_pair_shortest_path\ :有向图所有结点对之间的最短路径算法
 					matrix_shortest_path：结点对之间最短路径的矩阵算法和复平方算法
 					floyd_warshall：所有结点对之间最短路径的floyd_warshall算法
-					johnson:所有结点对之间最短路径的johnson算法	
+					johnson:所有结点对之间最短路径的johnson算法
+			max_flow\: 流网络的最大流算法
+					ford_fulkerson： 流网络的ford_fulkerson最大流算法
+					generic_push_relabel：流网络的“推送-重贴标签”最大流算法
+					relabel_to_front：流网络的“前置-重贴标签”最大流算法	
 		...(未完待续)
 doc\      ：由doxygen自动生成的文档
 Doxyfile  :doxygen配置文件
@@ -79,7 +83,12 @@ Introduction_to_Algorithms.pro :Qt项目配置文件
   使用时只需要包含相应的头文件即可
 * 本项目所有算法都是用 `C++ Template`实现，因此算法的实现都在`.h`文件中
 * 本项目所有算法都有测试代码。如快速排序在`quicksort.h`中，快速排序的测试代码在`quicksort_test.h`中，二者位于同一目录下
-* 本项目所有的命名空间、函数、类以及必要的成员都打上了`doxygen`注释，可以方便的进行文档化。目前`\doc`文件夹中已经有转换过来的`html`文件，你也可以自己利用doxygen来执行文档转换工作。文档化之后的帮助文档在浏览器中打开如图所示：
+* 本项目所有的命名空间、函数、类以及必要的成员都打上了`doxygen`注释，可以方便的进行文档化。
+如下图所示：
+
+![doc文件](./doxygen.JPG)
+
+目前`\doc`文件夹中已经有转换过来的`html`文件，你也可以自己利用doxygen来执行文档转换工作。文档化之后的帮助文档在浏览器中打开如图所示：
 
 ![doc文件](./doc.JPG)
 

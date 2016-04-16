@@ -1,0 +1,177 @@
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex}{}\section{Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Front\+Flow\+Vertex$<$ K\+Type $>$ Struct Template Reference}
+\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex$<$ K\+Type $>$@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex$<$ K\+Type $>$}}
+
+
+Front\+Flow\+Vertex：relabel\+\_\+to\+\_\+front算法的图的结点的数据结构，算法导论26章26.4节  
+
+
+
+
+{\ttfamily \#include $<$front\+\_\+flow\+\_\+vertex.\+h$>$}
+
+Inheritance diagram for Introduction\+To\+Algorithm\+:\+:Graph\+Algorithm\+:\+:Front\+Flow\+Vertex$<$ K\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef K\+Type \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a76ed9e9d0c0da5c60c4a004eeda192ad}{Key\+Type}
+\item 
+typedef int \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ab1973e8ed99c2e213532fabbee1a66b8}{V\+I\+D\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a9890efaa1818c914f138ac063b679fe2}{Front\+Flow\+Vertex} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_af6c0dd18f309fdc4f6cd475a3f629f70}{Front\+Flow\+Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex_a014b25c20124a24525ef7db0588466b9}{Key\+Type} \&k)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key} \end{DoxyCompactList}\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ae9af6850fbdfa4c8a192ea66778e6b59}{Front\+Flow\+Vertex} (const \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex_a014b25c20124a24525ef7db0588466b9}{Key\+Type} \&k, \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex_ae48ab0918590bd6a6763d007694ff161}{V\+I\+D\+Type} d)
+\begin{DoxyCompactList}\small\item\em 显式构造函数，指定{\ttfamily key}和编号 \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a3edfb3a6f29475f338340291ad71eab9}{to\+\_\+string} () const 
+\begin{DoxyCompactList}\small\item\em to\+\_\+string：返回顶点的字符串描述 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list}{List}$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node}{List\+Node}$<$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex}{Front\+Flow\+Vertex} $>$ $>$ \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ad66fead451e2af4756f0fd7a644e1319}{N\+\_\+\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K\+Type$>$struct Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex$<$ K\+Type $>$}
+
+Front\+Flow\+Vertex：relabel\+\_\+to\+\_\+front算法的图的结点的数据结构，算法导论26章26.4节 
+
+\hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex}{Front\+Flow\+Vertex} 继承自 Flow\+Vertex，它比\+Flow\+Vertex顶点多了一个{\ttfamily N\+\_\+\+List}数据成员，表示邻接链表
+
+relabel\+\_\+to\+\_\+front 算法中，每一个\+Front\+Flow\+Vertex顶点位于两个级别的链表中：
+
+
+\begin{DoxyItemize}
+\item L 链表：最顶层的链表，\+L包含了所有的非源、非汇顶点
+\item u.\+N 链表：某个顶点u的邻接链表 
+\end{DoxyItemize}
+
+Definition at line 175 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a76ed9e9d0c0da5c60c4a004eeda192ad}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}}
+\subsubsection[{Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef K\+Type {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}$<$ K\+Type $>$\+::{\bf Key\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a76ed9e9d0c0da5c60c4a004eeda192ad}
+顶点存储数据的类型 
+
+Definition at line 177 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ab1973e8ed99c2e213532fabbee1a66b8}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}!V\+I\+D\+Type@{V\+I\+D\+Type}}
+\index{V\+I\+D\+Type@{V\+I\+D\+Type}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}}
+\subsubsection[{V\+I\+D\+Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ typedef int {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}$<$ K\+Type $>$\+::{\bf V\+I\+D\+Type}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ab1973e8ed99c2e213532fabbee1a66b8}
+顶点编号的数据类型 
+
+Definition at line 178 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a9890efaa1818c914f138ac063b679fe2}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}!Front\+Flow\+Vertex@{Front\+Flow\+Vertex}}
+\index{Front\+Flow\+Vertex@{Front\+Flow\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}}
+\subsubsection[{Front\+Flow\+Vertex()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}$<$ K\+Type $>$\+::{\bf Front\+Flow\+Vertex} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a9890efaa1818c914f138ac063b679fe2}
+
+
+默认构造函数 
+
+
+
+Definition at line 183 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_af6c0dd18f309fdc4f6cd475a3f629f70}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}!Front\+Flow\+Vertex@{Front\+Flow\+Vertex}}
+\index{Front\+Flow\+Vertex@{Front\+Flow\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}}
+\subsubsection[{Front\+Flow\+Vertex(const Key\+Type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}$<$ K\+Type $>$\+::{\bf Front\+Flow\+Vertex} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\+Type} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_af6c0dd18f309fdc4f6cd475a3f629f70}
+
+
+显式构造函数，指定{\ttfamily key} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 188 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ae9af6850fbdfa4c8a192ea66778e6b59}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}!Front\+Flow\+Vertex@{Front\+Flow\+Vertex}}
+\index{Front\+Flow\+Vertex@{Front\+Flow\+Vertex}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}}
+\subsubsection[{Front\+Flow\+Vertex(const Key\+Type \&k, V\+I\+D\+Type d)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}$<$ K\+Type $>$\+::{\bf Front\+Flow\+Vertex} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Key\+Type} \&}]{k, }
+\item[{{\bf V\+I\+D\+Type}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ae9af6850fbdfa4c8a192ea66778e6b59}
+
+
+显式构造函数，指定{\ttfamily key}和编号 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+:顶点存放的数据} & \\
+\hline
+{\em d\+:顶点的编号} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 194 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a3edfb3a6f29475f338340291ad71eab9}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}}
+\subsubsection[{to\+\_\+string() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ virtual std\+::string {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}$<$ K\+Type $>$\+::to\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_a3edfb3a6f29475f338340291ad71eab9}
+
+
+to\+\_\+string：返回顶点的字符串描述 
+
+\begin{DoxyReturn}{Returns}
+\+:顶点的字符串描述
+\end{DoxyReturn}
+在{\ttfamily \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex}{Flow\+Vertex}}基类的基础上输出{\ttfamily N\+\_\+\+List}信息 
+
+Reimplemented from \hyperlink{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex_aa373a13a1fdee1fdcdbd0b55eaa1d1fb}{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Flow\+Vertex$<$ K\+Type $>$}.
+
+
+
+Definition at line 202 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ad66fead451e2af4756f0fd7a644e1319}{}\index{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}!N\+\_\+\+List@{N\+\_\+\+List}}
+\index{N\+\_\+\+List@{N\+\_\+\+List}!Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex@{Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}}
+\subsubsection[{N\+\_\+\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K\+Type $>$ {\bf List}$<${\bf List\+Node}$<${\bf Front\+Flow\+Vertex}$>$ $>$ {\bf Introduction\+To\+Algorithm\+::\+Graph\+Algorithm\+::\+Front\+Flow\+Vertex}$<$ K\+Type $>$\+::N\+\_\+\+List}\label{struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex_ad66fead451e2af4756f0fd7a644e1319}
+顶点的邻接链表 
+
+Definition at line 180 of file front\+\_\+flow\+\_\+vertex.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph\+\_\+algorithms/basic\+\_\+graph/graph\+\_\+representation/graph\+\_\+vertex/\hyperlink{front__flow__vertex_8h}{front\+\_\+flow\+\_\+vertex.\+h}\end{DoxyCompactItemize}

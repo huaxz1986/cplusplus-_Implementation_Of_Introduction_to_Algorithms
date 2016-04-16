@@ -90,8 +90,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
@@ -169,6 +171,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>_default_vertex
 : <a class="el" href="class_b_f_s_vertex_test.html#ab78f6c9cb070fe5a8992f61cc5f71920">BFSVertexTest</a>
 , <a class="el" href="class_d_f_s_vertex_test.html#aeb4886b7d27389066e8ade9c7d5a1b87">DFSVertexTest</a>
+, <a class="el" href="class_front_flow_vertex_test.html#a457ca07d1faf2d24e8bf7ab0116e822f">FrontFlowVertexTest</a>
 , <a class="el" href="class_set_vertex_test.html#a886fbbe6fd5a4e4c954f2ff38951f90b">SetVertexTest</a>
 </li>
 <li>_edge
@@ -190,11 +193,17 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>_graph
 : <a class="el" href="class_connected_component_test.html#a0f05d0ae37619e84f604aa51aa20cd28">ConnectedComponentTest</a>
 , <a class="el" href="class_floyd_warshall_test.html#a040517767832bad0943c797e4ef2c5ab">FloydWarshallTest</a>
+, <a class="el" href="class_ford_fulkerson_test.html#a4c5c58e3ebc1d2d324c67a8a9afe19e3">FordFulkersonTest</a>
+, <a class="el" href="class_generic_push_relabel_test.html#aa363ed3e48e55d7f5451797f3432554c">GenericPushRelabelTest</a>
 , <a class="el" href="class_johnson_test.html#ae571863596ab15d90ed03c7f192030a3">JohnsonTest</a>
 , <a class="el" href="class_matrix_shortest_path_test.html#ab574b85fb02ec6e3c737277385073a2e">MatrixShortestPathTest</a>
+, <a class="el" href="class_relabel_to_front_test.html#a3eecd133a6421543cc88cff1b7ffa6f2">RelabelToFrontTest</a>
 </li>
 <li>_int_minqueue
 : <a class="el" href="class_min_queue_test.html#a03f9ea0fcc4b820a539d32d6539c2df9">MinQueueTest</a>
+</li>
+<li>_list
+: <a class="el" href="class_front_flow_vertex_test.html#a646ef544a16221c204d71d777c76b17b">FrontFlowVertexTest</a>
 </li>
 <li>_list_graph
 : <a class="el" href="class_b_f_s_test.html#aacf800be44976478c190b2acd338377f">BFSTest</a>
@@ -213,6 +222,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>_n_vertexes_m_edges_graph
 : <a class="el" href="class_graph_test.html#aaa662e57a6eb46a91c59464871b4907f">GraphTest</a>
 </li>
+<li>_nodes
+: <a class="el" href="class_front_flow_vertex_test.html#a87ecf1ffdaa2b7c78ba360b2deb4cfd1">FrontFlowVertexTest</a>
+</li>
 <li>_normal_graph
 : <a class="el" href="class_bellman_ford_test.html#a80eda504410ddbef790a30a0d4049185">BellmanFordTest</a>
 , <a class="el" href="class_dag_shortest_path_test.html#ac96676722661c8d7ad6baf5bd4dbf3a7">DagShortestPathTest</a>
@@ -225,6 +237,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>_normal_vertex
 : <a class="el" href="class_b_f_s_vertex_test.html#aedd37204d4a3723bd78fa72af7caa6e0">BFSVertexTest</a>
 , <a class="el" href="class_d_f_s_vertex_test.html#a7c88bbdb6487f913f67ed34f915381e4">DFSVertexTest</a>
+, <a class="el" href="class_front_flow_vertex_test.html#a5f8a63b2d218d2e733e27ca598e9b864">FrontFlowVertexTest</a>
 , <a class="el" href="class_set_vertex_test.html#af78af1aa633b65214ed39e8956beee39">SetVertexTest</a>
 </li>
 <li>_rlist_graph
@@ -258,6 +271,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_b_f_s___vertex.html#a7ab527ab8514bcb65e56edbe62b28fbb">IntroductionToAlgorithm::GraphAlgorithm::BFS_Vertex&lt; KType &gt;</a>
 , <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html#a9111c3d35ad67867402564643493655f">IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex&lt; KType &gt;</a>
 </li>
+<li>current
+: <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html#ad321a5c55f1f58c6054b7925ea007f89">IntroductionToAlgorithm::GraphAlgorithm::List&lt; NodeType &gt;</a>
+</li>
 </ul>
 
 
@@ -267,6 +283,13 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>discover_time
 : <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_d_f_s___vertex.html#aab1b292c1d228d57ef3d20af908fe2cf">IntroductionToAlgorithm::GraphAlgorithm::DFS_Vertex&lt; KType &gt;</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>Elements
+: <a class="el" href="class_automation___matcher.html#aa459af0a82dba703653cbef2dffed577">Automation_Matcher&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -282,6 +305,16 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>graph
 : <a class="el" href="class_graph_a_d_j_list_test.html#afcd2f035a4957685bc697f296bb2b4b5">GraphADJListTest</a>
 , <a class="el" href="class_graph_matrix_test.html#a466258802e52f0a5408f78e809cd6d7c">GraphMatrixTest</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>h
+: <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_flow_vertex.html#a05f50003725449bbc9f4ee929c9ea87a">IntroductionToAlgorithm::GraphAlgorithm::FlowVertex&lt; KType &gt;</a>
+</li>
+<li>head
+: <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html#a78a07f79c1c8133b74f23ec794e0557e">IntroductionToAlgorithm::GraphAlgorithm::List&lt; NodeType &gt;</a>
 </li>
 </ul>
 
@@ -314,13 +347,20 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
 <li>matrix
-: <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a498323460ec613f12e1039afdca6c10a">IntroductionToAlgorithm::GraphAlgorithm::Graph&lt; N, VType &gt;</a>
+: <a class="el" href="class_automation___matcher.html#a06be1889b30f1c180a5325d2694fb995">Automation_Matcher&lt; T &gt;</a>
+, <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a498323460ec613f12e1039afdca6c10a">IntroductionToAlgorithm::GraphAlgorithm::Graph&lt; N, VType &gt;</a>
 , <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#ae1febbc0e4a86c325a16a942947a03bf">IntroductionToAlgorithm::GraphAlgorithm::MatrixGraph&lt; N &gt;</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>N_List
+: <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_front_flow_vertex.html#ad66fead451e2af4756f0fd7a644e1319">IntroductionToAlgorithm::GraphAlgorithm::FrontFlowVertex&lt; KType &gt;</a>
+</li>
+<li>next
+: <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html#a78e88960b96014607258bf721c2023d1">IntroductionToAlgorithm::GraphAlgorithm::ListNode&lt; ValueType &gt;</a>
+</li>
 <li>next_empty_vertex
 : <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a07a8f2eafc8175787a6ce1f26f1252d0">IntroductionToAlgorithm::GraphAlgorithm::Graph&lt; N, VType &gt;</a>
 </li>
@@ -346,6 +386,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ad5cf3f4d739ecd0c1f6d3b3005e21993">IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode&lt; KType &gt;</a>
 , <a class="el" href="struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#aa94cbc785416ba74505661baac55a9fd">IntroductionToAlgorithm::TreeAlgorithm::BinaryTreeNode&lt; KType &gt;</a>
 </li>
+<li>pi
+: <a class="el" href="class_k_m_p___matcher.html#aa9f9d7ea70dd1c590bee7de00b25ffeb">KMP_Matcher&lt; T &gt;</a>
+</li>
 </ul>
 
 
@@ -367,7 +410,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
 <li>value
-: <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ae01535aa5e8ba05dceedd5c475d61c18">IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode&lt; KType &gt;</a>
+: <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html#a77c644bba4a2996906d1d5b5be300b00">IntroductionToAlgorithm::GraphAlgorithm::ListNode&lt; ValueType &gt;</a>
+, <a class="el" href="struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#ae01535aa5e8ba05dceedd5c475d61c18">IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode&lt; KType &gt;</a>
 </li>
 <li>vertex1
 : <a class="el" href="struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html#a634535a3f12be42c3c6ffb6d3c604fb7">IntroductionToAlgorithm::GraphAlgorithm::Edge&lt; VType &gt;</a>
