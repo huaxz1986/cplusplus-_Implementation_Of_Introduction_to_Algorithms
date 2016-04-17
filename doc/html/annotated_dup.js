@@ -1,7 +1,6 @@
 var annotated_dup =
 [
     [ "IntroductionToAlgorithm", "namespace_introduction_to_algorithm.html", "namespace_introduction_to_algorithm" ],
-    [ "Automation_Matcher", "class_automation___matcher.html", "class_automation___matcher" ],
     [ "BellmanFordTest", "class_bellman_ford_test.html", "class_bellman_ford_test" ],
     [ "BFSTest", "class_b_f_s_test.html", "class_b_f_s_test" ],
     [ "BFSVertexTest", "class_b_f_s_vertex_test.html", "class_b_f_s_vertex_test" ],
@@ -22,7 +21,6 @@ var annotated_dup =
     [ "GraphMatrixTest", "class_graph_matrix_test.html", "class_graph_matrix_test" ],
     [ "GraphTest", "class_graph_test.html", "class_graph_test" ],
     [ "JohnsonTest", "class_johnson_test.html", "class_johnson_test" ],
-    [ "KMP_Matcher", "class_k_m_p___matcher.html", "class_k_m_p___matcher" ],
     [ "KruskalTest", "class_kruskal_test.html", "class_kruskal_test" ],
     [ "MatrixShortestPathTest", "class_matrix_shortest_path_test.html", "class_matrix_shortest_path_test" ],
     [ "MinQueueTest", "class_min_queue_test.html", "class_min_queue_test" ],

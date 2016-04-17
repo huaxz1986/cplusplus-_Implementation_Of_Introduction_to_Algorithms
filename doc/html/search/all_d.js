@@ -2,10 +2,10 @@ var searchData=
 [
   ['make_5flcs',['make_LCS',['../namespace_introduction_to_algorithm_1_1_dynamic_programming_algorithm.html#a377ef4206d4814024272c15c51051f09',1,'IntroductionToAlgorithm::DynamicProgrammingAlgorithm']]],
   ['make_5fset',['make_set',['../struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a7346337c6f47bf066844c7101058cd92',1,'IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode']]],
-  ['match',['match',['../class_automation___matcher.html#ae1b8ad0f17937da89b65317c10ed6c50',1,'Automation_Matcher::match()'],['../class_k_m_p___matcher.html#a22892fbaa4d2c09623587283c3e6f2b5',1,'KMP_Matcher::match()'],['../namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#abd6d1a2ecf0964999ca1a7c0cd8eaaa3',1,'IntroductionToAlgorithm::StringMatchingAlgorithm::match()']]],
+  ['match',['match',['../namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a29321686220ba69d91c4ecb2df67fe79',1,'IntroductionToAlgorithm::StringMatchingAlgorithm']]],
   ['match_2eh',['match.h',['../match_8h.html',1,'']]],
   ['match_5ftest_2eh',['match_test.h',['../match__test_8h.html',1,'']]],
-  ['matrix',['matrix',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a498323460ec613f12e1039afdca6c10a',1,'IntroductionToAlgorithm::GraphAlgorithm::Graph::matrix()'],['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#ae1febbc0e4a86c325a16a942947a03bf',1,'IntroductionToAlgorithm::GraphAlgorithm::MatrixGraph::matrix()'],['../class_automation___matcher.html#a06be1889b30f1c180a5325d2694fb995',1,'Automation_Matcher::matrix()']]],
+  ['matrix',['matrix',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html#a498323460ec613f12e1039afdca6c10a',1,'IntroductionToAlgorithm::GraphAlgorithm::Graph::matrix()'],['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_matrix_graph.html#ae1febbc0e4a86c325a16a942947a03bf',1,'IntroductionToAlgorithm::GraphAlgorithm::MatrixGraph::matrix()']]],
   ['matrix_5fshortest_5fpath',['matrix_shortest_path',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ab9dcca59a42c708c137571d194c45bd9',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['matrix_5fshortest_5fpath_2eh',['matrix_shortest_path.h',['../matrix__shortest__path_8h.html',1,'']]],
   ['matrix_5fshortest_5fpath_5ffast',['matrix_shortest_path_fast',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a6eb979447eeb937df4158f9646e20dde',1,'IntroductionToAlgorithm::GraphAlgorithm']]],

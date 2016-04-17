@@ -8,8 +8,24 @@ Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Iterator1 , typename Iterator2 $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_abd6d1a2ecf0964999ca1a7c0cd8eaaa3}{match} (const Iterator1 iter1\+\_\+begin, const Iterator1 iter1\+\_\+end, const Iterator2 iter2\+\_\+begin, const Iterator2 iter2\+\_\+end)
-\begin{DoxyCompactList}\small\item\em match： 常规的字符串匹配算法，算法导论第xx章 \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename Iterator $>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_acf5d8c82dffae3894905d8091defb315}{index\+\_\+of\+\_\+\+M} (Iterator begin\+M, Iterator end\+M, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type a)
+\begin{DoxyCompactList}\small\item\em index\+\_\+of\+\_\+\+M ： 返回返回字符a，算法导论第32章32.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a4267339182491a371210d73c3be57ba1}{is\+\_\+end\+\_\+with} (Iterator begin, Iterator k\+\_\+iter, Iterator q\+\_\+iter, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type a)
+\begin{DoxyCompactList}\small\item\em is\+\_\+end\+\_\+with： 返回\+Pk是否是( Pq a)的后缀，算法导论第32章32.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename P\+Iterator , typename M\+Iterator $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a2096b4363b80c224193aee054d71cf97}{get\+\_\+delta} (const P\+Iterator P\+\_\+begin, const P\+Iterator P\+\_\+end, const M\+Iterator M\+\_\+begin, const M\+Iterator M\+\_\+end, std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&delta)
+\begin{DoxyCompactList}\small\item\em get\+\_\+delt： 获取模式字符串的转移函数，算法导论第32章32.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator\+T , typename Iterator\+P , typename Iterator\+M $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_aa156c6aecec5459b601ae0069725330e}{finite\+\_\+automaton\+\_\+match} (const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end, const Iterator\+M iter\+M\+\_\+begin, const Iterator\+M iter\+M\+\_\+end)
+\begin{DoxyCompactList}\small\item\em finite\+\_\+automaton\+\_\+match： 有限自动机字符串匹配算法，算法导论第32章32.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator\+P $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_ae7dac7381b40ef7857b4595cd23e640e}{get\+\_\+pai} (const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end)
+\begin{DoxyCompactList}\small\item\em get\+\_\+pai： K\+M\+P字符串匹配算法的预处理操作，算法导论第32章32.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator\+T , typename Iterator\+P $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a6df2ed0bb28a7908f9559f114eeab05e}{kmp\+\_\+match} (const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end)
+\begin{DoxyCompactList}\small\item\em kmp\+\_\+match： K\+M\+P字符串匹配算法，算法导论第32章32.4节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a3d629ff62f74286e022a4fde86298897}{get\+\_\+h} (T radix\+\_\+d, T len\+\_\+m, T mod\+\_\+q)
+\begin{DoxyCompactList}\small\item\em get\+\_\+h： rabin\+\_\+karp匹配算法的 get\+\_\+h 操作，算法导论第32章32.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator\+T , typename Iterator\+P $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a0da01d98fde1373885bc623135b09256}{rabin\+\_\+karp\+\_\+match} (const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end, unsigned radix\+\_\+d, unsigned mod\+\_\+q)
+\begin{DoxyCompactList}\small\item\em rabin\+\_\+karp\+\_\+match： rabin\+\_\+karp字符串匹配算法，算法导论第32章32.2节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator\+T , typename Iterator\+P $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a29321686220ba69d91c4ecb2df67fe79}{match} (const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end)
+\begin{DoxyCompactList}\small\item\em match： 朴素字符串匹配算法，算法导论第32章,32.\+1节 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -18,50 +34,572 @@ Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_
 该命名空间内包含所有字符串匹配算法 
 
 \subsection{Function Documentation}
-\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_abd6d1a2ecf0964999ca1a7c0cd8eaaa3}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!match@{match}}
-\index{match@{match}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
-\subsubsection[{match(const Iterator1 iter1\+\_\+begin, const Iterator1 iter1\+\_\+end, const Iterator2 iter2\+\_\+begin, const Iterator2 iter2\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator1 , typename Iterator2 $>$ std\+::vector$<$int$>$ Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::match (
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_aa156c6aecec5459b601ae0069725330e}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!finite\+\_\+automaton\+\_\+match@{finite\+\_\+automaton\+\_\+match}}
+\index{finite\+\_\+automaton\+\_\+match@{finite\+\_\+automaton\+\_\+match}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{finite\+\_\+automaton\+\_\+match(const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end, const Iterator\+M iter\+M\+\_\+begin, const Iterator\+M iter\+M\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator\+T , typename Iterator\+P , typename Iterator\+M $>$ std\+::vector$<$int$>$ Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::finite\+\_\+automaton\+\_\+match (
 \begin{DoxyParamCaption}
-\item[{const Iterator1}]{iter1\+\_\+begin, }
-\item[{const Iterator1}]{iter1\+\_\+end, }
-\item[{const Iterator2}]{iter2\+\_\+begin, }
-\item[{const Iterator2}]{iter2\+\_\+end}
+\item[{const Iterator\+T}]{iter\+T\+\_\+begin, }
+\item[{const Iterator\+T}]{iter\+T\+\_\+end, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+begin, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+end, }
+\item[{const Iterator\+M}]{iter\+M\+\_\+begin, }
+\item[{const Iterator\+M}]{iter\+M\+\_\+end}
 \end{DoxyParamCaption}
-)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_abd6d1a2ecf0964999ca1a7c0cd8eaaa3}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_aa156c6aecec5459b601ae0069725330e}
 
 
-match： 常规的字符串匹配算法，算法导论第xx章 
+finite\+\_\+automaton\+\_\+match： 有限自动机字符串匹配算法，算法导论第32章32.3节 
 
 
 \begin{DoxyParams}{Parameters}
-{\em iter1\+\_\+begin} & \+: 被比较序列\+S的起始迭代器 \\
+{\em iter\+T\+\_\+begin} & \+: 被文本序列\+T的起始迭代器 \\
 \hline
-{\em iter1\+\_\+end} & 被比较序列\+S的终止迭代器 \\
+{\em iter\+T\+\_\+end} & 文本序列\+T的终止迭代器 \\
 \hline
-{\em iter2\+\_\+begin} & \+: 比较序列\+T的起始迭代器 \\
+{\em iter\+P\+\_\+begin} & \+: 模式序列\+P的起始迭代器 \\
 \hline
-{\em iter2\+\_\+end} & 比较序列\+T的终止迭代器 \\
+{\em iter\+P\+\_\+end} & 模式序列\+P的终止迭代器 \\
+\hline
+{\em iter\+M\+\_\+begin} & \+: 有限字符集的起始迭代器 \\
+\hline
+{\em iter\+M\+\_\+end} & 有限字符集的终止迭代器 \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-\+: 被比较序列\+S中的匹配位置组成的 std\+::vector
+\+: 有效偏移组成的 std\+::vector
 \end{DoxyReturn}
-设被比较序列\+S的长度为len1，比较序列\+T的长度为len2，则match算法执行一一比较来计算匹配位置：
+\subsubsection*{字符串匹配}
+
+字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T\mbox{[}1...n\mbox{]}，而模式是一个长度为m的数组\+P\mbox{[}1...m\mbox{]}， 其中m$<$=n。进一步假设\+P和\+T的元素都是来自一个有限字母集合\+M的字符。如\+M=\{0,1\}或者\+M=\{a,b,c,...z\}。 字符数组\+P和\+T通常称为字符串。
+
+\subsubsection*{有限自动机 字符串匹配算法}
+
+\paragraph*{算法原理}
+
+\subparagraph*{有限自动机}
+
+定义有限自动机 A\+M 是一个5元组(\+Q,q\+\_\+0,\+A,\+M,delt)，其中：
 
 
 \begin{DoxyItemize}
-\item 对\+S，遍历其从 0$\sim$len1-\/len2的位置，在每一个位置上比较
-\item 比较时，假设\+S的当前位置为i,则比较 S\mbox{[}i,i+len2-\/1\mbox{]}与\+T。当二者每一个字符都相等时，则匹配
-\item 将找到的每一个匹配点存入std\+::vector中然后返回
+\item Q\+:为状态的有限集合
+\item q\+\_\+0属于\+Q：为初始状态
+\item A是\+Q的子集：表示一个特殊的接受状态集合
+\item M：是有限的输入字母表
+\item delt\+:为 Q$\ast$\+M--$>$ Q 的函数，称为有限自动机的转移函数。
 \end{DoxyItemize}
 
-$>$这里要求len1大于0，len2$>$=0(比较序列可以为空字符串)；否则抛出异常 \begin{quote}
+有限自动机开始于状态 q\+\_\+0，每次读入输入字符串的一个字符。如果有限自动机在状态q时读入了字符a，则它从状态q变成了状态 delt(q,a)， 进行了一次转移。每当当前状态q属于\+A时，则说明状态机接受了迄今为止所读入的字符串。
+
+有限自动机引入了一个函数 phai,称为终态函数。定义 M$\ast$ 表示所有的有限长度的字符串的集合，该字符串是由所有字母表\+M中的字符组成。 长度为0的空字符串记为e,e属于\+M$\ast$. phai 是从 M$\ast$到\+Q的函数，满足： pai(w)是有限自动机扫描字符串w后的终止状态。 其中 w 属于 M$\ast$。因此当且仅当 phai(w)属于\+A时，有限自动机接受字符串 w。我们可以用转移函数定义 phai\+:
 
 
-$>$这里要求比较序列\+S和比较序列\+T的元素类型相等，否则编译失败 \end{quote}
+\begin{DoxyItemize}
+\item phai(e)=q\+\_\+0
+\item phai(wa)=delt(phai(w),a), w属于\+M$\ast$,a属于\+M
+\end{DoxyItemize}
+
+\subparagraph*{字符串匹配自动机}
+
+对于一个给定的模式\+P，我们可以在预处理阶段构造出一个字符串匹配自动机，根据模式构造出的自动机后，再利用它来搜寻文本字符串。 首先定义一个辅助函数 sigma，称之为\+P的后缀函数。函数 sigma是一个 M$\ast$到\{0,1,....m\}上的映射：
 
 
-算法性能： 时间复杂度 O(m$\ast$n)，其中被比较序列\+S长度为n ,比较序列\+T长度为m 
+\begin{DoxyItemize}
+\item sigma(x)=max\{k\+:P\+\_\+k是x的后缀\}，即sigma(x)是x的后缀中，\+P的最长前缀的长度。
+\end{DoxyItemize}
 
-Definition at line 29 of file match.\+h.
+因为空字符串\+P0=e是每一个字符串的后缀，因此sigma(e)=0。对于一个长度为m的模式\+P，sigma(x)=m当且仅当\+P是x的后缀。
+
+给定模式\+P\mbox{[}1...m\mbox{]}，其相应的字符串匹配自动机定义如下：
+
+
+\begin{DoxyItemize}
+\item 状态集合\+Q为\{0,1,...m\}。开始状态q\+\_\+0为0状态，并且只有状态m是唯一被接受的状态。
+\item 对任意状态q和字符a，转移函数 delt定义为： delt(q,a)=sigma(\+Pq a)
+\end{DoxyItemize}
+
+考虑最近一次扫描\+T的字符。为了使得\+T的一个子串（以\+T\mbox{[}i\mbox{]}结尾的子串）能够和\+P的某些前缀\+Pj匹配，则前缀\+Pj必须是\+Ti的一个后缀。 假设q=phai(\+Ti)，则读完\+Ti之后，自动机处于状态q。转移函数delt使用状态数q表示\+P的前缀和\+Ti后缀的最长匹配长度。也就是说， 在状态q是， Pq是\+Ti的后缀，且q=sigma(\+Ti)。 
+
+ \subsubsection*{T $\vert$ 1 $\vert$ 2 $\vert$ 3 $\vert$.....$\vert$i-\/q+1$\vert$...........$\vert$ i $\vert$..............$\vert$ n $\vert$ \+:Ti=T\mbox{[}1...i\mbox{]} }
+
+\subsubsection*{$\vert$$<$-\/-\/---长度为q-\/---$>$$\vert$ }
+
+\subsubsection*{P $\vert$ 1 $\vert$ 2 $\vert$.......$\vert$ q $\vert$....$\vert$ m $\vert$ \+:Pq=P\mbox{[}1...q\mbox{]} }
+
+\paragraph*{算法步骤}
+
+\subparagraph*{预处理算法（构造delt函数)}
+
+
+\begin{DoxyItemize}
+\item 遍历\+P，q从0到m (因为q=0时，\+P\+\_\+0=空字符串)\+:
+\begin{DoxyItemize}
+\item 对每个字符a属于有限字母集合a，寻找\+Pk是 (Pq a) 后缀的最大的k，则 delt(q,a)=k
+\end{DoxyItemize}
+\item 返回 delt
+\end{DoxyItemize}
+
+\subparagraph*{匹配算法}
+
+
+\begin{DoxyItemize}
+\item 遍历\+T，i从1到n\+:
+\begin{DoxyItemize}
+\item 计算 q=delt(q,\+T\mbox{[}i\mbox{]})。如果 q==m，则偏移 i-\/m是有效偏移点，将 i-\/m 加入结果std\+::vector中
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+$>$这里要求n$>$=0，m$>$=0(模式序列可以为空字符串)；否则抛出异常 \begin{quote}
+
+
+$>$这里要文本序列\+T和模式序列\+P的元素类型相等，否则编译失败 \end{quote}
+
+
+\paragraph*{算法性能}
+
+有限自动机字符串匹配算法的预处理时间为\+O(m$^\wedge$3 $\vert$\+M$\vert$)，其中$\vert$\+M$\vert$ 为有限字母集合的大小，匹配时间为\+O(n) 
+
+Definition at line 250 of file finiteautomatonmatch.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a2096b4363b80c224193aee054d71cf97}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!get\+\_\+delta@{get\+\_\+delta}}
+\index{get\+\_\+delta@{get\+\_\+delta}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{get\+\_\+delta(const P\+Iterator P\+\_\+begin, const P\+Iterator P\+\_\+end, const M\+Iterator M\+\_\+begin, const M\+Iterator M\+\_\+end, std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&delta)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P\+Iterator , typename M\+Iterator $>$ void Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::get\+\_\+delta (
+\begin{DoxyParamCaption}
+\item[{const P\+Iterator}]{P\+\_\+begin, }
+\item[{const P\+Iterator}]{P\+\_\+end, }
+\item[{const M\+Iterator}]{M\+\_\+begin, }
+\item[{const M\+Iterator}]{M\+\_\+end, }
+\item[{std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&}]{delta}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a2096b4363b80c224193aee054d71cf97}
+
+
+get\+\_\+delt： 获取模式字符串的转移函数，算法导论第32章32.3节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P\+\_\+begin} & \+: 模式序列\+P的起始迭代器 \\
+\hline
+{\em P\+\_\+end} & 模式序列\+P的终止迭代器 \\
+\hline
+{\em M\+\_\+begin} & \+: 有限字符集的起始迭代器 \\
+\hline
+{\em M\+\_\+end\+:有限字符集的终止迭代器} & \\
+\hline
+{\em delta} & 转移矩阵的引用，用于存放转移矩阵 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void
+\end{DoxyReturn}
+步骤：
+
+
+\begin{DoxyItemize}
+\item 遍历\+P，q从0到m (因为q=0时，\+P\+\_\+0=空字符串)\+:
+\begin{DoxyItemize}
+\item 对每个字符a属于有限字母集合a，寻找\+Pk是 (Pq a) 后缀的最大的k，则 delt(q,a)=k
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{quote}
+这里要求n$>$=0，m$>$=0(模式序列可以为空字符串)；否则抛出异常 \end{quote}
+
+
+\begin{quote}
+这里要求有限字符集\+M和模式序列\+P的元素类型相等，否则编译失败\end{quote}
+
+
+Definition at line 120 of file finiteautomatonmatch.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a3d629ff62f74286e022a4fde86298897}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!get\+\_\+h@{get\+\_\+h}}
+\index{get\+\_\+h@{get\+\_\+h}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{get\+\_\+h(\+T radix\+\_\+d, T len\+\_\+m, T mod\+\_\+q)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::get\+\_\+h (
+\begin{DoxyParamCaption}
+\item[{T}]{radix\+\_\+d, }
+\item[{T}]{len\+\_\+m, }
+\item[{T}]{mod\+\_\+q}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a3d629ff62f74286e022a4fde86298897}
+
+
+get\+\_\+h： rabin\+\_\+karp匹配算法的 get\+\_\+h 操作，算法导论第32章32.2节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radix\+\_\+d} & \+: 基数，一般选取大于等于序列最大值的一个整数 \\
+\hline
+{\em len\+\_\+m} & 用于指数计算的m \\
+\hline
+{\em mod\+\_\+q} & \+: 取模的质数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: radix\+\_\+d的(len\+\_\+m-\/1)次方再取模mod\+\_\+q
+\end{DoxyReturn}
+要求{\ttfamily radix\+\_\+q}、{\ttfamily len\+\_\+m}、{\ttfamily mod\+\_\+q}都非0.\+若有任何一个为0则抛出异常。 
+
+Definition at line 36 of file rabinkarpmatch.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_ae7dac7381b40ef7857b4595cd23e640e}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!get\+\_\+pai@{get\+\_\+pai}}
+\index{get\+\_\+pai@{get\+\_\+pai}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{get\+\_\+pai(const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator\+P $>$ std\+::vector$<$int$>$ Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::get\+\_\+pai (
+\begin{DoxyParamCaption}
+\item[{const Iterator\+P}]{iter\+P\+\_\+begin, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_ae7dac7381b40ef7857b4595cd23e640e}
+
+
+get\+\_\+pai： K\+M\+P字符串匹配算法的预处理操作，算法导论第32章32.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter\+P\+\_\+begin} & \+: 模式序列\+P的起始迭代器 \\
+\hline
+{\em iter\+P\+\_\+end} & 模式序列\+P的终止迭代器 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: pai函数
+\end{DoxyReturn}
+算法步骤：
+
+
+\begin{DoxyItemize}
+\item 初始化： pai\mbox{[}1\mbox{]}=0,k=0
+\item 遍历 q 从 2 到 m\+:（因为\+Pk必须是\+Pm的真子集，因此m从2开始）
+\begin{DoxyItemize}
+\item 循环，条件为 k$>$0并且 P\mbox{[}k+1\mbox{]}!=P\mbox{[}q\mbox{]}；循环中执行 k=pai\mbox{[}k\mbox{]}（因为若\+P\mbox{[}k+1\mbox{]}=P\mbox{[}q\mbox{]}，则说明找到了\+Pk是\+Pm的真子集）
+\item 若 P\mbox{[}k+1\mbox{]}==P\mbox{[}q\mbox{]}，则k=k+1并且pai\mbox{[}q\mbox{]}=k
+\end{DoxyItemize}
+\item 返回 pai
+
+$>$这里要求m$>$0；否则抛出异常 
+\end{DoxyItemize}
+
+Definition at line 42 of file kmp.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_acf5d8c82dffae3894905d8091defb315}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!index\+\_\+of\+\_\+\+M@{index\+\_\+of\+\_\+\+M}}
+\index{index\+\_\+of\+\_\+\+M@{index\+\_\+of\+\_\+\+M}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{index\+\_\+of\+\_\+\+M(\+Iterator begin\+M, Iterator end\+M, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type a)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ std\+::iterator\+\_\+traits$<$Iterator$>$\+::difference\+\_\+type Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::index\+\_\+of\+\_\+\+M (
+\begin{DoxyParamCaption}
+\item[{Iterator}]{begin\+M, }
+\item[{Iterator}]{end\+M, }
+\item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type}]{a}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_acf5d8c82dffae3894905d8091defb315}
+
+
+index\+\_\+of\+\_\+\+M ： 返回返回字符a，算法导论第32章32.3节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin\+M} & \+: 字符集序列\+M的起始迭代器 \\
+\hline
+{\em k\+\_\+iter} & 字符集序列\+M的终止迭代器 \\
+\hline
+{\em a} & 文字 a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 返回字符a
+\end{DoxyReturn}
+通过逐一比较来返回a在\+M中的位置。
+
+如果a不在字符集\+M中，或者a在字符集\+M中有多个位置，则抛出异常 
+
+Definition at line 40 of file finiteautomatonmatch.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a4267339182491a371210d73c3be57ba1}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!is\+\_\+end\+\_\+with@{is\+\_\+end\+\_\+with}}
+\index{is\+\_\+end\+\_\+with@{is\+\_\+end\+\_\+with}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{is\+\_\+end\+\_\+with(\+Iterator begin, Iterator k\+\_\+iter, Iterator q\+\_\+iter, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type a)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ bool Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::is\+\_\+end\+\_\+with (
+\begin{DoxyParamCaption}
+\item[{Iterator}]{begin, }
+\item[{Iterator}]{k\+\_\+iter, }
+\item[{Iterator}]{q\+\_\+iter, }
+\item[{typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type}]{a}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a4267339182491a371210d73c3be57ba1}
+
+
+is\+\_\+end\+\_\+with： 返回\+Pk是否是( Pq a)的后缀，算法导论第32章32.3节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & \+: 模式序列\+P的起始迭代器 \\
+\hline
+{\em k\+\_\+iter} & Pk的终止迭代器 \\
+\hline
+{\em q\+\_\+iter} & \+: Pq的终止迭代器 \\
+\hline
+{\em a} & 文字 a \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: Pk是否是( Pq a)的后缀
+\end{DoxyReturn}
+通过逐一比较来返回\+Pk是否是( Pq a)的后缀。
+
+\begin{quote}
+要求k\+\_\+iter$>$=begin,q\+\_\+iter$>$=begin，否则抛出异常 \end{quote}
+
+
+\begin{quote}
+空字符串是所有字符串的有效后缀\end{quote}
+
+
+Definition at line 83 of file finiteautomatonmatch.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a6df2ed0bb28a7908f9559f114eeab05e}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!kmp\+\_\+match@{kmp\+\_\+match}}
+\index{kmp\+\_\+match@{kmp\+\_\+match}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{kmp\+\_\+match(const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator\+T , typename Iterator\+P $>$ std\+::vector$<$int$>$ Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::kmp\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const Iterator\+T}]{iter\+T\+\_\+begin, }
+\item[{const Iterator\+T}]{iter\+T\+\_\+end, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+begin, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a6df2ed0bb28a7908f9559f114eeab05e}
+
+
+kmp\+\_\+match： K\+M\+P字符串匹配算法，算法导论第32章32.4节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter\+T\+\_\+begin} & \+: 被文本序列\+T的起始迭代器 \\
+\hline
+{\em iter\+T\+\_\+end} & 文本序列\+T的终止迭代器 \\
+\hline
+{\em iter\+P\+\_\+begin} & \+: 模式序列\+P的起始迭代器 \\
+\hline
+{\em iter\+P\+\_\+end} & 模式序列\+P的终止迭代器 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 有效偏移组成的 std\+::vector
+\end{DoxyReturn}
+\subsubsection*{字符串匹配}
+
+字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T\mbox{[}1...n\mbox{]}，而模式是一个长度为m的数组\+P\mbox{[}1...m\mbox{]}， 其中m$<$=n。进一步假设\+P和\+T的元素都是来自一个有限字母集合\+M的字符。如\+M=\{0,1\}或者\+M=\{a,b,c,...z\}。 字符数组\+P和\+T通常称为字符串。
+
+\subsubsection*{K\+M\+P 字符串匹配算法}
+
+\paragraph*{算法原理}
+
+\subparagraph*{模式的前缀函数}
+
+模式的前缀函数 pai 包含了模式与它自身偏移进行匹配的信息。假设模式字符\+P\mbox{[}1...q\mbox{]}与文本字符\+T\mbox{[}s+1,...s+q\mbox{]}匹配， s\textquotesingle{}是某个偏移量，s\textquotesingle{}$>$s。则对于某些k$<$q，满足：\+P\mbox{[}1...k\mbox{]}=T\mbox{[}s\textquotesingle{}+1,...s\textquotesingle{}+k\mbox{]}的最小s\textquotesingle{}$>$s，其中s\textquotesingle{}+k=s+q? 
+
+ \subsubsection*{T $\vert$ 1 $\vert$ 2 $\vert$ 3 $\vert$.....$\vert$s+1$\vert$............$\vert$ s+q $\vert$..............$\vert$ n $\vert$ T\mbox{[}s+q\mbox{]} }
+
+\subsubsection*{$\vert$$<$-\/-\/---长度为q-\/---$>$$\vert$ }
+
+\subsubsection*{P $\vert$ 1 $\vert$ 2 $\vert$.......$\vert$ q $\vert$....$\vert$ m $\vert$ \+:Pq=P\mbox{[}1...q\mbox{]} }
+
+
+
+ \subsubsection*{T $\vert$ 1 $\vert$ 2 $\vert$ 3 $\vert$.....$\vert$s+1$\vert$..$\vert$s\textquotesingle{}+1$\vert$..........$\vert$ s+q $\vert$..............$\vert$ n $\vert$ T\mbox{[}s+q\mbox{]} }
+
+\subsubsection*{$\vert$$<$-\/-\/---长度为k-\/---$>$$\vert$ }
+
+\subsubsection*{P $\vert$ 1 $\vert$ 2 $\vert$........$\vert$ k $\vert$..$\vert$q$\vert$..$\vert$ m $\vert$ \+:Pk=P\mbox{[}1...k\mbox{]} }
+
+换句话说，已知\+Pq是\+T\mbox{[}s+q\mbox{]}的后缀，我们希望\+Pq的真前缀 Pk 也是\+T\mbox{[}s+q\mbox{]}的后缀。我们把在\+P前缀长度 范围内的差值 q-\/k 加到s上即可得到新的偏移 s\textquotesingle{}=s+(q-\/k)。
+
+可以用模式与它自身的比较来预先计算出这些必要的信息。前述可知\+Pk是\+T\mbox{[}s+q\mbox{]}的后缀，它也是\+Pq的真前缀， 因此要求出 Pk是\+Pq的后缀的最大的k$<$q。于是这个新的偏移s\textquotesingle{}=s+(q-\/k)就是下一个可能的有效偏移。 之所有求最大的k，就是为了是(q-\/k)尽可能小，从而不会漏过任何的可能的有效偏移。
+
+模式\+P的前缀函数就是函数 pai\+:\{1,2,...,m\}--$>$ \{0,1,2,...,m-\/1\}，满足： pai\mbox{[}q\mbox{]}=max\{k\+:k$<$q 且 Pk是\+Pq的后缀\}。即pai\mbox{[}q\mbox{]}是\+Pq的真后缀\+P的最长前缀长度。
+
+\subparagraph*{kmp 算法}
+
+K\+M\+P 算法用到了辅助函数 pai，它在\+O(m)时间内根据模式预先计算出pai并且存放在数组pai\mbox{[}1...m\mbox{]}中。 数组pai能够使我们按照需要即时计算出转移函数。
+
+计算出pai数组之后，\+K\+M\+P算法从左到右扫描文本序列\+T，并从pai中获取转移函数。当状态结果为 m时， 当前偏移为有效偏移点。
+
+\paragraph*{算法步骤}
+
+\subparagraph*{预处理算法（构造pai函数)}
+
+
+\begin{DoxyItemize}
+\item 初始化： pai\mbox{[}1\mbox{]}=0,k=0
+\item 遍历q 从 2 到 m\+:（因为\+Pk必须是\+Pm的真子集，因此m从2开始）
+\begin{DoxyItemize}
+\item 循环，条件为 k$>$0并且 P\mbox{[}k+1\mbox{]}!=P\mbox{[}q\mbox{]}；循环中执行 k=pai\mbox{[}k\mbox{]}（因为若\+P\mbox{[}k+1\mbox{]}=P\mbox{[}q\mbox{]}，则说明找到了\+Pk是\+Pm的真子集）
+\item 若 P\mbox{[}k+1\mbox{]}==P\mbox{[}q\mbox{]}，则k=k+1并且pai\mbox{[}q\mbox{]}=k
+\end{DoxyItemize}
+\item 返回 pai
+\end{DoxyItemize}
+
+\subparagraph*{匹配算法}
+
+
+\begin{DoxyItemize}
+\item 初始化 q=0
+\item 遍历i从1到n\+:
+\begin{DoxyItemize}
+\item 循环，条件为 q$>$0 并且 P\mbox{[}q+1\mbox{]}!=T\mbox{[}i\mbox{]}；在循环中执行 q=pai\mbox{[}q\mbox{]}
+\item 如果 P\mbox{[}q+1\mbox{]}==T\mbox{[}i\mbox{]} 则 q=q+1
+\item 如果 q==m，则找到了有效偏移点。将有效偏移加入结果std\+::vector中。然后 q=pai\mbox{[}q\mbox{]}(比如有这一句，否则后面\+P\mbox{[}q+1\mbox{]}会溢出)
+\end{DoxyItemize}
+\item 返回结果std\+::vector
+\end{DoxyItemize}
+
+$>$这里要求n$>$=0，m$>$=0(模式序列可以为空字符串)；否则抛出异常 \begin{quote}
+
+
+$>$这里要文本序列\+T和模式序列\+P的元素类型相等，否则编译失败 \end{quote}
+
+
+\paragraph*{算法性能}
+
+计算前缀函数的运行时间为 O(m)，匹配时间为\+O(n)，总运行时间为 O(n) 
+
+Definition at line 148 of file kmp.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a29321686220ba69d91c4ecb2df67fe79}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!match@{match}}
+\index{match@{match}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{match(const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator\+T , typename Iterator\+P $>$ std\+::vector$<$int$>$ Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::match (
+\begin{DoxyParamCaption}
+\item[{const Iterator\+T}]{iter\+T\+\_\+begin, }
+\item[{const Iterator\+T}]{iter\+T\+\_\+end, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+begin, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a29321686220ba69d91c4ecb2df67fe79}
+
+
+match： 朴素字符串匹配算法，算法导论第32章,32.\+1节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter\+T\+\_\+begin} & \+: 被文本序列\+T的起始迭代器 \\
+\hline
+{\em iter\+T\+\_\+end} & 文本序列\+T的终止迭代器 \\
+\hline
+{\em iter\+P\+\_\+begin} & \+: 模式序列\+P的起始迭代器 \\
+\hline
+{\em iter\+P\+\_\+end} & 模式序列\+P的终止迭代器 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 有效偏移组成的 std\+::vector
+\end{DoxyReturn}
+\subsubsection*{字符串匹配}
+
+字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T\mbox{[}1...n\mbox{]}，而模式是一个长度为m的数组\+P\mbox{[}1...m\mbox{]}， 其中m$<$=n。进一步假设\+P和\+T的元素都是来自一个有限字母集合\+M的字符。如\+M=\{0,1\}或者\+M=\{a,b,c,...z\}。 字符数组\+P和\+T通常称为字符串。
+
+\subsubsection*{朴素字符串匹配算法}
+
+\paragraph*{算法原理}
+
+朴素字符串匹配算法是通过一个循环找到所有的有效偏移，该循环对n-\/m+1各可能的偏移值s进行检查， 看是否满足条件 P\mbox{[}1...m\mbox{]}=T\mbox{[}s+1,...s+m\mbox{]}。
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 对\+T，遍历其从 0$\sim$n-\/m 的位置，在每一个位置上比较
+\item 比较时，设当前偏移为s,则比较 T\mbox{[}s+1,s+2,...s+m\mbox{]}与\+P\mbox{[}1...m\mbox{]}。当二者每一个字符都相等时，则匹配
+\item 将找到的有效偏移存入std\+::vector中然后返回
+\end{DoxyItemize}
+
+$>$这里要求n$>$=0，m$>$=0(模式序列可以为空字符串)；否则抛出异常 \begin{quote}
+
+
+$>$这里要文本序列\+T和模式序列\+P的元素类型相等，否则编译失败 \end{quote}
+
+
+\paragraph*{算法性能}
+
+朴素字符串匹配算法的时间复杂度 O(m$\ast$n) 
+
+Definition at line 47 of file match.\+h.
+
+\hypertarget{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a0da01d98fde1373885bc623135b09256}{}\index{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}!rabin\+\_\+karp\+\_\+match@{rabin\+\_\+karp\+\_\+match}}
+\index{rabin\+\_\+karp\+\_\+match@{rabin\+\_\+karp\+\_\+match}!Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm@{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}}
+\subsubsection[{rabin\+\_\+karp\+\_\+match(const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end, unsigned radix\+\_\+d, unsigned mod\+\_\+q)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator\+T , typename Iterator\+P $>$ std\+::vector$<$int$>$ Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::rabin\+\_\+karp\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const Iterator\+T}]{iter\+T\+\_\+begin, }
+\item[{const Iterator\+T}]{iter\+T\+\_\+end, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+begin, }
+\item[{const Iterator\+P}]{iter\+P\+\_\+end, }
+\item[{unsigned}]{radix\+\_\+d, }
+\item[{unsigned}]{mod\+\_\+q}
+\end{DoxyParamCaption}
+)}\label{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a0da01d98fde1373885bc623135b09256}
+
+
+rabin\+\_\+karp\+\_\+match： rabin\+\_\+karp字符串匹配算法，算法导论第32章32.2节 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter\+T\+\_\+begin} & \+: 被文本序列\+T的起始迭代器 \\
+\hline
+{\em iter\+T\+\_\+end} & 文本序列\+T的终止迭代器 \\
+\hline
+{\em iter\+P\+\_\+begin} & \+: 模式序列\+P的起始迭代器 \\
+\hline
+{\em iter\+P\+\_\+end} & 模式序列\+P的终止迭代器 \\
+\hline
+{\em radix\+\_\+d} & 数字基数（有限字母集合\+M的字符个数） \\
+\hline
+{\em mod\+\_\+q} & 用于取模的质数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 有效偏移组成的 std\+::vector
+\end{DoxyReturn}
+\subsubsection*{字符串匹配}
+
+字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T\mbox{[}1...n\mbox{]}，而模式是一个长度为m的数组\+P\mbox{[}1...m\mbox{]}， 其中m$<$=n。进一步假设\+P和\+T的元素都是来自一个有限字母集合\+M的字符。如\+M=\{0,1\}或者\+M=\{a,b,c,...z\}。 字符数组\+P和\+T通常称为字符串。
+
+\subsubsection*{rabin\+\_\+karp 字符串匹配算法}
+
+\paragraph*{算法原理}
+
+假设 M=\{0,1,2,3...,9\}，这样每个字符都是十进制数字。我们可以用长度为k的十进制数来表示由 k个连续的字符组成的字符串。
+
+给定一个模式\+P\mbox{[}1...m\mbox{]}，假设p为它对应的十进制数值。给定一个文本\+T\mbox{[}1...n\mbox{]}，假设t\+\_\+s表示长度为 m的字符串\+T\mbox{[}s+1,...s+m\mbox{]}所对应的十进制值，其中s=0,1,...,n-\/m。则当且仅当 T\mbox{[}s+1,...s+m\mbox{]}=P\mbox{[}1...m\mbox{]}时有p=t\+\_\+s。则总能够在\+O(m)时间内计算出p的值， 在\+O(n-\/m+1)时间内计算所有t\+\_\+s的值。则通过比较p和每一个t\+\_\+s的值，能在\+O(m)+\+O(n-\/m+1)=O(n) 时间内计算出所有的有效偏移。 \begin{quote}
+通常假定每个字符都是以d为基数表示的数字，其中d=$\vert$\+M$\vert$，表示有限字母集合\+M的大小 \end{quote}
+
+
+可以利用霍纳法则在\+O(m)时间内计算出p与t\+\_\+0\+:
+
+
+\begin{DoxyItemize}
+\item p=P\mbox{[}m\mbox{]}+10(P\mbox{[}m-\/1\mbox{]}+10(P\mbox{[}m-\/2\mbox{]}+...+10(P\mbox{[}2\mbox{]}+10\+P\mbox{[}1\mbox{]})...))
+\item t\+\_\+0=T\mbox{[}m\mbox{]}+10(T\mbox{[}m-\/1\mbox{]}+10(T\mbox{[}m-\/2\mbox{]}+...+10(T\mbox{[}2\mbox{]}+10\+T\mbox{[}1\mbox{]})...))
+\end{DoxyItemize}
+
+然后在\+O(n-\/m)内计算出t\+\_\+1、t\+\_\+2、...t\+\_\+$<$n-\/m$>$\+: t\+\_\+$<$s+1$>$=10(t\+\_\+s-\/10$^\wedge$(m-\/1)$\ast$\+T\mbox{[}s+1\mbox{]})+\+T\mbox{[}s+m+1\mbox{]}
+
+但是有可能p和t\+\_\+s的值太大，导致不方便对其进行操作。如果\+P包含m各字符，那么p(m位数)上 每次算术运算需要 “常数”时间这一假设就不成立。我们可以选择一个合适的模q来计算p和t\+\_\+s的模。 我们可以在\+O(m)时间内计算出模q的p值，然后在\+O(n-\/m+1)时间内计算出模q的所有t\+\_\+s值。 另 h = d$^\wedge$(m-\/1)(mod q) ，则： t\+\_\+$<$s+1$>$=(d(t\+\_\+s-\/\+T\mbox{[}s+1\mbox{]}h)+\+T\mbox{[}s+m+1\mbox{]}) mod q
+
+但是基于模q得出的结果： t\+\_\+s = p (mod q) 并不能说明 t\+\_\+s=p。我们对于这样的s称为伪命中点， 还需要进一步检测条件 P\mbox{[}1...m\mbox{]}=T\mbox{[}s+1,...s+m\mbox{]} 成立
+
+\paragraph*{算法步骤}
+
+
+\begin{DoxyItemize}
+\item 初始化：计算 p 和 t\+\_\+0
+\item 遍历 s从0到n-\/m(包含n-\/m)：
+\begin{DoxyItemize}
+\item 找到所有的p=t\+\_\+s的偏移s，检查若\+P\mbox{[}1...m\mbox{]}=T\mbox{[}s+1,...s+m\mbox{]}，则将结果s放入结果std\+::vector中
+\end{DoxyItemize}
+\item 返回结果std\+::vector
+\end{DoxyItemize}
+
+$>$这里要求n$>$=0，m$>$0；否则抛出异常 \begin{quote}
+
+
+$>$这里要文本序列\+T和模式序列\+P的元素类型相等，否则编译失败 \end{quote}
+
+
+\paragraph*{算法性能}
+
+rabin\+\_\+karp 匹配算法的预处理时间为\+O(m)，最坏情况下的运行时间为\+O((n-\/m+1)m)， 在平均情况下他的运行时间还是比较好的 
+
+Definition at line 114 of file rabinkarpmatch.\+h.
 

@@ -189,7 +189,6 @@ namespace IntroductionToAlgorithm
     */
     namespace StringMatchingAlgorithm {
 
-
-    }
+   }
 }
 #endif // HEADERH

@@ -2,7 +2,7 @@ var searchData=
 [
   ['make_5flcs',['make_LCS',['../namespace_introduction_to_algorithm_1_1_dynamic_programming_algorithm.html#a377ef4206d4814024272c15c51051f09',1,'IntroductionToAlgorithm::DynamicProgrammingAlgorithm']]],
   ['make_5fset',['make_set',['../struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html#a7346337c6f47bf066844c7101058cd92',1,'IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode']]],
-  ['match',['match',['../class_automation___matcher.html#ae1b8ad0f17937da89b65317c10ed6c50',1,'Automation_Matcher::match()'],['../class_k_m_p___matcher.html#a22892fbaa4d2c09623587283c3e6f2b5',1,'KMP_Matcher::match()'],['../namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#abd6d1a2ecf0964999ca1a7c0cd8eaaa3',1,'IntroductionToAlgorithm::StringMatchingAlgorithm::match()']]],
+  ['match',['match',['../namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a29321686220ba69d91c4ecb2df67fe79',1,'IntroductionToAlgorithm::StringMatchingAlgorithm']]],
   ['matrix_5fshortest_5fpath',['matrix_shortest_path',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#ab9dcca59a42c708c137571d194c45bd9',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['matrix_5fshortest_5fpath_5ffast',['matrix_shortest_path_fast',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a6eb979447eeb937df4158f9646e20dde',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['matrix_5fstring',['matrix_string',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#a97d248a07f1b31df52be3de3b5570237',1,'IntroductionToAlgorithm::GraphAlgorithm']]],

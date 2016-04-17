@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['rabin_5fkarp_5fmatch',['rabin_karp_match',['../namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a0da01d98fde1373885bc623135b09256',1,'IntroductionToAlgorithm::StringMatchingAlgorithm']]],
   ['radix_5fsort',['radix_sort',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352',1,'IntroductionToAlgorithm::SortAlgorithm']]],
   ['radom_5findex',['radom_index',['../namespace_introduction_to_algorithm_1_1_select_algorithm.html#a117ee8d5d70d91c5be1d412f9fbad1cd',1,'IntroductionToAlgorithm::SelectAlgorithm']]],
   ['randomized_5fselect',['randomized_select',['../namespace_introduction_to_algorithm_1_1_select_algorithm.html#ae742d2848ba12d8cc796668091e469aa',1,'IntroductionToAlgorithm::SelectAlgorithm']]],

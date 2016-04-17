@@ -107,34 +107,52 @@ $(document).ready(function(){initNavTree('match__test_8h_source.html','');});
 <div class="title">match_test.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="match__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MATCH_TES</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MATCH_TES</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="match_8h.html">match.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#abd6d1a2ecf0964999ca1a7c0cd8eaaa3">IntroductionToAlgorithm::StringMatchingAlgorithm::match</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="match__test_8h.html#ad791cbedc1c044cc9bea94f651a9a9ec">   13</a></span>&#160;<a class="code" href="match__test_8h.html#ad791cbedc1c044cc9bea94f651a9a9ec">TEST</a>(MatchTest,test_regular_match)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {<span class="comment">//******  测试T为空</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::vector&lt;int&gt; S={90,91,92,93,94,95};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        std::vector&lt;int&gt; T;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#abd6d1a2ecf0964999ca1a7c0cd8eaaa3">match</a>(S.begin(),S.end(),T.begin(),T.end()),std::vector&lt;int&gt;({0,1,2,3,4,5,6}));<span class="comment">//S[6]不存在，但是他匹配T</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {<span class="comment">//******  测试T为非空</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::vector&lt;int&gt; S={90,90,90,90,90,90};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::vector&lt;int&gt; T={90,90};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#abd6d1a2ecf0964999ca1a7c0cd8eaaa3">match</a>(S.begin(),S.end(),T.begin(),T.end()),std::vector&lt;int&gt;({0,1,2,3,4}));</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<a href="match__test_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright 2016- huaxz &lt;huaxz1986@163.com&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * This program is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * the Free Software Foundation, either version 2 of the License, or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * (at your option) any later version.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Author: huaxz1986@163.com (huaxz)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef MATCH_TES</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define MATCH_TES</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include&quot;src/google_test/gtest.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include&quot;<a class="code" href="match_8h.html">match.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a29321686220ba69d91c4ecb2df67fe79">IntroductionToAlgorithm::StringMatchingAlgorithm::match</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // MATCH_TES</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="ttc" id="match__test_8h_html_ad791cbedc1c044cc9bea94f651a9a9ec"><div class="ttname"><a href="match__test_8h.html#ad791cbedc1c044cc9bea94f651a9a9ec">TEST</a></div><div class="ttdeci">TEST(MatchTest, test_regular_match)</div><div class="ttdoc">test_regular_match：测试常规的字符串匹配算法 </div><div class="ttdef"><b>Definition:</b> <a href="match__test_8h_source.html#l00013">match_test.h:13</a></div></div>
-<div class="ttc" id="namespace_introduction_to_algorithm_1_1_string_matching_algorithm_html_abd6d1a2ecf0964999ca1a7c0cd8eaaa3"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#abd6d1a2ecf0964999ca1a7c0cd8eaaa3">IntroductionToAlgorithm::StringMatchingAlgorithm::match</a></div><div class="ttdeci">std::vector&lt; int &gt; match(const Iterator1 iter1_begin, const Iterator1 iter1_end, const Iterator2 iter2_begin, const Iterator2 iter2_end)</div><div class="ttdoc">match： 常规的字符串匹配算法，算法导论第xx章 </div><div class="ttdef"><b>Definition:</b> <a href="match_8h_source.html#l00029">match.h:29</a></div></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="match__test_8h.html#ad791cbedc1c044cc9bea94f651a9a9ec">   31</a></span>&#160;<a class="code" href="match__test_8h.html#ad791cbedc1c044cc9bea94f651a9a9ec">TEST</a>(MatchTest,test_regular_match)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {<span class="comment">//******  测试T为空</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::vector&lt;int&gt; S={90,91,92,93,94,95};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::vector&lt;int&gt; T;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a29321686220ba69d91c4ecb2df67fe79">match</a>(S.begin(),S.end(),T.begin(),T.end()),std::vector&lt;int&gt;({0,1,2,3,4,5,6}));<span class="comment">//S[6]不存在，但是他匹配T</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {<span class="comment">//******  测试T为非空</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::vector&lt;int&gt; S={90,90,90,90,90,90};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::vector&lt;int&gt; T={90,90};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        EXPECT_EQ(<a class="code" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a29321686220ba69d91c4ecb2df67fe79">match</a>(S.begin(),S.end(),T.begin(),T.end()),std::vector&lt;int&gt;({0,1,2,3,4}));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // MATCH_TES</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="ttc" id="match__test_8h_html_ad791cbedc1c044cc9bea94f651a9a9ec"><div class="ttname"><a href="match__test_8h.html#ad791cbedc1c044cc9bea94f651a9a9ec">TEST</a></div><div class="ttdeci">TEST(MatchTest, test_regular_match)</div><div class="ttdoc">test_regular_match：测试常规的字符串匹配算法 </div><div class="ttdef"><b>Definition:</b> <a href="match__test_8h_source.html#l00031">match_test.h:31</a></div></div>
 <div class="ttc" id="match_8h_html"><div class="ttname"><a href="match_8h.html">match.h</a></div></div>
+<div class="ttc" id="namespace_introduction_to_algorithm_1_1_string_matching_algorithm_html_a29321686220ba69d91c4ecb2df67fe79"><div class="ttname"><a href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a29321686220ba69d91c4ecb2df67fe79">IntroductionToAlgorithm::StringMatchingAlgorithm::match</a></div><div class="ttdeci">std::vector&lt; int &gt; match(const IteratorT iterT_begin, const IteratorT iterT_end, const IteratorP iterP_begin, const IteratorP iterP_end)</div><div class="ttdoc">match： 朴素字符串匹配算法，算法导论第32章,32.1节 </div><div class="ttdef"><b>Definition:</b> <a href="match_8h_source.html#l00047">match.h:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

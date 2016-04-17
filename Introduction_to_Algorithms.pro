@@ -97,10 +97,14 @@ HEADERS += \
     src/graph_algorithms/max_flow/relabel_to_front/relabeltofront_test.h \
     src/string_matching_algorithms/regular_match/match.h \
     src/string_matching_algorithms/regular_match/match_test.h \
-    src/string_matching_algorithms/robin_karp_match/robinkarpmatch.h \
-    src/string_matching_algorithms/robin_karp_match/robinkarpmatch_test.h \
     src/graph_algorithms/basic_graph/graph_representation/graph_vertex/front_flow_vertex.h \
-    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/front_flow_vertex_test.h
+    src/graph_algorithms/basic_graph/graph_representation/graph_vertex/front_flow_vertex_test.h \
+    src/string_matching_algorithms/rabin_karp_match/rabinkarpmatch.h \
+    src/string_matching_algorithms/rabin_karp_match/rabinkarpmatch_test.h \
+    src/string_matching_algorithms/finite_automaton_match/finiteautomatonmatch.h \
+    src/string_matching_algorithms/finite_automaton_match/finiteautomatonmatch_test.h \
+    src/string_matching_algorithms/kmp_match/kmp.h \
+    src/string_matching_algorithms/kmp_match/kmp_test.h
 
 
 

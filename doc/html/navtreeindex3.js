@@ -1,5 +1,10 @@
 var NAVTREEINDEX3 =
 {
+"strongconnectedcomponent__test_8h_source.html":[2,0,0,1,1,4,1],
+"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html":[1,0,0,0,0],
+"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a32b5e8f3382a8e5508b8e4651ddf245f":[1,0,0,0,0,6],
+"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a6757574602df8359b10e37079c789eb6":[1,0,0,0,0,0],
+"struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a8279dc0ecc39324c1f0e38a3c0a2ef03":[1,0,0,0,0,9],
 "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a8b9518587536b482cfd8c2fc7f5c9678":[1,0,0,0,0,1],
 "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a8d4f953211df8bd5d3fffe6e362a7fa3":[1,0,0,0,0,8],
 "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#a945dcb0463cf00ddf694d107b019b118":[1,0,0,0,0,5],
@@ -172,9 +177,9 @@ var NAVTREEINDEX3 =
 "struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#adbd8539e7a907c3a8fe7a8b79e7032e8":[1,0,0,4,1,0],
 "struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#ae552fb23243e499a60ef73375fabe239":[1,0,0,4,1,5],
 "struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree_node.html#af3cb8030ab05ccaf1a69a86c9f468b8d":[1,0,0,4,1,7],
-"struct_node.html":[1,0,26],
-"struct_node.html#a3c69606b98be4c0fe6cc2abbe554948e":[1,0,26,0],
-"struct_node.html#afcabbedc2b739455060451607c6344e4":[1,0,26,1],
+"struct_node.html":[1,0,24],
+"struct_node.html#a3c69606b98be4c0fe6cc2abbe554948e":[1,0,24,0],
+"struct_node.html#afcabbedc2b739455060451607c6344e4":[1,0,24,1],
 "topologysort_8h.html":[2,0,0,1,1,5,0],
 "topologysort_8h.html#a804241e72be5f4c031190bc12a6b73a2":[2,0,0,1,1,5,0,0],
 "topologysort_8h_source.html":[2,0,0,1,1,5,0],

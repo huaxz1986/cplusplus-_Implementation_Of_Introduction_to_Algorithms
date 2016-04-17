@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['rabin_5fkarp_5fmatch',['rabin_karp_match',['../namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a0da01d98fde1373885bc623135b09256',1,'IntroductionToAlgorithm::StringMatchingAlgorithm']]],
+  ['rabinkarpmatch_2eh',['rabinkarpmatch.h',['../rabinkarpmatch_8h.html',1,'']]],
+  ['rabinkarpmatch_5ftest_2eh',['rabinkarpmatch_test.h',['../rabinkarpmatch__test_8h.html',1,'']]],
   ['radix_5fsort',['radix_sort',['../namespace_introduction_to_algorithm_1_1_sort_algorithm.html#ad16d57510168e93b3d7439bf8ba48352',1,'IntroductionToAlgorithm::SortAlgorithm']]],
   ['radixsort_2eh',['radixsort.h',['../radixsort_8h.html',1,'']]],
   ['radixsort_5ftest_2eh',['radixsort_test.h',['../radixsort__test_8h.html',1,'']]],
@@ -17,8 +20,6 @@ var searchData=
   ['relax',['relax',['../namespace_introduction_to_algorithm_1_1_graph_algorithm.html#afe2bd83fca7df7e07ece9a59b8e7f5a6',1,'IntroductionToAlgorithm::GraphAlgorithm']]],
   ['remove',['remove',['../class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html#a3b59a0c117766590f7f01027ad0fbfff',1,'IntroductionToAlgorithm::TreeAlgorithm::SearchTree']]],
   ['right_5frotate',['right_rotate',['../namespace_introduction_to_algorithm_1_1_tree_algorithm.html#adeb83a10f8daa65c5cf5921737a04da0',1,'IntroductionToAlgorithm::TreeAlgorithm']]],
-  ['robinkarpmatch_2eh',['robinkarpmatch.h',['../robinkarpmatch_8h.html',1,'']]],
-  ['robinkarpmatch_5ftest_2eh',['robinkarpmatch_test.h',['../robinkarpmatch__test_8h.html',1,'']]],
   ['root',['root',['../struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html#aa0d43af70ef50ff59740dced2e832074',1,'IntroductionToAlgorithm::TreeAlgorithm::BinaryTree']]],
   ['root_5fnode',['root_node',['../class_binary_tree_node_test.html#a07aad40489fc19ed29863c82a6c14863',1,'BinaryTreeNodeTest']]],
   ['rtf_5fn',['RTF_N',['../namespaceanonymous__namespace_02relabeltofront__test_8h_03.html#a05b071cdd5828fa4549bc99ce04c68c4',1,'anonymous_namespace{relabeltofront_test.h}']]]

@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "IntroductionToAlgorithm::GraphAlgorithm::ADJListGraph< N >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html", null ],
-    [ "Automation_Matcher< T >", "class_automation___matcher.html", null ],
     [ "IntroductionToAlgorithm::TreeAlgorithm::BinaryTree< NodeT >", "struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html", null ],
     [ "IntroductionToAlgorithm::TreeAlgorithm::BinaryTree< Node >", "struct_introduction_to_algorithm_1_1_tree_algorithm_1_1_binary_tree.html", [
       [ "IntroductionToAlgorithm::TreeAlgorithm::SearchTree< Node >", "class_introduction_to_algorithm_1_1_tree_algorithm_1_1_search_tree.html", null ]
@@ -13,7 +12,6 @@ var hierarchy =
     [ "IntroductionToAlgorithm::SetAlgorithm::DisjointSetNode< KType >", "struct_introduction_to_algorithm_1_1_set_algorithm_1_1_disjoint_set_node.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::Edge< VType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_edge.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::Graph< N, VType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_graph.html", null ],
-    [ "KMP_Matcher< T >", "class_k_m_p___matcher.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::List< NodeType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::List< IntroductionToAlgorithm::GraphAlgorithm::ListNode< IntroductionToAlgorithm::GraphAlgorithm::FrontFlowVertex > >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list.html", null ],
     [ "IntroductionToAlgorithm::GraphAlgorithm::ListNode< ValueType >", "struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_list_node.html", null ],

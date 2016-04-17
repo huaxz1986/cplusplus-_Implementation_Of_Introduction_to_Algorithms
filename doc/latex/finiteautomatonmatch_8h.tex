@@ -1,0 +1,22 @@
+\hypertarget{finiteautomatonmatch_8h}{}\section{src/string\+\_\+matching\+\_\+algorithms/finite\+\_\+automaton\+\_\+match/finiteautomatonmatch.h File Reference}
+\label{finiteautomatonmatch_8h}\index{src/string\+\_\+matching\+\_\+algorithms/finite\+\_\+automaton\+\_\+match/finiteautomatonmatch.\+h@{src/string\+\_\+matching\+\_\+algorithms/finite\+\_\+automaton\+\_\+match/finiteautomatonmatch.\+h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_introduction_to_algorithm}{Introduction\+To\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of Introdunction\+To\+Algorithm. \end{DoxyCompactList}\item 
+ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm}{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm}
+\begin{DoxyCompactList}\small\item\em Namespace of \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm}{String\+Matching\+Algorithm}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator $>$ }\\std\+::iterator\+\_\+traits$<$ Iterator $>$\+::difference\+\_\+type \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_acf5d8c82dffae3894905d8091defb315}{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::index\+\_\+of\+\_\+\+M} (Iterator begin\+M, Iterator end\+M, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type a)
+\begin{DoxyCompactList}\small\item\em index\+\_\+of\+\_\+\+M ： 返回返回字符a，算法导论第32章32.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\bool \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a4267339182491a371210d73c3be57ba1}{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::is\+\_\+end\+\_\+with} (Iterator begin, Iterator k\+\_\+iter, Iterator q\+\_\+iter, typename std\+::iterator\+\_\+traits$<$ Iterator $>$\+::value\+\_\+type a)
+\begin{DoxyCompactList}\small\item\em is\+\_\+end\+\_\+with： 返回\+Pk是否是( Pq a)的后缀，算法导论第32章32.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename P\+Iterator , typename M\+Iterator $>$ }\\void \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_a2096b4363b80c224193aee054d71cf97}{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::get\+\_\+delta} (const P\+Iterator P\+\_\+begin, const P\+Iterator P\+\_\+end, const M\+Iterator M\+\_\+begin, const M\+Iterator M\+\_\+end, std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&delta)
+\begin{DoxyCompactList}\small\item\em get\+\_\+delt： 获取模式字符串的转移函数，算法导论第32章32.3节 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator\+T , typename Iterator\+P , typename Iterator\+M $>$ }\\std\+::vector$<$ int $>$ \hyperlink{namespace_introduction_to_algorithm_1_1_string_matching_algorithm_aa156c6aecec5459b601ae0069725330e}{Introduction\+To\+Algorithm\+::\+String\+Matching\+Algorithm\+::finite\+\_\+automaton\+\_\+match} (const Iterator\+T iter\+T\+\_\+begin, const Iterator\+T iter\+T\+\_\+end, const Iterator\+P iter\+P\+\_\+begin, const Iterator\+P iter\+P\+\_\+end, const Iterator\+M iter\+M\+\_\+begin, const Iterator\+M iter\+M\+\_\+end)
+\begin{DoxyCompactList}\small\item\em finite\+\_\+automaton\+\_\+match： 有限自动机字符串匹配算法，算法导论第32章32.3节 \end{DoxyCompactList}\end{DoxyCompactItemize}

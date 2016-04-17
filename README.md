@@ -36,7 +36,7 @@ src\
 			radix_sort：基数排序
 	select_algorithms\     :顺序统计量选择算法
 			randomized_select：随机选择的顺序统计量算法
-			godd_select：最坏情况为O(n)的顺序统计量算法
+			good_select：最坏情况为O(n)的顺序统计量算法
 	tree_algorithms\       :树算法
 			binarytree:二叉树
 			binarytreenode：二叉树结点
@@ -69,11 +69,15 @@ src\
 					matrix_shortest_path：结点对之间最短路径的矩阵算法和复平方算法
 					floyd_warshall：所有结点对之间最短路径的floyd_warshall算法
 					johnson:所有结点对之间最短路径的johnson算法
-			max_flow\: 流网络的最大流算法
+			max_flow\ : 流网络的最大流算法
 					ford_fulkerson： 流网络的ford_fulkerson最大流算法
 					generic_push_relabel：流网络的“推送-重贴标签”最大流算法
-					relabel_to_front：流网络的“前置-重贴标签”最大流算法	
-		...(未完待续)
+					relabel_to_front：流网络的“前置-重贴标签”最大流算法
+			string_matching_algorithms\ :字符串匹配算法
+					regular_match :朴素的字符串匹配算法
+					rabin_karp_match: rabin_karp字符串匹配算法
+					finite_automaton_match:有限自动机字符串匹配算法
+					kmp_match:kmp字符串匹配算法
 doc\      ：由doxygen自动生成的文档
 Doxyfile  :doxygen配置文件
 Introduction_to_Algorithms.pro :Qt项目配置文件

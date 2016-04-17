@@ -115,44 +115,88 @@ $(document).ready(function(){initNavTree('namespace_introduction_to_algorithm_1_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abd6d1a2ecf0964999ca1a7c0cd8eaaa3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator1 , typename Iterator2 &gt; </td></tr>
-<tr class="memitem:abd6d1a2ecf0964999ca1a7c0cd8eaaa3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#abd6d1a2ecf0964999ca1a7c0cd8eaaa3">match</a> (const Iterator1 iter1_begin, const Iterator1 iter1_end, const Iterator2 iter2_begin, const Iterator2 iter2_end)</td></tr>
-<tr class="memdesc:abd6d1a2ecf0964999ca1a7c0cd8eaaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">match： 常规的字符串匹配算法，算法导论第xx章  <a href="#abd6d1a2ecf0964999ca1a7c0cd8eaaa3">More...</a><br /></td></tr>
-<tr class="separator:abd6d1a2ecf0964999ca1a7c0cd8eaaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5d8c82dffae3894905d8091defb315"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:acf5d8c82dffae3894905d8091defb315"><td class="memTemplItemLeft" align="right" valign="top">std::iterator_traits&lt; Iterator &gt;::difference_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#acf5d8c82dffae3894905d8091defb315">index_of_M</a> (Iterator beginM, Iterator endM, typename std::iterator_traits&lt; Iterator &gt;::value_type a)</td></tr>
+<tr class="memdesc:acf5d8c82dffae3894905d8091defb315"><td class="mdescLeft">&#160;</td><td class="mdescRight">index_of_M ： 返回返回字符a，算法导论第32章32.3节  <a href="#acf5d8c82dffae3894905d8091defb315">More...</a><br /></td></tr>
+<tr class="separator:acf5d8c82dffae3894905d8091defb315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4267339182491a371210d73c3be57ba1"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:a4267339182491a371210d73c3be57ba1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a4267339182491a371210d73c3be57ba1">is_end_with</a> (Iterator begin, Iterator k_iter, Iterator q_iter, typename std::iterator_traits&lt; Iterator &gt;::value_type a)</td></tr>
+<tr class="memdesc:a4267339182491a371210d73c3be57ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_end_with： 返回Pk是否是( Pq a)的后缀，算法导论第32章32.3节  <a href="#a4267339182491a371210d73c3be57ba1">More...</a><br /></td></tr>
+<tr class="separator:a4267339182491a371210d73c3be57ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2096b4363b80c224193aee054d71cf97"><td class="memTemplParams" colspan="2">template&lt;typename PIterator , typename MIterator &gt; </td></tr>
+<tr class="memitem:a2096b4363b80c224193aee054d71cf97"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a2096b4363b80c224193aee054d71cf97">get_delta</a> (const PIterator P_begin, const PIterator P_end, const MIterator M_begin, const MIterator M_end, std::vector&lt; std::vector&lt; int &gt;&gt; &amp;delta)</td></tr>
+<tr class="memdesc:a2096b4363b80c224193aee054d71cf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_delt： 获取模式字符串的转移函数，算法导论第32章32.3节  <a href="#a2096b4363b80c224193aee054d71cf97">More...</a><br /></td></tr>
+<tr class="separator:a2096b4363b80c224193aee054d71cf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa156c6aecec5459b601ae0069725330e"><td class="memTemplParams" colspan="2">template&lt;typename IteratorT , typename IteratorP , typename IteratorM &gt; </td></tr>
+<tr class="memitem:aa156c6aecec5459b601ae0069725330e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#aa156c6aecec5459b601ae0069725330e">finite_automaton_match</a> (const IteratorT iterT_begin, const IteratorT iterT_end, const IteratorP iterP_begin, const IteratorP iterP_end, const IteratorM iterM_begin, const IteratorM iterM_end)</td></tr>
+<tr class="memdesc:aa156c6aecec5459b601ae0069725330e"><td class="mdescLeft">&#160;</td><td class="mdescRight">finite_automaton_match： 有限自动机字符串匹配算法，算法导论第32章32.3节  <a href="#aa156c6aecec5459b601ae0069725330e">More...</a><br /></td></tr>
+<tr class="separator:aa156c6aecec5459b601ae0069725330e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7dac7381b40ef7857b4595cd23e640e"><td class="memTemplParams" colspan="2">template&lt;typename IteratorP &gt; </td></tr>
+<tr class="memitem:ae7dac7381b40ef7857b4595cd23e640e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#ae7dac7381b40ef7857b4595cd23e640e">get_pai</a> (const IteratorP iterP_begin, const IteratorP iterP_end)</td></tr>
+<tr class="memdesc:ae7dac7381b40ef7857b4595cd23e640e"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_pai： KMP字符串匹配算法的预处理操作，算法导论第32章32.4节  <a href="#ae7dac7381b40ef7857b4595cd23e640e">More...</a><br /></td></tr>
+<tr class="separator:ae7dac7381b40ef7857b4595cd23e640e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df2ed0bb28a7908f9559f114eeab05e"><td class="memTemplParams" colspan="2">template&lt;typename IteratorT , typename IteratorP &gt; </td></tr>
+<tr class="memitem:a6df2ed0bb28a7908f9559f114eeab05e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a6df2ed0bb28a7908f9559f114eeab05e">kmp_match</a> (const IteratorT iterT_begin, const IteratorT iterT_end, const IteratorP iterP_begin, const IteratorP iterP_end)</td></tr>
+<tr class="memdesc:a6df2ed0bb28a7908f9559f114eeab05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">kmp_match： KMP字符串匹配算法，算法导论第32章32.4节  <a href="#a6df2ed0bb28a7908f9559f114eeab05e">More...</a><br /></td></tr>
+<tr class="separator:a6df2ed0bb28a7908f9559f114eeab05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d629ff62f74286e022a4fde86298897"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3d629ff62f74286e022a4fde86298897"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a3d629ff62f74286e022a4fde86298897">get_h</a> (T radix_d, T len_m, T mod_q)</td></tr>
+<tr class="memdesc:a3d629ff62f74286e022a4fde86298897"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_h： rabin_karp匹配算法的 get_h 操作，算法导论第32章32.2节  <a href="#a3d629ff62f74286e022a4fde86298897">More...</a><br /></td></tr>
+<tr class="separator:a3d629ff62f74286e022a4fde86298897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da01d98fde1373885bc623135b09256"><td class="memTemplParams" colspan="2">template&lt;typename IteratorT , typename IteratorP &gt; </td></tr>
+<tr class="memitem:a0da01d98fde1373885bc623135b09256"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a0da01d98fde1373885bc623135b09256">rabin_karp_match</a> (const IteratorT iterT_begin, const IteratorT iterT_end, const IteratorP iterP_begin, const IteratorP iterP_end, unsigned radix_d, unsigned mod_q)</td></tr>
+<tr class="memdesc:a0da01d98fde1373885bc623135b09256"><td class="mdescLeft">&#160;</td><td class="mdescRight">rabin_karp_match： rabin_karp字符串匹配算法，算法导论第32章32.2节  <a href="#a0da01d98fde1373885bc623135b09256">More...</a><br /></td></tr>
+<tr class="separator:a0da01d98fde1373885bc623135b09256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29321686220ba69d91c4ecb2df67fe79"><td class="memTemplParams" colspan="2">template&lt;typename IteratorT , typename IteratorP &gt; </td></tr>
+<tr class="memitem:a29321686220ba69d91c4ecb2df67fe79"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html#a29321686220ba69d91c4ecb2df67fe79">match</a> (const IteratorT iterT_begin, const IteratorT iterT_end, const IteratorP iterP_begin, const IteratorP iterP_end)</td></tr>
+<tr class="memdesc:a29321686220ba69d91c4ecb2df67fe79"><td class="mdescLeft">&#160;</td><td class="mdescRight">match： 朴素字符串匹配算法，算法导论第32章,32.1节  <a href="#a29321686220ba69d91c4ecb2df67fe79">More...</a><br /></td></tr>
+<tr class="separator:a29321686220ba69d91c4ecb2df67fe79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace of <a class="el" href="namespace_introduction_to_algorithm_1_1_string_matching_algorithm.html" title="Namespace of StringMatchingAlgorithm. ">StringMatchingAlgorithm</a>. </p>
 <p>该命名空间内包含所有字符串匹配算法 </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="abd6d1a2ecf0964999ca1a7c0cd8eaaa3"></a>
+<a class="anchor" id="aa156c6aecec5459b601ae0069725330e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator1 , typename Iterator2 &gt; </div>
+template&lt;typename IteratorT , typename IteratorP , typename IteratorM &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; IntroductionToAlgorithm::StringMatchingAlgorithm::match </td>
+          <td class="memname">std::vector&lt;int&gt; IntroductionToAlgorithm::StringMatchingAlgorithm::finite_automaton_match </td>
           <td>(</td>
-          <td class="paramtype">const Iterator1&#160;</td>
-          <td class="paramname"><em>iter1_begin</em>, </td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_begin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Iterator1&#160;</td>
-          <td class="paramname"><em>iter1_end</em>, </td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_end</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Iterator2&#160;</td>
-          <td class="paramname"><em>iter2_begin</em>, </td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_begin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Iterator2&#160;</td>
-          <td class="paramname"><em>iter2_end</em>&#160;</td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorM&#160;</td>
+          <td class="paramname"><em>iterM_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorM&#160;</td>
+          <td class="paramname"><em>iterM_end</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -162,30 +206,632 @@ template&lt;typename Iterator1 , typename Iterator2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>match： 常规的字符串匹配算法，算法导论第xx章 </p>
+<p>finite_automaton_match： 有限自动机字符串匹配算法，算法导论第32章32.3节 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">iter1_begin</td><td>: 被比较序列S的起始迭代器 </td></tr>
-    <tr><td class="paramname">iter1_end</td><td>被比较序列S的终止迭代器 </td></tr>
-    <tr><td class="paramname">iter2_begin</td><td>: 比较序列T的起始迭代器 </td></tr>
-    <tr><td class="paramname">iter2_end</td><td>比较序列T的终止迭代器 </td></tr>
+    <tr><td class="paramname">iterT_begin</td><td>: 被文本序列T的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterT_end</td><td>文本序列T的终止迭代器 </td></tr>
+    <tr><td class="paramname">iterP_begin</td><td>: 模式序列P的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterP_end</td><td>模式序列P的终止迭代器 </td></tr>
+    <tr><td class="paramname">iterM_begin</td><td>: 有限字符集的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterM_end</td><td>有限字符集的终止迭代器 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>: 被比较序列S中的匹配位置组成的 std::vector</dd></dl>
-<p>设被比较序列S的长度为len1，比较序列T的长度为len2，则match算法执行一一比较来计算匹配位置：</p>
+<dl class="section return"><dt>Returns</dt><dd>: 有效偏移组成的 std::vector</dd></dl>
+<h2>字符串匹配</h2>
+<p>字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T[1...n]，而模式是一个长度为m的数组P[1...m]， 其中m&lt;=n。进一步假设P和T的元素都是来自一个有限字母集合M的字符。如M={0,1}或者M={a,b,c,...z}。 字符数组P和T通常称为字符串。</p>
+<h2>有限自动机 字符串匹配算法</h2>
+<h3>算法原理</h3>
+<h4>有限自动机</h4>
+<p>定义有限自动机 AM 是一个5元组(Q,q_0,A,M,delt)，其中：</p>
 <ul>
-<li>对S，遍历其从 0~len1-len2的位置，在每一个位置上比较</li>
-<li>比较时，假设S的当前位置为i,则比较 S[i,i+len2-1]与T。当二者每一个字符都相等时，则匹配</li>
-<li>将找到的每一个匹配点存入std::vector中然后返回</li>
+<li>Q:为状态的有限集合</li>
+<li>q_0属于Q：为初始状态</li>
+<li>A是Q的子集：表示一个特殊的接受状态集合</li>
+<li>M：是有限的输入字母表</li>
+<li>delt:为 Q*M&ndash;&gt; Q 的函数，称为有限自动机的转移函数。</li>
 </ul>
-<p>&gt;这里要求len1大于0，len2&gt;=0(比较序列可以为空字符串)；否则抛出异常 </p><blockquote class="doxtable">
+<p>有限自动机开始于状态 q_0，每次读入输入字符串的一个字符。如果有限自动机在状态q时读入了字符a，则它从状态q变成了状态 delt(q,a)， 进行了一次转移。每当当前状态q属于A时，则说明状态机接受了迄今为止所读入的字符串。</p>
+<p>有限自动机引入了一个函数 phai,称为终态函数。定义 M* 表示所有的有限长度的字符串的集合，该字符串是由所有字母表M中的字符组成。 长度为0的空字符串记为e,e属于M*. phai 是从 M*到Q的函数，满足： pai(w)是有限自动机扫描字符串w后的终止状态。 其中 w 属于 M*。因此当且仅当 phai(w)属于A时，有限自动机接受字符串 w。我们可以用转移函数定义 phai:</p>
+<ul>
+<li>phai(e)=q_0</li>
+<li>phai(wa)=delt(phai(w),a), w属于M*,a属于M</li>
+</ul>
+<h4>字符串匹配自动机</h4>
+<p>对于一个给定的模式P，我们可以在预处理阶段构造出一个字符串匹配自动机，根据模式构造出的自动机后，再利用它来搜寻文本字符串。 首先定义一个辅助函数 sigma，称之为P的后缀函数。函数 sigma是一个 M*到{0,1,....m}上的映射：</p>
+<ul>
+<li>sigma(x)=max{k:P_k是x的后缀}，即sigma(x)是x的后缀中，P的最长前缀的长度。</li>
+</ul>
+<p>因为空字符串P0=e是每一个字符串的后缀，因此sigma(e)=0。对于一个长度为m的模式P，sigma(x)=m当且仅当P是x的后缀。</p>
+<p>给定模式P[1...m]，其相应的字符串匹配自动机定义如下：</p>
+<ul>
+<li>状态集合Q为{0,1,...m}。开始状态q_0为0状态，并且只有状态m是唯一被接受的状态。</li>
+<li>对任意状态q和字符a，转移函数 delt定义为： delt(q,a)=sigma(Pq a)</li>
+</ul>
+<p>考虑最近一次扫描T的字符。为了使得T的一个子串（以T[i]结尾的子串）能够和P的某些前缀Pj匹配，则前缀Pj必须是Ti的一个后缀。 假设q=phai(Ti)，则读完Ti之后，自动机处于状态q。转移函数delt使用状态数q表示P的前缀和Ti后缀的最长匹配长度。也就是说， 在状态q是， Pq是Ti的后缀，且q=sigma(Ti)。 </p><hr/>
+ <h2>T | 1 | 2 | 3 |.....|i-q+1|...........| i |..............| n | :Ti=T[1...i] </h2>
+<h2>|&lt;--&mdash;长度为q-&mdash;&gt;| </h2>
+<h2>P | 1 | 2 |.......| q |....| m | :Pq=P[1...q] </h2>
+<h3>算法步骤</h3>
+<h4>预处理算法（构造delt函数)</h4>
+<ul>
+<li>遍历P，q从0到m (因为q=0时，P_0=空字符串):<ul>
+<li>对每个字符a属于有限字母集合a，寻找Pk是 (Pq a) 后缀的最大的k，则 delt(q,a)=k</li>
+</ul>
+</li>
+<li>返回 delt</li>
+</ul>
+<h4>匹配算法</h4>
+<ul>
+<li>遍历T，i从1到n:<ul>
+<li>计算 q=delt(q,T[i])。如果 q==m，则偏移 i-m是有效偏移点，将 i-m 加入结果std::vector中</li>
+</ul>
+</li>
+</ul>
+<p>&gt;这里要求n&gt;=0，m&gt;=0(模式序列可以为空字符串)；否则抛出异常 </p><blockquote class="doxtable">
 <p></p>
-<p>&gt;这里要求比较序列S和比较序列T的元素类型相等，否则编译失败 </p>
+<p>&gt;这里要文本序列T和模式序列P的元素类型相等，否则编译失败 </p>
 </blockquote>
-<p>算法性能： 时间复杂度 O(m*n)，其中被比较序列S长度为n ,比较序列T长度为m </p>
+<h3>算法性能</h3>
+<p>有限自动机字符串匹配算法的预处理时间为O(m^3 |M|)，其中|M| 为有限字母集合的大小，匹配时间为O(n) </p>
 
-<p>Definition at line <a class="el" href="match_8h_source.html#l00029">29</a> of file <a class="el" href="match_8h_source.html">match.h</a>.</p>
+<p>Definition at line <a class="el" href="finiteautomatonmatch_8h_source.html#l00250">250</a> of file <a class="el" href="finiteautomatonmatch_8h_source.html">finiteautomatonmatch.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2096b4363b80c224193aee054d71cf97"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PIterator , typename MIterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntroductionToAlgorithm::StringMatchingAlgorithm::get_delta </td>
+          <td>(</td>
+          <td class="paramtype">const PIterator&#160;</td>
+          <td class="paramname"><em>P_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PIterator&#160;</td>
+          <td class="paramname"><em>P_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MIterator&#160;</td>
+          <td class="paramname"><em>M_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MIterator&#160;</td>
+          <td class="paramname"><em>M_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; int &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get_delt： 获取模式字符串的转移函数，算法导论第32章32.3节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P_begin</td><td>: 模式序列P的起始迭代器 </td></tr>
+    <tr><td class="paramname">P_end</td><td>模式序列P的终止迭代器 </td></tr>
+    <tr><td class="paramname">M_begin</td><td>: 有限字符集的起始迭代器 </td></tr>
+    <tr><td class="paramname">M_end:有限字符集的终止迭代器</td><td></td></tr>
+    <tr><td class="paramname">delta</td><td>转移矩阵的引用，用于存放转移矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: void</dd></dl>
+<p>步骤：</p>
+<ul>
+<li>遍历P，q从0到m (因为q=0时，P_0=空字符串):<ul>
+<li>对每个字符a属于有限字母集合a，寻找Pk是 (Pq a) 后缀的最大的k，则 delt(q,a)=k</li>
+</ul>
+</li>
+</ul>
+<blockquote class="doxtable">
+<p>这里要求n&gt;=0，m&gt;=0(模式序列可以为空字符串)；否则抛出异常 </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>这里要求有限字符集M和模式序列P的元素类型相等，否则编译失败</p>
+</blockquote>
+
+<p>Definition at line <a class="el" href="finiteautomatonmatch_8h_source.html#l00120">120</a> of file <a class="el" href="finiteautomatonmatch_8h_source.html">finiteautomatonmatch.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d629ff62f74286e022a4fde86298897"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T IntroductionToAlgorithm::StringMatchingAlgorithm::get_h </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>radix_d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>len_m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>mod_q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get_h： rabin_karp匹配算法的 get_h 操作，算法导论第32章32.2节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radix_d</td><td>: 基数，一般选取大于等于序列最大值的一个整数 </td></tr>
+    <tr><td class="paramname">len_m</td><td>用于指数计算的m </td></tr>
+    <tr><td class="paramname">mod_q</td><td>: 取模的质数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: radix_d的(len_m-1)次方再取模mod_q</dd></dl>
+<p>要求<code>radix_q</code>、<code>len_m</code>、<code>mod_q</code>都非0.若有任何一个为0则抛出异常。 </p>
+
+<p>Definition at line <a class="el" href="rabinkarpmatch_8h_source.html#l00036">36</a> of file <a class="el" href="rabinkarpmatch_8h_source.html">rabinkarpmatch.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7dac7381b40ef7857b4595cd23e640e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IteratorP &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; IntroductionToAlgorithm::StringMatchingAlgorithm::get_pai </td>
+          <td>(</td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get_pai： KMP字符串匹配算法的预处理操作，算法导论第32章32.4节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterP_begin</td><td>: 模式序列P的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterP_end</td><td>模式序列P的终止迭代器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: pai函数</dd></dl>
+<p>算法步骤：</p>
+<ul>
+<li>初始化： pai[1]=0,k=0</li>
+<li>遍历 q 从 2 到 m:（因为Pk必须是Pm的真子集，因此m从2开始）<ul>
+<li>循环，条件为 k&gt;0并且 P[k+1]!=P[q]；循环中执行 k=pai[k]（因为若P[k+1]=P[q]，则说明找到了Pk是Pm的真子集）</li>
+<li>若 P[k+1]==P[q]，则k=k+1并且pai[q]=k</li>
+</ul>
+</li>
+<li><p class="startli">返回 pai</p>
+<p class="startli">&gt;这里要求m&gt;0；否则抛出异常 </p>
+</li>
+</ul>
+
+<p>Definition at line <a class="el" href="kmp_8h_source.html#l00042">42</a> of file <a class="el" href="kmp_8h_source.html">kmp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf5d8c82dffae3894905d8091defb315"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::iterator_traits&lt;Iterator&gt;::difference_type IntroductionToAlgorithm::StringMatchingAlgorithm::index_of_M </td>
+          <td>(</td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>beginM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>endM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::iterator_traits&lt; Iterator &gt;::value_type&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>index_of_M ： 返回返回字符a，算法导论第32章32.3节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">beginM</td><td>: 字符集序列M的起始迭代器 </td></tr>
+    <tr><td class="paramname">k_iter</td><td>字符集序列M的终止迭代器 </td></tr>
+    <tr><td class="paramname">a</td><td>文字 a </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 返回字符a</dd></dl>
+<p>通过逐一比较来返回a在M中的位置。</p>
+<p>如果a不在字符集M中，或者a在字符集M中有多个位置，则抛出异常 </p>
+
+<p>Definition at line <a class="el" href="finiteautomatonmatch_8h_source.html#l00040">40</a> of file <a class="el" href="finiteautomatonmatch_8h_source.html">finiteautomatonmatch.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4267339182491a371210d73c3be57ba1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IntroductionToAlgorithm::StringMatchingAlgorithm::is_end_with </td>
+          <td>(</td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>k_iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>q_iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::iterator_traits&lt; Iterator &gt;::value_type&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>is_end_with： 返回Pk是否是( Pq a)的后缀，算法导论第32章32.3节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>: 模式序列P的起始迭代器 </td></tr>
+    <tr><td class="paramname">k_iter</td><td>Pk的终止迭代器 </td></tr>
+    <tr><td class="paramname">q_iter</td><td>: Pq的终止迭代器 </td></tr>
+    <tr><td class="paramname">a</td><td>文字 a </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: Pk是否是( Pq a)的后缀</dd></dl>
+<p>通过逐一比较来返回Pk是否是( Pq a)的后缀。</p>
+<blockquote class="doxtable">
+<p>要求k_iter&gt;=begin,q_iter&gt;=begin，否则抛出异常 </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>空字符串是所有字符串的有效后缀</p>
+</blockquote>
+
+<p>Definition at line <a class="el" href="finiteautomatonmatch_8h_source.html#l00083">83</a> of file <a class="el" href="finiteautomatonmatch_8h_source.html">finiteautomatonmatch.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6df2ed0bb28a7908f9559f114eeab05e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IteratorT , typename IteratorP &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; IntroductionToAlgorithm::StringMatchingAlgorithm::kmp_match </td>
+          <td>(</td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>kmp_match： KMP字符串匹配算法，算法导论第32章32.4节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterT_begin</td><td>: 被文本序列T的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterT_end</td><td>文本序列T的终止迭代器 </td></tr>
+    <tr><td class="paramname">iterP_begin</td><td>: 模式序列P的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterP_end</td><td>模式序列P的终止迭代器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 有效偏移组成的 std::vector</dd></dl>
+<h2>字符串匹配</h2>
+<p>字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T[1...n]，而模式是一个长度为m的数组P[1...m]， 其中m&lt;=n。进一步假设P和T的元素都是来自一个有限字母集合M的字符。如M={0,1}或者M={a,b,c,...z}。 字符数组P和T通常称为字符串。</p>
+<h2>KMP 字符串匹配算法</h2>
+<h3>算法原理</h3>
+<h4>模式的前缀函数</h4>
+<p>模式的前缀函数 pai 包含了模式与它自身偏移进行匹配的信息。假设模式字符P[1...q]与文本字符T[s+1,...s+q]匹配， s'是某个偏移量，s'&gt;s。则对于某些k&lt;q，满足：P[1...k]=T[s'+1,...s'+k]的最小s'&gt;s，其中s'+k=s+q? </p><hr/>
+ <h2>T | 1 | 2 | 3 |.....|s+1|............| s+q |..............| n | T[s+q] </h2>
+<h2>|&lt;--&mdash;长度为q-&mdash;&gt;| </h2>
+<h2>P | 1 | 2 |.......| q |....| m | :Pq=P[1...q] </h2>
+<hr/>
+ <h2>T | 1 | 2 | 3 |.....|s+1|..|s'+1|..........| s+q |..............| n | T[s+q] </h2>
+<h2>|&lt;--&mdash;长度为k-&mdash;&gt;| </h2>
+<h2>P | 1 | 2 |........| k |..|q|..| m | :Pk=P[1...k] </h2>
+<p>换句话说，已知Pq是T[s+q]的后缀，我们希望Pq的真前缀 Pk 也是T[s+q]的后缀。我们把在P前缀长度 范围内的差值 q-k 加到s上即可得到新的偏移 s'=s+(q-k)。</p>
+<p>可以用模式与它自身的比较来预先计算出这些必要的信息。前述可知Pk是T[s+q]的后缀，它也是Pq的真前缀， 因此要求出 Pk是Pq的后缀的最大的k&lt;q。于是这个新的偏移s'=s+(q-k)就是下一个可能的有效偏移。 之所有求最大的k，就是为了是(q-k)尽可能小，从而不会漏过任何的可能的有效偏移。</p>
+<p>模式P的前缀函数就是函数 pai:{1,2,...,m}&ndash;&gt; {0,1,2,...,m-1}，满足： pai[q]=max{k:k&lt;q 且 Pk是Pq的后缀}。即pai[q]是Pq的真后缀P的最长前缀长度。</p>
+<h4>kmp 算法</h4>
+<p>KMP 算法用到了辅助函数 pai，它在O(m)时间内根据模式预先计算出pai并且存放在数组pai[1...m]中。 数组pai能够使我们按照需要即时计算出转移函数。</p>
+<p>计算出pai数组之后，KMP算法从左到右扫描文本序列T，并从pai中获取转移函数。当状态结果为 m时， 当前偏移为有效偏移点。</p>
+<h3>算法步骤</h3>
+<h4>预处理算法（构造pai函数)</h4>
+<ul>
+<li>初始化： pai[1]=0,k=0</li>
+<li>遍历q 从 2 到 m:（因为Pk必须是Pm的真子集，因此m从2开始）<ul>
+<li>循环，条件为 k&gt;0并且 P[k+1]!=P[q]；循环中执行 k=pai[k]（因为若P[k+1]=P[q]，则说明找到了Pk是Pm的真子集）</li>
+<li>若 P[k+1]==P[q]，则k=k+1并且pai[q]=k</li>
+</ul>
+</li>
+<li>返回 pai</li>
+</ul>
+<h4>匹配算法</h4>
+<ul>
+<li>初始化 q=0</li>
+<li>遍历i从1到n:<ul>
+<li>循环，条件为 q&gt;0 并且 P[q+1]!=T[i]；在循环中执行 q=pai[q]</li>
+<li>如果 P[q+1]==T[i] 则 q=q+1</li>
+<li>如果 q==m，则找到了有效偏移点。将有效偏移加入结果std::vector中。然后 q=pai[q](比如有这一句，否则后面P[q+1]会溢出)</li>
+</ul>
+</li>
+<li>返回结果std::vector</li>
+</ul>
+<p>&gt;这里要求n&gt;=0，m&gt;=0(模式序列可以为空字符串)；否则抛出异常 </p><blockquote class="doxtable">
+<p></p>
+<p>&gt;这里要文本序列T和模式序列P的元素类型相等，否则编译失败 </p>
+</blockquote>
+<h3>算法性能</h3>
+<p>计算前缀函数的运行时间为 O(m)，匹配时间为O(n)，总运行时间为 O(n) </p>
+
+<p>Definition at line <a class="el" href="kmp_8h_source.html#l00148">148</a> of file <a class="el" href="kmp_8h_source.html">kmp.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29321686220ba69d91c4ecb2df67fe79"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IteratorT , typename IteratorP &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; IntroductionToAlgorithm::StringMatchingAlgorithm::match </td>
+          <td>(</td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>match： 朴素字符串匹配算法，算法导论第32章,32.1节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterT_begin</td><td>: 被文本序列T的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterT_end</td><td>文本序列T的终止迭代器 </td></tr>
+    <tr><td class="paramname">iterP_begin</td><td>: 模式序列P的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterP_end</td><td>模式序列P的终止迭代器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 有效偏移组成的 std::vector</dd></dl>
+<h2>字符串匹配</h2>
+<p>字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T[1...n]，而模式是一个长度为m的数组P[1...m]， 其中m&lt;=n。进一步假设P和T的元素都是来自一个有限字母集合M的字符。如M={0,1}或者M={a,b,c,...z}。 字符数组P和T通常称为字符串。</p>
+<h2>朴素字符串匹配算法</h2>
+<h3>算法原理</h3>
+<p>朴素字符串匹配算法是通过一个循环找到所有的有效偏移，该循环对n-m+1各可能的偏移值s进行检查， 看是否满足条件 P[1...m]=T[s+1,...s+m]。</p>
+<h3>算法步骤</h3>
+<ul>
+<li>对T，遍历其从 0~n-m 的位置，在每一个位置上比较</li>
+<li>比较时，设当前偏移为s,则比较 T[s+1,s+2,...s+m]与P[1...m]。当二者每一个字符都相等时，则匹配</li>
+<li>将找到的有效偏移存入std::vector中然后返回</li>
+</ul>
+<p>&gt;这里要求n&gt;=0，m&gt;=0(模式序列可以为空字符串)；否则抛出异常 </p><blockquote class="doxtable">
+<p></p>
+<p>&gt;这里要文本序列T和模式序列P的元素类型相等，否则编译失败 </p>
+</blockquote>
+<h3>算法性能</h3>
+<p>朴素字符串匹配算法的时间复杂度 O(m*n) </p>
+
+<p>Definition at line <a class="el" href="match_8h_source.html#l00047">47</a> of file <a class="el" href="match_8h_source.html">match.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0da01d98fde1373885bc623135b09256"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IteratorT , typename IteratorP &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; IntroductionToAlgorithm::StringMatchingAlgorithm::rabin_karp_match </td>
+          <td>(</td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorT&#160;</td>
+          <td class="paramname"><em>iterT_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IteratorP&#160;</td>
+          <td class="paramname"><em>iterP_end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>radix_d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>mod_q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>rabin_karp_match： rabin_karp字符串匹配算法，算法导论第32章32.2节 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterT_begin</td><td>: 被文本序列T的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterT_end</td><td>文本序列T的终止迭代器 </td></tr>
+    <tr><td class="paramname">iterP_begin</td><td>: 模式序列P的起始迭代器 </td></tr>
+    <tr><td class="paramname">iterP_end</td><td>模式序列P的终止迭代器 </td></tr>
+    <tr><td class="paramname">radix_d</td><td>数字基数（有限字母集合M的字符个数） </td></tr>
+    <tr><td class="paramname">mod_q</td><td>用于取模的质数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>: 有效偏移组成的 std::vector</dd></dl>
+<h2>字符串匹配</h2>
+<p>字符串匹配的形式化定义如下：假设文本是一个长度为n的数组 T[1...n]，而模式是一个长度为m的数组P[1...m]， 其中m&lt;=n。进一步假设P和T的元素都是来自一个有限字母集合M的字符。如M={0,1}或者M={a,b,c,...z}。 字符数组P和T通常称为字符串。</p>
+<h2>rabin_karp 字符串匹配算法</h2>
+<h3>算法原理</h3>
+<p>假设 M={0,1,2,3...,9}，这样每个字符都是十进制数字。我们可以用长度为k的十进制数来表示由 k个连续的字符组成的字符串。</p>
+<p>给定一个模式P[1...m]，假设p为它对应的十进制数值。给定一个文本T[1...n]，假设t_s表示长度为 m的字符串T[s+1,...s+m]所对应的十进制值，其中s=0,1,...,n-m。则当且仅当 T[s+1,...s+m]=P[1...m]时有p=t_s。则总能够在O(m)时间内计算出p的值， 在O(n-m+1)时间内计算所有t_s的值。则通过比较p和每一个t_s的值，能在O(m)+O(n-m+1)=O(n) 时间内计算出所有的有效偏移。 </p><blockquote class="doxtable">
+<p>通常假定每个字符都是以d为基数表示的数字，其中d=|M|，表示有限字母集合M的大小 </p>
+</blockquote>
+<p>可以利用霍纳法则在O(m)时间内计算出p与t_0:</p>
+<ul>
+<li>p=P[m]+10(P[m-1]+10(P[m-2]+...+10(P[2]+10P[1])...))</li>
+<li>t_0=T[m]+10(T[m-1]+10(T[m-2]+...+10(T[2]+10T[1])...))</li>
+</ul>
+<p>然后在O(n-m)内计算出t_1、t_2、...t_&lt;n-m&gt;: t_&lt;s+1&gt;=10(t_s-10^(m-1)*T[s+1])+T[s+m+1]</p>
+<p>但是有可能p和t_s的值太大，导致不方便对其进行操作。如果P包含m各字符，那么p(m位数)上 每次算术运算需要 “常数”时间这一假设就不成立。我们可以选择一个合适的模q来计算p和t_s的模。 我们可以在O(m)时间内计算出模q的p值，然后在O(n-m+1)时间内计算出模q的所有t_s值。 另 h = d^(m-1)(mod q) ，则： t_&lt;s+1&gt;=(d(t_s-T[s+1]h)+T[s+m+1]) mod q</p>
+<p>但是基于模q得出的结果： t_s = p (mod q) 并不能说明 t_s=p。我们对于这样的s称为伪命中点， 还需要进一步检测条件 P[1...m]=T[s+1,...s+m] 成立</p>
+<h3>算法步骤</h3>
+<ul>
+<li>初始化：计算 p 和 t_0</li>
+<li>遍历 s从0到n-m(包含n-m)：<ul>
+<li>找到所有的p=t_s的偏移s，检查若P[1...m]=T[s+1,...s+m]，则将结果s放入结果std::vector中</li>
+</ul>
+</li>
+<li>返回结果std::vector</li>
+</ul>
+<p>&gt;这里要求n&gt;=0，m&gt;0；否则抛出异常 </p><blockquote class="doxtable">
+<p></p>
+<p>&gt;这里要文本序列T和模式序列P的元素类型相等，否则编译失败 </p>
+</blockquote>
+<h3>算法性能</h3>
+<p>rabin_karp 匹配算法的预处理时间为O(m)，最坏情况下的运行时间为O((n-m+1)m)， 在平均情况下他的运行时间还是比较好的 </p>
+
+<p>Definition at line <a class="el" href="rabinkarpmatch_8h_source.html#l00114">114</a> of file <a class="el" href="rabinkarpmatch_8h_source.html">rabinkarpmatch.h</a>.</p>
 
 </div>
 </div>

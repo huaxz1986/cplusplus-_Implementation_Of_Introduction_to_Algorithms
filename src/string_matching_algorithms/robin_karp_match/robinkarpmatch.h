@@ -1,5 +1,0 @@
-#ifndef ROBIN_KARPMATCH
-#define ROBIN_KARPMATCH
-
-#endif // ROBIN_KARPMATCH
-

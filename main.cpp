@@ -62,6 +62,9 @@
 #include"src/graph_algorithms/max_flow/generic_push_relabel/genericpushrelabel_test.h"
 #include"src/graph_algorithms/max_flow/relabel_to_front/relabeltofront_test.h"
 #include"src/string_matching_algorithms/regular_match/match_test.h"
+#include"src/string_matching_algorithms/rabin_karp_match/rabinkarpmatch_test.h"
+#include"src/string_matching_algorithms/finite_automaton_match/finiteautomatonmatch_test.h"
+#include"src/string_matching_algorithms/kmp_match/kmp_test.h"
 int main(int argc,char** argv)
 {
     ::testing::InitGoogleTest(&argc,argv);

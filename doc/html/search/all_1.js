@@ -34,7 +34,5 @@ var searchData=
   ['anonymous_5fnamespace_7bsearchtree_5ftest_2eh_7d',['anonymous_namespace{searchtree_test.h}',['../namespaceanonymous__namespace_02searchtree__test_8h_03.html',1,'']]],
   ['anonymous_5fnamespace_7bstrongconnectedcomponent_5ftest_2eh_7d',['anonymous_namespace{strongconnectedcomponent_test.h}',['../namespaceanonymous__namespace_02strongconnectedcomponent__test_8h_03.html',1,'']]],
   ['anonymous_5fnamespace_7btopologysort_5ftest_2eh_7d',['anonymous_namespace{topologysort_test.h}',['../namespaceanonymous__namespace_02topologysort__test_8h_03.html',1,'']]],
-  ['array',['array',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#ac02abc1501b57a7963ec1b388150429e',1,'IntroductionToAlgorithm::GraphAlgorithm::ADJListGraph']]],
-  ['automation_5fmatcher',['Automation_Matcher',['../class_automation___matcher.html',1,'Automation_Matcher&lt; T &gt;'],['../class_automation___matcher.html#a818a0df5478849f26cf9b2f20a1774b3',1,'Automation_Matcher::Automation_Matcher()']]],
-  ['automationmatcher_2eh',['automationmatcher.h',['../automationmatcher_8h.html',1,'']]]
+  ['array',['array',['../struct_introduction_to_algorithm_1_1_graph_algorithm_1_1_a_d_j_list_graph.html#ac02abc1501b57a7963ec1b388150429e',1,'IntroductionToAlgorithm::GraphAlgorithm::ADJListGraph']]]
 ];
