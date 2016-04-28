@@ -8,9 +8,9 @@
 
 ## 缘由
 在学习算法导论的过程中，本人经过几次阅读做了两轮笔记之后发现，要想掌握算法的思想必须动手实践。
-> 笔记扫描版地址：http://pan.baidu.com/s/1nvSt62H
+> 笔记扫描版地址：http://pan.baidu.com/s/1mis5sOK以及http://pan.baidu.com/s/1mhKFxQ4
 
-> 所有笔记扫描版下载地址：http://pan.baidu.com/s/1boMsdUB
+> 所有笔记扫描版下载地址：http://pan.baidu.com/s/1boSzlx1
 
 * 《算法导论》中的算法全部是用伪代码写的，因此大量的语言细节被忽略。比如边界条件的处理
 * 在算法转换为代码过程中会对算法有着更深刻的理解
