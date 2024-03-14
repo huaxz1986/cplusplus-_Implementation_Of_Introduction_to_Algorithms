@@ -89,6 +89,7 @@ namespace IntroductionToAlgorithm {
                 throw std::invalid_argument("is_end_with error:must be k_iter>=begin and q_iter>=begin!");
 
             if(k==0) return true; // 空字符串是所有字符串的后缀
+            if(k>q+1) return false; // 避免迭代器访问越界
             if(a!=*(k_iter-1)) return false; //P[k]!=a
             for(int i=0;i<k-1;i++)
                 if(*(k_iter-2-i)!=*(q_iter-1-i))return false;  //P[k-i-1]!=P[q-i]
